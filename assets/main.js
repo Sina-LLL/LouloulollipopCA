@@ -4174,3 +4174,25 @@ document.addEventListener('DOMContentLoaded', function () {
     })
     .catch(error => console.error('Error fetching IP data:', error));
 });
+
+// PDP accordions
+document.addEventListener('DOMContentLoaded', function () {
+  const accordions = document.querySelectorAll('.accordion-toggle');
+
+  accordions.forEach((toggle) => {
+    const section = toggle.closest('section');
+    const grid = section.querySelector('.custom-accordion-content');
+    const chevron = toggle.querySelector('.chevron');
+
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+
+      // Toggle content visibility
+      grid.classList.toggle('show', !expanded);
+
+      // Change between + and −
+      chevron.textContent = expanded ? '+' : '−';
+    });
+  });
+});
