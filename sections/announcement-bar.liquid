@@ -113,7 +113,7 @@
             {%- endfor -%}
           </div>
           <div class="announcement-bar__announcement-controller">
-            <button role="button" class="announcement-button announcement-button--previous" aria-label="{{ 'general.slider.previous' | t | escape }}">{% render 'icon-chevron-left' %}</button><button role="button" class="announcement-button announcement-button--next" aria-label="{{ 'general.slider.next' | t | escape }}">{% render 'icon-chevron-right' %}</button>
+            <button class="announcement-button announcement-button--previous" aria-label="{{ 'general.slider.previous' | t | escape }}">{% render 'icon-chevron-left' %}</button><button class="announcement-button announcement-button--next" aria-label="{{ 'general.slider.next' | t | escape }}">{% render 'icon-chevron-right' %}</button>
           </div>
         {%- endif -%}
       </div>
@@ -122,9 +122,9 @@
         {% if section.settings.menu != blank %}
           <span class="inline-menu">
             {% for link in linklists[section.settings.menu].links %}
-              {%- comment %}<locksmith:7d72>{% endcomment -%}
+              {%- comment %}<locksmith:f725>{% endcomment -%}
                 {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[section.settings.menu], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-              {%- comment %}</locksmith:7d72>{% endcomment -%}
+              {%- comment %}</locksmith:f725>{% endcomment -%}
               <a class="inline-menu__link announcement-bar__link" href="{{ link.url }}">{{ link.title }}</a>
             {% endfor %}
           </span>

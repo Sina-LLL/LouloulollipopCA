@@ -32,9 +32,9 @@
       <div class="container{% if header_image_enabled %} container--not-mobile{% endif %} lightish-spaced-row-above">
         <related-collection-link-buttons class="related-collection-links related-collection-links--buttons align-center{% if header_image_enabled %} image-overlay__over{% endif %}" data-expander-btn-text="{{ 'sections.collection.view_all_related_collections' | t }}">
           {%- for loop_collection in section.settings.related_collections -%}
-            {%- comment %}<locksmith:47f6>{% endcomment -%}
+            {%- comment %}<locksmith:7f7a>{% endcomment -%}
               {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: loop_collection, subject_parent: section.settings, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-            {%- comment %}</locksmith:47f6>{% endcomment -%}
+            {%- comment %}</locksmith:7f7a>{% endcomment -%}
             {%- unless loop_collection.handle == collection.handle -%}
               <a class="btn btn--tertiary" href="{{ loop_collection.url }}">{{ loop_collection.title | escape }}</a>
             {%- endunless -%}
@@ -64,9 +64,9 @@
           <div class="slider slider--no-scrollbar" id="slider-{{ section.id }}">
             <div class="slider__grid">
               {%- for loop_collection in section.settings.related_collections -%}
-                {%- comment %}<locksmith:00fd>{% endcomment -%}
+                {%- comment %}<locksmith:d1b4>{% endcomment -%}
                   {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: loop_collection, subject_parent: section.settings, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-                {%- comment %}</locksmith:00fd>{% endcomment -%}
+                {%- comment %}</locksmith:d1b4>{% endcomment -%}
                 {%- unless loop_collection.handle == collection.handle -%}
                   <div class="slider__item
                       gallery__item
@@ -312,7 +312,7 @@
                 assign chosen_aspect_ratio = 99
                 for product in collection.products
                   comment
-                    <locksmith:0bba> Code added automatically by the Locksmith app. Do not modify or remove.
+                    <locksmith:4bec> Code added automatically by the Locksmith app. Do not modify or remove.
                   endcomment
                   capture var
                     render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collection, variable: 'transparent'
@@ -322,7 +322,7 @@
                     continue
                   endif
                   comment
-                    </locksmith:0bba> End Locksmith code block.
+                    </locksmith:4bec> End Locksmith code block.
                   endcomment
                   if product.featured_media.preview_image.aspect_ratio < chosen_aspect_ratio
                     assign chosen_aspect_ratio = product.featured_media.preview_image.aspect_ratio
@@ -332,7 +332,7 @@
                 assign chosen_aspect_ratio = 0
                 for product in collection.products
                   comment
-                    <locksmith:e470> Code added automatically by the Locksmith app. Do not modify or remove.
+                    <locksmith:99d5> Code added automatically by the Locksmith app. Do not modify or remove.
                   endcomment
                   capture var
                     render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collection, variable: 'transparent'
@@ -342,7 +342,7 @@
                     continue
                   endif
                   comment
-                    </locksmith:e470> End Locksmith code block.
+                    </locksmith:99d5> End Locksmith code block.
                   endcomment
                   if product.featured_media.preview_image.aspect_ratio > chosen_aspect_ratio
                     assign chosen_aspect_ratio = product.featured_media.preview_image.aspect_ratio
@@ -351,56 +351,56 @@
               endif
 
               comment
-                <locksmith:5202> Code added automatically by the Locksmith app. Do not modify or remove.
+                <locksmith:edc9> Code added automatically by the Locksmith app. Do not modify or remove.
               endcomment
-              assign locksmith_83fb_forloop__size = 0
+              assign locksmith_db60_forloop__size = 0
               for product in collection.products
                 capture var
                   render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collection, variable: 'transparent'
                 endcapture
                 if var == 'true'
-                  assign locksmith_83fb_forloop__size = locksmith_83fb_forloop__size | plus: 1
+                  assign locksmith_db60_forloop__size = locksmith_db60_forloop__size | plus: 1
                 endif
               endfor
-              assign locksmith_83fb_forloop__index = nil
+              assign locksmith_db60_forloop__index = nil
               comment
-                </locksmith:5202> End Locksmith code block.
+                </locksmith:edc9> End Locksmith code block.
               endcomment
               for product in collection.products
                 comment
-                  <locksmith:9ab6> Code added automatically by the Locksmith app. Do not modify or remove.
+                  <locksmith:cdde> Code added automatically by the Locksmith app. Do not modify or remove.
                 endcomment
                 capture var
                   render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collection, variable: 'transparent'
                 endcapture
                 if var == "true"
-                  if locksmith_83fb_forloop__index == nil
-                    assign locksmith_83fb_forloop__index = 1
-                    assign locksmith_83fb_forloop__index0 = 0
+                  if locksmith_db60_forloop__index == nil
+                    assign locksmith_db60_forloop__index = 1
+                    assign locksmith_db60_forloop__index0 = 0
                   else
-                    assign locksmith_83fb_forloop__index = locksmith_83fb_forloop__index | plus: 1
-                    assign locksmith_83fb_forloop__index0 = locksmith_83fb_forloop__index0 | plus: 1
+                    assign locksmith_db60_forloop__index = locksmith_db60_forloop__index | plus: 1
+                    assign locksmith_db60_forloop__index0 = locksmith_db60_forloop__index0 | plus: 1
                   endif
-                  if locksmith_83fb_forloop__index == 1
-                    assign locksmith_83fb_forloop__first = true
+                  if locksmith_db60_forloop__index == 1
+                    assign locksmith_db60_forloop__first = true
                   else
-                    assign locksmith_83fb_forloop__first = false
+                    assign locksmith_db60_forloop__first = false
                   endif
-                  if locksmith_83fb_forloop__index == locksmith_83fb_forloop__size
-                    assign locksmith_83fb_forloop__last = true
+                  if locksmith_db60_forloop__index == locksmith_db60_forloop__size
+                    assign locksmith_db60_forloop__last = true
                   else
-                    assign locksmith_83fb_forloop__last = false
+                    assign locksmith_db60_forloop__last = false
                   endif
-                  assign locksmith_83fb_forloop__rindex = locksmith_83fb_forloop__size | minus: locksmith_83fb_forloop__index | minus: 1
-                  assign locksmith_83fb_forloop__rindex0 = locksmith_83fb_forloop__size | minus: locksmith_83fb_forloop__index0 | minus: 1
+                  assign locksmith_db60_forloop__rindex = locksmith_db60_forloop__size | minus: locksmith_db60_forloop__index | minus: 1
+                  assign locksmith_db60_forloop__rindex0 = locksmith_db60_forloop__size | minus: locksmith_db60_forloop__index0 | minus: 1
                 else
                   continue
                 endif
                 comment
-                  </locksmith:9ab6> End Locksmith code block.
+                  </locksmith:cdde> End Locksmith code block.
                 endcomment
                 assign prioritised_loading = false
-                if locksmith_83fb_forloop__index0 < section.settings.grid
+                if locksmith_db60_forloop__index0 < section.settings.grid
                   assign prioritised_loading = true
                 endif
                 render 'product-block', product: product, custom_aspect_ratio: chosen_aspect_ratio, animate: true, prioritised_loading: prioritised_loading

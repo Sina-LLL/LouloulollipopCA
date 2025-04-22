@@ -157,9 +157,9 @@
                       -%}
 
                       {%- for product in section.settings.cross_sell_products -%}
-                        {%- comment %}<locksmith:49f7>{% endcomment -%}
+                        {%- comment %}<locksmith:a3d5>{% endcomment -%}
                           {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: section.settings, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-                        {%- comment %}</locksmith:49f7>{% endcomment -%}
+                        {%- comment %}</locksmith:a3d5>{% endcomment -%}
                         <li class="slider__item">
                           {%- render 'product-block', product: product, manual_loading: true, no_quick_buy: true, no_swiping: true, custom_aspect_ratio: chosen_aspect_ratio -%}
                         </li>
@@ -221,14 +221,17 @@
             {%- endif -%}
 
             {% if section.settings.show_order_note %}
-              <toggle-target id="CartDrawerNoteToggle" role="button" tabindex="0" class="toggle-target-toggler--is-hidden link underline" data-toggle-target=".cart-drawer__note">{{ 'cart.note.label' | t }}</toggle-target>
+    
+              <toggle-target id="CartDrawerNoteToggle" type="checkbox"role="button" tabindex="0" class="toggle-target-toggler--is-hidden link underline" data-toggle-target=".cart-drawer__note">
+                {{ 'cart.note.label' | t }}
+              </toggle-target>
               <div class="cart-drawer__note toggle-target toggle-target--hidden">
                 <cart-note class="block toggle-target-container">
                   <textarea name="note" aria-labelledby="CartDrawerNoteToggle">{{ cart.note }}</textarea>
                 </cart-note>
               </div>
             {% endif %}
-             <!--BEAM START-->
+            <!--BEAM START-->
               <div class="profit-wrapper {% if cart == empty %} is-empty{% endif %}">
                 <div id="widget-parent-wrapper">
                   <div id="beam-nonprofit-widget" style="display: flex; margin-top:20px">
@@ -240,6 +243,8 @@
           </div>
         {% endif %}
       </div>
+
+
 
       {% if section.settings.cart_terms_page != blank %}
         <terms-agreement class="terms-agreement rte">

@@ -24,7 +24,7 @@
               assign chosen_aspect_ratio = 99
               for product in recommendations.products
                 comment
-                  <locksmith:e033> Code added automatically by the Locksmith app. Do not modify or remove.
+                  <locksmith:8b2a> Code added automatically by the Locksmith app. Do not modify or remove.
                 endcomment
                 capture var
                   render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: recommendations, variable: 'transparent'
@@ -34,7 +34,7 @@
                   continue
                 endif
                 comment
-                  </locksmith:e033> End Locksmith code block.
+                  </locksmith:8b2a> End Locksmith code block.
                 endcomment
                 if product.featured_media.preview_image.aspect_ratio < chosen_aspect_ratio
                   assign chosen_aspect_ratio = product.featured_media.preview_image.aspect_ratio
@@ -44,7 +44,7 @@
               assign chosen_aspect_ratio = 0
               for product in recommendations.products
                 comment
-                  <locksmith:f627> Code added automatically by the Locksmith app. Do not modify or remove.
+                  <locksmith:f16b> Code added automatically by the Locksmith app. Do not modify or remove.
                 endcomment
                 capture var
                   render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: recommendations, variable: 'transparent'
@@ -54,7 +54,7 @@
                   continue
                 endif
                 comment
-                  </locksmith:f627> End Locksmith code block.
+                  </locksmith:f16b> End Locksmith code block.
                 endcomment
                 if product.featured_media.preview_image.aspect_ratio > chosen_aspect_ratio
                   assign chosen_aspect_ratio = product.featured_media.preview_image.aspect_ratio
@@ -63,9 +63,9 @@
             endif
           -%}
           {%- for product in recommendations.products -%}
-            {%- comment %}<locksmith:559a>{% endcomment -%}
+            {%- comment %}<locksmith:9eb4>{% endcomment -%}
               {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: recommendations, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-            {%- comment %}</locksmith:559a>{% endcomment -%}
+            {%- comment %}</locksmith:9eb4>{% endcomment -%}
             {% render 'product-block', product: product, custom_aspect_ratio: chosen_aspect_ratio %}
           {%- endfor -%}
         </div>

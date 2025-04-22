@@ -29,7 +29,7 @@
               assign chosen_aspect_ratio = 99
               for collection in collections
                 comment
-                  <locksmith:f66a> Code added automatically by the Locksmith app. Do not modify or remove.
+                  <locksmith:fd76> Code added automatically by the Locksmith app. Do not modify or remove.
                 endcomment
                 capture var
                   render 'locksmith-variables', scope: 'subject', subject: collection, variable: 'transparent'
@@ -39,7 +39,7 @@
                   continue
                 endif
                 comment
-                  </locksmith:f66a> End Locksmith code block.
+                  </locksmith:fd76> End Locksmith code block.
                 endcomment
                 if collection.featured_image.aspect_ratio < chosen_aspect_ratio
                   assign chosen_aspect_ratio = collection.featured_image.aspect_ratio
@@ -49,7 +49,7 @@
               assign chosen_aspect_ratio = 0
               for collection in collections
                 comment
-                  <locksmith:dbf5> Code added automatically by the Locksmith app. Do not modify or remove.
+                  <locksmith:250c> Code added automatically by the Locksmith app. Do not modify or remove.
                 endcomment
                 capture var
                   render 'locksmith-variables', scope: 'subject', subject: collection, variable: 'transparent'
@@ -59,7 +59,7 @@
                   continue
                 endif
                 comment
-                  </locksmith:dbf5> End Locksmith code block.
+                  </locksmith:250c> End Locksmith code block.
                 endcomment
                 if collection.featured_image.aspect_ratio > chosen_aspect_ratio
                   assign chosen_aspect_ratio = collection.featured_image.aspect_ratio
@@ -69,7 +69,7 @@
 
             for collection in collections
               comment
-                <locksmith:ac0c> Code added automatically by the Locksmith app. Do not modify or remove.
+                <locksmith:f749> Code added automatically by the Locksmith app. Do not modify or remove.
               endcomment
               capture var
                 render 'locksmith-variables', scope: 'subject', subject: collection, variable: 'transparent'
@@ -79,7 +79,7 @@
                 continue
               endif
               comment
-                </locksmith:ac0c> End Locksmith code block.
+                </locksmith:f749> End Locksmith code block.
               endcomment
               render 'collection-block', collection: collection, custom_aspect_ratio: chosen_aspect_ratio, animate: true, settings_object: section.settings
             endfor
@@ -109,7 +109,7 @@
             assign chosen_aspect_ratio = 99
             for block in section.blocks
               comment
-                <locksmith:7539> Code added automatically by the Locksmith app. Do not modify or remove.
+                <locksmith:f765> Code added automatically by the Locksmith app. Do not modify or remove.
               endcomment
               capture var
                 render 'locksmith-variables', scope: 'subject', subject: block.settings.collection, subject_parent: section, variable: 'transparent'
@@ -119,7 +119,7 @@
                 continue
               endif
               comment
-                </locksmith:7539> End Locksmith code block.
+                </locksmith:f765> End Locksmith code block.
               endcomment
               assign collection = collections[block.settings.collection]
               if collection != blank
@@ -133,7 +133,7 @@
             assign chosen_aspect_ratio = 0
             for block in section.blocks
               comment
-                <locksmith:8077> Code added automatically by the Locksmith app. Do not modify or remove.
+                <locksmith:e196> Code added automatically by the Locksmith app. Do not modify or remove.
               endcomment
               capture var
                 render 'locksmith-variables', scope: 'subject', subject: block.settings.collection, subject_parent: section, variable: 'transparent'
@@ -143,7 +143,7 @@
                 continue
               endif
               comment
-                </locksmith:8077> End Locksmith code block.
+                </locksmith:e196> End Locksmith code block.
               endcomment
               assign collection = collections[block.settings.collection]
               if collection != blank
@@ -157,7 +157,7 @@
 
           for block in section.blocks
             comment
-              <locksmith:63dd> Code added automatically by the Locksmith app. Do not modify or remove.
+              <locksmith:6cbe> Code added automatically by the Locksmith app. Do not modify or remove.
             endcomment
             capture var
               render 'locksmith-variables', scope: 'subject', subject: block.settings.collection, subject_parent: section, variable: 'transparent'
@@ -167,7 +167,7 @@
               continue
             endif
             comment
-              </locksmith:63dd> End Locksmith code block.
+              </locksmith:6cbe> End Locksmith code block.
             endcomment
             assign collection = collections[block.settings.collection]
             if collection != blank
