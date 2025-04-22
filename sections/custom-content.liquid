@@ -106,7 +106,7 @@
 
         {% elsif block.type == 'text' %}
 
-          <div class="align-ltr-{{ block.settings.text_alignment }} feature-text-paired">
+          <div class="align-ltr-{{ block.settings.text_alignment }}">
             {%- if block.settings.subheading != blank -%}
               <div class="subheading subheading--over">{{ block.settings.subheading | escape }}</div>
             {%- endif -%}
