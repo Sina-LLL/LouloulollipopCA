@@ -37,6 +37,19 @@
             elsif section.settings.coll_grid_image_shape == 'tallest'
               assign chosen_aspect_ratio = 999
               for block in section.blocks
+                comment
+                  <locksmith:073a> Code added automatically by the Locksmith app. Do not modify or remove.
+                endcomment
+                capture var
+                  render 'locksmith-variables', scope: 'subject', subject: block.settings.collection, subject_parent: section, variable: 'transparent'
+                endcapture
+                if var == "true"
+                else
+                  continue
+                endif
+                comment
+                  </locksmith:073a> End Locksmith code block.
+                endcomment
                 assign collection = collections[block.settings.collection]
                 if collection != blank
                   assign collection_image = block.settings.image | default: collection.featured_image
@@ -48,6 +61,19 @@
             else
               assign chosen_aspect_ratio = 0
               for block in section.blocks
+                comment
+                  <locksmith:b3b5> Code added automatically by the Locksmith app. Do not modify or remove.
+                endcomment
+                capture var
+                  render 'locksmith-variables', scope: 'subject', subject: block.settings.collection, subject_parent: section, variable: 'transparent'
+                endcapture
+                if var == "true"
+                else
+                  continue
+                endif
+                comment
+                  </locksmith:b3b5> End Locksmith code block.
+                endcomment
                 assign collection = collections[block.settings.collection]
                 if collection != blank
                   assign collection_image = block.settings.image | default: collection.featured_image
@@ -59,6 +85,19 @@
             endif
 
             for block in section.blocks
+              comment
+                <locksmith:288d> Code added automatically by the Locksmith app. Do not modify or remove.
+              endcomment
+              capture var
+                render 'locksmith-variables', scope: 'subject', subject: block.settings.collection, subject_parent: section, variable: 'transparent'
+              endcapture
+              if var == "true"
+              else
+                continue
+              endif
+              comment
+                </locksmith:288d> End Locksmith code block.
+              endcomment
               assign collection = collections[block.settings.collection]
 
               if section.settings.enable_carousel
