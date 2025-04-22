@@ -26,21 +26,26 @@
     <legend class="label">Color: <span class="option-selector__label-value js-color-text">{{ cutline }}</span></legend>
     <div class="option-selector__btns flex flex-wrap">
       {%- for sibling in sibs_collection.products -%}
-        {%- comment %}<locksmith:a1cb>{% endcomment -%}
+        {%- comment %}<locksmith:5536>{% endcomment -%}
           {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: sibling, subject_parent: sibs_collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-        {%- comment %}</locksmith:a1cb>{% endcomment -%}
-        <a href="{{ sibling.url }}" class="opt-label opt-label--image">
+        {%- comment %}</locksmith:5536>{% endcomment -%}
+        {%- assign is_active = false -%}
+        {%- if sibling.handle == product.handle -%}
+          {%- assign is_active = true -%}
+        {%- endif -%}
+        <a href="{{ sibling.url }}" class="opt-label opt-label--image {% if is_active %}is-active{% endif %}">
           <div class="opt-label__media media">
             {%- 
-              assign second_image = sibling.images[1] %} 
-            
-                {%- render 'image',
-                  image: sibling.featured_media,
-                  sizes: img_sizes,
-                  widths: img_widths,
-                  custom_aspect_ratio: img_aspect_ratio,
-                  custom_crop: img_crop_align
-                -%}
+              assign second_image = sibling.images[1] 
+            %} 
+
+            {%- render 'image',
+              image: sibling.featured_media,
+              sizes: img_sizes,
+              widths: img_widths,
+              custom_aspect_ratio: img_aspect_ratio,
+              custom_crop: img_crop_align
+            -%}
           </div>
         </a>
       {%- endfor -%}
