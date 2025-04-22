@@ -16,7 +16,7 @@
           "type": "title",
           "settings": {}
         },
-        "custom_liquid_W4BPWG": {
+        "custom_liquid_WTLMGp": {
           "type": "custom-liquid",
           "settings": {
             "custom_liquid": "{% comment %}\n/snippets/bv-summary.liquid\nBazaarvoice Summary Container\n{% endcomment %}\n{% render 'bv-summary' %}\n{% comment %}\nEnd Bazaarvoice Summary Container\n{% endcomment %}",
@@ -37,7 +37,7 @@
             "selector_style": "listed",
             "dynamic_availability": "show",
             "enable_size_chart": true,
-            "size_chart_label": "What size do I get?",
+            "size_chart_label": "Size Guide",
             "size_chart_variant": "Size",
             "size_chart_page": "size-chart-clothing"
           }
@@ -52,7 +52,13 @@
             "show_gift_card_recipient": false
           }
         },
-        "usp_CRdfie": {
+        "divider": {
+          "type": "divider",
+          "settings": {
+            "show_in_quickbuy": false
+          }
+        },
+        "usp_Whm8xh": {
           "type": "USP",
           "repeater": "{{ product.metafields.custom.product_template.value.usp_icons.value }}",
           "settings": {
@@ -62,33 +68,12 @@
             "icon_size": "large"
           }
         },
-        "divider_kgTqeY": {
-          "type": "divider",
-          "settings": {
-            "show_in_quickbuy": false
-          }
-        },
         "description": {
           "type": "description",
           "settings": {
             "show_in_tab": false,
-            "open_tab": true,
+            "open_tab": false,
             "icon": "",
-            "show_in_quickbuy": false
-          }
-        },
-        "feature_rating_tdmkCF": {
-          "type": "feature-rating",
-          "disabled": true,
-          "settings": {
-            "heading": "0.5 lightweight",
-            "segments": 5,
-            "active_segment": "4",
-            "fill_segments": true,
-            "show_labels": true,
-            "label_left": "Cold",
-            "label_middle": "Breazy",
-            "label_right": "Warm",
             "show_in_quickbuy": false
           }
         },
@@ -111,7 +96,7 @@
           "settings": {
             "title": "Shipping & Returns",
             "icon": "",
-            "content": "<p>All US orders over $65 ship for free! Shipping is $7 for orders under $65.</p><p>If you need expedited shipping, the shipping fee will be calculated at checkout.</p>",
+            "content": "<p>Free Canada Shipping over $100</p><p>Flat rate shipping on everything else — $12 standard shipping in BC, $18 rest of Canada<br/><br/><a href=\"/pages/faqs\" title=\"FAQs\">See Details</a></p>",
             "page": "",
             "custom_liquid": "",
             "open": false,
@@ -121,14 +106,13 @@
       },
       "block_order": [
         "title",
-        "custom_liquid_W4BPWG",
+        "custom_liquid_WTLMGp",
         "price",
         "variant-picker",
         "buy-buttons",
-        "usp_CRdfie",
-        "divider_kgTqeY",
+        "divider",
+        "usp_Whm8xh",
         "description",
-        "feature_rating_tdmkCF",
         "accordion_yktgxC",
         "accordion_KqCkWX"
       ],
@@ -154,10 +138,10 @@
         "media_grouping_option": "Color,Colour,Couleur,Farbe"
       }
     },
-    "custom_product_features_J4Txgz": {
+    "custom_product_features_g6K7P8": {
       "type": "custom-product-features",
       "blocks": {
-        "feature_gaaBJH": {
+        "feature_74ANHV": {
           "type": "feature",
           "repeater": "{{ product.metafields.custom.product_template.value.features.value }}",
           "settings": {
@@ -168,13 +152,13 @@
         }
       },
       "block_order": [
-        "feature_gaaBJH"
+        "feature_74ANHV"
       ],
       "settings": {
-        "section_heading": "We Thought of That Too"
+        "section_heading": "We Thought of that Too"
       }
     },
-    "custom_product_material_care_jFczeg": {
+    "custom_product_material_care_AB9yyi": {
       "type": "custom-product-material-care",
       "settings": {
         "section_heading": "Material & Care"
@@ -188,7 +172,7 @@
         "grid": 4
       }
     },
-    "custom_liquid_RMm8G9": {
+    "custom_liquid_tqpgnB": {
       "type": "custom-liquid",
       "settings": {
         "full_width": true,
@@ -199,9 +183,9 @@
   },
   "order": [
     "main",
-    "custom_product_features_J4Txgz",
-    "custom_product_material_care_jFczeg",
+    "custom_product_features_g6K7P8",
+    "custom_product_material_care_AB9yyi",
     "related-products",
-    "custom_liquid_RMm8G9"
+    "custom_liquid_tqpgnB"
   ]
 }
