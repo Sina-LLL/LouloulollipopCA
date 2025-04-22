@@ -26,14 +26,8 @@
         "price": {
           "type": "price",
           "settings": {
-            "show_tax_and_shipping": true,
+            "show_tax_and_shipping": false,
             "enable_product_reviews_by_price": true
-          }
-        },
-        "divider": {
-          "type": "divider",
-          "settings": {
-            "show_in_quickbuy": false
           }
         },
         "variant-picker": {
@@ -54,28 +48,38 @@
             "show_quantity_selector": true,
             "enable_payment_button": false,
             "show_backorder_text": false,
-            "show_pickup_availability": true,
+            "show_pickup_availability": false,
             "show_gift_card_recipient": false
           }
         },
-        "custom_liquid_GybNim": {
-          "type": "custom-liquid",
+        "divider": {
+          "type": "divider",
           "settings": {
-            "custom_liquid": "{%- comment -%} Wishlists {%- endcomment -%}\n      <div class=\"wishlist--container\">\n        {% render 'custom-icon-basket' %}\n        <a class=\"babylist-btn\" href=\"#\" onclick=\"if (window.bl) { bl.addToRegistry({ images: '{{- product.featured_image.src | img_url: \"800x\" -}}', price: '{{ product.price | money_without_currency }}', title: '{{ product.title }}', url: '{{ shop.url }}{{ product.url }}' }); } return false;\">Add to Babylist</a>\n      </div>",
             "show_in_quickbuy": false
+          }
+        },
+        "usp_Whm8xh": {
+          "type": "USP",
+          "repeater": "{{ product.metafields.custom.product_template.value.usp_icons.value }}",
+          "settings": {
+            "text": "{{ block.repeater.title.value }}",
+            "icon": "",
+            "custom_icon": "{{ block.repeater.icon.value }}",
+            "icon_size": "large"
           }
         },
         "description": {
           "type": "description",
           "settings": {
-            "show_in_tab": true,
-            "open_tab": true,
+            "show_in_tab": false,
+            "open_tab": false,
             "icon": "",
             "show_in_quickbuy": false
           }
         },
         "accordion_yktgxC": {
           "type": "accordion",
+          "disabled": true,
           "settings": {
             "title": "Materials & Care",
             "icon": "",
@@ -88,6 +92,7 @@
         },
         "accordion_KqCkWX": {
           "type": "accordion",
+          "disabled": true,
           "settings": {
             "title": "Shipping & Returns",
             "icon": "",
@@ -103,10 +108,10 @@
         "title",
         "custom_liquid_WTLMGp",
         "price",
-        "divider",
         "variant-picker",
         "buy-buttons",
-        "custom_liquid_GybNim",
+        "divider",
+        "usp_Whm8xh",
         "description",
         "accordion_yktgxC",
         "accordion_KqCkWX"
@@ -123,7 +128,7 @@
         "sticky_atc_behavior": "add_to_cart",
         "sticky_atc_button_style": "primary",
         "gallery_size": "medium",
-        "gallery_layout": "carousel-under",
+        "gallery_layout": "collage-1",
         "enable_zoom": true,
         "show_alt_text": false,
         "alt_text_icon": "",
@@ -131,6 +136,32 @@
         "enable_video_looping": false,
         "enable_media_grouping": false,
         "media_grouping_option": "Color,Colour,Couleur,Farbe"
+      }
+    },
+    "custom_product_features_g6K7P8": {
+      "type": "custom-product-features",
+      "blocks": {
+        "feature_74ANHV": {
+          "type": "feature",
+          "repeater": "{{ product.metafields.custom.product_template.value.features.value }}",
+          "settings": {
+            "image": "{{ block.repeater.image.value }}",
+            "title": "{{ block.repeater.title.value }}",
+            "description": "<p>{{ block.repeater.description | metafield_tag }}</p>"
+          }
+        }
+      },
+      "block_order": [
+        "feature_74ANHV"
+      ],
+      "settings": {
+        "section_heading": "We Thought of that Too"
+      }
+    },
+    "custom_product_material_care_AB9yyi": {
+      "type": "custom-product-material-care",
+      "settings": {
+        "section_heading": "Material & Care"
       }
     },
     "related-products": {
@@ -152,6 +183,8 @@
   },
   "order": [
     "main",
+    "custom_product_features_g6K7P8",
+    "custom_product_material_care_AB9yyi",
     "related-products",
     "custom_liquid_tqpgnB"
   ]
