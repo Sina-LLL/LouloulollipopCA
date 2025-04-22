@@ -46,7 +46,7 @@
 
        <span class="price__current">
         {%- assign formatted_price = price | money_with_currency -%}
-        {%- assign price_parts = formatted_price | split: ' ' -%}
+        {%- assign price_parts = formatted_price | split: 'CAD' -%}
       
         {%- if show_currency_code -%}
           <span class="price-value">{{ price_parts[0] }}</span>
