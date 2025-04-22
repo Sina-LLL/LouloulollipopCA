@@ -674,6 +674,7 @@ button svg {
   pointer-events: none;
 }
 
+
 .btn,.custom-html .signup-button_lcButton__E2b7h {
   display: inline-block;
   height: auto;
@@ -758,7 +759,7 @@ button svg {
   --btn-text-hover-color: var(--btn-alt-text-color);
   --btn-bg-color: var(--btn-alt-bg-color);
   --btn-bg-hover-color: var(--btn_alt_text_hover);
-  --btn-border-color: var(--btn-alt-border-color);
+  /* --btn-border-color: var(--btn-alt-border-color); */
   --btn-border-hover-color: var(--btn-alt-border-hover-color);
 }
 
@@ -3197,6 +3198,7 @@ main-navigation {
   opacity: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
+  
 }
 .mobile-navigation-drawer--child-open .mobile-nav-title {
   visibility: visible;
@@ -8608,7 +8610,7 @@ carousel-slider[inactive] .slider-nav__btn {
   margin-inline-start: var(--product-block-price-item-margin-start);
   margin-inline-end: var(--product-block-price-item-margin-end);
 }
-.product-price--block .price__was .money {
+.product-price--block .price__was {
   opacity: 0.5;
   text-decoration: line-through;
 }
