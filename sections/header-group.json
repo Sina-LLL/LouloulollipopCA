@@ -17,7 +17,7 @@
         "announcement-1": {
           "type": "announcement",
           "settings": {
-            "text": "Free Standard Shipping $65+",
+            "text": "Free Standard Shipping $100+",
             "show_countdown": false,
             "hide_on_end": false,
             "end_date": "",
@@ -46,10 +46,10 @@
             "text_color": "#4c4c4b"
           }
         },
-        "announcement_VE8RFg": {
+        "announcement_3B8XC7": {
           "type": "announcement",
           "settings": {
-            "text": "Enjoy a free gift when you spend $100+ (offer valid for a limited time)",
+            "text": "🇨🇦 Proudly Canadian, Since 2015 🇨🇦",
             "show_countdown": false,
             "hide_on_end": false,
             "end_date": "",
@@ -66,7 +66,7 @@
       "block_order": [
         "announcement-1",
         "announcement-2",
-        "announcement_VE8RFg"
+        "announcement_3B8XC7"
       ],
       "settings": {
         "message_font_size": 14,
@@ -158,7 +158,6 @@
           "type": "menu-promotion-small",
           "settings": {
             "dropdown_link_title": "Top Gifts",
-            "image": "shopify://shop_images/loulounewborn-10.jpg",
             "title": "Newborn Gifts",
             "link_url": "shopify://collections/newborn-0-6-months"
           }
@@ -167,7 +166,6 @@
           "type": "menu-promotion-small",
           "settings": {
             "dropdown_link_title": "Top Gifts",
-            "image": "shopify://shop_images/Frame_1_719c04ec-ea55-404e-be01-73014c2ccfb9.png",
             "title": "Gift Cards",
             "link_url": "shopify://products/gift-cards"
           }
