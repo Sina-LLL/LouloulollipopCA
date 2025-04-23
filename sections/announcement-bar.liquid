@@ -122,9 +122,6 @@
         {% if section.settings.menu != blank %}
           <span class="inline-menu">
             {% for link in linklists[section.settings.menu].links %}
-              {%- comment %}<locksmith:7d72>{% endcomment -%}
-                {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[section.settings.menu], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-              {%- comment %}</locksmith:7d72>{% endcomment -%}
               <a class="inline-menu__link announcement-bar__link" href="{{ link.url }}">{{ link.title }}</a>
             {% endfor %}
           </span>

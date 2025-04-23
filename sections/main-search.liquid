@@ -127,19 +127,6 @@
               elsif settings.prod_thumb_shape == 'tallest'
                 assign chosen_product_aspect_ratio = 99
                 for product in search.results
-                  comment
-                    <locksmith:1209> Code added automatically by the Locksmith app. Do not modify or remove.
-                  endcomment
-                  capture var
-                    render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: search, variable: 'transparent'
-                  endcapture
-                  if var == "true"
-                  else
-                    continue
-                  endif
-                  comment
-                    </locksmith:1209> End Locksmith code block.
-                  endcomment
                   if product.object_type == 'product' and product.featured_media.preview_image.aspect_ratio < chosen_product_aspect_ratio
                     assign chosen_product_aspect_ratio = product.featured_media.preview_image.aspect_ratio
                   endif
@@ -147,19 +134,6 @@
               else
                 assign chosen_product_aspect_ratio = 0
                 for product in search.results
-                  comment
-                    <locksmith:4ec4> Code added automatically by the Locksmith app. Do not modify or remove.
-                  endcomment
-                  capture var
-                    render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: search, variable: 'transparent'
-                  endcapture
-                  if var == "true"
-                  else
-                    continue
-                  endif
-                  comment
-                    </locksmith:4ec4> End Locksmith code block.
-                  endcomment
                   if product.object_type == 'product' and product.featured_media.preview_image.aspect_ratio > chosen_product_aspect_ratio
                     assign chosen_product_aspect_ratio = product.featured_media.preview_image.aspect_ratio
                   endif
@@ -179,19 +153,6 @@
               elsif settings.coll_grid_image_shape == 'tallest'
                 assign chosen_collection_aspect_ratio = 99
                 for collection in search.results
-                  comment
-                    <locksmith:0f2d> Code added automatically by the Locksmith app. Do not modify or remove.
-                  endcomment
-                  capture var
-                    render 'locksmith-variables', scope: 'subject', subject: collection, subject_parent: search, variable: 'transparent'
-                  endcapture
-                  if var == "true"
-                  else
-                    continue
-                  endif
-                  comment
-                    </locksmith:0f2d> End Locksmith code block.
-                  endcomment
                   if collection.object_type == 'collection'
                     if collection.featured_image.aspect_ratio < chosen_collection_aspect_ratio
                       assign chosen_collection_aspect_ratio = collection.featured_image.aspect_ratio
@@ -201,19 +162,6 @@
               else
                 assign chosen_collection_aspect_ratio = 0
                 for collection in search.results
-                  comment
-                    <locksmith:323f> Code added automatically by the Locksmith app. Do not modify or remove.
-                  endcomment
-                  capture var
-                    render 'locksmith-variables', scope: 'subject', subject: collection, subject_parent: search, variable: 'transparent'
-                  endcapture
-                  if var == "true"
-                  else
-                    continue
-                  endif
-                  comment
-                    </locksmith:323f> End Locksmith code block.
-                  endcomment
                   if collection.object_type == 'collection'
                     if collection.featured_image.aspect_ratio > chosen_collection_aspect_ratio
                       assign chosen_collection_aspect_ratio = collection.featured_image.aspect_ratio
@@ -223,9 +171,6 @@
               endif
             -%}
             {% for item in search.results %}
-              {%- comment %}<locksmith:8612>{% endcomment -%}
-                {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: item, subject_parent: search, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-              {%- comment %}</locksmith:8612>{% endcomment -%}
               {% if item.object_type == 'product' %}
                 {% render 'product-block', product: item, custom_aspect_ratio: chosen_product_aspect_ratio, animate: true %}
               {% elsif item.object_type == 'collection' %}

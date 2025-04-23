@@ -28,19 +28,6 @@
             elsif section.settings.coll_grid_image_shape == 'tallest'
               assign chosen_aspect_ratio = 99
               for collection in collections
-                comment
-                  <locksmith:f66a> Code added automatically by the Locksmith app. Do not modify or remove.
-                endcomment
-                capture var
-                  render 'locksmith-variables', scope: 'subject', subject: collection, variable: 'transparent'
-                endcapture
-                if var == "true"
-                else
-                  continue
-                endif
-                comment
-                  </locksmith:f66a> End Locksmith code block.
-                endcomment
                 if collection.featured_image.aspect_ratio < chosen_aspect_ratio
                   assign chosen_aspect_ratio = collection.featured_image.aspect_ratio
                 endif
@@ -48,19 +35,6 @@
             else
               assign chosen_aspect_ratio = 0
               for collection in collections
-                comment
-                  <locksmith:dbf5> Code added automatically by the Locksmith app. Do not modify or remove.
-                endcomment
-                capture var
-                  render 'locksmith-variables', scope: 'subject', subject: collection, variable: 'transparent'
-                endcapture
-                if var == "true"
-                else
-                  continue
-                endif
-                comment
-                  </locksmith:dbf5> End Locksmith code block.
-                endcomment
                 if collection.featured_image.aspect_ratio > chosen_aspect_ratio
                   assign chosen_aspect_ratio = collection.featured_image.aspect_ratio
                 endif
@@ -68,19 +42,6 @@
             endif
 
             for collection in collections
-              comment
-                <locksmith:ac0c> Code added automatically by the Locksmith app. Do not modify or remove.
-              endcomment
-              capture var
-                render 'locksmith-variables', scope: 'subject', subject: collection, variable: 'transparent'
-              endcapture
-              if var == "true"
-              else
-                continue
-              endif
-              comment
-                </locksmith:ac0c> End Locksmith code block.
-              endcomment
               render 'collection-block', collection: collection, custom_aspect_ratio: chosen_aspect_ratio, animate: true, settings_object: section.settings
             endfor
           -%}
@@ -108,19 +69,6 @@
           elsif section.settings.coll_grid_image_shape == 'tallest'
             assign chosen_aspect_ratio = 99
             for block in section.blocks
-              comment
-                <locksmith:7539> Code added automatically by the Locksmith app. Do not modify or remove.
-              endcomment
-              capture var
-                render 'locksmith-variables', scope: 'subject', subject: block.settings.collection, subject_parent: section, variable: 'transparent'
-              endcapture
-              if var == "true"
-              else
-                continue
-              endif
-              comment
-                </locksmith:7539> End Locksmith code block.
-              endcomment
               assign collection = collections[block.settings.collection]
               if collection != blank
                 assign collection_image = block.settings.image | default: collection.featured_image
@@ -132,19 +80,6 @@
           else
             assign chosen_aspect_ratio = 0
             for block in section.blocks
-              comment
-                <locksmith:8077> Code added automatically by the Locksmith app. Do not modify or remove.
-              endcomment
-              capture var
-                render 'locksmith-variables', scope: 'subject', subject: block.settings.collection, subject_parent: section, variable: 'transparent'
-              endcapture
-              if var == "true"
-              else
-                continue
-              endif
-              comment
-                </locksmith:8077> End Locksmith code block.
-              endcomment
               assign collection = collections[block.settings.collection]
               if collection != blank
                 assign collection_image = block.settings.image | default: collection.featured_image
@@ -156,19 +91,6 @@
           endif
 
           for block in section.blocks
-            comment
-              <locksmith:63dd> Code added automatically by the Locksmith app. Do not modify or remove.
-            endcomment
-            capture var
-              render 'locksmith-variables', scope: 'subject', subject: block.settings.collection, subject_parent: section, variable: 'transparent'
-            endcapture
-            if var == "true"
-            else
-              continue
-            endif
-            comment
-              </locksmith:63dd> End Locksmith code block.
-            endcomment
             assign collection = collections[block.settings.collection]
             if collection != blank
               render 'collection-block', collection: collection, subheading: block.settings.subheading, button_label: block.settings.button_label, custom_image: block.settings.image, custom_aspect_ratio: chosen_aspect_ratio, prioritised_loading: true, animate: true, custom_attrs: block.shopify_attributes, settings_object: section.settings
