@@ -158,6 +158,7 @@
           "type": "menu-promotion-small",
           "settings": {
             "dropdown_link_title": "Top Gifts",
+            "image": "shopify://shop_images/Newborn.jpg",
             "title": "Newborn Gifts",
             "link_url": "shopify://collections/newborn-0-6-months"
           }
@@ -166,6 +167,7 @@
           "type": "menu-promotion-small",
           "settings": {
             "dropdown_link_title": "Top Gifts",
+            "image": "shopify://shop_images/Frame_1_26b00323-1524-4b29-9a8e-7396c839450b.png",
             "title": "Gift Cards",
             "link_url": "shopify://products/gift-cards"
           }
