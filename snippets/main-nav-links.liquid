@@ -1,5 +1,11 @@
 <ul class="navigation__tier-1">
+  {%- comment %}<locksmith:104a>{% endcomment -%}
+    {%- assign locksmith_74a5_forloop__size = 0 %}{% for link in linklists[link_list].links %}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[link_list], variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_74a5_forloop__size = locksmith_74a5_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_74a5_forloop__index = nil -%}
+  {%- comment %}</locksmith:104a>{% endcomment -%}
   {% for link in linklists[link_list].links %}
+    {%- comment %}<locksmith:4190>{% endcomment -%}
+      {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[link_list], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_74a5_forloop__index == nil %}{% assign locksmith_74a5_forloop__index = 1 %}{% assign locksmith_74a5_forloop__index0 = 0 %}{% else %}{% assign locksmith_74a5_forloop__index = locksmith_74a5_forloop__index | plus: 1 %}{% assign locksmith_74a5_forloop__index0 = locksmith_74a5_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_74a5_forloop__index == 1 %}{% assign locksmith_74a5_forloop__first = true %}{% else %}{% assign locksmith_74a5_forloop__first = false %}{% endif %}{% if locksmith_74a5_forloop__index == locksmith_74a5_forloop__size %}{% assign locksmith_74a5_forloop__last = true %}{% else %}{% assign locksmith_74a5_forloop__last = false %}{% endif %}{% assign locksmith_74a5_forloop__rindex = locksmith_74a5_forloop__size | minus: locksmith_74a5_forloop__index | minus: 1 %}{% assign locksmith_74a5_forloop__rindex0 = locksmith_74a5_forloop__size | minus: locksmith_74a5_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
+    {%- comment %}</locksmith:4190>{% endcomment -%}
     {%- liquid
       assign has_dropdown = false
       assign use_columns = false
@@ -131,6 +137,9 @@
                 {% if use_columns and link.levels == 1 %}
                   <li class="navigation__item navigation__column">
                     {% for child_link in link.links %}
+                      {%- comment %}<locksmith:b8ea>{% endcomment -%}
+                        {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: child_link, subject_parent: link, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                      {%- comment %}</locksmith:b8ea>{% endcomment -%}
                       <a href="{{ child_link.url }}" class="navigation__link{% if featured_links contains child_link.title %} featured-link{% endif %}">
                         {{- child_link.title | escape -}}
                       </a>
@@ -138,6 +147,9 @@
                   </li>
                 {% else %}
                   {% for child_link in link.links %}
+                    {%- comment %}<locksmith:5c80>{% endcomment -%}
+                      {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: child_link, subject_parent: link, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                    {%- comment %}</locksmith:5c80>{% endcomment -%}
                     {% if child_link.links != blank %}
                       <li class="navigation__item{% if child_link.links != blank %} navigation__item--with-children{% endif %}{% if use_columns %} navigation__column{% endif %}{% if featured_links contains child_link.title %} featured-link{% endif %}">
                         <a role="button" href="{{ child_link.url }}" class="navigation__link{% if child_link.links != blank %} navigation__column-title{% endif %}" {% if child_link.links != blank %}aria-haspopup="true" aria-expanded="false"{% endif %}>
@@ -151,6 +163,9 @@
                           <div class="navigation__tier-3-container navigation__child-tier">
                             <ul class="navigation__tier-3">
                               {% for child_child_link in child_link.links %}
+                              {%- comment %}<locksmith:969b>{% endcomment -%}
+                                {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: child_child_link, subject_parent: child_link, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                              {%- comment %}</locksmith:969b>{% endcomment -%}
                               <li class="navigation__item{% if featured_links contains child_child_link.title %} featured-link{% endif %}">
                                 <a role="button" class="navigation__link" href="{{ child_child_link.url }}">{{ child_child_link.title | escape }}</a>
                               </li>
@@ -163,6 +178,9 @@
                   {% endfor %}            
                   {% assign has_links = false %}
                   {% for child_link in link.links %}
+                    {%- comment %}<locksmith:f0ab>{% endcomment -%}
+                      {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: child_link, subject_parent: link, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                    {%- comment %}</locksmith:f0ab>{% endcomment -%}
                     {% if child_link.links == blank %}
                       {% assign has_links = true %}
                     {% endif %}
@@ -170,6 +188,9 @@
                   {% if has_links %}
                     <li class="navigation__singleColumn navigation__item{% if use_columns %} navigation__column{% endif %}{% if featured_links contains child_link.title %} featured-link{% endif %}">
                       {% for child_link in link.links %}
+                        {%- comment %}<locksmith:f6f0>{% endcomment -%}
+                          {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: child_link, subject_parent: link, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                        {%- comment %}</locksmith:f6f0>{% endcomment -%}
                         {% if child_link.links == blank %}
                           <a role="button" href="{{ child_link.url }}" class="navigation__link{% if child_link.links != blank %} navigation__column-title{% endif %}" {% if child_link.links != blank %}aria-haspopup="true" aria-expanded="false"{% endif %}>
                             {{- child_link.title | escape -}}

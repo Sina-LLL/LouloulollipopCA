@@ -1,3 +1,7 @@
+{%- comment %}<locksmith:8dc4>{% endcomment -%}
+  {%- include 'locksmith' -%}
+{%- comment %}</locksmith:8dc4>{% endcomment -%}
+
 {%- liquid
   assign rtl_langs = 'ar,arc,dv,fa,ha,he,khw,ks,ku,ps,ur,yi' | split: ','
   assign current_lang = localization.language.iso_code | split: '-' | first
@@ -10,6 +14,7 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}" dir="{{ lang_dir }}">
 <head>
+  {{ locksmith_initializations }}
   
   {% if template contains 'collection' and canonical_url contains '- CORE Siblings' %}
     <meta name="robots" content="noindex,follow">  
