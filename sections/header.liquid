@@ -82,13 +82,13 @@
             <div id="proxy-nav" class="navigation navigation--left" role="navigation" aria-label="{{ 'accessibility.main_navigation' | t }}">
               <div class="navigation__tier-1-container">
                 <ul class="navigation__tier-1">
-                  {%- comment %}<locksmith:beb3>{% endcomment -%}
-                    {%- assign locksmith_0f6c_forloop__size = 0 %}{% for link in linklists[section.settings.menu_linklist].links %}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[section.settings.menu_linklist], variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_0f6c_forloop__size = locksmith_0f6c_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_0f6c_forloop__index = nil -%}
-                  {%- comment %}</locksmith:beb3>{% endcomment -%}
+                  {%- comment %}<locksmith:e56d>{% endcomment -%}
+                    {%- assign locksmith_fabd_forloop__size = 0 %}{% for link in linklists[section.settings.menu_linklist].links %}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[section.settings.menu_linklist], variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_fabd_forloop__size = locksmith_fabd_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_fabd_forloop__index = nil -%}
+                  {%- comment %}</locksmith:e56d>{% endcomment -%}
                   {% for link in linklists[section.settings.menu_linklist].links %}
-                    {%- comment %}<locksmith:87c4>{% endcomment -%}
-                      {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[section.settings.menu_linklist], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_0f6c_forloop__index == nil %}{% assign locksmith_0f6c_forloop__index = 1 %}{% assign locksmith_0f6c_forloop__index0 = 0 %}{% else %}{% assign locksmith_0f6c_forloop__index = locksmith_0f6c_forloop__index | plus: 1 %}{% assign locksmith_0f6c_forloop__index0 = locksmith_0f6c_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_0f6c_forloop__index == 1 %}{% assign locksmith_0f6c_forloop__first = true %}{% else %}{% assign locksmith_0f6c_forloop__first = false %}{% endif %}{% if locksmith_0f6c_forloop__index == locksmith_0f6c_forloop__size %}{% assign locksmith_0f6c_forloop__last = true %}{% else %}{% assign locksmith_0f6c_forloop__last = false %}{% endif %}{% assign locksmith_0f6c_forloop__rindex = locksmith_0f6c_forloop__size | minus: locksmith_0f6c_forloop__index | minus: 1 %}{% assign locksmith_0f6c_forloop__rindex0 = locksmith_0f6c_forloop__size | minus: locksmith_0f6c_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
-                    {%- comment %}</locksmith:87c4>{% endcomment -%}
+                    {%- comment %}<locksmith:5539>{% endcomment -%}
+                      {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[section.settings.menu_linklist], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_fabd_forloop__index == nil %}{% assign locksmith_fabd_forloop__index = 1 %}{% assign locksmith_fabd_forloop__index0 = 0 %}{% else %}{% assign locksmith_fabd_forloop__index = locksmith_fabd_forloop__index | plus: 1 %}{% assign locksmith_fabd_forloop__index0 = locksmith_fabd_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_fabd_forloop__index == 1 %}{% assign locksmith_fabd_forloop__first = true %}{% else %}{% assign locksmith_fabd_forloop__first = false %}{% endif %}{% if locksmith_fabd_forloop__index == locksmith_fabd_forloop__size %}{% assign locksmith_fabd_forloop__last = true %}{% else %}{% assign locksmith_fabd_forloop__last = false %}{% endif %}{% assign locksmith_fabd_forloop__rindex = locksmith_fabd_forloop__size | minus: locksmith_fabd_forloop__index | minus: 1 %}{% assign locksmith_fabd_forloop__rindex0 = locksmith_fabd_forloop__size | minus: locksmith_fabd_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
+                    {%- comment %}</locksmith:5539>{% endcomment -%}
                     {%- liquid
                       assign has_dropdown = false
                       if link.links != blank
@@ -109,7 +109,7 @@
                       endif
                     -%}
                     <li class="navigation__item{% if has_dropdown %} navigation__item--with-children {% if use_columns %}navigation__item--with-mega-menu{% else %}navigation__item--with-small-menu{% endif %}{% endif %}{% if featured_links contains link.title %} featured-link{% endif %}{% if link.active %} navigation__item--active{% endif %}">
-                      <a href="{{ link.url }}" class="navigation__link" {% if has_dropdown %}aria-haspopup="true" aria-expanded="false" aria-controls="NavigationTier2-{{ locksmith_0f6c_forloop__index }}"{% endif %}>
+                      <a href="{{ link.url }}" class="navigation__link" {% if has_dropdown %}aria-haspopup="true" aria-expanded="false" aria-controls="NavigationTier2-{{ locksmith_fabd_forloop__index }}"{% endif %}>
                         {{- link.title | escape -}}
                       </a>
                     </li>
@@ -257,7 +257,7 @@
                     assign collection_aspect_ratio = 999
                     for link in suggestions_menu.links
                       comment
-                        <locksmith:b079> Code added automatically by the Locksmith app. Do not modify or remove.
+                        <locksmith:9b92> Code added automatically by the Locksmith app. Do not modify or remove.
                       endcomment
                       capture var
                         render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: suggestions_menu, variable: 'transparent'
@@ -267,7 +267,7 @@
                         continue
                       endif
                       comment
-                        </locksmith:b079> End Locksmith code block.
+                        </locksmith:9b92> End Locksmith code block.
                       endcomment
                       for child_link in link.links
                         if child_link.type == 'collection_link'
@@ -287,7 +287,7 @@
                     assign collection_aspect_ratio = 0
                     for link in suggestions_menu.links
                       comment
-                        <locksmith:4ea2> Code added automatically by the Locksmith app. Do not modify or remove.
+                        <locksmith:5000> Code added automatically by the Locksmith app. Do not modify or remove.
                       endcomment
                       capture var
                         render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: suggestions_menu, variable: 'transparent'
@@ -297,7 +297,7 @@
                         continue
                       endif
                       comment
-                        </locksmith:4ea2> End Locksmith code block.
+                        </locksmith:5000> End Locksmith code block.
                       endcomment
                       for child_link in link.links
                         if child_link.type == 'collection_link' and child_link.object.featured_image.aspect_ratio > collection_aspect_ratio
@@ -325,7 +325,7 @@
                     assign product_aspect_ratio = 99
                     for link in suggestions_menu.links
                       comment
-                        <locksmith:fc01> Code added automatically by the Locksmith app. Do not modify or remove.
+                        <locksmith:f1cb> Code added automatically by the Locksmith app. Do not modify or remove.
                       endcomment
                       capture var
                         render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: suggestions_menu, variable: 'transparent'
@@ -335,7 +335,7 @@
                         continue
                       endif
                       comment
-                        </locksmith:fc01> End Locksmith code block.
+                        </locksmith:f1cb> End Locksmith code block.
                       endcomment
                       for child_link in link.links
                         if child_link.type == 'product_link' and child_link.object.featured_media.preview_image.aspect_ratio < product_aspect_ratio
@@ -350,7 +350,7 @@
                     assign product_aspect_ratio = 0
                     for link in suggestions_menu.links
                       comment
-                        <locksmith:93c6> Code added automatically by the Locksmith app. Do not modify or remove.
+                        <locksmith:1a92> Code added automatically by the Locksmith app. Do not modify or remove.
                       endcomment
                       capture var
                         render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: suggestions_menu, variable: 'transparent'
@@ -360,7 +360,7 @@
                         continue
                       endif
                       comment
-                        </locksmith:93c6> End Locksmith code block.
+                        </locksmith:1a92> End Locksmith code block.
                       endcomment
                       for child_link in link.links
                         if child_link.type == 'product_link' and child_link.object.featured_media.preview_image.aspect_ratio > product_aspect_ratio
@@ -376,17 +376,17 @@
                 <div class="search-recommendations search-recommendations--collections-per-row-{{ settings.coll_thumb_mob_per_row }}">
                   <div class="search-recommendations__item-row">
                     {% for link in suggestions_menu.links %}
-                      {%- comment %}<locksmith:6063>{% endcomment -%}
+                      {%- comment %}<locksmith:7263>{% endcomment -%}
                         {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: suggestions_menu, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-                      {%- comment %}</locksmith:6063>{% endcomment -%}
+                      {%- comment %}</locksmith:7263>{% endcomment -%}
                       {% if link.links != blank %}
                         <div class="search-recommendations__item search-recommendations__item--with-row">
                           <div class="search-recommendations__heading h5 heading-font"><a href="{{ link.url }}">{{ link.title | escape }}</a></div>
                           <div class="search-recommendations__item-row">
                             {% for child_link in link.links %}
-                              {%- comment %}<locksmith:e535>{% endcomment -%}
+                              {%- comment %}<locksmith:ccfa>{% endcomment -%}
                                 {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: child_link, subject_parent: link, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-                              {%- comment %}</locksmith:e535>{% endcomment -%}
+                              {%- comment %}</locksmith:ccfa>{% endcomment -%}
                               <div class="search-recommendations__item search-recommendations__item--type-{{ child_link.type }}" data-type="">
                                 {% if child_link.type == 'collection_link' %}
                                   {% render 'collection-block', collection: child_link.object, custom_aspect_ratio: collection_aspect_ratio, manual_loading: true %}
@@ -472,9 +472,9 @@
                     endif
                   -%}
                   {% for product in collections[section.settings.nav_mob_products_collection].products limit: product_limit %}
-                    {%- comment %}<locksmith:b2f6>{% endcomment -%}
+                    {%- comment %}<locksmith:e515>{% endcomment -%}
                       {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collections[section.settings.nav_mob_products_collection], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-                    {%- comment %}</locksmith:b2f6>{% endcomment -%}
+                    {%- comment %}</locksmith:e515>{% endcomment -%}
                     {% render 'product-block', product: product, custom_aspect_ratio: chosen_aspect_ratio, no_swiping: true, no_quick_buy_markup: true, manual_loading: true %}
                   {% endfor %}
                 </div>
