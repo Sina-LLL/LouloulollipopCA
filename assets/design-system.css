@@ -572,6 +572,7 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
 }
 .product-material-care__icons svg {
   max-width: 32px;
+  max-height: 32px;
   min-width:32px;
   min-height: 32px;
 }
