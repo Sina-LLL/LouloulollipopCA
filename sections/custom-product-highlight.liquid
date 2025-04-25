@@ -11,13 +11,18 @@
       </div>
     {%- endif -%}
 
-    <div class="collection-listing fade-in-up" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
-      <div class="product-grid product-grid--per-row-{{ section.settings.grid }} product-grid--per-row-mob-{{ settings.prod_thumb_mob_per_row }}">
+    <div class="collection-listing fade-in-up{% if section.settings.enable_carousel %} slider {% if section.settings.full_width %}slider--edge-peek{% endif %} slider--mobile-container-pad slider--no-scrollbar{% endif %}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
+      <div class="product-grid product-grid--per-row-{{ section.settings.grid }} product-grid--per-row-mob-{{ settings.prod_thumb_mob_per_row }}{% if section.settings.enable_carousel %} slider__grid product-grid--carousel{% endif %}">
         {%- liquid
-          if section.settings.collection == blank
-            for i in (1..product_limit)
+          if section.settings.product_list == blank
+            for i in (1..4)
+              if section.settings.enable_carousel
+                echo '<div class="slider__item">'
+              endif
               render 'onboarding-product-block', forloop: forloop
-            
+              if section.settings.enable_carousel
+                echo '</div>'
+              endif
             endfor
           else
             if settings.prod_thumb_shape == 'portrait-23'
@@ -32,24 +37,27 @@
               assign chosen_aspect_ratio = 1.50
             elsif settings.prod_thumb_shape == 'tallest'
               assign chosen_aspect_ratio = 99
-              for product in collection.products limit: product_limit
+              for product in section.settings.product_list
                 if product.featured_media.preview_image.aspect_ratio < chosen_aspect_ratio
                   assign chosen_aspect_ratio = product.featured_media.preview_image.aspect_ratio
                 endif
               endfor
             else
               assign chosen_aspect_ratio = 0
-              for product in collection.products limit: product_limit
+              for product in section.settings.product_list
                 if product.featured_media.preview_image.aspect_ratio > chosen_aspect_ratio
                   assign chosen_aspect_ratio = product.featured_media.preview_image.aspect_ratio
                 endif
               endfor
             endif
-
-            for product in collection.products limit: product_limit
-              
-              render 'product-block', product: product, collection: collection, custom_aspect_ratio: chosen_aspect_ratio, no_swiping: section.settings.enable_carousel, no_quick_buy_markup: section.settings.enable_carousel
-              
+            for product in section.settings.product_list
+              if section.settings.enable_carousel
+                echo '<div class="slider__item">'
+              endif
+              render 'product-block', product: product, custom_aspect_ratio: chosen_aspect_ratio, no_swiping: section.settings.enable_carousel, no_quick_buy_markup: section.settings.enable_carousel
+              if section.settings.enable_carousel
+                echo '</div>'
+              endif
             endfor
           endif
         -%}
