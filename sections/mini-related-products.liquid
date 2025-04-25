@@ -15,19 +15,6 @@
         elsif settings.prod_thumb_shape == 'tallest'
           assign chosen_aspect_ratio = 99
           for product in recommendations.products
-            comment
-              <locksmith:cfdb> Code added automatically by the Locksmith app. Do not modify or remove.
-            endcomment
-            capture var
-              render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: recommendations, variable: 'transparent'
-            endcapture
-            if var == "true"
-            else
-              continue
-            endif
-            comment
-              </locksmith:cfdb> End Locksmith code block.
-            endcomment
             if product.featured_media.preview_image.aspect_ratio < chosen_aspect_ratio
               assign chosen_aspect_ratio = product.featured_media.preview_image.aspect_ratio
             endif
@@ -35,19 +22,6 @@
         else
           assign chosen_aspect_ratio = 0
           for product in recommendations.products
-            comment
-              <locksmith:0a45> Code added automatically by the Locksmith app. Do not modify or remove.
-            endcomment
-            capture var
-              render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: recommendations, variable: 'transparent'
-            endcapture
-            if var == "true"
-            else
-              continue
-            endif
-            comment
-              </locksmith:0a45> End Locksmith code block.
-            endcomment
             if product.featured_media.preview_image.aspect_ratio > chosen_aspect_ratio
               assign chosen_aspect_ratio = product.featured_media.preview_image.aspect_ratio
             endif
@@ -55,19 +29,6 @@
         endif
 
         for product in recommendations.products
-          comment
-            <locksmith:a128> Code added automatically by the Locksmith app. Do not modify or remove.
-          endcomment
-          capture var
-            render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: recommendations, variable: 'transparent'
-          endcapture
-          if var == "true"
-          else
-            continue
-          endif
-          comment
-            </locksmith:a128> End Locksmith code block.
-          endcomment
           render 'product-block', product: product, no_quick_buy: true, no_swiping: true, custom_aspect_ratio: chosen_aspect_ratio
         endfor
       -%}

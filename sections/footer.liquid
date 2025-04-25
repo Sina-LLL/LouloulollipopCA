@@ -20,9 +20,9 @@
             {% if block.settings.menu != blank %}
               <ul class="section-footer__menu-block__menu" {{ block.shopify_attributes }}>
                 {% for link in linklists[block.settings.menu].links %}
-                  {%- comment %}<locksmith:093f>{% endcomment -%}
+                  {%- comment %}<locksmith:8189>{% endcomment -%}
                     {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[block.settings.menu], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-                  {%- comment %}</locksmith:093f>{% endcomment -%}
+                  {%- comment %}</locksmith:8189>{% endcomment -%}
                   <li>
                     <a href="{{ link.url }}" {% if link.title.size < 25 %}class="no-wrap"{% endif %}>
                       {{- link.title -}}
@@ -165,9 +165,9 @@
         <div class="section-footer__lower-menu" role="navigation">
           <ul class="section-footer__lower-menu__list" aria-label="{{ 'accessibility.secondary_navigation' | t }}">
             {% for link in linklists[section.settings.lower_menu].links %}
-              {%- comment %}<locksmith:3123>{% endcomment -%}
+              {%- comment %}<locksmith:243b>{% endcomment -%}
                 {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[section.settings.lower_menu], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-              {%- comment %}</locksmith:3123>{% endcomment -%}
+              {%- comment %}</locksmith:243b>{% endcomment -%}
               <li>
                 <a href="{{ link.url }}">
                   {{- link.title -}}

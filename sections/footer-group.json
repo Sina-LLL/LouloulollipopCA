@@ -11,6 +11,22 @@
   "type": "footer",
   "name": "Footer Group",
   "sections": {
+    "1745439986319c1aac": {
+      "type": "apps",
+      "blocks": {
+        "ethos_referrals_tfVhK3": {
+          "type": "shopify://apps/ethos/blocks/referrals/e6f2bd3b-e2fd-4f16-b73c-bf198b58bb45",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "ethos_referrals_tfVhK3"
+      ],
+      "settings": {
+        "full_width": false,
+        "show_space": true
+      }
+    },
     "cross-page-promos": {
       "type": "cross-page-promos",
       "blocks": {
@@ -108,6 +124,7 @@
     }
   },
   "order": [
+    "1745439986319c1aac",
     "cross-page-promos",
     "footer"
   ]

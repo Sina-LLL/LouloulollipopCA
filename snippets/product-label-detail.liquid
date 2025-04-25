@@ -22,7 +22,7 @@
       else
         for collection in product.collections
           comment
-            <locksmith:28bf> Code added automatically by the Locksmith app. Do not modify or remove.
+            <locksmith:39d9> Code added automatically by the Locksmith app. Do not modify or remove.
           endcomment
           capture var
             render 'locksmith-variables', scope: 'subject', subject: collection, subject_parent: product, variable: 'transparent'
@@ -32,7 +32,7 @@
             continue
           endif
           comment
-            </locksmith:28bf> End Locksmith code block.
+            </locksmith:39d9> End Locksmith code block.
           endcomment
           assign split_collection_handle = collection.handle | split: '-'
           if split_collection_handle contains 'new'
