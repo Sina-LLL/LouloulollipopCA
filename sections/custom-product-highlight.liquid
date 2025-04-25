@@ -84,12 +84,33 @@
       "type": "text",
       "id": "title",
       "label": "Heading",
-      "default": "Featured collection"
+      "default": "Product list"
     },
     {
-      "type": "collection",
-      "id": "collection",
-      "label": "Collection"
+      "type": "product_list",
+      "id": "product_list",
+      "label": "Product list"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "label": "Show product vendor",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_carousel",
+      "label": "Enable carousel",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "grid",
+      "label": "Products per row",
+      "min": 2,
+      "max": 5,
+      "step": 1,
+      "default": 4
     },
     {
       "type": "select",
@@ -110,12 +131,6 @@
           "label": "2"
         }
       ]
-    },
-    {
-      "type": "checkbox",
-      "id": "show_view_all",
-      "label": "Show 'View all' link",
-      "default": true
     },
     {
       "id": "full_width",
