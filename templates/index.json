@@ -100,9 +100,13 @@
       "name": "Featured collection",
       "settings": {
         "title": "New Snack Plates",
-        "collection": "snack-plate",
+        "product_list": [
+          "snack-plate-smiley-sharks",
+          "snack-plate-octopus"
+        ],
+        "show_vendor": false,
+        "grid": 4,
         "color_scheme": "default",
-        "show_view_all": true,
         "full_width": true
       }
     },
