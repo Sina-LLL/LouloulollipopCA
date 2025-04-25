@@ -12,9 +12,6 @@
             </li>
           {%- endfor -%}
           {%- for collection in predictive_search.resources.collections -%}
-            {%- comment %}<locksmith:53f6>{% endcomment -%}
-              {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: collection, subject_parent: predictive_search.resources, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-            {%- comment %}</locksmith:53f6>{% endcomment -%}
             <li class="search-suggestions__list-item search-suggestions__list-item--collection">
               <a href="{{ collection.url }}" class="search-suggestions__item">{{ collection.title }}</a>
             </li>

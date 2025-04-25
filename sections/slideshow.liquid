@@ -188,7 +188,7 @@
       <div class="slideshow-ctrl js-only{% if section.settings.mobile_overlay_under %} slideshow-ctrl--mobile-stack{% endif %}">
         <div class="slideshow-pagination{% if section.settings.navigation == 'arrows' %} mobile-only{% endif %}">
           {%- for block in section.blocks -%}
-            <button class="page-btn" role="button" data-index="{{ forloop.index0 }}" aria-controls="slideshow-{{ section.id }}"{% if forloop.first %} aria-current="true"{% endif %}>
+            <button class="page-btn" data-index="{{ forloop.index0 }}" aria-controls="slideshow-{{ section.id }}"{% if forloop.first %} aria-current="true"{% endif %}>
               <span class="visually-hidden">{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="page-btn__circle">
                 <circle class="page-btn__fg-circle" cx="12" cy="12" r="6" />
@@ -200,12 +200,12 @@
 
         {%- if section.settings.navigation == 'arrows' -%}
           <div class="slideshow-nav desktop-only">
-            <button type="button" role="button" class="slideshow-nav__btn has-ltr-icon" name="prev" aria-controls="slideshow-{{ section.id }}">
+            <button type="button" class="slideshow-nav__btn has-ltr-icon" name="prev" aria-controls="slideshow-{{ section.id }}">
               <span class="visually-hidden">{{ 'general.slider.previous' | t }}</span>
               {% render 'icon-chevron-left' %}
             </button>
 
-            <button type="button" role="button" class="slideshow-nav__btn has-ltr-icon" name="next" aria-controls="slideshow-{{ section.id }}">
+            <button type="button" class="slideshow-nav__btn has-ltr-icon" name="next" aria-controls="slideshow-{{ section.id }}">
               <span class="visually-hidden">{{ 'general.slider.next' | t }}</span>
               {% render 'icon-chevron-right' %}
             </button>
