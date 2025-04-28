@@ -137,6 +137,9 @@
           "snack-plate-smiley-sharks",
           "snack-plate-octopus"
         ],
+        "button_label": "Shop new Collection",
+        "link": "shopify://collections/ocean-wonders-eat-play",
+        "button_style": "primary",
         "color_scheme": "default"
       }
     },
