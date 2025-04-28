@@ -3,7 +3,7 @@
   <div class="container container--no-max">
     <div class="flexible-layout flexible-layout--variable-columns">
       <div class="column text-column fade-in-up" {%- render 'animation-attrs', attrs: animation_attrs -%}>
-        <div class="text-column__image lightly-spaced-row">
+        <div class="text-column__image fully-spaced-row fully-spaced-row--small">
           <h2 class="hometitle h4" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.3s"' -%}>
               <a class="has-paging__title" href="{{ collection.url }}">{{ section.settings.title | escape }}</a>
             </h2>
