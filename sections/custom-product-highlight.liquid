@@ -11,11 +11,11 @@
               <div class="text-column__text rte">{{ section.settings.text }}</div>
             {% endif %}
         
-            {%- if section.settings.show_view_all -%}
-              <div class="view-all align-center" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.5s"' -%}>
-                <a class="small-feature-link" href="{{ collection.url }}">{{ 'sections.featured_collection.view_all' | t }}</a>
-              </div>
-            {%- endif -%}
+             {% if section.settings.button_label != blank %}
+            <div class="text-column__button-row text-column__button-row--{{ section.settings.button_style }}">
+              <a class="text-column__button {% if section.settings.button_style != 'link' %}btn btn--{{ section.settings.button_style }}{% else %}small-feature-link{% endif %}" href="{{ block.settings.link }}">{{ block.settings.button_label | escape }}</a>
+            </div>
+            {% endif %}
           </div> 
           <div class="collection-listing fade-in-up" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
             <div class="product-grid product-grid--per-row-{{ section.settings.grid }} product-grid--per-row-mob-{{ settings.prod_thumb_mob_per_row }}">
@@ -113,6 +113,26 @@
       "type": "product_list",
       "id": "product_list",
       "label": "Product list"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Button style",
+      "default": "primary",
+      "options": [
+        {
+          "label": "Primary",
+          "value": "primary"
+        },
+        {
+          "label": "Secondary",
+          "value": "secondary"
+        },
+        {
+          "label": "Link",
+          "value": "link"
+        }
+      ]
     },
     {
       "type": "select",
