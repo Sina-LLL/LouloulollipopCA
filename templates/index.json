@@ -23,7 +23,7 @@
           "type": "text",
           "settings": {
             "text": "<p>As we adapt to new tariff rates and do our best not to raise prices for you, we've had to pause shipping some of our products to the US. We hope to have all your faves available again shortly. Please <a href=\"/pages/contact-us\" title=\"Contact Us\">reach out</a> if you need anything in the meantime. Thanks for your support!</p>",
-            "enlarge_text": true
+            "enlarge_text": false
           }
         }
       },
@@ -33,7 +33,7 @@
       ],
       "name": "Rich text",
       "settings": {
-        "height": "medium",
+        "height": "small",
         "text_alignment": "center",
         "full_width": false,
         "color_scheme": "2"
