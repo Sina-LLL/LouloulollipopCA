@@ -10,12 +10,6 @@
             {% if section.settings.text != blank %}
               <div class="text-column__text rte">{{ section.settings.text }}</div>
             {% endif %}
-        
-             {% if section.settings.button_label != blank %}
-            <div class="text-column__button-row text-column__button-row--{{ section.settings.button_style }}">
-              <a class="text-column__button {% if section.settings.button_style != 'link' %}btn btn--{{ section.settings.button_style }}{% else %}small-feature-link{% endif %}" href="{{ section.settings.link }}">{{ section.settings.button_label | escape }}</a>
-            </div>
-            {% endif %}
           </div> 
           <div class="collection-listing fade-in-up" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
             <div class="product-grid product-grid--per-row-{{ section.settings.grid }} product-grid--per-row-mob-{{ settings.prod_thumb_mob_per_row }}">
@@ -59,7 +53,11 @@
                   endfor
                 endif
               -%}
-             
+             {% if section.settings.button_label != blank %}
+            <div class="text-column__button-row text-column__button-row--{{ section.settings.button_style }}">
+              <a class="text-column__button {% if section.settings.button_style != 'link' %}btn btn--{{ section.settings.button_style }}{% else %}small-feature-link{% endif %}" href="{{ section.settings.link }}">{{ section.settings.button_label | escape }}</a>
+            </div>
+            {% endif %}
             </div>
           </div>
         </div>
