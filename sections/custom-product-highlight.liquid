@@ -1,7 +1,7 @@
 
 <div class="section-id-{{ section.id }} collection-slider-row {% if section.settings.color_scheme != 'default' %}use-color-scheme use-color-scheme--{{ section.settings.color_scheme }}{% endif %}">
-  <div class="container flexible-layout flexible-layout--variable-columns">
-    <div class="column text-column fade-in-up">
+  <div class="container">
+    <div class="flexible-layout flexible-layout--variable-columns">
         <h2 class="hometitle h4" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.3s"' -%}>
           <a class="has-paging__title" href="{{ collection.url }}">{{ section.settings.title | escape }}</a>
         </h2>
