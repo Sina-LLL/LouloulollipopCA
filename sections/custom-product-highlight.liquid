@@ -66,7 +66,7 @@
       <div class="column text-column fade-in-up" {%- render 'animation-attrs', attrs: animation_attrs -%}>
         <div class="text-column__image lightly-spaced-row">  
         {%- if section.settings.image != blank -%}
-            {%- render 'image' with section.settings.image, sizes: sizes, widths: widths, size_cols_desktop: size_cols_desktop, aspect_ratio: 0.9 -%}
+            {%- render 'image' with section.settings.image, sizes: sizes, widths: widths, size_cols_desktop: size_cols_desktop, aspect_ratio: 1.25 -%}
         {%- else -%}
           <div class="placeholder-image">
             {{- 'image' | placeholder_svg_tag: 'placeholder-svg' -}}
