@@ -126,6 +126,20 @@
         "accessibility_info": ""
       }
     },
+    "featured_collection_RcGTat": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "New Ocean Wonders Eat & Play",
+        "collection": "ocean-wonders-eat-play",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 5,
+        "rows": 2,
+        "color_scheme": "2",
+        "show_view_all": true,
+        "full_width": true
+      }
+    },
     "custom_product_highlight_JiGaUB": {
       "type": "custom-product-highlight",
       "name": "Featured collection",
@@ -142,20 +156,6 @@
         "link": "shopify://collections/ocean-wonders-eat-play",
         "button_style": "primary",
         "color_scheme": "default"
-      }
-    },
-    "featured_collection_RcGTat": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "New Ocean Wonders Eat & Play",
-        "collection": "ocean-wonders-eat-play",
-        "show_vendor": false,
-        "enable_carousel": true,
-        "grid": 5,
-        "rows": 2,
-        "color_scheme": "2",
-        "show_view_all": true,
-        "full_width": true
       }
     },
     "featured_collection_AhBPDp": {
@@ -666,8 +666,8 @@
   "order": [
     "rich_text_ttwQ7E",
     "16359276425da8ce46",
-    "custom_product_highlight_JiGaUB",
     "featured_collection_RcGTat",
+    "custom_product_highlight_JiGaUB",
     "featured_collection_AhBPDp",
     "collection_list_BzgHGC",
     "logo_list_kYmwNX",
