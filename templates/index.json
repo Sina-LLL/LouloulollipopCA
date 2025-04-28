@@ -113,7 +113,7 @@
         "16359276425da8ce46-0"
       ],
       "settings": {
-        "height": "adapt",
+        "height": "fixed",
         "height_desktop": 700,
         "height_mobile": 620,
         "full_width": true,
