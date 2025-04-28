@@ -1,5 +1,5 @@
 
-<div class="section-id-{{ section.id }} collection-slider-row {% if section.settings.color_scheme != 'default' %}use-color-scheme use-color-scheme--{{ section.settings.color_scheme }}{% endif %}">
+<div id="section-id-{{ section.id }}" class="{% if section.settings.color_scheme != 'default' %}use-color-scheme use-color-scheme--{{ section.settings.color_scheme }} fully-padded-row--medium{% else %}fully-spaced-row--medium{% endif %}">
   <div class="container">
     <div class="flexible-layout flexible-layout--variable-columns">
       <div class="column text-column fade-in-up" {%- render 'animation-attrs', attrs: animation_attrs -%}>
