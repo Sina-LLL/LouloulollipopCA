@@ -64,19 +64,21 @@
             </div>
         </div>
       </div>
-                        <div class="text-column__image lightly-spaced-row">
-              {%- if block.settings.link != blank -%}<a href="{{ block.settings.link }}">{%- endif -%}
+      <div class="column text-column fade-in-up">
+        <div class="text-column__image lightly-spaced-row">
+          {%- if block.settings.link != blank -%}<a href="{{ block.settings.link }}">{%- endif -%}
 
-              {%- if section.settings.image != blank -%}
-                  {%- render 'image' with section.settings.image, sizes: sizes, widths: widths, size_cols_desktop: size_cols_desktop, custom_aspect_ratio: custom_media_aspect_ratio -%}
-              {%- else -%}
-                <div class="placeholder-image">
-                  {{- 'image' | placeholder_svg_tag: 'placeholder-svg' -}}
-                </div>
-              {%- endif -%}
-
-              {%- if block.settings.link != blank -%}</a>{% endif -%}
+          {%- if section.settings.image != blank -%}
+              {%- render 'image' with section.settings.image, sizes: sizes, widths: widths, size_cols_desktop: size_cols_desktop, custom_aspect_ratio: custom_media_aspect_ratio -%}
+          {%- else -%}
+            <div class="placeholder-image">
+              {{- 'image' | placeholder_svg_tag: 'placeholder-svg' -}}
             </div>
+          {%- endif -%}
+
+          {%- if block.settings.link != blank -%}</a>{% endif -%}
+        </div>
+      </div
       <!-- <div class="column text-column fade-in-up">
         <div class="height--adapt">
         {%- render 'image' with section.settings.image, sizes: sizes, widths: widths, size_cols_desktop: size_cols_desktop, custom_aspect_ratio: custom_media_aspect_ratio -%}
