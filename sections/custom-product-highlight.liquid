@@ -2,7 +2,7 @@
 <div class="section-id-{{ section.id }} collection-slider-row {% if section.settings.color_scheme != 'default' %}use-color-scheme use-color-scheme--{{ section.settings.color_scheme }}{% endif %}">
   <div class="container">
     <div class="flexible-layout flexible-layout--variable-columns">
-      <div class="column text-column fade-in-up">
+      <div class="column text-column fade-in-up" {%- render 'animation-attrs', attrs: animation_attrs -%}>
         <div class="text-column__image lightly-spaced-row">
           <h2 class="hometitle h4" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.3s"' -%}>
               <a class="has-paging__title" href="{{ collection.url }}">{{ section.settings.title | escape }}</a>
@@ -63,19 +63,15 @@
             </div>
           </div>
         </div>
-      <div class="column text-column fade-in-up">
-        <div class="text-column__image lightly-spaced-row">
-          {%- if block.settings.link != blank -%}<a href="{{ block.settings.link }}">{%- endif -%}
-  
-          {%- if section.settings.image != blank -%}
-              {%- render 'image' with section.settings.image, sizes: sizes, widths: widths, size_cols_desktop: size_cols_desktop, custom_aspect_ratio: custom_media_aspect_ratio -%}
-          {%- else -%}
-            <div class="placeholder-image">
-              {{- 'image' | placeholder_svg_tag: 'placeholder-svg' -}}
-            </div>
-          {%- endif -%}
-  
-          {%- if block.settings.link != blank -%}</a>{% endif -%}
+      <div class="column text-column fade-in-up" {%- render 'animation-attrs', attrs: animation_attrs -%}>
+        <div class="text-column__image lightly-spaced-row">  
+        {%- if section.settings.image != blank -%}
+            {%- render 'image' with section.settings.image, sizes: sizes, widths: widths, size_cols_desktop: size_cols_desktop, custom_aspect_ratio: custom_media_aspect_ratio -%}
+        {%- else -%}
+          <div class="placeholder-image">
+            {{- 'image' | placeholder_svg_tag: 'placeholder-svg' -}}
+          </div>
+        {%- endif -%}
         </div>
       </div>
     </div>
