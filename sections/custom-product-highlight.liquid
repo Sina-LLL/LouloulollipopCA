@@ -4,6 +4,9 @@
     <h2 class="hometitle h4" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.3s"' -%}>
       <a class="has-paging__title" href="{{ collection.url }}">{{ section.settings.title | escape }}</a>
     </h2>
+    {% if block.settings.text != blank %}
+      <div class="text-column__text rte">{{ section.settings.text }}</div>
+    {% endif %}
 
     {%- if section.settings.show_view_all -%}
       <div class="view-all align-center" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.5s"' -%}>
@@ -81,6 +84,12 @@
       "id": "title",
       "label": "Heading",
       "default": "Product list"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>"
     },
     {
       "type": "product_list",
