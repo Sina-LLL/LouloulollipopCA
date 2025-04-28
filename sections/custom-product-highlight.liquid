@@ -1,6 +1,6 @@
 
 <div class="section-id-{{ section.id }} collection-slider-row {% if section.settings.color_scheme != 'default' %}use-color-scheme use-color-scheme--{{ section.settings.color_scheme }}{% endif %}">
-  <div class="container grid">
+  <div class="flexible-layout flexible-layout--variable-columns">
     
     <div class="container">
         <h2 class="hometitle h4" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.3s"' -%}>
