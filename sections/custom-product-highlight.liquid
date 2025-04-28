@@ -16,69 +16,67 @@
             </div>
           {%- endif -%}
         </div> 
-  
         <div class="collection-listing fade-in-up" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
-          
-            <div class="product-grid product-grid--per-row-{{ section.settings.grid }} product-grid--per-row-mob-{{ settings.prod_thumb_mob_per_row }}">
-              {%- liquid
-                if section.settings.product_list == blank
-                  for i in (1..4)
-                    
-                    render 'onboarding-product-block', forloop: forloop
-                   
+          <div class="product-grid product-grid--per-row-{{ section.settings.grid }} product-grid--per-row-mob-{{ settings.prod_thumb_mob_per_row }}">
+            {%- liquid
+              if section.settings.product_list == blank
+                for i in (1..4)
+                  
+                  render 'onboarding-product-block', forloop: forloop
+                 
+                endfor
+              else
+                if settings.prod_thumb_shape == 'portrait-23'
+                  assign chosen_aspect_ratio = 0.67
+                elsif settings.prod_thumb_shape == 'portrait-45'
+                  assign chosen_aspect_ratio = 0.8
+                elsif settings.prod_thumb_shape == 'square'
+                  assign chosen_aspect_ratio = 1.0
+                elsif settings.prod_thumb_shape == 'landscape-54'
+                  assign chosen_aspect_ratio = 1.25
+                elsif settings.prod_thumb_shape == 'landscape-32'
+                  assign chosen_aspect_ratio = 1.50
+                elsif settings.prod_thumb_shape == 'tallest'
+                  assign chosen_aspect_ratio = 99
+                  for product in section.settings.product_list
+                    if product.featured_media.preview_image.aspect_ratio < chosen_aspect_ratio
+                      assign chosen_aspect_ratio = product.featured_media.preview_image.aspect_ratio
+                    endif
                   endfor
                 else
-                  if settings.prod_thumb_shape == 'portrait-23'
-                    assign chosen_aspect_ratio = 0.67
-                  elsif settings.prod_thumb_shape == 'portrait-45'
-                    assign chosen_aspect_ratio = 0.8
-                  elsif settings.prod_thumb_shape == 'square'
-                    assign chosen_aspect_ratio = 1.0
-                  elsif settings.prod_thumb_shape == 'landscape-54'
-                    assign chosen_aspect_ratio = 1.25
-                  elsif settings.prod_thumb_shape == 'landscape-32'
-                    assign chosen_aspect_ratio = 1.50
-                  elsif settings.prod_thumb_shape == 'tallest'
-                    assign chosen_aspect_ratio = 99
-                    for product in section.settings.product_list
-                      if product.featured_media.preview_image.aspect_ratio < chosen_aspect_ratio
-                        assign chosen_aspect_ratio = product.featured_media.preview_image.aspect_ratio
-                      endif
-                    endfor
-                  else
-                    assign chosen_aspect_ratio = 0
-                    for product in section.settings.product_list
-                      if product.featured_media.preview_image.aspect_ratio > chosen_aspect_ratio
-                        assign chosen_aspect_ratio = product.featured_media.preview_image.aspect_ratio
-                      endif
-                    endfor
-                  endif
+                  assign chosen_aspect_ratio = 0
                   for product in section.settings.product_list
-                    
-                    render 'product-block', product: product, custom_aspect_ratio: chosen_aspect_ratio, no_swiping: section.settings.enable_carousel, no_quick_buy_markup: section.settings.enable_carousel
-                    
+                    if product.featured_media.preview_image.aspect_ratio > chosen_aspect_ratio
+                      assign chosen_aspect_ratio = product.featured_media.preview_image.aspect_ratio
+                    endif
                   endfor
                 endif
-              -%}
-             
-            </div>
+                for product in section.settings.product_list
+                  
+                  render 'product-block', product: product, custom_aspect_ratio: chosen_aspect_ratio, no_swiping: section.settings.enable_carousel, no_quick_buy_markup: section.settings.enable_carousel
+                  
+                endfor
+              endif
+            -%}
+           
+          </div>
         </div>
       </div>
-      <div class="column text-column fade-in-up">
-        <div class="text-column__image lightly-spaced-row">
-          {%- if block.settings.link != blank -%}<a href="{{ block.settings.link }}">{%- endif -%}
+    <div class="column text-column fade-in-up">
+      <div class="text-column__image lightly-spaced-row">
+        {%- if block.settings.link != blank -%}<a href="{{ block.settings.link }}">{%- endif -%}
 
-          {%- if section.settings.image != blank -%}
-              {%- render 'image' with section.settings.image, sizes: sizes, widths: widths, size_cols_desktop: size_cols_desktop, custom_aspect_ratio: custom_media_aspect_ratio -%}
-          {%- else -%}
-            <div class="placeholder-image">
-              {{- 'image' | placeholder_svg_tag: 'placeholder-svg' -}}
-            </div>
-          {%- endif -%}
+        {%- if section.settings.image != blank -%}
+            {%- render 'image' with section.settings.image, sizes: sizes, widths: widths, size_cols_desktop: size_cols_desktop, custom_aspect_ratio: custom_media_aspect_ratio -%}
+        {%- else -%}
+          <div class="placeholder-image">
+            {{- 'image' | placeholder_svg_tag: 'placeholder-svg' -}}
+          </div>
+        {%- endif -%}
 
-          {%- if block.settings.link != blank -%}</a>{% endif -%}
-        </div>
-      </div
+        {%- if block.settings.link != blank -%}</a>{% endif -%}
+      </div>
+    </div>
   </div>  
 </div>
 
