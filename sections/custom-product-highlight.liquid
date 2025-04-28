@@ -2,6 +2,17 @@
 <div id="section-id-{{ section.id }}" class="{% if section.settings.color_scheme != 'default' %}use-color-scheme use-color-scheme--{{ section.settings.color_scheme }} fully-padded-row--medium{% else %}fully-spaced-row--medium{% endif %}">
   <div class="container container--no-max">
     <div class="flexible-layout flexible-layout--variable-columns valign-middle">
+      <div class="column text-column fade-in-up {% if section.settings.order %}column--order-push-desktop{% endif %}" {%- render 'animation-attrs', attrs: animation_attrs -%}>
+        <div class="text-column__image lightly-spaced-row">  
+        {%- if section.settings.image != blank -%}
+            {%- render 'image' with section.settings.image, sizes: sizes, widths: widths, size_cols_desktop: size_cols_desktop, custom_aspect_ratio: 1-%}
+        {%- else -%}
+          <div class="placeholder-image">
+            {{- 'image' | placeholder_svg_tag: 'placeholder-svg' -}}
+          </div>
+        {%- endif -%}
+        </div>
+      </div>
       <div class="column text-column fade-in-up" {%- render 'animation-attrs', attrs: animation_attrs -%}>
         <div class="text-column__image fully-spaced-row fully-spaced-row--small">
           <h2 class="hometitle h4" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.3s"' -%}>
@@ -61,17 +72,6 @@
             </div>
           </div>
         </div>
-      <div class="column text-column fade-in-up" {%- render 'animation-attrs', attrs: animation_attrs -%}>
-        <div class="text-column__image lightly-spaced-row">  
-        {%- if section.settings.image != blank -%}
-            {%- render 'image' with section.settings.image, sizes: sizes, widths: widths, size_cols_desktop: size_cols_desktop, custom_aspect_ratio: 1-%}
-        {%- else -%}
-          <div class="placeholder-image">
-            {{- 'image' | placeholder_svg_tag: 'placeholder-svg' -}}
-          </div>
-        {%- endif -%}
-        </div>
-      </div>
     </div>
   </div>
 </div>
@@ -106,6 +106,12 @@
       "type": "image_picker",
       "id": "image",
       "label": "Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "order",
+      "label": "Put image on the right",
+      "default": false
     },
     {
       "type": "product_list",
