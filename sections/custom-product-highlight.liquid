@@ -64,11 +64,52 @@
             </div>
         </div>
       </div>
-      <div class="column text-column fade-in-up">
+                        <div class="text-column__image lightly-spaced-row">
+              {%- if block.settings.link != blank -%}<a href="{{ block.settings.link }}">{%- endif -%}
+
+              {%- if block.settings.image != blank or block.settings.video_shopify != blank -%}
+                {%- if block.settings.video_shopify != blank -%}
+                  {%- assign placeholder_image = block.settings.image | default: section.settings.video_shopify.preview_image -%}
+                  <div class="video-section">
+                    <div class="height--adapt" {% if custom_media_aspect_ratio %}style="--aspect-ratio: {{ custom_media_aspect_ratio }}"{% endif %}>
+                      <div class="height__image">
+                        <deferred-media>
+                          <template>
+                            <video-component
+                                class="has-video"
+                                data-video-id="{{ section.id }}-{{ block.id }}"
+                                data-autoplay="true"
+                                data-background="false"
+                                data-natural-width= "true">
+                              {{ block.settings.video_shopify | video_tag: playsinline: true, controls: false, autoplay: true, muted: true, loop: true, poster: '' | replace: '<img ', '<img loading="lazy" hidden ' }}
+                            </video-component>
+                          </template>
+                        </deferred-media>
+                        {%- liquid
+                          if placeholder_image
+                            render 'image' with placeholder_image, class: 'video-played-hidden', sizes: sizes, widths: widths, size_cols_desktop: size_cols_desktop, custom_aspect_ratio: custom_media_aspect_ratio
+                          endif
+                        -%}
+                      </div>
+                    </div>
+                  </div>
+
+                {%- else -%}
+                  {%- render 'image' with block.settings.image, sizes: sizes, widths: widths, size_cols_desktop: size_cols_desktop, custom_aspect_ratio: custom_media_aspect_ratio -%}
+                {%- endif -%}
+              {%- else -%}
+                <div class="placeholder-image">
+                  {{- 'image' | placeholder_svg_tag: 'placeholder-svg' -}}
+                </div>
+              {%- endif -%}
+
+              {%- if block.settings.link != blank -%}</a>{% endif -%}
+            </div>
+      <!-- <div class="column text-column fade-in-up">
         <div class="height--adapt">
         {%- render 'image' with section.settings.image, sizes: sizes, widths: widths, size_cols_desktop: size_cols_desktop, custom_aspect_ratio: custom_media_aspect_ratio -%}
         </div>    
-      </div>
+      </div> -->
   </div>  
 </div>
 
