@@ -144,8 +144,8 @@
       "type": "custom-product-highlight",
       "name": "Featured collection",
       "settings": {
-        "title": "New Snack Plates",
-        "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
+        "title": "Mess-less Mealtimes",
+        "text": "<p>Our super smart silicone snack plates feature a strong sticky base even pro food flingers can't beat. Available in a variety of totally a-roar-able animal shapes for more happy snacking with less mess!</p>",
         "image": "shopify://shop_images/SPL-008-SPK_Snack_Plate_Seashell_51.jpg",
         "order": false,
         "product_list": [
