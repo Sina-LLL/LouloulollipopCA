@@ -31,6 +31,7 @@
         "heading_NFDN4D",
         "text_yEUYyg"
       ],
+      "disabled": true,
       "name": "Rich text",
       "settings": {
         "height": "small",
