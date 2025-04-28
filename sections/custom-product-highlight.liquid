@@ -1,7 +1,7 @@
 
 <div id="section-id-{{ section.id }}" class="{% if section.settings.color_scheme != 'default' %}use-color-scheme use-color-scheme--{{ section.settings.color_scheme }} fully-padded-row--medium{% else %}fully-spaced-row--medium{% endif %}">
   <div class="container container--no-max">
-    <div class="flexible-layout flexible-layout--variable-columns">
+    <div class="flexible-layout flexible-layout--variable-columns items-center">
       <div class="column text-column fade-in-up" {%- render 'animation-attrs', attrs: animation_attrs -%}>
         <div class="text-column__image fully-spaced-row fully-spaced-row--small">
           <h2 class="hometitle h4" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.3s"' -%}>
