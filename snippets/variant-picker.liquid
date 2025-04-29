@@ -26,9 +26,6 @@
     <legend class="label">Color: <span class="option-selector__label-value js-color-text">{{ cutline }}</span></legend>
     <div class="option-selector__btns flex flex-wrap">
       {%- for sibling in sibs_collection.products -%}
-        {%- comment %}<locksmith:2e41>{% endcomment -%}
-          {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: sibling, subject_parent: sibs_collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-        {%- comment %}</locksmith:2e41>{% endcomment -%}
         <a href="{{ sibling.url }}" class="opt-label opt-label--image">
           <div class="opt-label__media media">
             {%- 

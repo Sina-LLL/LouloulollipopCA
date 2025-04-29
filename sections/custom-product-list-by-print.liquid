@@ -35,19 +35,6 @@
 
           # Render related products
           for product in related_products
-            comment
-              <locksmith:309c> Code added automatically by the Locksmith app. Do not modify or remove.
-            endcomment
-            capture var
-              render 'locksmith-variables', scope: 'subject', subject: product, variable: 'transparent'
-            endcapture
-            if var == "true"
-            else
-              continue
-            endif
-            comment
-              </locksmith:309c> End Locksmith code block.
-            endcomment
             if section.settings.enable_carousel
               echo '<div class="slider__item">'
             endif

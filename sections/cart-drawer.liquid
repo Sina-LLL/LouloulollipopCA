@@ -157,9 +157,6 @@
                       -%}
 
                       {%- for product in section.settings.cross_sell_products -%}
-                        {%- comment %}<locksmith:838a>{% endcomment -%}
-                          {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: section.settings, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-                        {%- comment %}</locksmith:838a>{% endcomment -%}
                         <li class="slider__item">
                           {%- render 'product-block', product: product, manual_loading: true, no_quick_buy: true, no_swiping: true, custom_aspect_ratio: chosen_aspect_ratio -%}
                         </li>

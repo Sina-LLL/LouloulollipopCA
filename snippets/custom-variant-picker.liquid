@@ -27,9 +27,6 @@
   {%- assign has_core_prints = false -%}
 
   {%- for sibling in sibs_collection.products -%}
-    {%- comment %}<locksmith:6d1c>{% endcomment -%}
-      {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: sibling, subject_parent: sibs_collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-    {%- comment %}</locksmith:6d1c>{% endcomment -%}
     {%- if sibling.tags contains 'new' -%}
       {%- assign has_new_prints = true -%}
     {%- endif -%}
@@ -47,9 +44,6 @@
       </legend>
       <div class="option-selector__btns flex flex-wrap">
         {%- for sibling in sibs_collection.products -%}
-          {%- comment %}<locksmith:ceb9>{% endcomment -%}
-            {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: sibling, subject_parent: sibs_collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-          {%- comment %}</locksmith:ceb9>{% endcomment -%}
           {%- if sibling.tags contains 'new' -%}
             <a href="{{ sibling.url }}" 
                class="opt-label opt-label--image {% if sibling.handle == product.handle %}is-active{% endif %}" 
@@ -96,9 +90,6 @@
     </legend>
     <div class="option-selector__btns flex flex-wrap">
       {%- for sibling in sibs_collection.products -%}
-        {%- comment %}<locksmith:11ae>{% endcomment -%}
-          {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: sibling, subject_parent: sibs_collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-        {%- comment %}</locksmith:11ae>{% endcomment -%}
         {%- unless sibling.tags contains 'new' or sibling.tags contains 'sale'-%}
           {%- if sibling.tags contains 'core' -%}
             <a href="{{ sibling.url }}" 
@@ -132,9 +123,6 @@
         {%- endunless -%}
       {%- endfor -%}
       {%- for sibling in sibs_collection.products -%}
-        {%- comment %}<locksmith:911a>{% endcomment -%}
-          {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: sibling, subject_parent: sibs_collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-        {%- comment %}</locksmith:911a>{% endcomment -%}
         {%- if sibling.tags contains 'sale' -%}
           <a href="{{ sibling.url }}" 
              class="opt-label opt-label--image {% if sibling.handle == product.handle %}is-active{% endif %}" 
