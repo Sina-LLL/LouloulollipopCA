@@ -25,36 +25,33 @@
         {%- liquid
           assign current_swatch = product.metafields.custom.swatch.value
           assign swatch_slug = current_swatch.slug | handleize
-      
-          # Dynamically get collection by swatch name (handleized)
+
           assign swatch_collection = collections[swatch_slug]
-      
+
           if swatch_collection and swatch_collection.products_count > 0
-            assign related_products = swatch_collection.products | where: 'id', product.id, false
-            assign related_products = related_products | limit: 8
+            assign related_products = swatch_collection.products | where: 'id', product.id, false | limit: 8
           else
             assign related_products = '' | split: ','
           endif
         -%}
-      
+
         {% for product in related_products %}
           {% if section.settings.enable_carousel %}
             <div class="slider__item">
           {% endif %}
-      
+
           {% render 'product-block',
             product: product,
             custom_aspect_ratio: chosen_aspect_ratio,
             no_swiping: section.settings.enable_carousel,
             no_quick_buy_markup: section.settings.enable_carousel
           %}
-      
+
           {% if section.settings.enable_carousel %}
             </div>
           {% endif %}
         {% endfor %}
       </div>
-
     </div>
 
     {%- if section.settings.enable_carousel -%}
@@ -69,6 +66,7 @@
     </div>
   {% endif %}
 </div>
+
 
 
 {% schema %}
