@@ -37,8 +37,8 @@
 {{ current_swatch }}
 {{ swatch_slug }}
 <br>
-       {{ swatch_collection.title }}
-        {% for product in collections[swatch_slug] %}
+       {{ swatch_collection.handle }}
+        {% for product in swatch_collection %}
           {% if section.settings.enable_carousel %}
             <div class="slider__item">
           {% endif %}
