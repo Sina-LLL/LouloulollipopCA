@@ -24,7 +24,7 @@
       <div class="product-grid product-grid--per-row-{{ section.settings.grid }} product-grid--per-row-mob-{{ settings.prod_thumb_mob_per_row }}{% if section.settings.enable_carousel %} slider__grid product-grid--carousel{% endif %}">
         {%- liquid
           assign current_swatch = product.metafields.theme.cutline
-          assign swatch_slug = current_swatch.slug | handleize
+          assign swatch_slug = current_swatch | handleize
 
           assign swatch_collection = collections[swatch_slug]
 
