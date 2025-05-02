@@ -34,10 +34,6 @@
             assign related_products = '' | split: ','
           endif
         -%}
-{{ current_swatch }}
-{{ swatch_slug }}
-<br>
-       {{ swatch_collection.handle }}
         {% for product in swatch_collection.products %}
           {% if section.settings.enable_carousel %}
             <div class="slider__item">
