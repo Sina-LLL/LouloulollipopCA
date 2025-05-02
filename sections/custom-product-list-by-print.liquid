@@ -23,30 +23,38 @@
     <div class="collection-listing fade-in-up{% if section.settings.enable_carousel %} slider {% if section.settings.full_width %}slider--edge-peek{% endif %} slider--mobile-container-pad slider--no-scrollbar{% endif %}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
       <div class="product-grid product-grid--per-row-{{ section.settings.grid }} product-grid--per-row-mob-{{ settings.prod_thumb_mob_per_row }}{% if section.settings.enable_carousel %} slider__grid product-grid--carousel{% endif %}">
         {%- liquid
-          # Get the current product's swatch value
-          assign current_swatch = product.metafields.custom.swatch
-          assign related_products = collections.all.products | where: 'metafields.custom.swatch', current_swatch
-          
-          # Exclude the current product from the list
-          assign related_products = related_products | where: 'handle', product.handle | reverse
-
-          # Limit the number of related products displayed
-          assign related_products = related_products | limit: 8
-
-          # Render related products
-          for product in related_products
-            if section.settings.enable_carousel
-              echo '<div class="slider__item">'
-            endif
-            render 'product-block', product: product, custom_aspect_ratio: chosen_aspect_ratio, no_swiping: section.settings.enable_carousel, no_quick_buy_markup: section.settings.enable_carousel
-            if section.settings.enable_carousel
-              echo '</div>'
-            endif
-          endfor
+          assign current_swatch = product.metafields.custom.swatch.value
+          assign swatch_slug = current_swatch.slug | handleize
+      
+          # Dynamically get collection by swatch name (handleized)
+          assign swatch_collection = collections[swatch_slug]
+      
+          if swatch_collection and swatch_collection.products_count > 0
+            assign related_products = swatch_collection.products | where: 'id', product.id, false
+            assign related_products = related_products | limit: 8
+          else
+            assign related_products = '' | split: ','
+          endif
         -%}
-                  {{ related_products }}
-
+      
+        {% for product in related_products %}
+          {% if section.settings.enable_carousel %}
+            <div class="slider__item">
+          {% endif %}
+      
+          {% render 'product-block',
+            product: product,
+            custom_aspect_ratio: chosen_aspect_ratio,
+            no_swiping: section.settings.enable_carousel,
+            no_quick_buy_markup: section.settings.enable_carousel
+          %}
+      
+          {% if section.settings.enable_carousel %}
+            </div>
+          {% endif %}
+        {% endfor %}
       </div>
+
     </div>
 
     {%- if section.settings.enable_carousel -%}
