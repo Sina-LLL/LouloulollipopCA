@@ -168,7 +168,7 @@
       "type": "custom-product-list-by-print",
       "name": "Custom Product List by Print",
       "settings": {
-        "title": "Related Products",
+        "title": "Get the Set",
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 4,
