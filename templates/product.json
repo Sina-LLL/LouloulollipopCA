@@ -164,6 +164,18 @@
         "section_heading": "Material & Care"
       }
     },
+    "custom_product_list_by_print_dEPxTM": {
+      "type": "custom-product-list-by-print",
+      "name": "Custom Product List by Print",
+      "settings": {
+        "title": "Related Products",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 4,
+        "color_scheme": "default",
+        "full_width": true
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -185,6 +197,7 @@
     "main",
     "custom_product_features_g6K7P8",
     "custom_product_material_care_AB9yyi",
+    "custom_product_list_by_print_dEPxTM",
     "related-products",
     "custom_liquid_tqpgnB"
   ]
