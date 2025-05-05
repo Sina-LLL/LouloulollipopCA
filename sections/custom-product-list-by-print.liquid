@@ -10,7 +10,7 @@
     assign related_products = '' | split: ','
   endif
 -%}
-
+{{ swatch_collection }}
 {% if swatch_collection %}
 
 <div class="section-id-{{ section.id }} collection-slider-row {% if section.settings.color_scheme != 'default' %}use-color-scheme use-color-scheme--{{ section.settings.color_scheme }}{% endif %}">
