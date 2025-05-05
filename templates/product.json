@@ -164,14 +164,14 @@
         "section_heading": "Material & Care"
       }
     },
-    "custom_product_list_by_print_dEPxTM": {
+    "custom_product_list_by_print_Nbxwnx": {
       "type": "custom-product-list-by-print",
       "name": "Custom Product List by Print",
       "settings": {
-        "title": "Related Products",
+        "title": "Get the Set",
         "show_vendor": false,
         "enable_carousel": true,
-        "grid": 4,
+        "grid": 5,
         "color_scheme": "default",
         "full_width": true
       }
@@ -181,7 +181,7 @@
       "settings": {
         "title": "You may also like",
         "show_vendor": false,
-        "grid": 4
+        "grid": 5
       }
     },
     "custom_liquid_tqpgnB": {
@@ -197,7 +197,7 @@
     "main",
     "custom_product_features_g6K7P8",
     "custom_product_material_care_AB9yyi",
-    "custom_product_list_by_print_dEPxTM",
+    "custom_product_list_by_print_Nbxwnx",
     "related-products",
     "custom_liquid_tqpgnB"
   ]
