@@ -171,7 +171,7 @@
         "title": "Get the Set",
         "show_vendor": false,
         "enable_carousel": true,
-        "grid": 4,
+        "grid": 5,
         "color_scheme": "default",
         "full_width": true
       }
