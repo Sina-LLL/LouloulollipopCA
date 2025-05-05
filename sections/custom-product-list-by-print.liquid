@@ -1,15 +1,18 @@
- {%- liquid
-          assign current_swatch = product.metafields.theme.cutline
-          assign swatch_slug = current_swatch | handleize
+{%- liquid
+  assign current_swatch = product.metafields.theme.cutline
+  assign swatch_slug = current_swatch | handleize
 
-          assign swatch_collection = collections[swatch_slug]
+  assign swatch_collection = collections[swatch_slug]
 
-          if swatch_collection and swatch_collection.products_count > 0
-            assign related_products = swatch_collection.products | where: 'id', product.id, false | limit: 8
-          else
-            assign related_products = '' | split: ','
-          endif
-        -%}
+  if swatch_collection and swatch_collection.products_count > 0
+    assign related_products = swatch_collection.products | where: 'id', product.id, false | limit: 8
+  else
+    assign related_products = '' | split: ','
+  endif
+-%}
+
+{% if swatch_collection.products  > 4 %}
+
 <div class="section-id-{{ section.id }} collection-slider-row {% if section.settings.color_scheme != 'default' %}use-color-scheme use-color-scheme--{{ section.settings.color_scheme }}{% endif %}">
   <div class="container{% if section.settings.enable_carousel %} container--not-mobile{% endif %}{% if section.settings.full_width %} container--no-max{% endif %}">
     {%- if section.settings.enable_carousel -%}
@@ -66,7 +69,7 @@
     </div>
   {% endif %}
 </div>
-
+{% endif %}
 
 
 {% schema %}
