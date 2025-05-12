@@ -130,6 +130,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "New Ocean Wonders Eat & Play",
+        "text": "",
         "collection": "ocean-wonders-eat-play",
         "show_vendor": false,
         "enable_carousel": true,
@@ -137,7 +138,8 @@
         "rows": 2,
         "color_scheme": "2",
         "show_view_all": true,
-        "full_width": true
+        "full_width": true,
+        "text_alignment": "start"
       }
     },
     "custom_product_highlight_JiGaUB": {
@@ -162,6 +164,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "New Ocean Wonders Collection",
+        "text": "",
         "collection": "ocean-wonders",
         "show_vendor": false,
         "enable_carousel": true,
@@ -169,7 +172,8 @@
         "rows": 2,
         "color_scheme": "1",
         "show_view_all": true,
-        "full_width": true
+        "full_width": true,
+        "text_alignment": "start"
       }
     },
     "collection_list_BzgHGC": {
@@ -280,6 +284,8 @@
       ],
       "settings": {
         "title": "Shop by Category",
+        "text": "",
+        "text_alignment": "start",
         "enable_carousel": true,
         "grid": 4,
         "color_scheme": "2",
@@ -455,6 +461,8 @@
       ],
       "settings": {
         "title": "Shop by Age",
+        "text": "",
+        "text_alignment": "start",
         "enable_carousel": true,
         "grid": 5,
         "color_scheme": "1",
@@ -473,7 +481,8 @@
     "featured_collection_K3tJdQ": {
       "type": "featured-collection",
       "settings": {
-        "title": "For meal time",
+        "title": "For Meal Time",
+        "text": "",
         "collection": "eat-1",
         "show_vendor": false,
         "enable_carousel": true,
@@ -481,13 +490,15 @@
         "rows": 1,
         "color_scheme": "2",
         "show_view_all": true,
-        "full_width": true
+        "full_width": true,
+        "text_alignment": "start"
       }
     },
     "featured_collection_6Cp3dQ": {
       "type": "featured-collection",
       "settings": {
-        "title": "Perfect gifts for newborns",
+        "title": "Perfect Gifts for Newborns",
+        "text": "",
         "collection": "newborn-0-6-months",
         "show_vendor": false,
         "enable_carousel": true,
@@ -495,13 +506,15 @@
         "rows": 1,
         "color_scheme": "default",
         "show_view_all": true,
-        "full_width": true
+        "full_width": true,
+        "text_alignment": "start"
       }
     },
     "featured_collection_tc8tiM": {
       "type": "featured-collection",
       "settings": {
-        "title": "Our map swaddle collection",
+        "title": "Our World Traveller Collection",
+        "text": "",
         "collection": "map-the-world",
         "show_vendor": false,
         "enable_carousel": true,
@@ -509,7 +522,8 @@
         "rows": 1,
         "color_scheme": "default",
         "show_view_all": false,
-        "full_width": true
+        "full_width": true,
+        "text_alignment": "start"
       }
     },
     "collection_list_g7498J": {
@@ -550,6 +564,8 @@
       ],
       "settings": {
         "title": "Our Most Loved",
+        "text": "",
+        "text_alignment": "center",
         "enable_carousel": true,
         "grid": 3,
         "color_scheme": "1",
