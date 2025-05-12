@@ -256,14 +256,14 @@
         "menu_promotion_small_NKx4Gk"
       ],
       "settings": {
-        "logo": "shopify://shop_images/LOGOsvg.svg",
+        "logo": "shopify://shop_images/LLL-Logo-Blue_4x_1ae603bb-3ad6-4d9a-a109-c8cf7fb6d47c.png",
         "logo_img_width_int": 215,
         "mobile_logo_img_width_int": 150,
         "logo_h1": false,
         "enable_sticky": true,
         "enable_transparent": true,
         "transparent_color": "#ffffff",
-        "transparent_logo": "shopify://shop_images/Logo_White.svg",
+        "transparent_logo": "shopify://shop_images/LLL-Logo_4x_90f5864f-2593-450c-9169-7190aa86050b.png",
         "menu_linklist": "2025_main-menu-v2",
         "menu_layout": "inline-menu-center",
         "nav_featured_link": "Sale",
