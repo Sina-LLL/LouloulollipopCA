@@ -54,6 +54,7 @@
           "type": "collection",
           "settings": {
             "collection": "sleep-bags",
+            "image": "shopify://shop_images/BA9003U.SKS_Muslin_Sleep_Bag_-_Lightweight_Sun-kissed_Shoal_1.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -62,6 +63,7 @@
           "type": "collection",
           "settings": {
             "collection": "sleepers",
+            "image": "shopify://shop_images/BA1002U.SHK_Sleeper_Sharks_1.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -70,6 +72,7 @@
           "type": "collection",
           "settings": {
             "collection": "pajamas",
+            "image": "shopify://shop_images/KA1006U.MER_ShortSleeveLongPantsPajamaSet_Mermaids_1.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -78,6 +81,7 @@
           "type": "collection",
           "settings": {
             "collection": "swaddles",
+            "image": "shopify://shop_images/SWOCX_MuslinSwaddle_OceanExplorer_1.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -86,6 +90,7 @@
           "type": "collection",
           "settings": {
             "collection": "blankets",
+            "image": "shopify://shop_images/QTCZF_02.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -94,6 +99,7 @@
           "type": "collection",
           "settings": {
             "collection": "sleepsuits",
+            "image": "shopify://shop_images/BA9007U.PCB_Sleepsuit_1.0_Tog_Pink_Checkerboard_1.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -102,6 +108,7 @@
           "type": "collection",
           "settings": {
             "collection": "crib-sheets",
+            "image": "shopify://shop_images/CRIBSHK_Muslin_Fitted_Crib_Sheet_-_Sharks_1.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -154,7 +161,7 @@
         "media_enRK7g": {
           "type": "media",
           "settings": {
-            "image": "shopify://shop_images/Muslin_Sleep_Bag_-_Hedgehogs__2_1150cf2d-b66c-40d0-b741-dd488f7e5bda.jpg",
+            "image": "shopify://shop_images/Muslin_Swaddle_-_Hedgehogs__2_2e62baec-99fa-4807-9039-d24a4a6c678f.jpg",
             "enlarge_media": false,
             "subheading": "",
             "title": "Animals and Insects",
@@ -236,7 +243,7 @@
       "settings": {
         "title": "Our Favorite Sleepers",
         "text": "<p>Share blog posts, products, or promotions with your customers. </p>",
-        "image": "shopify://shop_images/Sleeper_All_Aboard__5_3861c2ed-f766-4071-b9c6-55262d743e5f.jpg",
+        "image": "shopify://shop_images/Sleeper_All_Aboard__5_bbf2f916-5967-4646-bea4-eb7f20b9bd03.jpg",
         "order": false,
         "product_list": [
           "sleeper-ocean-explorer",
