@@ -108,7 +108,7 @@
           "type": "collection",
           "settings": {
             "collection": "crib-sheets",
-            "image": "shopify://shop_images/CRIBSHK_Muslin_Fitted_Crib_Sheet_-_Sharks_1.jpg",
+            "image": "shopify://shop_images/CRIBSEL_MuslinFittedCribSheet_Seals_1.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
