@@ -53,8 +53,8 @@
         "collection_4wLe7J": {
           "type": "collection",
           "settings": {
-            "collection": "bodysuits-rompers",
-            "image": "shopify://shop_images/BA3005F.MER_BodysuitDress_Mermaids_1.jpg",
+            "collection": "silicone-bibs",
+            "image": "shopify://shop_images/SILBIBSSH_SiliconeBibPrinted_Seashells_1.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -62,8 +62,8 @@
         "collection_KCViN4": {
           "type": "collection",
           "settings": {
-            "collection": "sets-bottoms",
-            "image": "shopify://shop_images/BA2006U.SGL_WaffleTop_BottomSet_Seaglass_1.jpg",
+            "collection": "long-sleeve-bibs",
+            "image": "shopify://shop_images/DS-ET0011_191_01fea2f8-2034-450a-a224-2faccff62f3a.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -71,8 +71,8 @@
         "collection_HBGXfQ": {
           "type": "collection",
           "settings": {
-            "collection": "dresses",
-            "image": "shopify://shop_images/KA4003F.LLC_WaffleSkaterDress_Lilac_1.jpg",
+            "collection": "suction-plates",
+            "image": "shopify://shop_images/SPL-009-BFG_SnackPlate-Sharks_1.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -80,17 +80,8 @@
         "collection_ngYLRN": {
           "type": "collection",
           "settings": {
-            "collection": "sleepers",
-            "image": "shopify://shop_images/BA1002U.SHK_Sleeper_Sharks_1.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_nwWhhg": {
-          "type": "collection",
-          "settings": {
-            "collection": "pajamas",
-            "image": "shopify://shop_images/KA1006U.MER_ShortSleeveLongPantsPajamaSet_Mermaids_1.jpg",
+            "collection": "suction-bowls",
+            "image": "shopify://shop_images/SBWL-BPK_02_489a9c8e-5f68-49e8-8619-a28eca926fae.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -98,8 +89,26 @@
         "collection_qDEWF4": {
           "type": "collection",
           "settings": {
-            "collection": "bandana-bibs",
-            "image": "shopify://shop_images/BIBSEL_9_22be66d9-bb15-4c54-9481-06cdecd34f02.jpg",
+            "collection": "utensils",
+            "image": "shopify://shop_images/LSET-010-MNT_LearningUtensilsSet_Octopus_1.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_nwWhhg": {
+          "type": "collection",
+          "settings": {
+            "collection": "snack-box",
+            "image": "shopify://shop_images/SBX-003-BLU_02.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_t3MwCY": {
+          "type": "collection",
+          "settings": {
+            "collection": "placemats",
+            "image": "shopify://shop_images/Place_Mat_Safari.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -107,8 +116,26 @@
         "collection_ndLacp": {
           "type": "collection",
           "settings": {
-            "collection": "hats-headbands",
-            "image": "shopify://shop_images/WaffleTopKnotBeanie-DenimBlue.jpg",
+            "collection": "snack-cups",
+            "image": "shopify://shop_images/SCP-006-BPK_01_903add63-fc12-4da5-bc69-de2c0d201e78.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_9fk8m7": {
+          "type": "collection",
+          "settings": {
+            "collection": "sippy-cups",
+            "image": "shopify://shop_images/TCUP-003-BLU_03_2d33849b-fd20-4cb8-99ab-cdf7eceb6942.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_3bVP6j": {
+          "type": "collection",
+          "settings": {
+            "collection": "burp-cloths",
+            "image": "shopify://shop_images/BCLPSH_01_bf1aaac0-7aeb-466c-8b46-da6425131987.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -119,13 +146,16 @@
         "collection_KCViN4",
         "collection_HBGXfQ",
         "collection_ngYLRN",
-        "collection_nwWhhg",
         "collection_qDEWF4",
-        "collection_ndLacp"
+        "collection_nwWhhg",
+        "collection_t3MwCY",
+        "collection_ndLacp",
+        "collection_9fk8m7",
+        "collection_3bVP6j"
       ],
       "name": "Collection list",
       "settings": {
-        "title": "Clothing",
+        "title": "Feeding",
         "text": "",
         "text_alignment": "start",
         "enable_carousel": true,
@@ -149,24 +179,24 @@
         "media_bCRfid": {
           "type": "media",
           "settings": {
-            "image": "shopify://shop_images/ElzaPhotographie_LoulouLollipop_March2024_-Web-21_2b4403a8-0011-47be-a43e-e15e6683343f.jpg",
+            "image": "shopify://shop_images/SS21_Flatware-115.jpg",
             "enlarge_media": false,
             "subheading": "",
-            "title": "Fun Food",
+            "title": "Born to Be Wild Collection",
             "button_label": "",
-            "link": "shopify://collections/world-traveler",
+            "link": "shopify://collections/born-to-be-wild",
             "text_alignment": "bottom left"
           }
         },
         "media_enRK7g": {
           "type": "media",
           "settings": {
-            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._4th_2024_-Web-13.jpg",
+            "image": "shopify://shop_images/LSBIBPLN_Long_Sleeve_Bib_-_Planets_53_f1fdb735-9121-4f16-b963-b2d6bde48be1.jpg",
             "enlarge_media": false,
             "subheading": "",
-            "title": "Joyful Colours",
+            "title": "Long Sleeve Bibs",
             "button_label": "",
-            "link": "https://louloulollipop.ca/collections/joyful-colours/wear",
+            "link": "shopify://collections/long-sleeve-bibs",
             "text_alignment": "bottom left"
           }
         }
@@ -204,19 +234,22 @@
         "text": "",
         "text_alignment": "start",
         "product_list": [
-          "short-sleeve-zipped-romper-smiley-sharks",
-          "waffle-long-sleeve-bodysuit-dress-coconut-milk",
-          "sleeper-check-it-out",
-          "sleeper-ocean-explorer",
-          "sleeper-mermaids",
-          "sleeper-silly-seals",
-          "short-sleeve-skater-dress-mermaids",
-          "short-sleeve-skater-dress-pink-checkerboard",
-          "waffle-long-sleeve-skater-dress-mauvewood",
-          "waffle-baby-pants-mauvewood",
-          "waffle-baby-pants-denim-blue",
-          "long-sleeve-pajama-set-jungle-friends",
-          "long-sleeve-pajama-set-check-it-out"
+          "silicone-bib-printed-space",
+          "silicone-bib-printed-sushi",
+          "silicone-bib-printed-french-breakfast",
+          "snack-plate-sarah-shark",
+          "snack-plate-bailey-bunny",
+          "learning-utensils-set-elephant",
+          "spoon-bunny",
+          "long-sleeve-bib-ocean-explorer",
+          "long-sleeve-bib-french-breakfast",
+          "long-sleeve-bib-pink-checkerboard",
+          "long-sleeve-bib-seashells",
+          "long-sleeve-bib-safari-jungle",
+          "snack-bowl-blush-pink",
+          "snack-bowl-blue",
+          "cup-with-straw-bunny",
+          "cup-with-straw-elephant"
         ],
         "show_vendor": false,
         "enable_carousel": true,
@@ -229,9 +262,9 @@
       "type": "featured-collection",
       "name": "Featured collection",
       "settings": {
-        "title": "Pajama Sets",
+        "title": "Suction Plates",
         "text": "",
-        "collection": "pajamas",
+        "collection": "suction-plates",
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 5,
@@ -246,16 +279,16 @@
       "type": "custom-product-highlight",
       "name": "Highlighted Collection",
       "settings": {
-        "title": "Our Favourite Dresses",
+        "title": "Our Silicone Bibs",
         "text": "",
-        "image": "shopify://shop_images/ElzaPhotographie_LoulouLollipop_March2024_-Web-88_65789c75-ac8c-49af-936d-6e094338255c.jpg",
+        "image": "shopify://shop_images/SILBIBSHK_SiliconeBibPrinted_Sharks_2W.jpg",
         "order": false,
         "product_list": [
-          "short-sleeve-bodysuit-dress-mermaids",
-          "short-sleeve-bodysuit-dress-pink-checkerboard"
+          "silicone-bib-printed-ocean-explorer",
+          "silicone-bib-printed-seashells"
         ],
-        "button_label": "Shop Dresses",
-        "link": "shopify://collections/dresses",
+        "button_label": "Shop Silicone Bibs",
+        "link": "shopify://collections/silicone-bibs",
         "button_style": "primary",
         "color_scheme": "2"
       }
@@ -264,9 +297,9 @@
       "type": "featured-collection",
       "name": "Featured collection",
       "settings": {
-        "title": "Bodysuits & Rompers",
+        "title": "Long Sleeve Bibs",
         "text": "",
-        "collection": "bodysuits-rompers",
+        "collection": "long-sleeve-bibs",
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 5,
@@ -281,9 +314,9 @@
       "type": "featured-collection",
       "name": "Featured collection",
       "settings": {
-        "title": "Bandana Bibs",
+        "title": "Utensils",
         "text": "",
-        "collection": "bandana-bibs",
+        "collection": "utensils",
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 5,
