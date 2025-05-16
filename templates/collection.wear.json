@@ -53,13 +53,31 @@
         "collection_4wLe7J": {
           "type": "collection",
           "settings": {
-            "collection": "sleep-bags",
-            "image": "shopify://shop_images/BA9003U.SKS_Muslin_Sleep_Bag_-_Lightweight_Sun-kissed_Shoal_1.jpg",
+            "collection": "bodysuits-rompers",
+            "image": "shopify://shop_images/BA3005F.MER_BodysuitDress_Mermaids_1.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
         },
         "collection_KCViN4": {
+          "type": "collection",
+          "settings": {
+            "collection": "sets-bottoms",
+            "image": "shopify://shop_images/BA2006U.SGL_WaffleTop_BottomSet_Seaglass_1.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_HBGXfQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "dresses",
+            "image": "shopify://shop_images/KA4003F.LLC_WaffleSkaterDress_Lilac_1.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_ngYLRN": {
           "type": "collection",
           "settings": {
             "collection": "sleepers",
@@ -68,7 +86,7 @@
             "button_label": ""
           }
         },
-        "collection_HBGXfQ": {
+        "collection_nwWhhg": {
           "type": "collection",
           "settings": {
             "collection": "pajamas",
@@ -80,8 +98,8 @@
         "collection_qDEWF4": {
           "type": "collection",
           "settings": {
-            "collection": "swaddles",
-            "image": "shopify://shop_images/SWOCX_MuslinSwaddle_OceanExplorer_1.jpg",
+            "collection": "bandana-bibs",
+            "image": "shopify://shop_images/BIBSEL_9_22be66d9-bb15-4c54-9481-06cdecd34f02.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -89,26 +107,8 @@
         "collection_ndLacp": {
           "type": "collection",
           "settings": {
-            "collection": "blankets",
-            "image": "shopify://shop_images/QTCZF_02.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_7xaNhx": {
-          "type": "collection",
-          "settings": {
-            "collection": "sleepsuits",
-            "image": "shopify://shop_images/BA9007U.PCB_Sleepsuit_1.0_Tog_Pink_Checkerboard_1.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_hTVcdr": {
-          "type": "collection",
-          "settings": {
-            "collection": "crib-sheets",
-            "image": "shopify://shop_images/CRIBSEL_MuslinFittedCribSheet_Seals_1.jpg",
+            "collection": "hats-headbands",
+            "image": "shopify://shop_images/WaffleTopKnotBeanie-DenimBlue.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -118,14 +118,14 @@
         "collection_4wLe7J",
         "collection_KCViN4",
         "collection_HBGXfQ",
+        "collection_ngYLRN",
+        "collection_nwWhhg",
         "collection_qDEWF4",
-        "collection_ndLacp",
-        "collection_7xaNhx",
-        "collection_hTVcdr"
+        "collection_ndLacp"
       ],
       "name": "Collection list",
       "settings": {
-        "title": "Sleep and Bedding",
+        "title": "Clothing",
         "text": "",
         "text_alignment": "start",
         "enable_carousel": true,
@@ -149,10 +149,10 @@
         "media_bCRfid": {
           "type": "media",
           "settings": {
-            "image": "shopify://shop_images/Canada_Day_blanket_Swaddle-22.jpg",
+            "image": "shopify://shop_images/ElzaPhotographie_LoulouLollipop_March2024_-Web-21_2b4403a8-0011-47be-a43e-e15e6683343f.jpg",
             "enlarge_media": false,
             "subheading": "",
-            "title": "For the World Traveler",
+            "title": "Fun Food",
             "button_label": "",
             "link": "shopify://collections/world-traveler",
             "text_alignment": "bottom left"
@@ -161,12 +161,12 @@
         "media_enRK7g": {
           "type": "media",
           "settings": {
-            "image": "shopify://shop_images/Muslin_Swaddle_-_Hedgehogs__2_2e62baec-99fa-4807-9039-d24a4a6c678f.jpg",
+            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._4th_2024_-Web-13.jpg",
             "enlarge_media": false,
             "subheading": "",
-            "title": "Animals and Insects",
+            "title": "Joyful Colours",
             "button_label": "",
-            "link": "https://louloulollipop.com/collections/animals-insects/Sleep",
+            "link": "https://louloulollipop.ca/collections/joyful-colours/wear",
             "text_alignment": "bottom left"
           }
         }
@@ -200,18 +200,23 @@
       "type": "product-list",
       "name": "Product list",
       "settings": {
-        "title": "Best Sellers, for the Best Sleep",
+        "title": "Best Sellers",
         "text": "",
         "text_alignment": "start",
         "product_list": [
-          "sleeper-ice-hockey",
-          "sleeper-smiley-sharks",
-          "muslin-swaddle-usa",
-          "muslin-swaddle-sushi",
-          "muslin-lightweight-sleep-bags-0-5-tog-painterly-seahorses",
-          "muslin-swaddle-ramen",
-          "muslin-swaddle-football",
-          "muslin-lightweight-sleep-bags-0-5-tog-sun-kissed-shoal"
+          "short-sleeve-zipped-romper-smiley-sharks",
+          "waffle-long-sleeve-bodysuit-dress-coconut-milk",
+          "sleeper-check-it-out",
+          "sleeper-ocean-explorer",
+          "sleeper-mermaids",
+          "sleeper-silly-seals",
+          "short-sleeve-skater-dress-mermaids",
+          "short-sleeve-skater-dress-pink-checkerboard",
+          "waffle-long-sleeve-skater-dress-mauvewood",
+          "waffle-baby-pants-mauvewood",
+          "waffle-baby-pants-denim-blue",
+          "long-sleeve-pajama-set-jungle-friends",
+          "long-sleeve-pajama-set-check-it-out"
         ],
         "show_vendor": false,
         "enable_carousel": true,
@@ -224,14 +229,14 @@
       "type": "featured-collection",
       "name": "Featured collection",
       "settings": {
-        "title": "Lightweight Sleep Bags",
-        "text": "<p>Something about warm weather</p>",
-        "collection": "0-5-tog",
+        "title": "Pajama Sets",
+        "text": "",
+        "collection": "pajamas",
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 5,
         "rows": 1,
-        "color_scheme": "2",
+        "color_scheme": "1",
         "show_view_all": true,
         "full_width": false,
         "text_alignment": "start"
@@ -241,27 +246,27 @@
       "type": "custom-product-highlight",
       "name": "Highlighted Collection",
       "settings": {
-        "title": "Our Favorite Sleepers",
-        "text": "<p>Share blog posts, products, or promotions with your customers. </p>",
-        "image": "shopify://shop_images/Sleeper_All_Aboard__5_bbf2f916-5967-4646-bea4-eb7f20b9bd03.jpg",
+        "title": "Our Favourite Dresses",
+        "text": "",
+        "image": "shopify://shop_images/ElzaPhotographie_LoulouLollipop_March2024_-Web-88_65789c75-ac8c-49af-936d-6e094338255c.jpg",
         "order": false,
         "product_list": [
-          "sleeper-ocean-explorer",
-          "sleeper-sun-kissed-shoal"
+          "short-sleeve-bodysuit-dress-mermaids",
+          "short-sleeve-bodysuit-dress-pink-checkerboard"
         ],
-        "button_label": "Shop Sleepers",
-        "link": "shopify://collections/sleepers",
+        "button_label": "Shop Dresses",
+        "link": "shopify://collections/dresses",
         "button_style": "primary",
-        "color_scheme": "1"
+        "color_scheme": "2"
       }
     },
     "featured_collection_YUXjBF": {
       "type": "featured-collection",
       "name": "Featured collection",
       "settings": {
-        "title": "Swaddles",
-        "text": "<p>Wrap them tight and some other words</p>",
-        "collection": "swaddles",
+        "title": "Bodysuits & Rompers",
+        "text": "",
+        "collection": "bodysuits-rompers",
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 5,
@@ -276,9 +281,9 @@
       "type": "featured-collection",
       "name": "Featured collection",
       "settings": {
-        "title": "Crib Sheets",
-        "text": "<p>Soft and gentle and some other words</p>",
-        "collection": "crib-sheets",
+        "title": "Bandana Bibs",
+        "text": "",
+        "collection": "bandana-bibs",
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 5,
