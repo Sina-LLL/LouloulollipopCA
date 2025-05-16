@@ -211,7 +211,7 @@
         "text": "",
         "text_alignment": "start",
         "grid_desktop": 2,
-        "grid_mobile": "1",
+        "grid_mobile": "2",
         "height": "fixed",
         "desktop_image_height": 560,
         "mobile_image_height": 400,
@@ -221,7 +221,7 @@
         "enable_row_spacing": true,
         "full_width": true,
         "color_scheme": "default",
-        "enable_carousel": true,
+        "enable_carousel": false,
         "overlay_style": "shadow",
         "button_style": "primary"
       }
