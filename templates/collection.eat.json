@@ -211,7 +211,7 @@
         "text": "",
         "text_alignment": "start",
         "grid_desktop": 2,
-        "grid_mobile": "2",
+        "grid_mobile": "1",
         "height": "fixed",
         "desktop_image_height": 560,
         "mobile_image_height": 400,
