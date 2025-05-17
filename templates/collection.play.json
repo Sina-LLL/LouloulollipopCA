@@ -53,8 +53,8 @@
         "collection_4wLe7J": {
           "type": "collection",
           "settings": {
-            "collection": "silicone-bibs",
-            "image": "shopify://shop_images/SILBIBSSH_SiliconeBibPrinted_Seashells_1.jpg",
+            "collection": "silicone-teethers",
+            "image": "shopify://shop_images/WTR-009-BFG_WildTeether_Sharks_1.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -62,8 +62,8 @@
         "collection_KCViN4": {
           "type": "collection",
           "settings": {
-            "collection": "long-sleeve-bibs",
-            "image": "shopify://shop_images/DS-ET0011_191_01fea2f8-2034-450a-a224-2faccff62f3a.jpg",
+            "collection": "teething-rings",
+            "image": "shopify://shop_images/WRGSTSPK_WildTeetherRingSet_ShellPink_1.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -71,8 +71,8 @@
         "collection_HBGXfQ": {
           "type": "collection",
           "settings": {
-            "collection": "suction-plates",
-            "image": "shopify://shop_images/SPL-009-BFG_SnackPlate-Sharks_1.jpg",
+            "collection": "teething-mitts",
+            "image": "shopify://shop_images/TMT-005-GHN_01_0eb22df8-2b65-4eb2-9650-4fca323715cc.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -80,8 +80,8 @@
         "collection_ngYLRN": {
           "type": "collection",
           "settings": {
-            "collection": "suction-bowls",
-            "image": "shopify://shop_images/SBWL-BPK_02_489a9c8e-5f68-49e8-8619-a28eca926fae.jpg",
+            "collection": "teething-charms",
+            "image": "shopify://shop_images/TCM-009-BFG_01.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -89,8 +89,8 @@
         "collection_qDEWF4": {
           "type": "collection",
           "settings": {
-            "collection": "utensils",
-            "image": "shopify://shop_images/LSET-010-MNT_LearningUtensilsSet_Octopus_1.jpg",
+            "collection": "teething-sets",
+            "image": "shopify://shop_images/LLAMASETG_01.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -98,8 +98,8 @@
         "collection_nwWhhg": {
           "type": "collection",
           "settings": {
-            "collection": "snack-box",
-            "image": "shopify://shop_images/SBX-003-BLU_02.jpg",
+            "collection": "pacifier-clips",
+            "image": "shopify://shop_images/SILCPMON_01.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -107,8 +107,8 @@
         "collection_t3MwCY": {
           "type": "collection",
           "settings": {
-            "collection": "placemats",
-            "image": "shopify://shop_images/Place_Mat_Safari.jpg",
+            "collection": "flash-cards",
+            "image": "shopify://shop_images/FCS-CR_01.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -116,8 +116,8 @@
         "collection_ndLacp": {
           "type": "collection",
           "settings": {
-            "collection": "snack-cups",
-            "image": "shopify://shop_images/SCP-006-BPK_01_903add63-fc12-4da5-bc69-de2c0d201e78.jpg",
+            "collection": "stacking-cups",
+            "image": "shopify://shop_images/SCSRBW_03.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -125,17 +125,8 @@
         "collection_9fk8m7": {
           "type": "collection",
           "settings": {
-            "collection": "sippy-cups",
-            "image": "shopify://shop_images/TCUP-003-BLU_03_2d33849b-fd20-4cb8-99ab-cdf7eceb6942.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_3bVP6j": {
-          "type": "collection",
-          "settings": {
-            "collection": "burp-cloths",
-            "image": "shopify://shop_images/BCLPSH_01_bf1aaac0-7aeb-466c-8b46-da6425131987.jpg",
+            "collection": "bath-toys",
+            "image": "shopify://shop_images/TCUP-002-BPK_01-388.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -150,12 +141,11 @@
         "collection_nwWhhg",
         "collection_t3MwCY",
         "collection_ndLacp",
-        "collection_9fk8m7",
-        "collection_3bVP6j"
+        "collection_9fk8m7"
       ],
       "name": "Collection list",
       "settings": {
-        "title": "Feeding",
+        "title": "Toys & Play",
         "text": "",
         "text_alignment": "start",
         "enable_carousel": true,
@@ -179,10 +169,10 @@
         "media_bCRfid": {
           "type": "media",
           "settings": {
-            "image": "shopify://shop_images/SS21_Flatware-115.jpg",
+            "image": "shopify://shop_images/WRGSTPST_Wild_Teething_Ring_Set_Pastel_52.jpg",
             "enlarge_media": false,
             "subheading": "",
-            "title": "Born to Be Wild Collection",
+            "title": "Teething Rings",
             "button_label": "",
             "link": "shopify://collections/born-to-be-wild",
             "text_alignment": "bottom left"
@@ -191,10 +181,10 @@
         "media_enRK7g": {
           "type": "media",
           "settings": {
-            "image": "shopify://shop_images/LSBIBPLN_Long_Sleeve_Bib_-_Planets_53_f1fdb735-9121-4f16-b963-b2d6bde48be1.jpg",
+            "image": "shopify://shop_images/FCSALP_Flashcards_Alphabets_53.jpg",
             "enlarge_media": false,
             "subheading": "",
-            "title": "Long Sleeve Bibs",
+            "title": "Flash Cards",
             "button_label": "",
             "link": "shopify://collections/long-sleeve-bibs",
             "text_alignment": "bottom left"
@@ -234,22 +224,24 @@
         "text": "",
         "text_alignment": "start",
         "product_list": [
-          "silicone-bib-printed-space",
-          "silicone-bib-printed-sushi",
-          "silicone-bib-printed-french-breakfast",
-          "snack-plate-sarah-shark",
-          "snack-plate-bailey-bunny",
-          "learning-utensils-set-elephant",
-          "spoon-bunny",
-          "long-sleeve-bib-ocean-explorer",
-          "long-sleeve-bib-french-breakfast",
-          "long-sleeve-bib-pink-checkerboard",
-          "long-sleeve-bib-seashells",
-          "long-sleeve-bib-safari-jungle",
-          "snack-bowl-blush-pink",
-          "snack-bowl-blue",
-          "cup-with-straw-bunny",
-          "cup-with-straw-elephant"
+          "bath-toy-set-blue",
+          "gem-colour-pop-silicone-wood-pacifier-clip-slate",
+          "pacifier-clip-teether-set-ebi-shrimp",
+          "teether-single-ebi-shrimp",
+          "teething-mitt-elephant",
+          "teething-mitt-bunny",
+          "wild-teether-aly-alligator",
+          "wild-teether-eddie-elephant",
+          "wild-teether-liam-lion",
+          "wild-teether-bailey-bunny",
+          "gem-pacifier-clip-teether-set-llama",
+          "wild-teether-ring-set-pastel",
+          "wild-teether-ring-set-sage-green",
+          "teether-single-taco",
+          "teether-single-sloth",
+          "pacifier-clip-teether-set-sloth",
+          "teether-single-boston-terrier",
+          "pacifier-clip-teether-set-boston-terrier"
         ],
         "show_vendor": false,
         "enable_carousel": true,
@@ -262,9 +254,9 @@
       "type": "featured-collection",
       "name": "Featured collection",
       "settings": {
-        "title": "Suction Plates",
+        "title": "Silicone Teethers",
         "text": "",
-        "collection": "suction-plates",
+        "collection": "silicone-teethers",
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 5,
@@ -279,16 +271,16 @@
       "type": "custom-product-highlight",
       "name": "Highlighted Collection",
       "settings": {
-        "title": "Our Favourite Silicone Bibs",
+        "title": "Our Favourite Pacifier Clips",
         "text": "",
-        "image": "shopify://shop_images/SILBIBSHK_SiliconeBibPrinted_Sharks_2W.jpg",
+        "image": "shopify://shop_images/SILCPSWRBN_Silicone_Pacifier_Clip_Sweetheart-Rainbow_7.jpg",
         "order": false,
         "product_list": [
-          "silicone-bib-printed-ocean-explorer",
-          "silicone-bib-printed-seashells"
+          "gem-colour-pop-silicone-wood-pacifier-clip-pink-quartz",
+          "pacifier-clip-beadless-monstera"
         ],
-        "button_label": "Shop Silicone Bibs",
-        "link": "shopify://collections/silicone-bibs",
+        "button_label": "Shop Pacifier Clips",
+        "link": "shopify://collections/pacifier-clips",
         "button_style": "primary",
         "color_scheme": "2"
       }
@@ -297,9 +289,9 @@
       "type": "featured-collection",
       "name": "Featured collection",
       "settings": {
-        "title": "Long Sleeve Bibs",
+        "title": "Teething Charms",
         "text": "",
-        "collection": "long-sleeve-bibs",
+        "collection": "teething-charms",
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 5,
@@ -314,9 +306,9 @@
       "type": "featured-collection",
       "name": "Featured collection",
       "settings": {
-        "title": "Utensils",
+        "title": "Teething Sets",
         "text": "",
-        "collection": "utensils",
+        "collection": "teething-sets",
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 5,
