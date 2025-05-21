@@ -17,7 +17,7 @@ h6,.h6,
 body{
   font-family: sofia-pro, sans-serif;
 }
-p .rte {
+.rte p{
   line-height: 1.3em;
 }
 /* Display 1 */
