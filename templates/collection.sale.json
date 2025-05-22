@@ -18,7 +18,7 @@
         "height_desktop": 600,
         "height_mobile": 460,
         "image_link": "",
-        "full_width": false,
+        "full_width": true,
         "text_alignment": "center center",
         "mobile_overlay_under": false,
         "overlay_style": "shadow"
