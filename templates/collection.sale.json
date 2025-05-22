@@ -24,48 +24,6 @@
         "overlay_style": "shadow"
       }
     },
-    "slideshow_hiiiwj": {
-      "type": "slideshow",
-      "blocks": {
-        "image_KVNLNA": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Sale_Banner.png",
-            "slide_link": "",
-            "subheading": "",
-            "title": "",
-            "heading_max_width": 15,
-            "title_size": 84,
-            "title_size_mobile": 46,
-            "use_h1": false,
-            "text": "",
-            "enlarge_text": true,
-            "button_label_1": "",
-            "button_url_1": "",
-            "button_label_2": "",
-            "button_url_2": "",
-            "text_alignment": "center center"
-          }
-        }
-      },
-      "block_order": [
-        "image_KVNLNA"
-      ],
-      "name": "Slideshow",
-      "settings": {
-        "height": "fixed",
-        "height_desktop": 400,
-        "height_mobile": 400,
-        "full_width": false,
-        "mobile_overlay_under": false,
-        "overlay_style": "shadow",
-        "transition": "fade",
-        "navigation": "arrows",
-        "autoplay": true,
-        "autoplay_speed": 7,
-        "accessibility_info": ""
-      }
-    },
     "main": {
       "type": "main-collection",
       "settings": {
@@ -106,7 +64,6 @@
   },
   "order": [
     "image_with_text_overlay_fpkwbN",
-    "slideshow_hiiiwj",
     "main"
   ]
 }
