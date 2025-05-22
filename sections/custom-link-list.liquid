@@ -30,7 +30,7 @@
                   {{ block.settings.image | image_url: width: 800 | image_tag: loading: 'lazy', class: 'responsive-image' }}
                 </div>
               {% endif %}
-              <div class="text-content text-{{ section.settings.text_alignment }}">
+              <div class="product-block__detail  text-{{ section.settings.text_alignment }}">
                 {% if block.settings.subheading != blank %}
                   <div class="subheading lightly-spaced-row">{{ block.settings.subheading }}</div>
                 {% endif %}
