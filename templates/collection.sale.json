@@ -31,6 +31,7 @@
           "type": "collection",
           "settings": {
             "collection": "bandana-bibs",
+            "tag": "sale",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -67,7 +68,6 @@
           "settings": {
             "url": "https://louloulollipop.ca/collections/sale/Newborn",
             "image": "shopify://shop_images/DS-ET0012_200.jpg",
-            "heading": "Newborn",
             "subheading": "Newborn",
             "button_label": ""
           }
@@ -77,7 +77,6 @@
           "settings": {
             "url": "",
             "image": "shopify://shop_images/DS-ET0013_204.jpg",
-            "heading": "",
             "subheading": "",
             "button_label": ""
           }
@@ -87,7 +86,6 @@
           "settings": {
             "url": "",
             "image": "shopify://shop_images/DS-NB001_35.jpg",
-            "heading": "",
             "subheading": "",
             "button_label": ""
           }
@@ -97,7 +95,6 @@
           "settings": {
             "url": "",
             "image": "shopify://shop_images/DS-NB001_35.jpg",
-            "heading": "",
             "subheading": "",
             "button_label": ""
           }
@@ -107,7 +104,6 @@
           "settings": {
             "url": "",
             "image": "shopify://shop_images/DS-NB001_35.jpg",
-            "heading": "",
             "subheading": "",
             "button_label": ""
           }
@@ -117,7 +113,6 @@
           "settings": {
             "url": "",
             "image": "shopify://shop_images/DS-NB001_35.jpg",
-            "heading": "",
             "subheading": "",
             "button_label": ""
           }
