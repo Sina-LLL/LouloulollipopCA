@@ -13,7 +13,7 @@
       "type": "image-with-text-overlay",
       "name": "Image with text overlay",
       "settings": {
-        "image": "shopify://shop_images/Sale_Banner.png",
+        "image": "shopify://shop_images/Sale_Banner_179b0ca0-d40d-4192-a36e-7092cad4ad11.png",
         "height": "adapt",
         "height_desktop": 600,
         "height_mobile": 460,
