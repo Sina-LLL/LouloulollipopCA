@@ -19,32 +19,86 @@
       <div class="product-grid product-grid--per-row-{{ section.settings.grid }} product-grid--per-row-mob-{{ section.settings.coll_thumb_mob_per_row }} product-grid--image-shape-{{ section.settings.coll_grid_image_shape }}{% if section.settings.enable_carousel %} slider__grid product-grid--carousel{% endif %}">
         
         {% for block in section.blocks %}
-          {% if section.settings.enable_carousel %}
-            <div class="slider__item">
+  {% if section.settings.enable_carousel %}
+    <div class="slider__item">
+  {% endif %}
+
+  {% liquid
+    assign subheading = block.settings.subheading
+    assign button_label = block.settings.button_label
+    assign heading = block.settings.heading
+    assign url = block.settings.url
+    assign image = block.settings.image
+    assign settings_object = section.settings
+  %}
+
+  <div class="product-block collection-block" {{ block.shopify_attributes }}>
+    <div class="block-inner">
+      <a class="product-link" href="{{ url }}">
+        <div class="image-cont
+          {%- if settings_object.coll_text_position contains 'over' %}
+            image-overlay
+            image-overlay--bg-{{ settings_object.coll_text_position | remove_first: 'over-' }}
+            {%- if settings_object.coll_text_position_under_mobile %} text-overlay-parent--mobile-stack{% endif %}
+            image-overlay--edge-boxes
+          {% endif %}">
+
+          {% if image %}
+            <div class="image-overlay__image">{{ image | image_url: width: 800 | image_tag: loading: 'lazy', class: 'motion-reduce' }}</div>
+          {% else %}
+            {% capture placeholder_svg_name %}collection-{{ forloop.index | modulo: 6 | plus: 1 }}{% endcapture %}
+            <div class="image-overlay__image placeholder-image placeholder-image--shape-{{ settings_object.coll_grid_image_shape }}">{{ placeholder_svg_name | placeholder_svg_tag }}</div>
           {% endif %}
 
-          <div class="collection-block custom-link-block" {{ block.shopify_attributes }}>
-            <a href="{{ block.settings.url | escape }}" class="collection-link">
-              {% if block.settings.image %}
-                <div class="image-wrapper">
-                  {{ block.settings.image | image_url: width: 800 | image_tag: loading: 'lazy', class: 'responsive-image' }}
-                </div>
-              {% endif %}
-              <div class="product-block__detail  text-{{ section.settings.text_alignment }}">
-                {% if block.settings.subheading != blank %}
-                  <div class="subheading lightly-spaced-row">{{ block.settings.subheading }}</div>
-                {% endif %}
-                {% if block.settings.button_label != blank %}
-                  <span class="button">{{ block.settings.button_label }}</span>
-                {% endif %}
-              </div>
-            </a>
-          </div>
+          {% if settings_object.coll_text_position contains 'over' %}
+            <div class="text-overlay text-overlay--tight text-overlay--v-{{ settings_object.coll_thumb_text_align_y }} text-overlay--h-{{ settings_object.coll_thumb_text_align_x }} image-overlay__over{% if settings_object.coll_text_position_under_mobile %} desktop-only{% endif %}">
+              <div class="text-overlay__inner">
+                <div class="text-overlay__text">
+                  {% if subheading != blank %}
+                    <div class="text-overlay__subheading subheading subheading--over">{{ subheading | escape }}</div>
+                  {% endif %}
 
-          {% if section.settings.enable_carousel %}
+                  <div class="text-overlay__title">
+                    {% if heading != blank %}
+                      <h2 class="h4">{{ heading }}</h2>
+                    {% endif %}
+                  </div>
+
+                  {% if button_label != blank %}
+                    <div class="text-overlay__button-row text-overlay__button-row--{{ settings_object.coll_button_style }}">
+                      <span class="text-overlay__button {% if settings_object.coll_button_style != 'link' %}btn btn--{{ settings_object.coll_button_style }}{% else %}small-feature-link{% endif %}">{{ button_label | escape }}</span>
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
             </div>
           {% endif %}
-        {% endfor %}
+        </div>
+
+        {% if settings_object.coll_text_position == 'below' or settings_object.coll_text_position_under_mobile %}
+          <div class="product-block__detail align-{{ settings_object.coll_thumb_text_align_x }}{% if settings_object.coll_text_position != 'below' %} mobile-only{% endif %}">
+            {% if subheading != blank %}
+              <div class="subheading lightly-spaced-row">{{ subheading | escape }}</div>
+            {% endif %}
+            {% if heading != blank %}
+              <div class="product-block__title">{{ heading }}</div>
+            {% endif %}
+            {% if button_label != blank %}
+              <div class="button-row">
+                <span class="button-row__btn {% if settings_object.coll_button_style != 'link' %}btn btn--{{ settings_object.coll_button_style }}{% else %}small-feature-link{% endif %}">{{ button_label | escape }}</span>
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      </a>
+    </div>
+  </div>
+
+  {% if section.settings.enable_carousel %}
+    </div>
+  {% endif %}
+{% endfor %}
+
         
       </div>
     </div>
