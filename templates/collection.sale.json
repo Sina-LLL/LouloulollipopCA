@@ -24,6 +24,126 @@
         "overlay_style": "shadow"
       }
     },
+    "collection_list_EDVj6M": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_pTqTVU": {
+          "type": "collection",
+          "settings": {
+            "collection": "bandana-bibs",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_pTqTVU"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "Collection list",
+        "text": "",
+        "text_alignment": "start",
+        "enable_carousel": true,
+        "grid": 4,
+        "color_scheme": "default",
+        "full_width": true,
+        "coll_grid_image_shape": "square",
+        "coll_grid_image_position": "center center",
+        "coll_thumb_mob_per_row": "2",
+        "coll_grid_show_count": true,
+        "coll_text_position": "below",
+        "coll_text_position_under_mobile": false,
+        "coll_thumb_text_align_x": "center",
+        "coll_thumb_text_align_y": "center",
+        "coll_button_style": "primary"
+      }
+    },
+    "custom_link_list_xPAKrr": {
+      "type": "custom-link-list",
+      "blocks": {
+        "custom_link_YpWbbU": {
+          "type": "custom_link",
+          "settings": {
+            "url": "https://louloulollipop.ca/collections/sale/Newborn",
+            "image": "shopify://shop_images/DS-ET0012_200.jpg",
+            "heading": "Newborn",
+            "subheading": "Newborn",
+            "button_label": ""
+          }
+        },
+        "custom_link_HgqYeT": {
+          "type": "custom_link",
+          "settings": {
+            "url": "",
+            "image": "shopify://shop_images/DS-ET0013_204.jpg",
+            "heading": "",
+            "subheading": "",
+            "button_label": ""
+          }
+        },
+        "custom_link_Wknaby": {
+          "type": "custom_link",
+          "settings": {
+            "url": "",
+            "image": "shopify://shop_images/DS-NB001_35.jpg",
+            "heading": "",
+            "subheading": "",
+            "button_label": ""
+          }
+        },
+        "custom_link_LYYfpD": {
+          "type": "custom_link",
+          "settings": {
+            "url": "",
+            "image": "shopify://shop_images/DS-NB001_35.jpg",
+            "heading": "",
+            "subheading": "",
+            "button_label": ""
+          }
+        },
+        "custom_link_BTVL6D": {
+          "type": "custom_link",
+          "settings": {
+            "url": "",
+            "image": "shopify://shop_images/DS-NB001_35.jpg",
+            "heading": "",
+            "subheading": "",
+            "button_label": ""
+          }
+        },
+        "custom_link_Nx8tzz": {
+          "type": "custom_link",
+          "settings": {
+            "url": "",
+            "image": "shopify://shop_images/DS-NB001_35.jpg",
+            "heading": "",
+            "subheading": "",
+            "button_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "custom_link_YpWbbU",
+        "custom_link_HgqYeT",
+        "custom_link_Wknaby",
+        "custom_link_LYYfpD",
+        "custom_link_BTVL6D",
+        "custom_link_Nx8tzz"
+      ],
+      "name": "Custom link list",
+      "settings": {
+        "title": "Custom link list",
+        "text": "",
+        "text_alignment": "start",
+        "enable_carousel": true,
+        "grid": 4,
+        "color_scheme": "default",
+        "full_width": true,
+        "coll_grid_image_shape": "square",
+        "coll_thumb_mob_per_row": "2"
+      }
+    },
     "main": {
       "type": "main-collection",
       "settings": {
@@ -64,6 +184,8 @@
   },
   "order": [
     "image_with_text_overlay_fpkwbN",
+    "collection_list_EDVj6M",
+    "custom_link_list_xPAKrr",
     "main"
   ]
 }
