@@ -35,10 +35,20 @@
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
+        },
+        "collection_KQrdan": {
+          "type": "collection",
+          "settings": {
+            "collection": "bodysuits-rompers",
+            "tag": "",
+            "subheading": "",
+            "button_label": ""
+          }
         }
       },
       "block_order": [
-        "collection_pTqTVU"
+        "collection_pTqTVU",
+        "collection_KQrdan"
       ],
       "name": "Collection list",
       "settings": {
