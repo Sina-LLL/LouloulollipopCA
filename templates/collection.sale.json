@@ -9,21 +9,6 @@
  */
 {
   "sections": {
-    "image_with_text_overlay_fpkwbN": {
-      "type": "image-with-text-overlay",
-      "name": "Image with text overlay",
-      "settings": {
-        "image": "shopify://shop_images/Sale_Banner_179b0ca0-d40d-4192-a36e-7092cad4ad11.png",
-        "height": "adapt",
-        "height_desktop": 600,
-        "height_mobile": 460,
-        "image_link": "",
-        "full_width": false,
-        "text_alignment": "center center",
-        "mobile_overlay_under": false,
-        "overlay_style": "shadow"
-      }
-    },
     "collection_list_EDVj6M": {
       "type": "collection-list",
       "blocks": {
@@ -111,50 +96,50 @@
         "collection_WyUbjR": {
           "type": "collection",
           "settings": {
-            "collection": "newborn-0-6-months",
-            "tag": "sale",
-            "image": "shopify://shop_images/BLBodysuit-RustGeo_11_8b61ad77-2139-40ac-b88d-d18ebbbddb7e.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
+            "collection": "sale",
+            "tag": "Sleep",
+            "image": "shopify://shop_images/TENCEL_Sleep_Bag_1.0_Tog_Baby_Dinomite_ffae14b2-5059-4318-a90a-fb97ec726d0b.jpg",
+            "subheading": "Sleep & Bedding",
             "button_label": ""
           }
         },
         "collection_6eV9ac": {
           "type": "collection",
           "settings": {
-            "collection": "baby-6-12-months",
-            "tag": "sale",
-            "image": "shopify://shop_images/Sleeper_-_Cozy_Forest__10_7899eef8-5908-471a-b546-1dfac81d743e.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
+            "collection": "sale",
+            "tag": "wear",
+            "image": "shopify://shop_images/KA1003U.PCK_Waffle_2-pc_Pajama_Set_Peacock_6.jpg",
+            "subheading": "Clothing",
             "button_label": ""
           }
         },
         "collection_BKiBEG": {
           "type": "collection",
           "settings": {
-            "collection": "toddler-12-24m",
-            "tag": "sale",
-            "image": "shopify://shop_images/BA3007F.LVD_Waffle_Long_Sleeve_Bodysuit_Dress_Lavender_5.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
+            "collection": "sale",
+            "tag": "eat",
+            "image": "shopify://shop_images/Baby-eating-noodles-wearing-silcon-bib.jpg",
+            "subheading": "Feeding Essentials",
             "button_label": ""
           }
         },
         "collection_AxWctQ": {
           "type": "collection",
           "settings": {
-            "collection": "little-kid-2-4-years",
-            "tag": "sale",
-            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._11th_2024_-Web-17_36c66427-352e-43a7-babf-c378adeb8fa8.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
+            "collection": "sale",
+            "tag": "play",
+            "image": "shopify://shop_images/Stacking_Toy_Pastel.jpg",
+            "subheading": "Toys & Play",
             "button_label": ""
           }
         },
         "collection_7zGMqh": {
           "type": "collection",
           "settings": {
-            "collection": "big-kid-4-years",
-            "tag": "sale",
-            "image": "shopify://shop_images/KA1004U.CKO_2-pc_Pajama_Set_Check_it_Out_6.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
+            "collection": "sale",
+            "tag": "bathe",
+            "image": "shopify://shop_images/Hooded_Towel_-_Some_Bunny_Loves_You__5_777b2523-8899-4c56-b5dd-d3a1d1237bdb.jpg",
+            "subheading": "Bathe",
             "button_label": ""
           }
         }
@@ -168,7 +153,7 @@
       ],
       "name": "Collection list",
       "settings": {
-        "title": "Shop Sale by Age",
+        "title": "Shop Sale by Category",
         "text": "",
         "text_alignment": "start",
         "enable_carousel": true,
@@ -225,7 +210,6 @@
     }
   },
   "order": [
-    "image_with_text_overlay_fpkwbN",
     "collection_list_EDVj6M",
     "collection_list_CjRx89",
     "main"
