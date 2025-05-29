@@ -1,1 +1,216 @@
-{"sections":{"main":{"type":"main-collection","settings":{"show_title":true,"show_image_behind_heading":false,"heading_image_height":"large","overlay_style":"shadow","coll_desc_pos":"above","coll_num_per_page_int":40,"grid":4,"show_vendor":false,"show_total":false,"enable_filtering":true,"collapse_tag_sidebar_by_default":false,"collapse_filters_method":"over-12","show_filter_counts":true,"filter_two_columns":false,"button_grid_filter_name":"Size,Taille,Größe","auto_apply_hide_unavailable":true,"enable_sticky_filter":false,"show_sort":true,"sort_show_featured":true,"sort_show_best":true,"sort_show_alpha":true,"sort_show_price":true,"sort_show_date":false,"related_collections":"{{ collection.metafields.custom.subcollections.value }}","related_collections_style":"gallery","rel_coll_gall_aspect_ratio":"0.8","image_position":"center center","rel_coll_gall_enable_margin":true,"rel_coll_gall_full_width":false,"rel_coll_gall_overlay_style":"full","rel_coll_gall_text_alignment":"center center","rel_coll_grid_mobile":"2"}}},"order":["main"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection_list_EDVj6M": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_pTqTVU": {
+          "type": "collection",
+          "settings": {
+            "collection": "newborn-0-6-months",
+            "tag": "sale",
+            "image": "shopify://shop_images/BLBodysuit-RustGeo_11_8b61ad77-2139-40ac-b88d-d18ebbbddb7e.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_6BdHyc": {
+          "type": "collection",
+          "settings": {
+            "collection": "baby-6-12-months",
+            "tag": "sale",
+            "image": "shopify://shop_images/Sleeper_-_Cozy_Forest__10_7899eef8-5908-471a-b546-1dfac81d743e.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_GLiJfU": {
+          "type": "collection",
+          "settings": {
+            "collection": "toddler-12-24m",
+            "tag": "sale",
+            "image": "shopify://shop_images/BA3007F.LVD_Waffle_Long_Sleeve_Bodysuit_Dress_Lavender_5.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_AxAriY": {
+          "type": "collection",
+          "settings": {
+            "collection": "little-kid-2-4-years",
+            "tag": "sale",
+            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._11th_2024_-Web-17_36c66427-352e-43a7-babf-c378adeb8fa8.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_a8NfzU": {
+          "type": "collection",
+          "settings": {
+            "collection": "big-kid-4-years",
+            "tag": "sale",
+            "image": "shopify://shop_images/KA1004U.CKO_2-pc_Pajama_Set_Check_it_Out_6.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_pTqTVU",
+        "collection_6BdHyc",
+        "collection_GLiJfU",
+        "collection_AxAriY",
+        "collection_a8NfzU"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Shop Sale by Age",
+        "text": "",
+        "text_alignment": "start",
+        "enable_carousel": true,
+        "grid": 5,
+        "color_scheme": "default",
+        "full_width": true,
+        "coll_grid_image_shape": "portrait-45",
+        "coll_grid_image_position": "center center",
+        "coll_thumb_mob_per_row": "2",
+        "coll_grid_show_count": false,
+        "coll_text_position": "below",
+        "coll_text_position_under_mobile": false,
+        "coll_thumb_text_align_x": "center",
+        "coll_thumb_text_align_y": "center",
+        "coll_button_style": "primary"
+      }
+    },
+    "collection_list_CjRx89": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_WyUbjR": {
+          "type": "collection",
+          "settings": {
+            "collection": "sale",
+            "tag": "Sleep",
+            "image": "shopify://shop_images/TENCEL_Sleep_Bag_1.0_Tog_Baby_Dinomite_ffae14b2-5059-4318-a90a-fb97ec726d0b.jpg",
+            "subheading": "Sleep & Bedding",
+            "button_label": ""
+          }
+        },
+        "collection_6eV9ac": {
+          "type": "collection",
+          "settings": {
+            "collection": "sale",
+            "tag": "wear",
+            "image": "shopify://shop_images/KA1003U.PCK_Waffle_2-pc_Pajama_Set_Peacock_6.jpg",
+            "subheading": "Clothing",
+            "button_label": ""
+          }
+        },
+        "collection_BKiBEG": {
+          "type": "collection",
+          "settings": {
+            "collection": "sale",
+            "tag": "eat",
+            "image": "shopify://shop_images/Baby-eating-noodles-wearing-silcon-bib.jpg",
+            "subheading": "Feeding Essentials",
+            "button_label": ""
+          }
+        },
+        "collection_AxWctQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "sale",
+            "tag": "play",
+            "image": "shopify://shop_images/Stacking_Toy_Pastel.jpg",
+            "subheading": "Toys & Play",
+            "button_label": ""
+          }
+        },
+        "collection_7zGMqh": {
+          "type": "collection",
+          "settings": {
+            "collection": "sale",
+            "tag": "bathe",
+            "image": "shopify://shop_images/Hooded_Towel_-_Some_Bunny_Loves_You__5_777b2523-8899-4c56-b5dd-d3a1d1237bdb.jpg",
+            "subheading": "Bathe",
+            "button_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_WyUbjR",
+        "collection_6eV9ac",
+        "collection_BKiBEG",
+        "collection_AxWctQ",
+        "collection_7zGMqh"
+      ],
+      "settings": {
+        "title": "Shop Sale by Category",
+        "text": "",
+        "text_alignment": "start",
+        "enable_carousel": true,
+        "grid": 5,
+        "color_scheme": "default",
+        "full_width": true,
+        "coll_grid_image_shape": "portrait-45",
+        "coll_grid_image_position": "center center",
+        "coll_thumb_mob_per_row": "2",
+        "coll_grid_show_count": false,
+        "coll_text_position": "below",
+        "coll_text_position_under_mobile": false,
+        "coll_thumb_text_align_x": "center",
+        "coll_thumb_text_align_y": "center",
+        "coll_button_style": "primary"
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "show_title": true,
+        "show_image_behind_heading": false,
+        "heading_image_height": "large",
+        "overlay_style": "shadow",
+        "coll_desc_pos": "below",
+        "coll_num_per_page_int": 40,
+        "grid": 4,
+        "show_vendor": false,
+        "show_total": false,
+        "enable_filtering": true,
+        "collapse_tag_sidebar_by_default": false,
+        "collapse_filters_method": "over-12",
+        "show_filter_counts": true,
+        "filter_two_columns": false,
+        "button_grid_filter_name": "Size,Taille,Größe",
+        "auto_apply_hide_unavailable": true,
+        "enable_sticky_filter": false,
+        "show_sort": true,
+        "sort_show_featured": true,
+        "sort_show_best": true,
+        "sort_show_alpha": true,
+        "sort_show_price": true,
+        "sort_show_date": false,
+        "related_collections": [],
+        "related_collections_style": "buttons",
+        "rel_coll_gall_aspect_ratio": "0.8",
+        "image_position": "center center",
+        "rel_coll_gall_enable_margin": false,
+        "rel_coll_gall_full_width": false,
+        "rel_coll_gall_overlay_style": "full",
+        "rel_coll_gall_text_alignment": "center center",
+        "rel_coll_grid_mobile": "2"
+      }
+    }
+  },
+  "order": [
+    "collection_list_EDVj6M",
+    "collection_list_CjRx89",
+    "main"
+  ]
+}
