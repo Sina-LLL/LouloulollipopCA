@@ -172,7 +172,7 @@
     "main": {
       "type": "main-collection",
       "settings": {
-        "show_title": false,
+        "show_title": true,
         "show_image_behind_heading": false,
         "heading_image_height": "large",
         "overlay_style": "shadow",
