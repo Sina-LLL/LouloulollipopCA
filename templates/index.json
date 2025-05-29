@@ -214,6 +214,22 @@
         "color_scheme": "default"
       }
     },
+    "featured_collection_tc8tiM": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "text": "",
+        "collection": "map-the-world",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 5,
+        "rows": 1,
+        "color_scheme": "default",
+        "show_view_all": false,
+        "full_width": true,
+        "text_alignment": "start"
+      }
+    },
     "collection_list_BzgHGC": {
       "type": "collection-list",
       "blocks": {
@@ -547,22 +563,6 @@
         "text_alignment": "start"
       }
     },
-    "featured_collection_tc8tiM": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Our World Traveller Collection",
-        "text": "",
-        "collection": "map-the-world",
-        "show_vendor": false,
-        "enable_carousel": true,
-        "grid": 5,
-        "rows": 1,
-        "color_scheme": "default",
-        "show_view_all": false,
-        "full_width": true,
-        "text_alignment": "start"
-      }
-    },
     "collection_list_g7498J": {
       "type": "collection-list",
       "blocks": {
@@ -723,15 +723,15 @@
     "rich_text_ttwQ7E",
     "16359276425da8ce46",
     "featured_collection_RcGTat",
+    "logo_list_kYmwNX",
     "custom_product_highlight_JiGaUB",
     "featured_collection_K3tJdQ",
     "featured_collection_AhBPDp",
     "custom_product_highlight_ECrHhc",
+    "featured_collection_tc8tiM",
     "collection_list_BzgHGC",
-    "logo_list_kYmwNX",
     "collection_list_XEbpaa",
     "featured_collection_6Cp3dQ",
-    "featured_collection_tc8tiM",
     "collection_list_g7498J",
     "multi_column_MR9q33",
     "rich_text_AyKQDC",
