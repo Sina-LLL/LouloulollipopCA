@@ -80,6 +80,7 @@
     },
     "image_with_text_overlay_eJYqiL": {
       "type": "image-with-text-overlay",
+      "disabled": true,
       "name": "Image with text overlay",
       "settings": {
         "image": "shopify://shop_images/BA3004U.PCK_Waffle_Long_Sleeve_Bodysuit_Peacock_5.jpg",
