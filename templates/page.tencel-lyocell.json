@@ -217,7 +217,7 @@
       "settings": {
         "height": "small",
         "text_alignment": "left",
-        "full_width": false,
+        "full_width": true,
         "color_scheme": "default"
       }
     },
@@ -225,7 +225,7 @@
       "type": "main-page",
       "settings": {
         "show_page_title": false,
-        "full_width": false
+        "full_width": true
       }
     },
     "collection_list_FK8cew": {
