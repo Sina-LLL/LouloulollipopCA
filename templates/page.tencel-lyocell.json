@@ -47,7 +47,7 @@
       ],
       "name": "Image with text",
       "settings": {
-        "image": "shopify://shop_images/SWSHK_Muslin_Swaddle_Sharks_52_b3cd7e91-b833-4127-ba06-42b9c405c05c.jpg",
+        "image": "shopify://shop_images/SWSHK_Muslin_Swaddle_Sharks_52.jpg",
         "image_2": "shopify://shop_images/BA1003USEL-LSa.png",
         "image_width": 700,
         "image_link": "",
@@ -83,7 +83,7 @@
       "name": "Image with text overlay",
       "settings": {
         "image": "shopify://shop_images/BA3004U.PCK_Waffle_Long_Sleeve_Bodysuit_Peacock_5.jpg",
-        "mobile_image": "shopify://shop_images/KA1004U.CKO_2-pc_Pajama_Set_Check_it_Out_6_f518a666-7ecd-44a2-ab63-aa00b37ebf07.jpg",
+        "mobile_image": "shopify://shop_images/KA1004U.CKO_2-pc_Pajama_Set_Check_it_Out_6_e197e4eb-4534-4dd4-9547-fafb1196db52.jpg",
         "height": "adapt",
         "height_desktop": 480,
         "height_mobile": 460,
@@ -112,7 +112,7 @@
           "type": "text_block",
           "settings": {
             "enable_media": true,
-            "image": "shopify://shop_images/KA1003U.PCK_Waffle_2-pc_Pajama_Set_Peacock_6_26d1a114-24dc-445a-9d36-5feb92df9a7a.jpg",
+            "image": "shopify://shop_images/KA1003U.PCK_Waffle_2-pc_Pajama_Set_Peacock_6_8702704f-57cd-4673-803e-afb1c99242e1.jpg",
             "title": "It’s temperature regulating and moisture wicking  ",
             "text": "<p>TENCEL is naturally wicking and breathable, keeping babies and toddlers warm in the winter and cool and dry in the summer. And that means better sleep for everyone.  </p>",
             "button_label": "",
@@ -231,7 +231,7 @@
           "settings": {
             "collection": "sleep-bags",
             "tag": "",
-            "image": "shopify://shop_images/BA9003U.BMB_1_7b68bb01-1eb6-497b-845f-6cfbb92647ce.jpg",
+            "image": "shopify://shop_images/BA9003U.BMB_1_c76ef3c5-7c24-4a97-8bf2-4b12aeba12cd.jpg",
             "subheading": "Sleep Bags",
             "button_label": ""
           }
