@@ -108,17 +108,6 @@
             "link": ""
           }
         },
-        "text_block_88RqQd": {
-          "type": "text_block",
-          "settings": {
-            "enable_media": true,
-            "image": "shopify://shop_images/KA1003U.PCK_Waffle_2-pc_Pajama_Set_Peacock_6_8702704f-57cd-4673-803e-afb1c99242e1.jpg",
-            "title": "It’s temperature regulating and moisture wicking  ",
-            "text": "<p>TENCEL is naturally wicking and breathable, keeping babies and toddlers warm in the winter and cool and dry in the summer. And that means better sleep for everyone.  </p>",
-            "button_label": "",
-            "link": ""
-          }
-        },
         "text_block_dpgX3Q": {
           "type": "text_block",
           "settings": {
@@ -126,6 +115,17 @@
             "image": "shopify://shop_images/BA9007U.FBK_Sleepsuit_1.0_Tog_French_Breakfast_5.jpg",
             "title": "Incredibly durable",
             "text": "<p>TENCEL is soft like bamboo, but stands up better to machine washing (even frequent washing, which, let’s be honest, is hard to avoid with little ones!), holding its shape better and pilling less than bamboo. </p><p>It also withstands the regular wear and tear that inevitably comes with active babies and toddlers —making it perfect for handing down to future family members or for consignment. </p>",
+            "button_label": "",
+            "link": ""
+          }
+        },
+        "text_block_88RqQd": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": true,
+            "image": "shopify://shop_images/KA1003U.PCK_Waffle_2-pc_Pajama_Set_Peacock_6_8702704f-57cd-4673-803e-afb1c99242e1.jpg",
+            "title": "It’s temperature regulating and moisture wicking  ",
+            "text": "<p>TENCEL is naturally wicking and breathable, keeping babies and toddlers warm in the winter and cool and dry in the summer. And that means better sleep for everyone.  </p>",
             "button_label": "",
             "link": ""
           }
@@ -144,8 +144,8 @@
       },
       "block_order": [
         "text_block_WyxCLG",
-        "text_block_88RqQd",
         "text_block_dpgX3Q",
+        "text_block_88RqQd",
         "text_block_rgKnar"
       ],
       "name": "Multi-column",
