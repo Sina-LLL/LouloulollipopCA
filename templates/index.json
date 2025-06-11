@@ -533,7 +533,7 @@
     "custom_product_highlight_JiGaUB": {
       "type": "custom-product-highlight",
       "custom_css": [
-        ".collection-slider-row{margin-bottom:0 !important; padding-bottom:0 !important;}"
+        ".fully-padded-row--medium {padding-bottom: 0 !important;}"
       ],
       "settings": {
         "title": "Mess-less Mealtimes",
