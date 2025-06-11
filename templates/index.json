@@ -379,7 +379,8 @@
           "type": "testimonial",
           "settings": {
             "star_rating": 5,
-            "testimonial": "LOVE the bees!! 🐝<br><br>Super soft, we love the fold over mitts and socks! Couldn’t be more in love with the pattern as well.",
+            "testimonial-title": "LOVE the bees!! 🐝",
+            "testimonial": "Super soft, we love the fold over mitts and socks! Couldn’t be more in love with the pattern as well.",
             "author": "Author's name",
             "image_caption": "",
             "link": ""
@@ -389,6 +390,7 @@
           "type": "testimonial",
           "settings": {
             "star_rating": 5,
+            "testimonial-title": "Customer Review Title",
             "testimonial": "Add customer reviews and testimonials to showcase your store’s happy customers.",
             "author": "Author's name",
             "image_caption": "",
@@ -399,6 +401,7 @@
           "type": "testimonial",
           "settings": {
             "star_rating": 5,
+            "testimonial-title": "Customer Review Title",
             "testimonial": "Add customer reviews and testimonials to showcase your store’s happy customers.",
             "author": "Author's name",
             "image_caption": "",
@@ -409,6 +412,7 @@
           "type": "testimonial",
           "settings": {
             "star_rating": 5,
+            "testimonial-title": "Customer Review Title",
             "testimonial": "Add customer reviews and testimonials to showcase your store’s happy customers.",
             "author": "Author's name",
             "image_caption": "",
@@ -419,6 +423,7 @@
           "type": "testimonial",
           "settings": {
             "star_rating": 5,
+            "testimonial-title": "Customer Review Title",
             "testimonial": "Add customer reviews and testimonials to showcase your store’s happy customers.",
             "author": "Author's name",
             "image_caption": "",
