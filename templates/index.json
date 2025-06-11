@@ -381,18 +381,20 @@
             "star_rating": 5,
             "testimonial-title": "LOVE the bees!! 🐝",
             "testimonial": "Super soft, we love the fold over mitts and socks! Couldn’t be more in love with the pattern as well.",
-            "author": "Author's name",
+            "author": "Stacey D",
+            "image": "shopify://shop_images/6f343775-42fa-5aff-8245-6d9a0ec41c98.jpg",
             "image_caption": "",
-            "link": ""
+            "link": "shopify://products/sleeper-bumble-bees"
           }
         },
         "testimonial_ReBUHt": {
           "type": "testimonial",
           "settings": {
             "star_rating": 5,
-            "testimonial-title": "Customer Review Title",
-            "testimonial": "Add customer reviews and testimonials to showcase your store’s happy customers.",
-            "author": "Author's name",
+            "testimonial-title": "Surprisingly soft",
+            "testimonial": "I am really impressed with this bib! It is the softest waterproof bib we own by far; I don’t know how they managed to make it both soft and functional, but it is definitely both. The coverage is great on my petite two year old, keeping her nice and clean, and I love that I can just toss it in the washer. It makes it so much easier to get fully clean. The print is super cute too - I would definitely recommend it! I received this product as part of the Stellar Product Testing Panel in exchange for my honest review.",
+            "author": "",
+            "image": "shopify://shop_images/22ab6ac7-6f8e-5b3b-a508-6bf3da54680e.jpg",
             "image_caption": "",
             "link": ""
           }
