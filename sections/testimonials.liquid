@@ -84,6 +84,7 @@
 
               {%- if block.settings.testimonial != blank -%}
                 <div class="testimonial__text">
+                  <h4 class="subheading h4">{{ block.settings.testimonial-title }}</h4>
                   <blockquote class="testimonial__blockquote{% if section.settings.text_caps %} testimonial__blockquote--caps{% endif %} heading-font">{% render 'multiline-text' with block.settings.testimonial %}</blockquote>
                 </div>
               {%- endif -%}
@@ -280,6 +281,12 @@
           "step": 1,
           "label": "Star rating",
           "default": 5
+        },
+        {
+          "type": "text",
+          "id": "testimonial-title",
+          "label": "Testimonial Title",
+          "default": "Customer Review Title"
         },
         {
           "type": "text",
