@@ -449,55 +449,35 @@
         "logo_tawCLk": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/Parents-Logo.png",
-            "image_width": 150,
-            "link": "",
-            "title": ""
-          }
-        },
-        "logo_QNktxr": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/BabyList-Logo.png",
-            "image_width": 150,
-            "link": "",
+            "image": "shopify://shop_images/Certified_B_Corporation_B_Corp_Logo_2022_Black_RGB_svg.webp",
+            "image_width": 80,
+            "link": "https://www.bcorporation.net/en-us/",
             "title": ""
           }
         },
         "logo_D6VaH9": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/tinybeans-Logo.png",
+            "image": "shopify://shop_images/Benefits-of-Partnering-with-a-WBENC-Certified-Women-Business-Enterprise-Public-Relations-and-Marketing-Agency-feature.webp",
             "image_width": 150,
-            "link": "",
+            "link": "https://buywomenowned.com/",
             "title": ""
           }
         },
         "logo_Yg37w8": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/Parade-Logo.png",
-            "image_width": 150,
-            "link": "",
-            "title": ""
-          }
-        },
-        "logo_m4DX8g": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/theBUMP-Logo.png",
-            "image_width": 150,
-            "link": "",
+            "image": "shopify://shop_images/OEKO_TEX.png",
+            "image_width": 80,
+            "link": "https://www.oeko-tex.com/en/",
             "title": ""
           }
         }
       },
       "block_order": [
         "logo_tawCLk",
-        "logo_QNktxr",
         "logo_D6VaH9",
-        "logo_Yg37w8",
-        "logo_m4DX8g"
+        "logo_Yg37w8"
       ],
       "settings": {
         "title": "",
