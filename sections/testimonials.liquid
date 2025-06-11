@@ -54,7 +54,7 @@
   <div class="container fade-in" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.2s"' -%}>
     <div class="testimonial-list testimonial-list--{{ section.settings.layout }} testimonial-list--{% if show_image %}with-images {% else %}without-images{% endif %}" data-testimonial-count="{{ section.blocks.size }}">
       {%- if section.settings.title != blank -%}
-        <div class="subheading">{{ section.settings.title | escape }}</div>
+        <h2 class="h4">{{ section.settings.title | escape }}</h2>
       {%- endif -%}
 
       {%- if use_slideshow -%}
