@@ -134,9 +134,9 @@
     "featured_collection_RcGTat": {
       "type": "featured-collection",
       "settings": {
-        "title": "New Ocean Wonders Eat & Play",
+        "title": "Shop Our Bestsellers",
         "text": "",
-        "collection": "ocean-wonders-eat-play",
+        "collection": "best-sellers",
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 5,
@@ -150,74 +150,11 @@
     "logo_list_kYmwNX": {
       "type": "logo-list",
       "blocks": {
-        "logo_RidJwp": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Jillian-Harris-Logo_e0e75a9e-fd3e-465d-a063-55cd2d888757.png",
-            "image_width": 160,
-            "link": "",
-            "title": ""
-          }
-        },
         "logo_3E4WaJ": {
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/Parents-Logo.png",
-            "image_width": 190,
-            "link": "",
-            "title": ""
-          }
-        },
-        "logo_m3DkDJ": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/tinybeans-Logo.png",
-            "image_width": 160,
-            "link": "",
-            "title": ""
-          }
-        },
-        "logo_mQKag7": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Parade-Logo.png",
-            "image_width": 160,
-            "link": "",
-            "title": ""
-          }
-        },
-        "logo_Pb9irB": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/theBUMP-Logo.png",
-            "image_width": 160,
-            "link": "",
-            "title": ""
-          }
-        },
-        "logo_CGcCUn": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/logo_motherly.png",
-            "image_width": 160,
-            "link": "",
-            "title": ""
-          }
-        },
-        "logo_j4Arc7": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Momtastic-Logo.png",
-            "image_width": 160,
-            "link": "",
-            "title": ""
-          }
-        },
-        "logo_i3itWL": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/8_what_to_expect_226b9ac0-b823-4eff-ba1a-75692a46e19f.png",
-            "image_width": 160,
+            "image_width": 150,
             "link": "",
             "title": ""
           }
@@ -226,25 +163,48 @@
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/BabyList-Logo.png",
-            "image_width": 160,
+            "image_width": 150,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_m3DkDJ": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/tinybeans-Logo.png",
+            "image_width": 150,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_mQKag7": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Parade-Logo.png",
+            "image_width": 150,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_Pb9irB": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/theBUMP-Logo.png",
+            "image_width": 150,
             "link": "",
             "title": ""
           }
         }
       },
       "block_order": [
-        "logo_RidJwp",
         "logo_3E4WaJ",
+        "logo_KwwATQ",
         "logo_m3DkDJ",
         "logo_mQKag7",
-        "logo_Pb9irB",
-        "logo_CGcCUn",
-        "logo_j4Arc7",
-        "logo_i3itWL",
-        "logo_KwwATQ"
+        "logo_Pb9irB"
       ],
       "settings": {
-        "title": "You may have see us in:",
+        "title": "",
         "image_opacity": 100,
         "color_scheme": "default"
       }
