@@ -451,8 +451,71 @@
         "autoplay_speed": 5
       }
     },
+    "logo_list_ywatnw": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_tawCLk": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Parents-Logo.png",
+            "image_width": 150,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_QNktxr": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/BabyList-Logo.png",
+            "image_width": 150,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_D6VaH9": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/tinybeans-Logo.png",
+            "image_width": 150,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_Yg37w8": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Parade-Logo.png",
+            "image_width": 150,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_m4DX8g": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/theBUMP-Logo.png",
+            "image_width": 150,
+            "link": "",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_tawCLk",
+        "logo_QNktxr",
+        "logo_D6VaH9",
+        "logo_Yg37w8",
+        "logo_m4DX8g"
+      ],
+      "settings": {
+        "title": "",
+        "image_opacity": 100,
+        "color_scheme": "default"
+      }
+    },
     "featured_collection_AhBPDp": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "New Ocean Wonders Collection",
         "text": "",
@@ -469,11 +532,14 @@
     },
     "custom_product_highlight_JiGaUB": {
       "type": "custom-product-highlight",
+      "custom_css": [
+        ".collection-slider-row{margin-bottom:0 !important; padding-bottom:0 !important;}"
+      ],
       "settings": {
         "title": "Mess-less Mealtimes",
         "text": "<p>Our super smart silicone snack plates feature a strong sticky base even pro food flingers can't beat. Available in a variety of totally a-roar-able animal shapes for more happy snacking with less mess!</p>",
         "image": "shopify://shop_images/SPL-008-SPK_Snack_Plate_Seashell_51.jpg",
-        "order": false,
+        "order": true,
         "product_list": [
           "snack-plate-sarah-shark",
           "snack-plate-olly-octopus"
@@ -481,7 +547,23 @@
         "button_label": "Shop Snack Plates",
         "link": "shopify://collections/snack-plate",
         "button_style": "primary",
-        "color_scheme": "default"
+        "color_scheme": "2"
+      }
+    },
+    "featured_collection_eXJhUx": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "text": "",
+        "collection": "snack-plate",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 5,
+        "rows": 2,
+        "color_scheme": "2",
+        "show_view_all": true,
+        "full_width": true,
+        "text_alignment": "start"
       }
     },
     "collection_list_BzgHGC": {
@@ -620,80 +702,6 @@
         "coll_button_style": "primary"
       }
     },
-    "featured_collection_6Cp3dQ": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Perfect Gifts for Newborns",
-        "text": "",
-        "collection": "newborn-0-6-months",
-        "show_vendor": false,
-        "enable_carousel": true,
-        "grid": 5,
-        "rows": 1,
-        "color_scheme": "default",
-        "show_view_all": true,
-        "full_width": true,
-        "text_alignment": "start"
-      }
-    },
-    "collection_list_g7498J": {
-      "type": "collection-list",
-      "blocks": {
-        "collection_j8MAG6": {
-          "type": "collection",
-          "settings": {
-            "collection": "sleep-bags",
-            "tag": "",
-            "image": "shopify://shop_images/Sleep_Bag_2.5_Tog_-_Cozy_Forest_3.webp",
-            "subheading": "Sleep Bags",
-            "button_label": ""
-          }
-        },
-        "collection_dUtKCB": {
-          "type": "collection",
-          "settings": {
-            "collection": "waffle-collection",
-            "tag": "",
-            "image": "shopify://shop_images/WaffleCollection.jpg",
-            "subheading": "Waffle",
-            "button_label": ""
-          }
-        },
-        "collection_76prhk": {
-          "type": "collection",
-          "settings": {
-            "collection": "gift-sets",
-            "tag": "",
-            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_March_2024_-Web-74.jpg",
-            "subheading": "Gift Sets",
-            "button_label": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection_j8MAG6",
-        "collection_dUtKCB",
-        "collection_76prhk"
-      ],
-      "settings": {
-        "title": "Our Most Loved",
-        "text": "",
-        "text_alignment": "center",
-        "enable_carousel": true,
-        "grid": 3,
-        "color_scheme": "1",
-        "full_width": true,
-        "coll_grid_image_shape": "portrait-45",
-        "coll_grid_image_position": "center center",
-        "coll_thumb_mob_per_row": "2",
-        "coll_grid_show_count": false,
-        "coll_text_position": "below",
-        "coll_text_position_under_mobile": false,
-        "coll_thumb_text_align_x": "center",
-        "coll_thumb_text_align_y": "center",
-        "coll_button_style": "primary"
-      }
-    },
     "multi_column_MR9q33": {
       "type": "multi-column",
       "blocks": {
@@ -724,6 +732,7 @@
         "text_block_zy7AYT",
         "text_block_VkTHha"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "media_aspect_ratio": "1.25",
@@ -731,34 +740,6 @@
         "text_alignment": "center",
         "button_style": "primary",
         "color_scheme": "default"
-      }
-    },
-    "rich_text_AyKQDC": {
-      "type": "rich-text",
-      "blocks": {
-        "subheading_8LtjR7": {
-          "type": "subheading",
-          "settings": {
-            "subheading": "Love, Quality, and Purpose"
-          }
-        },
-        "heading_PdHfXy": {
-          "type": "heading",
-          "settings": {
-            "title": "Designed to Last, Crafted to Love",
-            "use_h1": false
-          }
-        }
-      },
-      "block_order": [
-        "subheading_8LtjR7",
-        "heading_PdHfXy"
-      ],
-      "settings": {
-        "height": "medium",
-        "text_alignment": "center",
-        "full_width": false,
-        "color_scheme": "2"
       }
     },
     "1737676593fa7ff914": {
@@ -802,13 +783,12 @@
     "featured_collection_K3tJdQ",
     "collection_list_XEbpaa",
     "testimonials_QcyQ3m",
+    "logo_list_ywatnw",
     "featured_collection_AhBPDp",
     "custom_product_highlight_JiGaUB",
+    "featured_collection_eXJhUx",
     "collection_list_BzgHGC",
-    "featured_collection_6Cp3dQ",
-    "collection_list_g7498J",
     "multi_column_MR9q33",
-    "rich_text_AyKQDC",
     "1737676593fa7ff914"
   ]
 }
