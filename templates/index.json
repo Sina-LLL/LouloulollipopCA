@@ -147,6 +147,108 @@
         "text_alignment": "start"
       }
     },
+    "logo_list_kYmwNX": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_RidJwp": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Jillian-Harris-Logo_e0e75a9e-fd3e-465d-a063-55cd2d888757.png",
+            "image_width": 160,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_3E4WaJ": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Parents-Logo.png",
+            "image_width": 190,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_m3DkDJ": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/tinybeans-Logo.png",
+            "image_width": 160,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_mQKag7": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Parade-Logo.png",
+            "image_width": 160,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_Pb9irB": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/theBUMP-Logo.png",
+            "image_width": 160,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_CGcCUn": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/logo_motherly.png",
+            "image_width": 160,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_j4Arc7": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Momtastic-Logo.png",
+            "image_width": 160,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_i3itWL": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/8_what_to_expect_226b9ac0-b823-4eff-ba1a-75692a46e19f.png",
+            "image_width": 160,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_KwwATQ": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/BabyList-Logo.png",
+            "image_width": 160,
+            "link": "",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_RidJwp",
+        "logo_3E4WaJ",
+        "logo_m3DkDJ",
+        "logo_mQKag7",
+        "logo_Pb9irB",
+        "logo_CGcCUn",
+        "logo_j4Arc7",
+        "logo_i3itWL",
+        "logo_KwwATQ"
+      ],
+      "settings": {
+        "title": "You may have see us in:",
+        "image_opacity": 100,
+        "color_scheme": "default"
+      }
+    },
     "custom_product_highlight_JiGaUB": {
       "type": "custom-product-highlight",
       "settings": {
@@ -200,16 +302,16 @@
     "custom_product_highlight_ECrHhc": {
       "type": "custom-product-highlight",
       "settings": {
-        "title": "World Traveller Collection",
-        "text": "<p>Soft muslin quilts and swaddles with hand-drawn prints that inspire little ones to dream big and wander far </p>",
-        "image": "shopify://shop_images/Canada_Day_blanket_Swaddle-22.jpg",
+        "title": "Lightweight Sleep Bags",
+        "text": "<p>Soft, airy, and just right for warm nights</p>",
+        "image": "shopify://shop_images/MuslinSleepBag-Peaches_81ce2471-ce98-40d4-a05c-5abffa3949b3.jpg",
         "order": true,
         "product_list": [
-          "muslin-quilt-canada",
-          "muslin-swaddle-vancouver"
+          "muslin-lightweight-sleep-bag-0-5-tog-all-aboard",
+          "muslin-lightweight-sleep-bag-0-5-tog-bumble-bees"
         ],
-        "button_label": "Shop World Traveller",
-        "link": "shopify://collections/world-traveler",
+        "button_label": "Shop Lightweight Sleep Bags",
+        "link": "shopify://collections/0-5-tog",
         "button_style": "primary",
         "color_scheme": "default"
       }
@@ -219,7 +321,7 @@
       "settings": {
         "title": "",
         "text": "",
-        "collection": "map-the-world",
+        "collection": "0-5-tog",
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 5,
@@ -363,108 +465,6 @@
         "coll_thumb_text_align_x": "center",
         "coll_thumb_text_align_y": "center",
         "coll_button_style": "primary"
-      }
-    },
-    "logo_list_kYmwNX": {
-      "type": "logo-list",
-      "blocks": {
-        "logo_RidJwp": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Jillian-Harris-Logo_e0e75a9e-fd3e-465d-a063-55cd2d888757.png",
-            "image_width": 160,
-            "link": "",
-            "title": ""
-          }
-        },
-        "logo_3E4WaJ": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Parents-Logo.png",
-            "image_width": 190,
-            "link": "",
-            "title": ""
-          }
-        },
-        "logo_m3DkDJ": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/tinybeans-Logo.png",
-            "image_width": 160,
-            "link": "",
-            "title": ""
-          }
-        },
-        "logo_mQKag7": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Parade-Logo.png",
-            "image_width": 160,
-            "link": "",
-            "title": ""
-          }
-        },
-        "logo_Pb9irB": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/theBUMP-Logo.png",
-            "image_width": 160,
-            "link": "",
-            "title": ""
-          }
-        },
-        "logo_CGcCUn": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/logo_motherly.png",
-            "image_width": 160,
-            "link": "",
-            "title": ""
-          }
-        },
-        "logo_j4Arc7": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Momtastic-Logo.png",
-            "image_width": 160,
-            "link": "",
-            "title": ""
-          }
-        },
-        "logo_i3itWL": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/8_what_to_expect_226b9ac0-b823-4eff-ba1a-75692a46e19f.png",
-            "image_width": 160,
-            "link": "",
-            "title": ""
-          }
-        },
-        "logo_KwwATQ": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/BabyList-Logo.png",
-            "image_width": 160,
-            "link": "",
-            "title": ""
-          }
-        }
-      },
-      "block_order": [
-        "logo_RidJwp",
-        "logo_3E4WaJ",
-        "logo_m3DkDJ",
-        "logo_mQKag7",
-        "logo_Pb9irB",
-        "logo_CGcCUn",
-        "logo_j4Arc7",
-        "logo_i3itWL",
-        "logo_KwwATQ"
-      ],
-      "settings": {
-        "title": "You may have see us in:",
-        "image_opacity": 100,
-        "color_scheme": "default"
       }
     },
     "collection_list_XEbpaa": {
