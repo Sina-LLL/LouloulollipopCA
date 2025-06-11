@@ -70,7 +70,7 @@
         <div class="testimonial testimonial-{{ forloop.index }}{% if show_image == false %} reading-width{% endif %}" {{ block.shopify_attributes }}>
           <div class="testimonial__column testimonial__column--text">
             {% if section.settings.title != blank and show_image %}
-              <div class="subheading">{{ section.settings.title | escape }}</div>
+              <h2 class="h4">{{ section.settings.title | escape }}</h2>
             {% endif %}
 
             <div class="testimonial__content">
