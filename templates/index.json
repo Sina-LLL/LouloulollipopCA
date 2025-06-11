@@ -396,7 +396,7 @@
             "author": "",
             "image": "shopify://shop_images/22ab6ac7-6f8e-5b3b-a508-6bf3da54680e.jpg",
             "image_caption": "",
-            "link": ""
+            "link": "shopify://products/long-sleeve-bib-sweet-treats"
           }
         },
         "testimonial_PAPAeQ": {
@@ -408,29 +408,19 @@
             "author": "Dcgilmr",
             "image": "shopify://shop_images/a6aa598a-c4b7-5ce4-a018-d67bd5c85bcb.jpg",
             "image_caption": "",
-            "link": ""
+            "link": "shopify://collections/sleep-bags"
           }
         },
         "testimonial_xULPJF": {
           "type": "testimonial",
           "settings": {
             "star_rating": 5,
-            "testimonial-title": "Customer Review Title",
-            "testimonial": "Add customer reviews and testimonials to showcase your store’s happy customers.",
-            "author": "Author's name",
+            "testimonial-title": "Softest Muslin",
+            "testimonial": "Love these Muslim swaddles. I use them as lightweight and breathable summer blankets for my 8 month old. Large enough to cover his stroller for nap time or just to keep the sun off him. They are by far the softest I have found. Who wants to wrap their baby in scratchy muslin. Super cute designs too. Highly recommend.",
+            "author": "Jasminetara",
+            "image": "shopify://shop_images/500b5d60-9252-53bc-8df9-b53c73d4d475.jpg",
             "image_caption": "",
-            "link": ""
-          }
-        },
-        "testimonial_CPQJKe": {
-          "type": "testimonial",
-          "settings": {
-            "star_rating": 5,
-            "testimonial-title": "Customer Review Title",
-            "testimonial": "Add customer reviews and testimonials to showcase your store’s happy customers.",
-            "author": "Author's name",
-            "image_caption": "",
-            "link": ""
+            "link": "shopify://products/muslin-swaddle-sushi"
           }
         }
       },
@@ -438,8 +428,7 @@
         "testimonial_GeyPpp",
         "testimonial_ReBUHt",
         "testimonial_PAPAeQ",
-        "testimonial_xULPJF",
-        "testimonial_CPQJKe"
+        "testimonial_xULPJF"
       ],
       "name": "Testimonials",
       "settings": {
