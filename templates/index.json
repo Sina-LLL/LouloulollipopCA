@@ -286,7 +286,7 @@
         "enable_carousel": true,
         "grid": 4,
         "rows": 1,
-        "color_scheme": "2",
+        "color_scheme": "1",
         "show_view_all": true,
         "full_width": true,
         "text_alignment": "center"
