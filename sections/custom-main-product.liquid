@@ -365,6 +365,27 @@
                 {% endif %}
               </div>
             {%- endif -%}
+{% if product.bundle_components != blank %}
+  <div class="bundle-components">
+    <h3>What's included:</h3>
+    <ul>
+      {% for component in product.bundle_components %}
+        {% assign bundled_product = component.product %}
+        <li>
+          <a href="{{ bundled_product.url }}">
+            {{ bundled_product.title }}
+          </a>
+          {% if bundled_product.featured_image %}
+            <img src="{{ bundled_product.featured_image | image_url: width: 200 }}" alt="{{ bundled_product.title }}">
+          {% endif %}
+          {% if component.quantity > 1 %}
+            <p>Quantity: {{ component.quantity }}</p>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}
 
           {% when 'vendor' %}
             {%- liquid
