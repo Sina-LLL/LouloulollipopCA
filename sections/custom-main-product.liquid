@@ -386,28 +386,6 @@
               </div>
             {%- endif -%}
           
-{% if product.metafields.bundles.components %}
-  {% assign components = product.metafields.bundles.components.value %}
-  <div class="bundle-components">
-    <h3>What's Included</h3>
-    <ul>
-      {% for component in components %}
-        {% assign bundled_product = component.product %}
-        <li>
-          <a href="{{ bundled_product.url }}">
-            {{ bundled_product.title }}
-          </a>
-          {% if bundled_product.featured_image %}
-            <img src="{{ bundled_product.featured_image | image_url: width: 200 }}" alt="{{ bundled_product.title }}">
-          {% endif %}
-          <p>Quantity: {{ component.quantity }}</p>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-{% endif %}
-
-
           {% when 'vendor' %}
             {%- liquid
               assign product_vendor_handle = product.vendor | handle
