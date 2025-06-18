@@ -335,7 +335,9 @@
                 {% for bundled_product in bundled_products %}
                   <li>
                     {% render 'product-block',
-                      product: bundled_product
+                      product: bundled_product,
+                      custom_aspect_ratio:.9,
+                      grid:4
                     %}
                   </li>
                 {% endfor %}
