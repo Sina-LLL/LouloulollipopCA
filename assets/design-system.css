@@ -755,3 +755,6 @@ label.filter-group__item.filter-group__item--active:before{
 .product-grid--per-row-mob-3{
   --product-columns-desktop: 3;
 }
+.bundle-product-title{
+  font-size: 1.25rem;
+}
