@@ -741,3 +741,10 @@ label.filter-group__item.filter-group__item--active:before{
   background-size: 140%;
   border: 2px solid #D9E1E4;
 }
+
+
+/* Bundles PDP */
+
+.bundle-products .price__current{
+  display: none;
+}
