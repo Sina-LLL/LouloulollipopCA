@@ -277,9 +277,9 @@
     "featured_collection_K3tJdQ": {
       "type": "featured-collection",
       "settings": {
-        "title": "Ready-to-Go Gift Sets & Bundles",
+        "title": "Ready-to-Go Bundles & Gift Sets",
         "text": "<p>Pre-packed with love. Beautifully boxed and ready to gift.</p>",
-        "collection": "gift-sets",
+        "collection": "bundles-and-sets",
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 4,
