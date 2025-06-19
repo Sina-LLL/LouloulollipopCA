@@ -748,3 +748,7 @@ label.filter-group__item.filter-group__item--active:before{
 .bundle-products .price__current{
   display: none;
 }
+.bundle-products .product-block__title{
+  font-size:14px;
+  line-height:1em
+}
