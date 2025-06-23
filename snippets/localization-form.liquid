@@ -27,7 +27,7 @@
   <div class="localization__grid">
     {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
       {%- capture country_names -%}
-        {{ localization.country.name }}|
+        {{ localization.country.name }} ({{ localization.country.currency.iso_code }}&nbsp;{{ localization.country.currency.symbol }})|
       {%- endcapture -%}
 
       {%- liquid
@@ -57,7 +57,12 @@
             {%- endfor -%}
           {%- endcapture -%}
 
-          
+          {%- capture country_names -%}
+            {%- for country in localization.available_countries -%}
+              {{ country.name }} ({{ country.currency.iso_code }}&nbsp;{{ country.currency.symbol }})
+              {%- unless forloop.last -%}|{%- endunless -%}
+            {%- endfor -%}
+          {%- endcapture -%}
 
           {%- liquid
             assign country_values = country_values | split: '|'
@@ -191,22 +196,13 @@
     </script>
   {%- endif -%}
 
-<script>
-  document.getElementById('{{ id }}').addEventListener('change', (evt) => {
-    const input = evt.target.closest('.localization__selector').firstElementChild;
-    if (input && input.tagName === 'INPUT') {
-      const selectedCountry = evt.detail ? evt.detail.selectedValue : evt.target.value;
-      
-      // Redirect if USA is selected
-      if (selectedCountry === 'US') {
-        window.location.href = 'https://louloulollipop.com'; 
-        return;
+  <script>
+    document.getElementById('{{ id }}').addEventListener('change', (evt) => {
+      const input = evt.target.closest('.localization__selector').firstElementChild;
+      if (input && input.tagName === 'INPUT') {
+        input.value = evt.detail ? evt.detail.selectedValue : evt.target.value;
+        evt.currentTarget.submit();
       }
-
-      input.value = selectedCountry;
-      evt.currentTarget.submit();
-    }
-  });
-</script>
-
+    });
+  </script>
 {%- endform -%}
