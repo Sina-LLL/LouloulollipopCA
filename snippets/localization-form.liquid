@@ -84,8 +84,8 @@
 
     {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
       {%- capture language_values -%}
-        {%- for language in localization.available_languages -%}
-          {{- language.iso_code -}}
+       {% for locale in localization.available_locales %}
+  {{ locale.iso_code }}
           {%- unless forloop.last -%}|{%- endunless -%}
         {%- endfor -%}
       {%- endcapture -%}
