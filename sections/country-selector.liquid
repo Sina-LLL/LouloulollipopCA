@@ -26,8 +26,7 @@
     {% if popular_countries -%}
       {%- for country in popular_countries -%}
         <span class="country-option" data-popular>
-          <span class="country-option__name">{{ country.name }}</span> 
-<!-- <span class="country-option__currency">({{ country.currency.iso_code }}&nbsp;{{ country.currency.symbol }})</span> -->
+          <span class="country-option__name">{{ country.name }}</span> <span class="country-option__currency">({{ country.currency.iso_code }}&nbsp;{{ country.currency.symbol }})</span>
         </span>|
       {%- endfor -%}
     {%- endif -%}
@@ -38,8 +37,7 @@
         endif
       -%}
       <span class="country-option">
-        <span class="country-option__name">{{ country.name }}</span> 
-        <!-- <span class="country-option__currency">({{ country.currency.iso_code }}&nbsp;{{ country.currency.symbol }})</span> -->
+        <span class="country-option__name">{{ country.name }}</span> <span class="country-option__currency">({{ country.currency.iso_code }}&nbsp;{{ country.currency.symbol }})</span>
       </span>|
     {%- endfor -%}
   {%- endcapture -%}
