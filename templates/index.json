@@ -232,9 +232,9 @@
         "text_block_pmbEg6": {
           "type": "text_block",
           "settings": {
-            "enable_media": true,
-            "title": "Value Props 1",
-            "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
+            "enable_media": false,
+            "title": "Made by Moms, Loved by Parents Everywhere",
+            "text": "<p>Made by twin sisters and self-proclaimed picky moms who get it, our products are real-life tested to stand up to anything life - and kids -  throw at ’em.</p>",
             "button_label": "",
             "link": ""
           }
@@ -242,9 +242,9 @@
         "text_block_tFgzTX": {
           "type": "text_block",
           "settings": {
-            "enable_media": true,
-            "title": "Value Props 2",
-            "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
+            "enable_media": false,
+            "title": "Helping Families Hit the Big (and Small) Milestones Since 2015",
+            "text": "<p>From first smiles to first foods, we’ve been there for the baby moments you’ll never forget—and the parenting ones you wish you could (IYKYK). From teething to sleep regressions and everything in between, we’re here to make it all a little easier.</p>",
             "button_label": "",
             "link": ""
           }
@@ -252,9 +252,9 @@
         "text_block_EgmCLD": {
           "type": "text_block",
           "settings": {
-            "enable_media": true,
-            "title": "Value Props 3",
-            "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
+            "enable_media": false,
+            "title": "Safe for Baby, Approved by Grown-Ups",
+            "text": "<p>We only use premium, non-toxic, safety-tested materials—like buttery soft TENCEL™ Lyocell and 100% food-grade silicone—so you can stress less, snuggle more, and actually enjoy the messy magic of parenthood.</p>",
             "button_label": "",
             "link": ""
           }
@@ -267,7 +267,7 @@
       ],
       "settings": {
         "title": "",
-        "media_aspect_ratio": "s",
+        "media_aspect_ratio": "1",
         "media_width": 100,
         "text_alignment": "center",
         "button_style": "primary",
@@ -443,6 +443,15 @@
     "logo_list_ywatnw": {
       "type": "logo-list",
       "blocks": {
+        "logo_FxPmVy": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/ICON-SM-6.svg",
+            "image_width": 80,
+            "link": "",
+            "title": ""
+          }
+        },
         "logo_tawCLk": {
           "type": "logo",
           "settings": {
@@ -469,12 +478,23 @@
             "link": "https://www.oeko-tex.com/en/",
             "title": ""
           }
+        },
+        "logo_cNXMbY": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/ICON-SM-16.svg",
+            "image_width": 80,
+            "link": "",
+            "title": "Phthalate Free"
+          }
         }
       },
       "block_order": [
+        "logo_FxPmVy",
         "logo_tawCLk",
         "logo_D6VaH9",
-        "logo_Yg37w8"
+        "logo_Yg37w8",
+        "logo_cNXMbY"
       ],
       "settings": {
         "title": "",
