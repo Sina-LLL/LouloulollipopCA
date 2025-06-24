@@ -2044,17 +2044,18 @@ const MainNavigation = class extends HTMLElement {
     });
 
     // event: toggle third tier
-        document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('.navigation__tier-2 > .navigation__item > .navigation__children-toggle').forEach(toggle => {
         const parentItem = toggle.parentElement;
         const submenu = toggle.nextElementSibling;
     
         if (submenu) {
-          parentItem.classList.add('navigation__item--open');
-          submenu.style.height = `${submenu.firstElementChild.clientHeight}px`;
+          parentItem.classList.remove('navigation__item--open');
+          submenu.style.height = ''; // clear any preset height
         }
       });
     });
+
     
     theme.addDelegateEventListener(this.mobileDrawer, 'click', '.navigation__tier-2 > .navigation__item > .navigation__children-toggle', (evt, delEl) => {
       evt.preventDefault();
