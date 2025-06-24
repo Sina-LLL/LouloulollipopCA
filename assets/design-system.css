@@ -758,3 +758,9 @@ label.filter-group__item.filter-group__item--active:before{
 .bundle-product-title{
   font-size: 1.25rem;
 }
+
+
+/* Weglot */
+.weglot-container.wg-default{
+  display: none;
+}
