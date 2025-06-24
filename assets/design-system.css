@@ -347,6 +347,7 @@ li.slider__item.is-active {
 .opt-label.opt-label--image.is-active .sold-out-line{
   background-color:#6A8B95;
 }
+
 .swatch-style-icon_square .option-selector .opt-label--image .sold-out-line{
   background-color:#D9E1E4;
 }
@@ -356,6 +357,9 @@ li.slider__item.is-active {
 .swatch-style-icon_square .option-selector .opt-label--image:after{
   border-radius:4px;
   border:2px solid #D9E1E4;
+}
+.sold-out .theme-img{
+  opacity: 30%;
 }
 .price-currency{
   display:inline-block;
