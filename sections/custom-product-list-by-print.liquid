@@ -11,7 +11,6 @@
   endif
 -%}
 {% if swatch_collection.products.size > 3 %}
-
 <div class="section-id-{{ section.id }} collection-slider-row {% if section.settings.color_scheme != 'default' %}use-color-scheme use-color-scheme--{{ section.settings.color_scheme }}{% endif %}">
   <div class="container{% if section.settings.full_width %} container--no-max{% endif %}">
     <div class="hometitle">
@@ -31,8 +30,7 @@
 
     <div class="collection-listing fade-in-up{% if section.settings.enable_carousel %} slider {% if section.settings.full_width %}slider--edge-peek{% endif %} slider--mobile-container-pad slider--no-scrollbar{% endif %}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
       <div class="product-grid product-grid--per-row-{{ section.settings.grid }} product-grid--per-row-mob-{{ settings.prod_thumb_mob_per_row }}{% if section.settings.enable_carousel %} slider__grid product-grid--carousel{% endif %}">
-       
-        {% for product in swatch_collection.products %}
+        % for product in swatch_collection.products %}
           {% if section.settings.enable_carousel %}
             <div class="slider__item">
           {% endif %}
@@ -47,7 +45,6 @@
           {% if section.settings.enable_carousel %}
             </div>
           {% endif %}
-        {% endfor %}
       </div>
     </div>
 
@@ -73,7 +70,8 @@
     </div>
   {% endif %}
 </div>
-{% endif %}
+  {% endif %}
+
 
 
 {% schema %}
