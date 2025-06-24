@@ -366,7 +366,7 @@ li.slider__item.is-active {
   border-color:#D9E1E4;
 }
 .opt-label.opt-label--image.is-active .opt-label--image.sold-out:hover .sold-out-line{
-  background-color:#D9E1E4;
+  background-color:#6A8B95;
 }
 .sold-out .theme-img{
   opacity: 30%;
