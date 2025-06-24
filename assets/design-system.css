@@ -361,6 +361,9 @@ li.slider__item.is-active {
   border-radius:4px;
   border:2px solid #D9E1E4;
 }
+.swatch-style-icon_square .option-selector .opt-label--image.sold-out:hover:after {
+  border-color:#D9E1E4;
+}
 .sold-out .theme-img{
   opacity: 30%;
 }
