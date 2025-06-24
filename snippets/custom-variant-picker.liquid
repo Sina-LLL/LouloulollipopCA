@@ -51,7 +51,8 @@
                {% if sibling.handle == product.handle %}data-selected="true"{% endif %}>
              
               <div class="overflow_hidden">
-               <div class="opt-label__media media">                
+               <div class="opt-label__media media">     
+                 <div class="sold-out-line"></div>
                   {% if sibling.metafields.custom.swatch.value.image.value != blank %}
                   {%- render 'image',
                     image: sibling.metafields.custom.swatch.value.image.value,
