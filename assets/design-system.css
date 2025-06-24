@@ -275,6 +275,16 @@ a.opt-label.opt-label--image .opt-label__media.media, a.opt-label.opt-label--ima
 .variant-picker{
   
 }
+.sold-out-line {
+    height: 84.85px;
+    position: absolute;
+    width: 3px;
+    background-color: red;
+    z-index: 9;
+    transform: translate3d(-50%, -50%, 0) rotate(45deg);
+    top: 50%;
+    left: 50%;
+}
 .product-form .input-row, .buy-buttons-row{
   margin:12px 0;
 }
