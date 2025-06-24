@@ -2011,7 +2011,7 @@ const MainNavigation = class extends HTMLElement {
       evt.preventDefault();
 
       // set text in header
-      // delEl.parentElement.classList.add('navigation__item--open');
+      delEl.parentElement.classList.add('navigation__item--open');
       this.mobileDrawer.classList.add('mobile-navigation-drawer--child-open');
       this.mobileDrawer.querySelector('.mobile-nav-title').innerText = delEl.previousElementSibling.innerText;
 
