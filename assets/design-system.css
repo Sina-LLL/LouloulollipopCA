@@ -815,7 +815,7 @@ label.filter-group__item.filter-group__item--active:before{
   border-radius: 0 0px 12px 12px;
   background-color: rgb(var(--btn-bg-color)) !important;
   border: none !important;
-  padding: 8px;
+  padding: 0 12px 12px 12px;
 }
 .wg-drop.country-selector li a{
   color:white;
