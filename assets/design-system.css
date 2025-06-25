@@ -817,6 +817,9 @@ label.filter-group__item.filter-group__item--active:before{
 .weglot_switcher.underline_edge a{
   color:white;
 }
+.weglot_switcher.underline_edge .underline{
+  background-color: white;
+}
 .wg-drop.country-selector .wgcurrent{
   border: none !important;
   background:none;
