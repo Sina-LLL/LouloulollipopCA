@@ -805,8 +805,11 @@ label.filter-group__item.filter-group__item--active:before{
 
 /* Weglot */
 .wg-drop.country-selector .wgcurrent{
-  border: none;
+  border: none !important;
   background:none;
+}
+.wg-drop.country-selector .wgcurrent a{
+  color:white !important;
 }
 /* Columns */
 h4.text-column__title {
