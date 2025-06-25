@@ -803,8 +803,11 @@ label.filter-group__item.filter-group__item--active:before{
 }
 
 
-
-
+/* Weglot */
+.wgcurrent{
+  border: none;
+  background:none;
+}
 /* Columns */
 h4.text-column__title {
     font-size: 20px;
