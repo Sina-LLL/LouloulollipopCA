@@ -804,7 +804,7 @@ label.filter-group__item.filter-group__item--active:before{
 
 
 /* Weglot */
-.wgcurrent{
+.wg-drop.country-selector .wgcurrent{
   border: none;
   background:none;
 }
