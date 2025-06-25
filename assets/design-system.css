@@ -814,6 +814,9 @@ label.filter-group__item.filter-group__item--active:before{
 
 
 /* Weglot */
+.weglot_switcher.underline_edge a{
+  color:white;
+}
 .wg-drop.country-selector .wgcurrent{
   border: none !important;
   background:none;
