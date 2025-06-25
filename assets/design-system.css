@@ -808,7 +808,7 @@ label.filter-group__item.filter-group__item--active:before{
   border: none !important;
   background:none;
 }
-.wg-drop.country-selector .wgcurrent a{
+.wg-drop.country-selector .wgcurrent a,.wg-drop.country-selector .wgcurrent:after{
   color:white !important;
 }
 /* Columns */
