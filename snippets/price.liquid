@@ -67,7 +67,9 @@
   </div>
 
   {% if show_labels %}
-    {% if settings.prod_sold_out_show and product.available == false %}
+    {% if settings.prod_sale_show and variant.compare_at_price > variant.price and product.available == false%}
+      <span class="price-label price-label--sold-out">{{ 'products.product.sold_out' | t }}</span>
+    {% elsif settings.prod_sold_out_show and product.available == false %}
       <span class="price-label price-label--sold-out">{{ 'products.product.sold_out' | t }}</span>
     {% elsif settings.prod_pre_order_label_show and product.template_suffix contains 'preorder' %}
       <span class="price-label price-label--preorder">{{ 'products.product.preorder' | t }}</span>
