@@ -815,10 +815,10 @@ label.filter-group__item.filter-group__item--active:before{
 
 /* Weglot */
 .weglot_switcher.underline_edge a{
-  color:white;
+  color:white !important;
 }
 .weglot_switcher.underline_edge .underline{
-  background-color: white;
+  background-color: white !important;
 }
 .wg-drop.country-selector .wgcurrent{
   border: none !important;
