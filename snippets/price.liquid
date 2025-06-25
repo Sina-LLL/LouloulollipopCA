@@ -14,9 +14,7 @@
   assign variant = current_variant | default: product.variants | sort: 'price' | first
 
   if for_variant_picker
-    if current_variant == false
-      assign available = true
-    endif
+    assign available = current_variant.available | default: true
   else
     assign for_variant_picker = false
     assign available = variant.available | default: false
