@@ -820,7 +820,7 @@ label.filter-group__item.filter-group__item--active:before{
 .weglot_switcher.underline_edge .underline{
   background-color: white !important;
 }
-.wg-drop.country-selector .wgcurrent{
+/* .wg-drop.country-selector .wgcurrent{
   border: none !important;
   background:none;
 }
@@ -835,7 +835,7 @@ label.filter-group__item.filter-group__item--active:before{
 }
 .wg-drop.country-selector li a{
   color:white;
-}
+} */
 .mobile-navigation-drawer a#weglot-language-en {
     color: #1d1d1d !important;
     font-weight: 600;
