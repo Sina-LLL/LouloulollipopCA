@@ -840,7 +840,8 @@ label.filter-group__item.filter-group__item--active:before{
     color: #1d1d1d !important;
     font-weight: 600;
     /* font-size: 1em; */
-    padding-left: 20px;
+    margin-left: 20px;
+    padding-left: 0;
 }
 /* Columns */
 h4.text-column__title {
