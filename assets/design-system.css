@@ -823,6 +823,9 @@ label.filter-group__item.filter-group__item--active:before{
 .announcement-bar__right .underline{
   background-color:white;
 }
+.mobile-navigation-drawer .language-option{
+  font-size: 12px;
+}
 /* .wg-drop.country-selector .wgcurrent{
   border: none !important;
   background:none;
