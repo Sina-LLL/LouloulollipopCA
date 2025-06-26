@@ -827,7 +827,7 @@ label.filter-group__item.filter-group__item--active:before{
   background-color:white !important;
   height: 2px !important;
 }
-.mobile-navigation-drawer .language-option{
+.announcement-bar__right .language-option{
   font-size: 12px !important;
   line-height:8px !important;
 }
