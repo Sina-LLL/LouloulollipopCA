@@ -818,13 +818,15 @@ label.filter-group__item.filter-group__item--active:before{
   margin-left:20px;
 }
 .announcement-bar__right a#weglot-language-en{
-  color:white;
+  color:white !important;
 }
 .announcement-bar__right .underline{
-  background-color:white;
+  background-color:white !important;
+  height: 2px !important;
 }
 .mobile-navigation-drawer .language-option{
-  font-size: 12px;
+  font-size: 12px !important;
+  line-height:8px !important;
 }
 /* .wg-drop.country-selector .wgcurrent{
   border: none !important;
