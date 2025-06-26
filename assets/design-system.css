@@ -814,6 +814,9 @@ label.filter-group__item.filter-group__item--active:before{
 
 
 /* Weglot */
+.mobile-navigation-drawer .weglot-container{
+  margin-left:20px;
+}
 
 /* .wg-drop.country-selector .wgcurrent{
   border: none !important;
