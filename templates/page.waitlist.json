@@ -1,1 +1,75 @@
-{"sections":{"custom_content_Hpam3z":{"type":"custom-content","blocks":{"image_cgyxiA":{"type":"image","disabled":true,"settings":{"width":"full","height":"adapt","height_desktop":600,"height_mobile":500,"subheading":"Subheading","title":"Tell your story","text":"<p>Pair text with an image to tell a story<\/p>","enlarge_text":false,"button_label":"","button_style":"primary","image_link":"","text_alignment":"center center","mobile_overlay_under":false,"overlay_style":"shadow"}},"text_QgeKKF":{"type":"text","settings":{"width":"half","subheading":"","title":"","text":"<p>Need to make a return? We’ll help you get started!<br\/>Just have your order number and shipping zip code in hand.<\/p>","button_label":"Get Started","button_link":"https:\/\/returns.louloulollipop.ca","button_style":"primary","text_alignment":"center"}}},"block_order":["image_cgyxiA","text_QgeKKF"],"disabled":true,"settings":{"alignment":"middle"}},"main":{"type":"main-page","disabled":true,"settings":{"show_page_title":true,"full_width":false}},"custom_liquid_8dUNDj":{"type":"custom-liquid","settings":{"full_width":true,"show_space":true,"code":"<div style=\"max-width:700px; margin:auto;\" class=\"klaviyo-form-TwhweG\"><\/div>\n<div class=\"klaviyo-form-VVpG8i\"><\/div>"}}},"order":["custom_content_Hpam3z","main","custom_liquid_8dUNDj"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_page_title": true,
+        "full_width": false
+      }
+    },
+    "image_with_text_3MdNQ4": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_zRktNt": {
+          "type": "heading",
+          "settings": {
+            "title": "Enter to Win a $250 Loulou Lollipop Gift Card",
+            "use_h1": false
+          }
+        },
+        "text_hiWg9r": {
+          "type": "text",
+          "settings": {
+            "text": "<p>When you sign up for our newsletter, plus get 10% OFF your first purchase</p>",
+            "enlarge_text": false
+          }
+        },
+        "button_PcL4Fm": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button text",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_zRktNt",
+        "text_hiWg9r",
+        "button_PcL4Fm"
+      ],
+      "name": "Image with text",
+      "settings": {
+        "image": "shopify://shop_images/Giveaway.png",
+        "image_width": 700,
+        "image_link": "",
+        "image_position": "left",
+        "text_alignment": "left",
+        "color_scheme": "default"
+      }
+    },
+    "custom_liquid_8dUNDj": {
+      "type": "custom-liquid",
+      "settings": {
+        "full_width": true,
+        "show_space": true,
+        "code": "<div style=\"max-width:700px; margin:auto;\" class=\"klaviyo-form-TwhweG\"></div>\n<div class=\"klaviyo-form-VVpG8i\"></div>\n<div class=\"klaviyo-form-RTB8z4\"></div>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_3MdNQ4",
+    "custom_liquid_8dUNDj"
+  ]
+}
