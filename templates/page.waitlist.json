@@ -61,9 +61,9 @@
     "custom_liquid_8dUNDj": {
       "type": "custom-liquid",
       "settings": {
-        "full_width": true,
+        "full_width": false,
         "show_space": true,
-        "code": "<div style=\"max-width:700px; margin:auto;\" class=\"klaviyo-form-TwhweG\"></div>\n<div class=\"klaviyo-form-VVpG8i\"></div>\n<div class=\"klaviyo-form-RTB8z4\"></div>"
+        "code": "<div style=\"max-width:700px; margin:auto;\" class=\"klaviyo-form-TwhweG\"></div>\n\n<div class=\"klaviyo-form-RTB8z4\"></div>"
       }
     }
   },
