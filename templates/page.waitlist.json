@@ -48,6 +48,7 @@
         "text_hiWg9r",
         "button_PcL4Fm"
       ],
+      "disabled": true,
       "name": "Image with text",
       "settings": {
         "image": "shopify://shop_images/Giveaway.png",
