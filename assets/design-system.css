@@ -817,7 +817,7 @@ label.filter-group__item.filter-group__item--active:before{
 .mobile-navigation-drawer .weglot-container{
   margin-left:20px;
 }
-.announcement-bar__right a#weglot-language-en{
+.announcement-bar__right .language-option a{
   color:white !important;
 }
 .announcement-bar__right .language-option:hover a{
