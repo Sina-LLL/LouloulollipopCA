@@ -822,6 +822,7 @@ label.filter-group__item.filter-group__item--active:before{
 }
 .announcement-bar__right .language-option:hover a{
   color:white !important;
+  opacity: 0.6;
 }
 .announcement-bar__right .underline{
   background-color:white !important;
