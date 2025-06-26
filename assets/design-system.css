@@ -820,6 +820,9 @@ label.filter-group__item.filter-group__item--active:before{
 .announcement-bar__right a#weglot-language-en{
   color:white !important;
 }
+.announcement-bar__right a#weglot-language-en:hover{
+  color:white !important;
+}
 .announcement-bar__right .underline{
   background-color:white !important;
   height: 2px !important;
