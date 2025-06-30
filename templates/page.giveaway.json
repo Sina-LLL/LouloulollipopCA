@@ -1,0 +1,76 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_page_title": true,
+        "full_width": false
+      }
+    },
+    "image_with_text_3MdNQ4": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_zRktNt": {
+          "type": "heading",
+          "settings": {
+            "title": "Enter to Win a $250 Loulou Lollipop Gift Card",
+            "use_h1": false
+          }
+        },
+        "text_hiWg9r": {
+          "type": "text",
+          "settings": {
+            "text": "<p>When you sign up for our newsletter, plus get 10% OFF your first purchase</p>",
+            "enlarge_text": false
+          }
+        },
+        "button_PcL4Fm": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button text",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_zRktNt",
+        "text_hiWg9r",
+        "button_PcL4Fm"
+      ],
+      "disabled": true,
+      "name": "Image with text",
+      "settings": {
+        "image": "shopify://shop_images/Giveaway.png",
+        "image_width": 700,
+        "image_link": "",
+        "image_position": "left",
+        "text_alignment": "left",
+        "color_scheme": "default"
+      }
+    },
+    "custom_liquid_8dUNDj": {
+      "type": "custom-liquid",
+      "settings": {
+        "full_width": false,
+        "show_space": true,
+        "code": "<div style=\"max-width:1000px; margin:auto;\"class=\"klaviyo-form-RTB8z4\"></div>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_3MdNQ4",
+    "custom_liquid_8dUNDj"
+  ]
+}
