@@ -433,6 +433,10 @@ label.opt-label.opt-label--btn.btn.relative.text-center:hover{
   display:flex;
   gap:16px;
 }
+.add-to-cart-wrapper .klaviyo-bis-button-container{
+  margin-bottom:0;
+  width: 100%;
+}
 .quantity-wrapper{
   display: flex;
   border: 1px solid #D9E1E4;
