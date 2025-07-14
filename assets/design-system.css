@@ -433,7 +433,7 @@ label.opt-label.opt-label--btn.btn.relative.text-center:hover{
   display:flex;
   gap:16px;
 }
-.add-to-cart-wrapper .klaviyo-bis-button-container{
+.add-to-cart-wrapper #klaviyo-bis-button-container{
   margin-bottom:0;
   width: 100%;
 }
