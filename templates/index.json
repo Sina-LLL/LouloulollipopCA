@@ -9,36 +9,6 @@
  */
 {
   "sections": {
-    "rich_text_ttwQ7E": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_NFDN4D": {
-          "type": "heading",
-          "settings": {
-            "title": "Hi American Friends",
-            "use_h1": false
-          }
-        },
-        "text_yEUYyg": {
-          "type": "text",
-          "settings": {
-            "text": "<p>As we adapt to new tariff rates and do our best not to raise prices for you, we've had to pause shipping some of our products to the US. We hope to have all your faves available again shortly. Please <a href=\"/pages/contact-us\" title=\"Contact Us\">reach out</a> if you need anything in the meantime. Thanks for your support!</p>",
-            "enlarge_text": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_NFDN4D",
-        "text_yEUYyg"
-      ],
-      "disabled": true,
-      "settings": {
-        "height": "small",
-        "text_alignment": "center",
-        "full_width": false,
-        "color_scheme": "2"
-      }
-    },
     "16359276425da8ce46": {
       "type": "slideshow",
       "blocks": {
@@ -762,7 +732,6 @@
     }
   },
   "order": [
-    "rich_text_ttwQ7E",
     "16359276425da8ce46",
     "logo_list_kYmwNX",
     "custom_product_highlight_ECrHhc",
