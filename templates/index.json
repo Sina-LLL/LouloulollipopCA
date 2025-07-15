@@ -182,6 +182,22 @@
     "featured_collection_RcGTat": {
       "type": "featured-collection",
       "settings": {
+        "title": "Shop Canada",
+        "text": "<p>From maple leaves to mountaintops, bring iconic Canadian charm to your little one’s wardrobe.</p>",
+        "collection": "canada",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 5,
+        "rows": 2,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": true,
+        "text_alignment": "start"
+      }
+    },
+    "featured_collection_qVMw3h": {
+      "type": "featured-collection",
+      "settings": {
         "title": "Shop Our Bestsellers",
         "text": "",
         "collection": "best-sellers",
@@ -736,6 +752,7 @@
     "logo_list_kYmwNX",
     "custom_product_highlight_ECrHhc",
     "featured_collection_RcGTat",
+    "featured_collection_qVMw3h",
     "multi_column_KCzHEY",
     "featured_collection_K3tJdQ",
     "collection_list_XEbpaa",
