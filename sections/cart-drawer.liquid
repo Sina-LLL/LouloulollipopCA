@@ -828,6 +828,14 @@
             {%- endif -%}
 
             {% if section.settings.show_order_note %}
+              
+          <label style="display: block; margin-top: 1rem;">
+            <input type="checkbox" id="GiftCheckbox" />
+              Is this a gift?
+          </label>
+
+              
+
               <toggle-target id="CartDrawerNoteToggle" role="button" tabindex="0" class="toggle-target-toggler--is-hidden link underline" data-toggle-target=".cart-drawer__note">{{ 'cart.note.label' | t }}</toggle-target>
               <div class="cart-drawer__note toggle-target toggle-target--hidden">
                 <cart-note class="block toggle-target-container">
