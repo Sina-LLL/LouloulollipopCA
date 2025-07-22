@@ -65,9 +65,8 @@
           <span class="price-value">{{ price_parts[0] }}</span>
           <div class="price-currency">{{ price_parts[1] }}</div>
         {%- endif -%}
-        {% if product.tags contains "sale_on_sale" %} {{ sale_on_sale }} {% endif %}
     </span>
-    
+    {% if product.tags contains "sale_on_sale" %} <span>{{ sale_on_sale }} </span>{% endif %}
   </div>
 
   {% if show_labels %}
