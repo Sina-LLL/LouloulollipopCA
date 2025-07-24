@@ -884,7 +884,7 @@ cart-form .page-header:not(.page-header--with-background){
 
 .custom-product-highlight__image{
   position: sticky;
-  top: 0;
+  top: 30px;
   margin-bottom: 0;
 }
 }
