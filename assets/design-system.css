@@ -880,8 +880,8 @@ cart-form .page-header:not(.page-header--with-background){
 /* Custom product highlight section */
 .custom-product-highlight__image-container{
   position: relative;
-  height: fit-content;
 }
+
 .custom-product-highlight__image{
   position: sticky;
   top: 0;
