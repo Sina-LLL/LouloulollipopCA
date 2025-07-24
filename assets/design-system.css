@@ -888,3 +888,16 @@ cart-form .page-header:not(.page-header--with-background){
   margin-bottom: 0;
 }
 
+/* Carousel edits */
+.slider--no-max{
+  padding-left: var(--container-pad-x);
+}
+.slider--no-max .container.container--no-max, .slider--no-max .collection-listing.fade-in-up.slider.slider--edge-peek.cc-animate-init.cc-animate-in.is-grabbable{
+  padding-left:0;
+}
+.slider--no-max .carousel.block.collection-slider{
+  padding-left: var(--container-pad-x);
+}
+.slider--no-max .slider--edge-peek{
+  padding-left:0;
+}
