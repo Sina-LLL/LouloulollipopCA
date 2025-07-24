@@ -901,3 +901,7 @@ cart-form .page-header:not(.page-header--with-background){
 .slider--no-max .slider--edge-peek{
   padding-left:0;
 }
+@media (max-width: 768px) {
+  .slider--no-max .carousel.collection-slider{
+     padding-left:0; 
+  }
