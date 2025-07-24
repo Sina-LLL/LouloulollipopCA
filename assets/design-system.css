@@ -878,7 +878,7 @@ cart-form .page-header:not(.page-header--with-background){
 }
 
 /* Custom product highlight section */
-.custom-product-highlight__container{
+.custom-product-highlight__image-container{
   position: relative;
   height: fit-content;
 }
