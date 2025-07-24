@@ -2,7 +2,7 @@
   <div class="container container--no-max">
     <div class="flexible-layout flexible-layout--variable-columns valign-middle">
       <div class="column text-column fade-in-up {% if section.settings.order %}column--order-push-desktop{% endif %}" {%- render 'animation-attrs', attrs: animation_attrs -%}>
-        <div class="text-column__image lightly-spaced-row">  
+        <div class="text-column__image lightly-spaced-row custom-product-highlight__image">  
         {%- if section.settings.image != blank -%}
             {%- render 'image' with section.settings.image, sizes: sizes, widths: widths, size_cols_desktop: size_cols_desktop, custom_aspect_ratio: 1-%}
         {%- else -%}
