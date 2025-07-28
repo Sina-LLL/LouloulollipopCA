@@ -32,7 +32,9 @@
               if section.settings.enable_carousel
                 echo '<div class="slider__item">'
               endif
-              render 'onboarding-product-block', forloop: forloop
+              unless product.tags contains "hidden"
+                render 'onboarding-product-block', forloop: forloop
+              endunless
               if section.settings.enable_carousel
                 echo '</div>'
               endif
