@@ -319,12 +319,12 @@
               endif
 
               for product in collection.products
-                unless product.tags contains "hidden"
+                unless product.tags contains 'hidden'
                   assign prioritised_loading = false
                   if forloop.index0 < section.settings.grid
                     assign prioritised_loading = true
                   endif
-                    render 'product-block', product: product, custom_aspect_ratio: chosen_aspect_ratio, animate: true, prioritised_loading: prioritised_loading
+                  render 'product-block', product: product, custom_aspect_ratio: chosen_aspect_ratio, animate: true, prioritised_loading: prioritised_loading
                 endunless 
             endfor
             -%}
