@@ -69,15 +69,17 @@
             endif
 
             for product in collection.products limit: product_limit
-              if section.settings.enable_carousel
-                echo '<div class="slider__item">'
-              endif
               unless product.tags contains "hidden"
+                if section.settings.enable_carousel
+                  echo '<div class="slider__item">'
+                endif
+              
                 render 'product-block', product: product, collection: collection, custom_aspect_ratio: chosen_aspect_ratio, no_swiping: section.settings.enable_carousel, no_quick_buy_markup: section.settings.enable_carousel
+              
+                if section.settings.enable_carousel
+                  echo '</div>'
+                endif
               endunless
-              if section.settings.enable_carousel
-                echo '</div>'
-              endif
             endfor
           endif
         -%}
