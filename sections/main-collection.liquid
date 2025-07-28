@@ -1,4 +1,4 @@
-<div data-section-id="{{ section.id }}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
+<div data-section-id="{{ section.id }}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%} class="TEST">
 {% paginate collection.products by section.settings.coll_num_per_page_int %}
 
 {%- liquid
