@@ -16,6 +16,8 @@ Parameters:
     product: product
   %}
 {%- endcomment -%}
+{%- assign bypass_hidden_filter = false -%}
+
 {%- if request.url contains 'preview=loyalty' -%}
   {%- assign bypass_hidden_filter = true -%}
 {%- endif -%}
