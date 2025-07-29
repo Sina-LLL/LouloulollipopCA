@@ -17,9 +17,9 @@ Parameters:
   %}
 {%- endcomment -%}
 {%- assign bypass_hidden_filter = false -%}
- {% if page.url contains '?view=alternate' %}
-      {%- assign bypass_hidden_filter = true  -%}
- {%- endif -%}
+{%- if request.params.view == 'alternate' -%}
+  {%- assign bypass_hidden_filter = true -%}
+{%- endif -%}
 
 
 
