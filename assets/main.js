@@ -4197,3 +4197,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+  document.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('preview') === 'loyalty') {
+      document.querySelectorAll('.hidden-product').forEach(el => {
+        el.style.display = 'block'; // show the product
+      });
+    }
+  });
+  
