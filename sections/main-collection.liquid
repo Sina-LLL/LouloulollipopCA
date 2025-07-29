@@ -1,3 +1,11 @@
+{%- comment -%}
+  Option 2: Bypass if URL contains ?preview=true
+{%- endcomment -%}
+{%- if request.url contains 'preview=loyalty' -%}
+  {%- assign bypass_hidden_filter = true -%}
+{%- endif -%}
+
+
 <div data-section-id="{{ section.id }}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%} class="TEST">
 {% paginate collection.products by section.settings.coll_num_per_page_int %}
 
@@ -319,7 +327,7 @@
               endif
 
               for product in collection.products
-                unless product.tags contains 'hidden'
+                unless product.tags contains 'hidden' and bypass_hidden_filter == false
                   assign prioritised_loading = false
                   if forloop.index0 < section.settings.grid
                     assign prioritised_loading = true
