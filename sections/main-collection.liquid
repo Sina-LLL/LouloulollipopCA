@@ -1,11 +1,7 @@
 {%- comment -%}
   Option 2: Bypass if URL contains ?preview=true
 {%- endcomment -%}
-{%- assign bypass_hidden_filter = false -%}
-
-{%- if request.url contains 'preview=loyalty' -%}
-  {%- assign bypass_hidden_filter = true -%}
-{%- endif -%}
+<!--  -->
 
 
 <div data-section-id="{{ section.id }}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%} class="TEST">
