@@ -17,9 +17,10 @@ Parameters:
   %}
 {%- endcomment -%}
 {%- assign bypass_hidden_filter = false -%}
-{%- if request.params.preview == 'loyalty' -%}
-  {%- assign bypass_hidden_filter = true -%}
-{%- endif -%}
+ {% if page.url contains '?view=alternate' %}
+      {%- assign bypass_hidden_filter = true  -%}
+ {%- endif -%}
+
 
 
 {%- liquid
