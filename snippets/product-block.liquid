@@ -16,7 +16,10 @@ Parameters:
     product: product
   %}
 {%- endcomment -%}
-{%- assign bypass_hidden_filter = request.params.preview == 'loyalty' -%}
+{%- assign bypass_hidden_filter = false -%}
+{%- if request.params.preview == 'loyalty' -%}
+  {%- assign bypass_hidden_filter = true -%}
+{%- endif -%}
 
 
 {%- liquid
