@@ -16,10 +16,7 @@ Parameters:
     product: product
   %}
 {%- endcomment -%}
-{%- assign bypass_hidden_filter = false -%}
-{%- if request.params.view == 'alternate' -%}
-  {%- assign bypass_hidden_filter = true -%}
-{%- endif -%}
+
 
 
 
