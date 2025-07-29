@@ -16,6 +16,10 @@ Parameters:
     product: product
   %}
 {%- endcomment -%}
+{%- if request.url contains 'preview=loyalty' -%}
+  {%- assign bypass_hidden_filter = true -%}
+{%- endif -%}
+
 {%- liquid
   if collection and settings.prod_thumb_url_within_coll and product.collections contains collection
     assign product_url = product.url | within: collection
@@ -69,7 +73,7 @@ Parameters:
     assign custom_aspect_ratio = custom_aspect_ratio | at_least: 0.6
   endif
 -%}
-{% unless product.tags contains "hidden" %}
+{% unless product.tags contains "hidden" and bypass_hidden_filter = true%}
   <product-block class="product-block{% if compact %} product-block--compact{% endif %}{% if card_layout == 'landscape' %} product-block--landscape{% endif %}" data-product-id="{{ product.id }}">
     <div class="block-inner"{% if animate %}{%- render 'animation-attrs', attrs: 'data-cc-animate', always: true -%}{% endif %}>
       <div class="block-inner-inner">
