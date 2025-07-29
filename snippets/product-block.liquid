@@ -73,8 +73,8 @@ Parameters:
     assign custom_aspect_ratio = custom_aspect_ratio | at_least: 0.6
   endif
 -%}
-{% unless product.tags contains "hidden" and bypass_hidden_filter == false %}
-  <product-block class="product-block{% if product.tags contains 'hidden' %}hidden-product{% endif %} {% if compact %} product-block--compact{% endif %}{% if card_layout == 'landscape' %} product-block--landscape{% endif %}" data-product-id="{{ product.id }}">
+{% unless product.tags contains "blaaah" and bypass_hidden_filter == false %}
+  <product-block class="product-block {% if product.tags contains 'hidden' %}hidden-product{% endif %} {% if compact %} product-block--compact{% endif %}{% if card_layout == 'landscape' %} product-block--landscape{% endif %}" data-product-id="{{ product.id }}">
     <div class="block-inner"{% if animate %}{%- render 'animation-attrs', attrs: 'data-cc-animate', always: true -%}{% endif %}>
       <div class="block-inner-inner">
         {% if product.featured_media %}
@@ -402,14 +402,3 @@ Parameters:
     display: none;
   }
 </style>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get('preview') === 'loyalty') {
-      document.querySelectorAll('.hidden-product').forEach(el => {
-        el.style.display = ''; // show the product
-      });
-    }
-  });
-  
-</script>
