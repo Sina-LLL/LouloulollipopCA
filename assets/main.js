@@ -4202,7 +4202,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
-    const hasPreviewAccess = urlParams.get('preview') === 'loyalty';
+    const hasPreviewAccess = urlParams.get('preview') === 'loyalty';  //change this to change the URL ending
 
     // Cookie helpers
     function setCookie(name, value, days) {
