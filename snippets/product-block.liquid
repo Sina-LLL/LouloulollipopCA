@@ -73,7 +73,7 @@ Parameters:
     assign custom_aspect_ratio = custom_aspect_ratio | at_least: 0.6
   endif
 -%}
-{% unless product.tags contains "hidden" and bypass_hidden_filter = true%}
+{% unless product.tags contains "hidden" and bypass_hidden_filter == false %}
   <product-block class="product-block{% if compact %} product-block--compact{% endif %}{% if card_layout == 'landscape' %} product-block--landscape{% endif %}" data-product-id="{{ product.id }}">
     <div class="block-inner"{% if animate %}{%- render 'animation-attrs', attrs: 'data-cc-animate', always: true -%}{% endif %}>
       <div class="block-inner-inner">
