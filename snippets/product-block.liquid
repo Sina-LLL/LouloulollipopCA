@@ -396,3 +396,20 @@ Parameters:
     {%- endif -%}
   </product-block>
 {%- endunless -%}
+
+<style>
+  .hidden-product {
+    display: none;
+  }
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('preview') === 'loyalty') {
+      document.querySelectorAll('.hidden-product').forEach(el => {
+        el.style.display = ''; // show the product
+      });
+    }
+  });
+  
+</script>
