@@ -14,22 +14,6 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
-        "announcement_mCdJxY": {
-          "type": "announcement",
-          "settings": {
-            "text": "Sale on Sale - <strong>Extra 20%</strong> off on sale styles",
-            "show_countdown": false,
-            "hide_on_end": false,
-            "end_date": "",
-            "end_time": "",
-            "number_font": "base",
-            "countdown_separator": "box",
-            "use_custom_colors": false,
-            "bg_color": "#4a4a4a",
-            "bg_gradient": "",
-            "text_color": "#ffffff"
-          }
-        },
         "announcement_4aPW9X": {
           "type": "announcement",
           "disabled": true,
@@ -98,7 +82,6 @@
         }
       },
       "block_order": [
-        "announcement_mCdJxY",
         "announcement_4aPW9X",
         "announcement-1",
         "announcement_3B8XC7",
