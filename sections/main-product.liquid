@@ -451,7 +451,8 @@
                           {{- 'products.variant.no_stock' | t -}}
                         {%- endif -%}
                       </button>
-                    </div><div id="mr-add-to-registry-{{ product.id }}" class="shopify-app-block shopify-app-block--mr-add-to-reg">
+                    </div>
+                    <div id="mr-add-to-registry-{{ product.id }}" class="shopify-app-block shopify-app-block--mr-add-to-reg">
                   <button
                     data-id="btnMrAddtoReg-{{ product.id }}"
                     class="myregistry-add-button button opacity"
@@ -472,7 +473,7 @@
 
                   </button>
           </div>
-
+          
                     {% if enable_dynamic_payment_button %}
                       <div class="product-dynamic-payment-button">
                         <script class="dynamic-payment-button-template" type="text/template">
