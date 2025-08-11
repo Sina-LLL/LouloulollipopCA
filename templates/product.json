@@ -54,7 +54,6 @@
         },
         "advanced_myregistry_functions_add_to_registry_4H4jJ3": {
           "type": "shopify://apps/advanced-myregistry-functions/blocks/add_to_registry/b23862ba-17b6-4df1-a6c8-81ff1fa21101",
-          "disabled": true,
           "settings": {
             "button_type": "shape",
             "its_universal": "icon",
