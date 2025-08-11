@@ -52,6 +52,34 @@
             "show_gift_card_recipient": false
           }
         },
+        "advanced_myregistry_functions_add_to_registry_xEQ3JN": {
+          "type": "shopify://apps/advanced-myregistry-functions/blocks/add_to_registry/b23862ba-17b6-4df1-a6c8-81ff1fa21101",
+          "settings": {
+            "button_type": "shape",
+            "its_universal": "icon",
+            "gift_icon": true,
+            "mr_brand_btn": false,
+            "label": "add_to_reg",
+            "en_custom_label_text": "",
+            "bg_color": "#faf9f6",
+            "text_color": "#4f676e",
+            "border_color": "#4f676e",
+            "bg_color_hover": "#8ea7af",
+            "text_color_hover": "#faf9f6",
+            "border_color_hover": "#4f676e",
+            "width": 100,
+            "horizontal_alignment": "center",
+            "padding_y": 0,
+            "margin_top": 0,
+            "margin_bottom": 0,
+            "margin_left": -1,
+            "margin_right": -1,
+            "is_custom_border_radius": false,
+            "border_radius": 0,
+            "custom_class": "",
+            "custom_css": ""
+          }
+        },
         "divider": {
           "type": "divider",
           "settings": {
@@ -110,6 +138,7 @@
         "price",
         "variant-picker",
         "buy-buttons",
+        "advanced_myregistry_functions_add_to_registry_xEQ3JN",
         "divider",
         "usp_Whm8xh",
         "description",
