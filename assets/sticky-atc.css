@@ -21,6 +21,10 @@
   transition-timing-function: ease;
 }
 
+@media (max-width: 767.98px) {
+  padding-bottom:40px;
+}
+
 .sticky-atc--out,
 .scrolled-to-bottom .sticky-atc {
   visibility: hidden;
