@@ -3,16 +3,16 @@
 {% if product.metafields.custom.mux_video_url %}
     <div class="mux-video-container container container--no-max fully-spaced-row">
       <h4 class="align-center hometitle">Expeerly Reviews</h4>
-      <div>  
+      <div class="flex flex-wrap">  
         {%- for urls in mux_urls -%}
           <div class="mux-video-wrapper">
-              <video controls preload="none">
-                  <source src="{{ urls }}" type="video/mp4">
-                  Your browser does not support the video tag.
-              </video>         
+            <video controls preload="none">
+              <source src="{{ urls }}" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>         
           </div>
-          {% endfor %}
-        </div>
+        {% endfor %}
+      </div>
     </div>
 {% endif %}   
 
