@@ -1,11 +1,15 @@
+{%- assign mux_urls = product.metafields.custom.mux_video_url.value -%}
+
 {% if product.metafields.custom.mux_video_url %}
     <div class="mux-video-container">
         <h2 class="mux-video-title">Expeerly Reviews</h2>
         <div class="mux-video-wrapper">
+           {%- for urls in mux_urls -%}  
             <video controls preload="none">
-                <source src="{{ product.metafields.custom.mux_video_url }}" type="video/mp4">
+                <source src="{{ urls }}" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
+          {% endfor %}
         </div>
     </div>
 {% endif %}   
