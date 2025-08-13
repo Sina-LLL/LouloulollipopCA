@@ -1,9 +1,9 @@
 {%- assign mux_urls = product.metafields.custom.mux_video_url.value -%}
 
 {% if product.metafields.custom.mux_video_url %}
-    <div class="mux-video-container container container--no-max fully-spaced-row">
+    <div class="container container--no-max fully-spaced-row">
       <h4 class="align-center hometitle">Expeerly Reviews</h4>
-      <div class="flex flex-wrap">  
+      <div class="mux-video-container">  
         {%- for urls in mux_urls -%}
           <div class="mux-video-wrapper">
             <video controls preload="metadata">

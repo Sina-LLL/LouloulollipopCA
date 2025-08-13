@@ -950,3 +950,7 @@ cart-form .page-header:not(.page-header--with-background){
 .mux-video-container .flex{
     column-gap: var(--gutter);
 }
+display: grid
+;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
