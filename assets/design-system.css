@@ -918,6 +918,7 @@ cart-form .page-header:not(.page-header--with-background){
   display: grid; 
   width: 100%;
   grid-template-columns: 1fr 1fr;
+  column-gap: var(--gutter);
 }
 
   /* Title styling */
@@ -931,8 +932,6 @@ cart-form .page-header:not(.page-header--with-background){
   /* Wrapper to maintain 9:16 aspect ratio */
 .mux-video-wrapper {
     position: relative;
-    width: 225px; /* Adjust width based on design */
-    max-width: 100%;
     aspect-ratio: 9 / 16;
     max-height: 400px;
     overflow: hidden;
@@ -944,7 +943,4 @@ cart-form .page-header:not(.page-header--with-background){
     height: 100%;
     object-fit: cover; /* Ensures the video properly fills the frame */
     border-radius: 8px; /* Optional rounded corners */
-}
-.mux-video-container .flex{
-    column-gap: var(--gutter);
 }
