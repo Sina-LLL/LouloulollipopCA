@@ -920,6 +920,7 @@ cart-form .page-header:not(.page-header--with-background){
   max-width: 100%;
   margin: auto;
   column-gap: var(--gutter);
+  row-gap: var(--gutter);
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   justify-items: center;
   justify-content: center;
