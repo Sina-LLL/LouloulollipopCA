@@ -915,11 +915,15 @@ cart-form .page-header:not(.page-header--with-background){
 /* Mux Video Embed */
   /* Container to center the video and title */
 .mux-video-container {
-  display: grid; 
-  width: 100%;
-  grid-template-columns: 1fr 1fr;
+  display: grid;
+  width: max-content;
+  max-width: 100%;
+  margin: auto;
+  grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr));
   column-gap: var(--gutter);
+  grid-template-columns: repeat(auto-fit, minmax(23%, 1fr));
 }
+
 
   /* Title styling */
 .mux-video-title {
@@ -933,7 +937,7 @@ cart-form .page-header:not(.page-header--with-background){
 .mux-video-wrapper {
     position: relative;
     aspect-ratio: 9 / 16;
-    max-height: 400px;
+    max-height: 600px;
     overflow: hidden;
 }
 
