@@ -947,6 +947,4 @@ cart-form .page-header:not(.page-header--with-background){
     object-fit: cover; /* Ensures the video properly fills the frame */
     border-radius: 8px; /* Optional rounded corners */
 }
-.mux-video-wrapper .flex{
-    column-gap: var(--gutter);
-}
+
