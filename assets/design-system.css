@@ -925,7 +925,11 @@ cart-form .page-header:not(.page-header--with-background){
   justify-items: center;
   justify-content: center;
 }
-
+@media (max-width: 768px) {
+  .mux-video-container{
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
   /* Title styling */
 .mux-video-title {
