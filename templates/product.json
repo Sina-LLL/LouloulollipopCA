@@ -213,6 +213,11 @@
         "grid": 5
       }
     },
+    "mux_video_embed_xaVxRV": {
+      "type": "mux-video-embed",
+      "name": "Mux Video",
+      "settings": {}
+    },
     "custom_liquid_tqpgnB": {
       "type": "custom-liquid",
       "settings": {
@@ -228,6 +233,7 @@
     "custom_product_material_care_AB9yyi",
     "custom_product_list_by_print_Nbxwnx",
     "related-products",
+    "mux_video_embed_xaVxRV",
     "custom_liquid_tqpgnB"
   ]
 }
