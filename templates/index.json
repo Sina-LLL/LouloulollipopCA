@@ -115,7 +115,7 @@
             "title_size": 60,
             "title_size_mobile": 42,
             "use_h1": true,
-            "text": "<p><strong>Sparkle, sweetness, and playful charm all twirled into one whimsical print<br/></strong></p>",
+            "text": "<p><strong>Sparkle, sweetness, and playful charm all twirled into one whimsical print</strong></p>",
             "enlarge_text": true,
             "button_label_1": "Shop Unicorn Ballet",
             "button_url_1": "shopify://collections/unicorn-ballet",
@@ -210,8 +210,8 @@
     "custom_product_highlight_ECrHhc": {
       "type": "custom-product-highlight",
       "settings": {
-        "title": "For Dreams as Enchanted as Unicorns",
-        "text": "<p>Built for cozy nights, storybook dreams, and everything in between.</p>",
+        "title": "Where Whimsy Meets Everyday",
+        "text": "<p>Perfect for twirls, cuddles, and everything in between</p>",
         "image": "shopify://shop_images/Unicorn_Ballet_Hero.png",
         "order": false,
         "product_list": [
