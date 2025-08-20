@@ -49,7 +49,7 @@
             "enable_payment_button": false,
             "show_backorder_text": false,
             "show_pickup_availability": false,
-            "show_gift_card_recipient": false
+            "show_gift_card_recipient": true
           }
         },
         "advanced_myregistry_functions_add_to_registry_4H4jJ3": {
