@@ -107,7 +107,8 @@
         "image_TKJkRj": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/LuluLollipopEdits-00874.jpg",
+            "image": "shopify://shop_images/LuluLollipopEdits-00249.jpg",
+            "mobile_image": "shopify://shop_images/LuluLollipopEdits-00033.jpg",
             "slide_link": "",
             "subheading": "A Whirl of Wonder",
             "title": "Unicorn Ballet Has Arrived",
@@ -117,8 +118,8 @@
             "use_h1": true,
             "text": "<p><strong>Sparkle, sweetness, and playful charm all twirled into one whimsical print</strong></p>",
             "enlarge_text": true,
-            "button_label_1": "Shop Unicorn Ballet",
-            "button_url_1": "shopify://collections/unicorn-ballet",
+            "button_label_1": "Shop Stargazing Bear",
+            "button_url_1": "shopify://collections/stargazing-bear",
             "button_tag_1": "",
             "button_label_2": "",
             "button_url_2": "",
@@ -143,6 +144,41 @@
         "autoplay": true,
         "autoplay_speed": 7,
         "accessibility_info": ""
+      }
+    },
+    "custom_product_highlight_ECrHhc": {
+      "type": "custom-product-highlight",
+      "settings": {
+        "title": "Where Whimsy Meets Everyday",
+        "text": "<p>Perfect for twirls, cuddles, and everything in between</p>",
+        "image": "shopify://shop_images/Stargazing_Bears_Hero.png",
+        "order": false,
+        "product_list": [
+          "tencel-sleep-bag-1-0-tog-stargazing-bear",
+          "long-sleeve-pajama-set-stargazing-bear",
+          "sleeper-stargazing-bear",
+          "muslin-swaddle-stargazing-bear"
+        ],
+        "button_label": "Shop Unicorn Ballet",
+        "link": "shopify://collections/unicorn-ballet",
+        "button_style": "primary",
+        "color_scheme": "default"
+      }
+    },
+    "featured_collection_qVMw3h": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Shop Our Bestsellers",
+        "text": "",
+        "collection": "best-sellers",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 5,
+        "rows": 2,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": true,
+        "text_alignment": "center"
       }
     },
     "logo_list_kYmwNX": {
@@ -205,41 +241,6 @@
         "title": "",
         "image_opacity": 100,
         "color_scheme": "default"
-      }
-    },
-    "custom_product_highlight_ECrHhc": {
-      "type": "custom-product-highlight",
-      "settings": {
-        "title": "Where Whimsy Meets Everyday",
-        "text": "<p>Perfect for twirls, cuddles, and everything in between</p>",
-        "image": "shopify://shop_images/Unicorn_Ballet_Hero.png",
-        "order": false,
-        "product_list": [
-          "sleeper-unicorn-ballet",
-          "tencel-sleep-bag-1-0-tog-unicorn-ballet",
-          "hooded-towel-set-unicorn-ballet",
-          "long-sleeve-pajama-set-unicorn-ballet"
-        ],
-        "button_label": "Shop Unicorn Ballet",
-        "link": "shopify://collections/unicorn-ballet",
-        "button_style": "primary",
-        "color_scheme": "default"
-      }
-    },
-    "featured_collection_qVMw3h": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Shop Our Bestsellers",
-        "text": "",
-        "collection": "best-sellers",
-        "show_vendor": false,
-        "enable_carousel": true,
-        "grid": 5,
-        "rows": 2,
-        "color_scheme": "default",
-        "show_view_all": true,
-        "full_width": true,
-        "text_alignment": "center"
       }
     },
     "featured_collection_RcGTat": {
@@ -620,7 +621,7 @@
         "full_width": true,
         "coll_grid_image_shape": "portrait-45",
         "coll_grid_image_position": "center center",
-        "coll_thumb_mob_per_row": "2",
+        "coll_thumb_mob_per_row": "1",
         "coll_grid_show_count": false,
         "coll_text_position": "over-shadow",
         "coll_text_position_under_mobile": false,
