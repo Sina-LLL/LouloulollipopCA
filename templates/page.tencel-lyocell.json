@@ -24,7 +24,7 @@
         "heading_hVQPzc"
       ],
       "custom_css": [
-        "h1{font-size: 2rem; line-height: 1.5}"
+        "h1 {font-size: 2rem; line-height: 1.5;}"
       ],
       "name": "Rich text",
       "settings": {
@@ -267,7 +267,7 @@
       "settings": {
         "title": "Where you’ll find TENCEL™ at Loulou Lollipop ",
         "text": "<p>By now you won’t be surprised to learn that we love this fabric for our:</p>",
-        "text_alignment": "start",
+        "text_alignment": "center",
         "enable_carousel": true,
         "grid": 5,
         "color_scheme": "default",
