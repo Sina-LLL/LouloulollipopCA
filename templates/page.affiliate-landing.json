@@ -31,7 +31,7 @@
         "text_HitEbU": {
           "type": "text",
           "settings": {
-            "text": "<p>This page is for our Canadian program. If you’re in the USA, visit our <a href=\"https://louloulollipop.com/pages/affiliates\" title=\"https://louloulollipop.com/pages/affiliates\">USA page</a>.</p>",
+            "text": "<p>This page is for our Canadian program. If you’re in the USA, visit our <a href=\"https://louloulollipop.com/pages/affiliates\" title=\"https://louloulollipop.com/pages/affiliates\"><strong>USA page</strong></a><strong>.</strong></p>",
             "enlarge_text": true
           }
         },
