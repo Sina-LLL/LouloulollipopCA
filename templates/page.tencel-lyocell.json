@@ -23,6 +23,9 @@
       "block_order": [
         "heading_hVQPzc"
       ],
+      "custom_css": [
+        "h1{font-size: 2rem; line-height: 1.5}"
+      ],
       "name": "Rich text",
       "settings": {
         "height": "medium",
