@@ -175,7 +175,7 @@
         "enable_carousel": true,
         "grid": 5,
         "rows": 2,
-        "color_scheme": "default",
+        "color_scheme": "1",
         "show_view_all": true,
         "full_width": true,
         "text_alignment": "center"
@@ -238,7 +238,7 @@
         "logo_Pb9irB"
       ],
       "settings": {
-        "title": "",
+        "title": "As Seen In",
         "image_opacity": 100,
         "color_scheme": "default"
       }
@@ -569,7 +569,7 @@
         "button_label": "Shop Snack Plates",
         "link": "shopify://collections/snack-plate",
         "button_style": "primary",
-        "color_scheme": "default"
+        "color_scheme": "1"
       }
     },
     "collection_list_BzgHGC": {
