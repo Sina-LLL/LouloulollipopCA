@@ -554,9 +554,7 @@
     },
     "custom_product_highlight_JiGaUB": {
       "type": "custom-product-highlight",
-      "custom_css": [
-        ".fully-padded-row--medium {padding-bottom: 0 !important;}"
-      ],
+      "custom_css": [],
       "settings": {
         "title": "Mess-less Mealtimes",
         "text": "<p>Our super smart silicone snack plates feature a strong sticky base even pro food flingers can't beat. Available in a variety of totally a-roar-able animal shapes for more happy snacking with less mess!</p>",
