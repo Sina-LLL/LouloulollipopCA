@@ -545,6 +545,11 @@
         "type": "shopify://apps/weglot-translate-your-store/blocks/weglot/3097482a-fafe-42ff-bc33-ea19e35c4a20",
         "disabled": false,
         "settings": {}
+      },
+      "18409844787685645432": {
+        "type": "shopify://apps/ethos/blocks/referrals/e6f2bd3b-e2fd-4f16-b73c-bf198b58bb45",
+        "disabled": false,
+        "settings": {}
       }
     }
   }
