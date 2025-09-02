@@ -789,7 +789,7 @@
           
           {% when 'swatch_highlight' %}
             {% assign swatch_name = product.metafields.theme.cutline %}
-            {% assign swatch_collection = print_name | handleize %}    
+            {% assign swatch_collection = swatch_name | handleize %}    
             <div class="swatch-highlight-container lightly-spaced-row inline-width-container{% unless block.settings.show_in_quickbuy %} not-in-quickbuy{% endunless %}" {{ block.shopify_attributes }}>
                 {%- render 'image',
                   image: product.metafields.custom.swatch.value.image.value,
