@@ -105,6 +105,10 @@
             "show_in_quickbuy": false
           }
         },
+        "swatch_highlight_86Qa4w": {
+          "type": "swatch_highlight",
+          "settings": {}
+        },
         "accordion_yktgxC": {
           "type": "accordion",
           "disabled": true,
@@ -142,6 +146,7 @@
         "advanced_myregistry_functions_add_to_registry_4H4jJ3",
         "divider",
         "description",
+        "swatch_highlight_86Qa4w",
         "accordion_yktgxC",
         "accordion_KqCkWX"
       ],

@@ -790,12 +790,13 @@
           {% when 'swatch_highlight' %}
             <div class="lightly-spaced-row inline-width-container{% unless block.settings.show_in_quickbuy %} not-in-quickbuy{% endunless %}" style="width: {{ block.settings.image_width }}px" {{ block.shopify_attributes }}>
                 {%- render 'image',
-                      image: product.metafields.custom.swatch.value.image.value,
-                      sizes: img_sizes,
-                      widths: img_widths,
-                      custom_aspect_ratio: img_aspect_ratio,
-                      custom_crop: img_crop_align
-                    -%}
+                  image: product.metafields.custom.swatch.value.image.value,
+                  sizes: img_sizes,
+                  widths: img_widths,
+                  custom_aspect_ratio: img_aspect_ratio,
+                  custom_crop: img_crop_align
+                -%}
+                <a class="btn btn--secondary" href="https://louloulollipop.ca/pages/tencel-lyocell" target="blank">Learn More</a>
               </div>
           {% when 'custom-option' %}
             {%- if block.settings.label != blank -%}
