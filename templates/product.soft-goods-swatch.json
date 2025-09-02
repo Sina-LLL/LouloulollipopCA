@@ -40,6 +40,12 @@
             "icon_size": "large"
           }
         },
+        "divider_YJBjgd": {
+          "type": "divider",
+          "settings": {
+            "show_in_quickbuy": false
+          }
+        },
         "variant-picker": {
           "type": "variant-picker",
           "settings": {
@@ -141,6 +147,7 @@
         "custom_liquid_WTLMGp",
         "price",
         "usp_Whm8xh",
+        "divider_YJBjgd",
         "variant-picker",
         "buy-buttons",
         "advanced_myregistry_functions_add_to_registry_4H4jJ3",
