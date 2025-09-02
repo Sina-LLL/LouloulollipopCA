@@ -27,7 +27,17 @@
           "type": "price",
           "settings": {
             "show_tax_and_shipping": false,
-            "enable_product_reviews_by_price": true
+            "enable_product_reviews_by_price": false
+          }
+        },
+        "usp_Whm8xh": {
+          "type": "USP",
+          "repeater": "{{ product.metafields.custom.product_template.value.usp_icons.value }}",
+          "settings": {
+            "text": "{{ block.repeater.title.value }}",
+            "icon": "",
+            "custom_icon": "{{ block.repeater.icon.value }}",
+            "icon_size": "large"
           }
         },
         "variant-picker": {
@@ -86,16 +96,6 @@
             "show_in_quickbuy": false
           }
         },
-        "usp_Whm8xh": {
-          "type": "USP",
-          "repeater": "{{ product.metafields.custom.product_template.value.usp_icons.value }}",
-          "settings": {
-            "text": "{{ block.repeater.title.value }}",
-            "icon": "",
-            "custom_icon": "{{ block.repeater.icon.value }}",
-            "icon_size": "large"
-          }
-        },
         "description": {
           "type": "description",
           "settings": {
@@ -136,11 +136,11 @@
         "title",
         "custom_liquid_WTLMGp",
         "price",
+        "usp_Whm8xh",
         "variant-picker",
         "buy-buttons",
         "advanced_myregistry_functions_add_to_registry_4H4jJ3",
         "divider",
-        "usp_Whm8xh",
         "description",
         "accordion_yktgxC",
         "accordion_KqCkWX"
