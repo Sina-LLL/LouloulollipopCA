@@ -788,7 +788,7 @@
             <hr {% unless block.settings.show_in_quickbuy %}class="not-in-quickbuy"{% endunless %} {{ block.shopify_attributes }}>
           
           {% when 'swatch_highlight' %}
-            <div class="swatch-highlight-container lightly-spaced-row inline-width-container{% unless block.settings.show_in_quickbuy %} not-in-quickbuy{% endunless %}" style="width: {{ block.settings.image_width }}px" {{ block.shopify_attributes }}>
+            <div class="swatch-highlight-container lightly-spaced-row inline-width-container{% unless block.settings.show_in_quickbuy %} not-in-quickbuy{% endunless %}" {{ block.shopify_attributes }}>
                 {%- render 'image',
                   image: product.metafields.custom.swatch.value.image.value,
                   sizes: img_sizes,
