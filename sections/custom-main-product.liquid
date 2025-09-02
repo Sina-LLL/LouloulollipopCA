@@ -798,9 +798,11 @@
                 custom_aspect_ratio: img_aspect_ratio,
                 custom_crop: img_crop_align
               -%}
+              {% if swatch_collection != nil %}
               <div class="swatch-highlight-btn">
                 <a class=" btn btn--secondary" href="{{ routes.collections_url }}/{{ swatch_collection }}" >Shop All {{ product.metafields.theme.cutline }}</a>
               </div>
+            {% endif %}
             </div>
           {% when 'custom-option' %}
             {%- if block.settings.label != blank -%}
