@@ -193,6 +193,15 @@
             "title": ""
           }
         },
+        "logo_mQKag7": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/the-everymom-logo.png",
+            "image_width": 190,
+            "link": "https://theeverymom.com/registry-awards/",
+            "title": ""
+          }
+        },
         "logo_3E4WaJ": {
           "type": "logo",
           "settings": {
@@ -219,23 +228,14 @@
             "link": "https://tinybeans.com/best-gifts-for-newborns/",
             "title": ""
           }
-        },
-        "logo_mQKag7": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Parade-Logo.png",
-            "image_width": 150,
-            "link": "https://parade.com/1343996/leighblickley/easter-gifts-for-babies/",
-            "title": ""
-          }
         }
       },
       "block_order": [
         "logo_Pb9irB",
+        "logo_mQKag7",
         "logo_3E4WaJ",
         "logo_KwwATQ",
-        "logo_m3DkDJ",
-        "logo_mQKag7"
+        "logo_m3DkDJ"
       ],
       "settings": {
         "title": "As Seen In",
