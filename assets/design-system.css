@@ -845,64 +845,6 @@ label.filter-group__item.filter-group__item--active:before{
   align-items: center;
   justify-content: flex-end;
 }
-..announcement-bar__right .country-dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-..announcement-bar__right .dropdown-toggle {
-  background: none;
-  padding: 6px 10px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  cursor: pointer;
-  border-radius: 6px;
-}
-
-.announcement-bar__right .dropdown-toggle img {
-  width: 28px;
-  height: auto;
-}
-
-.announcement-bar__right .dropdown-toggle .arrow {
-  font-size: 10px;
-}
-
-.announcement-bar__right .dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  min-width: 150px;
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  z-index: 1000;
-}
-
-.announcement-bar__right .dropdown-menu a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 10px;
-  text-decoration: none;
-  color: #333;
-}
-
-.announcement-bar__right .dropdown-menu a:hover {
-  background: #f5f5f5;
-}
-
-.announcement-bar__right .dropdown-menu img {
-  width: 18px;
-  height: auto;
-}
-
-.announcement-bar__right .country-dropdown:hover .dropdown-menu {
-  display: block;
-}
 
 
 /* Columns */
