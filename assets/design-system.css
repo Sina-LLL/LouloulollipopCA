@@ -391,7 +391,7 @@ li.slider__item.is-active {
   line-height: 1.96306rem; /* 261.739% */
 }
 .price-container .price-value{
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 500;
   line-height: 2.656rem; /* 151.77% */
 }
@@ -582,7 +582,7 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
 
 .accordion-toggle h2 {
   margin: 0;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 
 .accordion-toggle .chevron {
@@ -661,7 +661,7 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
   display: grid;
   justify-content: space-between;
   gap: 16px;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   margin-bottom:20px;
 }
 .product-material__icons-wrapper{
@@ -672,7 +672,9 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
   background:white;
 }
 @media (min-width: 768px) {
-
+  .product-material-usp__icons-wrapper,.product-material__icons-wrapper{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
   .product-form .option-selector{
      margin-bottom:24px; 
   }
@@ -739,7 +741,7 @@ hr{
 }
 h1.product-title {
   font-family: avenir-next-lt-pro,sofia-pro,sans-serif;
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-style: normal;
   font-weight: 700;
   letter-spacing: -.03rem;
@@ -836,24 +838,13 @@ label.filter-group__item.filter-group__item--active:before{
   font-size: 12px !important;
   line-height:8px !important;
 }
-/* .wg-drop.country-selector .wgcurrent{
-  border: none !important;
-  background:none;
-}
-.wg-drop.country-selector .wgcurrent a,.wg-drop.country-selector .wgcurrent:after{
-  color:white !important;
-}
-.wg-drop.country-selector ul{
-  border-radius: 0 0px 12px 12px;
-  background-color: rgb(var(--btn-bg-color)) !important;
-  border: none !important;
-  padding: 0 12px 12px 12px;
-}
-.wg-drop.country-selector li a{
-  color:white;
-} */
 
-
+/* Announcement bar */
+.announcement-bar__right.desktop-only{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
 
 /* Columns */
 h4.text-column__title {
@@ -954,4 +945,24 @@ cart-form .page-header:not(.page-header--with-background){
     height: 100%;
     object-fit: cover; /* Ensures the video properly fills the frame */
     border-radius: 8px; /* Optional rounded corners */
+}
+
+/* PDP swatch highlight container */
+.swatch-highlight-container{
+  position: relative;
+}
+.swatch-highlight-container img{
+  border-radius: 10px;
+}
+.swatch-highlight-btn{
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  margin-bottom: 24px;
+  justify-content: center;
+}
+
+.not-in-quickbuy .shopify-app-block--mr-add-to-reg{
+  display:none;
 }
