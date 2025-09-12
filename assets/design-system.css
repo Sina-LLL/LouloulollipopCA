@@ -664,6 +664,10 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
   grid-template-columns: 1fr 1fr;
   margin-bottom:20px;
 }
+.product-material-usp__icons-wrapper{
+  grid-template-columns: 1fr 1fr 1fr;
+
+}
 .product-material__icons-wrapper{
   /* margin-top:60px; */
   gap: 20px;
