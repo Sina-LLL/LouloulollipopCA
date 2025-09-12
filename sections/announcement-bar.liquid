@@ -131,15 +131,20 @@
             {% render 'localization-form', id: 'annbar-localization', hide_labels: true, promote_popular: true %}
           </div>
         {% endif %}
-        <!-- Country Selector -->
-        <div class="country-selector">
-          <!-- Current country (you can swap depending on which site this is) -->
-          <a href="https://your-us-site.com" class="country-flag us-flag" title="United States">
+        <!-- Country Selector Dropdown -->
+        <div class="country-dropdown">
+          <button class="dropdown-toggle">
             <img src="{{ 'us-flag.png' | asset_url }}" alt="United States" />
-          </a>
-          <a href="https://your-canada-site.com" class="country-flag ca-flag" title="Canada">
-            <img src="{{ 'ca-flag.png' | asset_url }}" alt="Canada" />
-          </a>
+            <span class="arrow">▼</span>
+          </button>
+          <div class="dropdown-menu">
+            <a href="https://your-us-site.com">
+              <img src="{{ 'us-flag.png' | asset_url }}" alt="United States" /> United States
+            </a>
+            <a href="https://your-canada-site.com">
+              <img src="{{ 'ca-flag.png' | asset_url }}" alt="Canada" /> Canada
+            </a>
+          </div>
         </div>
       </div>
     </div>
