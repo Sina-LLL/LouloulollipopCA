@@ -48,6 +48,12 @@
       assign BOGO_text = 'BOGO 50% Off'
     endif
   -%}
+  {%- if BOGO_text -%}
+    <span class="product-label product-label--sale">
+      <span>{{ BOGO_text }}</span>
+    </span>
+  {%- endif -%}
+
   {%- if sale_label_text -%}
     <span class="product-label product-label--sale">
       <span>{{ sale_label_text }}</span>
