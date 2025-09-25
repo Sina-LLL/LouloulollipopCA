@@ -236,7 +236,7 @@
         "collection": "best-sellers",
         "show_vendor": false,
         "enable_carousel": true,
-        "grid": 5,
+        "grid": 4,
         "rows": 2,
         "color_scheme": "1",
         "show_view_all": true,
