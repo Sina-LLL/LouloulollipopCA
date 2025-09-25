@@ -211,8 +211,8 @@
     "custom_product_highlight_ECrHhc": {
       "type": "custom-product-highlight",
       "settings": {
-        "title": "Let Dreams Take Flight",
-        "text": "<p>Perfect for cozy nights, dreamy days, and limitless imagination</p>",
+        "title": "Your cold-weather staples are calling",
+        "text": "<p>Now’s the perfect time to <strong>stock up on winter must-haves </strong>— buy one, get the second <strong>50% off</strong>.</p>",
         "image": "shopify://shop_images/Waffle_crop.jpg",
         "order": false,
         "product_list": [
