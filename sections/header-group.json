@@ -16,7 +16,6 @@
       "blocks": {
         "announcement_4aPW9X": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
             "text": "Shipping Alert! We are temporarily unable to ship to PO Boxes and some rural addresses due to a potential work stoppage at Canada Post.",
             "show_countdown": false,
