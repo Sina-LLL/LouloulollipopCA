@@ -62,6 +62,22 @@
             "text_color": "#ffffff"
           }
         },
+        "announcement_UNfB4d": {
+          "type": "announcement",
+          "settings": {
+            "text": "<a href=\"/collections/waffle-collection\" title=\"Waffle Collection\">BOGO 50% off our Waffle collection</a> - Second item must be of equal or lesser value",
+            "show_countdown": false,
+            "hide_on_end": false,
+            "end_date": "",
+            "end_time": "",
+            "number_font": "base",
+            "countdown_separator": "box",
+            "use_custom_colors": false,
+            "bg_color": "#4a4a4a",
+            "bg_gradient": "",
+            "text_color": "#ffffff"
+          }
+        },
         "announcement-2": {
           "type": "announcement",
           "disabled": true,
@@ -84,6 +100,7 @@
         "announcement_4aPW9X",
         "announcement-1",
         "announcement_3B8XC7",
+        "announcement_UNfB4d",
         "announcement-2"
       ],
       "settings": {
