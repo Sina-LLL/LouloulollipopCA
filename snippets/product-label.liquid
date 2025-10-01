@@ -20,8 +20,7 @@
       elsif settings.prod_new_method == 'tag'
         if product.tags contains 'New' or product.tags contains 'new'
           assign new_label_text = 'products.product.new' | t
-        endif
-     
+        endif        
       endif
     endif
   -%}
@@ -45,7 +44,16 @@
       endif
       assign label_count = label_count | plus: 1
     endif
+    if product.tags contains 'BOGO50' or product.tags contains 'bogo50'
+      assign BOGO_text = 'BOGO 50% Off'
+    endif
   -%}
+  {%- if BOGO_text -%}
+    <span class="product-label product-label--sale">
+      <span>{{ BOGO_text }}</span>
+    </span>
+  {%- endif -%}
+
   {%- if sale_label_text -%}
     <span class="product-label product-label--sale">
       <span>{{ sale_label_text }}</span>
