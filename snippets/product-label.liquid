@@ -58,13 +58,14 @@
     {% assign total_regular_price = total_regular_price | plus: bundled_product.price %}
   {% endfor %}
   
-  {% assign savings = total_regular_price | minus: product.price %}
-  
-  <div class="bundle-pricing">
-    <p>Regular price if purchased separately: {{ total_regular_price | money }}</p>
-    <p>Bundle price: {{ product.price | money }}</p>
-    <p>You save: {{ savings | money }}</p>
-  </div>
+  {% if total_regular_price > product.price %}
+    {% assign savings = total_regular_price | minus: product.price %}
+    {% assign percent_saved = savings | times: 100 | divided_by: total_regular_price %}
+    
+    <div class="bundle-savings">
+      <p>You save {{ percent_saved }}%</p>
+    </div>
+  {% endif %}
 {% endif %}
   {%- if BOGO_text -%}
     <span class="product-label product-label--sale">
