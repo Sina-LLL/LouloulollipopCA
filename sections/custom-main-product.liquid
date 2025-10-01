@@ -1089,7 +1089,13 @@
 </product-form>
 
 {%- if section.settings.show_location_underneath -%}
-  <div class="product-description rte container cf padded-row not-in-quickbuy">{{ product.description }}</div>
+  <div class="product-description rte container cf padded-row not-in-quickbuy">
+    {{ product.description }} 
+      <br> 
+    {% if product.metafields.product.age_group != blank %}
+      {{ product.metafields.product.age_group.value }} 
+    {% endif %}
+</div>
 {%- endif -%}
 
 {%- if section.settings.enable_sticky_atc -%}
