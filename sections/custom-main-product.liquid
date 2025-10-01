@@ -363,11 +363,12 @@
                         <span class="with-icon__beside">{{ product.description }}</span>
                       </div>
                     {%- endif -%}
+                    {% if product.metafields.product.age_group != blank %}
+                      {{ product.metafields.product.age_group.value }} 
+                    {% endif %}
                   </div>
                 {% endif %}
-                {% if product.metafields.product.age_group != blank %}
-                  {{ product.metafields.product.age_group.value }} 
-                {% endif %}
+                
               </div>
               {% if product.metafields.custom.bundle_products != blank %}
                 <div class="bundle-products">
