@@ -61,10 +61,10 @@
   {% if total_regular_price > product.price %}
     {% assign savings = total_regular_price | minus: product.price %}
     {% assign percent_saved = savings | times: 100 | divided_by: total_regular_price %}
+    <span class="product-label product-label--sale">
+      <span>Bundle & save {{ percent_saved }}%</span>
+    </span>
     
-    <div class="bundle-savings">
-      <p>Bundle & save {{ percent_saved }}%</p>
-    </div>
   {% endif %}
 {% endif %}
   {%- if BOGO_text -%}
