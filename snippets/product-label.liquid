@@ -47,7 +47,25 @@
     if product.tags contains 'BOGO50' or product.tags contains 'bogo50'
       assign BOGO_text = 'BOGO 50% Off'
     endif
+ 
   -%}
+  {% if product.tags contains 'bundle' or product.tags contains 'Bundle' %}
+  {% assign bundled_products = product.metafields.custom.bundle_products.value %}
+  
+  {% assign total_regular_price = 0 %}
+  
+  {% for bundled_product in bundled_products %}
+    {% assign total_regular_price = total_regular_price | plus: bundled_product.price %}
+  {% endfor %}
+  
+  {% assign savings = total_regular_price | minus: product.price %}
+  
+  <div class="bundle-pricing">
+    <p>Regular price if purchased separately: {{ total_regular_price | money }}</p>
+    <p>Bundle price: {{ product.price | money }}</p>
+    <p>You save: {{ savings | money }}</p>
+  </div>
+{% endif %}
   {%- if BOGO_text -%}
     <span class="product-label product-label--sale">
       <span>{{ BOGO_text }}</span>
