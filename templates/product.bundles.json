@@ -1,0 +1,239 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "custom-main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "custom_liquid_WTLMGp": {
+          "type": "custom-liquid",
+          "settings": {
+            "custom_liquid": "{% comment %}\n/snippets/bv-summary.liquid\nBazaarvoice Summary Container\n{% endcomment %}\n{% render 'bv-summary' %}\n{% comment %}\nEnd Bazaarvoice Summary Container\n{% endcomment %}",
+            "show_in_quickbuy": false
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_tax_and_shipping": false,
+            "enable_product_reviews_by_price": false
+          }
+        },
+        "usp_Whm8xh": {
+          "type": "USP",
+          "repeater": "{{ product.metafields.custom.product_template.value.usp_icons.value }}",
+          "settings": {
+            "text": "{{ block.repeater.title.value }}",
+            "icon": "",
+            "custom_icon": "{{ block.repeater.icon.value }}",
+            "icon_size": "large"
+          }
+        },
+        "variant-picker": {
+          "type": "variant-picker",
+          "settings": {
+            "show_single": false,
+            "selector_style": "listed",
+            "dynamic_availability": "show",
+            "enable_size_chart": true,
+            "size_chart_label": "Size Guide",
+            "size_chart_variant": "Size",
+            "size_chart_page": "size-chart-clothing"
+          }
+        },
+        "buy-buttons": {
+          "type": "buy-buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "enable_payment_button": false,
+            "show_backorder_text": false,
+            "show_pickup_availability": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "advanced_myregistry_functions_add_to_registry_4H4jJ3": {
+          "type": "shopify://apps/advanced-myregistry-functions/blocks/add_to_registry/b23862ba-17b6-4df1-a6c8-81ff1fa21101",
+          "settings": {
+            "button_type": "shape",
+            "its_universal": "icon",
+            "gift_icon": true,
+            "mr_brand_btn": false,
+            "label": "add_to_reg",
+            "en_custom_label_text": "",
+            "bg_color": "#faf9f6",
+            "text_color": "#4f676e",
+            "border_color": "#4f676e",
+            "bg_color_hover": "#8ea7af",
+            "text_color_hover": "#faf9f6",
+            "border_color_hover": "#4f676e",
+            "width": 100,
+            "horizontal_alignment": "center",
+            "padding_y": 13,
+            "margin_top": 0,
+            "margin_bottom": 0,
+            "margin_left": -1,
+            "margin_right": -1,
+            "is_custom_border_radius": false,
+            "border_radius": 0,
+            "custom_class": "",
+            "custom_css": ""
+          }
+        },
+        "divider": {
+          "type": "divider",
+          "settings": {
+            "show_in_quickbuy": false
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "show_in_tab": false,
+            "open_tab": false,
+            "icon": "",
+            "show_in_quickbuy": false
+          }
+        },
+        "accordion_yktgxC": {
+          "type": "accordion",
+          "disabled": true,
+          "settings": {
+            "title": "Materials & Care",
+            "icon": "",
+            "content": "",
+            "page": "",
+            "custom_liquid": "{{ product.metafields.custom.materials_care.value }}",
+            "open": false,
+            "show_in_quickbuy": false
+          }
+        },
+        "accordion_KqCkWX": {
+          "type": "accordion",
+          "disabled": true,
+          "settings": {
+            "title": "Shipping & Returns",
+            "icon": "",
+            "content": "<p>Free Canada Shipping over $100</p><p>Flat rate shipping on everything else — $12 standard shipping in BC, $18 rest of Canada<br/><br/><a href=\"/pages/faqs\" title=\"FAQs\">See Details</a></p>",
+            "page": "",
+            "custom_liquid": "",
+            "open": false,
+            "show_in_quickbuy": false
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "custom_liquid_WTLMGp",
+        "price",
+        "usp_Whm8xh",
+        "variant-picker",
+        "buy-buttons",
+        "advanced_myregistry_functions_add_to_registry_4H4jJ3",
+        "divider",
+        "description",
+        "accordion_yktgxC",
+        "accordion_KqCkWX"
+      ],
+      "settings": {
+        "show_breadcrumbs": true,
+        "select_first_variant": true,
+        "show_location_underneath": false,
+        "inventory_transfers_enable": true,
+        "enable_sticky_columns": true,
+        "enable_sticky_atc": true,
+        "sticky_atc_position": "center",
+        "sticky_atc_mobile": true,
+        "sticky_atc_behavior": "add_to_cart",
+        "sticky_atc_button_style": "primary",
+        "gallery_size": "medium",
+        "gallery_layout": "collage-1",
+        "enable_zoom": true,
+        "show_alt_text": false,
+        "alt_text_icon": "",
+        "enable_video_autoplay": false,
+        "enable_video_looping": false,
+        "enable_media_grouping": false,
+        "media_grouping_option": "Color,Colour,Couleur,Farbe"
+      }
+    },
+    "custom_product_features_g6K7P8": {
+      "type": "custom-product-features",
+      "blocks": {
+        "feature_74ANHV": {
+          "type": "feature",
+          "repeater": "{{ product.metafields.custom.product_template.value.features.value }}",
+          "settings": {
+            "image": "{{ block.repeater.image.value }}",
+            "title": "{{ block.repeater.title.value }}",
+            "description": "<p>{{ block.repeater.description | metafield_tag }}</p>"
+          }
+        }
+      },
+      "block_order": [
+        "feature_74ANHV"
+      ],
+      "settings": {
+        "section_heading": "We Thought of that Too"
+      }
+    },
+    "custom_product_material_care_AB9yyi": {
+      "type": "custom-product-material-care",
+      "settings": {
+        "section_heading": "Material & Care"
+      }
+    },
+    "custom_product_list_by_print_Nbxwnx": {
+      "type": "custom-product-list-by-print",
+      "name": "Custom Product List by Print",
+      "settings": {
+        "title": "Get the Set",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 5,
+        "color_scheme": "default",
+        "full_width": true
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "title": "You may also like",
+        "show_vendor": false,
+        "grid": 5
+      }
+    },
+    "mux_video_embed_xaVxRV": {
+      "type": "mux-video-embed",
+      "name": "Mux Video",
+      "settings": {}
+    },
+    "custom_liquid_tqpgnB": {
+      "type": "custom-liquid",
+      "settings": {
+        "full_width": true,
+        "show_space": true,
+        "code": "<div class=\"wrapper--full\">\n          {% comment %}\n/snippets/bv-ratings-reviews.liquid\nBazaarvoice Ratings & Reviews\n{% endcomment %}\n{% render 'bv-ratings-reviews' %}\n{% comment %}\nEnd Bazaarvoice Ratings & Reviews\n{% endcomment %}\n</div>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_product_features_g6K7P8",
+    "custom_product_material_care_AB9yyi",
+    "custom_product_list_by_print_Nbxwnx",
+    "related-products",
+    "mux_video_embed_xaVxRV",
+    "custom_liquid_tqpgnB"
+  ]
+}
