@@ -40,6 +40,12 @@
             "icon_size": "large"
           }
         },
+        "divider_XNTBYb": {
+          "type": "divider",
+          "settings": {
+            "show_in_quickbuy": false
+          }
+        },
         "variant-picker": {
           "type": "variant-picker",
           "settings": {
@@ -145,6 +151,7 @@
         "custom_liquid_WTLMGp",
         "price",
         "usp_Whm8xh",
+        "divider_XNTBYb",
         "variant-picker",
         "buy-buttons",
         "advanced_myregistry_functions_add_to_registry_4H4jJ3",
@@ -204,6 +211,9 @@
     },
     "custom_product_list_by_print_Nbxwnx": {
       "type": "custom-product-list-by-print",
+      "custom_css": [
+        ".collection-slider-row {padding-bottom: 0;}"
+      ],
       "name": "Custom Product List by Print",
       "settings": {
         "title": "Get the Set",
