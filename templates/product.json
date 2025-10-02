@@ -40,6 +40,12 @@
             "icon_size": "large"
           }
         },
+        "divider_XNTBYb": {
+          "type": "divider",
+          "settings": {
+            "show_in_quickbuy": false
+          }
+        },
         "variant-picker": {
           "type": "variant-picker",
           "settings": {
@@ -66,9 +72,9 @@
           "type": "shopify://apps/advanced-myregistry-functions/blocks/add_to_registry/b23862ba-17b6-4df1-a6c8-81ff1fa21101",
           "settings": {
             "button_type": "shape",
-            "its_universal": "icon",
             "gift_icon": true,
             "mr_brand_btn": false,
+            "its_universal": "icon",
             "label": "add_to_reg",
             "en_custom_label_text": "",
             "bg_color": "#faf9f6",
@@ -94,6 +100,14 @@
           "type": "divider",
           "settings": {
             "show_in_quickbuy": false
+          }
+        },
+        "complementary_d3EJbm": {
+          "type": "complementary",
+          "settings": {
+            "heading": "Pairs well with",
+            "enable_carousel": true,
+            "max_products": 10
           }
         },
         "description": {
@@ -137,10 +151,12 @@
         "custom_liquid_WTLMGp",
         "price",
         "usp_Whm8xh",
+        "divider_XNTBYb",
         "variant-picker",
         "buy-buttons",
         "advanced_myregistry_functions_add_to_registry_4H4jJ3",
         "divider",
+        "complementary_d3EJbm",
         "description",
         "accordion_yktgxC",
         "accordion_KqCkWX"
@@ -195,13 +211,16 @@
     },
     "custom_product_list_by_print_Nbxwnx": {
       "type": "custom-product-list-by-print",
+      "custom_css": [
+        ".collection-slider-row {padding-bottom: 0;}"
+      ],
       "name": "Custom Product List by Print",
       "settings": {
         "title": "Get the Set",
         "show_vendor": false,
         "enable_carousel": true,
-        "grid": 5,
-        "color_scheme": "default",
+        "grid": 4,
+        "color_scheme": "1",
         "full_width": true
       }
     },
@@ -210,7 +229,7 @@
       "settings": {
         "title": "You may also like",
         "show_vendor": false,
-        "grid": 5
+        "grid": 4
       }
     },
     "mux_video_embed_xaVxRV": {
