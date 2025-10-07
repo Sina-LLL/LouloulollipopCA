@@ -107,19 +107,19 @@
         "image_TKJkRj": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Waffle_BOGO_-_Homepage_a6cbec38-9cbb-4cc2-ad24-435e99e1c7af.png",
-            "mobile_image": "shopify://shop_images/Waffle_BOGO_-_Mobile.jpg",
+            "image": "shopify://shop_images/Dino_stomp_hero.png",
+            "mobile_image": "shopify://shop_images/Dino_stomp_Mobile_Hero_4dda6e1a-8a9c-48c2-bb71-906e4adc80b5.png",
             "slide_link": "",
-            "subheading": "The Waffle Collection",
-            "title": "Buy One, Get One 50% OFF",
+            "subheading": "Your New Bedtime Beat",
+            "title": "Dreamland Dance Party",
             "heading_max_width": 14,
             "title_size": 60,
             "title_size_mobile": 40,
             "use_h1": true,
-            "text": "<p>Second item must be of equal or lesser value</p>",
+            "text": "<p>Two new prints, one dream duet</p>",
             "enlarge_text": true,
-            "button_label_1": "Shop the Waffle BOGO",
-            "button_url_1": "shopify://collections/waffle-collection",
+            "button_label_1": "Shop the new collection",
+            "button_url_1": "shopify://collections/dreamland-dance-party",
             "button_tag_1": "",
             "button_label_2": "",
             "button_url_2": "",
@@ -211,18 +211,18 @@
     "custom_product_highlight_ECrHhc": {
       "type": "custom-product-highlight",
       "settings": {
-        "title": "Your cold-weather staples are calling",
-        "text": "<p>Now’s the perfect time to <strong>stock up on winter must-haves </strong>— buy one, get the second <strong>50% off</strong>.</p>",
-        "image": "shopify://shop_images/Waffle_crop.jpg",
+        "title": "Dancing Dragonflies",
+        "text": "<p>Soft, airy and twinkling with lullaby magic</p>",
+        "image": "shopify://shop_images/Dancing_Dragonflies.png",
         "order": false,
         "product_list": [
-          "waffle-sleep-bag-1-0-tog-blush-pink",
-          "waffle-long-sleeve-skater-dress-mauvewood",
-          "waffle-sleep-bag-1-0-tog-denim-blue",
-          "waffle-long-sleeve-pajama-set-peacock"
+          "muslin-swaddle-dancing-dragonflies",
+          "sleeper-dancing-dragonflies",
+          "tencel-sleep-bag-1-0-tog-dancing-dragonflies",
+          "muslin-lightweight-sleep-bags-0-5-tog-dancing-dragonflies"
         ],
-        "button_label": "Shop the waffle collection",
-        "link": "shopify://collections/waffle-collection",
+        "button_label": "Shop Dancing Dragonflies",
+        "link": "shopify://collections/dancing-dragonflies",
         "button_style": "primary",
         "color_scheme": "default"
       }
@@ -230,6 +230,24 @@
     "collection_list_zhMrUA": {
       "type": "collection-list",
       "blocks": {
+        "collection_qCHi4r": {
+          "type": "collection",
+          "settings": {
+            "collection": "dancing-dragonflies",
+            "tag": "",
+            "subheading": "Dancing Dragonflies",
+            "button_label": ""
+          }
+        },
+        "collection_NghHmQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "dinosaur-stomp",
+            "tag": "",
+            "subheading": "Dinosaur Stomp",
+            "button_label": ""
+          }
+        },
         "collection_FhR9Rc": {
           "type": "collection",
           "settings": {
@@ -356,15 +374,6 @@
             "button_label": ""
           }
         },
-        "collection_jz8qFh": {
-          "type": "collection",
-          "settings": {
-            "collection": "secret-garden",
-            "tag": "",
-            "subheading": "Secret Garden",
-            "button_label": ""
-          }
-        },
         "collection_iyjCCb": {
           "type": "collection",
           "settings": {
@@ -400,18 +409,11 @@
             "subheading": "Hedgehogs",
             "button_label": ""
           }
-        },
-        "collection_UErxAh": {
-          "type": "collection",
-          "settings": {
-            "collection": "camper-vans",
-            "tag": "",
-            "subheading": "Camper Vans",
-            "button_label": ""
-          }
         }
       },
       "block_order": [
+        "collection_qCHi4r",
+        "collection_NghHmQ",
         "collection_FhR9Rc",
         "collection_m7DJDa",
         "collection_ExCE9F",
@@ -426,12 +428,10 @@
         "collection_FQR9KE",
         "collection_HYRWrg",
         "collection_dqkine",
-        "collection_jz8qFh",
         "collection_iyjCCb",
         "collection_ntR4RL",
         "collection_WdAqzh",
-        "collection_dHNH3W",
-        "collection_UErxAh"
+        "collection_dHNH3W"
       ],
       "name": "Collection list",
       "settings": {
