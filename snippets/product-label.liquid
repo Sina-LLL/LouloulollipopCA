@@ -49,7 +49,7 @@
     endif
  
   -%}
-   {% if product.tags contains 'bundle' or product.tags contains 'Bundle' %}
+  {% comment %} {% if product.tags contains 'bundle' or product.tags contains 'Bundle' %}
     {% assign bundled_products = product.metafields.custom.bundle_products.value %}
     
     {% assign total_regular_price = 0 %}
@@ -65,7 +65,7 @@
         <span>Bundle & save {{ percent_saved }}%</span>
       </span>
     {% endif %}
-  {% endif %} 
+  {% endif %} {% endcomment %}
 
   {%- if BOGO_text -%}
     <span class="product-label product-label--sale">
