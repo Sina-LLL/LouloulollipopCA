@@ -557,7 +557,8 @@
         "text_block_pmbEg6": {
           "type": "text_block",
           "settings": {
-            "enable_media": false,
+            "enable_media": true,
+            "image": "shopify://shop_images/Heart.svg",
             "title": "Made by Moms, Loved by Parents Everywhere",
             "text": "<p>Made by twin sisters and self-proclaimed picky moms who get it, our products are real-life tested to stand up to anything life - and kids -  throw at ’em.</p>",
             "button_label": "",
