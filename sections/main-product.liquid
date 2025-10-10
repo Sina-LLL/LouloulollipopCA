@@ -456,6 +456,13 @@
                   <button
                     data-id="btnMrAddtoReg-{{ product.id }}"
                     class="myregistry-add-button button opacity"
+                    data-product-handle="{{ product.handle }}"
+                    data-sitekey="{{ shop.metafields.myregistry.sitekey.value }}"
+                    data-language="{{ localization.language.iso_code }}"
+                    data-available-languages={{ localization.available_languages | json }}
+                    data-current-variant="{{ product.selected_or_first_available_variant.id }}"
+                    data-config-url="https://cdn.shopify.com/extensions/0199c888-e6d9-7f14-91e7-ca14a5041df3/final-my-registry-69/assets/config.js"
+                    data-root-url="{{ routes.root_url }}"
                     type="button"
                     aria-haspopup="dialog"
                     aria-label="Add to Registry"
