@@ -93,7 +93,7 @@
             "is_custom_border_radius": false,
             "border_radius": 0,
             "custom_class": "",
-            "custom_css": ".myregistry-add-button {\n\n background:#FAF9F6 !important; color:#8EA7AF!important;\n    \n  }"
+            "custom_css": ".myregistry-add-button {\n\n background:#ffffff !important; color:#8EA7AF!important;\n    \n  }"
           }
         },
         "divider": {
