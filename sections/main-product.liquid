@@ -456,6 +456,13 @@
                   <button
                     data-id="btnMrAddtoReg-{{ product.id }}"
                     class="myregistry-add-button button opacity"
+                    data-product-handle="{{ product.handle }}"
+                    data-sitekey="{{ shop.metafields.myregistry.sitekey.value }}"
+                    data-language="{{ localization.language.iso_code }}"
+                    data-available-languages={{ localization.available_languages | json }}
+                    data-current-variant="{{ product.selected_or_first_available_variant.id }}"
+                    data-config-url="https://cdn.shopify.com/extensions/0199c888-e6d9-7f14-91e7-ca14a5041df3/final-my-registry-69/assets/config.js"
+                    data-root-url="{{ routes.root_url }}"
                     type="button"
                     aria-haspopup="dialog"
                     aria-label="Add to Registry"
@@ -473,7 +480,42 @@
 
                   </button>
           </div>
-          
+          <style>
+  .shopify-app-block--mr-add-to-reg { display:flex; justify-content:center; margin-top:1em; }
+  .myregistry-add-button {
+    width:100%; max-width:280px; padding:.75em 1em;
+    background:#fff!important; color:#8EA7AF!important;
+    border:none; font-size:1em; cursor:pointer; transition:opacity .2s; border-radius: 10px; text-transform: uppercase; letter-spacing: 1px;
+    font-weight: 600;
+  }
+.myregistry-add-button {
+&:hover {
+            border-color: unset !important;
+        }
+    }
+}
+  .myregistry-add-button.opacity { opacity:0; }
+  .myregistry-add-button .child-span-registry-button { display:inline-flex; align-items:center; }
+  .myregistry-add-button svg { margin-right:.5em; }
+  #shopify-block-AMVN1a0kvNHQ5RjBZV__advanced_myregistry_functions_add_to_registry_PAyULk {
+    display: none !important;
+}
+ #shopify-block-AeXJCbE5TTWVKd2daN__advanced_myregistry_functions_add_to_registry_xEQ3JN {
+    display: none !important;
+} 
+#shopify-block-AZ1pDTGc3b0tCazFRL__advanced_myregistry_functions_add_to_registry_4H4jJ3 {
+    display: none !important;
+}
+#shopify-block-AQXFtbCtwMGNEZXZ3R__advanced_myregistry_functions_add_to_registry_Re4nUd {
+    display: none !important;
+}           
+#shopify-block-AZktBT2Y0K21SM2NvM__advanced_myregistry_functions_add_to_registry_AecqxV {
+    display: none !important;
+}
+#shopify-block-AWDJFbUw3WGd2LzlGL__advanced_myregistry_functions_add_to_registry_yJgEkG {
+    display: none;
+}          
+</style>
                     {% if enable_dynamic_payment_button %}
                       <div class="product-dynamic-payment-button">
                         <script class="dynamic-payment-button-template" type="text/template">
