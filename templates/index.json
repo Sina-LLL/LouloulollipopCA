@@ -211,18 +211,18 @@
     "custom_product_highlight_ECrHhc": {
       "type": "custom-product-highlight",
       "settings": {
-        "title": "Dancing Dragonflies",
-        "text": "<p>Soft, airy and twinkling with lullaby magic</p>",
-        "image": "shopify://shop_images/Dancing_Dragonflies.png",
+        "title": "BOGO 50% Off Waffles!",
+        "text": "<p>Now’s the perfect time to stock up on winter must-haves</p>",
+        "image": "shopify://shop_images/ElzaPhotographie_LoulouLollipop_March2024_-Web-28_76639d57-24b9-48d0-aea2-7476a308cb79.jpg",
         "order": false,
         "product_list": [
-          "muslin-swaddle-dancing-dragonflies",
-          "sleeper-dancing-dragonflies",
-          "tencel-sleep-bag-1-0-tog-dancing-dragonflies",
-          "muslin-lightweight-sleep-bags-0-5-tog-dancing-dragonflies"
+          "waffle-sleep-bag-1-0-tog-blush-pink",
+          "waffle-sleep-bag-1-0-tog-denim-blue",
+          "waffle-long-sleeve-bodysuit-coconut-milk",
+          "waffle-long-sleeve-pajama-set-denim-blue"
         ],
-        "button_label": "Shop Dancing Dragonflies",
-        "link": "shopify://collections/dancing-dragonflies",
+        "button_label": "SHOP BOGO Now",
+        "link": "shopify://collections/waffle-collection",
         "button_style": "primary",
         "color_scheme": "default"
       }
