@@ -105,7 +105,7 @@
         "complementary_BXxYXx": {
           "type": "complementary",
           "settings": {
-            "heading": "Pairs well with",
+            "heading": "Pairs Perfectly With",
             "enable_carousel": true,
             "max_products": 10
           }
@@ -205,7 +205,7 @@
         "feature_74ANHV"
       ],
       "settings": {
-        "section_heading": "We Thought of that Too"
+        "section_heading": "We Thought of That Too"
       }
     },
     "custom_product_material_care_AB9yyi": {
@@ -221,7 +221,7 @@
       ],
       "name": "Custom Product List by Print",
       "settings": {
-        "title": "Get the Set",
+        "title": "Get the set",
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 4,
