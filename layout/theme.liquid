@@ -197,6 +197,10 @@
 
  <meta name="google-site-verification" content="BFpbLBJiy35y2n5nAmu-KjENClydWofkLgdbhXke2Xg" />
 
+{% if current_tags %}
+<meta name="robots" content="noindex, follow">
+{% endif %}
+
 </head>
 
 <body class="template-{{ template | split: '.' | first | handle }}
