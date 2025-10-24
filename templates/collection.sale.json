@@ -107,7 +107,7 @@
           "type": "collection",
           "settings": {
             "collection": "clothing-sale",
-            "tag": "wear",
+            "tag": "",
             "image": "shopify://shop_images/KA1003U.PCK_Waffle_2-pc_Pajama_Set_Peacock_6.jpg",
             "subheading": "Clothing",
             "button_label": ""
@@ -117,7 +117,7 @@
           "type": "collection",
           "settings": {
             "collection": "feeding-sale",
-            "tag": "eat",
+            "tag": "",
             "image": "shopify://shop_images/Baby-eating-noodles-wearing-silcon-bib.jpg",
             "subheading": "Feeding Essentials",
             "button_label": ""
@@ -127,7 +127,7 @@
           "type": "collection",
           "settings": {
             "collection": "toys-play-sale",
-            "tag": "play",
+            "tag": "",
             "image": "shopify://shop_images/Stacking_Toy_Pastel.jpg",
             "subheading": "Toys & Play",
             "button_label": ""
@@ -137,7 +137,7 @@
           "type": "collection",
           "settings": {
             "collection": "bathe-sale",
-            "tag": "bathe",
+            "tag": "",
             "image": "shopify://shop_images/Hooded_Towel_-_Some_Bunny_Loves_You__5_777b2523-8899-4c56-b5dd-d3a1d1237bdb.jpg",
             "subheading": "Bathe",
             "button_label": ""
