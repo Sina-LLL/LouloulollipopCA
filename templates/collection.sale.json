@@ -96,8 +96,8 @@
         "collection_WyUbjR": {
           "type": "collection",
           "settings": {
-            "collection": "sale",
-            "tag": "Sleep",
+            "collection": "sleep-sale",
+            "tag": "",
             "image": "shopify://shop_images/TENCEL_Sleep_Bag_1.0_Tog_Baby_Dinomite_ffae14b2-5059-4318-a90a-fb97ec726d0b.jpg",
             "subheading": "Sleep & Bedding",
             "button_label": ""
@@ -106,7 +106,7 @@
         "collection_6eV9ac": {
           "type": "collection",
           "settings": {
-            "collection": "sale",
+            "collection": "clothing-sale",
             "tag": "wear",
             "image": "shopify://shop_images/KA1003U.PCK_Waffle_2-pc_Pajama_Set_Peacock_6.jpg",
             "subheading": "Clothing",
@@ -116,7 +116,7 @@
         "collection_BKiBEG": {
           "type": "collection",
           "settings": {
-            "collection": "sale",
+            "collection": "feeding-sale",
             "tag": "eat",
             "image": "shopify://shop_images/Baby-eating-noodles-wearing-silcon-bib.jpg",
             "subheading": "Feeding Essentials",
@@ -126,7 +126,7 @@
         "collection_AxWctQ": {
           "type": "collection",
           "settings": {
-            "collection": "sale",
+            "collection": "toys-play-sale",
             "tag": "play",
             "image": "shopify://shop_images/Stacking_Toy_Pastel.jpg",
             "subheading": "Toys & Play",
@@ -136,7 +136,7 @@
         "collection_7zGMqh": {
           "type": "collection",
           "settings": {
-            "collection": "sale",
+            "collection": "bathe-sale",
             "tag": "bathe",
             "image": "shopify://shop_images/Hooded_Towel_-_Some_Bunny_Loves_You__5_777b2523-8899-4c56-b5dd-d3a1d1237bdb.jpg",
             "subheading": "Bathe",
