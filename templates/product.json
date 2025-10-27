@@ -78,11 +78,11 @@
             "label": "add_to_reg",
             "en_custom_label_text": "",
             "bg_color": "#faf9f6",
-            "text_color": "#4f676e",
-            "border_color": "#4f676e",
+            "text_color": "#6a8b95",
+            "border_color": "#6a8b95",
             "bg_color_hover": "#8ea7af",
             "text_color_hover": "#faf9f6",
-            "border_color_hover": "#4f676e",
+            "border_color_hover": "#8ea7af",
             "width": 100,
             "horizontal_alignment": "center",
             "padding_y": 13,
@@ -93,7 +93,7 @@
             "is_custom_border_radius": false,
             "border_radius": 0,
             "custom_class": "",
-            "custom_css": ".myregistry-add-button {\n\n background:#FAF9F6 !important; color:#8EA7AF!important;\n    \n  }"
+            "custom_css": ".myregistry-add-button {\n\n    \n  }"
           }
         },
         "divider": {
@@ -105,7 +105,7 @@
         "complementary_d3EJbm": {
           "type": "complementary",
           "settings": {
-            "heading": "Pairs well with",
+            "heading": "Pairs Perfectly With",
             "enable_carousel": true,
             "max_products": 10
           }
@@ -200,7 +200,7 @@
         "feature_74ANHV"
       ],
       "settings": {
-        "section_heading": "We Thought of that Too"
+        "section_heading": "We Thought of That Too"
       }
     },
     "custom_product_material_care_AB9yyi": {
@@ -216,7 +216,7 @@
       ],
       "name": "Custom Product List by Print",
       "settings": {
-        "title": "Get the Set",
+        "title": "Get the set",
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 4,

@@ -66,9 +66,9 @@
           "type": "shopify://apps/advanced-myregistry-functions/blocks/add_to_registry/b23862ba-17b6-4df1-a6c8-81ff1fa21101",
           "settings": {
             "button_type": "shape",
-            "its_universal": "icon",
             "gift_icon": true,
             "mr_brand_btn": false,
+            "its_universal": "icon",
             "label": "add_to_reg",
             "en_custom_label_text": "",
             "bg_color": "#faf9f6",
@@ -184,7 +184,7 @@
         "feature_74ANHV"
       ],
       "settings": {
-        "section_heading": "We Thought of that Too"
+        "section_heading": "We Thought of That Too"
       }
     },
     "custom_product_material_care_AB9yyi": {
