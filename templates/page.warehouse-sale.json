@@ -224,6 +224,7 @@
         },
         "question_XGUpzW": {
           "type": "question",
+          "disabled": true,
           "settings": {
             "title": "Will you restock daily?",
             "answer": "<p>Yes! We’ll be restocking inventory daily, so there will be new finds every day. </p>"
