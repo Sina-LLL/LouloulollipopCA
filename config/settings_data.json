@@ -550,6 +550,11 @@
         "type": "shopify://apps/ethos/blocks/referrals/e6f2bd3b-e2fd-4f16-b73c-bf198b58bb45",
         "disabled": false,
         "settings": {}
+      },
+      "1232542678405107163": {
+        "type": "shopify://apps/instafeed/blocks/head-block/c447db20-095d-4a10-9725-b5977662c9d5",
+        "disabled": false,
+        "settings": {}
       }
     }
   }
