@@ -23,6 +23,17 @@
             "show_in_quickbuy": false
           }
         },
+        "richtext_ygxBne": {
+          "type": "richtext",
+          "settings": {
+            "richtext": "<p>Buy 3, get 10% off!</p>",
+            "icon": "price_tag",
+            "icon_size": "small",
+            "enable_box": true,
+            "box_color": "#fbeae5",
+            "show_in_quickbuy": false
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -149,6 +160,7 @@
       "block_order": [
         "title",
         "custom_liquid_WTLMGp",
+        "richtext_ygxBne",
         "price",
         "usp_Whm8xh",
         "divider_XNTBYb",
