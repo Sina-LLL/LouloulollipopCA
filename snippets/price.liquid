@@ -66,6 +66,11 @@
         {%- endif -%}
     </span>
     {% if product.tags contains "sale_on_sale" %} <span class="price-label price-label--sale" style="font-size:14px">{{ sale_on_sale }} </span>{% endif %}
+    {% if product.tags contains "MoreToLoveDiscount" %}
+      <div class="product-info-block text-box" style="--box-color: #fbeae5; --box-text-color: {{ text_col }}">
+          <span class="with-icon__beside">Buy 3, get 10% off! - applied automatically.</span>
+      </div>
+    {% endif %}
   </div>
 
   {% if show_labels %}
