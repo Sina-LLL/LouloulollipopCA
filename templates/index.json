@@ -211,18 +211,18 @@
     "custom_product_highlight_ECrHhc": {
       "type": "custom-product-highlight",
       "settings": {
-        "title": "BOGO 50% Off Waffles!",
-        "text": "<p>Now’s the perfect time to stock up on winter must-haves</p>",
-        "image": "shopify://shop_images/Waffle_crop.jpg",
+        "title": "Bundle up and Save",
+        "text": "<p>Everything Baby Needs — All Wrapped Up </p>",
+        "image": "shopify://shop_images/Gift_Box_1.jpg",
         "order": false,
         "product_list": [
-          "waffle-long-sleeve-pajama-set-lavender",
-          "waffle-long-sleeve-pajama-set-peacock",
-          "waffle-long-sleeve-skater-dress-lavender",
-          "waffle-long-sleeve-skater-dress-mauvewood"
+          "newborn-sleep-gift-bundle-safari-jungle",
+          "newborn-sleep-gift-bundle-unicorn-ballet",
+          "baby-learning-feeding-bundle-smiley-sharks",
+          "baby-learning-feeding-bundle-seashells"
         ],
-        "button_label": "SHOP BOGO Now",
-        "link": "shopify://collections/waffle-collection",
+        "button_label": "Shop bundles",
+        "link": "shopify://collections/bundles-and-sets",
         "button_style": "primary",
         "color_scheme": "default"
       }
