@@ -16,6 +16,7 @@
       "blocks": {
         "announcement_UNfB4d": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "<a href=\"/collections/waffle-collection\" title=\"Waffle Collection\">BOGO 50% off our Waffle collection</a> - Second item must be of equal or lesser value",
             "show_countdown": false,
@@ -64,7 +65,6 @@
         },
         "announcement_3B8XC7": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
             "text": "🇨🇦 Proudly Canadian, Since 2015 🇨🇦",
             "show_countdown": false,
