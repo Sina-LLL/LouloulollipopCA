@@ -33,6 +33,7 @@
         },
         "announcement_4aPW9X": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Shipping Alert! We are temporarily unable to ship to PO Boxes and some rural addresses due to a potential work stoppage at Canada Post.",
             "show_countdown": false,
@@ -297,7 +298,7 @@
         "mobile_logo_img_width_int": 180,
         "logo_h1": false,
         "enable_sticky": true,
-        "enable_transparent": true,
+        "enable_transparent": false,
         "transparent_color": "#ffffff",
         "transparent_logo": "shopify://shop_images/LLL-Logo_4x_90f5864f-2593-450c-9169-7190aa86050b.png",
         "menu_linklist": "2025_main-menu-v2",
