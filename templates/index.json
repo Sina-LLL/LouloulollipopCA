@@ -226,8 +226,8 @@
         "product_list": [
           "sleeper-hedgehogs",
           "hooded-towel-set-bunny-meadow",
-          "newborn-sleep-gift-bundle-safari-jungle",
-          "baby-learning-feeding-bundle-smiley-sharks"
+          "newborn-essentials-gift-bundle-all-aboard",
+          "baby-learning-feeding-bundle-seashells"
         ],
         "button_label": "Shop Top Newborn Gifts",
         "link": "shopify://collections/top-newborn-gifts",
@@ -731,61 +731,6 @@
         "color_scheme": "default"
       }
     },
-    "multi_column_KCzHEY": {
-      "type": "multi-column",
-      "blocks": {
-        "text_block_pmbEg6": {
-          "type": "text_block",
-          "settings": {
-            "enable_media": true,
-            "image": "shopify://shop_images/Heart_a93db5a8-bda7-491e-883a-c5a0b9db2f83.svg",
-            "title": "Made by Moms, Loved by Parents Everywhere",
-            "text": "<p>Made by twin sisters and self-proclaimed picky moms who get it, our products are real-life tested to stand up to anything life - and kids -  throw at ’em.</p>",
-            "button_label": "",
-            "link": ""
-          }
-        },
-        "text_block_tFgzTX": {
-          "type": "text_block",
-          "settings": {
-            "enable_media": true,
-            "image": "shopify://shop_images/Medal.svg",
-            "title": "Helping Families Hit the Big (and Small) Milestones Since 2015",
-            "text": "<p>From first smiles to first foods, we’ve been there for the baby moments you’ll never forget—and the parenting ones you wish you could (IYKYK). From teething to sleep regressions and everything in between, we’re here to make it all a little easier.</p>",
-            "button_label": "",
-            "link": ""
-          }
-        },
-        "text_block_EgmCLD": {
-          "type": "text_block",
-          "settings": {
-            "enable_media": true,
-            "image": "shopify://shop_images/Happy.svg",
-            "title": "Safe for Baby, Approved by Grown-Ups",
-            "text": "<p>We only use premium, non-toxic, safety-tested materials—like buttery soft TENCEL™ Lyocell and 100% food-grade silicone—so you can stress less, snuggle more, and actually enjoy the messy magic of parenthood.</p>",
-            "button_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "text_block_pmbEg6",
-        "text_block_tFgzTX",
-        "text_block_EgmCLD"
-      ],
-      "custom_css": [
-        ".img-ar--cover img {object-fit: fill;}"
-      ],
-      "name": "Company Message",
-      "settings": {
-        "title": "",
-        "media_aspect_ratio": "s",
-        "media_width": 60,
-        "text_alignment": "center",
-        "button_style": "primary",
-        "color_scheme": "default"
-      }
-    },
     "testimonials_QcyQ3m": {
       "type": "testimonials",
       "blocks": {
@@ -854,6 +799,61 @@
         "color_scheme": "default",
         "autoplay": true,
         "autoplay_speed": 5
+      }
+    },
+    "multi_column_KCzHEY": {
+      "type": "multi-column",
+      "blocks": {
+        "text_block_pmbEg6": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": true,
+            "image": "shopify://shop_images/Heart_a93db5a8-bda7-491e-883a-c5a0b9db2f83.svg",
+            "title": "Made by Moms, Loved by Parents Everywhere",
+            "text": "<p>Made by twin sisters and self-proclaimed picky moms who get it, our products are real-life tested to stand up to anything life - and kids -  throw at ’em.</p>",
+            "button_label": "",
+            "link": ""
+          }
+        },
+        "text_block_tFgzTX": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": true,
+            "image": "shopify://shop_images/Medal.svg",
+            "title": "Helping Families Hit the Big (and Small) Milestones Since 2015",
+            "text": "<p>From first smiles to first foods, we’ve been there for the baby moments you’ll never forget—and the parenting ones you wish you could (IYKYK). From teething to sleep regressions and everything in between, we’re here to make it all a little easier.</p>",
+            "button_label": "",
+            "link": ""
+          }
+        },
+        "text_block_EgmCLD": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": true,
+            "image": "shopify://shop_images/Happy.svg",
+            "title": "Safe for Baby, Approved by Grown-Ups",
+            "text": "<p>We only use premium, non-toxic, safety-tested materials—like buttery soft TENCEL™ Lyocell and 100% food-grade silicone—so you can stress less, snuggle more, and actually enjoy the messy magic of parenthood.</p>",
+            "button_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_pmbEg6",
+        "text_block_tFgzTX",
+        "text_block_EgmCLD"
+      ],
+      "custom_css": [
+        ".img-ar--cover img {object-fit: fill;}"
+      ],
+      "name": "Company Message",
+      "settings": {
+        "title": "",
+        "media_aspect_ratio": "s",
+        "media_width": 60,
+        "text_alignment": "center",
+        "button_style": "primary",
+        "color_scheme": "default"
       }
     },
     "featured_collection_AhBPDp": {
