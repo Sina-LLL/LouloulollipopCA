@@ -211,7 +211,7 @@
     "custom_product_highlight_ECrHhc": {
       "type": "custom-product-highlight",
       "settings": {
-        "title": "Bundle up and Save",
+        "title": "Bundle up",
         "text": "<p>Everything Baby Needs — All Wrapped Up </p>",
         "image": "shopify://shop_images/Gift_Box_1.jpg",
         "order": false,
