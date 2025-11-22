@@ -14,6 +14,22 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_br7kCm": {
+          "type": "announcement",
+          "settings": {
+            "text": "<a href=\"/collections/best-sellers\" title=\"Best Sellers\">Up to 25% Off Everything</a>",
+            "show_countdown": true,
+            "hide_on_end": false,
+            "end_date": "2025-12-02",
+            "end_time": "",
+            "number_font": "base",
+            "countdown_separator": "dash",
+            "use_custom_colors": false,
+            "bg_color": "#927c70",
+            "bg_gradient": "",
+            "text_color": "#ffffff"
+          }
+        },
         "announcement_UNfB4d": {
           "type": "announcement",
           "disabled": true,
@@ -50,6 +66,7 @@
         },
         "announcement-1": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Free Standard Shipping $100+",
             "show_countdown": false,
@@ -66,6 +83,7 @@
         },
         "announcement_3B8XC7": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "🇨🇦 Proudly Canadian, Since 2015 🇨🇦",
             "show_countdown": false,
@@ -99,6 +117,7 @@
         }
       },
       "block_order": [
+        "announcement_br7kCm",
         "announcement_UNfB4d",
         "announcement_4aPW9X",
         "announcement-1",
@@ -106,7 +125,7 @@
         "announcement-2"
       ],
       "settings": {
-        "message_font_size": 14,
+        "message_font_size": 16,
         "announcement_bar_col": "#6a8b95",
         "announcement_bar_gradient": "",
         "announcement_text_col": "#faf9f6",
