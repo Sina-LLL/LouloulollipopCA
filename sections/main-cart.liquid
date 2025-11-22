@@ -399,12 +399,13 @@
                 You're saving <strong>20% </strong>🎉  <br>
                 Add ${{ diff_cents | money_without_currency }} more to unlock <strong>25% off</strong>.
               </p>
-              {% elsif cart_total_cents < 6500 %}
-              {% assign diff_cents = 6500 | minus: cart_total_cents %}
+            {% elsif cart_total_cents < 10000 %}
+              {% assign diff_cents = 10000 | minus: cart_total_cents %}
               <p>
                 You're saving <strong>25%</strong> 🎉  <br>
                 Add ${{ diff_cents | money_without_currency }} more to unlock <strong>Free Shipping!</strong>
               </p>
+              
             {% else %}
               <p>
                 You've unlocked <strong>25% off with free shipping<br> Our biggest Black Friday savings!</strong> 🎉
