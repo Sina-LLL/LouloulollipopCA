@@ -154,17 +154,7 @@
           "settings": {
             "collection": "sleep-bags",
             "tag": "",
-            "image": "shopify://shop_images/LuluLollipopEdits-09852.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_hz9HMV": {
-          "type": "collection",
-          "settings": {
-            "collection": "sleepers",
-            "tag": "",
-            "image": "shopify://shop_images/LuluLollipopEdits-08472.jpg",
+            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Holiday_2024_-Web-9_1.png",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -175,6 +165,16 @@
             "collection": "suction-plates",
             "tag": "",
             "image": "shopify://shop_images/LuluLollipopEdits-01064.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_hz9HMV": {
+          "type": "collection",
+          "settings": {
+            "collection": "sleepers",
+            "tag": "",
+            "image": "shopify://shop_images/LoulouLollipopNov2025Holiday-01642_1.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -192,8 +192,8 @@
       },
       "block_order": [
         "collection_yYMgCY",
-        "collection_hz9HMV",
         "collection_RkFVdV",
+        "collection_hz9HMV",
         "collection_778Cxg"
       ],
       "settings": {
