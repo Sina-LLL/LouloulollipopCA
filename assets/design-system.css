@@ -1,4 +1,7 @@
-/* Main style overrides to adher to design system */
+/* Main style overrides to adhere to design system */
+*{
+  font-display: swap;
+}
 
 h1,.h1,
 h2,.h2,
