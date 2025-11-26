@@ -508,7 +508,7 @@
                         </button> 
                       </div>
 
-                  <div id="mr-add-to-registry-{{ product.id }}" class="shopify-app-block shopify-app-block--mr-add-to-reg">
+                  {% comment %} <div id="mr-add-to-registry-{{ product.id }}" class="shopify-app-block shopify-app-block--mr-add-to-reg">
                   <button
                     data-id="btnMrAddtoReg-{{ product.id }}"
                     class="myregistry-add-button button"
@@ -579,7 +579,7 @@
 #shopify-block-AWDJFbUw3WGd2LzlGL__advanced_myregistry_functions_add_to_registry_yJgEkG {
     display: none;
 }          
-</style>
+</style> {% endcomment %}
                       <div class="product-free-shipping__container">
                         <div class="product-free-shipping__messages">
                           {% render 'icon-shipping' %}
