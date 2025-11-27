@@ -893,6 +893,7 @@ cart-form .page-header:not(.page-header--with-background){
     justify-content: center;
   }
 }
+
 /* Carousel edits */
 .slider--no-max{
   padding-left: var(--container-pad-x);
