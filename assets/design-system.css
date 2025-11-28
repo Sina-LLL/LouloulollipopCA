@@ -772,7 +772,9 @@ h1.product-title {
   border-radius:10px;
 }
 
-
+.related-collection-links--buttons {
+  justify-content: space-around; 
+}
 
 
 /* Filters */
