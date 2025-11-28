@@ -4,7 +4,7 @@
 <!--  -->
 
 
-<div data-section-id="{{ section.id }}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%} class="TEST">
+<div data-section-id="{{ section.id }}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%} class="">
 {% paginate collection.products by section.settings.coll_num_per_page_int %}
 
 {%- liquid
@@ -151,7 +151,7 @@
         <div class="text-overlay__inner">
           <div class="text-overlay__text">
             {%- if section.settings.show_title -%}
-              <h1 class="text-overlay__title super-large-text">{{ collection.title | escape }}</h1>
+              <h1 class="h2 text-overlay__title super-large-text">{{ collection.title | escape }}</h1>
             {%- endif -%}
 
             {% if collection.description != blank and section.settings.coll_desc_pos == 'above' %}
