@@ -256,9 +256,9 @@
       "type": "featured-collection",
       "name": "Carousel",
       "settings": {
-        "title": "Our Best Selling Products",
-        "text": "<p>Shop Our Most-Loved Essentials</p>",
-        "collection": "best-sellers",
+        "title": "Giftable bundles",
+        "text": "<p>Perfectly paired bundles for easy gifting</p>",
+        "collection": "bundles-and-sets",
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 5,
