@@ -256,7 +256,7 @@
       "type": "featured-collection",
       "name": "Carousel",
       "settings": {
-        "title": "Giftable bundles",
+        "title": "Gift-able Bundles",
         "text": "<p>Perfectly paired bundles for easy gifting</p>",
         "collection": "bundles-and-sets",
         "show_vendor": false,
