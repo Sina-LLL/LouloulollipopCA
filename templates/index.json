@@ -107,10 +107,10 @@
         "image_TKJkRj": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Holiday_2024_-Web-38_9557db19-f7bc-46ca-9802-cb4c11b61903.jpg",
-            "mobile_image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Holiday_2024_-Web-38_8af10d3e-b37e-450e-b76f-dd6e4a6a6aba.jpg",
+            "image": "shopify://shop_images/LuluLollipopEdits-08853_89334399-1c28-4ae1-ba03-9988daf35334.jpg",
+            "mobile_image": "shopify://shop_images/LuluLollipopEdits-08853_1eff6383-fa25-4609-8ff8-350435cf568f.jpg",
             "slide_link": "",
-            "subheading": "BLACK FRIDAY IS HERE",
+            "subheading": "CYBER MONDAY SALE",
             "title": "Up To 25% Off Everything",
             "heading_max_width": 10,
             "title_size": 72,
@@ -220,8 +220,8 @@
       "name": "Featured collection",
       "settings": {
         "title": "Sale On Sale",
-        "text": "<p>Our sale section gets extra Black Friday savings</p>",
-        "collection": "",
+        "text": "<p>Our sale section gets extra Cyber Monday savings</p>",
+        "collection": "sale",
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 4,
@@ -238,13 +238,13 @@
       "settings": {
         "title": "Top Gifts for Newborns",
         "text": "<p>Loved by parents. Perfect for gifting.</p>",
-        "image": "shopify://shop_images/LoulouLollipopNov2025Holiday-00358.jpg",
+        "image": "shopify://shop_images/LoulouLollipopNov2025Holiday--2_1.jpg",
         "order": false,
         "product_list": [
-          "sleeper-forest-families",
-          "sleeper-stargazing-bear",
-          "hooded-towel-set-bears-on-bikes",
-          "snack-plate-bailey-bunny"
+          "tencel-sleep-bag-1-0-tog-forest-families",
+          "muslin-swaddle-forest-families",
+          "tencel-sleep-bag-2-5-tog-stargazing-bear",
+          "muslin-quilt-stargazing-bear"
         ],
         "button_label": "Shop Top Newborn Gifts",
         "link": "shopify://collections/top-newborn-gifts",
