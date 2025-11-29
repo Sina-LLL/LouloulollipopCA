@@ -17,6 +17,9 @@ h6,.h6,
 .toggle-btn,
 .filter-group__heading__text{
 }
+.bold{
+  font-weight:600;
+}
 body{
   font-family: sofia-pro, sans-serif;
 }
@@ -766,12 +769,15 @@ h1.product-title {
 }
 .btn--secondary{
   border:none;
+  font-weight:600;
 }
 .custom-product-features .theme-img{
   border-radius:10px;
 }
 
-
+.related-collection-links--buttons {
+  justify-content: space-around; 
+}
 
 
 /* Filters */
