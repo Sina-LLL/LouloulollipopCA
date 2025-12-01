@@ -68,7 +68,7 @@
         "title": "Try one of these instead:",
         "text": "",
         "text_alignment": "center",
-        "enable_carousel": true,
+        "enable_carousel": false,
         "grid": 4,
         "color_scheme": "default",
         "full_width": true,
