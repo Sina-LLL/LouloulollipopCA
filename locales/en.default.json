@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "general": {
     "localization": {
@@ -193,9 +202,9 @@
   },
   "templates": {
     "404": {
-      "title": "Page not found",
-      "subtext": "Sorry, the page you requested does not exist.",
-      "link": "Back to home"
+      "title": " 404 - This Page is Snuggled Somewhere Else",
+      "subtext": "Looks like this little page wrapped itself in a blanket and drifted off. But don’t worry — we have plenty of adorable outfits and baby essentials wide awake and ready for you.",
+      "link": ""
     },
     "password": {
       "general": {
