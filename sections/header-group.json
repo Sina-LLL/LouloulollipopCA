@@ -82,9 +82,8 @@
         },
         "announcement-2": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
-            "text": "Every purchase gives back",
+            "text": "✨ Order by Dec 10 (regional/Remote) or Dec 16 (major cities) for holiday delivery!",
             "show_countdown": false,
             "hide_on_end": false,
             "end_date": "",
