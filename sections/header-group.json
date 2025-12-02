@@ -14,6 +14,22 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_br7kCm": {
+          "type": "announcement",
+          "settings": {
+            "text": "<a href=\"/collections/best-sellers\" title=\"Best Sellers\">Black Friday Sale Up to 25% Off</a>",
+            "show_countdown": true,
+            "hide_on_end": false,
+            "end_date": "2025-11-30",
+            "end_time": "",
+            "number_font": "base",
+            "countdown_separator": "dash",
+            "use_custom_colors": false,
+            "bg_color": "#927c70",
+            "bg_gradient": "",
+            "text_color": "#ffffff"
+          }
+        },
         "announcement_UNfB4d": {
           "type": "announcement",
           "disabled": true,
@@ -33,6 +49,7 @@
         },
         "announcement_4aPW9X": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Shipping Alert! We are temporarily unable to ship to PO Boxes and some rural addresses due to a potential work stoppage at Canada Post.",
             "show_countdown": false,
@@ -49,6 +66,7 @@
         },
         "announcement-1": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Free Standard Shipping $100+",
             "show_countdown": false,
@@ -65,6 +83,7 @@
         },
         "announcement_3B8XC7": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "🇨🇦 Proudly Canadian, Since 2015 🇨🇦",
             "show_countdown": false,
@@ -98,6 +117,7 @@
         }
       },
       "block_order": [
+        "announcement_br7kCm",
         "announcement_UNfB4d",
         "announcement_4aPW9X",
         "announcement-1",
@@ -105,8 +125,8 @@
         "announcement-2"
       ],
       "settings": {
-        "message_font_size": 14,
-        "announcement_bar_col": "#6a8b95",
+        "message_font_size": 16,
+        "announcement_bar_col": "#927c70",
         "announcement_bar_gradient": "",
         "announcement_text_col": "#faf9f6",
         "show_social_icons": true,
@@ -297,7 +317,7 @@
         "mobile_logo_img_width_int": 180,
         "logo_h1": false,
         "enable_sticky": true,
-        "enable_transparent": true,
+        "enable_transparent": false,
         "transparent_color": "#ffffff",
         "transparent_logo": "shopify://shop_images/LLL-Logo_4x_90f5864f-2593-450c-9169-7190aa86050b.png",
         "menu_linklist": "2025_main-menu-v2",
