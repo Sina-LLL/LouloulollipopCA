@@ -229,7 +229,7 @@
         "color_scheme": "default",
         "show_view_all": true,
         "full_width": false,
-        "text_alignment": "center"
+        "text_alignment": "start"
       }
     },
     "custom_product_highlight_KJfQCU": {
@@ -265,126 +265,6 @@
         "show_view_all": true,
         "full_width": true,
         "text_alignment": "start"
-      }
-    },
-    "collection_list_zeWU77": {
-      "type": "collection-list",
-      "blocks": {
-        "collection_LyXpXp": {
-          "type": "collection",
-          "settings": {
-            "collection": "gifts-under-50",
-            "tag": "",
-            "image": "shopify://shop_images/LSET-010-MNT_Learning_Utensils_Set_Octopus_51_4_f3df1f41-8aee-48fc-8487-62bccfe398bb.jpg",
-            "subheading": "",
-            "button_label": ""
-          }
-        },
-        "collection_QANhae": {
-          "type": "collection",
-          "settings": {
-            "collection": "top-prints",
-            "tag": "",
-            "image": "shopify://shop_images/BA1002U.SHK_Sleeper_Sharks_52_570cfafb-2566-4f8c-aeb8-d43d78cf7e6d.jpg",
-            "subheading": "",
-            "button_label": ""
-          }
-        },
-        "collection_ELdjcd": {
-          "type": "collection",
-          "settings": {
-            "collection": "top-rated-sleep",
-            "tag": "",
-            "image": "shopify://shop_images/LuluLollipopEdits-09189_ec38f562-eca4-4efd-b40f-4718607c1d61.jpg",
-            "subheading": "",
-            "button_label": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection_LyXpXp",
-        "collection_QANhae",
-        "collection_ELdjcd"
-      ],
-      "settings": {
-        "title": "",
-        "text": "",
-        "text_alignment": "center",
-        "enable_carousel": false,
-        "grid": 3,
-        "color_scheme": "default",
-        "full_width": true,
-        "coll_grid_image_shape": "landscape-54",
-        "coll_grid_image_position": "top center",
-        "coll_thumb_mob_per_row": "1",
-        "coll_grid_show_count": false,
-        "coll_text_position": "over-shadow",
-        "coll_text_position_under_mobile": false,
-        "coll_thumb_text_align_x": "center",
-        "coll_thumb_text_align_y": "bottom",
-        "coll_button_style": "primary"
-      }
-    },
-    "logo_list_kYmwNX": {
-      "type": "logo-list",
-      "blocks": {
-        "logo_Pb9irB": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/logo.dc34ecc.svg",
-            "image_width": 150,
-            "link": "https://www.goodhousekeeping.com/childrens-products/a65382807/parenting-awards-baby-2025/",
-            "title": ""
-          }
-        },
-        "logo_mQKag7": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/the-everymom-logo.png",
-            "image_width": 190,
-            "link": "https://theeverymom.com/registry-awards/",
-            "title": ""
-          }
-        },
-        "logo_3E4WaJ": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Parents_idf45riGiK_0.png",
-            "image_width": 150,
-            "link": "https://www.parents.com/best-for-baby-awards-2025-feeding-11719843",
-            "title": ""
-          }
-        },
-        "logo_KwwATQ": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/BabyList-Logo.png",
-            "image_width": 150,
-            "link": "https://www.babylist.com/store/b/loulou-lollipop/919",
-            "title": ""
-          }
-        },
-        "logo_m3DkDJ": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/tinybeans-Logo.png",
-            "image_width": 150,
-            "link": "https://tinybeans.com/best-gifts-for-newborns/",
-            "title": ""
-          }
-        }
-      },
-      "block_order": [
-        "logo_Pb9irB",
-        "logo_mQKag7",
-        "logo_3E4WaJ",
-        "logo_KwwATQ",
-        "logo_m3DkDJ"
-      ],
-      "settings": {
-        "title": "As Seen In",
-        "image_opacity": 100,
-        "color_scheme": "default"
       }
     },
     "collection_list_TTPNQi": {
@@ -453,6 +333,126 @@
         "coll_text_position_under_mobile": false,
         "coll_thumb_text_align_x": "center",
         "coll_thumb_text_align_y": "center",
+        "coll_button_style": "primary"
+      }
+    },
+    "logo_list_kYmwNX": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_Pb9irB": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/logo.dc34ecc.svg",
+            "image_width": 150,
+            "link": "https://www.goodhousekeeping.com/childrens-products/a65382807/parenting-awards-baby-2025/",
+            "title": ""
+          }
+        },
+        "logo_mQKag7": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/the-everymom-logo.png",
+            "image_width": 190,
+            "link": "https://theeverymom.com/registry-awards/",
+            "title": ""
+          }
+        },
+        "logo_3E4WaJ": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Parents_idf45riGiK_0.png",
+            "image_width": 150,
+            "link": "https://www.parents.com/best-for-baby-awards-2025-feeding-11719843",
+            "title": ""
+          }
+        },
+        "logo_KwwATQ": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/BabyList-Logo.png",
+            "image_width": 150,
+            "link": "https://www.babylist.com/store/b/loulou-lollipop/919",
+            "title": ""
+          }
+        },
+        "logo_m3DkDJ": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/tinybeans-Logo.png",
+            "image_width": 150,
+            "link": "https://tinybeans.com/best-gifts-for-newborns/",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_Pb9irB",
+        "logo_mQKag7",
+        "logo_3E4WaJ",
+        "logo_KwwATQ",
+        "logo_m3DkDJ"
+      ],
+      "settings": {
+        "title": "As Seen In",
+        "image_opacity": 100,
+        "color_scheme": "default"
+      }
+    },
+    "collection_list_zeWU77": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_LyXpXp": {
+          "type": "collection",
+          "settings": {
+            "collection": "gifts-under-50",
+            "tag": "",
+            "image": "shopify://shop_images/LSET-010-MNT_Learning_Utensils_Set_Octopus_51_4_f3df1f41-8aee-48fc-8487-62bccfe398bb.jpg",
+            "subheading": "",
+            "button_label": ""
+          }
+        },
+        "collection_QANhae": {
+          "type": "collection",
+          "settings": {
+            "collection": "top-prints",
+            "tag": "",
+            "image": "shopify://shop_images/BA1002U.SHK_Sleeper_Sharks_52_570cfafb-2566-4f8c-aeb8-d43d78cf7e6d.jpg",
+            "subheading": "",
+            "button_label": ""
+          }
+        },
+        "collection_ELdjcd": {
+          "type": "collection",
+          "settings": {
+            "collection": "top-rated-sleep",
+            "tag": "",
+            "image": "shopify://shop_images/LuluLollipopEdits-09189_ec38f562-eca4-4efd-b40f-4718607c1d61.jpg",
+            "subheading": "",
+            "button_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_LyXpXp",
+        "collection_QANhae",
+        "collection_ELdjcd"
+      ],
+      "settings": {
+        "title": "",
+        "text": "",
+        "text_alignment": "center",
+        "enable_carousel": false,
+        "grid": 3,
+        "color_scheme": "default",
+        "full_width": true,
+        "coll_grid_image_shape": "landscape-54",
+        "coll_grid_image_position": "top center",
+        "coll_thumb_mob_per_row": "1",
+        "coll_grid_show_count": false,
+        "coll_text_position": "over-shadow",
+        "coll_text_position_under_mobile": false,
+        "coll_thumb_text_align_x": "center",
+        "coll_thumb_text_align_y": "bottom",
         "coll_button_style": "primary"
       }
     },
