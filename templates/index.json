@@ -107,24 +107,24 @@
         "image_TKJkRj": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/LuluLollipopEdits-08853_89334399-1c28-4ae1-ba03-9988daf35334.jpg",
-            "mobile_image": "shopify://shop_images/LuluLollipopEdits-08853_1eff6383-fa25-4609-8ff8-350435cf568f.jpg",
+            "image": "shopify://shop_images/Hero-dec_2.jpg",
+            "mobile_image": "shopify://shop_images/Hero_Mobile_-_Dec.jpg",
             "slide_link": "",
-            "subheading": "CYBER MONDAY SALE",
-            "title": "Up To 25% Off Everything",
+            "subheading": "It's Gifting Season",
+            "title": "Find The Perfect Gifts For Newborns",
             "heading_max_width": 10,
             "title_size": 72,
-            "title_size_mobile": 36,
+            "title_size_mobile": 34,
             "use_h1": true,
             "text": "",
             "enlarge_text": true,
-            "button_label_1": "Shop Best Sellers",
-            "button_url_1": "shopify://collections/best-sellers",
+            "button_label_1": "Shop Newborn Gifts",
+            "button_url_1": "shopify://collections/top-newborn-gifts",
             "button_tag_1": "",
-            "button_label_2": "Shop Top Gifts",
-            "button_url_2": "shopify://collections/top-gifts",
+            "button_label_2": "Shop Newborn Bundles",
+            "button_url_2": "shopify://collections/newborn-bundles",
             "button_tag_2": "",
-            "text_alignment": "center center"
+            "text_alignment": "center left"
           }
         }
       },
@@ -134,7 +134,7 @@
       "name": "Slideshow",
       "settings": {
         "height": "fixed",
-        "height_desktop": 600,
+        "height_desktop": 760,
         "height_mobile": 600,
         "full_width": true,
         "mobile_overlay_under": false,
@@ -154,17 +154,7 @@
           "settings": {
             "collection": "sleep-bags",
             "tag": "",
-            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Holiday_2024_-Web-9_1_52363420-97b3-4fd9-85c1-d14c824b2275.png",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_RkFVdV": {
-          "type": "collection",
-          "settings": {
-            "collection": "suction-plates",
-            "tag": "",
-            "image": "shopify://shop_images/LuluLollipopEdits-01064.jpg",
+            "image": "shopify://shop_images/LoulouLollipopNov2025Holiday-01750.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -172,9 +162,9 @@
         "collection_hz9HMV": {
           "type": "collection",
           "settings": {
-            "collection": "sleepers",
+            "collection": "pajamas",
             "tag": "",
-            "image": "shopify://shop_images/LoulouLollipopNov2025Holiday-01642_1_9a78c62f-09ee-4312-8cc5-b348948ebaa0.jpg",
+            "image": "shopify://shop_images/LoulouLollipopNov2025Holiday-01357.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -184,7 +174,17 @@
           "settings": {
             "collection": "long-sleeve-bibs",
             "tag": "",
-            "image": "shopify://shop_images/LuluLollipopEdits-08796.jpg",
+            "image": "shopify://shop_images/LSBIBSHK_Long_Sleeve_Bib_Sharks_54.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_RkFVdV": {
+          "type": "collection",
+          "settings": {
+            "collection": "silicone-bibs",
+            "tag": "",
+            "image": "shopify://shop_images/SILBIBAVOPP_Silicone_Bib_Printed_-_Avocado_51.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -192,12 +192,12 @@
       },
       "block_order": [
         "collection_yYMgCY",
-        "collection_RkFVdV",
         "collection_hz9HMV",
-        "collection_778Cxg"
+        "collection_778Cxg",
+        "collection_RkFVdV"
       ],
       "settings": {
-        "title": "Shop the Highlights",
+        "title": "Shop the Essentials",
         "text": "<p>Your go-to essentials for gifting, newborns, and everyday comfort</p>",
         "text_alignment": "start",
         "enable_carousel": false,
@@ -219,8 +219,8 @@
       "type": "featured-collection",
       "name": "Featured collection",
       "settings": {
-        "title": "Sale On Sale",
-        "text": "<p>Our sale section gets extra Cyber Monday savings</p>",
+        "title": "Holiday Deals Are Still Live",
+        "text": "<p>Gift-worthy picks at rare prices — while inventory lasts</p>",
         "collection": "sale",
         "show_vendor": false,
         "enable_carousel": true,
@@ -236,18 +236,16 @@
       "type": "custom-product-highlight",
       "name": "Highlighted Collection",
       "settings": {
-        "title": "Top Gifts for Newborns",
-        "text": "<p>Loved by parents. Perfect for gifting.</p>",
-        "image": "shopify://shop_images/LoulouLollipopNov2025Holiday--2_1.jpg",
+        "title": "Meet Wolfie",
+        "text": "<p>Our beloved icon is here to lead the pack</p>",
+        "image": "shopify://shop_images/WTR-WOF_WildTeether_Wolfie_01.jpg",
         "order": false,
         "product_list": [
-          "tencel-sleep-bag-1-0-tog-forest-families",
-          "muslin-swaddle-forest-families",
-          "tencel-sleep-bag-2-5-tog-stargazing-bear",
-          "muslin-quilt-stargazing-bear"
+          "wolfie-plush-bag-charm-smoke-blue",
+          "wolfie-plush-bag-charm-pink"
         ],
-        "button_label": "Shop Top Newborn Gifts",
-        "link": "shopify://collections/top-newborn-gifts",
+        "button_label": "Shop Wolfie",
+        "link": "shopify://collections/wolfie",
         "button_style": "primary",
         "color_scheme": "default"
       }
@@ -1199,9 +1197,9 @@
     "featured_collection_6Nn87z",
     "custom_product_highlight_KJfQCU",
     "featured_collection_HNkD47",
-    "collection_list_zeWU77",
-    "logo_list_kYmwNX",
     "collection_list_TTPNQi",
+    "logo_list_kYmwNX",
+    "collection_list_zeWU77",
     "collection_list_zhMrUA",
     "logo_list_ywatnw",
     "testimonials_QcyQ3m",
