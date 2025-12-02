@@ -252,6 +252,7 @@
     },
     "featured_collection_HNkD47": {
       "type": "featured-collection",
+      "disabled": true,
       "name": "Carousel",
       "settings": {
         "title": "Gift-able Bundles",
@@ -265,6 +266,232 @@
         "show_view_all": true,
         "full_width": true,
         "text_alignment": "start"
+      }
+    },
+    "collection_list_zhMrUA": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_gTBabQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "forest-families",
+            "tag": "",
+            "subheading": "Forest Families",
+            "button_label": ""
+          }
+        },
+        "collection_ExCE9F": {
+          "type": "collection",
+          "settings": {
+            "collection": "stargazing-bear",
+            "tag": "",
+            "subheading": "Stargazing Bear",
+            "button_label": ""
+          }
+        },
+        "collection_qCHi4r": {
+          "type": "collection",
+          "settings": {
+            "collection": "dancing-dragonflies",
+            "tag": "",
+            "subheading": "Dancing Dragonflies",
+            "button_label": ""
+          }
+        },
+        "collection_NghHmQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "dinosaur-stomp",
+            "tag": "",
+            "subheading": "Dinosaur Stomp",
+            "button_label": ""
+          }
+        },
+        "collection_FhR9Rc": {
+          "type": "collection",
+          "settings": {
+            "collection": "magical-dragons",
+            "tag": "",
+            "subheading": "Magical Dragons",
+            "button_label": ""
+          }
+        },
+        "collection_m7DJDa": {
+          "type": "collection",
+          "settings": {
+            "collection": "unicorn-ballet",
+            "tag": "",
+            "subheading": "Unicorn Ballet",
+            "button_label": ""
+          }
+        },
+        "collection_dGF3f4": {
+          "type": "collection",
+          "settings": {
+            "collection": "alphabet-smiles",
+            "tag": "",
+            "subheading": "Alphabet Smiles",
+            "button_label": ""
+          }
+        },
+        "collection_rc8zw8": {
+          "type": "collection",
+          "settings": {
+            "collection": "canada",
+            "tag": "",
+            "subheading": "O Canada",
+            "button_label": ""
+          }
+        },
+        "collection_aHLB8h": {
+          "type": "collection",
+          "settings": {
+            "collection": "smiley-sharks",
+            "tag": "",
+            "subheading": "Smiley Sharks",
+            "button_label": ""
+          }
+        },
+        "collection_eU9Ecq": {
+          "type": "collection",
+          "settings": {
+            "collection": "mermaids",
+            "tag": "",
+            "subheading": "Mermaids",
+            "button_label": ""
+          }
+        },
+        "collection_3hmwzf": {
+          "type": "collection",
+          "settings": {
+            "collection": "ocean-explorer",
+            "tag": "",
+            "subheading": "Ocean Explorer",
+            "button_label": ""
+          }
+        },
+        "collection_hcDexP": {
+          "type": "collection",
+          "settings": {
+            "collection": "painterly-seahorses",
+            "tag": "",
+            "subheading": "Painterly Seahorses",
+            "button_label": ""
+          }
+        },
+        "collection_CXEmHx": {
+          "type": "collection",
+          "settings": {
+            "collection": "safari-jungle",
+            "tag": "",
+            "subheading": "Safari Jungle",
+            "button_label": ""
+          }
+        },
+        "collection_erNL4a": {
+          "type": "collection",
+          "settings": {
+            "collection": "peaches",
+            "tag": "",
+            "subheading": "",
+            "button_label": ""
+          }
+        },
+        "collection_FQR9KE": {
+          "type": "collection",
+          "settings": {
+            "collection": "planets",
+            "tag": "",
+            "subheading": "Planets",
+            "button_label": ""
+          }
+        },
+        "collection_HYRWrg": {
+          "type": "collection",
+          "settings": {
+            "collection": "sushi",
+            "tag": "",
+            "subheading": "Sushi",
+            "button_label": ""
+          }
+        },
+        "collection_dqkine": {
+          "type": "collection",
+          "settings": {
+            "collection": "french-breakfast",
+            "tag": "",
+            "subheading": "French Breakfast",
+            "button_label": ""
+          }
+        },
+        "collection_iyjCCb": {
+          "type": "collection",
+          "settings": {
+            "collection": "bears-on-bikes",
+            "tag": "",
+            "subheading": "Bears on Bikes",
+            "button_label": ""
+          }
+        },
+        "collection_ntR4RL": {
+          "type": "collection",
+          "settings": {
+            "collection": "bumble-bees",
+            "tag": "",
+            "subheading": "Bumble Bees",
+            "button_label": ""
+          }
+        },
+        "collection_dHNH3W": {
+          "type": "collection",
+          "settings": {
+            "collection": "hedgehogs",
+            "tag": "",
+            "subheading": "Hedgehogs",
+            "button_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_gTBabQ",
+        "collection_ExCE9F",
+        "collection_qCHi4r",
+        "collection_NghHmQ",
+        "collection_FhR9Rc",
+        "collection_m7DJDa",
+        "collection_dGF3f4",
+        "collection_rc8zw8",
+        "collection_aHLB8h",
+        "collection_eU9Ecq",
+        "collection_3hmwzf",
+        "collection_hcDexP",
+        "collection_CXEmHx",
+        "collection_erNL4a",
+        "collection_FQR9KE",
+        "collection_HYRWrg",
+        "collection_dqkine",
+        "collection_iyjCCb",
+        "collection_ntR4RL",
+        "collection_dHNH3W"
+      ],
+      "name": "Shop by Print",
+      "settings": {
+        "title": "Shop by Print",
+        "text": "",
+        "text_alignment": "start",
+        "enable_carousel": true,
+        "grid": 5,
+        "color_scheme": "default",
+        "full_width": true,
+        "coll_grid_image_shape": "square",
+        "coll_grid_image_position": "center center",
+        "coll_thumb_mob_per_row": "2",
+        "coll_grid_show_count": false,
+        "coll_text_position": "below",
+        "coll_text_position_under_mobile": false,
+        "coll_thumb_text_align_x": "center",
+        "coll_thumb_text_align_y": "center",
+        "coll_button_style": "primary"
       }
     },
     "collection_list_TTPNQi": {
@@ -295,7 +522,7 @@
           "settings": {
             "collection": "eat",
             "tag": "",
-            "image": "shopify://shop_images/SPL-009-BFG_SnackPlate-Sharks_52_f3a0b0af-ded9-4cc9-938a-fa58d0a48236.jpg",
+            "image": "shopify://shop_images/LSBIBDSF_Long_Sleeve_Bib_-_Ditsy_Floral_51jpg.jpg",
             "subheading": "Feeding",
             "button_label": ""
           }
@@ -453,233 +680,6 @@
         "coll_text_position_under_mobile": false,
         "coll_thumb_text_align_x": "center",
         "coll_thumb_text_align_y": "bottom",
-        "coll_button_style": "primary"
-      }
-    },
-    "collection_list_zhMrUA": {
-      "type": "collection-list",
-      "blocks": {
-        "collection_gTBabQ": {
-          "type": "collection",
-          "settings": {
-            "collection": "forest-families",
-            "tag": "",
-            "subheading": "Forest Families",
-            "button_label": ""
-          }
-        },
-        "collection_qCHi4r": {
-          "type": "collection",
-          "settings": {
-            "collection": "dancing-dragonflies",
-            "tag": "",
-            "subheading": "Dancing Dragonflies",
-            "button_label": ""
-          }
-        },
-        "collection_NghHmQ": {
-          "type": "collection",
-          "settings": {
-            "collection": "dinosaur-stomp",
-            "tag": "",
-            "subheading": "Dinosaur Stomp",
-            "button_label": ""
-          }
-        },
-        "collection_FhR9Rc": {
-          "type": "collection",
-          "settings": {
-            "collection": "magical-dragons",
-            "tag": "",
-            "subheading": "Magical Dragons",
-            "button_label": ""
-          }
-        },
-        "collection_m7DJDa": {
-          "type": "collection",
-          "settings": {
-            "collection": "unicorn-ballet",
-            "tag": "",
-            "subheading": "Unicorn Ballet",
-            "button_label": ""
-          }
-        },
-        "collection_ExCE9F": {
-          "type": "collection",
-          "settings": {
-            "collection": "stargazing-bear",
-            "tag": "",
-            "subheading": "Stargazing Bear",
-            "button_label": ""
-          }
-        },
-        "collection_dGF3f4": {
-          "type": "collection",
-          "settings": {
-            "collection": "alphabet-smiles",
-            "tag": "",
-            "subheading": "Alphabet Smiles",
-            "button_label": ""
-          }
-        },
-        "collection_rc8zw8": {
-          "type": "collection",
-          "settings": {
-            "collection": "canada",
-            "tag": "",
-            "subheading": "O Canada",
-            "button_label": ""
-          }
-        },
-        "collection_aHLB8h": {
-          "type": "collection",
-          "settings": {
-            "collection": "smiley-sharks",
-            "tag": "",
-            "subheading": "Smiley Sharks",
-            "button_label": ""
-          }
-        },
-        "collection_eU9Ecq": {
-          "type": "collection",
-          "settings": {
-            "collection": "mermaids",
-            "tag": "",
-            "subheading": "Mermaids",
-            "button_label": ""
-          }
-        },
-        "collection_3hmwzf": {
-          "type": "collection",
-          "settings": {
-            "collection": "ocean-explorer",
-            "tag": "",
-            "subheading": "Ocean Explorer",
-            "button_label": ""
-          }
-        },
-        "collection_hcDexP": {
-          "type": "collection",
-          "settings": {
-            "collection": "painterly-seahorses",
-            "tag": "",
-            "subheading": "Painterly Seahorses",
-            "button_label": ""
-          }
-        },
-        "collection_CXEmHx": {
-          "type": "collection",
-          "settings": {
-            "collection": "safari-jungle",
-            "tag": "",
-            "subheading": "Safari Jungle",
-            "button_label": ""
-          }
-        },
-        "collection_erNL4a": {
-          "type": "collection",
-          "settings": {
-            "collection": "peaches",
-            "tag": "",
-            "subheading": "",
-            "button_label": ""
-          }
-        },
-        "collection_FQR9KE": {
-          "type": "collection",
-          "settings": {
-            "collection": "planets",
-            "tag": "",
-            "subheading": "Planets",
-            "button_label": ""
-          }
-        },
-        "collection_HYRWrg": {
-          "type": "collection",
-          "settings": {
-            "collection": "sushi",
-            "tag": "",
-            "subheading": "Sushi",
-            "button_label": ""
-          }
-        },
-        "collection_dqkine": {
-          "type": "collection",
-          "settings": {
-            "collection": "french-breakfast",
-            "tag": "",
-            "subheading": "French Breakfast",
-            "button_label": ""
-          }
-        },
-        "collection_iyjCCb": {
-          "type": "collection",
-          "settings": {
-            "collection": "bears-on-bikes",
-            "tag": "",
-            "subheading": "Bears on Bikes",
-            "button_label": ""
-          }
-        },
-        "collection_ntR4RL": {
-          "type": "collection",
-          "settings": {
-            "collection": "bumble-bees",
-            "tag": "",
-            "subheading": "Bumble Bees",
-            "button_label": ""
-          }
-        },
-        "collection_dHNH3W": {
-          "type": "collection",
-          "settings": {
-            "collection": "hedgehogs",
-            "tag": "",
-            "subheading": "Hedgehogs",
-            "button_label": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection_gTBabQ",
-        "collection_qCHi4r",
-        "collection_NghHmQ",
-        "collection_FhR9Rc",
-        "collection_m7DJDa",
-        "collection_ExCE9F",
-        "collection_dGF3f4",
-        "collection_rc8zw8",
-        "collection_aHLB8h",
-        "collection_eU9Ecq",
-        "collection_3hmwzf",
-        "collection_hcDexP",
-        "collection_CXEmHx",
-        "collection_erNL4a",
-        "collection_FQR9KE",
-        "collection_HYRWrg",
-        "collection_dqkine",
-        "collection_iyjCCb",
-        "collection_ntR4RL",
-        "collection_dHNH3W"
-      ],
-      "disabled": true,
-      "name": "Collection list",
-      "settings": {
-        "title": "Shop by Print",
-        "text": "",
-        "text_alignment": "start",
-        "enable_carousel": true,
-        "grid": 5,
-        "color_scheme": "default",
-        "full_width": true,
-        "coll_grid_image_shape": "square",
-        "coll_grid_image_position": "center center",
-        "coll_thumb_mob_per_row": "2",
-        "coll_grid_show_count": false,
-        "coll_text_position": "below",
-        "coll_text_position_under_mobile": false,
-        "coll_thumb_text_align_x": "center",
-        "coll_thumb_text_align_y": "center",
         "coll_button_style": "primary"
       }
     },
@@ -1197,10 +1197,10 @@
     "featured_collection_6Nn87z",
     "custom_product_highlight_KJfQCU",
     "featured_collection_HNkD47",
+    "collection_list_zhMrUA",
     "collection_list_TTPNQi",
     "logo_list_kYmwNX",
     "collection_list_zeWU77",
-    "collection_list_zhMrUA",
     "logo_list_ywatnw",
     "testimonials_QcyQ3m",
     "multi_column_KCzHEY",
