@@ -10,6 +10,14 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}" dir="{{ lang_dir }}">
 <head>
+{% assign canonical_path = canonical_url | remove: shop.url %}
+
+<link rel="alternate" hreflang="x-default" href="https://louloulollipop.com{{ canonical_path }}" />
+<link rel="alternate" hreflang="en-us" href="https://louloulollipop.com{{ canonical_path }}" />
+<link rel="alternate" hreflang="en" href="https://louloulollipop.com{{ canonical_path }}" />
+<link rel="alternate" hreflang="en-ca" href="https://louloulollipop.ca{{ canonical_path }}" />
+<link rel="alternate" hreflang="fr-ca" href="https://louloulollipop.ca/fr{{ canonical_path }}" />
+<link rel="alternate" hreflang="fr" href="https://louloulollipop.ca/fr{{ canonical_path }}" />
 
   {% if template contains 'collection' and canonical_url contains '- CORE Siblings' %}
     <meta name="robots" content="noindex,follow">  
@@ -201,12 +209,7 @@
   <meta name="robots" content="noindex, follow">
   {% endif %}
  
-  <link rel="alternate" hreflang="x-default" href="https://louloulollipop.com{{ request.path }}" />
-  <link rel="alternate" hreflang="en" href="https://louloulollipop.com{{ request.path }}" />
-  <link rel="alternate" hreflang="en-us" href="https://louloulollipop.com{{ request.path }}" />
-  <link rel="alternate" hreflang="en-ca" href="https://louloulollipop.ca{{ request.path }}" />
-  <link rel="alternate" hreflang="fr-ca" href="https://louloulollipop.ca/fr{{ request.path }}" />
-  <link rel="alternate" hreflang="fr" href="https://louloulollipop.ca/fr{{ request.path }}" />
+  
 
 </head>
 
