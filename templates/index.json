@@ -155,7 +155,7 @@
             "collection": "sleep-sale",
             "tag": "",
             "image": "shopify://shop_images/LoulouLollipopNov2025Holiday-01750.jpg",
-            "subheading": "Sleep & Bedding Sale",
+            "subheading": "Sleep & Bedding",
             "button_label": ""
           }
         },
@@ -165,7 +165,7 @@
             "collection": "clothing-sale",
             "tag": "",
             "image": "shopify://shop_images/LoulouLollipopNov2025Holiday-01357.jpg",
-            "subheading": "Clothing Sale",
+            "subheading": "Clothing",
             "button_label": ""
           }
         },
@@ -175,7 +175,7 @@
             "collection": "feeding-sale",
             "tag": "",
             "image": "shopify://shop_images/LSBIBSHK_Long_Sleeve_Bib_Sharks_54.jpg",
-            "subheading": "Feeding Essentials Sale",
+            "subheading": "Feeding Essentials",
             "button_label": ""
           }
         },
@@ -185,7 +185,7 @@
             "collection": "toys-play-sale",
             "tag": "",
             "image": "shopify://shop_images/SILBIBAVOPP_Silicone_Bib_Printed_-_Avocado_51.jpg",
-            "subheading": "Toys & Play Sale",
+            "subheading": "Toys & Play",
             "button_label": ""
           }
         }
@@ -198,7 +198,7 @@
       ],
       "settings": {
         "title": "Shop the Sale by Category",
-        "text": "<p>Explore our most-loved essentials, now at special Boxing Day pricing</p>",
+        "text": "<p>Explore our most-loved essentials, now at special Boxing Day pricing - <strong>Up to $50 off</strong></p>",
         "text_alignment": "start",
         "enable_carousel": false,
         "grid": 4,
