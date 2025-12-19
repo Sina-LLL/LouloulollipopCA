@@ -350,6 +350,129 @@
         {% endif %}
       </div>
     </filter-container>
+    {%- if section.settings.enable_button_filters -%}
+  {%- liquid
+    assign button_filter_name = section.settings.button_filter_name
+    assign button_filter = null
+    
+    for filter in collection.filters
+      if filter.label == button_filter_name or filter.param_name == button_filter_name
+        assign button_filter = filter
+        break
+      endif
+    endfor
+  -%}
+
+  {%- if button_filter and button_filter.values.size > 0 -%}
+    <div class="collection-button-filters" data-ajax-container>
+      {%- if section.settings.button_filter_heading != blank -%}
+        <div class="button-filters-heading{% if section.settings.button_filter_center %} align-center{% endif %}">
+          <h3 class="h5">{{ section.settings.button_filter_heading | escape }}</h3>
+        </div>
+      {%- endif -%}
+
+      <div class="button-filters-list{% if section.settings.button_filter_center %} align-center{% endif %}">
+        {%- comment -%} All/Clear Button {%- endcomment -%}
+        <a href="{{ collection.url }}" 
+           class="button-filter btn btn--{{ section.settings.button_filter_style }}{% unless button_filter.active_values.size > 0 %} button-filter--active{% endunless %}"
+           data-filter-update>
+          All
+        </a>
+
+        {%- for filter_value in button_filter.values -%}
+          {%- liquid
+            if filter_value.active
+              assign filter_url = filter_value.url_to_remove
+            else
+              assign filter_url = filter_value.url_to_add
+            endif
+          -%}
+
+          <a href="{{ filter_url }}" 
+             class="button-filter btn btn--{{ section.settings.button_filter_style }}{% if filter_value.active %} button-filter--active{% endif %}{% if filter_value.count == 0 %} button-filter--disabled{% endif %}"
+             {% if filter_value.count == 0 %}aria-disabled="true"{% endif %}
+             data-filter-update>
+            {{ filter_value.label | escape }}
+            {%- if section.settings.button_filter_show_count -%}
+              <span class="button-filter-count">({{ filter_value.count }})</span>
+            {%- endif -%}
+          </a>
+        {%- endfor -%}
+      </div>
+    </div>
+
+    <style>
+      .collection-button-filters {
+        margin-bottom: 2rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+      }
+
+      .button-filters-heading {
+        margin-bottom: 1rem;
+      }
+
+      .button-filters-heading h3 {
+        margin: 0;
+      }
+
+      .button-filters-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+
+      .button-filters-list.align-center {
+        justify-content: center;
+      }
+
+      .button-filter {
+        white-space: nowrap;
+        transition: all 0.2s ease;
+        text-decoration: none;
+      }
+
+      .button-filter--disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+        pointer-events: none;
+      }
+
+      .button-filter-count {
+        font-size: 0.85em;
+        opacity: 0.7;
+        margin-left: 0.35em;
+      }
+
+      .button-filter--active {
+        background: var(--text-color) !important;
+        color: var(--bg-color) !important;
+        border-color: var(--text-color) !important;
+        transform: translateY(-2px);
+        box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+      }
+
+      /* Mobile horizontal scroll */
+      @media (max-width: 767px) {
+        .button-filters-list {
+          flex-wrap: nowrap;
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+          scrollbar-width: none;
+          padding-bottom: 0.5rem;
+        }
+        
+        .button-filters-list::-webkit-scrollbar {
+          display: none;
+        }
+
+        .button-filters-list.align-center {
+          justify-content: flex-start;
+        }
+      }
+    </style>
+  {%- endif -%}
+{%- endif -%}
   </div>
 
   <div class="container pagination-row" data-ajax-container>{% render 'pagination-control', paginate: paginate %}</div>
@@ -490,6 +613,57 @@
       "type": "header",
       "content": "Filters"
     },
+    {
+  "type": "header",
+  "content": "Button filters"
+},
+{
+  "type": "checkbox",
+  "id": "enable_button_filters",
+  "label": "Enable button filter row",
+  "default": false
+},
+{
+  "type": "text",
+  "id": "button_filter_name",
+  "label": "Filter to display as buttons",
+  "info": "Enter the exact name of the filter (e.g., 'Color', 'Size', 'Material')",
+  "default": "Color"
+},
+{
+  "type": "text",
+  "id": "button_filter_heading",
+  "label": "Button filter heading",
+  "default": "Filter by:"
+},
+{
+  "type": "checkbox",
+  "id": "button_filter_show_count",
+  "label": "Show product counts on buttons",
+  "default": false
+},
+{
+  "type": "select",
+  "id": "button_filter_style",
+  "label": "Button style",
+  "default": "secondary",
+  "options": [
+    {
+      "label": "Primary",
+      "value": "primary"
+    },
+    {
+      "label": "Secondary",
+      "value": "secondary"
+    }
+  ]
+},
+{
+  "type": "checkbox",
+  "id": "button_filter_center",
+  "label": "Center align buttons",
+  "default": true
+},
     {
       "type": "checkbox",
       "id": "enable_filtering",
