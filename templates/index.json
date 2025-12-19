@@ -231,7 +231,7 @@
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/the-everymom-logo.png",
-            "image_width": 190,
+            "image_width": 200,
             "link": "https://theeverymom.com/registry-awards/",
             "title": ""
           }
@@ -273,6 +273,8 @@
       ],
       "settings": {
         "title": "As Seen In",
+        "enable_carousel": true,
+        "carousel_speed": 30,
         "image_opacity": 100,
         "color_scheme": "default"
       }
@@ -771,6 +773,8 @@
       "name": "USP List",
       "settings": {
         "title": "",
+        "enable_carousel": false,
+        "carousel_speed": 30,
         "image_opacity": 100,
         "color_scheme": "default"
       }
