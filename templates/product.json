@@ -58,17 +58,6 @@
             "size_chart_page": "size-chart-clothing"
           }
         },
-        "richtext_RCRMxq": {
-          "type": "richtext",
-          "settings": {
-            "richtext": "<p>Get your gifts on time! Order by <strong>Dec 10</strong> (Regional/Remote) or <strong>Dec 16</strong> (Major Cities)</p>",
-            "icon": "",
-            "icon_size": "small",
-            "enable_box": true,
-            "box_color": "#e0f4d5",
-            "show_in_quickbuy": false
-          }
-        },
         "buy-buttons": {
           "type": "buy-buttons",
           "settings": {
@@ -88,8 +77,8 @@
             "its_universal": "icon",
             "label": "add_to_reg",
             "en_custom_label_text": "",
-            "bg_color": "#faf9f6",
-            "text_color": "#6a8b95",
+            "bg_color": "#ffffff",
+            "text_color": "#4f676e",
             "border_color": "#6a8b95",
             "bg_color_hover": "#8ea7af",
             "text_color_hover": "#faf9f6",
@@ -104,7 +93,9 @@
             "is_custom_border_radius": true,
             "border_radius": 10,
             "custom_class": "",
-            "custom_css": ".myregistry-add-button {\n\n    \n  }"
+            "custom_css": ".myregistry-add-button {\n\n    \n  }",
+            "custom_elememt_selector": "",
+            "button_placement": "before_selected"
           }
         },
         "divider": {
@@ -164,7 +155,6 @@
         "usp_Whm8xh",
         "divider_XNTBYb",
         "variant-picker",
-        "richtext_RCRMxq",
         "buy-buttons",
         "advanced_myregistry_functions_add_to_registry_4H4jJ3",
         "divider",
