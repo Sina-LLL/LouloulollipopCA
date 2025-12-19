@@ -203,6 +203,7 @@
         "rel_coll_gall_enable_margin": false,
         "rel_coll_gall_full_width": false,
         "rel_coll_gall_overlay_style": "full",
+        "rel_coll_gall_text_placement": true,
         "rel_coll_gall_text_alignment": "center center",
         "rel_coll_grid_mobile": "2"
       }
