@@ -83,7 +83,7 @@
         "announcement-2": {
           "type": "announcement",
           "settings": {
-            "text": "✨ Order by Dec 10 (regional/Remote) or Dec 16 (major cities) for holiday delivery!",
+            "text": "<a href=\"/collections/sale\" title=\"SALE\"><strong>Boxing Day Sale - Up to 50% Off</strong></a>",
             "show_countdown": false,
             "hide_on_end": false,
             "end_date": "",
@@ -322,7 +322,7 @@
         "menu_promotion_small_NKx4Gk"
       ],
       "settings": {
-        "logo": "shopify://shop_images/Logo_LLL_14784c07-6192-4487-8fa1-cee0c9bc04b8.png",
+        "logo": "shopify://shop_images/Christmas_Logo.png",
         "logo_img_width_int": 215,
         "mobile_logo_img_width_int": 180,
         "logo_h1": false,

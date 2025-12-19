@@ -107,21 +107,21 @@
         "image_TKJkRj": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Hero-dec_2.jpg",
-            "mobile_image": "shopify://shop_images/Hero_Mobile_-_Dec.jpg",
+            "image": "shopify://shop_images/Boxing_Day_Hero_1.png",
+            "mobile_image": "shopify://shop_images/LOUOU-07402-topaz_2_1.png",
             "slide_link": "",
-            "subheading": "It's Gifting Season",
-            "title": "Find The Perfect Gifts For Newborns",
+            "subheading": "BOXING DAY SALE",
+            "title": "UP TO 50% OFF",
             "heading_max_width": 10,
-            "title_size": 72,
-            "title_size_mobile": 34,
+            "title_size": 120,
+            "title_size_mobile": 36,
             "use_h1": true,
-            "text": "",
+            "text": "<p><strong>Biggest markdowns of the year</strong></p>",
             "enlarge_text": true,
-            "button_label_1": "Shop Newborn Gifts",
-            "button_url_1": "shopify://collections/top-newborn-gifts",
+            "button_label_1": "Shop The Sale",
+            "button_url_1": "shopify://collections/sale",
             "button_tag_1": "",
-            "button_label_2": "Shop Newborn Bundles",
+            "button_label_2": "",
             "button_url_2": "shopify://collections/newborn-bundles",
             "button_tag_2": "",
             "text_alignment": "center left"
@@ -134,7 +134,7 @@
       "name": "Slideshow",
       "settings": {
         "height": "fixed",
-        "height_desktop": 760,
+        "height_desktop": 600,
         "height_mobile": 600,
         "full_width": true,
         "mobile_overlay_under": false,
@@ -215,21 +215,42 @@
         "coll_button_style": "primary"
       }
     },
-    "featured_collection_6Nn87z": {
-      "type": "featured-collection",
-      "name": "Featured collection",
+    "custom_specific_product_list_3NNHLt": {
+      "type": "custom-specific-product-list",
+      "name": "Custom Product Selector",
       "settings": {
-        "title": "Holiday Deals Are Still Live",
-        "text": "<p>Gift-worthy picks at rare prices — while inventory lasts</p>",
-        "collection": "sale",
+        "heading": "Featured Products",
+        "body_text": "<p>Choose your favorite products from our collection.</p>",
+        "text_alignment": "start",
+        "product_list": [
+          "baby-bath-gift-bundle-mermaids",
+          "baby-bath-gift-bundle-smiley-sharks",
+          "feeding-bundle-bunny",
+          "baby-learning-feeding-bundle-seashells",
+          "baby-learning-feeding-bundle-smiley-sharks",
+          "bandana-bib-set-2-pack-adventure-begins",
+          "bandana-bib-set-2-pack-all-aboard",
+          "bandana-bib-set-2-pack-avocado"
+        ],
+        "enable_carousel": false,
+        "products_per_row": 4,
+        "color_scheme": "default",
+        "full_width": true
+      }
+    },
+    "product_list_LGCLLV": {
+      "type": "product-list",
+      "name": "Product list",
+      "settings": {
+        "title": "Product list",
+        "text": "",
+        "text_alignment": "start",
+        "product_list": [],
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 4,
-        "rows": 1,
         "color_scheme": "default",
-        "show_view_all": true,
-        "full_width": false,
-        "text_alignment": "start"
+        "full_width": true
       }
     },
     "custom_product_highlight_KJfQCU": {
@@ -248,6 +269,23 @@
         "link": "shopify://collections/wolfie",
         "button_style": "primary",
         "color_scheme": "default"
+      }
+    },
+    "featured_collection_6Nn87z": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "Holiday Deals Are Still Live",
+        "text": "<p>Gift-worthy picks at rare prices — while inventory lasts</p>",
+        "collection": "sale",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 4,
+        "rows": 1,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": false,
+        "text_alignment": "start"
       }
     },
     "featured_collection_HNkD47": {
@@ -1194,8 +1232,10 @@
     "16359276425da8ce46",
     "slideshow_JU4LXr",
     "collection_list_VHgK7g",
-    "featured_collection_6Nn87z",
+    "custom_specific_product_list_3NNHLt",
+    "product_list_LGCLLV",
     "custom_product_highlight_KJfQCU",
+    "featured_collection_6Nn87z",
     "featured_collection_HNkD47",
     "collection_list_zhMrUA",
     "collection_list_TTPNQi",
