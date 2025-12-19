@@ -656,10 +656,10 @@
         "coll_button_style": "primary"
       }
     },
-    "collection_list_zeWU77": {
+    "collection_list_FxKgEx": {
       "type": "collection-list",
       "blocks": {
-        "collection_LyXpXp": {
+        "collection_G6gJTM": {
           "type": "collection",
           "settings": {
             "collection": "gifts-under-50",
@@ -669,17 +669,17 @@
             "button_label": ""
           }
         },
-        "collection_QANhae": {
+        "collection_Mri37P": {
           "type": "collection",
           "settings": {
-            "collection": "top-prints",
+            "collection": "top-newborn-gifts",
             "tag": "",
-            "image": "shopify://shop_images/BA1002U.SHK_Sleeper_Sharks_52_570cfafb-2566-4f8c-aeb8-d43d78cf7e6d.jpg",
+            "image": "shopify://shop_images/MuslinSwaddle-Quilt-BumbleBees.jpg",
             "subheading": "",
             "button_label": ""
           }
         },
-        "collection_ELdjcd": {
+        "collection_ngccXh": {
           "type": "collection",
           "settings": {
             "collection": "top-rated-sleep",
@@ -691,9 +691,9 @@
         }
       },
       "block_order": [
-        "collection_LyXpXp",
-        "collection_QANhae",
-        "collection_ELdjcd"
+        "collection_G6gJTM",
+        "collection_Mri37P",
+        "collection_ngccXh"
       ],
       "settings": {
         "title": "",
@@ -1234,7 +1234,7 @@
     "featured_collection_HNkD47",
     "collection_list_zhMrUA",
     "collection_list_TTPNQi",
-    "collection_list_zeWU77",
+    "collection_list_FxKgEx",
     "logo_list_ywatnw",
     "testimonials_QcyQ3m",
     "multi_column_KCzHEY",
