@@ -83,7 +83,7 @@
         "announcement-2": {
           "type": "announcement",
           "settings": {
-            "text": "✨ Order by Dec 10 (regional/Remote) or Dec 16 (major cities) for holiday delivery!",
+            "text": "Missed the shipping cutoff? Stay off the naughty list with <a href=\"/products/gift-cards\" title=\"Gift Card\">our eGift Cards</a>",
             "show_countdown": false,
             "hide_on_end": false,
             "end_date": "",
