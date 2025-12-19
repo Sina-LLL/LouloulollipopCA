@@ -198,7 +198,7 @@
       ],
       "settings": {
         "title": "Shop the Sale by Category",
-        "text": "<p>Explore our most-loved essentials, now at special Boxing Day pricing - <strong>Up to $50 off</strong></p>",
+        "text": "<p>Explore our most-loved essentials, now at special Boxing Day pricing - <strong>up to 50% off</strong></p>",
         "text_alignment": "start",
         "enable_carousel": false,
         "grid": 4,
