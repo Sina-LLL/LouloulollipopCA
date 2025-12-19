@@ -2,7 +2,7 @@
   <div class="container{% if section.settings.full_width %} container--no-max{% endif %}">
     <div class="hometitle lightly-spaced-row">
       {% if section.settings.heading != blank %}
-        <h2 class="h2 text-{{ section.settings.text_alignment }}" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.3s"' -%}>
+        <h2 class="h4 text-{{ section.settings.text_alignment }}" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.3s"' -%}>
           {{ section.settings.heading | escape }}
         </h2>
       {% endif %}
