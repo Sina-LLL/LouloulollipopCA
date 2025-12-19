@@ -1,20 +1,34 @@
-<div id="section-id-{{ section.id }}" class="{% if section.settings.color_scheme != 'default' %}use-color-scheme use-color-scheme--{{ section.settings.color_scheme }} fully-padded-row--medium{% else %}fully-spaced-row--medium{% endif %}">
-  <div class="container">
-    <div class="text-center lightly-spaced-row">
+<div class="section-id-{{ section.id }} {% if section.settings.color_scheme != 'default' %}use-color-scheme use-color-scheme--{{ section.settings.color_scheme }}{% endif %}{% if section.settings.full_width %} slider--no-max{% endif %}">
+  <div class="container{% if section.settings.full_width %} container--no-max{% endif %}">
+    <div class="hometitle lightly-spaced-row">
       {% if section.settings.heading != blank %}
-        <h2 class="h2">{{ section.settings.heading | escape }}</h2>
+        <h2 class="h2 text-{{ section.settings.text_alignment }}" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.3s"' -%}>
+          {{ section.settings.heading | escape }}
+        </h2>
       {% endif %}
       {% if section.settings.body_text != blank %}
-        <div class="rte">{{ section.settings.body_text }}</div>
+        <div class="rte text-{{ section.settings.text_alignment }}" {%- render 'animation-attrs', attrs: animation_attrs -%}>
+          {{ section.settings.body_text }}
+        </div>
       {% endif %}
     </div>
 
-    <div class="collection-listing fade-in-up" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
-      <div class="product-grid product-grid--per-row-{{ section.settings.products_per_row }} product-grid--per-row-mob-{{ settings.prod_thumb_mob_per_row }}">
+    {%- if section.settings.enable_carousel -%}
+      <carousel-slider class="carousel block collection-slider">
+    {%- endif -%}
+
+    <div class="collection-listing fade-in-up{% if section.settings.enable_carousel %} slider {% if section.settings.full_width %}slider--edge-peek{% endif %} slider--mobile-container-pad{% endif %}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
+      <div class="product-grid product-grid--per-row-{{ section.settings.products_per_row }} product-grid--per-row-mob-{{ settings.prod_thumb_mob_per_row }}{% if section.settings.enable_carousel %} slider__grid product-grid--carousel{% endif %}">
         {%- liquid
           if section.settings.product_list == blank
             for i in (1..section.settings.products_per_row)
+              if section.settings.enable_carousel
+                echo '<div class="slider__item">'
+              endif
               render 'onboarding-product-block', forloop: forloop
+              if section.settings.enable_carousel
+                echo '</div>'
+              endif
             endfor
           else
             if settings.prod_thumb_shape == 'portrait-23'
@@ -44,19 +58,39 @@
             endif
             
             for product in section.settings.product_list
-              render 'product-block', product: product, custom_aspect_ratio: chosen_aspect_ratio
+              if section.settings.enable_carousel
+                echo '<div class="slider__item">'
+              endif
+              render 'product-block', product: product, custom_aspect_ratio: chosen_aspect_ratio, no_swiping: section.settings.enable_carousel, no_quick_buy_markup: section.settings.enable_carousel
+              if section.settings.enable_carousel
+                echo '</div>'
+              endif
             endfor
           endif
         -%}
       </div>
     </div>
+
+    {%- if section.settings.enable_carousel -%}
+      <div class="slider-nav slider-nav--floating no-js-hidden">
+        <button type="button" class="slider-nav__btn has-ltr-icon" name="prev" aria-controls="slider-{{ section.id }}">
+          <span class="visually-hidden">{{ 'general.slider.previous' | t }}</span>
+          {%- render 'icon-chevron-left', stroke_width: 1.5 -%}
+        </button>
+        <button type="button" class="slider-nav__btn has-ltr-icon" name="next" aria-controls="slider-{{ section.id }}">
+          <span class="visually-hidden">{{ 'general.slider.next' | t }}</span>
+          {%- render 'icon-chevron-right', stroke_width: 1.5 -%}
+        </button>
+      </div>
+      </carousel-slider>
+    {%- endif -%}
   </div>
 </div>
 
 {% schema %}
 {
-  "name": "Custom Product List",
-  "class": "section-custom-specific-product-list",
+  "name": "Custom Product Selector",
+  "class": "section-custom-product-selector",
   "disabled_on": {
     "templates": [
       "password"
@@ -79,10 +113,36 @@
       "default": "<p>Choose your favorite products from our collection.</p>"
     },
     {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "end",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
       "type": "product_list",
       "id": "product_list",
       "label": "Products",
       "info": "Select products to display"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_carousel",
+      "label": "Enable carousel",
+      "default": false
     },
     {
       "type": "range",
@@ -113,11 +173,17 @@
           "label": "2"
         }
       ]
+    },
+    {
+      "id": "full_width",
+      "type": "checkbox",
+      "label": "Full page width",
+      "default": false
     }
   ],
   "presets": [
     {
-      "name": "Custom Specific Product List"
+      "name": "Custom Product Selector"
     }
   ]
 }
