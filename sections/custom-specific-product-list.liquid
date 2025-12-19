@@ -1,9 +1,21 @@
-<div class="collection-slider-row section-id-{{ section.id }} {% if section.settings.color_scheme != 'default' %}use-color-scheme use-color-scheme--{{ section.settings.color_scheme }}{% endif %}{% if section.settings.full_width %} slider--no-max{% endif %}">
+{%- liquid
+  if section.settings.enable_carousel
+    assign product_limit = 20
+  else
+    assign product_limit = section.settings.products_per_row | times: 2
+  endif
+-%}
+
+<div class="section-id-{{ section.id }} {% if section.settings.color_scheme != 'default' %}use-color-scheme use-color-scheme--{{ section.settings.color_scheme }}{% endif %}{% if section.settings.full_width %} slider--no-max{% endif %}">
   <div class="container{% if section.settings.full_width %} container--no-max{% endif %}">
     <div class="hometitle lightly-spaced-row">
       {% if section.settings.heading != blank %}
-        <h2 class="h4 text-{{ section.settings.text_alignment }}" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.3s"' -%}>
-          {{ section.settings.heading | escape }}
+        <h2 class="h2 text-{{ section.settings.text_alignment }}" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.3s"' -%}>
+          {% if section.settings.show_view_all and section.settings.view_all_collection != blank %}
+            <a class="has-paging__title" href="{{ collections[section.settings.view_all_collection].url }}">{{ section.settings.heading | escape }}</a>
+          {% else %}
+            {{ section.settings.heading | escape }}
+          {% endif %}
         </h2>
       {% endif %}
       {% if section.settings.body_text != blank %}
@@ -22,8 +34,9 @@
         {%- liquid
           if section.settings.product_list == blank
             for i in (1..section.settings.products_per_row)
+              assign extra_class = ''
               if section.settings.enable_carousel
-                echo '<div class="slider__item">'
+                echo '<div class="slider__item ' | append: extra_class | append: '">'
               endif
               render 'onboarding-product-block', forloop: forloop
               if section.settings.enable_carousel
@@ -58,8 +71,12 @@
             endif
             
             for product in section.settings.product_list
+              assign extra_class = ''
+              if product.tags contains 'hidden'
+                assign extra_class = 'hidden-product'
+              endif
               if section.settings.enable_carousel
-                echo '<div class="slider__item">'
+                echo '<div class="slider__item ' | append: extra_class | append: '">'
               endif
               render 'product-block', product: product, custom_aspect_ratio: chosen_aspect_ratio, no_swiping: section.settings.enable_carousel, no_quick_buy_markup: section.settings.enable_carousel
               if section.settings.enable_carousel
@@ -85,6 +102,19 @@
       </carousel-slider>
     {%- endif -%}
   </div>
+
+  {%- if section.settings.show_view_all and section.settings.view_all_collection != blank -%}
+    <div class="align-center" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.5s"' -%}>
+      <a class="small-feature-link" href="{{ collections[section.settings.view_all_collection].url }}">{{ 'sections.featured_collection.view_all' | t }}</a>
+    </div>
+  {%- endif -%}
+
+  {% if settings.quickbuy_style != 'off' and section.settings.enable_carousel %}
+    <div class="quickbuy-container use-color-scheme use-color-scheme--{{ settings.quickbuy_color_scheme }}">
+      <a href="#" class="close-detail" aria-label="{{ 'accessibility.close' | t }}" tabindex="-1">{% render 'icon-close', stroke_width: 1 %}</a>
+      <div class="inner"></div>
+    </div>
+  {% endif %}
 </div>
 
 {% schema %}
@@ -149,7 +179,7 @@
       "id": "products_per_row",
       "label": "Products per row",
       "min": 2,
-      "max": 5,
+      "max": 4,
       "step": 1,
       "default": 4,
       "info": "Choose 2, 3, or 4 products per row"
@@ -179,6 +209,18 @@
       "type": "checkbox",
       "label": "Full page width",
       "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_view_all",
+      "label": "Show 'View all' link",
+      "default": false
+    },
+    {
+      "type": "collection",
+      "id": "view_all_collection",
+      "label": "View all collection",
+      "info": "Collection to link to when 'View all' is clicked. Also makes the heading clickable."
     }
   ],
   "presets": [
