@@ -107,21 +107,21 @@
         "image_TKJkRj": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Hero-dec_2.jpg",
-            "mobile_image": "shopify://shop_images/Hero_Mobile_-_Dec.jpg",
+            "image": "shopify://shop_images/Boxing_Day_Hero_1.png",
+            "mobile_image": "shopify://shop_images/LOUOU-07402-topaz_2_1.png",
             "slide_link": "",
-            "subheading": "It's Gifting Season",
-            "title": "Find The Perfect Gifts For Newborns",
+            "subheading": "BOXING DAY SALE",
+            "title": "UP TO 50% OFF",
             "heading_max_width": 10,
-            "title_size": 72,
-            "title_size_mobile": 34,
+            "title_size": 120,
+            "title_size_mobile": 36,
             "use_h1": true,
-            "text": "",
+            "text": "<p><strong>Biggest markdowns of the year</strong></p>",
             "enlarge_text": true,
-            "button_label_1": "Shop Newborn Gifts",
-            "button_url_1": "shopify://collections/top-newborn-gifts",
+            "button_label_1": "Shop The Sale",
+            "button_url_1": "shopify://collections/sale",
             "button_tag_1": "",
-            "button_label_2": "Shop Newborn Bundles",
+            "button_label_2": "",
             "button_url_2": "shopify://collections/newborn-bundles",
             "button_tag_2": "",
             "text_alignment": "center left"
@@ -134,7 +134,7 @@
       "name": "Slideshow",
       "settings": {
         "height": "fixed",
-        "height_desktop": 760,
+        "height_desktop": 600,
         "height_mobile": 600,
         "full_width": true,
         "mobile_overlay_under": false,
@@ -152,40 +152,40 @@
         "collection_yYMgCY": {
           "type": "collection",
           "settings": {
-            "collection": "sleep-bags",
+            "collection": "sleep-sale",
             "tag": "",
-            "image": "shopify://shop_images/LoulouLollipopNov2025Holiday-01750.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
+            "image": "shopify://shop_images/MuslinSleepBag-DitsyFloral_83f5248c-6ee8-44cb-8505-6c78a02ab62d.webp",
+            "subheading": "Sleep & Bedding",
             "button_label": ""
           }
         },
         "collection_hz9HMV": {
           "type": "collection",
           "settings": {
-            "collection": "pajamas",
+            "collection": "clothing-sale",
             "tag": "",
-            "image": "shopify://shop_images/LoulouLollipopNov2025Holiday-01357.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
+            "image": "shopify://shop_images/DSC07646_08d980bb-6cc6-435e-9339-f4c9ab52c1a1.jpg",
+            "subheading": "Clothing",
             "button_label": ""
           }
         },
         "collection_778Cxg": {
           "type": "collection",
           "settings": {
-            "collection": "long-sleeve-bibs",
+            "collection": "feeding-sale",
             "tag": "",
-            "image": "shopify://shop_images/LSBIBSHK_Long_Sleeve_Bib_Sharks_54.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
+            "image": "shopify://shop_images/Tableware-white-23.jpg",
+            "subheading": "Feeding Essentials",
             "button_label": ""
           }
         },
         "collection_RkFVdV": {
           "type": "collection",
           "settings": {
-            "collection": "silicone-bibs",
+            "collection": "toys-play-sale",
             "tag": "",
-            "image": "shopify://shop_images/SILBIBAVOPP_Silicone_Bib_Printed_-_Avocado_51.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
+            "image": "shopify://shop_images/Group_3.jpg",
+            "subheading": "Toys & Play",
             "button_label": ""
           }
         }
@@ -197,8 +197,8 @@
         "collection_RkFVdV"
       ],
       "settings": {
-        "title": "Shop the Essentials",
-        "text": "<p>Your go-to essentials for gifting, newborns, and everyday comfort</p>",
+        "title": "Shop the Sale by Category",
+        "text": "<p>Explore our most-loved essentials - <strong>UP TO 50% OFF</strong></p>",
         "text_alignment": "start",
         "enable_carousel": false,
         "grid": 4,
@@ -215,25 +215,98 @@
         "coll_button_style": "primary"
       }
     },
-    "featured_collection_6Nn87z": {
-      "type": "featured-collection",
-      "name": "Featured collection",
+    "logo_list_kYmwNX": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_Pb9irB": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/logo.dc34ecc.svg",
+            "image_width": 150,
+            "link": "https://www.goodhousekeeping.com/childrens-products/a65382807/parenting-awards-baby-2025/",
+            "title": ""
+          }
+        },
+        "logo_mQKag7": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/the-everymom-logo.png",
+            "image_width": 200,
+            "link": "https://theeverymom.com/registry-awards/",
+            "title": ""
+          }
+        },
+        "logo_3E4WaJ": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Parents_idf45riGiK_0.png",
+            "image_width": 150,
+            "link": "https://www.parents.com/best-for-baby-awards-2025-feeding-11719843",
+            "title": ""
+          }
+        },
+        "logo_KwwATQ": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/BabyList-Logo.png",
+            "image_width": 150,
+            "link": "https://www.babylist.com/store/b/loulou-lollipop/919",
+            "title": ""
+          }
+        },
+        "logo_m3DkDJ": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/tinybeans-Logo.png",
+            "image_width": 150,
+            "link": "https://tinybeans.com/best-gifts-for-newborns/",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_Pb9irB",
+        "logo_mQKag7",
+        "logo_3E4WaJ",
+        "logo_KwwATQ",
+        "logo_m3DkDJ"
+      ],
       "settings": {
-        "title": "Holiday Deals Are Still Live",
-        "text": "<p>Gift-worthy picks at rare prices — while inventory lasts</p>",
-        "collection": "sale",
-        "show_vendor": false,
+        "title": "As Seen In",
         "enable_carousel": true,
-        "grid": 4,
-        "rows": 1,
+        "carousel_speed": 30,
+        "image_opacity": 100,
+        "color_scheme": "default"
+      }
+    },
+    "custom_specific_product_list_3NNHLt": {
+      "type": "custom-specific-product-list",
+      "name": "Custom Product Selector",
+      "settings": {
+        "heading": "Parent Favourites on Sale",
+        "body_text": "<p>Our most-loved pieces, on sale!</p>",
+        "text_alignment": "start",
+        "product_list": [
+          "short-sleeve-zipped-romper-silly-seals",
+          "muslin-lightweight-sleep-bag-0-5-tog-all-aboard",
+          "ruffle-romper-bumble-bees",
+          "short-sleeve-bodysuit-dress-mermaids",
+          "snack-box-alligator",
+          "snack-cup-pink",
+          "snack-plate-liam-lion",
+          "wild-teether-rory-rhino"
+        ],
+        "enable_carousel": false,
+        "products_per_row": 4,
         "color_scheme": "default",
-        "show_view_all": true,
         "full_width": false,
-        "text_alignment": "start"
+        "show_view_all": true,
+        "view_all_collection": "sale"
       }
     },
     "custom_product_highlight_KJfQCU": {
       "type": "custom-product-highlight",
+      "disabled": true,
       "name": "Highlighted Collection",
       "settings": {
         "title": "Meet Wolfie",
@@ -248,6 +321,24 @@
         "link": "shopify://collections/wolfie",
         "button_style": "primary",
         "color_scheme": "default"
+      }
+    },
+    "featured_collection_6Nn87z": {
+      "type": "featured-collection",
+      "disabled": true,
+      "name": "Featured collection",
+      "settings": {
+        "title": "Holiday Deals Are Still Live",
+        "text": "<p>Gift-worthy picks at rare prices — while inventory lasts</p>",
+        "collection": "sale",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 4,
+        "rows": 1,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": false,
+        "text_alignment": "start"
       }
     },
     "featured_collection_HNkD47": {
@@ -474,6 +565,7 @@
         "collection_ntR4RL",
         "collection_dHNH3W"
       ],
+      "disabled": true,
       "name": "Shop by Print",
       "settings": {
         "title": "Shop by Print",
@@ -544,6 +636,7 @@
         "collection_NHEe3n",
         "collection_iQ4PHk"
       ],
+      "disabled": true,
       "settings": {
         "title": "Shop by Category",
         "text": "",
@@ -563,72 +656,10 @@
         "coll_button_style": "primary"
       }
     },
-    "logo_list_kYmwNX": {
-      "type": "logo-list",
-      "blocks": {
-        "logo_Pb9irB": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/logo.dc34ecc.svg",
-            "image_width": 150,
-            "link": "https://www.goodhousekeeping.com/childrens-products/a65382807/parenting-awards-baby-2025/",
-            "title": ""
-          }
-        },
-        "logo_mQKag7": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/the-everymom-logo.png",
-            "image_width": 190,
-            "link": "https://theeverymom.com/registry-awards/",
-            "title": ""
-          }
-        },
-        "logo_3E4WaJ": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Parents_idf45riGiK_0.png",
-            "image_width": 150,
-            "link": "https://www.parents.com/best-for-baby-awards-2025-feeding-11719843",
-            "title": ""
-          }
-        },
-        "logo_KwwATQ": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/BabyList-Logo.png",
-            "image_width": 150,
-            "link": "https://www.babylist.com/store/b/loulou-lollipop/919",
-            "title": ""
-          }
-        },
-        "logo_m3DkDJ": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/tinybeans-Logo.png",
-            "image_width": 150,
-            "link": "https://tinybeans.com/best-gifts-for-newborns/",
-            "title": ""
-          }
-        }
-      },
-      "block_order": [
-        "logo_Pb9irB",
-        "logo_mQKag7",
-        "logo_3E4WaJ",
-        "logo_KwwATQ",
-        "logo_m3DkDJ"
-      ],
-      "settings": {
-        "title": "As Seen In",
-        "image_opacity": 100,
-        "color_scheme": "default"
-      }
-    },
-    "collection_list_zeWU77": {
+    "collection_list_FxKgEx": {
       "type": "collection-list",
       "blocks": {
-        "collection_LyXpXp": {
+        "collection_G6gJTM": {
           "type": "collection",
           "settings": {
             "collection": "gifts-under-50",
@@ -638,17 +669,17 @@
             "button_label": ""
           }
         },
-        "collection_QANhae": {
+        "collection_Mri37P": {
           "type": "collection",
           "settings": {
-            "collection": "top-prints",
+            "collection": "top-newborn-gifts",
             "tag": "",
-            "image": "shopify://shop_images/BA1002U.SHK_Sleeper_Sharks_52_570cfafb-2566-4f8c-aeb8-d43d78cf7e6d.jpg",
+            "image": "shopify://shop_images/MuslinSwaddle-Quilt-BumbleBees.jpg",
             "subheading": "",
             "button_label": ""
           }
         },
-        "collection_ELdjcd": {
+        "collection_ngccXh": {
           "type": "collection",
           "settings": {
             "collection": "top-rated-sleep",
@@ -660,9 +691,9 @@
         }
       },
       "block_order": [
-        "collection_LyXpXp",
-        "collection_QANhae",
-        "collection_ELdjcd"
+        "collection_G6gJTM",
+        "collection_Mri37P",
+        "collection_ngccXh"
       ],
       "settings": {
         "title": "",
@@ -742,6 +773,8 @@
       "name": "USP List",
       "settings": {
         "title": "",
+        "enable_carousel": false,
+        "carousel_speed": 30,
         "image_opacity": 100,
         "color_scheme": "default"
       }
@@ -1194,13 +1227,14 @@
     "16359276425da8ce46",
     "slideshow_JU4LXr",
     "collection_list_VHgK7g",
-    "featured_collection_6Nn87z",
+    "logo_list_kYmwNX",
+    "custom_specific_product_list_3NNHLt",
     "custom_product_highlight_KJfQCU",
+    "featured_collection_6Nn87z",
     "featured_collection_HNkD47",
     "collection_list_zhMrUA",
     "collection_list_TTPNQi",
-    "logo_list_kYmwNX",
-    "collection_list_zeWU77",
+    "collection_list_FxKgEx",
     "logo_list_ywatnw",
     "testimonials_QcyQ3m",
     "multi_column_KCzHEY",
