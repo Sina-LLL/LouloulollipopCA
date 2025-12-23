@@ -102,13 +102,15 @@
         
         <!-- Progress Dots -->
         <div class="carousel-dots" role="tablist" aria-label="Carousel pagination">
-          {%- for i in (1..section.blocks.size) -%}
+          {%- assign items_per_row = section.settings.grid -%}
+          {%- assign total_pages = section.blocks.size | divided_by: items_per_row | ceil -%}
+          {%- for i in (1..total_pages) -%}
             <button 
               type="button" 
               class="carousel-dot{% if forloop.first %} is-active{% endif %}" 
               data-slide="{{ forloop.index0 }}"
               role="tab"
-              aria-label="Go to slide {{ forloop.index }}"
+              aria-label="Go to page {{ forloop.index }}"
               aria-selected="{% if forloop.first %}true{% else %}false{% endif %}">
             </button>
           {%- endfor -%}
@@ -148,6 +150,7 @@
   display: flex;
   gap: 12px;
   justify-content: center;
+  margin-top: 24px;
 }
 
 .slider-nav__btn {
@@ -190,6 +193,7 @@
   display: flex;
   justify-content: center;
   gap: 8px;
+  margin-top: 20px;
   padding: 12px 0;
 }
 
@@ -220,6 +224,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 16px;
 }
 
 /* Mobile adjustments */
@@ -253,26 +258,14 @@
   cursor: grabbing;
 }
 
-/* Fade edges for visual cue */
-.slider--edge-peek::before,
-.slider--edge-peek::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 60px;
-  width: 40px;
-  pointer-events: none;
-  z-index: 2;
+/* Edge peek - show partial cards */
+.slider--edge-peek .slider__grid {
+  padding: 0 5%;
 }
 
-.slider--edge-peek::before {
-  left: 0;
-  background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0));
-}
-
-.slider--edge-peek::after {
-  right: 0;
-  background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));
+.enhanced-slider {
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 </style>
 
@@ -291,32 +284,103 @@ document.addEventListener('DOMContentLoaded', function() {
     
     let currentIndex = 0;
     const itemWidth = items[0].offsetWidth;
-    const gap = parseInt(getComputedStyle(slider.querySelector('.slider__grid')).gap) || 0;
+    const gridStyle = getComputedStyle(slider.querySelector('.slider__grid'));
+    const gap = parseInt(gridStyle.gap) || 0;
     
-    // Update button states
-    function updateButtons() {
-      const maxScroll = slider.scrollWidth - slider.clientWidth;
-      prevBtn.disabled = slider.scrollLeft <= 0;
-      nextBtn.disabled = slider.scrollLeft >= maxScroll - 1;
+    // Calculate items per view for better dot accuracy
+    const getItemsPerView = () => {
+      return Math.round(slider.clientWidth / (itemWidth + gap));
+    };
+    
+    // Calculate total pages based on visible items
+    const getTotalPages = () => {
+      const itemsPerView = getItemsPerView();
+      return Math.ceil(items.length / itemsPerView);
+    };
+    
+    // Infinite loop helper - clone items
+    function setupInfiniteLoop() {
+      const grid = slider.querySelector('.slider__grid');
+      const itemsToClone = Math.min(items.length, getItemsPerView() + 1);
+      
+      // Clone items at the end
+      for (let i = 0; i < itemsToClone; i++) {
+        const clone = items[i].cloneNode(true);
+        clone.classList.add('cloned-item');
+        grid.appendChild(clone);
+      }
+      
+      // Clone items at the beginning
+      for (let i = items.length - 1; i >= Math.max(0, items.length - itemsToClone); i--) {
+        const clone = items[i].cloneNode(true);
+        clone.classList.add('cloned-item');
+        grid.insertBefore(clone, grid.firstChild);
+      }
+      
+      // Set initial scroll position to skip cloned items at start
+      slider.scrollLeft = itemsToClone * (itemWidth + gap);
     }
     
-    // Update dots
+    // Update button states (never disable for infinite loop)
+    function updateButtons() {
+      prevBtn.disabled = false;
+      nextBtn.disabled = false;
+    }
+    
+    // Update dots based on visible content
     function updateDots() {
-      const scrollPercent = slider.scrollLeft / (slider.scrollWidth - slider.clientWidth);
-      const newIndex = Math.round(scrollPercent * (dots.length - 1));
+      const itemsPerView = getItemsPerView();
+      const scrollPosition = slider.scrollLeft;
+      const totalScrollWidth = items.length * (itemWidth + gap);
       
-      if (newIndex !== currentIndex) {
+      // Normalize scroll position to original items
+      let normalizedScroll = scrollPosition % totalScrollWidth;
+      if (normalizedScroll < 0) normalizedScroll += totalScrollWidth;
+      
+      const newIndex = Math.round(normalizedScroll / (itemWidth + gap) / itemsPerView);
+      const maxIndex = getTotalPages() - 1;
+      const clampedIndex = Math.min(newIndex, maxIndex);
+      
+      if (clampedIndex !== currentIndex && clampedIndex >= 0 && clampedIndex < dots.length) {
         dots[currentIndex]?.classList.remove('is-active');
         dots[currentIndex]?.setAttribute('aria-selected', 'false');
-        currentIndex = newIndex;
+        currentIndex = clampedIndex;
         dots[currentIndex]?.classList.add('is-active');
         dots[currentIndex]?.setAttribute('aria-selected', 'true');
       }
     }
     
-    // Smooth scroll to position
-    function scrollToIndex(index) {
-      const scrollAmount = index * (itemWidth + gap);
+    // Check if we need to reset position for infinite loop
+    function checkInfiniteLoop() {
+      const itemsToClone = Math.min(items.length, getItemsPerView() + 1);
+      const maxScroll = slider.scrollWidth - slider.clientWidth;
+      const threshold = (itemWidth + gap) * itemsToClone;
+      
+      if (slider.scrollLeft <= threshold) {
+        // Scrolled too far left, jump to end
+        slider.scrollLeft = slider.scrollLeft + (items.length * (itemWidth + gap));
+      } else if (slider.scrollLeft >= maxScroll - threshold) {
+        // Scrolled too far right, jump to beginning
+        slider.scrollLeft = slider.scrollLeft - (items.length * (itemWidth + gap));
+      }
+    }
+    
+    // Smooth scroll by one page
+    function scrollByPage(direction) {
+      const itemsPerView = getItemsPerView();
+      const scrollAmount = itemsPerView * (itemWidth + gap);
+      slider.scrollBy({
+        left: direction * scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+    
+    // Smooth scroll to specific page
+    function scrollToPage(pageIndex) {
+      const itemsPerView = getItemsPerView();
+      const itemsToClone = Math.min(items.length, itemsPerView + 1);
+      const baseOffset = itemsToClone * (itemWidth + gap);
+      const scrollAmount = pageIndex * itemsPerView * (itemWidth + gap) + baseOffset;
       slider.scrollTo({
         left: scrollAmount,
         behavior: 'smooth'
@@ -324,27 +388,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Navigation buttons
-    prevBtn?.addEventListener('click', () => {
-      const scrollAmount = itemWidth + gap;
-      slider.scrollBy({
-        left: -scrollAmount,
-        behavior: 'smooth'
-      });
-    });
-    
-    nextBtn?.addEventListener('click', () => {
-      const scrollAmount = itemWidth + gap;
-      slider.scrollBy({
-        left: scrollAmount,
-        behavior: 'smooth'
-      });
-    });
+    prevBtn?.addEventListener('click', () => scrollByPage(-1));
+    nextBtn?.addEventListener('click', () => scrollByPage(1));
     
     // Dot navigation
     dots.forEach((dot, index) => {
-      dot.addEventListener('click', () => {
-        scrollToIndex(index);
-      });
+      dot.addEventListener('click', () => scrollToPage(index));
     });
     
     // Update on scroll
@@ -352,6 +401,7 @@ document.addEventListener('DOMContentLoaded', function() {
     slider.addEventListener('scroll', () => {
       clearTimeout(scrollTimeout);
       scrollTimeout = setTimeout(() => {
+        checkInfiniteLoop();
         updateButtons();
         updateDots();
       }, 50);
@@ -394,13 +444,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Initialize
+    if (items.length > 0) {
+      setupInfiniteLoop();
+    }
     updateButtons();
     updateDots();
     
     // Update on resize
+    let resizeTimeout;
     window.addEventListener('resize', () => {
-      updateButtons();
-      updateDots();
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        updateButtons();
+        updateDots();
+      }, 100);
     });
   });
 });
