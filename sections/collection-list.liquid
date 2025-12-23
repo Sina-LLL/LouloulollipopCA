@@ -1,7 +1,7 @@
 <div class="section-id-{{ section.id }} collection-slider-row for-collections {% if section.settings.color_scheme != 'default' %}use-color-scheme use-color-scheme--{{ section.settings.color_scheme }}{% endif %}{% if section.settings.full_width %} slider--no-max{% endif %}">
   <div class="container{% if section.settings.full_width %} container--no-max{% endif %}">
     <div class="hometitle">
-      <h2 class=" h4 text-{{ section.settings.text_alignment}}" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.3s"' -%}>
+      <h2 class="h4 text-{{ section.settings.text_alignment}}" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.3s"' -%}>
         <a class="has-paging__title" href="{{ collection.url }}">{{ section.settings.title | escape }}</a>
       </h2>
       
@@ -9,13 +9,12 @@
         <div class="rte text-{{ section.settings.text_alignment}}" {%- render 'animation-attrs', attrs: animation_attrs -%}>{{ section.settings.text }}</div>
       {% endif %}
     </div>
+
     {%- if section.settings.enable_carousel -%}
-      <carousel-slider class="carousel block collection-slider">
+      <carousel-slider class="carousel block collection-slider enhanced-carousel">
     {%- endif -%}
 
-   
-
-    <div class="collection-listing fade-in-up{% if section.settings.enable_carousel %} slider {% if section.settings.full_width %}slider--edge-peek{% endif %} slider--mobile-container-pad {% endif %}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
+    <div class="collection-listing fade-in-up{% if section.settings.enable_carousel %} slider {% if section.settings.full_width %}slider--edge-peek{% endif %} slider--mobile-container-pad enhanced-slider{% endif %}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
       <div class="product-grid product-grid--per-row-{{ section.settings.grid }} product-grid--per-row-mob-{{ section.settings.coll_thumb_mob_per_row }} product-grid--image-shape-{{ section.settings.coll_grid_image_shape }}{% if section.settings.enable_carousel %} slider__grid product-grid--carousel{% endif %}">
         {%- liquid
           if section.blocks.size > 0
@@ -89,21 +88,326 @@
     </div>
 
     {%- if section.settings.enable_carousel -%}
-         <div class="slider-nav slider-nav--floating no-js-hidden">
-          <button type="button" class="slider-nav__btn has-ltr-icon" name="prev" aria-controls="slider-{{ section.id }}">
+      <div class="carousel-controls">
+        <div class="slider-nav slider-nav--floating no-js-hidden">
+          <button type="button" class="slider-nav__btn has-ltr-icon" name="prev" aria-controls="slider-{{ section.id }}" aria-label="{{ 'general.slider.previous' | t }}">
             <span class="visually-hidden">{{ 'general.slider.previous' | t }}</span>
             {%- render 'icon-chevron-left', stroke_width: 1.5 -%}
           </button>
-          <button type="button" class="slider-nav__btn has-ltr-icon" name="next" aria-controls="slider-{{ section.id }}">
+          <button type="button" class="slider-nav__btn has-ltr-icon" name="next" aria-controls="slider-{{ section.id }}" aria-label="{{ 'general.slider.next' | t }}">
             <span class="visually-hidden">{{ 'general.slider.next' | t }}</span>
             {%- render 'icon-chevron-right', stroke_width: 1.5 -%}
           </button>
         </div>
+        
+        <!-- Progress Dots -->
+        <div class="carousel-dots" role="tablist" aria-label="Carousel pagination">
+          {%- for i in (1..section.blocks.size) -%}
+            <button 
+              type="button" 
+              class="carousel-dot{% if forloop.first %} is-active{% endif %}" 
+              data-slide="{{ forloop.index0 }}"
+              role="tab"
+              aria-label="Go to slide {{ forloop.index }}"
+              aria-selected="{% if forloop.first %}true{% else %}false{% endif %}">
+            </button>
+          {%- endfor -%}
+        </div>
+      </div>
       </carousel-slider>
     {%- endif -%}
   </div>
 </div>
 
+<style>
+/* Enhanced Carousel Styles */
+.enhanced-carousel {
+  position: relative;
+}
+
+/* Hide scrollbar but keep functionality */
+.enhanced-slider {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.enhanced-slider::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+/* Scroll snap for smooth item alignment */
+.enhanced-slider .slider__item {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+/* Improved navigation buttons */
+.slider-nav {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.slider-nav__btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.slider-nav__btn:hover {
+  background: #f5f5f5;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.slider-nav__btn:active {
+  transform: scale(0.95);
+}
+
+.slider-nav__btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  transform: scale(1);
+}
+
+.slider-nav__btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Progress Dots */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+  padding: 12px 0;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.carousel-dot:hover {
+  background: rgba(0, 0, 0, 0.4);
+  transform: scale(1.2);
+}
+
+.carousel-dot.is-active {
+  background: rgba(0, 0, 0, 0.8);
+  width: 24px;
+  border-radius: 5px;
+}
+
+/* Controls container */
+.carousel-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .slider-nav__btn {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .slider-nav__btn svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .carousel-dot {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .carousel-dot.is-active {
+    width: 20px;
+  }
+}
+
+/* Smooth dragging cursor */
+.enhanced-slider {
+  cursor: grab;
+}
+
+.enhanced-slider:active {
+  cursor: grabbing;
+}
+
+/* Fade edges for visual cue */
+.slider--edge-peek::before,
+.slider--edge-peek::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 60px;
+  width: 40px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.slider--edge-peek::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0));
+}
+
+.slider--edge-peek::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const carousels = document.querySelectorAll('.enhanced-carousel');
+  
+  carousels.forEach(carousel => {
+    const slider = carousel.querySelector('.enhanced-slider');
+    const prevBtn = carousel.querySelector('[name="prev"]');
+    const nextBtn = carousel.querySelector('[name="next"]');
+    const dots = carousel.querySelectorAll('.carousel-dot');
+    const items = slider.querySelectorAll('.slider__item');
+    
+    if (!slider || items.length === 0) return;
+    
+    let currentIndex = 0;
+    const itemWidth = items[0].offsetWidth;
+    const gap = parseInt(getComputedStyle(slider.querySelector('.slider__grid')).gap) || 0;
+    
+    // Update button states
+    function updateButtons() {
+      const maxScroll = slider.scrollWidth - slider.clientWidth;
+      prevBtn.disabled = slider.scrollLeft <= 0;
+      nextBtn.disabled = slider.scrollLeft >= maxScroll - 1;
+    }
+    
+    // Update dots
+    function updateDots() {
+      const scrollPercent = slider.scrollLeft / (slider.scrollWidth - slider.clientWidth);
+      const newIndex = Math.round(scrollPercent * (dots.length - 1));
+      
+      if (newIndex !== currentIndex) {
+        dots[currentIndex]?.classList.remove('is-active');
+        dots[currentIndex]?.setAttribute('aria-selected', 'false');
+        currentIndex = newIndex;
+        dots[currentIndex]?.classList.add('is-active');
+        dots[currentIndex]?.setAttribute('aria-selected', 'true');
+      }
+    }
+    
+    // Smooth scroll to position
+    function scrollToIndex(index) {
+      const scrollAmount = index * (itemWidth + gap);
+      slider.scrollTo({
+        left: scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+    
+    // Navigation buttons
+    prevBtn?.addEventListener('click', () => {
+      const scrollAmount = itemWidth + gap;
+      slider.scrollBy({
+        left: -scrollAmount,
+        behavior: 'smooth'
+      });
+    });
+    
+    nextBtn?.addEventListener('click', () => {
+      const scrollAmount = itemWidth + gap;
+      slider.scrollBy({
+        left: scrollAmount,
+        behavior: 'smooth'
+      });
+    });
+    
+    // Dot navigation
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        scrollToIndex(index);
+      });
+    });
+    
+    // Update on scroll
+    let scrollTimeout;
+    slider.addEventListener('scroll', () => {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        updateButtons();
+        updateDots();
+      }, 50);
+    });
+    
+    // Keyboard navigation
+    slider.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        prevBtn?.click();
+      } else if (e.key === 'ArrowRight') {
+        nextBtn?.click();
+      }
+    });
+    
+    // Touch/drag scrolling enhancement
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+    
+    slider.addEventListener('mousedown', (e) => {
+      isDown = true;
+      startX = e.pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+    });
+    
+    slider.addEventListener('mouseleave', () => {
+      isDown = false;
+    });
+    
+    slider.addEventListener('mouseup', () => {
+      isDown = false;
+    });
+    
+    slider.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - slider.offsetLeft;
+      const walk = (x - startX) * 2;
+      slider.scrollLeft = scrollLeft - walk;
+    });
+    
+    // Initialize
+    updateButtons();
+    updateDots();
+    
+    // Update on resize
+    window.addEventListener('resize', () => {
+      updateButtons();
+      updateDots();
+    });
+  });
+});
+</script>
 
 {% schema %}
 {
