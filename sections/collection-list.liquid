@@ -102,8 +102,15 @@
         
         <!-- Progress Dots -->
         <div class="carousel-dots" role="tablist" aria-label="Carousel pagination">
-          {%- assign items_per_row = section.settings.grid -%}
-          {%- assign total_pages = section.blocks.size | divided_by: items_per_row | ceil -%}
+          {%- liquid
+            assign items_per_row = section.settings.grid
+            assign total_items = section.blocks.size
+            if total_items > items_per_row
+              assign total_pages = total_items | minus: items_per_row | plus: 1
+            else
+              assign total_pages = 1
+            endif
+          -%}
           {%- for i in (1..total_pages) -%}
             <button 
               type="button" 
@@ -278,109 +285,114 @@ document.addEventListener('DOMContentLoaded', function() {
     const prevBtn = carousel.querySelector('[name="prev"]');
     const nextBtn = carousel.querySelector('[name="next"]');
     const dots = carousel.querySelectorAll('.carousel-dot');
-    const items = slider.querySelectorAll('.slider__item');
+    const items = Array.from(slider.querySelectorAll('.slider__item')).filter(item => !item.classList.contains('cloned-item'));
     
     if (!slider || items.length === 0) return;
     
     let currentIndex = 0;
+    let isScrolling = false;
     const itemWidth = items[0].offsetWidth;
     const gridStyle = getComputedStyle(slider.querySelector('.slider__grid'));
     const gap = parseInt(gridStyle.gap) || 0;
     
-    // Calculate items per view for better dot accuracy
-    const getItemsPerView = () => {
-      return Math.round(slider.clientWidth / (itemWidth + gap));
+    // Get viewport width to calculate visible items
+    const getVisibleItems = () => {
+      return Math.floor(slider.clientWidth / (itemWidth + gap));
     };
     
-    // Calculate total pages based on visible items
-    const getTotalPages = () => {
-      const itemsPerView = getItemsPerView();
-      return Math.ceil(items.length / itemsPerView);
-    };
-    
-    // Infinite loop helper - clone items
+    // Infinite loop - clone items at both ends
     function setupInfiniteLoop() {
       const grid = slider.querySelector('.slider__grid');
-      const itemsToClone = Math.min(items.length, getItemsPerView() + 1);
+      const visibleItems = getVisibleItems();
+      const cloneCount = Math.min(items.length, visibleItems + 2);
+      
+      // Remove any existing clones
+      grid.querySelectorAll('.cloned-item').forEach(clone => clone.remove());
       
       // Clone items at the end
-      for (let i = 0; i < itemsToClone; i++) {
+      for (let i = 0; i < cloneCount; i++) {
         const clone = items[i].cloneNode(true);
         clone.classList.add('cloned-item');
         grid.appendChild(clone);
       }
       
       // Clone items at the beginning
-      for (let i = items.length - 1; i >= Math.max(0, items.length - itemsToClone); i--) {
+      for (let i = items.length - cloneCount; i < items.length; i++) {
         const clone = items[i].cloneNode(true);
         clone.classList.add('cloned-item');
         grid.insertBefore(clone, grid.firstChild);
       }
       
-      // Set initial scroll position to skip cloned items at start
-      slider.scrollLeft = itemsToClone * (itemWidth + gap);
+      // Set initial scroll position
+      const initialOffset = cloneCount * (itemWidth + gap);
+      slider.scrollLeft = initialOffset;
     }
     
-    // Update button states (never disable for infinite loop)
-    function updateButtons() {
-      prevBtn.disabled = false;
-      nextBtn.disabled = false;
-    }
-    
-    // Update dots based on visible content
+    // Update dots based on scroll position
     function updateDots() {
-      const itemsPerView = getItemsPerView();
-      const scrollPosition = slider.scrollLeft;
-      const totalScrollWidth = items.length * (itemWidth + gap);
+      if (dots.length === 0) return;
       
-      // Normalize scroll position to original items
-      let normalizedScroll = scrollPosition % totalScrollWidth;
-      if (normalizedScroll < 0) normalizedScroll += totalScrollWidth;
+      const visibleItems = getVisibleItems();
+      const cloneCount = Math.min(items.length, visibleItems + 2);
+      const baseOffset = cloneCount * (itemWidth + gap);
+      const adjustedScroll = slider.scrollLeft - baseOffset;
       
-      const newIndex = Math.round(normalizedScroll / (itemWidth + gap) / itemsPerView);
-      const maxIndex = getTotalPages() - 1;
-      const clampedIndex = Math.min(newIndex, maxIndex);
+      // Calculate which "page" we're on
+      const scrollPerPage = (itemWidth + gap);
+      let newIndex = Math.round(adjustedScroll / scrollPerPage);
       
-      if (clampedIndex !== currentIndex && clampedIndex >= 0 && clampedIndex < dots.length) {
+      // Keep within bounds
+      newIndex = Math.max(0, Math.min(newIndex, dots.length - 1));
+      
+      if (newIndex !== currentIndex) {
         dots[currentIndex]?.classList.remove('is-active');
         dots[currentIndex]?.setAttribute('aria-selected', 'false');
-        currentIndex = clampedIndex;
+        currentIndex = newIndex;
         dots[currentIndex]?.classList.add('is-active');
         dots[currentIndex]?.setAttribute('aria-selected', 'true');
       }
     }
     
-    // Check if we need to reset position for infinite loop
-    function checkInfiniteLoop() {
-      const itemsToClone = Math.min(items.length, getItemsPerView() + 1);
-      const maxScroll = slider.scrollWidth - slider.clientWidth;
-      const threshold = (itemWidth + gap) * itemsToClone;
+    // Handle infinite loop transitions
+    function handleInfiniteLoop() {
+      if (isScrolling) return;
       
-      if (slider.scrollLeft <= threshold) {
-        // Scrolled too far left, jump to end
-        slider.scrollLeft = slider.scrollLeft + (items.length * (itemWidth + gap));
-      } else if (slider.scrollLeft >= maxScroll - threshold) {
-        // Scrolled too far right, jump to beginning
-        slider.scrollLeft = slider.scrollLeft - (items.length * (itemWidth + gap));
+      const visibleItems = getVisibleItems();
+      const cloneCount = Math.min(items.length, visibleItems + 2);
+      const baseOffset = cloneCount * (itemWidth + gap);
+      const totalItemsWidth = items.length * (itemWidth + gap);
+      const maxScroll = slider.scrollWidth - slider.clientWidth;
+      
+      // Check if we've scrolled into cloned area
+      if (slider.scrollLeft < baseOffset - (itemWidth + gap) / 2) {
+        // Jumped too far left - move to equivalent position at the end
+        isScrolling = true;
+        slider.scrollLeft = slider.scrollLeft + totalItemsWidth;
+        setTimeout(() => { isScrolling = false; }, 50);
+      } else if (slider.scrollLeft > baseOffset + totalItemsWidth - (itemWidth + gap) / 2) {
+        // Jumped too far right - move to equivalent position at the start
+        isScrolling = true;
+        slider.scrollLeft = slider.scrollLeft - totalItemsWidth;
+        setTimeout(() => { isScrolling = false; }, 50);
       }
     }
     
-    // Smooth scroll by one page
-    function scrollByPage(direction) {
-      const itemsPerView = getItemsPerView();
-      const scrollAmount = itemsPerView * (itemWidth + gap);
+    // Scroll by one item
+    function scrollByItems(direction) {
+      const scrollAmount = (itemWidth + gap);
       slider.scrollBy({
         left: direction * scrollAmount,
         behavior: 'smooth'
       });
     }
     
-    // Smooth scroll to specific page
+    // Scroll to specific dot/page
     function scrollToPage(pageIndex) {
-      const itemsPerView = getItemsPerView();
-      const itemsToClone = Math.min(items.length, itemsPerView + 1);
-      const baseOffset = itemsToClone * (itemWidth + gap);
-      const scrollAmount = pageIndex * itemsPerView * (itemWidth + gap) + baseOffset;
+      const visibleItems = getVisibleItems();
+      const cloneCount = Math.min(items.length, visibleItems + 2);
+      const baseOffset = cloneCount * (itemWidth + gap);
+      const scrollAmount = baseOffset + (pageIndex * (itemWidth + gap));
+      
       slider.scrollTo({
         left: scrollAmount,
         behavior: 'smooth'
@@ -388,8 +400,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Navigation buttons
-    prevBtn?.addEventListener('click', () => scrollByPage(-1));
-    nextBtn?.addEventListener('click', () => scrollByPage(1));
+    prevBtn?.addEventListener('click', () => scrollByItems(-1));
+    nextBtn?.addEventListener('click', () => scrollByItems(1));
     
     // Dot navigation
     dots.forEach((dot, index) => {
@@ -401,10 +413,9 @@ document.addEventListener('DOMContentLoaded', function() {
     slider.addEventListener('scroll', () => {
       clearTimeout(scrollTimeout);
       scrollTimeout = setTimeout(() => {
-        checkInfiniteLoop();
-        updateButtons();
+        handleInfiniteLoop();
         updateDots();
-      }, 50);
+      }, 100);
     });
     
     // Keyboard navigation
@@ -416,7 +427,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
     
-    // Touch/drag scrolling enhancement
+    // Touch/drag scrolling
     let isDown = false;
     let startX;
     let scrollLeft;
@@ -446,18 +457,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize
     if (items.length > 0) {
       setupInfiniteLoop();
+      updateDots();
     }
-    updateButtons();
-    updateDots();
     
     // Update on resize
     let resizeTimeout;
     window.addEventListener('resize', () => {
       clearTimeout(resizeTimeout);
       resizeTimeout = setTimeout(() => {
-        updateButtons();
+        const currentScroll = slider.scrollLeft;
+        setupInfiniteLoop();
+        slider.scrollLeft = currentScroll;
         updateDots();
-      }, 100);
+      }, 250);
     });
   });
 });
