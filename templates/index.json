@@ -229,7 +229,7 @@
         "enable_carousel": true,
         "grid": 3,
         "color_scheme": "default",
-        "full_width": true
+        "full_width": false
       }
     },
     "logo_list_kYmwNX": {
