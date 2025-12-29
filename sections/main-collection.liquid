@@ -190,17 +190,62 @@
     endif
   -%}
   {%- if show_header -%}
-    <div class="page-header page-header--with-upper-spacing">
-      <div class="container">
-        {%- if section.settings.show_title -%}
-          <h1 class="pagetitle h3">{{ collection.title | escape }}</h1>
-        {%- endif -%}
-
-        {% if collection.description != blank and section.settings.coll_desc_pos == 'above' %}
-          <div class="rte cf align-center reading-width">{{ collection.description }}</div>
-        {% endif %}
+    {%- if section.settings.coll_desc_pos == 'above' and section.settings.coll_desc_layout == 'sidebyside' and collection.description != blank and collection.image -%}
+      {%- comment -%} Side by side layout {%- endcomment -%}
+      <div class="page-header page-header--with-upper-spacing">
+        <div class="container">
+          <style>
+            .collection-header-sidebyside {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 40px;
+              align-items: center;
+            }
+            @media (max-width: 767px) {
+              .collection-header-sidebyside {
+                grid-template-columns: 1fr;
+                gap: 20px;
+              }
+            }
+            .collection-header-sidebyside__content {
+              order: 1;
+            }
+            .collection-header-sidebyside__image {
+              order: 2;
+            }
+            .collection-header-sidebyside__image img {
+              width: 100%;
+              height: auto;
+              display: block;
+            }
+          </style>
+          <div class="collection-header-sidebyside">
+            <div class="collection-header-sidebyside__content">
+              {%- if section.settings.show_title -%}
+                <h1 class="pagetitle h3">{{ collection.title | escape }}</h1>
+              {%- endif -%}
+              <div class="rte cf">{{ collection.description }}</div>
+            </div>
+            <div class="collection-header-sidebyside__image">
+              {%- render 'image' with collection.image, loading: 'eager', fetchpriority: 'high' -%}
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    {%- else -%}
+      {%- comment -%} Default layout {%- endcomment -%}
+      <div class="page-header page-header--with-upper-spacing">
+        <div class="container">
+          {%- if section.settings.show_title -%}
+            <h1 class="pagetitle h3">{{ collection.title | escape }}</h1>
+          {%- endif -%}
+
+          {% if collection.description != blank and section.settings.coll_desc_pos == 'above' %}
+            <div class="rte cf align-center reading-width">{{ collection.description }}</div>
+          {% endif %}
+        </div>
+      </div>
+    {%- endif -%}
   {% endif %}
 {% endif %}
 
