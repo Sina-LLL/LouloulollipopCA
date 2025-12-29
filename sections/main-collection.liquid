@@ -258,7 +258,9 @@
           </div>
         </div>
       </div>
-      {{ related_collection_html }}
+      {%- if related_collections_count > 0 and section.settings.related_collections_style != 'buttons' -%}
+    {{ related_collection_html }}
+  {%- endif -%}
     {%- else -%}
       {%- comment -%} Default layout {%- endcomment -%}
       <div class="page-header page-header--with-upper-spacing">
