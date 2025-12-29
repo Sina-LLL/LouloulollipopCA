@@ -248,7 +248,7 @@
           </div>
         </div>
       </div>
-       {%- if related_collections_count > 0 and section.settings.related_collections_style != 'buttons' -%}
+      {%- if related_collections_count > 0 and header_image_enabled and section.settings.related_collections_style != 'buttons' -%}
     {{ related_collection_html }}
   {%- endif -%}
     {%- else -%}
@@ -268,9 +268,7 @@
   {% endif %}
 {% endif %}
 
-  {%- if related_collections_count > 0 and header_image_enabled and section.settings.related_collections_style != 'buttons' -%}
-    {{ related_collection_html }}
-  {%- endif -%}
+  
 
   <div class="container{% if settings.use_fullwidth_layout %} container--no-max{% endif %}{% if show_header == false %} lightly-spaced-row-above{% endif %}">
     <div class="utility-bar" data-ajax-container data-ajax-scroll-to>
