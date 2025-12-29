@@ -223,7 +223,9 @@
         "text": "<p>Premium Loulou Lollipop pieces up to <strong>80% off</strong></p>",
         "text_alignment": "start",
         "product_list": [
-          "mystery-box-50"
+          "mystery-box-50",
+          "mystery-box-95",
+          "mystery-box-250"
         ],
         "show_vendor": false,
         "enable_carousel": true,
