@@ -192,58 +192,47 @@
   {%- if show_header -%}
     {%- if section.settings.coll_desc_pos == 'above' and section.settings.coll_desc_layout == 'sidebyside' and collection.description != blank and collection.image -%}
       {%- comment -%} Side by side layout {%- endcomment -%}
-      <div class="page-header page-header--with-upper-spacing">
-        <div class="container collection-header-container">
+      <div class="page-header">
+        <div class="">
           <style>
-            .collection-header-container {
-              padding-left: 0;
-              padding-right: 0;
-            }
-            @media (min-width: 768px) {
-              .collection-header-container {
-                padding-left: var(--container-gutter, 20px);
-                padding-right: var(--container-gutter, 20px);
-              }
-            }
             .collection-header-sidebyside {
               display: grid;
-              grid-template-columns: 1fr;
-              gap: 0;
+              grid-template-columns: 1fr 1fr;
+              gap: 40px;
               align-items: center;
             }
-            @media (min-width: 768px) {
-              .collection-header-sidebyside {
-                grid-template-columns: 1fr 1fr;
-                gap: 40px;
-              }
-            }
+            
             .collection-header-sidebyside__content {
               order: 1;
-              padding: 20px;
-            }
-            @media (min-width: 768px) {
-              .collection-header-sidebyside__content {
-                padding: 0;
-              }
+              max-width: var(--page-container-width);
+              margin-right: auto;
+              margin-left: auto;
+              padding-right: var(--container-pad-x);
+              padding-left: var(--container-pad-x);
+              text-align:left;
             }
             .collection-header-sidebyside__image {
               order: 2;
-              aspect-ratio: 4 / 5;
+              aspect-ratio: 2 / 1;
               overflow: hidden;
-              width: 100vw;
-              margin-left: calc(-50vw + 50%);
-            }
-            @media (min-width: 768px) {
-              .collection-header-sidebyside__image {
-                width: 100%;
-                margin-left: 0;
-              }
             }
             .collection-header-sidebyside__image img {
               width: 100%;
               height: 100%;
               object-fit: cover;
               display: block;
+            }
+            @media (max-width: 767px) {
+              .collection-header-sidebyside {
+                grid-template-columns: 1fr;
+                gap: 20px;
+              }
+              .collection-header-sidebyside__content {
+                order: 2;
+              }
+              .collection-header-sidebyside__image {
+                order:1;
+              }
             }
           </style>
           <div class="collection-header-sidebyside">
@@ -259,10 +248,7 @@
           </div>
         </div>
       </div>
-      
-      {%- if related_collections_count > 0 and section.settings.related_collections_style != 'buttons' -%}
-        {{ related_collection_html }}
-      {%- endif -%}
+      {{ related_collection_html }}
     {%- else -%}
       {%- comment -%} Default layout {%- endcomment -%}
       <div class="page-header page-header--with-upper-spacing">
@@ -280,9 +266,9 @@
   {% endif %}
 {% endif %}
 
-  
-
-  
+  {%- if related_collections_count > 0 and header_image_enabled and section.settings.related_collections_style != 'buttons' -%}
+    {{ related_collection_html }}
+  {%- endif -%}
 
   <div class="container{% if settings.use_fullwidth_layout %} container--no-max{% endif %}{% if show_header == false %} lightly-spaced-row-above{% endif %}">
     <div class="utility-bar" data-ajax-container data-ajax-scroll-to>
