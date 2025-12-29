@@ -193,7 +193,7 @@
     {%- if section.settings.coll_desc_pos == 'above' and section.settings.coll_desc_layout == 'sidebyside' and collection.description != blank and collection.image -%}
       {%- comment -%} Side by side layout {%- endcomment -%}
       <div class="page-header">
-        <div class="container">
+        <div class="">
           <style>
             .collection-header-sidebyside {
               display: grid;
@@ -204,6 +204,11 @@
             
             .collection-header-sidebyside__content {
               order: 1;
+              max-width: var(--page-container-width);
+              margin-right: auto;
+              margin-left: auto;
+              padding-right: var(--container-pad-x);
+              padding-left: var(--container-pad-x);
             }
             .collection-header-sidebyside__image {
               order: 2;
