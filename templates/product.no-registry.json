@@ -68,36 +68,6 @@
             "show_gift_card_recipient": true
           }
         },
-        "advanced_myregistry_functions_add_to_registry_4H4jJ3": {
-          "type": "shopify://apps/advanced-myregistry-functions/blocks/add_to_registry/b23862ba-17b6-4df1-a6c8-81ff1fa21101",
-          "settings": {
-            "button_type": "shape",
-            "gift_icon": true,
-            "mr_brand_btn": false,
-            "its_universal": "icon",
-            "label": "add_to_reg",
-            "en_custom_label_text": "",
-            "bg_color": "#ffffff",
-            "text_color": "#4f676e",
-            "border_color": "#6a8b95",
-            "bg_color_hover": "#8ea7af",
-            "text_color_hover": "#faf9f6",
-            "border_color_hover": "#8ea7af",
-            "width": 100,
-            "horizontal_alignment": "center",
-            "padding_y": 13,
-            "margin_top": 12,
-            "margin_bottom": 0,
-            "margin_left": -1,
-            "margin_right": -1,
-            "is_custom_border_radius": true,
-            "border_radius": 10,
-            "custom_class": "",
-            "custom_css": ".myregistry-add-button {\n\n    \n  }",
-            "custom_elememt_selector": "",
-            "button_placement": "before_selected"
-          }
-        },
         "divider": {
           "type": "divider",
           "settings": {
@@ -156,7 +126,6 @@
         "divider_XNTBYb",
         "variant-picker",
         "buy-buttons",
-        "advanced_myregistry_functions_add_to_registry_4H4jJ3",
         "divider",
         "complementary_d3EJbm",
         "description",
