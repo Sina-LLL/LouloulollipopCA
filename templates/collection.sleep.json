@@ -43,8 +43,95 @@
         "rel_coll_gall_enable_margin": true,
         "rel_coll_gall_full_width": false,
         "rel_coll_gall_overlay_style": "full image-overlay--bg-shadow",
+        "rel_coll_gall_text_placement": true,
         "rel_coll_gall_text_alignment": "center center",
         "rel_coll_grid_mobile": "2"
+      }
+    },
+    "custom_collection_list_9iDWCq": {
+      "type": "custom-collection-list",
+      "blocks": {
+        "collection_FbYFXX": {
+          "type": "collection",
+          "settings": {
+            "collection": "adventure-begins",
+            "tag": "",
+            "subheading": "Adventure Begins",
+            "button_label": ""
+          }
+        },
+        "collection_LyFHAr": {
+          "type": "collection",
+          "settings": {
+            "collection": "adventure-begins",
+            "tag": "",
+            "subheading": "Adventure Begins",
+            "button_label": ""
+          }
+        },
+        "collection_GV4fbQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "adventure-begins",
+            "tag": "",
+            "subheading": "Adventure Begins",
+            "button_label": ""
+          }
+        },
+        "collection_M9XhUG": {
+          "type": "collection",
+          "settings": {
+            "collection": "adventure-begins",
+            "tag": "",
+            "subheading": "Adventure Begins",
+            "button_label": ""
+          }
+        },
+        "collection_CKt8rW": {
+          "type": "collection",
+          "settings": {
+            "collection": "adventure-begins",
+            "tag": "",
+            "subheading": "Adventure Begins",
+            "button_label": ""
+          }
+        },
+        "collection_xrXiRR": {
+          "type": "collection",
+          "settings": {
+            "collection": "alphabet-smiles",
+            "tag": "",
+            "subheading": "Adventure Begins",
+            "button_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_FbYFXX",
+        "collection_LyFHAr",
+        "collection_GV4fbQ",
+        "collection_M9XhUG",
+        "collection_CKt8rW",
+        "collection_xrXiRR"
+      ],
+      "name": "Custom Collection List",
+      "settings": {
+        "title": "Collection list",
+        "text": "",
+        "text_alignment": "start",
+        "enable_carousel": true,
+        "grid": 4,
+        "color_scheme": "default",
+        "full_width": true,
+        "coll_grid_image_shape": "portrait-45",
+        "coll_grid_image_position": "center center",
+        "coll_thumb_mob_per_row": "2",
+        "coll_grid_show_count": false,
+        "coll_text_position": "below",
+        "coll_text_position_under_mobile": false,
+        "coll_thumb_text_align_x": "left",
+        "coll_thumb_text_align_y": "bottom",
+        "coll_button_style": "primary"
       }
     },
     "collection_list_4KKNJE": {
@@ -54,6 +141,7 @@
           "type": "collection",
           "settings": {
             "collection": "sleep-bags",
+            "tag": "",
             "image": "shopify://shop_images/BA9003U.SKS_Muslin_Sleep_Bag_-_Lightweight_Sun-kissed_Shoal_1.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
@@ -63,6 +151,7 @@
           "type": "collection",
           "settings": {
             "collection": "sleepers",
+            "tag": "",
             "image": "shopify://shop_images/BA1002U.SHK_Sleeper_Sharks_1.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
@@ -72,6 +161,7 @@
           "type": "collection",
           "settings": {
             "collection": "pajamas",
+            "tag": "",
             "image": "shopify://shop_images/KA1006U.MER_ShortSleeveLongPantsPajamaSet_Mermaids_1.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
@@ -81,6 +171,7 @@
           "type": "collection",
           "settings": {
             "collection": "swaddles",
+            "tag": "",
             "image": "shopify://shop_images/SWOCX_MuslinSwaddle_OceanExplorer_1.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
@@ -90,6 +181,7 @@
           "type": "collection",
           "settings": {
             "collection": "blankets",
+            "tag": "",
             "image": "shopify://shop_images/QTCZF_02.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
@@ -99,6 +191,7 @@
           "type": "collection",
           "settings": {
             "collection": "sleepsuits",
+            "tag": "",
             "image": "shopify://shop_images/BA9007U.PCB_Sleepsuit_1.0_Tog_Pink_Checkerboard_1.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
@@ -108,6 +201,7 @@
           "type": "collection",
           "settings": {
             "collection": "crib-sheets",
+            "tag": "",
             "image": "shopify://shop_images/CRIBSEL_MuslinFittedCribSheet_Seals_1.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
@@ -132,7 +226,7 @@
         "grid": 5,
         "color_scheme": "default",
         "full_width": true,
-        "coll_grid_image_shape": "portrait-23",
+        "coll_grid_image_shape": "portrait-45",
         "coll_grid_image_position": "center center",
         "coll_thumb_mob_per_row": "2",
         "coll_grid_show_count": false,
@@ -292,6 +386,7 @@
   },
   "order": [
     "main",
+    "custom_collection_list_9iDWCq",
     "collection_list_4KKNJE",
     "gallery_xaHCdy",
     "product_list_jGJn7D",
