@@ -1002,6 +1002,10 @@ cart-form .page-header:not(.page-header--with-background){
   display:none;
 }
 /* Main Collection  */
+.collection-description{
+  font-size: 18px;
+  line-height: 1.5em;
+}
 .collection-header-sidebyside {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1043,6 +1047,9 @@ cart-form .page-header:not(.page-header--with-background){
   }
   .collection-header-sidebyside__image {
     order:1;
+  }
+  .collection-description{
+    font-size: 16px;
   }
 }
 .related-collection-links--buttons .btn{
