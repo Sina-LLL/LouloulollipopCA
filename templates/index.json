@@ -779,6 +779,15 @@
         "color_scheme": "default"
       }
     },
+    "custom_liquid_RDK4Gg": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "show_space": true,
+        "code": "<script src=\"https://apps.bazaarvoice.com/deployments/louloulollipop/main_site/production/en_US/bv.js\"></script>\n<div id=\"BVSellerRatingsContainer\"></div>\n<script>BV.seller_ratings.render();</script>"
+      }
+    },
     "testimonials_QcyQ3m": {
       "type": "testimonials",
       "blocks": {
@@ -1236,6 +1245,7 @@
     "collection_list_TTPNQi",
     "collection_list_FxKgEx",
     "logo_list_ywatnw",
+    "custom_liquid_RDK4Gg",
     "testimonials_QcyQ3m",
     "multi_column_KCzHEY",
     "featured_collection_AhBPDp",
