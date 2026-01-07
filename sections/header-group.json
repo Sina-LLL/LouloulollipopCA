@@ -85,7 +85,7 @@
         "announcement_rfnGqC": {
           "type": "announcement",
           "settings": {
-            "text": "<a href=\"/collections/sale\" title=\"SALE\"><strong>Winter Sale - Up to 50% Off</strong></a>",
+            "text": "<a href=\"/collections/sale\" title=\"SALE\"><strong>Up to 50% Winter Sale Last Chance</strong></a>",
             "show_countdown": true,
             "hide_on_end": true,
             "end_date": "2026-01-10",
