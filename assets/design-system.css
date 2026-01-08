@@ -341,8 +341,8 @@ li.slider__item.is-active {
   height:60px;
   width:60px;
   border-radius:4px;
-  margin-right: 12px;
-  margin-top: 12px;
+  margin-right: 10px;
+  margin-top: 10px;
 }
 .swatch-style-icon_square .option-selector .opt-label--image .theme-img{
   border-radius:0;
