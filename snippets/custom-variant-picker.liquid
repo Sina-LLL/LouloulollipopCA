@@ -44,7 +44,107 @@
   .variant-grid-compact .opt-label--image {
     margin: 0;
   }
+
+  /* Show More functionality */
+  .variant-grid-compact .hidden-variant {
+    display: none;
+  }
+
+  .variant-show-more-btn {
+    grid-column: 1 / -1;
+    padding: 8px 16px;
+    margin-top: 4px;
+    background: #f3f4f6;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .variant-show-more-btn:hover {
+    background: #e5e7eb;
+  }
 </style>
+
+<script>
+ document.addEventListener("DOMContentLoaded", function() {
+    const colorTextElements = document.querySelectorAll(".js-color-text");
+    const labels = document.querySelectorAll(".opt-label");
+
+    function clearAllCutlines() {
+      colorTextElements.forEach(element => element.textContent = "");
+    }
+
+    function setInitialSelected() {
+      labels.forEach(label => {
+        if (label.hasAttribute("data-selected")) {
+          const section = label.getAttribute("data-section");
+          const cutlineText = label.getAttribute("data-color");
+          const targetElement = document.querySelector(`[data-section="${section}"]`);
+          if (targetElement) {
+            targetElement.textContent = cutlineText;
+          }
+        }
+      });
+    }
+
+    labels.forEach(label => {
+      label.addEventListener("mouseenter", function() {
+        clearAllCutlines();
+        const section = this.getAttribute("data-section");
+        const cutlineText = this.getAttribute("data-color");
+        const targetElement = document.querySelector(`[data-section="${section}"]`);
+        if (targetElement) {
+          targetElement.textContent = cutlineText;
+        }
+      });
+
+      label.addEventListener("mouseleave", function() {
+        clearAllCutlines();
+        setInitialSelected();
+      });
+    });
+
+    setInitialSelected();
+
+    // Show More functionality for variant grids
+    document.querySelectorAll('.variant-grid-compact').forEach(container => {
+      const items = Array.from(container.querySelectorAll('.opt-label--image'));
+      
+      if (items.length === 0) return;
+
+      // Calculate items per row based on container width
+      const containerWidth = container.offsetWidth;
+      const itemWidth = window.innerWidth < 768 ? 70 : 85;
+      const gap = window.innerWidth < 768 ? 6 : 8;
+      const itemsPerRow = Math.floor((containerWidth + gap) / (itemWidth + gap));
+      const visibleCount = itemsPerRow * 2; // Show 2 rows
+
+      if (items.length > visibleCount) {
+        // Hide items beyond 2 rows
+        items.forEach((item, index) => {
+          if (index >= visibleCount) {
+            item.classList.add('hidden-variant');
+          }
+        });
+
+        // Create and add "Show More" button
+        const showMoreBtn = document.createElement('button');
+        showMoreBtn.className = 'variant-show-more-btn';
+        showMoreBtn.textContent = `Show ${items.length - visibleCount} More`;
+        showMoreBtn.type = 'button';
+        
+        showMoreBtn.addEventListener('click', function() {
+          items.forEach(item => item.classList.remove('hidden-variant'));
+          this.remove();
+        });
+
+        container.appendChild(showMoreBtn);
+      }
+    });
+  });
+</script>
 
 {% liquid
   assign has_siblings = false
