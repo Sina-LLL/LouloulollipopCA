@@ -30,22 +30,6 @@
             "enable_product_reviews_by_price": false
           }
         },
-        "usp_Whm8xh": {
-          "type": "USP",
-          "repeater": "{{ product.metafields.custom.product_template.value.usp_icons.value }}",
-          "settings": {
-            "text": "{{ block.repeater.title.value }}",
-            "icon": "",
-            "custom_icon": "{{ block.repeater.icon.value }}",
-            "icon_size": "large"
-          }
-        },
-        "divider_XNTBYb": {
-          "type": "divider",
-          "settings": {
-            "show_in_quickbuy": false
-          }
-        },
         "variant-picker": {
           "type": "variant-picker",
           "settings": {
@@ -98,7 +82,7 @@
             "button_placement": "before_selected"
           }
         },
-        "divider": {
+        "divider_XNTBYb": {
           "type": "divider",
           "settings": {
             "show_in_quickbuy": false
@@ -110,6 +94,16 @@
             "heading": "Pairs Perfectly With",
             "enable_carousel": true,
             "max_products": 10
+          }
+        },
+        "usp_Whm8xh": {
+          "type": "USP",
+          "repeater": "{{ product.metafields.custom.product_template.value.usp_icons.value }}",
+          "settings": {
+            "text": "{{ block.repeater.title.value }}",
+            "icon": "",
+            "custom_icon": "{{ block.repeater.icon.value }}",
+            "icon_size": "large"
           }
         },
         "description": {
@@ -152,13 +146,12 @@
         "title",
         "custom_liquid_WTLMGp",
         "price",
-        "usp_Whm8xh",
-        "divider_XNTBYb",
         "variant-picker",
         "buy-buttons",
         "advanced_myregistry_functions_add_to_registry_4H4jJ3",
-        "divider",
+        "divider_XNTBYb",
         "complementary_d3EJbm",
+        "usp_Whm8xh",
         "description",
         "accordion_yktgxC",
         "accordion_KqCkWX"
