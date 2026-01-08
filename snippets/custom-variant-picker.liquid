@@ -562,74 +562,52 @@
     });
 
     setInitialSelected();
+  });
 
-    // Show More functionality for variant grids
-    function initShowMore() {
+  // Show More functionality - runs after window load
+  window.addEventListener('load', function() {
+    setTimeout(function() {
       document.querySelectorAll('.variant-grid-compact').forEach(container => {
-        // Remove any existing show more button first
-        const existingBtn = container.querySelector('.variant-show-more-btn');
-        if (existingBtn) existingBtn.remove();
-
-        // Remove hidden class from all items
-        container.querySelectorAll('.opt-label--image').forEach(item => {
-          item.classList.remove('hidden-variant');
-        });
-
         const items = Array.from(container.querySelectorAll('.opt-label--image'));
         
         if (items.length === 0) return;
 
-        // Force layout calculation
-        container.style.display = 'grid';
+        // Calculate items per row based on actual rendered positions
+        const firstItemTop = items[0].offsetTop;
+        let itemsPerRow = 1;
         
-        // Wait for next frame to ensure grid is laid out
-        requestAnimationFrame(() => {
-          // Calculate items per row based on actual rendered grid
-          const firstItemTop = items[0].offsetTop;
-          let itemsPerRow = 1;
-          
-          for (let i = 1; i < items.length; i++) {
-            if (items[i].offsetTop === firstItemTop) {
-              itemsPerRow++;
-            } else {
-              break;
+        for (let i = 1; i < items.length; i++) {
+          if (items[i].offsetTop === firstItemTop) {
+            itemsPerRow++;
+          } else {
+            break;
+          }
+        }
+
+        const visibleCount = itemsPerRow * 2; // Show 2 rows
+
+        if (items.length > visibleCount) {
+          // Hide items beyond 2 rows
+          items.forEach((item, index) => {
+            if (index >= visibleCount) {
+              item.classList.add('hidden-variant');
             }
-          }
+          });
 
-          const visibleCount = itemsPerRow * 2; // Show 2 rows
+          // Create and add "Show More" button
+          const showMoreBtn = document.createElement('button');
+          showMoreBtn.className = 'variant-show-more-btn';
+          showMoreBtn.textContent = `Show ${items.length - visibleCount} More`;
+          showMoreBtn.type = 'button';
+          
+          showMoreBtn.addEventListener('click', function() {
+            items.forEach(item => item.classList.remove('hidden-variant'));
+            this.remove();
+          });
 
-          if (items.length > visibleCount) {
-            // Hide items beyond 2 rows
-            items.forEach((item, index) => {
-              if (index >= visibleCount) {
-                item.classList.add('hidden-variant');
-              }
-            });
-
-            // Create and add "Show More" button
-            const showMoreBtn = document.createElement('button');
-            showMoreBtn.className = 'variant-show-more-btn';
-            showMoreBtn.textContent = `Show ${items.length - visibleCount} More`;
-            showMoreBtn.type = 'button';
-            
-            showMoreBtn.addEventListener('click', function() {
-              items.forEach(item => item.classList.remove('hidden-variant'));
-              this.remove();
-            });
-
-            container.appendChild(showMoreBtn);
-          }
-        });
+          container.appendChild(showMoreBtn);
+        }
       });
-    }
-
-    initShowMore();
-
-    // Reinitialize on window resize
-    let resizeTimer;
-    window.addEventListener('resize', function() {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(initShowMore, 250);
-    });
+    }, 100);
   });
 </script>
