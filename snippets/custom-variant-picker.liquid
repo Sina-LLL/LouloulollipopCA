@@ -12,6 +12,9 @@
   Usage:
   {% render 'variant-picker', product: product, product_form_id: product_form_id, block: block %}
 {% endcomment %}
+
+
+
 {% liquid
   assign has_siblings = false
   if product.metafields.theme.siblings.value != blank and product.metafields.theme.siblings.type == 'single_line_text_field'
@@ -44,7 +47,7 @@
       <legend class="label">
         New Styles: <span class="option-selector__label-value js-color-text" data-section="new"></span>
       </legend>
-      <div class="option-selector__btns flex flex-wrap">
+      <div class="option-selector__btns variant-grid-compact">
         {%- for sibling in sibs_collection.products -%}
             {%- if sibling.tags contains 'new' -%}
               <a href="{{ sibling.url }}" 
@@ -103,7 +106,7 @@
     <legend class="label">
       Core Styles: <span class="option-selector__label-value js-color-text" data-section="core"></span>
     </legend>
-    <div class="option-selector__btns flex flex-wrap">
+    <div class="option-selector__btns variant-grid-compact">
       {%- for sibling in sibs_collection.products -%}
         {%- unless sibling.tags contains 'new' or sibling.tags contains 'sale' -%}
             <a href="{{ sibling.url }}" 
@@ -431,8 +434,8 @@
 
 <script>
  document.addEventListener("DOMContentLoaded", function() {
-    const colorTextElements = document.querySelectorAll(".js-color-text"); // The cutline spans
-    const labels = document.querySelectorAll(".opt-label"); // The swatch links
+    const colorTextElements = document.querySelectorAll(".js-color-text");
+    const labels = document.querySelectorAll(".opt-label");
 
     function clearAllCutlines() {
       colorTextElements.forEach(element => element.textContent = "");
@@ -450,18 +453,18 @@
 
     labels.forEach(label => {
       label.addEventListener("mouseenter", function() {
-        clearAllCutlines(); // Remove all cutline texts
+        clearAllCutlines();
         const section = this.getAttribute("data-section");
         const cutlineText = this.getAttribute("data-color");
         document.querySelector(`[data-section="${section}"]`).textContent = cutlineText;
       });
 
       label.addEventListener("mouseleave", function() {
-        clearAllCutlines(); // Reset everything
-        setInitialSelected(); // Restore the selected variant's name
+        clearAllCutlines();
+        setInitialSelected();
       });
     });
 
-    setInitialSelected(); // Set default selected color on page load
+    setInitialSelected();
   });
 </script>
