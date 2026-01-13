@@ -760,7 +760,7 @@
       "settings": {
         "full_width": true,
         "show_space": true,
-        "code": "<script src=\"https://apps.bazaarvoice.com/deployments/louloulollipop/main_site/production/en_US/bv.js\"></script>\n<div id=\"BVSellerRatingsContainer\"></div>\n<script>BV.seller_ratings.render();</script>"
+        "code": "<script src=\"https://apps.bazaarvoice.com/deployments/louloulollipop/ca/production/en_US/bv.js\"></script>\n<div id=\"BVSellerRatingsContainer\"></div>\n<script>BV.seller_ratings.render();</script>"
       }
     },
     "testimonials_QcyQ3m": {
