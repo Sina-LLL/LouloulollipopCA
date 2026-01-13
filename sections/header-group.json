@@ -50,7 +50,6 @@
         },
         "announcement-1": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
             "text": "Free Standard Shipping $100+",
             "show_countdown": false,
@@ -67,7 +66,6 @@
         },
         "announcement_3B8XC7": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
             "text": "🇨🇦 Proudly Canadian, Since 2015 🇨🇦",
             "show_countdown": false,
@@ -81,30 +79,13 @@
             "bg_gradient": "",
             "text_color": "#ffffff"
           }
-        },
-        "announcement_rfnGqC": {
-          "type": "announcement",
-          "settings": {
-            "text": "<a href=\"/collections/sale\" title=\"SALE\"><strong>Up to 50% Winter Sale Last Chance</strong></a>",
-            "show_countdown": true,
-            "hide_on_end": true,
-            "end_date": "2026-01-10",
-            "end_time": "",
-            "number_font": "base",
-            "countdown_separator": "dash",
-            "use_custom_colors": false,
-            "bg_color": "#4a4a4a",
-            "bg_gradient": "",
-            "text_color": "#ffffff"
-          }
         }
       },
       "block_order": [
         "announcement_UNfB4d",
         "announcement_4aPW9X",
         "announcement-1",
-        "announcement_3B8XC7",
-        "announcement_rfnGqC"
+        "announcement_3B8XC7"
       ],
       "settings": {
         "message_font_size": 16,
