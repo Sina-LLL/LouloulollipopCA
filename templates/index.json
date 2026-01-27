@@ -224,8 +224,8 @@
           "teether-single-hockey-helmet",
           "tencel-sleep-bag-1-0-tog-ice-hockey"
         ],
-        "button_label": "",
-        "link": "shopify://collections/wolfie",
+        "button_label": "Shop Winter Games",
+        "link": "shopify://collections/winter-games",
         "button_style": "primary",
         "color_scheme": "default"
       }
