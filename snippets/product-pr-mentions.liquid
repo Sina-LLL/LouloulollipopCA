@@ -11,7 +11,7 @@
     <div class="publications-grid">
       {% for publication in publications %}
         {% if publication.logo_image != blank and publication.url_to_publication != blank %}
-          <a href="{{ publication.url_to_publication.url.value }}" 
+          <a href="{{ publication.url_to_publication.value.url }}" 
              class="publication-link" 
              target="_blank" 
              rel="noopener noreferrer"
