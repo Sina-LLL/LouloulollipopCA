@@ -7,7 +7,7 @@
 {% if publications != blank and publications.size > 0 %}
   <hr {% unless block.settings.show_in_quickbuy %}class="not-in-quickbuy"{% endunless %} {{ block.shopify_attributes }}>
   <div class="publications-section">
-    <h3 class="h4 align-center hometitle">As Featured In</h3>
+    <h3 class="h4 align-center">As Featured In</h3>
     
     <div class="publications-grid">
       {% for publication in publications %}
@@ -69,7 +69,7 @@
       
       .publication-logo {
         max-width: 100px;
-        max-height: 50px;
+        max-height: 60px;
       }
     }
   </style>
