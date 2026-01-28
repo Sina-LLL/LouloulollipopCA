@@ -4,28 +4,12 @@
 {% endcomment %}
 
 {% assign publications = product.metafields.custom.pr_mentions.value %}
-
-<!-- DEBUG: Start -->
-<div style="border: 2px solid red; padding: 10px; margin: 10px 0;">
-  <p>DEBUG INFO:</p>
-  <p>Publications exists: {{ publications }}</p>
-  <p>Publications size: {{ publications.size }}</p>
-  <p>Publications blank: {{ publications == blank }}</p>
-</div>
-<!-- DEBUG: End -->
-
 {% if publications != blank and publications.size > 0 %}
   <div class="publications-section">
     <h3 class="publications-title">As Featured In</h3>
     
     <div class="publications-grid">
       {% for publication in publications %}
-        <!-- DEBUG: Publication {{ forloop.index }} -->
-        <div style="border: 1px solid blue; padding: 5px;">
-          <p>Logo: {{ publication.logo_image }}</p>
-          <p>URL: {{ publication.url_to_publication }}</p>
-        </div>
-        
         {% if publication.logo_image != blank and publication.url_to_publication != blank %}
           <a href="{{ publication.url_to_publication }}" 
              class="publication-link" 
@@ -101,8 +85,4 @@
       }
     }
   </style>
-{% else %}
-  <div style="border: 2px solid orange; padding: 10px; margin: 10px 0;">
-    <p>Publications section not showing because publications is empty or blank</p>
-  </div>
 {% endif %}
