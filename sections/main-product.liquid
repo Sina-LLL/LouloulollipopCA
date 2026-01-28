@@ -325,6 +325,8 @@
             </div>
 
           {% when 'description' %}
+                {% render 'product-pr-mentions' %}
+
             {%- if product.description != blank -%}
               <div class="{% unless block.settings.show_in_quickbuy %}not-in-quickbuy{% endunless %}{% if block.settings.show_in_tab %} product-info-accordion{% endif %}" {{ block.shopify_attributes }}>
                 {% if block.settings.show_in_tab %}
