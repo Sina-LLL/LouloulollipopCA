@@ -10,7 +10,7 @@
     
     <div class="publications-grid">
       {% for publication in publications %}
-        {% if publication.logo_image != blank and url_to_publication != blank %}
+        {% if publication.logo_image != blank and publication.url_to_publication != blank %}
           <a href="{{ publication.url_to_publication }}" 
              class="publication-link" 
              target="_blank" 
