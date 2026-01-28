@@ -5,6 +5,7 @@
 
 {% assign publications = product.metafields.custom.pr_mentions.value %}
 {% if publications != blank and publications.size > 0 %}
+  <hr {% unless block.settings.show_in_quickbuy %}class="not-in-quickbuy"{% endunless %} {{ block.shopify_attributes }}>
   <div class="publications-section">
     <h3 class="h4 publications-title">As Featured In</h3>
     
