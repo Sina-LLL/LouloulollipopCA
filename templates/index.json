@@ -358,6 +358,42 @@
         "collection_gTBabQ": {
           "type": "collection",
           "settings": {
+            "collection": "tiny-engineers",
+            "tag": "",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_n4jGxF": {
+          "type": "collection",
+          "settings": {
+            "collection": "astro-explorers",
+            "tag": "",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_ttFiLP": {
+          "type": "collection",
+          "settings": {
+            "collection": "mini-mathletes",
+            "tag": "",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_9gQzgC": {
+          "type": "collection",
+          "settings": {
+            "collection": "she-shoots-she-scores",
+            "tag": "",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_jVd8bG": {
+          "type": "collection",
+          "settings": {
             "collection": "forest-families",
             "tag": "",
             "subheading": "Forest Families",
@@ -454,30 +490,12 @@
             "button_label": ""
           }
         },
-        "collection_hcDexP": {
-          "type": "collection",
-          "settings": {
-            "collection": "painterly-seahorses",
-            "tag": "",
-            "subheading": "Painterly Seahorses",
-            "button_label": ""
-          }
-        },
         "collection_CXEmHx": {
           "type": "collection",
           "settings": {
             "collection": "safari-jungle",
             "tag": "",
             "subheading": "Safari Jungle",
-            "button_label": ""
-          }
-        },
-        "collection_erNL4a": {
-          "type": "collection",
-          "settings": {
-            "collection": "peaches",
-            "tag": "",
-            "subheading": "",
             "button_label": ""
           }
         },
@@ -508,15 +526,6 @@
             "button_label": ""
           }
         },
-        "collection_iyjCCb": {
-          "type": "collection",
-          "settings": {
-            "collection": "bears-on-bikes",
-            "tag": "",
-            "subheading": "Bears on Bikes",
-            "button_label": ""
-          }
-        },
         "collection_ntR4RL": {
           "type": "collection",
           "settings": {
@@ -525,19 +534,14 @@
             "subheading": "Bumble Bees",
             "button_label": ""
           }
-        },
-        "collection_dHNH3W": {
-          "type": "collection",
-          "settings": {
-            "collection": "hedgehogs",
-            "tag": "",
-            "subheading": "Hedgehogs",
-            "button_label": ""
-          }
         }
       },
       "block_order": [
         "collection_gTBabQ",
+        "collection_n4jGxF",
+        "collection_ttFiLP",
+        "collection_9gQzgC",
+        "collection_jVd8bG",
         "collection_ExCE9F",
         "collection_qCHi4r",
         "collection_NghHmQ",
@@ -548,15 +552,11 @@
         "collection_aHLB8h",
         "collection_eU9Ecq",
         "collection_3hmwzf",
-        "collection_hcDexP",
         "collection_CXEmHx",
-        "collection_erNL4a",
         "collection_FQR9KE",
         "collection_HYRWrg",
         "collection_dqkine",
-        "collection_iyjCCb",
-        "collection_ntR4RL",
-        "collection_dHNH3W"
+        "collection_ntR4RL"
       ],
       "name": "Shop by Print",
       "settings": {
@@ -676,7 +676,7 @@
           "settings": {
             "collection": "top-rated-sleep",
             "tag": "",
-            "image": "shopify://shop_images/LuluLollipopEdits-09189_ec38f562-eca4-4efd-b40f-4718607c1d61.jpg",
+            "image": "shopify://shop_images/DSC00442-2_969de760-0b9c-43c4-8160-67d13f8c69a9.jpg",
             "subheading": "",
             "button_label": ""
           }
