@@ -177,9 +177,9 @@
           "type": "menu-promotion-small",
           "settings": {
             "dropdown_link_title": "Bathe",
-            "image": "shopify://shop_images/WASHSHK_01.png",
-            "title": "Washcloths",
-            "link_url": "shopify://collections/washcloths"
+            "image": "shopify://shop_images/Header_Image_-_WetDryBag.png",
+            "title": "Wet Dry Bags",
+            "link_url": "shopify://collections/wet-dry-bags"
           }
         },
         "menu_promotion_small_pTVJy3": {
