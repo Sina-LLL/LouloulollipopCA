@@ -107,19 +107,19 @@
         "image_TKJkRj": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/DSC01865_5fd53834-6874-489a-b619-3625bcaf0fe5.jpg",
-            "mobile_image": "shopify://shop_images/DSC01865_1.png",
+            "image": "shopify://shop_images/DSC00616_a8b02a42-6923-4dd5-9081-e5ee545cbe83.jpg",
+            "mobile_image": "shopify://shop_images/CC_Hero.png",
             "slide_link": "",
             "subheading": "",
-            "title": "She Shoots, She Scores",
+            "title": "Curious Cuddles",
             "heading_max_width": 12,
             "title_size": 80,
             "title_size_mobile": 36,
             "use_h1": true,
-            "text": "<p><strong>Introducing our new playful hockey print with Incredibly soft fabrics.</strong></p>",
+            "text": "<p><strong>Invite even the youngest minds to never stop learning</strong></p>",
             "enlarge_text": true,
-            "button_label_1": "Shop the print",
-            "button_url_1": "shopify://collections/she-shoots-she-scores",
+            "button_label_1": "Shop Curious Cuddles",
+            "button_url_1": "shopify://collections/curious-cuddles",
             "button_tag_1": "",
             "button_label_2": "",
             "button_url_2": "",
@@ -210,22 +210,39 @@
         "color_scheme": "default"
       }
     },
+    "featured_collection_RGPeGr": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "For Hockey Fans in the Making",
+        "text": "<p>Designed for movement, naps, & everything in between</p>",
+        "collection": "winter-games",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 4,
+        "rows": 1,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": false,
+        "text_alignment": "start"
+      }
+    },
     "custom_product_highlight_KJfQCU": {
       "type": "custom-product-highlight",
       "name": "Highlighted Collection",
       "settings": {
-        "title": "Welcome to the Lineup",
-        "text": "<p>Our hockey lineup just got stronger. Featuring a brand-new print and fresh styles in an existing fan-favourite.</p>",
-        "image": "shopify://shop_images/DSC07609-2.jpg",
+        "title": "Curious Cuddles",
+        "text": "<p>Soft, breathable fabrics you’ll love, with a curious twist that makes everyday moments a little more magical.</p>",
+        "image": "shopify://shop_images/CC_Hero_2b8aae45-0b8f-4eff-b034-358605920691.png",
         "order": true,
         "product_list": [
-          "short-sleeve-long-pants-pajama-set-she-shoots-she-scores",
-          "short-sleeve-skater-dress-she-shoots-she-scores",
-          "teether-single-hockey-helmet",
-          "tencel-sleep-bag-1-0-tog-ice-hockey"
+          "sleeper-mini-mathletes",
+          "tencel-sleep-bag-1-0-tog-tiny-engineers",
+          "short-sleeve-bodysuit-dress-astro-explorers",
+          "newborn-sleep-gift-bundle-astro-explorers"
         ],
-        "button_label": "Shop Winter Games",
-        "link": "shopify://collections/winter-games",
+        "button_label": "Shop Curious Cuddles",
+        "link": "shopify://collections/curious-cuddles",
         "button_style": "primary",
         "color_scheme": "default"
       }
@@ -280,6 +297,7 @@
         "collection_778Cxg",
         "collection_RkFVdV"
       ],
+      "disabled": true,
       "settings": {
         "title": "Shop the Sale Section",
         "text": "<p>Explore our most-loved essentials - <strong>UP TO 50% OFF</strong></p>",
@@ -339,6 +357,42 @@
       "type": "collection-list",
       "blocks": {
         "collection_gTBabQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "tiny-engineers",
+            "tag": "",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_n4jGxF": {
+          "type": "collection",
+          "settings": {
+            "collection": "astro-explorers",
+            "tag": "",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_ttFiLP": {
+          "type": "collection",
+          "settings": {
+            "collection": "mini-mathletes",
+            "tag": "",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_9gQzgC": {
+          "type": "collection",
+          "settings": {
+            "collection": "she-shoots-she-scores",
+            "tag": "",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_jVd8bG": {
           "type": "collection",
           "settings": {
             "collection": "forest-families",
@@ -437,30 +491,12 @@
             "button_label": ""
           }
         },
-        "collection_hcDexP": {
-          "type": "collection",
-          "settings": {
-            "collection": "painterly-seahorses",
-            "tag": "",
-            "subheading": "Painterly Seahorses",
-            "button_label": ""
-          }
-        },
         "collection_CXEmHx": {
           "type": "collection",
           "settings": {
             "collection": "safari-jungle",
             "tag": "",
             "subheading": "Safari Jungle",
-            "button_label": ""
-          }
-        },
-        "collection_erNL4a": {
-          "type": "collection",
-          "settings": {
-            "collection": "peaches",
-            "tag": "",
-            "subheading": "",
             "button_label": ""
           }
         },
@@ -491,15 +527,6 @@
             "button_label": ""
           }
         },
-        "collection_iyjCCb": {
-          "type": "collection",
-          "settings": {
-            "collection": "bears-on-bikes",
-            "tag": "",
-            "subheading": "Bears on Bikes",
-            "button_label": ""
-          }
-        },
         "collection_ntR4RL": {
           "type": "collection",
           "settings": {
@@ -508,19 +535,14 @@
             "subheading": "Bumble Bees",
             "button_label": ""
           }
-        },
-        "collection_dHNH3W": {
-          "type": "collection",
-          "settings": {
-            "collection": "hedgehogs",
-            "tag": "",
-            "subheading": "Hedgehogs",
-            "button_label": ""
-          }
         }
       },
       "block_order": [
         "collection_gTBabQ",
+        "collection_n4jGxF",
+        "collection_ttFiLP",
+        "collection_9gQzgC",
+        "collection_jVd8bG",
         "collection_ExCE9F",
         "collection_qCHi4r",
         "collection_NghHmQ",
@@ -531,15 +553,11 @@
         "collection_aHLB8h",
         "collection_eU9Ecq",
         "collection_3hmwzf",
-        "collection_hcDexP",
         "collection_CXEmHx",
-        "collection_erNL4a",
         "collection_FQR9KE",
         "collection_HYRWrg",
         "collection_dqkine",
-        "collection_iyjCCb",
-        "collection_ntR4RL",
-        "collection_dHNH3W"
+        "collection_ntR4RL"
       ],
       "name": "Shop by Print",
       "settings": {
@@ -659,7 +677,7 @@
           "settings": {
             "collection": "top-rated-sleep",
             "tag": "",
-            "image": "shopify://shop_images/LuluLollipopEdits-09189_ec38f562-eca4-4efd-b40f-4718607c1d61.jpg",
+            "image": "shopify://shop_images/DSC00442-2_969de760-0b9c-43c4-8160-67d13f8c69a9.jpg",
             "subheading": "",
             "button_label": ""
           }
@@ -1211,6 +1229,7 @@
     "16359276425da8ce46",
     "slideshow_JU4LXr",
     "logo_list_kYmwNX",
+    "featured_collection_RGPeGr",
     "custom_product_highlight_KJfQCU",
     "collection_list_VHgK7g",
     "featured_collection_6Nn87z",

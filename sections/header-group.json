@@ -105,43 +105,43 @@
           "type": "menu-promotion-small",
           "settings": {
             "dropdown_link_title": "New & Featured",
-            "image": "shopify://shop_images/DSC07609-2.jpg",
-            "title": "She Shoots She Scores",
-            "link_url": "shopify://collections/she-shoots-she-scores"
+            "image": "shopify://shop_images/Header_Image.png",
+            "title": "Curious Cuddles",
+            "link_url": "shopify://collections/curious-cuddles"
           }
         },
         "menu_promotion_small_tKL9pd": {
           "type": "menu-promotion-small",
           "settings": {
             "dropdown_link_title": "Sleep & Bedding",
-            "image": "shopify://shop_images/Waffle_Sleeper_Spruce_Green__5_c01c623d-c488-4aba-a41b-45602124a875.jpg",
-            "title": "Waffle Sleepers",
-            "link_url": "shopify://collections/waffle-sleeper"
+            "image": "shopify://shop_images/Header_Image_-_Sleepbag.png",
+            "title": "Sleep Bags",
+            "link_url": "shopify://collections/sleep-bags"
           }
         },
         "menu_promotion_small_8ghxfY": {
           "type": "menu-promotion-small",
           "settings": {
             "dropdown_link_title": "Clothing",
-            "image": "shopify://shop_images/LuluLollipopEdits-01002-2_5_3a0c03bf-9835-48cf-b2d7-28fec8eeee61.png",
-            "title": "Long Sleeve Pajama Sets",
-            "link_url": "shopify://products/long-sleeve-pajama-set-baby-dinomite"
+            "image": "shopify://shop_images/Header_Image_-_Dresses.png",
+            "title": "Dresses",
+            "link_url": "shopify://collections/dresses"
           }
         },
         "menu_promotion_small_gxFhYf": {
           "type": "menu-promotion-small",
           "settings": {
             "dropdown_link_title": "Clothing",
-            "image": "shopify://shop_images/ElzaPhotographie_LoulouLollipop_March2024_-Web-36_fc0519ad-9560-4597-897c-1a5f388cf7d0.jpg",
-            "title": "Long Sleeve Bodysuit",
-            "link_url": "shopify://collections/long-sleeve-bodysuit"
+            "image": "shopify://shop_images/Header_Image_-_Pajamas.png",
+            "title": "Pajamas",
+            "link_url": "shopify://collections/pajamas"
           }
         },
         "menu_promotion_small_VjUPFk": {
           "type": "menu-promotion-small",
           "settings": {
             "dropdown_link_title": "Feeding",
-            "image": "shopify://shop_images/LuluLollipopEdits-01002-2_4_4d814491-693c-47fe-98a2-f3a64881883b.png",
+            "image": "shopify://shop_images/Header_Image_-_SILBIB.png",
             "title": "Silicone Bibs",
             "link_url": "shopify://collections/silicone-bibs"
           }
@@ -150,7 +150,7 @@
           "type": "menu-promotion-small",
           "settings": {
             "dropdown_link_title": "Feeding",
-            "image": "shopify://shop_images/DSC02060.jpg",
+            "image": "shopify://shop_images/Header_Image_-_Suction_Plates.png",
             "title": "Suction Plates",
             "link_url": "shopify://collections/suction-plates"
           }
@@ -159,7 +159,7 @@
           "type": "menu-promotion-small",
           "settings": {
             "dropdown_link_title": "Bathe",
-            "image": "shopify://shop_images/BTSPST_Bath_Toy_Set_Pastel_61_1.png",
+            "image": "shopify://shop_images/Header_Image_-_Bath_Toys.png",
             "title": "Bath Toys",
             "link_url": "shopify://collections/bath-toys"
           }
@@ -168,7 +168,7 @@
           "type": "menu-promotion-small",
           "settings": {
             "dropdown_link_title": "Bathe",
-            "image": "shopify://shop_images/Hooded_Towels.png",
+            "image": "shopify://shop_images/Header_Image_-_Hooded_Towel.png",
             "title": "Hooded Towels",
             "link_url": "shopify://collections/hooded-towel-sets"
           }
@@ -177,9 +177,9 @@
           "type": "menu-promotion-small",
           "settings": {
             "dropdown_link_title": "Bathe",
-            "image": "shopify://shop_images/WASHSHK_01.png",
-            "title": "Washcloths",
-            "link_url": "shopify://collections/washcloths"
+            "image": "shopify://shop_images/Header_Image_-_WetDryBag.png",
+            "title": "Wet Dry Bags",
+            "link_url": "shopify://collections/wet-dry-bags"
           }
         },
         "menu_promotion_small_pTVJy3": {
@@ -188,7 +188,7 @@
             "dropdown_link_title": "Toys & Play",
             "image": "shopify://shop_images/blue_wolfie.jpg",
             "title": "Wolfie Plush Charm",
-            "link_url": "shopify://collections/wolfie"
+            "link_url": "shopify://products/wolfie-plush-bag-charm-smoke-blue"
           }
         },
         "menu_promotion_small_gjj8cX": {
