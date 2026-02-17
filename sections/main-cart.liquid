@@ -381,9 +381,11 @@
     {%- if settings.show_free_shipping_bar -%}
       <div class="slim-container align-center" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
         {%- render 'free-shipping-bar' -%}
-        <span>For every order you place, we will donate one serving of Niuriss baby formula to Mamas for Mamas, a grassroots Canadian charity supporting families experiencing food insecurity.</span>
       </div>
     {%- endif -%}
+    <div class="page-header">  
+      <p>For every order you place, we will donate one serving of Niuriss baby formula to Mamas for Mamas, a grassroots Canadian charity supporting families experiencing food insecurity.</p>
+    </div>
 
     <form action="{{ routes.cart_url }}" method="post" id="cartform" class="cart-form">
       <div class="cart-item-list">
