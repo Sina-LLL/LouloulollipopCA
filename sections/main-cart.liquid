@@ -383,6 +383,7 @@
         {%- render 'free-shipping-bar' -%}
       </div>
     {%- endif -%}
+   
 
     <form action="{{ routes.cart_url }}" method="post" id="cartform" class="cart-form">
       <div class="cart-item-list">
@@ -521,270 +522,270 @@
               {% endif %}
 
 
-    <div class="checkout-col">
-    <!-- Add join from checkout ethos extension -->
-    
-    <style>
-    {% assign label_col = block.settings.label_text_color | default: '#4D4D4D' %}
-    {% assign pill_text_col = '#ffffff' | default: '#1673B0' %}
-    {% assign pill_bg_col = '#6a8b95' | default: '#F0F5FF' %}
-    {% assign bg_col = '#f4d8ca' | default: 'transparent' %}
-    {% assign scale_percent = block.settings.component_scale | default: 100 %}
-    {% assign scale = scale_percent | divided_by: 100.0 %}
-    {% assign user_font_size = block.settings.font_size | default: 12 %}
-    {% assign user_line_height = block.settings.line_height | default: 1.3 %}
-    {% assign text_font_weight = block.settings.text_font_weight | default: 500 %}
-    {% assign pill_font_weight = block.settings.pill_font_weight | default: 600 %}
-    {% assign text_align = block.settings.text_alignment | default: 'left' %}
-    
-    {% comment %} Base sizes (at 100% scale) {% endcomment %}
-    {% assign base_min_height = 32 %}
-    {% assign base_padding_v = 8 %}
-    {% assign base_padding_h = 12 %}
-    {% assign base_checkbox_size = 13 %}
-    {% assign base_pill_height = 16 %}
-    {% assign base_gap = 8 %}
-    
-    {% comment %} Scaled sizes {% endcomment %}
-    {% assign font_size = user_font_size | times: scale | round %}
-    {% assign min_height = base_min_height | times: scale | round %}
-    {% assign padding_v = base_padding_v | times: scale | round %}
-    {% assign padding_h = base_padding_h | times: scale | round %}
-    {% assign checkbox_size = base_checkbox_size | times: scale | round %}
-    {% assign pill_height = base_pill_height | times: scale | round %}
-    {% assign gap = base_gap | times: scale | round %}
-    
-    {% comment %} Checkbox checkmark scaling {% endcomment %}
-    {% assign checkmark_width = 6 | times: scale | round %}
-    {% assign checkmark_height = 3 | times: scale | round %}
-    {% assign checkmark_left = 3 | times: scale | round %}
-    {% assign checkmark_top = 4 | times: scale | round %}
-    
-    {% assign mobile_font_size = font_size | minus: 1 %}
-  
-    .loyalty-join {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      gap: {{ gap }}px;
-      width: 100%;
-      min-height: {{ min_height }}px;
-      background: {{ bg_col }};
-      position: relative;
-      box-sizing: border-box;
-      margin: 0 0 12px 0;
-      padding: {{ padding_v }}px {{ padding_h }}px;
-      border-radius: 6px;
-      overflow: hidden;
-      word-wrap: break-word;
-      overflow-wrap: break-word;
-      text-align: {{ text_align }};
-      {% if text_align == 'center' %}
-      justify-content: center;
-      {% elsif text_align == 'right' %}
-      justify-content: flex-end;
-      {% endif %}
-    }
-  
-    #loyalty_checkbox {
-      width: {{ checkbox_size }}px;
-      height: {{ checkbox_size }}px;
-      flex: 0 0 {{ checkbox_size }}px;
-      order: 0;
-      cursor: pointer;
-      appearance: none;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      box-sizing: border-box;
-      background: #FFFFFF;
-      border: 1px solid #4D4D4D;
-      box-shadow: 0px 1px 2px rgba(17, 24, 39, 0.05);
-      border-radius: 3px;
-      position: relative;
-      margin: {{ font_size | divided_by: 4 | round }}px 2px 0 0;
-      transition: all 0.2s ease;
-    }
-  
-    #loyalty_checkbox:focus {
-      outline: 2px solid #0066cc;
-      outline-offset: 2px;
-      border-color: #0066cc;
-    }
-  
-    #loyalty_checkbox:hover {
-      border-color: #1673B0;
-      box-shadow: 0px 2px 4px rgba(17, 24, 39, 0.1);
-    }
-  
-    #loyalty_checkbox:checked {
-      background: #1673B0;
-      border: none;
-      border-radius: 3px;
-    }
-  
-    #loyalty_checkbox:checked::after {
-      content: "";
-      position: absolute;
-      border: 1px solid #FFFFFF;
-      width: {{ checkmark_width }}px;
-      height: {{ checkmark_height }}px;
-      border-top: 0;
-      border-right: 0;
-      transform: rotate(-45deg);
-      left: {{ checkmark_left }}px;
-      top: {{ checkmark_top }}px;
-    }
-    
-    .loyalty-join.checked-state #loyalty_checkbox {
-      background: #1673B0;
-      border: none;
-      border-radius: 3px;
-    }
-    
-    .loyalty-join.checked-state #loyalty_checkbox::after {
-      content: "";
-      position: absolute;
-      border: 1px solid #FFFFFF;
-      width: {{ checkmark_width }}px;
-      height: {{ checkmark_height }}px;
-      border-top: 0;
-      border-right: 0;
-      transform: rotate(-45deg);
-      left: {{ checkmark_left }}px;
-      top: {{ checkmark_top }}px;
-    }
-  
-    .loyalty-content {
-      display: flex;
-      align-items: flex-start;
-      flex: 1 1 auto;
-      width: 100%;
-      min-width: 0;
-    }
-  
-    .loyalty-copy {
-      width: 100%;
-      font-style: normal;
-      font-weight: {{ text_font_weight }};
-      font-size: {{ font_size }}px;
-      line-height: {{ user_line_height }};
-      color: {{ label_col }};
-      min-width: 0;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      word-wrap: break-word;
-      overflow-wrap: break-word;
-      hyphens: auto;
-    }
-  
-    .loyalty-copy-text {
-      white-space: nowrap;
-      flex: 0 1 auto;
-    }
-  
-    .loyalty-earn {
-      display: inline;
-      font-weight: inherit;
-      font-size: {{ font_size }}px;
-      line-height: inherit;
-    }
-  
-    .loyalty-pill {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      vertical-align: middle;
-      padding: 2px 6px 4px;
-      height: {{ pill_height }}px;
-      background: {{ pill_bg_col }};
-      border-radius: 100px;
-      font-style: normal;
-      font-weight: {{ pill_font_weight }};
-      font-size: {{ font_size }}px;
-      line-height: 1;
-      color: {{ pill_text_col }};
-      white-space: nowrap;
-      margin: 0 2px;
-    }
-  
-    .loyalty-program {
-      display: inline;
-      font-size: {{ font_size }}px;
-      line-height: inherit;
-      word-wrap: break-word;
-      overflow-wrap: break-word;
-      hyphens: auto;
-    }
-  
-    .loyalty-join.member-state {
-      padding-left: 12px;
-    }
-    
-    .loyalty-join.member-state .loyalty-content {
-      margin-left: 0;
-    }
-    
-    .member-state #loyalty_checkbox {
-      display: none;
-    }
-  
-    @keyframes skeletonPulse {
-      0% { opacity: 0.6; }
-      50% { opacity: 0.8; }
-      100% { opacity: 0.6; }
-    }
-    
-    .skeleton-loading .loyalty-earn,
-    .skeleton-loading .loyalty-program,
-    .skeleton-loading .loyalty-pill {
-      color: transparent !important;
-      background-color: #E6E6E6;
-      border-radius: 3px;
-      position: relative;
-      overflow: hidden;
-      animation: skeletonPulse 1.5s ease-in-out infinite;
-    }
-    
-    .skeleton-loading .loyalty-pill {
-      background-color: {{ pill_bg_col }};
-    }
-    
-    .points-loading .loyalty-pill {
-      color: transparent !important;
-      background-color: {{ pill_bg_col }};
-      position: relative;
-      overflow: hidden;
-      animation: skeletonPulse 1.5s ease-in-out infinite;
-    }
-  
-    @media screen and (max-width: 749px) {
-      .loyalty-join {
-        width: 100%;
-      }
-      .loyalty-copy {
-        font-size: {{ mobile_font_size }}px;
-        line-height: {{ user_line_height }};
-      }
-      .loyalty-earn, .loyalty-program, .loyalty-pill {
-        font-size: {{ mobile_font_size }}px;
-      }
-      .loyalty-pill {
-        line-height: {{ pill_height }}px;
-      }
-    }
-  </style>
-    
-    <loyalty-join
-      data-cart-total="{{ cart.total_price | divided_by: 100.0 }}"
-      data-copy-member="{{ "You'll earn [AMOUNT] points for this order by being a Club Loulou member!" | escape }}"
-      data-copy-non-member="{{ "Instantly earn [AMOUNT] points on this order when you join Club Loulou Rewards (free to join, comes with awesome perks)" | escape }}"
-      data-marketplace-api="{% if request.host contains 'myshopify.com' or request.host contains 'localhost' %}https://marketplaceapi.heyethos.dev{% else %}https://marketplaceapi.heyethos.com{% endif %}"
-      data-store-info='{"domain":{{ shop.domain | json }},"permanent_domain":{{ shop.permanent_domain | json }},"name":{{ shop.name | json }}}'
-      {% if customer %}data-customer='{"id":{{ customer.id | json }},"email":{{ customer.email | json }}}'{% endif %}
-      {% if cart.attributes.loyalty_join_intent == 'true' %}data-join-intent="true"{% endif %}>
-    </loyalty-join>
-  <!-- End join from checkout ethos extension -->
-  </div>
+              <div class="checkout-col">
+              <!-- Add join from checkout ethos extension -->
+              
+              <style>
+              {% assign label_col = block.settings.label_text_color | default: '#4D4D4D' %}
+              {% assign pill_text_col = '#ffffff' | default: '#1673B0' %}
+              {% assign pill_bg_col = '#6a8b95' | default: '#F0F5FF' %}
+              {% assign bg_col = '#f4d8ca' | default: 'transparent' %}
+              {% assign scale_percent = block.settings.component_scale | default: 100 %}
+              {% assign scale = scale_percent | divided_by: 100.0 %}
+              {% assign user_font_size = block.settings.font_size | default: 12 %}
+              {% assign user_line_height = block.settings.line_height | default: 1.3 %}
+              {% assign text_font_weight = block.settings.text_font_weight | default: 500 %}
+              {% assign pill_font_weight = block.settings.pill_font_weight | default: 600 %}
+              {% assign text_align = block.settings.text_alignment | default: 'left' %}
+              
+              {% comment %} Base sizes (at 100% scale) {% endcomment %}
+              {% assign base_min_height = 32 %}
+              {% assign base_padding_v = 8 %}
+              {% assign base_padding_h = 12 %}
+              {% assign base_checkbox_size = 13 %}
+              {% assign base_pill_height = 16 %}
+              {% assign base_gap = 8 %}
+              
+              {% comment %} Scaled sizes {% endcomment %}
+              {% assign font_size = user_font_size | times: scale | round %}
+              {% assign min_height = base_min_height | times: scale | round %}
+              {% assign padding_v = base_padding_v | times: scale | round %}
+              {% assign padding_h = base_padding_h | times: scale | round %}
+              {% assign checkbox_size = base_checkbox_size | times: scale | round %}
+              {% assign pill_height = base_pill_height | times: scale | round %}
+              {% assign gap = base_gap | times: scale | round %}
+              
+              {% comment %} Checkbox checkmark scaling {% endcomment %}
+              {% assign checkmark_width = 6 | times: scale | round %}
+              {% assign checkmark_height = 3 | times: scale | round %}
+              {% assign checkmark_left = 3 | times: scale | round %}
+              {% assign checkmark_top = 4 | times: scale | round %}
+              
+              {% assign mobile_font_size = font_size | minus: 1 %}
+            
+              .loyalty-join {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                gap: {{ gap }}px;
+                width: 100%;
+                min-height: {{ min_height }}px;
+                background: {{ bg_col }};
+                position: relative;
+                box-sizing: border-box;
+                margin: 0 0 12px 0;
+                padding: {{ padding_v }}px {{ padding_h }}px;
+                border-radius: 6px;
+                overflow: hidden;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                text-align: {{ text_align }};
+                {% if text_align == 'center' %}
+                justify-content: center;
+                {% elsif text_align == 'right' %}
+                justify-content: flex-end;
+                {% endif %}
+              }
+            
+              #loyalty_checkbox {
+                width: {{ checkbox_size }}px;
+                height: {{ checkbox_size }}px;
+                flex: 0 0 {{ checkbox_size }}px;
+                order: 0;
+                cursor: pointer;
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                box-sizing: border-box;
+                background: #FFFFFF;
+                border: 1px solid #4D4D4D;
+                box-shadow: 0px 1px 2px rgba(17, 24, 39, 0.05);
+                border-radius: 3px;
+                position: relative;
+                margin: {{ font_size | divided_by: 4 | round }}px 2px 0 0;
+                transition: all 0.2s ease;
+              }
+            
+              #loyalty_checkbox:focus {
+                outline: 2px solid #0066cc;
+                outline-offset: 2px;
+                border-color: #0066cc;
+              }
+            
+              #loyalty_checkbox:hover {
+                border-color: #1673B0;
+                box-shadow: 0px 2px 4px rgba(17, 24, 39, 0.1);
+              }
+            
+              #loyalty_checkbox:checked {
+                background: #1673B0;
+                border: none;
+                border-radius: 3px;
+              }
+            
+              #loyalty_checkbox:checked::after {
+                content: "";
+                position: absolute;
+                border: 1px solid #FFFFFF;
+                width: {{ checkmark_width }}px;
+                height: {{ checkmark_height }}px;
+                border-top: 0;
+                border-right: 0;
+                transform: rotate(-45deg);
+                left: {{ checkmark_left }}px;
+                top: {{ checkmark_top }}px;
+              }
+              
+              .loyalty-join.checked-state #loyalty_checkbox {
+                background: #1673B0;
+                border: none;
+                border-radius: 3px;
+              }
+              
+              .loyalty-join.checked-state #loyalty_checkbox::after {
+                content: "";
+                position: absolute;
+                border: 1px solid #FFFFFF;
+                width: {{ checkmark_width }}px;
+                height: {{ checkmark_height }}px;
+                border-top: 0;
+                border-right: 0;
+                transform: rotate(-45deg);
+                left: {{ checkmark_left }}px;
+                top: {{ checkmark_top }}px;
+              }
+            
+              .loyalty-content {
+                display: flex;
+                align-items: flex-start;
+                flex: 1 1 auto;
+                width: 100%;
+                min-width: 0;
+              }
+            
+              .loyalty-copy {
+                width: 100%;
+                font-style: normal;
+                font-weight: {{ text_font_weight }};
+                font-size: {{ font_size }}px;
+                line-height: {{ user_line_height }};
+                color: {{ label_col }};
+                min-width: 0;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                hyphens: auto;
+              }
+            
+              .loyalty-copy-text {
+                white-space: nowrap;
+                flex: 0 1 auto;
+              }
+            
+              .loyalty-earn {
+                display: inline;
+                font-weight: inherit;
+                font-size: {{ font_size }}px;
+                line-height: inherit;
+              }
+            
+              .loyalty-pill {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                vertical-align: middle;
+                padding: 2px 6px 4px;
+                height: {{ pill_height }}px;
+                background: {{ pill_bg_col }};
+                border-radius: 100px;
+                font-style: normal;
+                font-weight: {{ pill_font_weight }};
+                font-size: {{ font_size }}px;
+                line-height: 1;
+                color: {{ pill_text_col }};
+                white-space: nowrap;
+                margin: 0 2px;
+              }
+            
+              .loyalty-program {
+                display: inline;
+                font-size: {{ font_size }}px;
+                line-height: inherit;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                hyphens: auto;
+              }
+            
+              .loyalty-join.member-state {
+                padding-left: 12px;
+              }
+              
+              .loyalty-join.member-state .loyalty-content {
+                margin-left: 0;
+              }
+              
+              .member-state #loyalty_checkbox {
+                display: none;
+              }
+            
+              @keyframes skeletonPulse {
+                0% { opacity: 0.6; }
+                50% { opacity: 0.8; }
+                100% { opacity: 0.6; }
+              }
+              
+              .skeleton-loading .loyalty-earn,
+              .skeleton-loading .loyalty-program,
+              .skeleton-loading .loyalty-pill {
+                color: transparent !important;
+                background-color: #E6E6E6;
+                border-radius: 3px;
+                position: relative;
+                overflow: hidden;
+                animation: skeletonPulse 1.5s ease-in-out infinite;
+              }
+              
+              .skeleton-loading .loyalty-pill {
+                background-color: {{ pill_bg_col }};
+              }
+              
+              .points-loading .loyalty-pill {
+                color: transparent !important;
+                background-color: {{ pill_bg_col }};
+                position: relative;
+                overflow: hidden;
+                animation: skeletonPulse 1.5s ease-in-out infinite;
+              }
+            
+              @media screen and (max-width: 749px) {
+                .loyalty-join {
+                  width: 100%;
+                }
+                .loyalty-copy {
+                  font-size: {{ mobile_font_size }}px;
+                  line-height: {{ user_line_height }};
+                }
+                .loyalty-earn, .loyalty-program, .loyalty-pill {
+                  font-size: {{ mobile_font_size }}px;
+                }
+                .loyalty-pill {
+                  line-height: {{ pill_height }}px;
+                }
+              }
+            </style>
+              
+              <loyalty-join
+                data-cart-total="{{ cart.total_price | divided_by: 100.0 }}"
+                data-copy-member="{{ "You'll earn [AMOUNT] points for this order by being a Club Loulou member!" | escape }}"
+                data-copy-non-member="{{ "Instantly earn [AMOUNT] points on this order when you join Club Loulou Rewards (free to join, comes with awesome perks)" | escape }}"
+                data-marketplace-api="{% if request.host contains 'myshopify.com' or request.host contains 'localhost' %}https://marketplaceapi.heyethos.dev{% else %}https://marketplaceapi.heyethos.com{% endif %}"
+                data-store-info='{"domain":{{ shop.domain | json }},"permanent_domain":{{ shop.permanent_domain | json }},"name":{{ shop.name | json }}}'
+                {% if customer %}data-customer='{"id":{{ customer.id | json }},"email":{{ customer.email | json }}}'{% endif %}
+                {% if cart.attributes.loyalty_join_intent == 'true' %}data-join-intent="true"{% endif %}>
+              </loyalty-join>
+            <!-- End join from checkout ethos extension -->
+            </div>
 
               <div class="checkout-col">
                 <div class="checkout-buttons">
@@ -800,13 +801,17 @@
                   </div>
                   {% endif %}
                 </div>
-
+                <div class="cart-donation">  
+                  <p>For every order you place, we will donate one serving of Niuriss baby formula to Mamas for Mamas.</p>
+                </div>
                 {%- if section.settings.show_continue_shopping -%}
                   <a class="continue-shopping underline block lightly-spaced-row-above" href="{{ continue_shopping_url }}">{{ 'cart.summary.continue_shopping' | t }}</a>
                 {%- endif -%}
+                
               </div>
             </div>
           </div>
+           
         </div>
       </div>
     </form>
