@@ -25,177 +25,254 @@
 %}
 
 {% if has_siblings %}
-    <!-- Check for New Prints -->
+
+  {% comment %} Determine which categories exist {% endcomment %}
   {%- assign has_new_prints = false -%}
   {%- assign has_core_prints = false -%}
+  {%- assign has_sale_prints = false -%}
 
   {%- for sibling in sibs_collection.products -%}
     {%- unless sibling.tags contains 'hidden' -%}
       {%- if sibling.tags contains 'new' -%}
         {%- assign has_new_prints = true -%}
       {%- endif -%}
+      {%- if sibling.tags contains 'core' -%}
+        {%- assign has_core_prints = true -%}
+      {%- endif -%}
+      {%- if sibling.tags contains 'sale' -%}
+        {%- assign has_sale_prints = true -%}
+      {%- endif -%}
     {%- endunless -%}
-    {%- if sibling.tags contains 'core' or sibling.tags contains 'sale' -%}
-      {%- assign has_core_prints = true -%}
-    {%- endif -%}
   {%- endfor -%}
-    
-  
-<!-- New Prints Section -->
-  {%- if has_new_prints -%}
-  <fieldset class="option-selector" data-selector-type="listed" data-option="{{ option.name | escape }}">
-      <legend class="label">
-        New Styles: <span class="option-selector__label-value js-color-text" data-section="new"></span>
-      </legend>
-      <div class="option-selector__btns variant-grid-compact">
-        {%- for sibling in sibs_collection.products -%}
-            {%- if sibling.tags contains 'new' -%}
-              <a href="{{ sibling.url }}" 
-                class="opt-label opt-label--image {% if sibling.tags contains 'hidden' %}hidden-product{% endif %} {% if sibling.handle == product.handle %}is-active{% endif %}{% if sibling.available == false  %} sold-out{% endif %}" 
-                data-color="{{ sibling.metafields.theme.cutline }}" data-section="new"
+
+  {% comment %} Count how many categories exist to decide if "All" tab is needed {% endcomment %}
+  {%- assign category_count = 0 -%}
+  {%- if has_new_prints -%}{%- assign category_count = category_count | plus: 1 -%}{%- endif -%}
+  {%- if has_core_prints -%}{%- assign category_count = category_count | plus: 1 -%}{%- endif -%}
+  {%- if has_sale_prints -%}{%- assign category_count = category_count | plus: 1 -%}{%- endif -%}
+
+  {%- assign show_all_tab = false -%}
+  {%- if category_count > 1 -%}
+    {%- assign show_all_tab = true -%}
+  {%- endif -%}
+
+  <div class="sibling-tabs" data-sibling-tabs>
+
+    {% comment %} Tab Buttons {% endcomment %}
+    <div class="sibling-tabs__nav" role="tablist">
+      {%- if show_all_tab -%}
+        <button
+          class="sibling-tabs__tab is-active"
+          role="tab"
+          aria-selected="true"
+          data-tab="all">
+          All
+        </button>
+      {%- endif -%}
+      {%- if has_new_prints -%}
+        <button
+          class="sibling-tabs__tab{% unless show_all_tab %} is-active{% endunless %}"
+          role="tab"
+          aria-selected="{% unless show_all_tab %}true{% else %}false{% endunless %}"
+          data-tab="new">
+          Seasonal
+        </button>
+      {%- endif -%}
+      {%- if has_core_prints -%}
+        <button
+          class="sibling-tabs__tab{% unless show_all_tab or has_new_prints %} is-active{% endunless %}"
+          role="tab"
+          aria-selected="{% unless show_all_tab or has_new_prints %}true{% else %}false{% endunless %}"
+          data-tab="core">
+          Core
+        </button>
+      {%- endif -%}
+      {%- if has_sale_prints -%}
+        <button
+          class="sibling-tabs__tab{% unless show_all_tab or has_new_prints or has_core_prints %} is-active{% endunless %}"
+          role="tab"
+          aria-selected="{% unless show_all_tab or has_new_prints or has_core_prints %}true{% else %}false{% endunless %}"
+          data-tab="sale">
+          Sale
+        </button>
+      {%- endif -%}
+    </div>
+
+    {% comment %} Shared color name display {% endcomment %}
+    <div class="sibling-tabs__color-label">
+      <span class="js-color-text-global"></span>
+    </div>
+
+    {% comment %} Tab Panels {% endcomment %}
+
+    {%- if show_all_tab -%}
+      <div class="sibling-tabs__panel is-active" data-panel="all" role="tabpanel">
+        <div class="option-selector__btns variant-grid-compact">
+          {%- for sibling in sibs_collection.products -%}
+            {%- unless sibling.tags contains 'hidden' -%}
+              <a href="{{ sibling.url }}"
+                class="opt-label opt-label--image {% if sibling.handle == product.handle %}is-active{% endif %}{% if sibling.available == false %} sold-out{% endif %}"
+                data-color="{{ sibling.metafields.theme.cutline }}"
                 {% if sibling.handle == product.handle %}data-selected="true"{% endif %}>
                 {%- if sibling.tags contains 'new' -%}
                   <div class="opt-label__tag product-label--new">NEW</div>
+                {%- elsif sibling.tags contains 'sale' -%}
+                  <div class="opt-label__tag product-label--sale">SALE</div>
                 {%- endif -%}
                 <div class="overflow_hidden">
-                <div class="opt-label__media media">  
-                  {%- if sibling.available == false  -%}
-                    <div class="sold-out-line"></div>
-                  {% endif %}
-                    {% if sibling.metafields.custom.swatch.value.image.value != blank %}
-                    {%- render 'image',
-                      image: sibling.metafields.custom.swatch.value.image.value,
-                      sizes: img_sizes,
-                      widths: img_widths,
-                      custom_aspect_ratio: img_aspect_ratio,
-                      custom_crop: img_crop_align
-                    -%}
-                    {% elsif sibling.metafields.custom.swatch.value.image.value == blank %}
-                      <style>
-                        a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
-                          max-width: 100%;
-                          max-height: 100%;
-                          position: absolute;
-                          left: 0; 
-                          top: 0;
-                          height: 130%;
-                      }
-                      </style>
+                  <div class="opt-label__media media">
+                    {%- if sibling.available == false -%}
+                      <div class="sold-out-line"></div>
+                    {%- endif -%}
+                    {%- if sibling.metafields.custom.swatch.value.image.value != blank -%}
                       {%- render 'image',
-                      image: sibling.images.first,
-                      sizes: img_sizes,
-                      widths: img_widths,
-                      custom_aspect_ratio: img_aspect_ratio,
-                      custom_crop: img_crop_align
-                    -%}
-                  
-                    {% endif %}
+                        image: sibling.metafields.custom.swatch.value.image.value,
+                        sizes: img_sizes,
+                        widths: img_widths,
+                        custom_aspect_ratio: img_aspect_ratio,
+                        custom_crop: img_crop_align
+                      -%}
+                    {%- else -%}
+                      {%- render 'image',
+                        image: sibling.images.first,
+                        sizes: img_sizes,
+                        widths: img_widths,
+                        custom_aspect_ratio: img_aspect_ratio,
+                        custom_crop: img_crop_align
+                      -%}
+                    {%- endif -%}
+                  </div>
+                </div>
+              </a>
+            {%- endunless -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    {%- endif -%}
+
+    {%- if has_new_prints -%}
+      <div class="sibling-tabs__panel{% unless show_all_tab %} is-active{% endunless %}" data-panel="new" role="tabpanel">
+        <div class="option-selector__btns variant-grid-compact">
+          {%- for sibling in sibs_collection.products -%}
+            {%- if sibling.tags contains 'new' and sibling.tags contains 'hidden' == false -%}
+              <a href="{{ sibling.url }}"
+                class="opt-label opt-label--image {% if sibling.handle == product.handle %}is-active{% endif %}{% if sibling.available == false %} sold-out{% endif %}"
+                data-color="{{ sibling.metafields.theme.cutline }}"
+                {% if sibling.handle == product.handle %}data-selected="true"{% endif %}>
+                <div class="opt-label__tag product-label--new">NEW</div>
+                <div class="overflow_hidden">
+                  <div class="opt-label__media media">
+                    {%- if sibling.available == false -%}
+                      <div class="sold-out-line"></div>
+                    {%- endif -%}
+                    {%- if sibling.metafields.custom.swatch.value.image.value != blank -%}
+                      {%- render 'image',
+                        image: sibling.metafields.custom.swatch.value.image.value,
+                        sizes: img_sizes,
+                        widths: img_widths,
+                        custom_aspect_ratio: img_aspect_ratio,
+                        custom_crop: img_crop_align
+                      -%}
+                    {%- else -%}
+                      {%- render 'image',
+                        image: sibling.images.first,
+                        sizes: img_sizes,
+                        widths: img_widths,
+                        custom_aspect_ratio: img_aspect_ratio,
+                        custom_crop: img_crop_align
+                      -%}
+                    {%- endif -%}
                   </div>
                 </div>
               </a>
             {%- endif -%}
-        {%- endfor -%}
+          {%- endfor -%}
+        </div>
       </div>
-    </fieldset>
-  {%- endif -%}
+    {%- endif -%}
 
-  <!-- Core or Sale Prints Section -->
-    
-<fieldset class="option-selector" data-selector-type="listed" data-option="{{ option.name | escape }}">
-
-  {%- if has_core_prints -%}
-
-    <legend class="label">
-      Core Styles: <span class="option-selector__label-value js-color-text" data-section="core"></span>
-    </legend>
-    <div class="option-selector__btns variant-grid-compact">
-      {%- for sibling in sibs_collection.products -%}
-        {%- unless sibling.tags contains 'new' or sibling.tags contains 'sale' -%}
-            <a href="{{ sibling.url }}" 
-               class="opt-label opt-label--image {% if sibling.tags contains 'hidden' %}hidden-product{% endif %} {% if sibling.handle == product.handle %}is-active{% endif %}{% if sibling.available == false  %} sold-out{% endif %}" 
-               data-color="{{ sibling.metafields.theme.cutline }}" data-section="core"
-               {% if sibling.handle == product.handle %}data-selected="true"{% endif %}>
-              <div class="overflow_hidden">
-                 <div class="opt-label__media media " >  
-                  {%- if sibling.available == false  -%}
-                     <div class="sold-out-line"></div>
-                  {% endif %}
-                    {% if sibling.metafields.custom.swatch.value.image.value != blank %}
-                    {%- render 'image',
-                      image: sibling.metafields.custom.swatch.value.image.value,
-                      sizes: img_sizes,
-                      widths: img_widths,
-                      custom_aspect_ratio: img_aspect_ratio,
-                      custom_crop: img_crop_align
-                    -%}
-                    {% elsif sibling.metafields.custom.swatch.value.image.value == blank %}
-                       <style>
-                      a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
-                        max-width: 100%;
-                        max-height: 100%;
-                        position: absolute;
-                        left: 0; 
-                        top: 0;
-                        height: 130%;
-                    }
-                    </style>
+    {%- if has_core_prints -%}
+      <div class="sibling-tabs__panel{% unless show_all_tab or has_new_prints %} is-active{% endunless %}" data-panel="core" role="tabpanel">
+        <div class="option-selector__btns variant-grid-compact">
+          {%- for sibling in sibs_collection.products -%}
+            {%- unless sibling.tags contains 'hidden' or sibling.tags contains 'new' or sibling.tags contains 'sale' -%}
+              <a href="{{ sibling.url }}"
+                class="opt-label opt-label--image {% if sibling.handle == product.handle %}is-active{% endif %}{% if sibling.available == false %} sold-out{% endif %}"
+                data-color="{{ sibling.metafields.theme.cutline }}"
+                {% if sibling.handle == product.handle %}data-selected="true"{% endif %}>
+                <div class="overflow_hidden">
+                  <div class="opt-label__media media">
+                    {%- if sibling.available == false -%}
+                      <div class="sold-out-line"></div>
+                    {%- endif -%}
+                    {%- if sibling.metafields.custom.swatch.value.image.value != blank -%}
                       {%- render 'image',
-                      image: sibling.images.first,
-                      sizes: img_sizes,
-                      widths: img_widths,
-                      custom_aspect_ratio: img_aspect_ratio,
-                      custom_crop: img_crop_align
-                    -%}
-                   
-                    {% endif %}
+                        image: sibling.metafields.custom.swatch.value.image.value,
+                        sizes: img_sizes,
+                        widths: img_widths,
+                        custom_aspect_ratio: img_aspect_ratio,
+                        custom_crop: img_crop_align
+                      -%}
+                    {%- else -%}
+                      {%- render 'image',
+                        image: sibling.images.first,
+                        sizes: img_sizes,
+                        widths: img_widths,
+                        custom_aspect_ratio: img_aspect_ratio,
+                        custom_crop: img_crop_align
+                      -%}
+                    {%- endif -%}
                   </div>
-              </div>
-            </a>
-        {%- endunless -%}
-      {%- endfor -%}
-      {%- for sibling in sibs_collection.products -%}
-        {%- if sibling.tags contains 'sale' -%}
-          <a href="{{ sibling.url }}" 
-             class="opt-label opt-label--image {% if sibling.tags contains 'hidden' %}hidden-product{% endif %} {% if sibling.handle == product.handle %}is-active{% endif %}{% if sibling.available == false  %} sold-out{% endif %}" 
-             data-color="{{ sibling.metafields.theme.cutline }}" data-section="core"
-             {% if sibling.handle == product.handle %}data-selected="true"{% endif %}>
-            {%- if sibling.tags contains 'sale' -%}
-              <div class="opt-label__tag product-label--sale">SALE</div>
+                </div>
+              </a>
+            {%- endunless -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    {%- endif -%}
+
+    {%- if has_sale_prints -%}
+      <div class="sibling-tabs__panel{% unless show_all_tab or has_new_prints or has_core_prints %} is-active{% endunless %}" data-panel="sale" role="tabpanel">
+        <div class="option-selector__btns variant-grid-compact">
+          {%- for sibling in sibs_collection.products -%}
+            {%- if sibling.tags contains 'sale' and sibling.tags contains 'hidden' == false -%}
+              <a href="{{ sibling.url }}"
+                class="opt-label opt-label--image {% if sibling.handle == product.handle %}is-active{% endif %}{% if sibling.available == false %} sold-out{% endif %}"
+                data-color="{{ sibling.metafields.theme.cutline }}"
+                {% if sibling.handle == product.handle %}data-selected="true"{% endif %}>
+                <div class="opt-label__tag product-label--sale">SALE</div>
+                <div class="overflow_hidden">
+                  <div class="opt-label__media media">
+                    {%- if sibling.available == false -%}
+                      <div class="sold-out-line"></div>
+                    {%- endif -%}
+                    {%- if sibling.metafields.custom.swatch.value.image.value != blank -%}
+                      {%- render 'image',
+                        image: sibling.metafields.custom.swatch.value.image.value,
+                        sizes: img_sizes,
+                        widths: img_widths,
+                        custom_aspect_ratio: img_aspect_ratio,
+                        custom_crop: img_crop_align
+                      -%}
+                    {%- else -%}
+                      {%- render 'image',
+                        image: sibling.images.first,
+                        sizes: img_sizes,
+                        widths: img_widths,
+                        custom_aspect_ratio: img_aspect_ratio,
+                        custom_crop: img_crop_align
+                      -%}
+                    {%- endif -%}
+                  </div>
+                </div>
+              </a>
             {%- endif -%}
-            <div class="overflow_hidden">
-              <div class="opt-label__media media">  
-                {%- if sibling.available == false  -%}
-                   <div class="sold-out-line"></div>
-                {% endif %}
-                {% if sibling.metafields.custom.swatch.value.image.value != blank %}
-                {%- render 'image',
-                  image: sibling.metafields.custom.swatch.value.image.value,
-                  sizes: img_sizes,
-                  widths: img_widths,
-                  custom_aspect_ratio: img_aspect_ratio,
-                  custom_crop: img_crop_align
-                -%}
-                {% elsif sibling.metafields.custom.swatch.value.image.value == blank%}
-                  {%- render 'image',
-                  image: sibling.images.first,
-                  sizes: img_sizes,
-                  widths: img_widths,
-                  custom_aspect_ratio: img_aspect_ratio,
-                  custom_crop: img_crop_align
-                -%}
-               
-                {% endif %}
-              </div>
-            </div>
-          </a>
-        {%- endif -%}
-      {%- endfor -%}
-    </div>
-    
+          {%- endfor -%}
+        </div>
+      </div>
+    {%- endif -%}
 
-  {%- endif -%}
-</fieldset>
-
+  </div>{% comment %} end .sibling-tabs {% endcomment %}
 
 {% endif %}
 
@@ -434,39 +511,109 @@
   {%- endif -%}
 {%- endunless -%}
 
+<style>
+  .sibling-tabs__nav {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid currentColor;
+  }
+
+  .sibling-tabs__tab {
+    background: none;
+    border: none;
+    padding: 8px 14px;
+    cursor: pointer;
+    font-size: inherit;
+    font-family: inherit;
+    opacity: 0.5;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    transition: opacity 0.2s, border-color 0.2s;
+  }
+
+  .sibling-tabs__tab:hover {
+    opacity: 0.8;
+  }
+
+  .sibling-tabs__tab.is-active {
+    opacity: 1;
+    border-bottom-color: currentColor;
+  }
+
+  .sibling-tabs__color-label {
+    min-height: 1.2em;
+    margin-bottom: 8px;
+    font-size: 0.875em;
+  }
+
+  .sibling-tabs__panel {
+    display: none;
+  }
+
+  .sibling-tabs__panel.is-active {
+    display: block;
+  }
+</style>
+
 <script>
- document.addEventListener("DOMContentLoaded", function() {
-    const colorTextElements = document.querySelectorAll(".js-color-text");
-    const labels = document.querySelectorAll(".opt-label");
+  document.addEventListener("DOMContentLoaded", function () {
+    const siblingTabContainers = document.querySelectorAll("[data-sibling-tabs]");
 
-    function clearAllCutlines() {
-      colorTextElements.forEach(element => element.textContent = "");
-    }
+    siblingTabContainers.forEach(function (container) {
+      const tabs = container.querySelectorAll(".sibling-tabs__tab");
+      const panels = container.querySelectorAll(".sibling-tabs__panel");
+      const colorLabel = container.querySelector(".js-color-text-global");
+      const allLabels = container.querySelectorAll(".opt-label");
 
-    function setInitialSelected() {
-      labels.forEach(label => {
-        if (label.hasAttribute("data-selected")) {
-          const section = label.getAttribute("data-section");
-          const cutlineText = label.getAttribute("data-color");
-          document.querySelector(`[data-section="${section}"]`).textContent = cutlineText;
-        }
+      function setColorLabel(text) {
+        if (colorLabel) colorLabel.textContent = text || "";
+      }
+
+      function getInitialCutline() {
+        const selected = container.querySelector(".opt-label[data-selected]");
+        return selected ? selected.getAttribute("data-color") || "" : "";
+      }
+
+      // Tab switching
+      tabs.forEach(function (tab) {
+        tab.addEventListener("click", function () {
+          const target = this.getAttribute("data-tab");
+
+          tabs.forEach(function (t) {
+            t.classList.remove("is-active");
+            t.setAttribute("aria-selected", "false");
+          });
+          panels.forEach(function (p) {
+            p.classList.remove("is-active");
+          });
+
+          this.classList.add("is-active");
+          this.setAttribute("aria-selected", "true");
+
+          const targetPanel = container.querySelector('[data-panel="' + target + '"]');
+          if (targetPanel) targetPanel.classList.add("is-active");
+
+          // Reset color label to the selected product's cutline (if visible in this panel)
+          const selectedInPanel = targetPanel
+            ? targetPanel.querySelector(".opt-label[data-selected]")
+            : null;
+          setColorLabel(selectedInPanel ? selectedInPanel.getAttribute("data-color") : "");
+        });
       });
-    }
 
-    labels.forEach(label => {
-      label.addEventListener("mouseenter", function() {
-        clearAllCutlines();
-        const section = this.getAttribute("data-section");
-        const cutlineText = this.getAttribute("data-color");
-        document.querySelector(`[data-section="${section}"]`).textContent = cutlineText;
+      // Hover interactions for color label
+      allLabels.forEach(function (label) {
+        label.addEventListener("mouseenter", function () {
+          setColorLabel(this.getAttribute("data-color") || "");
+        });
+        label.addEventListener("mouseleave", function () {
+          setColorLabel(getInitialCutline());
+        });
       });
 
-      label.addEventListener("mouseleave", function() {
-        clearAllCutlines();
-        setInitialSelected();
-      });
+      // Set initial color label
+      setColorLabel(getInitialCutline());
     });
-
-    setInitialSelected();
   });
 </script>
