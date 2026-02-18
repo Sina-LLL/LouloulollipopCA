@@ -262,7 +262,6 @@
               {% render 'breadcrumbs', show_next_prev: false %}
             {% endif %}
             <div class="title-row" {{ block.shopify_attributes }}>
-               {% render 'product-label-detail', product: product, current_variant: current_variant %}
               <h1 class="product-title">{{ product.title | split: ' - ' | first | escape }}</h1>
 
             </div>
