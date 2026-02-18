@@ -577,11 +577,13 @@
 
 /* Pull in your existing opt-label--image sizing for sibling swatches */
 .sibling-tabs .opt-label--image {
-  height: 60px;
-  width: 60px;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  height: auto;
   border-radius: 4px;
   margin: 0; /* grid handles spacing */
   position: relative;
+  display: block;
 }
 
 /* Active ring — matches your .swatch-style-icon_square active style */
