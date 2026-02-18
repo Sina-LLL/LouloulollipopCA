@@ -110,6 +110,15 @@
             "link_url": "shopify://collections/curious-cuddles"
           }
         },
+        "menu_promotion_small_i7xRFz": {
+          "type": "menu-promotion-small",
+          "settings": {
+            "dropdown_link_title": "New & Featured",
+            "image": "shopify://shop_images/Header-Safari_Jungle.png",
+            "title": "Safari Jungle",
+            "link_url": "shopify://collections/safari-jungle"
+          }
+        },
         "menu_promotion_small_tKL9pd": {
           "type": "menu-promotion-small",
           "settings": {
@@ -284,6 +293,7 @@
       },
       "block_order": [
         "menu_promotion_small_LfPP96",
+        "menu_promotion_small_i7xRFz",
         "menu_promotion_small_tKL9pd",
         "menu_promotion_small_8ghxfY",
         "menu_promotion_small_gxFhYf",
