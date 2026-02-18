@@ -76,6 +76,8 @@
             "margin_right": -1,
             "is_custom_border_radius": true,
             "border_radius": 10,
+            "select_variant_selector": "html_element",
+            "variant_selector": "",
             "custom_class": "",
             "custom_css": ".myregistry-add-button {\n\n    \n  }",
             "custom_elememt_selector": "",
@@ -200,7 +202,7 @@
         "feature_74ANHV"
       ],
       "settings": {
-        "section_heading": "We Thought of That Too"
+        "section_heading": "Why Parents Love This"
       }
     },
     "custom_product_material_care_AB9yyi": {
