@@ -44,9 +44,10 @@
       data-preload
     {%- endif %}
     {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.2s"' -%}>
-    {% render 'product-label-detail', product: product, current_variant: current_variant %}
 
     <div class="media-gallery__inner{% if section.settings.enable_sticky_columns %} sticky-content-container{% endif %}">
+    {% render 'product-label-detail', product: product, current_variant: current_variant %}
+
       <div class="main-image">
         {%- liquid
           for media in product.media
