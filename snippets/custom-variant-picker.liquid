@@ -515,49 +515,158 @@
   {%- endif -%}
 {%- endunless -%}
 
-<style>
-  .sibling-tabs__nav {
-    display: flex;
-    gap: 4px;
-    margin-bottom: 12px;
-    border-bottom: 1px solid currentColor;
+<style>/* =============================================
+   Sibling Tabs — add to custom product pages CSS
+   ============================================= */
+
+.sibling-tabs__nav {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #D9E1E4;
+}
+
+.sibling-tabs__tab {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: avenir-next-lt-pro, sofia-pro, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #848484;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.sibling-tabs__tab:hover {
+  color: #4F676E;
+}
+
+.sibling-tabs__tab.is-active {
+  color: #4F676E;
+  border-bottom-color: #6A8B95;
+}
+
+.sibling-tabs__color-label {
+  min-height: 1.2em;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  font-size: 0.875em;
+  color: #4F676E;
+}
+
+.sibling-tabs__panel {
+  display: none;
+}
+
+.sibling-tabs__panel.is-active {
+  display: block;
+}
+
+/* Make the tab panel's btn grid match your existing swatch grid styles */
+.sibling-tabs .option-selector__btns.variant-grid-compact {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  gap: 8px;
+  padding-top: 10px;
+}
+
+/* Pull in your existing opt-label--image sizing for sibling swatches */
+.sibling-tabs .opt-label--image {
+  height: 60px;
+  width: 60px;
+  border-radius: 4px;
+  margin: 0; /* grid handles spacing */
+  position: relative;
+}
+
+/* Active ring — matches your .swatch-style-icon_square active style */
+.sibling-tabs .opt-label--image.is-active:after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 2.5px solid #6A8B95 !important;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+/* Default border */
+.sibling-tabs .opt-label--image:after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 2px solid #D9E1E4;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+.sibling-tabs .opt-label--image:hover:after {
+  border: 2px solid #8EA7AF;
+}
+
+/* Sold-out states */
+.sibling-tabs .opt-label--image.sold-out:hover:after {
+  border-color: #D9E1E4;
+}
+
+.sibling-tabs .opt-label--image.is-active.sold-out:hover .sold-out-line {
+  background-color: #6A8B95;
+}
+
+.sibling-tabs .opt-label--image .sold-out-line {
+  background-color: #D9E1E4;
+}
+
+/* Image fill — matches your existing a.opt-label.opt-label--image rule */
+.sibling-tabs .opt-label--image .opt-label__media.media img.theme-img {
+  max-width: 130%;
+  max-height: 130%;
+  position: absolute;
+  left: -16%;
+  top: -16%;
+  height: 130%;
+}
+
+.sibling-tabs .opt-label--image .overflow_hidden {
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.sibling-tabs .opt-label--image .opt-label__media.media {
+  height: 100%;
+}
+
+.sibling-tabs .sold-out .theme-img {
+  opacity: 30%;
+}
+
+/* Ensure the sibling tabs section has the same bottom margin as .option-selector */
+.sibling-tabs {
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .sibling-tabs {
+    margin-bottom: 32px;
   }
 
-  .sibling-tabs__tab {
-    background: none;
-    border: none;
-    padding: 8px 14px;
-    cursor: pointer;
-    font-size: inherit;
-    font-family: inherit;
-    opacity: 0.5;
-    border-bottom: 2px solid transparent;
-    margin-bottom: -1px;
-    transition: opacity 0.2s, border-color 0.2s;
+  .sibling-tabs .option-selector__btns.variant-grid-compact {
+    gap: 8px;
   }
+}
 
-  .sibling-tabs__tab:hover {
-    opacity: 0.8;
+@media (max-width: 767px) {
+  .sibling-tabs .option-selector__btns.variant-grid-compact {
+    gap: 6px;
   }
-
-  .sibling-tabs__tab.is-active {
-    opacity: 1;
-    border-bottom-color: currentColor;
-  }
-
-  .sibling-tabs__color-label {
-    min-height: 1.2em;
-    margin-bottom: 8px;
-    font-size: 0.875em;
-  }
-
-  .sibling-tabs__panel {
-    display: none;
-  }
-
-  .sibling-tabs__panel.is-active {
-    display: block;
-  }
+}
 </style>
 
 <script>
