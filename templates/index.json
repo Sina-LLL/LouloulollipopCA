@@ -559,6 +559,9 @@
         "collection_dqkine",
         "collection_ntR4RL"
       ],
+      "custom_css": [
+        ".collection-slider-row{padding-bottom: 0;}"
+      ],
       "name": "Shop by Print",
       "settings": {
         "title": "Shop by Print",
