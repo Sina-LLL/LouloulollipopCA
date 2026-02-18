@@ -715,7 +715,6 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
   justify-content: space-between;
   gap: 16px;
   grid-template-columns: 1fr 1fr;
-  margin-bottom:20px;
 }
 .product-material-usp__icons-wrapper{
   grid-template-columns: 1fr 1fr 1fr;
