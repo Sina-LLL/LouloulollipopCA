@@ -363,8 +363,8 @@
             {%- endunless -%}
           {%- endfor -%}
 
-        {% comment %} 4: All sold out — last {% endcomment %}
-         {%- for sibling in sibs_collection.products -%}
+          {% comment %} 4: All sold out — last {% endcomment %}
+          {%- for sibling in sibs_collection.products -%}
             {%- unless sibling.tags contains 'hidden' and sibling.available -%}
               {%- unless sibling.available -%}
                 {%- if sibling.tags contains 'sale' -%}
@@ -634,9 +634,7 @@
   /* =============================================
    Sibling Tabs — add to custom product pages CSS
    ============================================= */
-/* =============================================
-   Sibling Tabs — add to custom product pages CSS
-   ============================================= */
+
 
 .sibling-tabs__nav {
   display: flex;
