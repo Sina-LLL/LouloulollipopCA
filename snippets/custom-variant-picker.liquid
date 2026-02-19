@@ -290,7 +290,7 @@
 
           {% comment %} Core Tab - Core prints {% endcomment %}
           {%- for sibling in sibs_collection.products -%}
-            {%- unless sibling.tags contains 'hidden' -%}
+            {%- unless sibling.tags contains 'hidden' or  sibling.tags contains 'new'-%}
               {%- if sibling.tags contains 'core' and sibling.available -%}
                 <a href="{{ sibling.url }}"
                   class="opt-label opt-label--image {% if sibling.handle == product.handle %}is-active{% endif %}"
