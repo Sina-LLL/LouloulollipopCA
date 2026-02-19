@@ -515,7 +515,11 @@
   {%- endif -%}
 {%- endunless -%}
 
-<style>/* =============================================
+<style>
+  /* =============================================
+   Sibling Tabs — add to custom product pages CSS
+   ============================================= */
+/* =============================================
    Sibling Tabs — add to custom product pages CSS
    ============================================= */
 
@@ -567,26 +571,27 @@
   display: block;
 }
 
-/* Make the tab panel's btn grid match your existing swatch grid styles */
+/* Grid layout */
 .sibling-tabs .option-selector__btns.variant-grid-compact {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
-  gap: 8px;
+  grid-template-columns: repeat(auto-fill, minmax(68px, 1fr));
+  gap: 10px;
   padding-top: 10px;
 }
 
-/* Pull in your existing opt-label--image sizing for sibling swatches */
+/* Square swatches — fluid width, forced square via aspect-ratio */
 .sibling-tabs .opt-label--image {
   aspect-ratio: 1 / 1;
   width: 100%;
   height: auto;
   border-radius: 4px;
-  margin: 0; /* grid handles spacing */
+  margin: 0;
   position: relative;
   display: block;
+  box-sizing: border-box;
 }
 
-/* Active ring — matches your .swatch-style-icon_square active style */
+/* Active ring */
 .sibling-tabs .opt-label--image.is-active:after {
   content: '';
   position: absolute;
@@ -594,6 +599,7 @@
   border: 2.5px solid #6A8B95 !important;
   border-radius: 4px;
   pointer-events: none;
+  z-index: 2;
 }
 
 /* Default border */
@@ -604,6 +610,7 @@
   border: 2px solid #D9E1E4;
   border-radius: 4px;
   pointer-events: none;
+  z-index: 2;
 }
 
 .sibling-tabs .opt-label--image:hover:after {
@@ -623,33 +630,40 @@
   background-color: #D9E1E4;
 }
 
-/* Image fill — matches your existing a.opt-label.opt-label--image rule */
-.sibling-tabs .opt-label--image .opt-label__media.media img.theme-img {
-  max-width: 130%;
-  max-height: 130%;
-  position: absolute;
-  left: -16%;
-  top: -16%;
-  height: 130%;
-}
-
+/* overflow_hidden fills the full swatch, no padding */
 .sibling-tabs .opt-label--image .overflow_hidden {
+  position: absolute;
+  inset: 0;
   overflow: hidden;
-  height: 100%;
-  position: relative;
-  width: 100%;
   border-radius: 4px;
 }
 
+/* media fills overflow_hidden */
 .sibling-tabs .opt-label--image .opt-label__media.media {
+  position: absolute;
+  inset: 0;
   height: 100%;
+  width: 100%;
+}
+
+/* Image covers the swatch fully — use object-fit instead of negative offsets */
+.sibling-tabs .opt-label--image .opt-label__media.media img.theme-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: unset;
+  max-height: unset;
+  left: 0;
+  top: 0;
+  object-fit: cover;
 }
 
 .sibling-tabs .sold-out .theme-img {
   opacity: 30%;
 }
 
-/* Ensure the sibling tabs section has the same bottom margin as .option-selector */
+/* Bottom margin matches .option-selector */
 .sibling-tabs {
   margin-bottom: 40px;
 }
@@ -658,15 +672,14 @@
   .sibling-tabs {
     margin-bottom: 32px;
   }
-
   .sibling-tabs .option-selector__btns.variant-grid-compact {
-    gap: 8px;
+    gap: 10px;
   }
 }
 
 @media (max-width: 767px) {
   .sibling-tabs .option-selector__btns.variant-grid-compact {
-    gap: 6px;
+    gap: 8px;
   }
 }
 </style>
