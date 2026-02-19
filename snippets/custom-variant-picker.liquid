@@ -286,37 +286,51 @@
     {%- if has_core_prints -%}
       <div class="sibling-tabs__panel{% unless show_all_tab or has_new_prints %} is-active{% endunless %}" data-panel="core" role="tabpanel">
         <div class="option-selector__btns variant-grid-compact">
+
+          {% comment %} Core Tab - Core prints {% endcomment %}
           {%- for sibling in sibs_collection.products -%}
-            {%- unless sibling.tags contains 'hidden' or sibling.tags contains 'seasonal' or sibling.tags contains 'sale' or sibling.tags contains 'new' -%}
-              <a href="{{ sibling.url }}"
-                class="opt-label opt-label--image {% if sibling.handle == product.handle %}is-active{% endif %}{% if sibling.available == false %} sold-out{% endif %}"
-                data-color="{{ sibling.metafields.theme.cutline }}"
-                {% if sibling.handle == product.handle %}data-selected="true"{% endif %}>
-                <div class="overflow_hidden">
-                  <div class="opt-label__media media">
-                    {%- if sibling.available == false -%}
-                      <div class="sold-out-line"></div>
-                    {%- endif -%}
-                    {%- if sibling.metafields.custom.swatch.value.image.value != blank -%}
-                      {%- render 'image',
-                        image: sibling.metafields.custom.swatch.value.image.value,
-                        sizes: img_sizes,
-                        widths: img_widths,
-                        custom_aspect_ratio: img_aspect_ratio,
-                        custom_crop: img_crop_align
-                      -%}
-                    {%- else -%}
-                      {%- render 'image',
-                        image: sibling.images.first,
-                        sizes: img_sizes,
-                        widths: img_widths,
-                        custom_aspect_ratio: img_aspect_ratio,
-                        custom_crop: img_crop_align
-                      -%}
-                    {%- endif -%}
+            {%- unless sibling.tags contains 'hidden' -%}
+              {%- if sibling.tags contains 'core' and sibling.available -%}
+                <a href="{{ sibling.url }}"
+                  class="opt-label opt-label--image {% if sibling.handle == product.handle %}is-active{% endif %}"
+                  data-color="{{ sibling.metafields.theme.cutline }}"
+                  {% if sibling.handle == product.handle %}data-selected="true"{% endif %}>
+                  <div class="overflow_hidden">
+                    <div class="opt-label__media media">
+                      {%- if sibling.metafields.custom.swatch.value.image.value != blank -%}
+                        {%- render 'image', image: sibling.metafields.custom.swatch.value.image.value, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
+                      {%- else -%}
+                        {%- render 'image', image: sibling.images.first, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
+                      {%- endif -%}
+                    </div>
                   </div>
-                </div>
-              </a>
+                </a>
+              {%- endif -%}
+            {%- endunless -%}
+          {%- endfor -%}
+
+          {% comment %} Core Tab - sold out prints {% endcomment %}
+          {%- for sibling in sibs_collection.products -%}
+            {%- unless sibling.tags contains 'hidden' and sibling.available -%}
+              {%- unless sibling.available -%}
+                {%- if sibling.tags contains 'core' -%}
+                  <a href="{{ sibling.url }}"
+                    class="opt-label opt-label--image sold-out {% if sibling.handle == product.handle %}is-active{% endif %}"
+                    data-color="{{ sibling.metafields.theme.cutline }}"
+                    {% if sibling.handle == product.handle %}data-selected="true"{% endif %}>
+                    <div class="overflow_hidden">
+                      <div class="opt-label__media media">
+                        <div class="sold-out-line"></div>
+                        {%- if sibling.metafields.custom.swatch.value.image.value != blank -%}
+                          {%- render 'image', image: sibling.metafields.custom.swatch.value.image.value, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
+                        {%- else -%}
+                          {%- render 'image', image: sibling.images.first, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
+                        {%- endif -%}
+                      </div>
+                    </div>
+                  </a>
+                {%- endif -%}
+              {%- endunless -%}
             {%- endunless -%}
           {%- endfor -%}
         </div>
