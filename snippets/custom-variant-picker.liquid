@@ -100,7 +100,7 @@
 
     {% comment %} Shared color name display {% endcomment %}
     <div class="sibling-tabs__color-label">
-      <h4>Style: </h4><span class="js-color-text-global"></span>
+     <span class="js-color-text-global"></span>
     </div>
 
     {% comment %} Tab Panels {% endcomment %}
@@ -799,16 +799,16 @@
       const colorLabel = container.querySelector(".js-color-text-global");
       const allLabels = container.querySelectorAll(".opt-label");
 
-      function setColorLabel(text) {
-        if (colorLabel) colorLabel.textContent = text || "";
-      }
-
-      function getInitialCutline() {
+      function getSelectedCutline() {
         const selected = container.querySelector(".opt-label[data-selected]");
         return selected ? selected.getAttribute("data-color") || "" : "";
       }
 
-      // Tab switching
+      function setColorLabel(text) {
+        if (!colorLabel) return;
+        colorLabel.textContent = text ? "Style: " + text : "";
+      }
+
       tabs.forEach(function (tab) {
         tab.addEventListener("click", function () {
           const target = this.getAttribute("data-tab");
@@ -827,26 +827,20 @@
           const targetPanel = container.querySelector('[data-panel="' + target + '"]');
           if (targetPanel) targetPanel.classList.add("is-active");
 
-          // Reset color label to the selected product's cutline (if visible in this panel)
-          const selectedInPanel = targetPanel
-            ? targetPanel.querySelector(".opt-label[data-selected]")
-            : null;
-          setColorLabel(selectedInPanel ? selectedInPanel.getAttribute("data-color") : "");
+          setColorLabel(getSelectedCutline());
         });
       });
 
-      // Hover interactions for color label
       allLabels.forEach(function (label) {
         label.addEventListener("mouseenter", function () {
           setColorLabel(this.getAttribute("data-color") || "");
         });
         label.addEventListener("mouseleave", function () {
-          setColorLabel(getInitialCutline());
+          setColorLabel(getSelectedCutline());
         });
       });
 
-      // Set initial color label
-      setColorLabel(getInitialCutline());
+      setColorLabel(getSelectedCutline());
     });
   });
 </script>
