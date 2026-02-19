@@ -238,28 +238,30 @@
 
           {%- for sibling in sibs_collection.products -%}
             {%- unless sibling.tags contains 'hidden' and sibling.available -%}
-              {%- if sibling.tags contains 'new'-%}
-                <a href="{{ sibling.url }}"
-                  class="opt-label opt-label--image sold-out {% if sibling.handle == product.handle %}is-active{% endif %}"
-                  data-color="{{ sibling.metafields.theme.cutline }}"
-                  {% if sibling.handle == product.handle %}data-selected="true"{% endif %}>
-                  {%- if sibling.tags contains 'new' -%}
-                    <div class="opt-label__tag product-label--new">NEW</div>
-                  {%- elsif sibling.tags contains 'sale' -%}
-                    <div class="opt-label__tag product-label--sale">SALE</div>
-                  {%- endif -%}
-                  <div class="overflow_hidden">
-                    <div class="opt-label__media media">
-                      <div class="sold-out-line"></div>
-                      {%- if sibling.metafields.custom.swatch.value.image.value != blank -%}
-                        {%- render 'image', image: sibling.metafields.custom.swatch.value.image.value, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
-                      {%- else -%}
-                        {%- render 'image', image: sibling.images.first, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
-                      {%- endif -%}
+              {%- unless sibling.available -%}
+                {%- if sibling.tags contains 'new'-%}
+                  <a href="{{ sibling.url }}"
+                    class="opt-label opt-label--image sold-out {% if sibling.handle == product.handle %}is-active{% endif %}"
+                    data-color="{{ sibling.metafields.theme.cutline }}"
+                    {% if sibling.handle == product.handle %}data-selected="true"{% endif %}>
+                    {%- if sibling.tags contains 'new' -%}
+                      <div class="opt-label__tag product-label--new">NEW</div>
+                    {%- elsif sibling.tags contains 'sale' -%}
+                      <div class="opt-label__tag product-label--sale">SALE</div>
+                    {%- endif -%}
+                    <div class="overflow_hidden">
+                      <div class="opt-label__media media">
+                        <div class="sold-out-line"></div>
+                        {%- if sibling.metafields.custom.swatch.value.image.value != blank -%}
+                          {%- render 'image', image: sibling.metafields.custom.swatch.value.image.value, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
+                        {%- else -%}
+                          {%- render 'image', image: sibling.images.first, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
+                        {%- endif -%}
+                      </div>
                     </div>
-                  </div>
-                </a>
-              {%- endif -%}
+                  </a>
+                {%- endif -%}
+              {%- endunless -%}
             {%- endunless -%}
           {%- endfor -%}
         </div>
