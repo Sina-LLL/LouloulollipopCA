@@ -242,7 +242,6 @@
                   class="opt-label opt-label--image {% if sibling.handle == product.handle %}is-active{% endif %}"
                   data-color="{{ sibling.metafields.theme.cutline }}"
                   {% if sibling.handle == product.handle %}data-selected="true"{% endif %}>
-                  <div class="opt-label__tag product-label--new">NEW</div>
                   <div class="overflow_hidden">
                     <div class="opt-label__media media">
                       {%- if sibling.metafields.custom.swatch.value.image.value != blank -%}
