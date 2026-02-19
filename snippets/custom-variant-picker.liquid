@@ -210,6 +210,7 @@
     {%- if has_new_prints -%}
       <div class="sibling-tabs__panel{% unless show_all_tab %} is-active{% endunless %}" data-panel="new" role="tabpanel">
         <div class="option-selector__btns variant-grid-compact">
+          {% comment %} Seasonal Tab - New prints {% endcomment %}
           {%- for sibling in sibs_collection.products -%}
             {%- unless sibling.tags contains 'hidden' -%}
               {%- if sibling.tags contains 'new' and sibling.available -%}
@@ -231,6 +232,8 @@
               {%- endif -%}
             {%- endunless -%}
           {%- endfor -%}
+
+          {% comment %} Seasonal Tab - Seasonal prints (not Core) {% endcomment %}
           {%- for sibling in sibs_collection.products -%}
             {%- unless sibling.tags contains 'hidden' -%}
               {%- if sibling.tags contains 'Seasonal' and sibling.available -%}
@@ -251,6 +254,8 @@
               {%- endif -%}
             {%- endunless -%}
           {%- endfor -%}
+
+          {% comment %} Seasonal Tab - Sold Out {% endcomment %}
           {%- for sibling in sibs_collection.products -%}
             {%- unless sibling.tags contains 'hidden' and sibling.available -%}
               {%- unless sibling.available -%}
