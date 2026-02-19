@@ -108,44 +108,105 @@
     {%- if show_all_tab -%}
       <div class="sibling-tabs__panel is-active" data-panel="all" role="tabpanel">
         <div class="option-selector__btns variant-grid-compact">
+
+          {% comment %} 1: New — in stock {% endcomment %}
           {%- for sibling in sibs_collection.products -%}
             {%- unless sibling.tags contains 'hidden' -%}
-              <a href="{{ sibling.url }}"
-                class="opt-label opt-label--image {% if sibling.handle == product.handle %}is-active{% endif %}{% if sibling.available == false %} sold-out{% endif %}"
-                data-color="{{ sibling.metafields.theme.cutline }}"
-                {% if sibling.handle == product.handle %}data-selected="true"{% endif %}>
-                {%- if sibling.tags contains 'new' -%}
+              {%- if sibling.tags contains 'new' and sibling.available -%}
+                <a href="{{ sibling.url }}"
+                  class="opt-label opt-label--image {% if sibling.handle == product.handle %}is-active{% endif %}"
+                  data-color="{{ sibling.metafields.theme.cutline }}"
+                  {% if sibling.handle == product.handle %}data-selected="true"{% endif %}>
                   <div class="opt-label__tag product-label--new">NEW</div>
-                {%- elsif sibling.tags contains 'sale' -%}
-                  <div class="opt-label__tag product-label--sale">SALE</div>
-                {%- endif -%}
-                <div class="overflow_hidden">
-                  <div class="opt-label__media media">
-                    {%- if sibling.available == false -%}
-                      <div class="sold-out-line"></div>
-                    {%- endif -%}
-                    {%- if sibling.metafields.custom.swatch.value.image.value != blank -%}
-                      {%- render 'image',
-                        image: sibling.metafields.custom.swatch.value.image.value,
-                        sizes: img_sizes,
-                        widths: img_widths,
-                        custom_aspect_ratio: img_aspect_ratio,
-                        custom_crop: img_crop_align
-                      -%}
-                    {%- else -%}
-                      {%- render 'image',
-                        image: sibling.images.first,
-                        sizes: img_sizes,
-                        widths: img_widths,
-                        custom_aspect_ratio: img_aspect_ratio,
-                        custom_crop: img_crop_align
-                      -%}
-                    {%- endif -%}
+                  <div class="overflow_hidden">
+                    <div class="opt-label__media media">
+                      {%- if sibling.metafields.custom.swatch.value.image.value != blank -%}
+                        {%- render 'image', image: sibling.metafields.custom.swatch.value.image.value, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
+                      {%- else -%}
+                        {%- render 'image', image: sibling.images.first, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
+                      {%- endif -%}
+                    </div>
                   </div>
-                </div>
-              </a>
+                </a>
+              {%- endif -%}
             {%- endunless -%}
           {%- endfor -%}
+
+          {% comment %} 2: Core (not new, not sale) — in stock {% endcomment %}
+          {%- for sibling in sibs_collection.products -%}
+            {%- unless sibling.tags contains 'hidden' -%}
+              {%- unless sibling.tags contains 'new' or sibling.tags contains 'sale' -%}
+                {%- if sibling.available -%}
+                  <a href="{{ sibling.url }}"
+                    class="opt-label opt-label--image {% if sibling.handle == product.handle %}is-active{% endif %}"
+                    data-color="{{ sibling.metafields.theme.cutline }}"
+                    {% if sibling.handle == product.handle %}data-selected="true"{% endif %}>
+                    <div class="overflow_hidden">
+                      <div class="opt-label__media media">
+                        {%- if sibling.metafields.custom.swatch.value.image.value != blank -%}
+                          {%- render 'image', image: sibling.metafields.custom.swatch.value.image.value, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
+                        {%- else -%}
+                          {%- render 'image', image: sibling.images.first, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
+                        {%- endif -%}
+                      </div>
+                    </div>
+                  </a>
+                {%- endif -%}
+              {%- endunless -%}
+            {%- endunless -%}
+          {%- endfor -%}
+
+          {% comment %} 3: Sale — in stock {% endcomment %}
+          {%- for sibling in sibs_collection.products -%}
+            {%- unless sibling.tags contains 'hidden' -%}
+              {%- if sibling.tags contains 'sale' and sibling.available -%}
+                <a href="{{ sibling.url }}"
+                  class="opt-label opt-label--image {% if sibling.handle == product.handle %}is-active{% endif %}"
+                  data-color="{{ sibling.metafields.theme.cutline }}"
+                  {% if sibling.handle == product.handle %}data-selected="true"{% endif %}>
+                  <div class="opt-label__tag product-label--sale">SALE</div>
+                  <div class="overflow_hidden">
+                    <div class="opt-label__media media">
+                      {%- if sibling.metafields.custom.swatch.value.image.value != blank -%}
+                        {%- render 'image', image: sibling.metafields.custom.swatch.value.image.value, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
+                      {%- else -%}
+                        {%- render 'image', image: sibling.images.first, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
+                      {%- endif -%}
+                    </div>
+                  </div>
+                </a>
+              {%- endif -%}
+            {%- endunless -%}
+          {%- endfor -%}
+
+          {% comment %} 4: All sold out — last {% endcomment %}
+          {%- for sibling in sibs_collection.products -%}
+            {%- unless sibling.tags contains 'hidden' -%}
+              {%- unless sibling.available -%}
+                <a href="{{ sibling.url }}"
+                  class="opt-label opt-label--image sold-out {% if sibling.handle == product.handle %}is-active{% endif %}"
+                  data-color="{{ sibling.metafields.theme.cutline }}"
+                  {% if sibling.handle == product.handle %}data-selected="true"{% endif %}>
+                  {%- if sibling.tags contains 'new' -%}
+                    <div class="opt-label__tag product-label--new">NEW</div>
+                  {%- elsif sibling.tags contains 'sale' -%}
+                    <div class="opt-label__tag product-label--sale">SALE</div>
+                  {%- endif -%}
+                  <div class="overflow_hidden">
+                    <div class="opt-label__media media">
+                      <div class="sold-out-line"></div>
+                      {%- if sibling.metafields.custom.swatch.value.image.value != blank -%}
+                        {%- render 'image', image: sibling.metafields.custom.swatch.value.image.value, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
+                      {%- else -%}
+                        {%- render 'image', image: sibling.images.first, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
+                      {%- endif -%}
+                    </div>
+                  </div>
+                </a>
+              {%- endunless -%}
+            {%- endunless -%}
+          {%- endfor -%}
+
         </div>
       </div>
     {%- endif -%}
