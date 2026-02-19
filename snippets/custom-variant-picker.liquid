@@ -235,7 +235,27 @@
               {%- endif -%}
             {%- endunless -%}
           {%- endfor -%}
-
+          {%- for sibling in sibs_collection.products -%}
+            {%- unless sibling.tags contains 'hidden' -%}
+              {%- if sibling.tags contains 'seasonal' and sibling.available -%}
+                <a href="{{ sibling.url }}"
+                  class="opt-label opt-label--image {% if sibling.handle == product.handle %}is-active{% endif %}"
+                  data-color="{{ sibling.metafields.theme.cutline }}"
+                  {% if sibling.handle == product.handle %}data-selected="true"{% endif %}>
+                  <div class="opt-label__tag product-label--new">NEW</div>
+                  <div class="overflow_hidden">
+                    <div class="opt-label__media media">
+                      {%- if sibling.metafields.custom.swatch.value.image.value != blank -%}
+                        {%- render 'image', image: sibling.metafields.custom.swatch.value.image.value, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
+                      {%- else -%}
+                        {%- render 'image', image: sibling.images.first, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
+                      {%- endif -%}
+                    </div>
+                  </div>
+                </a>
+              {%- endif -%}
+            {%- endunless -%}
+          {%- endfor -%}
           {%- for sibling in sibs_collection.products -%}
             {%- unless sibling.tags contains 'hidden' and sibling.available -%}
               {%- unless sibling.available -%}
