@@ -23,34 +23,42 @@
         "subheading_njftEb": {
           "type": "subheading",
           "settings": {
-            "subheading": "Exclusive Holiday Event"
+            "subheading": ""
+          }
+        },
+        "heading_gj7VTB": {
+          "type": "heading",
+          "settings": {
+            "title": "Secret Warehouse Sale!",
+            "use_h1": true
           }
         },
         "heading_PnyKdk": {
           "type": "heading",
           "settings": {
-            "title": "Nov. 18 - 20",
-            "use_h1": true
+            "title": "OpenSesame",
+            "use_h1": false
           }
         },
         "text_Mt8djT": {
           "type": "text",
           "settings": {
-            "text": "<h3>Enjoy Early Black Friday Savings<br/>at Our Holiday Pop-Up Shop</h3>",
-            "enlarge_text": true
+            "text": "<h4>Use code above to access deals up to 80% off</h4>",
+            "enlarge_text": false
           }
         },
         "button_e4XiMB": {
           "type": "button",
           "settings": {
-            "button_label": "RSVP NOW",
-            "button_link": "https://waitwhile.com/locations/louloulollipop/welcome",
+            "button_label": "Shop now",
+            "button_link": "https://outlet.louloulollipop.com/",
             "button_style": "primary"
           }
         }
       },
       "block_order": [
         "subheading_njftEb",
+        "heading_gj7VTB",
         "heading_PnyKdk",
         "text_Mt8djT",
         "button_e4XiMB"
@@ -68,22 +76,22 @@
         "heading_4NNyfi": {
           "type": "heading",
           "settings": {
-            "title": "You're Invited! Shop Before Anyone Else",
+            "title": "Up to 80% off for a limited time",
             "use_h1": false
           }
         },
         "text_4VcDjA": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Spend More, Save More Black Friday Deals</strong></p><ul><li>15% off orders under $50</li><li>20% off orders from $50–$95</li><li>25% off orders of $95 or more</li></ul><p>Plus, the first <strong>50 guests</strong> to spend <strong>$200 or more</strong> will receive a <strong>free gift</strong> — while supplies last!</p><p>We’ll also have <strong>gift boxes, tissue paper, and holiday cheer</strong> ready for you, so wrapping up your shopping is a breeze.</p>",
+            "text": "<p><strong>Door Crasher deals:</strong><br/>Waffle Sleepers $15 CAD<br/>Muslin blankets & crib sheets from $15<br/>Snack boxes only $6 CAD</p>",
             "enlarge_text": false
           }
         },
         "button_BFDPXw": {
           "type": "button",
           "settings": {
-            "button_label": "RSVP NOW",
-            "button_link": "https://waitwhile.com/locations/louloulollipop/welcome",
+            "button_label": "Shop NOW",
+            "button_link": "https://outlet.louloulollipop.com/",
             "button_style": "primary"
           }
         }
@@ -94,7 +102,7 @@
         "button_BFDPXw"
       ],
       "settings": {
-        "image": "shopify://shop_images/BA1002U.BMB_Sleeper_-_Bumble_Bees_51.jpg",
+        "image": "shopify://shop_images/Waffle_crop.jpg",
         "image_width": 400,
         "image_link": "",
         "image_position": "right",
@@ -102,183 +110,34 @@
         "color_scheme": "default"
       }
     },
-    "custom_content_Pq9Y8k": {
-      "type": "custom-content",
+    "rich_text_bXe6QV": {
+      "type": "rich-text",
       "blocks": {
-        "text_4RacnX": {
+        "text_jCNwGU": {
           "type": "text",
           "settings": {
-            "width": "half",
-            "subheading": "",
-            "title": "What you need to know:",
-            "text": "<p><strong>Date & Time:<br/></strong>Tuesday, November 18th: 10am - 4pm<br/>Wednesday, November 19th:  10am - 4pm<br/>Thursday, November 20th: 10am - 8pm</p><p><strong>Address:<br/></strong><a href=\"https://maps.app.goo.gl/PkgRsCcsnZcWo7gY7\" target=\"_blank\" title=\"https://maps.app.goo.gl/PkgRsCcsnZcWo7gY7\">Loulou Lollipop, <br/>4311 Viking Way Unit 130,<br/>Richmond, BC V6V 2K9</a></p><p></p><p><strong>No Lineups!<br/></strong>RSVP now to reserve your preferred date and time — space is limited!</p>",
-            "button_label": "",
-            "button_link": "",
-            "button_style": "primary",
-            "text_alignment": "left"
+            "text": "<p>Warehouse sale items are Final Sale. No price adjustments on previous purchases. Current promotions may not be combined with additional discount codes or offers. Due to the volume of orders, please anticipate longer than usual processing & shipping timeframes, and we regret to inform you that we are unable to accommodate any edits or adjustments to orders once they have been placed.<br/><br/>Loulou Lollipop reserves the right to make changes at any time. We thank you for your support and patience.<br/>Online Warehouse Sale orders will be shipped separately from orders placed on louloulollipop.com or louloulollipop.ca.</p>",
+            "enlarge_text": false
           }
         },
-        "html_BMTkb9": {
-          "type": "html",
+        "button_HhLGTJ": {
+          "type": "button",
           "settings": {
-            "width": "half",
-            "code": "<style>\n    .warehouse-sale svg{\n        width:40px;\n    }\n.warehouse-sale div{\nmargin-top:1rem;\n}\n</style>\n<div class=\"warehouse-sale feature-text-paired\">\n    <div style=\"display:flex;align-items: center;\">\n        <svg width=\"35\" height=\"44\" viewBox=\"0 0 35 44\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <path d=\"M17.4584 24.6693C15.4231 24.6718 13.4498 23.9686 11.8747 22.6796C10.2996 21.3907 9.21998 19.5956 8.81971 17.6C8.7878 17.3898 8.80198 17.1752 8.86126 16.971C8.92054 16.7668 9.0235 16.5779 9.16301 16.4175C9.30252 16.2571 9.47525 16.1289 9.66922 16.0418C9.86319 15.9548 10.0738 15.9109 10.2864 15.9133C10.6358 15.9083 10.9755 16.0281 11.2444 16.2513C11.5133 16.4744 11.6937 16.7863 11.753 17.1307C12.0293 18.4491 12.7508 19.6323 13.7964 20.4815C14.842 21.3308 16.148 21.7943 17.495 21.7943C18.8421 21.7943 20.1481 21.3308 21.1937 20.4815C22.2393 19.6323 22.9608 18.4491 23.237 17.1307C23.2964 16.7863 23.4768 16.4744 23.7457 16.2513C24.0146 16.0281 24.3543 15.9083 24.7037 15.9133C24.9163 15.9109 25.1269 15.9548 25.3209 16.0418C25.5148 16.1289 25.6876 16.2571 25.8271 16.4175C25.9666 16.5779 26.0695 16.7668 26.1288 16.971C26.1881 17.1752 26.2023 17.3898 26.1704 17.6C25.7677 19.608 24.6773 21.4126 23.087 22.7031C21.4968 23.9935 19.5062 24.6888 17.4584 24.6693Z\" fill=\"#6A8B95\"/>\n            <path d=\"M30.5122 43.9997H4.4055C3.8087 44.0005 3.21798 43.8798 2.66928 43.6451C2.12059 43.4103 1.62538 43.0664 1.21379 42.6342C0.802204 42.2021 0.482835 41.6907 0.275114 41.1312C0.0673937 40.5717 -0.0243368 39.9758 0.00550384 39.3797L1.1935 14.0944C1.24267 12.9608 1.72786 11.89 2.54775 11.1057C3.36764 10.3213 4.45884 9.88401 5.5935 9.88507H29.3242C30.4588 9.88401 31.55 10.3213 32.3699 11.1057C33.1898 11.89 33.675 12.9608 33.7242 14.0944L34.9121 39.3797C34.942 39.9758 34.8503 40.5717 34.6425 41.1312C34.4348 41.6907 34.1154 42.2021 33.7039 42.6342C33.2923 43.0664 32.7971 43.4103 32.2484 43.6451C31.6997 43.8798 31.109 44.0005 30.5122 43.9997ZM5.5935 12.8331C5.20452 12.8331 4.83146 12.9876 4.55641 13.2627C4.28136 13.5377 4.12683 13.9108 4.12683 14.2997L2.93884 39.5264C2.92889 39.7251 2.95947 39.9237 3.02871 40.1102C3.09795 40.2967 3.2044 40.4672 3.3416 40.6112C3.4788 40.7553 3.64386 40.8699 3.82676 40.9482C4.00966 41.0264 4.20657 41.0667 4.4055 41.0664H30.5122C30.7111 41.0667 30.908 41.0264 31.0909 40.9482C31.2738 40.8699 31.4389 40.7553 31.5761 40.6112C31.7133 40.4672 31.8197 40.2967 31.8889 40.1102C31.9582 39.9237 31.9888 39.7251 31.9788 39.5264L30.7908 14.2411C30.7908 13.8521 30.6363 13.479 30.3612 13.204C30.0862 12.9289 29.7131 12.7744 29.3242 12.7744L5.5935 12.8331Z\" fill=\"#6A8B95\"/>\n            <path d=\"M26.2596 11.3667H23.3263V8.8C23.3263 7.24407 22.7082 5.75186 21.608 4.65164C20.5077 3.55143 19.0155 2.93333 17.4596 2.93333C15.9037 2.93333 14.4115 3.55143 13.3112 4.65164C12.211 5.75186 11.5929 7.24407 11.5929 8.8V11.3667H8.65961V8.8C8.65961 6.4661 9.58675 4.22778 11.2371 2.57746C12.8874 0.927141 15.1257 0 17.4596 0C19.7935 0 22.0318 0.927141 23.6821 2.57746C25.3325 4.22778 26.2596 6.4661 26.2596 8.8V11.3667Z\" fill=\"#6A8B95\"/>\n        </svg>\n        <p style=\"margin-left:1em; margin-bottom:0;\">Bring Your Own Bag</p>\n    </div>\n    <div style=\"display:flex;align-items: center;\">\n        <svg width=\"50\" height=\"34\" viewBox=\"0 0 50 34\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <path d=\"M45.4644 33.9996H4.34886C1.9505 33.9996 0 32.0491 0 29.6507V4.34886C0 1.9505 1.9505 0 4.34886 0H45.4646C47.863 0 49.8135 1.9505 49.8135 4.34886V29.6509C49.8135 32.0493 47.8628 33.9996 45.4644 33.9996ZM4.34886 2.3722C3.25857 2.3722 2.3722 3.25857 2.3722 4.34886V29.6509C2.3722 30.7412 3.25857 31.6276 4.34886 31.6276H45.4646C46.5549 31.6276 47.4413 30.7412 47.4413 29.6509V4.34886C47.4413 3.25857 46.5549 2.3722 45.4646 2.3722H4.34886Z\" fill=\"#6A8B95\"/>\n            <path d=\"M48.6273 15.0272H1.18602C0.53129 15.0272 0 14.4959 0 13.8412V7.51564C0 6.86091 0.53129 6.32962 1.18602 6.32962H48.6273C49.282 6.32962 49.8133 6.86091 49.8133 7.51564V13.8412C49.8133 14.4959 49.282 15.0272 48.6273 15.0272ZM2.37205 12.655H47.4413V8.70151H2.37205V12.655Z\" fill=\"#6A8B95\"/>\n            <path d=\"M20.163 21.3485H7.51195C6.85722 21.3485 6.32593 20.8173 6.32593 20.1625C6.32593 19.5078 6.85722 18.9765 7.51195 18.9765H20.163C20.8177 18.9765 21.349 19.5078 21.349 20.1625C21.349 20.8173 20.8177 21.3485 20.163 21.3485Z\" fill=\"#6A8B95\"/>\n            <path d=\"M13.8375 27.6737H7.51195C6.85722 27.6737 6.32593 27.1425 6.32593 26.4877C6.32593 25.833 6.85722 25.3017 7.51195 25.3017H13.8375C14.4922 25.3017 15.0235 25.833 15.0235 26.4877C15.0235 27.1425 14.4922 27.6737 13.8375 27.6737Z\" fill=\"#6A8B95\"/>\n        </svg>\n        <p style=\"margin-left:1em; margin-bottom:0;\">Debit or Credit (Visa, Mastercard & AMEX) Only</p>\n    </div>\n\n    <div style=\"display:flex;align-items: center;\">\n        <svg width=\"44\" height=\"44\" viewBox=\"0 0 44 44\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n        <path d=\"M43.9569 18.1951C43.9841 18.0896 43.9988 17.9781 43.9988 17.8742C43.9988 7.84854 36.3813 -0.000244141 27.4993 -0.000244141H25.4368C24.8813 -0.000244141 24.3882 0.355698 24.2134 0.883081L19.0063 16.5852H7.82687L6.16566 11.1862C5.52459 9.10293 3.5193 7.64797 1.28903 7.64797C0.577139 7.64797 0 8.2251 0 8.93699C0 9.64887 0.577139 10.226 1.28903 10.226C2.38057 10.226 3.39521 10.9487 3.70156 11.9444C5.83602 18.8812 5.9137 19.0154 8.0803 25.0819C8.87193 27.2986 11.3624 28.788 14.2774 28.788H18.7203L17.5169 31.7962C13.7674 31.1639 10.3981 34.0693 10.3981 37.8111C10.3981 41.1956 13.1388 43.9984 16.4995 43.9984C19.4534 43.9984 21.8838 41.8467 22.465 39.1002H27.0336C27.2754 40.2427 27.8362 41.2991 28.6738 42.1573C31.0708 44.6136 34.9267 44.6143 37.3245 42.1573C38.4697 40.9838 39.1005 39.4403 39.1005 37.8111C39.1005 34.0687 35.7306 31.1641 31.9817 31.7962L30.7782 28.788H35.2212C38.1331 28.788 40.6213 27.3018 41.4158 25.0891C44.0796 17.8863 43.9301 18.2993 43.9569 18.1951ZM26.3674 2.5778H27.4993C34.7806 2.5778 40.7744 8.75146 41.3719 16.5852H21.7225L26.3674 2.5778ZM16.4995 41.4204C14.5897 41.4204 12.9762 39.7675 12.9762 37.8111C12.9762 35.8684 14.5568 34.2878 16.4995 34.2878C18.4423 34.2878 20.0229 35.8684 20.0229 37.8111C20.0229 39.7675 18.4094 41.4204 16.4995 41.4204ZM36.5224 37.8111C36.5224 39.7675 34.9089 41.4204 32.999 41.4204C31.0891 41.4204 29.4757 39.7675 29.4757 37.8111C29.4757 35.8684 31.0563 34.2878 32.999 34.2878C34.9418 34.2878 36.5224 35.8684 36.5224 37.8111ZM29.5884 32.7545C28.3074 33.6212 27.373 34.9618 27.036 36.5221H22.4627C22.1257 34.9618 21.1912 33.6212 19.9104 32.7545L21.4971 28.788H28.0015L29.5884 32.7545ZM38.9955 24.2013C38.4897 25.5669 36.6997 26.2099 35.2212 26.2099C34.5492 26.2099 15.0264 26.2099 14.2775 26.2099C12.5063 26.2099 10.921 25.3708 10.5081 24.2148L8.70401 19.1632H40.8587L38.9955 24.2013Z\" fill=\"#6A8B95\"/>\n        </svg>\n        <p style=\"margin-left:1em; margin-bottom:0;\">Stroller Parking Available Outside</p>\n    </div>\n\n    <div style=\"display:flex;align-items: center;\">\n        <svg width=\"44\" height=\"44\" viewBox=\"0 0 44 44\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <path d=\"M37.5547 -0.000244141H6.44531C2.89137 -0.000244141 0 2.89112 0 6.44507V37.5544C0 41.1084 2.89137 43.9998 6.44531 43.9998H37.5547C41.1086 43.9998 44 41.1084 44 37.5544V6.44507C44 2.89112 41.1086 -0.000244141 37.5547 -0.000244141ZM41.4219 37.5544C41.4219 39.6868 39.6871 41.4216 37.5547 41.4216H6.44531C4.31295 41.4216 2.57812 39.6868 2.57812 37.5544V6.44507C2.57812 4.3127 4.31295 2.57788 6.44531 2.57788H37.5547C39.6871 2.57788 41.4219 4.3127 41.4219 6.44507V37.5544Z\" fill=\"#6A8B95\"/>\n            <path d=\"M33.6749 16.2743C33.552 13.928 32.4761 11.7513 30.6457 10.1451C28.8736 8.59033 26.5941 7.74272 24.2265 7.74272L14.1797 7.73413C13.4678 7.73413 12.8906 8.31129 12.8906 9.02319V34.9763C12.8906 35.6882 13.4678 36.2654 14.1797 36.2654H19.3359C20.0478 36.2654 20.625 35.6882 20.625 34.9763V25.781H24.6641C27.164 25.781 29.4889 24.7821 31.2102 22.9681C32.9307 21.1552 33.8059 18.778 33.6749 16.2743ZM29.3401 21.1934C28.1104 22.4893 26.4497 23.2029 24.6641 23.2029H19.3359C18.624 23.2029 18.0469 23.78 18.0469 24.4919V33.6873H15.4688V10.2951H24.2265C27.8407 10.2951 30.9242 13.0473 31.1002 16.4091C31.1939 18.1995 30.5689 19.8987 29.3401 21.1934Z\" fill=\"#6A8B95\"/>\n            <path d=\"M24.6641 12.8904H19.3359C18.624 12.8904 18.0469 13.4675 18.0469 14.1794V19.3357C18.0469 20.0476 18.624 20.6248 19.3359 20.6248H24.6641C26.7964 20.6248 28.5312 18.8899 28.5312 16.7576C28.5312 14.6252 26.7964 12.8904 24.6641 12.8904ZM24.6641 18.0466H20.625V15.4685H24.6641C25.3749 15.4685 25.9531 16.0468 25.9531 16.7576C25.9531 17.4684 25.3749 18.0466 24.6641 18.0466Z\" fill=\"#6A8B95\"/>\n        </svg>\n        <p style=\"margin-left:1em; margin-bottom:0;\">Free Parking Available</p>\n    </div>"
+            "button_label": "Shop now",
+            "button_link": "https://outlet.louloulollipop.com/",
+            "button_style": "primary"
           }
         }
       },
       "block_order": [
-        "text_4RacnX",
-        "html_BMTkb9"
+        "text_jCNwGU",
+        "button_HhLGTJ"
       ],
       "settings": {
-        "alignment": "top"
-      }
-    },
-    "gallery_4PL8cd": {
-      "type": "gallery",
-      "blocks": {
-        "media_LJLVY9": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/Forest_Families_Mobile_Hero_1.jpg",
-            "enlarge_media": false,
-            "subheading": "",
-            "title": "",
-            "button_label": "",
-            "link": "",
-            "text_alignment": "bottom left"
-          }
-        },
-        "media_niW3N7": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/post_bWVkaWE6MjEyMDI5OTg3_1_1.jpg",
-            "enlarge_media": false,
-            "subheading": "",
-            "title": "",
-            "button_label": "",
-            "link": "",
-            "text_alignment": "bottom left"
-          }
-        },
-        "media_QYwDxn": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/LuluLollipopEdits-01108.jpg",
-            "enlarge_media": false,
-            "subheading": "",
-            "title": "",
-            "button_label": "",
-            "link": "",
-            "text_alignment": "bottom left"
-          }
-        },
-        "media_QPLWjW": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/Dino_stomp_Mobile_Hero_4dda6e1a-8a9c-48c2-bb71-906e4adc80b5.png",
-            "enlarge_media": false,
-            "subheading": "",
-            "title": "",
-            "button_label": "",
-            "link": "",
-            "text_alignment": "bottom left"
-          }
-        }
-      },
-      "block_order": [
-        "media_LJLVY9",
-        "media_niW3N7",
-        "media_QYwDxn",
-        "media_QPLWjW"
-      ],
-      "settings": {
-        "title": "",
-        "text": "",
-        "text_alignment": "start",
-        "grid_desktop": 4,
-        "grid_mobile": "1",
-        "height": "fixed",
-        "desktop_image_height": 350,
-        "mobile_image_height": 400,
-        "title_size": 30,
-        "title_size_mobile": 22,
-        "enable_margin": true,
-        "enable_row_spacing": false,
+        "height": "small",
+        "text_alignment": "center",
         "full_width": true,
-        "color_scheme": "default",
-        "enable_carousel": true,
-        "overlay_style": "no_background",
-        "button_style": "primary"
-      }
-    },
-    "collapsible_tabs_9LPNzF": {
-      "type": "collapsible-tabs",
-      "blocks": {
-        "question_NrBYQb": {
-          "type": "question",
-          "settings": {
-            "title": "Will it be stroller accessible?",
-            "answer": "<p>Yes - We will have Stroller parking right outside of our warehouse [right side of the door]</p>"
-          }
-        },
-        "question_XGUpzW": {
-          "type": "question",
-          "disabled": true,
-          "settings": {
-            "title": "Will you restock daily?",
-            "answer": "<p>Yes! We’ll be restocking inventory daily, so there will be new finds every day. </p>"
-          }
-        },
-        "question_B979fM": {
-          "type": "question",
-          "settings": {
-            "title": "Will there be changing rooms and a breastfeeding area?",
-            "answer": "<p>Yes, there will be changing rooms and a private breastfeeding area for your convenience.</p>"
-          }
-        },
-        "question_pWXzLJ": {
-          "type": "question",
-          "settings": {
-            "title": "Do I need to physically line up outside the warehouse?",
-            "answer": "<p>No, there will be no in-person lineup. Instead, you can book a time to enjoy our Black Friday deals in person.</p>"
-          }
-        },
-        "question_rU7gdm": {
-          "type": "question",
-          "disabled": true,
-          "settings": {
-            "title": "Can I join the virtual line from anywhere?",
-            "answer": "<p>No, you can only join the virtual lineup if you are within 250 meters of the warehouse location. This ensures that only those close by are in the queue for entry.</p>"
-          }
-        },
-        "question_YJH7nf": {
-          "type": "question",
-          "disabled": true,
-          "settings": {
-            "title": "Can I leave the area once I join the virtual lineup?",
-            "answer": "<p>Once you've joined the virtual lineup, you can leave the immediate area, but you must remain within 250 meters of the warehouse in order to maintain your place in the queue.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "question_NrBYQb",
-        "question_XGUpzW",
-        "question_B979fM",
-        "question_pWXzLJ",
-        "question_rU7gdm",
-        "question_YJH7nf"
-      ],
-      "settings": {
-        "title": "FAQs"
-      }
-    },
-    "custom_liquid_hLVEWi": {
-      "type": "custom-liquid",
-      "settings": {
-        "full_width": true,
-        "show_space": false,
-        "code": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2607.883380819606!2d-123.07538360000001!3d49.1837995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54867507c3dcfd59%3A0x12f69a114f1abc75!2sLOULOU%20LOLLIPOP!5e0!3m2!1sen!2sca!4v1740507713804!5m2!1sen!2sca\" width=\"100%\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+        "color_scheme": "default"
       }
     }
   },
@@ -286,9 +145,6 @@
     "main",
     "rich_text_GaWtAK",
     "image_with_text_6pf3nX",
-    "custom_content_Pq9Y8k",
-    "gallery_4PL8cd",
-    "collapsible_tabs_9LPNzF",
-    "custom_liquid_hLVEWi"
+    "rich_text_bXe6QV"
   ]
 }
