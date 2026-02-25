@@ -202,8 +202,11 @@
         "logo_KwwATQ",
         "logo_m3DkDJ"
       ],
+      "custom_css": [
+        ".fully-spaced-row--medium {margin-top: 2em;}"
+      ],
       "settings": {
-        "title": "As Seen In",
+        "title": "",
         "enable_carousel": true,
         "carousel_speed": 30,
         "image_opacity": 100,
