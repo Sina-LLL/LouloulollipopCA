@@ -30,7 +30,14 @@
           "type": "heading",
           "settings": {
             "title": "Secret Warehouse Sale!",
-            "use_h1": true
+            "use_h1": false
+          }
+        },
+        "text_Mt8djT": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Use the code and button below to access deals <strong>up to 80% off</strong></p>",
+            "enlarge_text": false
           }
         },
         "heading_PnyKdk": {
@@ -38,13 +45,6 @@
           "settings": {
             "title": "OpenSesame",
             "use_h1": false
-          }
-        },
-        "text_Mt8djT": {
-          "type": "text",
-          "settings": {
-            "text": "<h4>Use code above to access deals up to 80% off</h4>",
-            "enlarge_text": false
           }
         },
         "button_e4XiMB": {
@@ -59,8 +59,8 @@
       "block_order": [
         "subheading_njftEb",
         "heading_gj7VTB",
-        "heading_PnyKdk",
         "text_Mt8djT",
+        "heading_PnyKdk",
         "button_e4XiMB"
       ],
       "settings": {
