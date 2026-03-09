@@ -107,8 +107,8 @@
         "image_TKJkRj": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/DSC00616_a8b02a42-6923-4dd5-9081-e5ee545cbe83.jpg",
-            "mobile_image": "shopify://shop_images/CC_Hero.png",
+            "image": "shopify://shop_images/Tiny_Engineers_-_Desktop_Hero.png",
+            "mobile_image": "shopify://shop_images/Tiny_Engineers_-_Mobile_Hero.png",
             "slide_link": "",
             "subheading": "",
             "title": "Curious Cuddles",
@@ -202,21 +202,190 @@
         "logo_KwwATQ",
         "logo_m3DkDJ"
       ],
+      "custom_css": [
+        ".fully-spaced-row--medium {margin-top: 2em;}"
+      ],
       "settings": {
-        "title": "As Seen In",
+        "title": "",
         "enable_carousel": true,
         "carousel_speed": 30,
         "image_opacity": 100,
         "color_scheme": "default"
       }
     },
+    "custom_product_highlight_KJfQCU": {
+      "type": "custom-product-highlight",
+      "name": "Highlighted Collection",
+      "settings": {
+        "title": "Tiny Engineers",
+        "text": "<p>Made to keep up with big ideas and busy hands.</p>",
+        "image": "shopify://shop_images/Tiny_Engineers_-_Product_highlight.png",
+        "order": true,
+        "product_list": [
+          "newborn-sleep-gift-bundle-tiny-engineers",
+          "short-romper-tiny-engineers",
+          "tencel-sleep-bag-1-0-tog-tiny-engineers",
+          "hooded-towel-set-tiny-engineers"
+        ],
+        "button_label": "Shop Tiny Engineers",
+        "link": "shopify://collections/tiny-engineers",
+        "button_style": "primary",
+        "color_scheme": "default"
+      }
+    },
+    "collection_list_aakDiY": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_CULp7a": {
+          "type": "collection",
+          "settings": {
+            "collection": "sleep-bags",
+            "tag": "",
+            "image": "shopify://shop_images/Header_Image_-_Sleepbag.png",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_84DAwU": {
+          "type": "collection",
+          "settings": {
+            "collection": "sleepers",
+            "tag": "",
+            "image": "shopify://shop_images/DSC01865_1.png",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_nLyac9": {
+          "type": "collection",
+          "settings": {
+            "collection": "silicone-bibs",
+            "tag": "",
+            "image": "shopify://shop_images/DSC09680.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_PHnrb8": {
+          "type": "collection",
+          "settings": {
+            "collection": "swaddles",
+            "tag": "",
+            "image": "shopify://shop_images/DSC01126-2.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_LFJjGD": {
+          "type": "collection",
+          "settings": {
+            "collection": "dresses",
+            "tag": "",
+            "image": "shopify://shop_images/DSC07492.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_cMx6Eh": {
+          "type": "collection",
+          "settings": {
+            "collection": "hooded-towel-sets",
+            "tag": "",
+            "image": "shopify://shop_images/DSC09558.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_cDYVQL": {
+          "type": "collection",
+          "settings": {
+            "collection": "silicone-teethers",
+            "tag": "",
+            "image": "shopify://shop_images/WTR-WOF_Wild_Teether_-_Wolfie_51.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_caXU8w": {
+          "type": "collection",
+          "settings": {
+            "collection": "long-sleeve-bibs",
+            "tag": "",
+            "image": "shopify://shop_images/DSC08236-2.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_NUerqg": {
+          "type": "collection",
+          "settings": {
+            "collection": "pacifier-clips",
+            "tag": "",
+            "image": "shopify://shop_images/loulou-pacifier1.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_j8GdED": {
+          "type": "collection",
+          "settings": {
+            "collection": "blankets",
+            "tag": "",
+            "image": "shopify://shop_images/DSC00442-2_969de760-0b9c-43c4-8160-67d13f8c69a9.jpg",
+            "subheading": "Blankets",
+            "button_label": ""
+          }
+        },
+        "collection_JrWCna": {
+          "type": "collection",
+          "settings": {
+            "collection": "bandana-bibs",
+            "tag": "",
+            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._4th_2024_-Web-40.jpg",
+            "subheading": "Bandana Bibs",
+            "button_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_CULp7a",
+        "collection_84DAwU",
+        "collection_nLyac9",
+        "collection_PHnrb8",
+        "collection_LFJjGD",
+        "collection_cMx6Eh",
+        "collection_cDYVQL",
+        "collection_caXU8w",
+        "collection_NUerqg",
+        "collection_j8GdED",
+        "collection_JrWCna"
+      ],
+      "settings": {
+        "title": "Shop by Category",
+        "text": "",
+        "text_alignment": "start",
+        "enable_carousel": true,
+        "grid": 5,
+        "color_scheme": "1",
+        "full_width": true,
+        "coll_grid_image_shape": "portrait-23",
+        "coll_grid_image_position": "center center",
+        "coll_thumb_mob_per_row": "2",
+        "coll_grid_show_count": false,
+        "coll_text_position": "below",
+        "coll_text_position_under_mobile": false,
+        "coll_thumb_text_align_x": "center",
+        "coll_thumb_text_align_y": "center",
+        "coll_button_style": "primary"
+      }
+    },
     "featured_collection_RGPeGr": {
       "type": "featured-collection",
       "name": "Featured collection",
       "settings": {
-        "title": "For Hockey Fans in the Making",
-        "text": "<p>Designed for movement, naps, & everything in between</p>",
-        "collection": "winter-games",
+        "title": "Curious Cuddles",
+        "text": "<p>Soft, breathable fabrics you’ll love, with a curious twist.</p>",
+        "collection": "curious-cuddles",
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 4,
@@ -224,27 +393,7 @@
         "color_scheme": "default",
         "show_view_all": true,
         "full_width": false,
-        "text_alignment": "center"
-      }
-    },
-    "custom_product_highlight_KJfQCU": {
-      "type": "custom-product-highlight",
-      "name": "Highlighted Collection",
-      "settings": {
-        "title": "Curious Cuddles",
-        "text": "<p>Soft, breathable fabrics you’ll love, with a curious twist that makes everyday moments a little more magical.</p>",
-        "image": "shopify://shop_images/CC_Hero_2b8aae45-0b8f-4eff-b034-358605920691.png",
-        "order": true,
-        "product_list": [
-          "sleeper-mini-mathletes",
-          "tencel-sleep-bag-1-0-tog-tiny-engineers",
-          "short-sleeve-bodysuit-dress-astro-explorers",
-          "newborn-sleep-gift-bundle-astro-explorers"
-        ],
-        "button_label": "Shop Curious Cuddles",
-        "link": "shopify://collections/curious-cuddles",
-        "button_style": "primary",
-        "color_scheme": "default"
+        "text_alignment": "start"
       }
     },
     "collection_list_VHgK7g": {
@@ -647,152 +796,6 @@
         "color_scheme": "default"
       }
     },
-    "collection_list_aakDiY": {
-      "type": "collection-list",
-      "blocks": {
-        "collection_CULp7a": {
-          "type": "collection",
-          "settings": {
-            "collection": "sleep-bags",
-            "tag": "",
-            "image": "shopify://shop_images/Header_Image_-_Sleepbag.png",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_84DAwU": {
-          "type": "collection",
-          "settings": {
-            "collection": "sleepers",
-            "tag": "",
-            "image": "shopify://shop_images/DSC01865_1.png",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_nLyac9": {
-          "type": "collection",
-          "settings": {
-            "collection": "silicone-bibs",
-            "tag": "",
-            "image": "shopify://shop_images/DSC09680.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_PHnrb8": {
-          "type": "collection",
-          "settings": {
-            "collection": "swaddles",
-            "tag": "",
-            "image": "shopify://shop_images/DSC01126-2.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_LFJjGD": {
-          "type": "collection",
-          "settings": {
-            "collection": "dresses",
-            "tag": "",
-            "image": "shopify://shop_images/DSC07492.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_cMx6Eh": {
-          "type": "collection",
-          "settings": {
-            "collection": "hooded-towel-sets",
-            "tag": "",
-            "image": "shopify://shop_images/DSC09558.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_cDYVQL": {
-          "type": "collection",
-          "settings": {
-            "collection": "silicone-teethers",
-            "tag": "",
-            "image": "shopify://shop_images/WTR-WOF_Wild_Teether_-_Wolfie_51.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_caXU8w": {
-          "type": "collection",
-          "settings": {
-            "collection": "long-sleeve-bibs",
-            "tag": "",
-            "image": "shopify://shop_images/DSC08236-2.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_NUerqg": {
-          "type": "collection",
-          "settings": {
-            "collection": "pacifier-clips",
-            "tag": "",
-            "image": "shopify://shop_images/loulou-pacifier1.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_j8GdED": {
-          "type": "collection",
-          "settings": {
-            "collection": "blankets",
-            "tag": "",
-            "image": "shopify://shop_images/DSC00442-2_969de760-0b9c-43c4-8160-67d13f8c69a9.jpg",
-            "subheading": "Blankets",
-            "button_label": ""
-          }
-        },
-        "collection_JrWCna": {
-          "type": "collection",
-          "settings": {
-            "collection": "bandana-bibs",
-            "tag": "",
-            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._4th_2024_-Web-40.jpg",
-            "subheading": "Bandana Bibs",
-            "button_label": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection_CULp7a",
-        "collection_84DAwU",
-        "collection_nLyac9",
-        "collection_PHnrb8",
-        "collection_LFJjGD",
-        "collection_cMx6Eh",
-        "collection_cDYVQL",
-        "collection_caXU8w",
-        "collection_NUerqg",
-        "collection_j8GdED",
-        "collection_JrWCna"
-      ],
-      "settings": {
-        "title": "Shop by Category",
-        "text": "",
-        "text_alignment": "start",
-        "enable_carousel": true,
-        "grid": 5,
-        "color_scheme": "1",
-        "full_width": true,
-        "coll_grid_image_shape": "portrait-23",
-        "coll_grid_image_position": "center center",
-        "coll_thumb_mob_per_row": "2",
-        "coll_grid_show_count": false,
-        "coll_text_position": "below",
-        "coll_text_position_under_mobile": false,
-        "coll_thumb_text_align_x": "center",
-        "coll_thumb_text_align_y": "center",
-        "coll_button_style": "primary"
-      }
-    },
     "collection_list_FxKgEx": {
       "type": "collection-list",
       "blocks": {
@@ -1172,14 +1175,14 @@
     "16359276425da8ce46",
     "slideshow_JU4LXr",
     "logo_list_kYmwNX",
-    "featured_collection_RGPeGr",
     "custom_product_highlight_KJfQCU",
+    "collection_list_aakDiY",
+    "featured_collection_RGPeGr",
     "collection_list_VHgK7g",
     "featured_collection_6Nn87z",
     "featured_collection_HNkD47",
     "collection_list_zhMrUA",
     "logo_list_ywatnw",
-    "collection_list_aakDiY",
     "collection_list_FxKgEx",
     "custom_liquid_RDK4Gg",
     "testimonials_QcyQ3m",

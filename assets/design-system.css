@@ -1133,7 +1133,6 @@ cart-form .page-header:not(.page-header--with-background){
       width: auto;
       height: auto;
       object-fit: contain;
-      filter: grayscale(100%);
       transition: filter 0.2s ease;
     }
     

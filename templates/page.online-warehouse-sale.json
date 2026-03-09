@@ -1,0 +1,150 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_page_title": true,
+        "full_width": false
+      }
+    },
+    "rich_text_GaWtAK": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_njftEb": {
+          "type": "subheading",
+          "settings": {
+            "subheading": ""
+          }
+        },
+        "heading_gj7VTB": {
+          "type": "heading",
+          "settings": {
+            "title": "Secret Warehouse Sale!",
+            "use_h1": false
+          }
+        },
+        "text_Mt8djT": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Use the code and button below to access deals <strong>up to 80% off</strong></p>",
+            "enlarge_text": false
+          }
+        },
+        "heading_PnyKdk": {
+          "type": "heading",
+          "settings": {
+            "title": "OpenSesame",
+            "use_h1": false
+          }
+        },
+        "button_e4XiMB": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop now",
+            "button_link": "https://outlet.louloulollipop.com/",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_njftEb",
+        "heading_gj7VTB",
+        "text_Mt8djT",
+        "heading_PnyKdk",
+        "button_e4XiMB"
+      ],
+      "settings": {
+        "height": "small",
+        "text_alignment": "center",
+        "full_width": true,
+        "color_scheme": "1"
+      }
+    },
+    "image_with_text_6pf3nX": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_4NNyfi": {
+          "type": "heading",
+          "settings": {
+            "title": "Up to 80% off for a limited time",
+            "use_h1": false
+          }
+        },
+        "text_4VcDjA": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Door Crasher deals:</strong><br/>Waffle Sleepers $15<br/>Muslin blankets & crib sheets from $15<br/>Snack boxes only $6</p>",
+            "enlarge_text": false
+          }
+        },
+        "button_BFDPXw": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop NOW",
+            "button_link": "https://outlet.louloulollipop.com/",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_4NNyfi",
+        "text_4VcDjA",
+        "button_BFDPXw"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Waffle_crop.jpg",
+        "image_width": 400,
+        "image_link": "",
+        "image_position": "right",
+        "text_alignment": "left",
+        "color_scheme": "default"
+      }
+    },
+    "rich_text_bXe6QV": {
+      "type": "rich-text",
+      "blocks": {
+        "text_jCNwGU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Warehouse sale items are Final Sale. No price adjustments on previous purchases. Current promotions may not be combined with additional discount codes or offers. Due to the volume of orders, please anticipate longer than usual processing & shipping timeframes, and we regret to inform you that we are unable to accommodate any edits or adjustments to orders once they have been placed.<br/><br/>Loulou Lollipop reserves the right to make changes at any time. We thank you for your support and patience.<br/>Online Warehouse Sale orders will be shipped separately from orders placed on louloulollipop.com or louloulollipop.ca.</p>",
+            "enlarge_text": false
+          }
+        },
+        "button_HhLGTJ": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop now",
+            "button_link": "https://outlet.louloulollipop.com/",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "text_jCNwGU",
+        "button_HhLGTJ"
+      ],
+      "settings": {
+        "height": "small",
+        "text_alignment": "center",
+        "full_width": true,
+        "color_scheme": "default"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_GaWtAK",
+    "image_with_text_6pf3nX",
+    "rich_text_bXe6QV"
+  ]
+}

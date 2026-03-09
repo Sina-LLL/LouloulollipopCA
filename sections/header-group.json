@@ -164,6 +164,15 @@
             "link_url": "shopify://collections/suction-plates"
           }
         },
+        "menu_promotion_small_4AnCm3": {
+          "type": "menu-promotion-small",
+          "settings": {
+            "dropdown_link_title": "Feeding",
+            "image": "shopify://shop_images/Long_Sleeve_Bibs_-_Header_Image_1054c98c-a1a0-4514-bc1d-f566a2a17a43.png",
+            "title": "Long Sleeve Bibs",
+            "link_url": "shopify://collections/long-sleeve-bibs"
+          }
+        },
         "menu_promotion_small_AkrWYN": {
           "type": "menu-promotion-small",
           "settings": {
@@ -299,6 +308,7 @@
         "menu_promotion_small_gxFhYf",
         "menu_promotion_small_VjUPFk",
         "menu_promotion_small_88k4CY",
+        "menu_promotion_small_4AnCm3",
         "menu_promotion_small_AkrWYN",
         "menu_promotion_small_RmrAtN",
         "menu_promotion_small_FkQ6bx",
