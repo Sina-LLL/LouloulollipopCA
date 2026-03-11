@@ -134,7 +134,7 @@
         "image_xwtLEC": {
           "type": "image",
           "settings": {
-            "collection": "teethers",
+            "collection": "silicone-teethers",
             "image": "shopify://shop_images/WTR-WOF_Wild_Teether_-_Wolfie_51.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
