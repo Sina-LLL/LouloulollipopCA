@@ -34,7 +34,7 @@
   {%- endunless -%}
   {%- if product.tags contains "Limited Edition" -%}
     {%- assign label_count = label_count | plus: 1 -%}
-    <span class="product-label product-label--new-in">
+    <span class="product-label product-label--stock">
       <span>Limited Edition</span>
     </span>
   {%- endif -%}
