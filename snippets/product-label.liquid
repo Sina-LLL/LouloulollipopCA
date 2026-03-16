@@ -24,12 +24,14 @@
       endif
     endif
   -%}
-  {%- if new_label_text -%}
-    {%- assign label_count = label_count | plus: 1 -%}
-    <span class="product-label product-label--new-in">
-      <span>{{ new_label_text }}</span>
-    </span>
-  {%- endif -%}
+  {%- unless product.tags contains "Limited Edition" -%}
+    {%- if new_label_text -%}
+      {%- assign label_count = label_count | plus: 1 -%}
+      <span class="product-label product-label--new-in">
+        <span>{{ new_label_text }}</span>
+      </span>
+    {%- endif -%}
+  {%- endunless -%}
 
   {%- liquid
     if label_count < 2 and settings.prod_reduction_show and cheapest_variant.compare_at_price > cheapest_variant.price
