@@ -526,7 +526,7 @@
           "settings": {
             "title": "Our most-loved sleep essentials",
             "heading_max_width": 13,
-            "title_size": 30,
+            "title_size": 44,
             "title_size_mobile": 30,
             "use_h1": false
           }
@@ -538,7 +538,7 @@
       ],
       "name": "Shop the look",
       "settings": {
-        "image": "shopify://shop_images/LuluLollipopEdits-09175_77e21550-905d-4096-8ebe-f2a8d746c816.jpg",
+        "image": "shopify://shop_images/LuluLollipopEdits-09175_869c5828-7b34-4d9d-9f66-f2d16e3f4ad5.jpg",
         "video_external": "",
         "video_description": "",
         "height": "fixed",
