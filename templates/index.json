@@ -913,17 +913,6 @@
             "link": ""
           }
         },
-        "text_block_tFgzTX": {
-          "type": "text_block",
-          "settings": {
-            "enable_media": true,
-            "image": "shopify://shop_images/Medal.svg",
-            "title": "Since 2015",
-            "text": "<p>From first smiles to first foods, we’ve been there for the baby moments you’ll never forget.</p>",
-            "button_label": "",
-            "link": ""
-          }
-        },
         "text_block_EgmCLD": {
           "type": "text_block",
           "settings": {
@@ -934,12 +923,23 @@
             "button_label": "",
             "link": ""
           }
+        },
+        "text_block_tFgzTX": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": true,
+            "image": "shopify://shop_images/Medal.svg",
+            "title": "Since 2015",
+            "text": "<p>From first smiles to first foods, we’ve been there for the baby moments you’ll never forget.</p>",
+            "button_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "text_block_pmbEg6",
-        "text_block_tFgzTX",
-        "text_block_EgmCLD"
+        "text_block_EgmCLD",
+        "text_block_tFgzTX"
       ],
       "custom_css": [
         ".img-ar--cover img {object-fit: fill;}"
