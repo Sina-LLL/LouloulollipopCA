@@ -23,9 +23,9 @@ h6,.h6,
 body{
   font-family: sofia-pro, sans-serif;
 }
-.rte p{
+/* .rte p{
   line-height: 1.5em;
-}
+} */
 /* Display 1 */
 h1.text-overlay__title,
 h2.text-overlay__title,
@@ -39,7 +39,7 @@ h2.text-overlay__title.h1 {
 @media (min-width: 1100px) {
   h1.text-overlay__title.has-motion,
   .text-overlay__title.h1 {
-    font-size:4.6875rem !important;
+    font-size:4.6875rem ;
   }
 }
 /* End Display 1 */
