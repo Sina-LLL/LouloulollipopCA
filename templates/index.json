@@ -504,10 +504,10 @@
         "image": "shopify://shop_images/Gift_Box_1_aabfbfc7-d3bf-4d8a-ac63-8df2bbc3bb9f.jpg",
         "order": true,
         "product_list": [
-          "baby-learning-feeding-bundle-smiley-sharks",
           "newborn-sleep-gift-bundle-canada",
           "wild-teether-bundle-elephant-alligator",
-          "baby-bath-gift-bundle-smiley-sharks"
+          "baby-bath-gift-bundle-smiley-sharks",
+          "baby-learning-feeding-bundle-seashells"
         ],
         "button_label": "Shop Bundles",
         "link": "shopify://collections/bundles-and-sets",
