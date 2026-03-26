@@ -216,38 +216,21 @@
         "button_style": "primary"
       }
     },
-    "product_list_jGJn7D": {
-      "type": "product-list",
-      "name": "Product list",
+    "featured_collection_zj7zwW": {
+      "type": "featured-collection",
+      "name": "Featured collection",
       "settings": {
         "title": "Best Sellers",
         "text": "",
-        "text_alignment": "start",
-        "product_list": [
-          "bath-toy-set-blue",
-          "gem-colour-pop-silicone-wood-pacifier-clip-slate",
-          "pacifier-clip-teether-set-ebi-shrimp",
-          "teether-single-ebi-shrimp",
-          "teething-mitt-elephant",
-          "teething-mitt-bunny",
-          "wild-teether-aly-alligator",
-          "wild-teether-eddie-elephant",
-          "wild-teether-liam-lion",
-          "wild-teether-bailey-bunny",
-          "gem-pacifier-clip-teether-set-llama",
-          "wild-teether-ring-set-pastel",
-          "wild-teether-ring-set-sage-green",
-          "teether-single-taco",
-          "teether-single-sloth",
-          "pacifier-clip-teether-set-sloth",
-          "teether-single-boston-terrier",
-          "pacifier-clip-teether-set-boston-terrier"
-        ],
+        "collection": "best-selling-play",
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 5,
+        "rows": 1,
         "color_scheme": "default",
-        "full_width": true
+        "show_view_all": true,
+        "full_width": false,
+        "text_alignment": "start"
       }
     },
     "featured_collection_yhnHaN": {
@@ -307,7 +290,7 @@
     "main",
     "collection_list_4KKNJE",
     "gallery_xaHCdy",
-    "product_list_jGJn7D",
+    "featured_collection_zj7zwW",
     "featured_collection_yhnHaN",
     "custom_product_highlight_pTqNGi",
     "featured_collection_YUXjBF"
