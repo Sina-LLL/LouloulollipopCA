@@ -446,72 +446,6 @@
         "text_alignment": "center"
       }
     },
-    "logo_list_ywatnw": {
-      "type": "logo-list",
-      "blocks": {
-        "logo_FxPmVy": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/ICON-SM-6.svg",
-            "image_width": 80,
-            "link": "",
-            "title": ""
-          }
-        },
-        "logo_tawCLk": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Certified_B_Corporation_B_Corp_Logo_2022_Black_RGB_svg.webp",
-            "image_width": 80,
-            "link": "https://www.bcorporation.net/en-us/",
-            "title": ""
-          }
-        },
-        "logo_D6VaH9": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Benefits-of-Partnering-with-a-WBENC-Certified-Women-Business-Enterprise-Public-Relations-and-Marketing-Agency-feature.webp",
-            "image_width": 130,
-            "link": "https://buywomenowned.com/",
-            "title": ""
-          }
-        },
-        "logo_Yg37w8": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/OEKO_TEX.png",
-            "image_width": 80,
-            "link": "https://www.oeko-tex.com/en/",
-            "title": ""
-          }
-        },
-        "logo_cNXMbY": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/ICON-SM-16.svg",
-            "image_width": 80,
-            "link": "",
-            "title": "Phthalate Free"
-          }
-        }
-      },
-      "block_order": [
-        "logo_FxPmVy",
-        "logo_tawCLk",
-        "logo_D6VaH9",
-        "logo_Yg37w8",
-        "logo_cNXMbY"
-      ],
-      "disabled": true,
-      "name": "USP List",
-      "settings": {
-        "title": "",
-        "enable_carousel": false,
-        "carousel_speed": 30,
-        "image_opacity": 100,
-        "color_scheme": "default"
-      }
-    },
     "shop_the_look_HrgpQK": {
       "type": "shop-the-look",
       "blocks": {
@@ -1020,6 +954,71 @@
         "color_scheme": "default"
       }
     },
+    "logo_list_ywatnw": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_FxPmVy": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/ICON-SM-6.svg",
+            "image_width": 80,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_tawCLk": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Certified_B_Corporation_B_Corp_Logo_2022_Black_RGB_svg.webp",
+            "image_width": 80,
+            "link": "https://www.bcorporation.net/en-us/",
+            "title": ""
+          }
+        },
+        "logo_D6VaH9": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Benefits-of-Partnering-with-a-WBENC-Certified-Women-Business-Enterprise-Public-Relations-and-Marketing-Agency-feature.webp",
+            "image_width": 130,
+            "link": "https://buywomenowned.com/",
+            "title": ""
+          }
+        },
+        "logo_Yg37w8": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/OEKO_TEX.png",
+            "image_width": 80,
+            "link": "https://www.oeko-tex.com/en/",
+            "title": ""
+          }
+        },
+        "logo_cNXMbY": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/ICON-SM-16.svg",
+            "image_width": 80,
+            "link": "",
+            "title": "Phthalate Free"
+          }
+        }
+      },
+      "block_order": [
+        "logo_FxPmVy",
+        "logo_tawCLk",
+        "logo_D6VaH9",
+        "logo_Yg37w8",
+        "logo_cNXMbY"
+      ],
+      "name": "USP List",
+      "settings": {
+        "title": "",
+        "enable_carousel": false,
+        "carousel_speed": 30,
+        "image_opacity": 100,
+        "color_scheme": "default"
+      }
+    },
     "custom_product_highlight_JiGaUB": {
       "type": "custom-product-highlight",
       "disabled": true,
@@ -1193,7 +1192,6 @@
     "collection_list_VHgK7g",
     "collection_list_aakDiY",
     "featured_collection_RGPeGr",
-    "logo_list_ywatnw",
     "shop_the_look_HrgpQK",
     "custom_product_highlight_KJfQCU",
     "featured_collection_HNkD47",
@@ -1202,6 +1200,7 @@
     "collection_list_FxKgEx",
     "custom_liquid_RDK4Gg",
     "multi_column_KCzHEY",
+    "logo_list_ywatnw",
     "custom_product_highlight_JiGaUB",
     "collection_list_awHraC",
     "featured_collection_eXJhUx",
