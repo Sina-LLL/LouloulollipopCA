@@ -24,12 +24,21 @@
       endif
     endif
   -%}
-  {%- if new_label_text -%}
+  {%- unless product.tags contains "Limited Edition" -%}
+    {%- if new_label_text -%}
+      {%- assign label_count = label_count | plus: 1 -%}
+      <span class="product-label product-label--new-in">
+        <span>{{ new_label_text }}</span>
+      </span>
+    {%- endif -%}
+  {%- endunless -%}
+  {%- if product.tags contains "Limited Edition" -%}
     {%- assign label_count = label_count | plus: 1 -%}
-    <span class="product-label product-label--new-in">
-      <span>{{ new_label_text }}</span>
+    <span class="product-label product-label--stock">
+      <span>Limited Edition</span>
     </span>
   {%- endif -%}
+
 
   {%- liquid
     if label_count < 2 and settings.prod_reduction_show and cheapest_variant.compare_at_price > cheapest_variant.price
