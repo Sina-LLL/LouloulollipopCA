@@ -107,7 +107,7 @@
         "image_TKJkRj": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/BA1002UB.PLN_Sleeper_-_Planets_51.jpg",
+            "image": "shopify://shop_images/Sleeper_Cover.jpg",
             "mobile_image": "shopify://shop_images/LuluLollipopEdits-08472.jpg",
             "slide_link": "",
             "subheading": "",
@@ -124,7 +124,7 @@
             "button_label_2": "",
             "button_url_2": "",
             "button_tag_2": "",
-            "text_alignment": "center left"
+            "text_alignment": "bottom left"
           }
         }
       },
