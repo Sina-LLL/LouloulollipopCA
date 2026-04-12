@@ -209,13 +209,13 @@
   <meta name="robots" content="noindex, follow">
   {% endif %}
  
-  {% comment %} JsonLd {% endcomment %}
-   <script type="application/ld+json">
+ {% comment %} JsonLd {% endcomment %}
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Loulou Lollipop",
-  "url": "https://louloulollipop.com",
+  "url": "https://louloulollipop.ca",
   "logo": "https://louloulollipop.ca/cdn/shop/files/Logo_LLL_14784c07-6192-4487-8fa1-cee0c9bc04b8.png",
   "foundingDate": "2015",
   "foundingLocation": {
@@ -231,18 +231,34 @@
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "Customer Service",
-    "url": "https://louloulollipop.com/pages/contact-us"
+    "url": "https://louloulollipop.ca/pages/contact-us"
   },
   "sameAs": [
     "https://ca.linkedin.com/company/loulou-lollipop",
     "https://www.instagram.com/louloulollipop",
     "https://www.facebook.com/louloulollipop",
     "https://www.pinterest.com/louloulollipop",
-    "https://louloulollipop.ca"
+    "https://louloulollipop.com"
   ]
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Loulou Lollipop",
+  "url": "https://louloulollipop.ca",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://louloulollipop.ca/search?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
 </head>
 
 <body class="template-{{ template | split: '.' | first | handle }}
