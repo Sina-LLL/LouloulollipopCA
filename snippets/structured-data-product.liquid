@@ -9,7 +9,12 @@
   assign jm_rating = product.metafields.judgeme.avg_rating
 
   if product.metafields.custom.material != blank
-    assign material_value = product.metafields.custom.material
+    assign material_raw = product.metafields.custom.material.value
+    if material_raw.first != blank
+      assign material_value = material_raw | join: ', '
+    else
+      assign material_value = material_raw
+    endif
   elsif product.tags contains 'TENCEL'
     assign material_value = 'TENCEL Lyocell'
   elsif product.tags contains 'muslin'
