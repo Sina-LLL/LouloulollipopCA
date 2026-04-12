@@ -10,6 +10,52 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}" dir="{{ lang_dir }}">
 <head>
+  {% comment %} Json Ld {% endcomment %}
+
+  {
+
+  "@context": "https://schema.org",
+
+  "@type": "Organization",
+
+  "name": "Loulou Lollipop",
+
+  "url": "https://louloulollipop.com",
+
+  "logo": "https://louloulollipop.com/cdn/shop/files/Logo_LLL.png",
+
+  "foundingDate": "2015",
+
+  "foundingLocation": {
+
+    "@type": "Place",
+
+    "address": {
+
+      "@type": "PostalAddress",
+
+      "addressLocality": "Richmond",
+
+      "addressRegion": "BC",
+
+      "addressCountry": "CA"
+
+    }
+
+  },
+
+  "description": "Loulou Lollipop is a B Corp-certified, women-owned, AAPI-owned Canadian baby brand founded in 2015, making sustainable sleep bags, muslin swaddles, silicone feeding products, and clothing using TENCEL™ and food-grade silicone materials.",
+
+  "sameAs": [
+
+    "https://ca.linkedin.com/company/loulou-lollipop",
+
+    "https://www.instagram.com/louloulollipop"
+
+  ]
+
+}
+
 {% assign canonical_path = canonical_url | remove: shop.url %}
 
 <link rel="alternate" hreflang="x-default" href="https://louloulollipop.com{{ canonical_path }}" />
