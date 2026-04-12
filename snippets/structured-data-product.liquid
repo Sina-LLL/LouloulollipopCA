@@ -5,8 +5,9 @@
 {%- endcomment -%}
 
 {%- liquid
-  assign jm_review_count = product.metafields.judgeme.review_count
-  assign jm_rating = product.metafields.judgeme.avg_rating
+  assign jm_review_count = product.metafields.reviews.rating_count
+  assign jm_rating = product.metafields.reviews.rating.value
+  assign jm_count_int = jm_review_count | plus: 0
 
   if product.metafields.custom.material != blank
     assign material_raw = product.metafields.custom.material.value
@@ -55,7 +56,7 @@
       "name": "Loulou Lollipop"
     }
   }
-  {%- if jm_review_count != blank and jm_review_count > 0 -%}
+  {%- if jm_count_int > 0 -%}
   ,
   "aggregateRating": {
     "@type": "AggregateRating",
