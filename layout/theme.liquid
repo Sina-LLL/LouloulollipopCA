@@ -180,36 +180,7 @@
     <script src="{{ 'animate-on-scroll.js' | asset_url }}" defer></script>
     {{ 'animate-on-scroll.css' | asset_url | stylesheet_tag: preload: true }}
   {% endif %}
-
-  {{ content_for_header }}
-
-  {%- if settings.custom_html_head -%}
-    <!-- CC Custom Head Start -->
-    {{- settings.custom_html_head -}}
-    <!-- CC Custom Head End -->
-  {%- endif -%}
-
-    <link rel="stylesheet" href="https://use.typekit.net/kdi1qif.css">
-    <style>
-      @import url("https://use.typekit.net/kdi1qif.css");
-    </style>
-
-    <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "qv4923yfr6");
-  </script>
-
- <meta name="google-site-verification" content="BFpbLBJiy35y2n5nAmu-KjENClydWofkLgdbhXke2Xg" />
-
-  {% if current_tags %}
-  <meta name="robots" content="noindex, follow">
-  {% endif %}
- 
- {% comment %} JsonLd {% endcomment %}
+{% comment %} JsonLd {% endcomment %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -259,6 +230,34 @@
   }
 }
 </script>
+  {{ content_for_header }}
+
+  {%- if settings.custom_html_head -%}
+    <!-- CC Custom Head Start -->
+    {{- settings.custom_html_head -}}
+    <!-- CC Custom Head End -->
+  {%- endif -%}
+
+    <link rel="stylesheet" href="https://use.typekit.net/kdi1qif.css">
+    <style>
+      @import url("https://use.typekit.net/kdi1qif.css");
+    </style>
+
+    <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "qv4923yfr6");
+  </script>
+
+ <meta name="google-site-verification" content="BFpbLBJiy35y2n5nAmu-KjENClydWofkLgdbhXke2Xg" />
+
+  {% if current_tags %}
+  <meta name="robots" content="noindex, follow">
+  {% endif %}
+ 
 </head>
 
 <body class="template-{{ template | split: '.' | first | handle }}
