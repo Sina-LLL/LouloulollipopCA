@@ -175,10 +175,9 @@
       ],
       "name": "Brand Info List",
       "settings": {
-        "max_width": 1400,
         "section_padding_top": 12,
         "section_padding_bottom": 12,
-        "section_padding_horizontal": 20,
+        "section_padding_horizontal": 60,
         "background_color": "#fbf4f3",
         "heading": "BEST ONLINE SHOPPING SITE IN Canada",
         "heading_font_size": 14,
