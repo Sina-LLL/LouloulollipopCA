@@ -14,7 +14,7 @@
     if material_raw.first != blank
       assign material_value = material_raw | join: ', '
     else
-      assign material_value = material_raw
+      assign material_value = material_raw | remove: '["' | remove: '"]' | remove: '[' | remove: ']'
     endif
   elsif product.tags contains 'TENCEL'
     assign material_value = 'TENCEL Lyocell'
