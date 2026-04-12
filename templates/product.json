@@ -251,6 +251,23 @@
         "show_space": true,
         "code": "<script>\ndocument.addEventListener(\"DOMContentLoaded\", function () {\n\n    const source = document.querySelector(\".shopify-block.shopify-app-block.shopify-app-block--mr-add-to-reg\");\n\n    const target = document.querySelector(\".product-form .add-to-cart-wrapper\");\n\n    if (source && target && target.parentNode) {\n      target.parentNode.insertBefore(source, target.nextSibling);\n    }\n});\n</script>"
       }
+    },
+    "1775971838981c2d24": {
+      "type": "apps",
+      "blocks": {
+        "comergent_aeo_ai_seo_faqs_eyULBT": {
+          "type": "shopify://apps/comergent-aeo-ai-seo/blocks/faqs/019a4daa-4b39-75cd-9fb0-1a15665c4bbe",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "comergent_aeo_ai_seo_faqs_eyULBT"
+      ],
+      "settings": {
+        "full_width": false,
+        "show_space": true
+      }
     }
   },
   "order": [
@@ -261,6 +278,7 @@
     "related-products",
     "mux_video_embed_xaVxRV",
     "custom_liquid_tqpgnB",
-    "custom_liquid_kwF4yD"
+    "custom_liquid_kwF4yD",
+    "1775971838981c2d24"
   ]
 }
