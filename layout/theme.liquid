@@ -10,52 +10,6 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}" dir="{{ lang_dir }}">
 <head>
-  {% comment %} Json Ld {% endcomment %}
-
-  {
-
-  "@context": "https://schema.org",
-
-  "@type": "Organization",
-
-  "name": "Loulou Lollipop",
-
-  "url": "https://louloulollipop.com",
-
-  "logo": "https://louloulollipop.com/cdn/shop/files/Logo_LLL.png",
-
-  "foundingDate": "2015",
-
-  "foundingLocation": {
-
-    "@type": "Place",
-
-    "address": {
-
-      "@type": "PostalAddress",
-
-      "addressLocality": "Richmond",
-
-      "addressRegion": "BC",
-
-      "addressCountry": "CA"
-
-    }
-
-  },
-
-  "description": "Loulou Lollipop is a B Corp-certified, women-owned, AAPI-owned Canadian baby brand founded in 2015, making sustainable sleep bags, muslin swaddles, silicone feeding products, and clothing using TENCEL™ and food-grade silicone materials.",
-
-  "sameAs": [
-
-    "https://ca.linkedin.com/company/loulou-lollipop",
-
-    "https://www.instagram.com/louloulollipop"
-
-  ]
-
-}
-
 {% assign canonical_path = canonical_url | remove: shop.url %}
 
 <link rel="alternate" hreflang="x-default" href="https://louloulollipop.com{{ canonical_path }}" />
@@ -255,7 +209,44 @@
   <meta name="robots" content="noindex, follow">
   {% endif %}
  
-  
+  {% comment %} JsonLd {% endcomment %}
+   <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "LOULOU LOLLIPOP",
+  "url": "https://louloulollipop.ca",
+  "logo": "https://louloulollipop.ca/cdn/shop/files/Logo_LLL_14784c07-6192-4487-8fa1-cee0c9bc04b8.png",
+  "description": "Proudly Canadian baby and toddler brand since 2015. Premium sleep bags, clothing, feeding essentials, and toys made with TENCEL™ Lyocell and 100% food-grade silicone. Certified B Corp, OEKO-TEX certified, and women-owned.",
+  "foundingDate": "2015",
+  "areaServed": "CA",
+  "sameAs": [
+    "https://louloulollipop.com",
+    "https://www.instagram.com/louloulollipop",
+    "https://www.facebook.com/louloulollipop",
+    "https://www.babylist.com/store/b/loulou-lollipop/919"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Service",
+    "url": "https://louloulollipop.ca/pages/contact-us"
+  },
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "Certified B Corporation"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "OEKO-TEX Certified"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "Women-Owned Business (WBENC)"
+    }
+  ]
+}
+</script>
 
 </head>
 
