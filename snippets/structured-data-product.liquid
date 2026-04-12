@@ -38,7 +38,7 @@
     "@type": "Brand",
     "name": "Loulou Lollipop"
   },
-  "material": "{% if product.metafields.custom.material != blank %}{{ product.metafields.custom.material }}{% elsif product.tags contains 'TENCEL' %}TENCEL™ Lyocell{% elsif product.tags contains 'muslin' %}100% Organic Muslin Cotton{% elsif product.tags contains 'silicone' %}100% Food-Grade Silicone{% elsif product.tags contains 'waffle' %}TENCEL™ Lyocell Waffle Knit{% else %}{{ product.type }}{% endif %}",
+  "material": {% if product.metafields.custom.material != blank %}{{ product.metafields.custom.material | json }}{% elsif product.tags contains 'TENCEL' %}"TENCEL Lyocell"{% elsif product.tags contains 'muslin' %}"100% Organic Muslin Cotton"{% elsif product.tags contains 'silicone' %}"100% Food-Grade Silicone"{% elsif product.tags contains 'waffle' %}"TENCEL Lyocell Waffle Knit"{% else %}{{ product.type | json }}{% endif %},
   "offers": {
     "@type": "AggregateOffer",
     "url": "{{ shop.url }}{{ product.url }}",
