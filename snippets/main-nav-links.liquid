@@ -129,7 +129,7 @@
             <div class="container">
               <ul class="navigation__tier-2{% if use_columns %} navigation__columns navigation__columns--count-{{ column_count }}{% if column_count == 5 %} navigation__columns--5-cols{% elsif column_count > 5 %} navigation__columns--over-5-cols{% endif %}{% if small_promo_count > 0 %} navigation__columns--with-promos{% endif %}{% endif %}">
                 {% if use_columns and link.levels == 1 %}
-                  <li class="navigation__item navigation__column">
+                  <li class="navigation__item navigation__column navigation__item--open">
                     {% for child_link in link.links %}
                       <a href="{{ child_link.url }}" class="navigation__link{% if featured_links contains child_link.title %} featured-link{% endif %}">
                         {{- child_link.title | escape -}}
