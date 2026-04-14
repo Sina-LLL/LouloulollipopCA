@@ -262,7 +262,7 @@
               {% render 'breadcrumbs', show_next_prev: false %}
             {% endif %}
             <div class="title-row" {{ block.shopify_attributes }}>
-              <h1 class="product-title">{{ product.title}}</h1>
+              <h1 class="product-title">{{ product.title | split: ' - ' | first | escape }}<br> {{ product.title | split: ' - ' | last | escape }}</h1>
 
             </div>
 
