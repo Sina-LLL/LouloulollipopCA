@@ -158,6 +158,7 @@
         },
         "list_item_UfpkXw": {
           "type": "list_item",
+          "disabled": true,
           "settings": {
             "label": "Social Mission",
             "separator": "–",
