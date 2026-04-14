@@ -263,8 +263,9 @@
             {% endif %}
             <div class="title-row" {{ block.shopify_attributes }}>
               <h1 class="product-title">
-                {{ product.title | split: ' - ' | first | escape }}
-                <span class="product-title__variant"> — {{ product.title | split: ' - ' | last | escape }}</span>
+                {{ product.title | split: ' - ' | first | escape }} -
+                <br>
+                <span class="product-title__variant"> {{ product.title | split: ' - ' | last | escape }}</span>
               </h1>
               
 
