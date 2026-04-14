@@ -258,10 +258,7 @@
             </div>
 
           {% when 'title' %}
-            {% if section.settings.show_breadcrumbs %}
-              {% render 'breadcrumbs', show_next_prev: false %}
-            {% endif %}
-            {% comment %}
+             {% comment %}
             /snippets/bv-summary.liquid
             Bazaarvoice Summary Container
             {% endcomment %}
@@ -270,6 +267,9 @@
             {% comment %}
             End Bazaarvoice Summary Container
             {% endcomment %}
+            {% if section.settings.show_breadcrumbs %}
+              {% render 'breadcrumbs', show_next_prev: false %}
+            {% endif %}
             <div class="title-row" {{ block.shopify_attributes }}>
               <h1 class="product-title">
                 {{ product.title | split: ' - ' | first | escape }}
