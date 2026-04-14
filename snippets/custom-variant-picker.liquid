@@ -347,7 +347,7 @@
     {%- endif -%}
 
     {%- if has_sale_prints -%}
-      <div class="sibling-tabs__panel{% unless show_all_tab or has_new_prints or has_core_prints %} is-active{% endunless %}" data-panel="sale" role="tabpanel">
+      <div class="sibling-tabs__panel{% unless has_new_prints or has_core_prints %} is-active{% endunless %}" data-panel="sale" role="tabpanel">
         <div class="option-selector__btns variant-grid-compact">
           {% comment %} 3: Sale — in stock {% endcomment %}
           {%- for sibling in sibs_collection.products -%}
