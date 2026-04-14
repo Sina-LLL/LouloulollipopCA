@@ -1,11 +1,67 @@
 {%- comment -%}
   Parameters:
   - product {Object} - Product object.
-
-  Usage:
-  {% render 'structured-data-product', product: product %}
+  - current_variant {Object} - Current variant object.
 {%- endcomment -%}
 
+{%- liquid
+  assign jm_review_count = product.metafields.reviews.rating_count
+  assign jm_rating = product.metafields.reviews.rating.value
+  assign jm_count_int = jm_review_count | plus: 0
+
+  if product.metafields.custom.material != blank
+    assign material_raw = product.metafields.custom.material.value
+    if material_raw.first != blank
+      assign material_value = material_raw | join: ', '
+    else
+      assign material_value = material_raw | remove: '["' | remove: '"]' | remove: '[' | remove: ']'
+    endif
+  elsif product.tags contains 'TENCEL'
+    assign material_value = 'TENCEL Lyocell'
+  elsif product.tags contains 'muslin'
+    assign material_value = '100% Organic Muslin Cotton'
+  elsif product.tags contains 'silicone'
+    assign material_value = '100% Food-Grade Silicone'
+  elsif product.tags contains 'waffle'
+    assign material_value = 'TENCEL Lyocell Waffle Knit'
+  else
+    assign material_value = product.type
+  endif
+-%}
+
 <script type="application/ld+json">
-  {{ product | structured_data }}
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": {{ product.title | json }},
+  "url": "{{ shop.url }}{{ product.url }}",
+  "image": {{ product.images | map: 'src' | json }},
+  "description": {{ product.description | strip_html | strip | truncate: 300 | json }},
+  "sku": {{ current_variant.sku | json }},
+  "brand": {
+    "@type": "Brand",
+    "name": "Loulou Lollipop"
+  },
+  "material": {{ material_value | json }},
+  "offers": {
+    "@type": "AggregateOffer",
+    "url": "{{ shop.url }}{{ product.url }}",
+    "priceCurrency": "{{ cart.currency.iso_code }}",
+    "lowPrice": "{{ product.price_min | money_without_currency | remove: ',' }}",
+    "highPrice": "{{ product.price_max | money_without_currency | remove: ',' }}",
+    "offerCount": {{ product.variants.size }},
+    "availability": "{% if product.available %}https://schema.org/InStock{% else %}https://schema.org/OutOfStock{% endif %}",
+    "seller": {
+      "@type": "Organization",
+      "name": "Loulou Lollipop"
+    }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "100",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}
 </script>

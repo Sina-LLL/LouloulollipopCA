@@ -13,15 +13,6 @@
   "sections": {
     "1745439986319c1aac": {
       "type": "apps",
-      "blocks": {
-        "ethos_referrals_tfVhK3": {
-          "type": "shopify://apps/ethos/blocks/referrals/e6f2bd3b-e2fd-4f16-b73c-bf198b58bb45",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "ethos_referrals_tfVhK3"
-      ],
       "settings": {
         "full_width": false,
         "show_space": true
@@ -121,11 +112,104 @@
         "enable_country_selector": false,
         "enable_language_selector": false
       }
+    },
+    "brand_info_list_ynmwMe": {
+      "type": "brand-info-list",
+      "blocks": {
+        "list_item_hmW4xq": {
+          "type": "list_item",
+          "settings": {
+            "label": "Founders",
+            "separator": "–",
+            "text": "Twin sisters Eleanor Lee and Angel Kho, Richmond, British Columbia, Canada."
+          }
+        },
+        "list_item_dcjwM4": {
+          "type": "list_item",
+          "settings": {
+            "label": "Certifications",
+            "separator": "–",
+            "text": "B Corp certified · OEKO-TEX 100 · ISO 14001 · ISO 9001 · 100% food-grade silicone."
+          }
+        },
+        "list_item_F3imtC": {
+          "type": "list_item",
+          "settings": {
+            "label": "Core Materials",
+            "separator": "–",
+            "text": "TENCEL™ Lyocell · Tanboocel (bamboo-cotton muslin) · 100% food-grade silicone."
+          }
+        },
+        "list_item_9gBqdb": {
+          "type": "list_item",
+          "settings": {
+            "label": "Distribution",
+            "separator": "–",
+            "text": "Available in 37 countries · 1,100+ boutiques in US & Canada."
+          }
+        },
+        "list_item_f3yNeq": {
+          "type": "list_item",
+          "settings": {
+            "label": "Awards",
+            "separator": "–",
+            "text": "Good Housekeeping 2025 Parenting Award — Sleep Bag."
+          }
+        },
+        "list_item_UfpkXw": {
+          "type": "list_item",
+          "disabled": true,
+          "settings": {
+            "label": "Social Mission",
+            "separator": "–",
+            "text": "Donates 1% of every purchase to a non-profit of the customer's choice."
+          }
+        }
+      },
+      "block_order": [
+        "list_item_hmW4xq",
+        "list_item_dcjwM4",
+        "list_item_F3imtC",
+        "list_item_9gBqdb",
+        "list_item_f3yNeq",
+        "list_item_UfpkXw"
+      ],
+      "name": "Brand Info List",
+      "settings": {
+        "section_padding_top": 12,
+        "section_padding_bottom": 12,
+        "section_padding_horizontal": 60,
+        "background_color": "#fbf4f3",
+        "heading": "",
+        "heading_font_size": 14,
+        "heading_font_weight": "700",
+        "heading_color": "#1c1c1c",
+        "heading_text_transform": "uppercase",
+        "heading_letter_spacing": 0,
+        "heading_margin_bottom": 12,
+        "intro_text": "Loulou Lollipop is a 2015-founded, Canadian-based, women-owned and AAPI-owned direct-to-consumer brand making sustainable, design-led baby and children's products — including sleep bags, muslin swaddles, silicone feeding items, and clothing — for parents who prioritize safety, sustainability, and aesthetics.",
+        "intro_font_size": 14,
+        "intro_font_weight": "400",
+        "intro_color": "#3d3d3d",
+        "intro_margin_bottom": 10,
+        "item_label_font_size": 14,
+        "item_label_font_weight": "700",
+        "item_label_color": "#1c1c1c",
+        "item_text_font_size": 14,
+        "item_text_font_weight": "400",
+        "item_text_color": "#3d3d3d",
+        "body_line_height": 14,
+        "item_margin_bottom": 12,
+        "item_gap": 4,
+        "number_min_width": 12,
+        "link_color": "#1c1c1c"
+      }
     }
   },
   "order": [
     "1745439986319c1aac",
     "cross-page-promos",
-    "footer"
+    "footer",
+    "brand_info_list_ynmwMe"
   ]
 }
