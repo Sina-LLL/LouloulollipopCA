@@ -262,13 +262,12 @@
               {% render 'breadcrumbs', show_next_prev: false %}
             {% endif %}
             <div class="title-row" {{ block.shopify_attributes }}>
-              {%- assign title_parts = product.title | split: ' - ' -%}
               <h1 class="product-title">
-                {{ title_parts | first | escape }}
-                {%- if title_parts.size > 1 -%}
-                  <span class="product-title__variant"> — {{ title_parts | shift | join: ' - ' | escape }}</span>
-                {%- endif -%}
+                {{ product.title | split: ' - ' | first | escape }}
+                <span class="product-title__variant"> — {{ product.title | split: ' - ' | last | escape }}</span>
               </h1>
+              
+
             </div>
 
           {% when 'price' %}
