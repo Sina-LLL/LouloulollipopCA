@@ -59,6 +59,7 @@
   <div class="sibling-tabs" data-sibling-tabs>
 
     {% comment %} Tab Buttons {% endcomment %}
+     
     <div class="sibling-tabs__nav" role="tablist">
       {%- if has_new_prints -%}
         <button
@@ -212,8 +213,8 @@
       </div>
     {%- endif -%}
 
-    {%- if has_new_prints -%}
-      <div class="sibling-tabs__panel{% unless show_all_tab %} is-active{% endunless %}" data-panel="new" role="tabpanel">
+   {%- if has_new_prints -%}
+      <div class="sibling-tabs__panel is-active" data-panel="new" role="tabpanel">
         <div class="option-selector__btns variant-grid-compact">
 
           {% comment %} Seasonal Tab - New prints {% endcomment %}
