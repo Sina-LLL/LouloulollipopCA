@@ -60,40 +60,40 @@
 
     {% comment %} Tab Buttons {% endcomment %}
     <div class="sibling-tabs__nav" role="tablist">
-      {%- if show_all_tab -%}
+      {%- if has_new_prints -%}
         <button
           class="sibling-tabs__tab is-active"
           role="tab"
           aria-selected="true"
-          data-tab="all">
-          All
-        </button>
-      {%- endif -%}
-      {%- if has_new_prints -%}
-        <button
-          class="sibling-tabs__tab{% unless show_all_tab %} is-active{% endunless %}"
-          role="tab"
-          aria-selected="{% unless show_all_tab %}true{% else %}false{% endunless %}"
           data-tab="new">
           Seasonal
         </button>
       {%- endif -%}
       {%- if has_core_prints -%}
         <button
-          class="sibling-tabs__tab{% unless show_all_tab or has_new_prints %} is-active{% endunless %}"
+          class="sibling-tabs__tab{% if has_new_prints %}{%- else %} is-active{% endif %}"
           role="tab"
-          aria-selected="{% unless show_all_tab or has_new_prints %}true{% else %}false{% endunless %}"
+          aria-selected="{% if has_new_prints %}false{% else %}true{% endif %}"
           data-tab="core">
           Core
         </button>
       {%- endif -%}
       {%- if has_sale_prints -%}
         <button
-          class="sibling-tabs__tab{% unless show_all_tab or has_new_prints or has_core_prints %} is-active{% endunless %}"
+          class="sibling-tabs__tab{% if has_new_prints or has_core_prints %}{%- else %} is-active{% endif %}"
           role="tab"
-          aria-selected="{% unless show_all_tab or has_new_prints or has_core_prints %}true{% else %}false{% endunless %}"
+          aria-selected="{% if has_new_prints or has_core_prints %}false{% else %}true{% endif %}"
           data-tab="sale">
           Sale
+        </button>
+      {%- endif -%}
+      {%- if show_all_tab -%}
+        <button
+          class="sibling-tabs__tab"
+          role="tab"
+          aria-selected="false"
+          data-tab="all">
+          All
         </button>
       {%- endif -%}
     </div>
