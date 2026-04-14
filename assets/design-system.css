@@ -797,6 +797,9 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
 hr{
   border-bottom: 0.5px solid #1d1d1d;
 }
+ .bv_stars_component_container svg{
+                width:12px !important;
+              }
 h1.product-title {
   font-family: avenir-next-lt-pro,sofia-pro,sans-serif;
   font-size: 1.5rem;
