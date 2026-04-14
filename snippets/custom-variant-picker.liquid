@@ -291,7 +291,7 @@
     {%- endif -%}
 
     {%- if has_core_prints -%}
-      <div class="sibling-tabs__panel{% unless show_all_tab or has_new_prints %} is-active{% endunless %}" data-panel="core" role="tabpanel">
+      <div class="sibling-tabs__panel{% unless has_new_prints %} is-active{% endunless %}" data-panel="core" role="tabpanel">
         <div class="option-selector__btns variant-grid-compact">
 
           {% comment %} Core Tab - Core prints {% endcomment %}
