@@ -238,19 +238,10 @@
     <!-- CC Custom Head End -->
   {%- endif -%}
 
-    <link rel="stylesheet" href="https://use.typekit.net/kdi1qif.css">
-    <style>
-      @import url("https://use.typekit.net/kdi1qif.css");
-    </style>
+  <link rel="preconnect" href="https://use.typekit.net" crossorigin>
+  <link rel="stylesheet" href="https://use.typekit.net/kdi1qif.css">
 
-    <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "qv4923yfr6");
-  </script>
+   
 
  <meta name="google-site-verification" content="BFpbLBJiy35y2n5nAmu-KjENClydWofkLgdbhXke2Xg" />
 
@@ -319,9 +310,18 @@
     }
   </script>
 
-  <script async type="text/javascript" src="https://www.babylist.com/add.js"></script>
+  {%- if template.name == 'product' -%}
+    <script async src="https://www.babylist.com/add.js"></script>
+  {%- endif -%}
   {% render 'klaviyo-onsite-trackers' %}
 
-
+ <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "qv4923yfr6");
+  </script>
 </body>
 </html>
