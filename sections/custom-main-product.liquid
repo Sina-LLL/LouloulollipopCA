@@ -261,13 +261,19 @@
             {% if section.settings.show_breadcrumbs %}
               {% render 'breadcrumbs', show_next_prev: false %}
             {% endif %}
+            {% comment %}
+            /snippets/bv-summary.liquid
+            Bazaarvoice Summary Container
+            {% endcomment %}
+            {% render 'bv-summary' %}
+            {% comment %}
+            End Bazaarvoice Summary Container
+            {% endcomment %}
             <div class="title-row" {{ block.shopify_attributes }}>
               <h1 class="product-title">
                 {{ product.title | split: ' - ' | first | escape }}
                 <span class="product-title__variant"> — {{ product.title | split: ' - ' | last | escape }}</span>
               </h1>
-              
-
             </div>
 
           {% when 'price' %}
