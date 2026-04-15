@@ -609,6 +609,33 @@
         "collection_gTBabQ": {
           "type": "collection",
           "settings": {
+            "collection": "lemon-squeezy",
+            "tag": "",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_k3WjyT": {
+          "type": "collection",
+          "settings": {
+            "collection": "english-garden",
+            "tag": "",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_dqkine": {
+          "type": "collection",
+          "settings": {
+            "collection": "french-breakfast",
+            "tag": "",
+            "subheading": "French Breakfast",
+            "button_label": ""
+          }
+        },
+        "collection_8rVUcm": {
+          "type": "collection",
+          "settings": {
             "collection": "tiny-engineers",
             "tag": "",
             "subheading": "{{ block.settings.collection.title }}",
@@ -642,15 +669,6 @@
             "button_label": ""
           }
         },
-        "collection_jVd8bG": {
-          "type": "collection",
-          "settings": {
-            "collection": "forest-families",
-            "tag": "",
-            "subheading": "Forest Families",
-            "button_label": ""
-          }
-        },
         "collection_ExCE9F": {
           "type": "collection",
           "settings": {
@@ -666,15 +684,6 @@
             "collection": "hedgehogs",
             "tag": "",
             "subheading": "Dancing Dragonflies",
-            "button_label": ""
-          }
-        },
-        "collection_NghHmQ": {
-          "type": "collection",
-          "settings": {
-            "collection": "dinosaur-stomp",
-            "tag": "",
-            "subheading": "Dinosaur Stomp",
             "button_label": ""
           }
         },
@@ -768,15 +777,6 @@
             "button_label": ""
           }
         },
-        "collection_dqkine": {
-          "type": "collection",
-          "settings": {
-            "collection": "french-breakfast",
-            "tag": "",
-            "subheading": "French Breakfast",
-            "button_label": ""
-          }
-        },
         "collection_ntR4RL": {
           "type": "collection",
           "settings": {
@@ -789,13 +789,14 @@
       },
       "block_order": [
         "collection_gTBabQ",
+        "collection_k3WjyT",
+        "collection_dqkine",
+        "collection_8rVUcm",
         "collection_n4jGxF",
         "collection_ttFiLP",
         "collection_9gQzgC",
-        "collection_jVd8bG",
         "collection_ExCE9F",
         "collection_qCHi4r",
-        "collection_NghHmQ",
         "collection_FhR9Rc",
         "collection_m7DJDa",
         "collection_dGF3f4",
@@ -806,7 +807,6 @@
         "collection_CXEmHx",
         "collection_FQR9KE",
         "collection_HYRWrg",
-        "collection_dqkine",
         "collection_ntR4RL"
       ],
       "custom_css": [
