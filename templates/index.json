@@ -111,15 +111,15 @@
             "mobile_image": "shopify://shop_images/Mobile-Hero_Lemon.png",
             "slide_link": "",
             "subheading": "",
-            "title": "Everyday Sleepers",
+            "title": "Spring Delights",
             "heading_max_width": 12,
             "title_size": 80,
             "title_size_mobile": 34,
             "use_h1": true,
-            "text": "<p><strong>Ultra-soft, breathable sleepers designed for comfort, and all-night wear.</strong></p>",
+            "text": "<p><strong>A celebration of all things fresh and feel-good.<br/></strong></p>",
             "enlarge_text": true,
-            "button_label_1": "Shop Sleepers",
-            "button_url_1": "shopify://collections/sleepers",
+            "button_label_1": "Step Into Spring",
+            "button_url_1": "shopify://collections/spring-delights",
             "button_tag_1": "",
             "button_label_2": "",
             "button_url_2": "",
@@ -144,6 +144,23 @@
         "autoplay": true,
         "autoplay_speed": 7,
         "accessibility_info": ""
+      }
+    },
+    "featured_collection_Md6bR4": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "",
+        "text": "",
+        "collection": "spring-delights",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 4,
+        "rows": 1,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": false,
+        "text_alignment": "start"
       }
     },
     "logo_list_kYmwNX": {
@@ -1188,6 +1205,7 @@
   "order": [
     "16359276425da8ce46",
     "slideshow_JU4LXr",
+    "featured_collection_Md6bR4",
     "logo_list_kYmwNX",
     "collection_list_VHgK7g",
     "collection_list_aakDiY",
