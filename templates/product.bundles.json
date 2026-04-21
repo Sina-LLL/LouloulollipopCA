@@ -121,7 +121,7 @@
           "settings": {
             "title": "Shipping & Returns",
             "icon": "",
-            "content": "<p>Free Canada Shipping over $100</p><p>Flat rate shipping on everything else -$12 standard shipping in BC, $18 rest of Canada<br/><br/><a href=\"/pages/faqs\" title=\"FAQs\">See Details</a></p>",
+            "content": "<p>Free Canada Shipping over $100</p><p>Flat rate shipping on everything else - $12 standard shipping in BC, $18 rest of Canada<br/><br/><a href=\"/pages/faqs\" title=\"FAQs\">See Details</a></p>",
             "page": "",
             "custom_liquid": "",
             "open": false,
