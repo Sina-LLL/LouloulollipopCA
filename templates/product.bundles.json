@@ -121,18 +121,23 @@
           "settings": {
             "title": "Shipping & Returns",
             "icon": "",
-            "content": "<p>Free Canada Shipping over $100</p><p>Flat rate shipping on everything else — $12 standard shipping in BC, $18 rest of Canada<br/><br/><a href=\"/pages/faqs\" title=\"FAQs\">See Details</a></p>",
+            "content": "<p>Free Canada Shipping over $100</p><p>Flat rate shipping on everything else \u2014\u00a0$12 standard shipping in BC, $18 rest of Canada<br/><br/><a href=\"/pages/faqs\" title=\"FAQs\">See Details</a></p>",
             "page": "",
             "custom_liquid": "",
             "open": false,
             "show_in_quickbuy": false
           }
+        },
+        "bundle_contents": {
+          "type": "bundle-contents",
+          "settings": {}
         }
       },
       "block_order": [
         "title",
         "price",
         "usp_Whm8xh",
+        "bundle_contents",
         "variant-picker",
         "buy-buttons",
         "advanced_myregistry_functions_add_to_registry_4H4jJ3",
