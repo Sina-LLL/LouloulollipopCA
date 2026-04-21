@@ -332,7 +332,7 @@ li.slider__item.is-active {
   margin-bottom:40px;
 }
 .product-form .option-selector.size-selector{
-  margin-bottom:0;
+  margin-bottom:12px;
 }
 .swatch-style-icon_square .option-selector .opt-label--image .overflow_hidden{
   border-radius:4px;
