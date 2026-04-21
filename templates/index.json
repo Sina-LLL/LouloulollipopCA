@@ -107,19 +107,19 @@
         "image_TKJkRj": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Sleeper_Cover.jpg",
-            "mobile_image": "shopify://shop_images/Mobile-Hero_Safari.webp",
+            "image": "shopify://shop_images/Lemon-Hero.png",
+            "mobile_image": "shopify://shop_images/Mobile-Hero_Lemon.png",
             "slide_link": "",
             "subheading": "",
-            "title": "Everyday Sleepers",
+            "title": "Spring Delights",
             "heading_max_width": 12,
             "title_size": 80,
             "title_size_mobile": 34,
             "use_h1": true,
-            "text": "<p><strong>Ultra-soft, breathable sleepers designed for comfort, and all-night wear.</strong></p>",
+            "text": "<p><strong>A celebration of all things fresh and feel-good.<br/></strong></p>",
             "enlarge_text": true,
-            "button_label_1": "Shop Sleepers",
-            "button_url_1": "shopify://collections/sleepers",
+            "button_label_1": "Step Into Spring",
+            "button_url_1": "shopify://collections/spring-delights",
             "button_tag_1": "",
             "button_label_2": "",
             "button_url_2": "",
@@ -144,6 +144,23 @@
         "autoplay": true,
         "autoplay_speed": 7,
         "accessibility_info": ""
+      }
+    },
+    "featured_collection_Md6bR4": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "",
+        "text": "",
+        "collection": "spring-delights",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 4,
+        "rows": 1,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": false,
+        "text_alignment": "start"
       }
     },
     "logo_list_kYmwNX": {
@@ -504,10 +521,10 @@
         "image": "shopify://shop_images/Gift_Box_1_aabfbfc7-d3bf-4d8a-ac63-8df2bbc3bb9f.jpg",
         "order": true,
         "product_list": [
-          "newborn-sleep-gift-bundle-canada",
-          "wild-teether-bundle-elephant-alligator",
-          "baby-bath-gift-bundle-smiley-sharks",
-          "baby-learning-feeding-bundle-seashells"
+          "newborn-sleep-gift-bundle-safari-jungle",
+          "wild-teether-bundle-llama-bunny",
+          "baby-bath-gift-bundle-mermaids",
+          "newborn-sleep-gift-bundle-magical-dragons"
         ],
         "button_label": "Shop Bundles",
         "link": "shopify://collections/bundles-and-sets",
@@ -609,6 +626,33 @@
         "collection_gTBabQ": {
           "type": "collection",
           "settings": {
+            "collection": "lemon-squeezy",
+            "tag": "",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_k3WjyT": {
+          "type": "collection",
+          "settings": {
+            "collection": "english-garden",
+            "tag": "",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_dqkine": {
+          "type": "collection",
+          "settings": {
+            "collection": "french-breakfast",
+            "tag": "",
+            "subheading": "French Breakfast",
+            "button_label": ""
+          }
+        },
+        "collection_8rVUcm": {
+          "type": "collection",
+          "settings": {
             "collection": "tiny-engineers",
             "tag": "",
             "subheading": "{{ block.settings.collection.title }}",
@@ -642,15 +686,6 @@
             "button_label": ""
           }
         },
-        "collection_jVd8bG": {
-          "type": "collection",
-          "settings": {
-            "collection": "forest-families",
-            "tag": "",
-            "subheading": "Forest Families",
-            "button_label": ""
-          }
-        },
         "collection_ExCE9F": {
           "type": "collection",
           "settings": {
@@ -666,15 +701,6 @@
             "collection": "hedgehogs",
             "tag": "",
             "subheading": "Dancing Dragonflies",
-            "button_label": ""
-          }
-        },
-        "collection_NghHmQ": {
-          "type": "collection",
-          "settings": {
-            "collection": "dinosaur-stomp",
-            "tag": "",
-            "subheading": "Dinosaur Stomp",
             "button_label": ""
           }
         },
@@ -768,15 +794,6 @@
             "button_label": ""
           }
         },
-        "collection_dqkine": {
-          "type": "collection",
-          "settings": {
-            "collection": "french-breakfast",
-            "tag": "",
-            "subheading": "French Breakfast",
-            "button_label": ""
-          }
-        },
         "collection_ntR4RL": {
           "type": "collection",
           "settings": {
@@ -789,13 +806,14 @@
       },
       "block_order": [
         "collection_gTBabQ",
+        "collection_k3WjyT",
+        "collection_dqkine",
+        "collection_8rVUcm",
         "collection_n4jGxF",
         "collection_ttFiLP",
         "collection_9gQzgC",
-        "collection_jVd8bG",
         "collection_ExCE9F",
         "collection_qCHi4r",
-        "collection_NghHmQ",
         "collection_FhR9Rc",
         "collection_m7DJDa",
         "collection_dGF3f4",
@@ -806,7 +824,6 @@
         "collection_CXEmHx",
         "collection_FQR9KE",
         "collection_HYRWrg",
-        "collection_dqkine",
         "collection_ntR4RL"
       ],
       "custom_css": [
@@ -1188,6 +1205,7 @@
   "order": [
     "16359276425da8ce46",
     "slideshow_JU4LXr",
+    "featured_collection_Md6bR4",
     "logo_list_kYmwNX",
     "collection_list_VHgK7g",
     "collection_list_aakDiY",
