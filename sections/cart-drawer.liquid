@@ -837,7 +837,6 @@
             </label>
           </div>
           <div class="cart-gift-message lightly-spaced-row cart-note block" id="GiftMessageWrapper" style="display: {% if cart.attributes.is_gift == 'true' %}block{% else %}none{% endif %};">
-            <label class="block" for="GiftMessage">Gift Message</label>
             <textarea id="GiftMessage" placeholder="Add a gift message...">{{ cart.attributes.GiftMessage }}</textarea>
           </div>
           <script>
