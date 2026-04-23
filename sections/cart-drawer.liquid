@@ -825,11 +825,11 @@
 
           
 
-          <div class="lightly-spaced-row">
-            
+      <div class="lightly-spaced-row" style="margin-bottom: 4px;">
+          
 
-            {% if section.settings.show_order_note %}
-              
+        {% if section.settings.show_order_note %}
+          
           <div class="cart-note block lightly-spaced-row">
             <label>
               <input type="checkbox" id="GiftCheckbox" {% if cart.attributes.is_gift == 'true' %}checked{% endif %} />
@@ -876,7 +876,7 @@
             
           </div>
         {% endif %}
-      </div>
+      </div>  
 
       {% if section.settings.cart_terms_page != blank %}
         <terms-agreement class="terms-agreement rte">
