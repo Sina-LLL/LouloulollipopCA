@@ -829,12 +829,41 @@
 
             {% if section.settings.show_order_note %}
               
-          <label style="display: block; margin-top: 1rem;">
-            <input type="checkbox" id="GiftCheckbox" />
+          <div class="cart-note block lightly-spaced-row">
+            <label>
+              <input type="checkbox" id="GiftCheckbox" {% if cart.attributes.is_gift == 'true' %}checked{% endif %} />
               Is this a gift?
-          </label>
-
-              
+            </label>
+          </div>
+          <div class="cart-gift-message lightly-spaced-row cart-note block" id="GiftMessageWrapper" style="display: {% if cart.attributes.is_gift == 'true' %}block{% else %}none{% endif %};">
+            <label class="block" for="GiftMessage">Gift Message</label>
+            <textarea id="GiftMessage" placeholder="Add a gift message...">{{ cart.attributes.GiftMessage }}</textarea>
+          </div>
+          <script>
+            (function() {
+              var checkbox = document.getElementById('GiftCheckbox');
+              var wrapper = document.getElementById('GiftMessageWrapper');
+              var textarea = document.getElementById('GiftMessage');
+              if (!checkbox || checkbox.dataset.giftListenerAttached) return;
+              checkbox.dataset.giftListenerAttached = 'true';
+              checkbox.addEventListener('change', function() {
+                wrapper.style.display = this.checked ? 'block' : 'none';
+                saveGiftToCart(this.checked, textarea ? textarea.value : '');
+              });
+              if (textarea) {
+                textarea.addEventListener('change', function() {
+                  saveGiftToCart(checkbox.checked, this.value);
+                });
+              }
+              function saveGiftToCart(isGift, message) {
+                fetch('/cart/update.js', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ attributes: { is_gift: isGift ? 'true' : '', GiftMessage: message } })
+                });
+              }
+            })();
+          </script>
 
               <toggle-target id="CartDrawerNoteToggle" role="button" tabindex="0" class="toggle-target-toggler--is-hidden link underline" data-toggle-target=".cart-drawer__note">{{ 'cart.note.label' | t }}</toggle-target>
               <div class="cart-drawer__note toggle-target toggle-target--hidden">
