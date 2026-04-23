@@ -865,12 +865,12 @@
             })();
           </script>
 
-              <toggle-target id="CartDrawerNoteToggle" role="button" tabindex="0" class="toggle-target-toggler--is-hidden link underline" data-toggle-target=".cart-drawer__note">{{ 'cart.note.label' | t }}</toggle-target>
+              {% comment %} <toggle-target id="CartDrawerNoteToggle" role="button" tabindex="0" class="toggle-target-toggler--is-hidden link underline" data-toggle-target=".cart-drawer__note">{{ 'cart.note.label' | t }}</toggle-target>
               <div class="cart-drawer__note toggle-target toggle-target--hidden">
                 <cart-note class="block toggle-target-container">
                   <textarea name="note" aria-labelledby="CartDrawerNoteToggle">{{ cart.note }}</textarea>
                 </cart-note>
-              </div>
+              </div> {% endcomment %}
             {% endif %}
             
           </div>
