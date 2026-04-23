@@ -543,7 +543,9 @@
                 {{- cart.total_price | money -}}
               {%- endif -%}
             </span>
-            {%- if section.settings.show_tax_and_shipping -%}
+           
+          </div>
+          {%- if section.settings.show_tax_and_shipping -%}
               <div class="cart-policies rte">
                 {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
                   {{- 'cart.general.taxes_included_shipping_at_checkout_html' | t: link: shop.shipping_policy.url -}}
@@ -556,8 +558,6 @@
                 {%- endif -%}
               </div>
             {%- endif -%}
-          </div>
-
 
 
 <!-- Add join from checkout ethos extension -->
