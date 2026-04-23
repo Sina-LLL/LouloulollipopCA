@@ -943,7 +943,7 @@ cart-form .page-header:not(.page-header--with-background){
 }
 
 /* Cart Drawer */
-.cart-drawer__footer .h4{
+.cart-drawer__footer .h4, .cart-drawer__title.h4{
   font-size: 1.125rem;
 }
 .free-shipping-bar{
