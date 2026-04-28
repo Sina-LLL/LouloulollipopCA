@@ -449,7 +449,7 @@
     "article": {
       "title": "Article de blog",
       "excerpt": "Montrez à vos clients un résumé de votre article de blog.",
-      "author": "Nom de l'auteur"
+      "author": "Nom de l’auteur"
     },
     "blog": {
       "empty": "Vous n’avez encore aucun article ! Une fois que vous en aurez écrit un, il apparaîtra ici."
@@ -463,5 +463,57 @@
       "sku": "SKU",
       "description": "Une description du produit, comprenant des détails tels que la qualité de construction, les matériaux utilisés et les raisons d’acheter."
     }
+  },
+  "product_names": {
+    "product_long_sleeve_ruffle_bodysuit_baby_dinomite": "Body à volants et manches longues - Baby Dinomite",
+    "product_long_sleeve_ruffle_bodysuit_french_breakfast": "Body à volants et manches longues - Petit-déjeuner français",
+    "product_waffle_long_sleeve_bodysuit_dress_coconut_milk": "Robe-body gaufré à manches longues - Lait de noix de coco",
+    "product_waffle_top_knot_beanie_denim_blue": "Bonnet à nœud supérieur gaufré - Bleu denim",
+    "product_long_sleeve_newborn_gift_set": "Ensemble-cadeau pour nouveau-né à manches longues",
+    "product_waffle_long_sleeve_newborn_gift_set_lavender": "Ensemble-cadeau gaufré pour nouveau-né à manches longues - Lavande",
+    "product_long_sleeve_skater_dress_french_breakfast": "Robe patineuse à manches longues - Petit-déjeuner français",
+    "product_long_sleeve_bodysuit_dress_french_breakfast": "Robe-body à manches longues - Petit-déjeuner français",
+    "product_long_sleeve_bodysuit_dress_hedgehog_forest": "Robe-body à manches longues - Forêt de hérissons",
+    "product_long_sleeve_skater_dress_hedgehog_forest": "Robe patineuse à manches longues - Forêt de hérissons",
+    "product_short_sleeve_newborn_gift_set": "Ensemble-cadeau pour nouveau-né à manches courtes",
+    "product_free_returns_package_protection": "Retours gratuits + Protection des colis",
+    "product_colour_block_silicone_wood_pacifier_clip": "Attache-suce bloc de couleur silicone et bois",
+    "product_burp_cloth_set_2_pack_mermaids": "Ensemble de langes à rot - Paquet de 2 - Sirènes",
+    "product_burp_cloth_set_2_pack_painterly_seahorses": "Ensemble de langes à rot - Paquet de 2 - Chevaux de mer peints",
+    "product_burp_cloth_set_2_pack_smiley_sharks": "Ensemble de langes à rot - Paquet de 2 - Requins souriants",
+    "product_burp_cloth_set_2_pack_sun_kissed_shoal": "Ensemble de langes à rot - Paquet de 2 - Banc de poissons embrassés par le soleil",
+    "product_bandana_bib_set_2_pack_mermaids": "Ensemble de bavoirs bandana - Paquet de 2 - Sirènes",
+    "product_bandana_bib_set_2_pack_ocean_explorer": "Ensemble de bavoirs bandana - Paquet de 2 - Explorateur des océans",
+    "product_bandana_bib_set_2_pack_painterly_seahorses": "Ensemble de bavoirs bandana - Paquet de 2 - Chevaux de mer peints",
+    "product_bandana_bib_set_2_pack_silly_seals": "Ensemble de bavoirs bandana - Paquet de 2 - Otaries rigoles",
+    "product_bandana_bib_set_2_pack_smiley_sharks": "Ensemble de bavoirs bandana - Paquet de 2 - Requins souriants",
+    "product_bandana_bib_set_2_pack_sun_kissed_shoal": "Ensemble de bavoirs bandana - Paquet de 2 - Banc de poissons embrassés par le soleil",
+    "product_muslin_fitted_crib_sheet_mermaids": "Drap de lit de berceau ajusté en mousseline - Sirènes",
+    "product_muslin_fitted_crib_sheet_pink_checkerboard": "Drap de lit de berceau ajusté en mousseline - Carreaux roses",
+    "product_muslin_fitted_crib_sheet_silly_seals": "Drap de lit de berceau ajusté en mousseline - Otaries rigoles",
+    "product_muslin_fitted_crib_sheet_smiley_sharks": "Drap de lit de berceau ajusté en mousseline - Requins souriants",
+    "product_muslin_quilt_mermaids": "Courtepointe en mousseline - Sirènes",
+    "product_muslin_quilt_painterly_seahorses": "Courtepointe en mousseline - Chevaux de mer peints",
+    "product_muslin_quilt_silly_seals": "Courtepointe en mousseline - Otaries rigoles",
+    "product_muslin_quilt_smiley_sharks": "Courtepointe en mousseline - Requins souriants",
+    "product_muslin_swaddle_mermaids": "Langes en mousseline - Sirènes",
+    "product_muslin_swaddle_ocean_explorer": "Langes en mousseline - Explorateur des océans",
+    "product_muslin_swaddle_silly_seals": "Langes en mousseline - Otaries rigoles",
+    "product_muslin_swaddle_smiley_sharks": "Langes en mousseline - Requins souriants",
+    "product_muslin_swaddle_sun_kissed_shoal": "Langes en mousseline - Banc de poissons embrassés par le soleil",
+    "product_hooded_towel_set_mermaids": "Ensemble de serviettes à capuchon - Sirènes",
+    "product_hooded_towel_set_ocean_explorer": "Ensemble de serviettes à capuchon - Explorateur des océans",
+    "product_hooded_towel_set_painterly_seahorses": "Ensemble de serviettes à capuchon - Chevaux de mer peints",
+    "product_hooded_towel_set_silly_seals": "Ensemble de serviettes à capuchon - Otaries rigoles",
+    "product_hooded_towel_set_smiley_sharks": "Ensemble de serviettes à capuchon - Requins souriants",
+    "product_hooded_towel_set_sun_kissed_shoal": "Ensemble de serviettes à capuchon - Banc de poissons embrassés par le soleil",
+    "product_washcloth_set_3_pack_mermaids": "Ensemble de débarbouillettes - Paquet de 3 - Sirènes",
+    "product_washcloth_set_3_pack_silly_seals": "Ensemble de débarbouillettes - Paquet de 3 - Otaries rigoles",
+    "product_washcloth_set_3_pack_smiley_sharks": "Ensemble de débarbouillettes - Paquet de 3 - Requins souriants",
+    "product_waffle_sleeper_blue_fog": "Pyjama à motif gaufré - Brume bleue",
+    "product_waffle_sleeper_lilac": "Pyjama à motif gaufré - Lilas",
+    "product_waffle_sleeper_sea_glass": "Pyjama à motif gaufré - Verre de mer",
+    "product_sleeper_mermaids": "Pyjama - Sirènes",
+    "product_gift_card": "Carte-cadeau"
   }
 }
