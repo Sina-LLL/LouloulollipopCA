@@ -555,6 +555,11 @@
         "type": "shopify://apps/instafeed/blocks/head-block/c447db20-095d-4a10-9725-b5977662c9d5",
         "disabled": false,
         "settings": {}
+      },
+      "14815887870077050570": {
+        "type": "shopify://apps/bazaarvoice-reviews-photos/blocks/bvjs_block/766ed9d3-b120-48f3-8444-448f45152f47",
+        "disabled": false,
+        "settings": {}
       }
     }
   }
