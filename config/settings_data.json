@@ -555,6 +555,21 @@
         "type": "shopify://apps/instafeed/blocks/head-block/c447db20-095d-4a10-9725-b5977662c9d5",
         "disabled": false,
         "settings": {}
+      },
+      "14815887870077050570": {
+        "type": "shopify://apps/bazaarvoice-reviews-photos/blocks/bvjs_block/766ed9d3-b120-48f3-8444-448f45152f47",
+        "disabled": false,
+        "settings": {}
+      },
+      "6251270934270006384": {
+        "type": "shopify://apps/stape-conversion-tracking/blocks/gtm/7e13c847-7971-409d-8fe0-29ec14d5f048",
+        "disabled": false,
+        "settings": {}
+      },
+      "6146500278089136509": {
+        "type": "shopify://apps/bm-country-blocker-ip-blocker/blocks/boostmark-blocker/bf9db4b9-be4b-45e1-8127-bbcc07d93e7e",
+        "disabled": false,
+        "settings": {}
       }
     }
   }

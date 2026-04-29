@@ -146,23 +146,6 @@
         "accessibility_info": ""
       }
     },
-    "featured_collection_Md6bR4": {
-      "type": "featured-collection",
-      "name": "Featured collection",
-      "settings": {
-        "title": "",
-        "text": "",
-        "collection": "spring-delights",
-        "show_vendor": false,
-        "enable_carousel": true,
-        "grid": 4,
-        "rows": 1,
-        "color_scheme": "default",
-        "show_view_all": true,
-        "full_width": false,
-        "text_alignment": "start"
-      }
-    },
     "logo_list_kYmwNX": {
       "type": "logo-list",
       "blocks": {
@@ -228,6 +211,23 @@
         "carousel_speed": 30,
         "image_opacity": 100,
         "color_scheme": "default"
+      }
+    },
+    "featured_collection_RGPeGr": {
+      "type": "featured-collection",
+      "name": "Best Sellers Carousel",
+      "settings": {
+        "title": "Most Loved by Parents",
+        "text": "",
+        "collection": "best-sellers",
+        "show_vendor": false,
+        "enable_carousel": false,
+        "grid": 4,
+        "rows": 1,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": false,
+        "text_alignment": "center"
       }
     },
     "collection_list_VHgK7g": {
@@ -446,21 +446,24 @@
         "coll_button_style": "primary"
       }
     },
-    "featured_collection_RGPeGr": {
-      "type": "featured-collection",
-      "name": "Best Sellers Carousel",
+    "custom_product_highlight_KJfQCU": {
+      "type": "custom-product-highlight",
+      "name": "Highlighted Collection",
       "settings": {
-        "title": "Most Loved by Parents",
-        "text": "",
-        "collection": "best-sellers",
-        "show_vendor": false,
-        "enable_carousel": false,
-        "grid": 4,
-        "rows": 1,
-        "color_scheme": "default",
-        "show_view_all": true,
-        "full_width": false,
-        "text_alignment": "center"
+        "title": "Gift-able Bundles",
+        "text": "<p>Perfectly paired bundles for easy gifting</p>",
+        "image": "shopify://shop_images/Gift_Box_1_aabfbfc7-d3bf-4d8a-ac63-8df2bbc3bb9f.jpg",
+        "order": true,
+        "product_list": [
+          "newborn-sleep-starter-bundle-safari-jungle",
+          "wild-teether-bundle-llama-bunny",
+          "baby-learning-feeding-bundle-bailey-bunny",
+          "baby-sleep-system-bundle-magical-dragons"
+        ],
+        "button_label": "Shop Bundles",
+        "link": "shopify://collections/bundles-and-sets",
+        "button_style": "primary",
+        "color_scheme": "default"
       }
     },
     "shop_the_look_HrgpQK": {
@@ -510,26 +513,6 @@
         "text_alignment": "top left",
         "mobile_overlay_over": false,
         "overlay_style": "shadow"
-      }
-    },
-    "custom_product_highlight_KJfQCU": {
-      "type": "custom-product-highlight",
-      "name": "Highlighted Collection",
-      "settings": {
-        "title": "Gift-able Bundles",
-        "text": "<p>Perfectly paired bundles for easy gifting</p>",
-        "image": "shopify://shop_images/Gift_Box_1_aabfbfc7-d3bf-4d8a-ac63-8df2bbc3bb9f.jpg",
-        "order": true,
-        "product_list": [
-          "newborn-sleep-gift-bundle-safari-jungle",
-          "wild-teether-bundle-llama-bunny",
-          "baby-bath-gift-bundle-mermaids",
-          "newborn-sleep-gift-bundle-magical-dragons"
-        ],
-        "button_label": "Shop Bundles",
-        "link": "shopify://collections/bundles-and-sets",
-        "button_style": "primary",
-        "color_scheme": "default"
       }
     },
     "featured_collection_HNkD47": {
@@ -1205,13 +1188,12 @@
   "order": [
     "16359276425da8ce46",
     "slideshow_JU4LXr",
-    "featured_collection_Md6bR4",
     "logo_list_kYmwNX",
+    "featured_collection_RGPeGr",
     "collection_list_VHgK7g",
     "collection_list_aakDiY",
-    "featured_collection_RGPeGr",
-    "shop_the_look_HrgpQK",
     "custom_product_highlight_KJfQCU",
+    "shop_the_look_HrgpQK",
     "featured_collection_HNkD47",
     "testimonials_QcyQ3m",
     "collection_list_zhMrUA",
