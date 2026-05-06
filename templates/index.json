@@ -593,7 +593,7 @@
         "testimonial_xULPJF"
       ],
       "settings": {
-        "title": "Parent-Approved.",
+        "title": "The Quality That Lasts",
         "layout": "image-right",
         "text_caps": false,
         "quote_text_size": 24,
@@ -931,7 +931,7 @@
           "settings": {
             "enable_media": true,
             "image": "shopify://shop_images/Medal.svg",
-            "title": "Since 2015",
+            "title": "Trusted Since 2015",
             "text": "<p>From first smiles to first foods, we’ve been there for the baby moments you’ll never forget.</p>",
             "button_label": "",
             "link": ""
@@ -948,7 +948,7 @@
       ],
       "name": "Company Message",
       "settings": {
-        "title": "",
+        "title": "Why Loulou Lollipop",
         "media_aspect_ratio": "s",
         "media_width": 60,
         "text_alignment": "center",
@@ -965,7 +965,7 @@
             "image": "shopify://shop_images/ICON-SM-6.svg",
             "image_width": 80,
             "link": "",
-            "title": ""
+            "title": "Eco-Conscious"
           }
         },
         "logo_tawCLk": {
@@ -974,7 +974,7 @@
             "image": "shopify://shop_images/Certified_B_Corporation_B_Corp_Logo_2022_Black_RGB_svg.webp",
             "image_width": 80,
             "link": "https://www.bcorporation.net/en-us/",
-            "title": ""
+            "title": "Certified B Corp"
           }
         },
         "logo_D6VaH9": {
@@ -983,7 +983,7 @@
             "image": "shopify://shop_images/Benefits-of-Partnering-with-a-WBENC-Certified-Women-Business-Enterprise-Public-Relations-and-Marketing-Agency-feature.webp",
             "image_width": 130,
             "link": "https://buywomenowned.com/",
-            "title": ""
+            "title": "Women-Owned"
           }
         },
         "logo_Yg37w8": {
@@ -992,7 +992,7 @@
             "image": "shopify://shop_images/OEKO_TEX.png",
             "image_width": 80,
             "link": "https://www.oeko-tex.com/en/",
-            "title": ""
+            "title": "Safety Certified"
           }
         },
         "logo_cNXMbY": {
@@ -1014,7 +1014,7 @@
       ],
       "name": "USP List",
       "settings": {
-        "title": "",
+        "title": "Our Commitments",
         "enable_carousel": false,
         "carousel_speed": 30,
         "image_opacity": 100,
