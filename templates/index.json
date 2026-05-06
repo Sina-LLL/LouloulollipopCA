@@ -148,7 +148,6 @@
     },
     "logo_list_kYmwNX": {
       "type": "logo-list",
-      "disabled": true,
       "blocks": {
         "logo_Pb9irB": {
           "type": "logo",
@@ -894,6 +893,7 @@
     },
     "custom_liquid_RDK4Gg": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "Custom Liquid",
       "settings": {
         "full_width": true,
@@ -1190,20 +1190,20 @@
   "order": [
     "slideshow_JU4LXr",
     "custom_product_highlight_KJfQCU",
+    "logo_list_kYmwNX",
     "collection_list_VHgK7g",
     "featured_collection_RGPeGr",
     "testimonials_QcyQ3m",
     "multi_column_KCzHEY",
     "logo_list_ywatnw",
-    "custom_liquid_RDK4Gg",
     "collection_list_zhMrUA",
     "collection_list_FxKgEx",
     "1737676593fa7ff914",
     "16359276425da8ce46",
-    "logo_list_kYmwNX",
     "collection_list_aakDiY",
     "shop_the_look_HrgpQK",
     "featured_collection_HNkD47",
+    "custom_liquid_RDK4Gg",
     "custom_product_highlight_JiGaUB",
     "collection_list_awHraC",
     "featured_collection_eXJhUx",
