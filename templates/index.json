@@ -148,6 +148,7 @@
     },
     "logo_list_kYmwNX": {
       "type": "logo-list",
+      "disabled": true,
       "blocks": {
         "logo_Pb9irB": {
           "type": "logo",
@@ -468,6 +469,7 @@
     },
     "shop_the_look_HrgpQK": {
       "type": "shop-the-look",
+      "disabled": true,
       "blocks": {
         "subheading_Mr3wbt": {
           "type": "subheading",
@@ -1186,25 +1188,25 @@
     }
   },
   "order": [
-    "16359276425da8ce46",
     "slideshow_JU4LXr",
-    "logo_list_kYmwNX",
-    "featured_collection_RGPeGr",
-    "collection_list_VHgK7g",
-    "collection_list_aakDiY",
     "custom_product_highlight_KJfQCU",
-    "shop_the_look_HrgpQK",
-    "featured_collection_HNkD47",
+    "collection_list_VHgK7g",
+    "featured_collection_RGPeGr",
     "testimonials_QcyQ3m",
-    "collection_list_zhMrUA",
-    "collection_list_FxKgEx",
-    "custom_liquid_RDK4Gg",
     "multi_column_KCzHEY",
     "logo_list_ywatnw",
+    "custom_liquid_RDK4Gg",
+    "collection_list_zhMrUA",
+    "collection_list_FxKgEx",
+    "1737676593fa7ff914",
+    "16359276425da8ce46",
+    "logo_list_kYmwNX",
+    "collection_list_aakDiY",
+    "shop_the_look_HrgpQK",
+    "featured_collection_HNkD47",
     "custom_product_highlight_JiGaUB",
     "collection_list_awHraC",
     "featured_collection_eXJhUx",
-    "multi_column_MR9q33",
-    "1737676593fa7ff914"
+    "multi_column_MR9q33"
   ]
 }
