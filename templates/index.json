@@ -15,8 +15,8 @@
         "image_TKJkRj": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Lemon-Hero.png",
-            "mobile_image": "shopify://shop_images/Mobile-Hero_Lemon.png",
+            "image": "shopify://shop_images/Desktop_-_Hero_bda1e5fa-a6b6-44de-9dec-9f86f5fda160.png",
+            "mobile_image": "shopify://shop_images/Mobile_-_Hero_13cb4ff0-ffec-4f49-be1c-af6bb9afbfa2.png",
             "slide_link": "",
             "subheading": "",
             "title": "Premium Sleep Bags",
@@ -191,6 +191,7 @@
         "collection_778Cxg",
         "collection_RkFVdV"
       ],
+      "disabled": true,
       "settings": {
         "title": "Shop by Category",
         "text": "",
@@ -218,7 +219,7 @@
           "settings": {
             "collection": "sleep-bags",
             "tag": "",
-            "image": "shopify://shop_images/Header_Image_-_Sleepbag.png",
+            "image": "shopify://shop_images/Mobile-Hero_Lemon.png",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -228,7 +229,7 @@
           "settings": {
             "collection": "sleepers",
             "tag": "",
-            "image": "shopify://shop_images/DSC01865_1.png",
+            "image": "shopify://shop_images/LouLouLollipopMarch2026-03439.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -238,7 +239,7 @@
           "settings": {
             "collection": "silicone-bibs",
             "tag": "",
-            "image": "shopify://shop_images/DSC09680.jpg",
+            "image": "shopify://shop_images/LouLouLollipopMarch2026-05425.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -248,7 +249,7 @@
           "settings": {
             "collection": "swaddles",
             "tag": "",
-            "image": "shopify://shop_images/DSC01126-2.jpg",
+            "image": "shopify://shop_images/Copy_of_SWSHK_Muslin_Swaddle_Sharks_52.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -258,18 +259,38 @@
           "settings": {
             "collection": "long-sleeve-bibs",
             "tag": "",
-            "image": "shopify://shop_images/DSC08236-2.jpg",
+            "image": "shopify://shop_images/LouLouLollipopMarch2026-06428.jpg",
             "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_AHpkwx": {
+          "type": "collection",
+          "settings": {
+            "collection": "hooded-towel-sets",
+            "tag": "",
+            "image": "shopify://shop_images/559C3E6A-A680-492D-B898-C0F8E1FC8353.jpg",
+            "subheading": "Hooded Towels",
             "button_label": ""
           }
         },
         "collection_j8GdED": {
           "type": "collection",
           "settings": {
-            "collection": "blankets",
+            "collection": "muslin-quilt",
             "tag": "",
-            "image": "shopify://shop_images/DSC00442-2_969de760-0b9c-43c4-8160-67d13f8c69a9.jpg",
-            "subheading": "Blankets",
+            "image": "shopify://shop_images/DSC00442-2.jpg",
+            "subheading": "Muslin Quilts",
+            "button_label": ""
+          }
+        },
+        "collection_4HbMHd": {
+          "type": "collection",
+          "settings": {
+            "collection": "silicone-teethers",
+            "tag": "",
+            "image": "shopify://shop_images/WTR-WOF_Wild_Teether_-_Wolfie_51.jpg",
+            "subheading": "Teethers",
             "button_label": ""
           }
         }
@@ -280,13 +301,15 @@
         "collection_nLyac9",
         "collection_PHnrb8",
         "collection_caXU8w",
-        "collection_j8GdED"
+        "collection_AHpkwx",
+        "collection_j8GdED",
+        "collection_4HbMHd"
       ],
       "settings": {
         "title": "Shop by Category",
         "text": "",
         "text_alignment": "start",
-        "enable_carousel": true,
+        "enable_carousel": false,
         "grid": 4,
         "color_scheme": "1",
         "full_width": true,
