@@ -789,26 +789,14 @@
         }
       },
       "block_order": [
-        "collection_gTBabQ",
-        "collection_k3WjyT",
-        "collection_dqkine",
-        "collection_8rVUcm",
-        "collection_n4jGxF",
-        "collection_ttFiLP",
-        "collection_9gQzgC",
-        "collection_ExCE9F",
-        "collection_qCHi4r",
         "collection_FhR9Rc",
-        "collection_m7DJDa",
+        "collection_CXEmHx",
+        "collection_ntR4RL",
         "collection_dGF3f4",
-        "collection_rc8zw8",
+        "collection_3hmwzf",
         "collection_aHLB8h",
         "collection_eU9Ecq",
-        "collection_3hmwzf",
-        "collection_CXEmHx",
-        "collection_FQR9KE",
-        "collection_HYRWrg",
-        "collection_ntR4RL"
+        "collection_ExCE9F"
       ],
       "custom_css": [
         ".collection-slider-row {padding-bottom: 0;}"
