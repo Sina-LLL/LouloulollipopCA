@@ -1,4 +1,4 @@
-<div class="section-id-{{ section.id }} collection-slider-row for-collections {% if section.settings.color_scheme != 'default' %}use-color-scheme use-color-scheme--{{ section.settings.color_scheme }}{% endif %}{% if section.settings.full_width %} slider--no-max{% endif %}">
+<div class="section-id-{{ section.id }} collection-slider-row for-collections {% if section.settings.color_scheme != 'default' %}use-color-scheme use-color-scheme--{{ section.settings.color_scheme }}{% endif %}{% if section.settings.full_width %} slider--no-max{% endif %}{% if section.settings.disable_carousel_mobile %} carousel-mobile-disabled{% endif %}">
   <div class="container{% if section.settings.full_width %} container--no-max{% endif %}">
     <div class="hometitle">
       <h2 class=" h4 text-{{ section.settings.text_alignment}} has-paging__title" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.3s"' -%}>
@@ -104,6 +104,24 @@
   </div>
 </div>
 
+{% if section.settings.disable_carousel_mobile %}
+  <style>
+    @media (max-width: 749px) {
+      .carousel-mobile-disabled carousel-slider {
+        display: contents;
+      }
+      .carousel-mobile-disabled .slider-nav {
+        display: none !important;
+      }
+      .carousel-mobile-disabled .collection-listing.slider {
+        overflow: visible;
+      }
+      .carousel-mobile-disabled .product-grid--carousel {
+        display: grid;
+      }
+    }
+  </style>
+{% endif %}
 
 {% schema %}
 {
@@ -155,6 +173,12 @@
       "id": "enable_carousel",
       "label": "Enable carousel",
       "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "disable_carousel_mobile",
+      "label": "Disable carousel on mobile",
+      "default": false
     },
     {
       "type": "range",
