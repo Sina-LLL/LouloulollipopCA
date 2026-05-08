@@ -9,6 +9,29 @@
  */
 {
   "sections": {
+    "17782540791e847cf5": {
+      "type": "apps",
+      "blocks": {
+        "advanced_myregistry_functions_return_to_registry_PdiwTP": {
+          "type": "shopify://apps/advanced-myregistry-functions/blocks/return_to_registry/b23862ba-17b6-4df1-a6c8-81ff1fa21101",
+          "settings": {
+            "registry_page": "",
+            "text_color": "rgba(0,0,0,0)",
+            "text_color_hover": "rgba(0,0,0,0)",
+            "custom_element_selector": "",
+            "button_placement": "before_selected",
+            "custom_css": ""
+          }
+        }
+      },
+      "block_order": [
+        "advanced_myregistry_functions_return_to_registry_PdiwTP"
+      ],
+      "settings": {
+        "full_width": false,
+        "show_space": true
+      }
+    },
     "main": {
       "type": "main-cart",
       "settings": {
@@ -42,6 +65,7 @@
     }
   },
   "order": [
+    "17782540791e847cf5",
     "main",
     "175390546780bb95d0"
   ]
