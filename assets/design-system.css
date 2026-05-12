@@ -23,7 +23,7 @@ h6,.h6,
 body{
   font-family: sofia-pro, sans-serif;
 }
-.rte>p:last-child{
+.hometitle .rte>p:last-child{
   line-height:1.5em;
 }
 /* .rte p{
