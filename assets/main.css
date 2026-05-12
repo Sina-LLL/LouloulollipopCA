@@ -4796,7 +4796,7 @@ shopify-payment-terms {
 }
 
 .text-overlay--h-left {
-  justify-content: var(--overlay-align-left, left);
+  justify-content: var(--overlay-align-left, flex-start);
   text-align: var(--overlay-align-left, left);
 }
 .text-overlay--h-left .text-overlay__subheading,
@@ -4806,7 +4806,7 @@ shopify-payment-terms {
 }
 
 .text-overlay--h-right {
-  justify-content: var(--overlay-align-right, right);
+  justify-content: var(--overlay-align-right, flex-end);
   text-align: var(--overlay-align-right, right);
 }
 .text-overlay--h-right .text-overlay__subheading,
@@ -8042,13 +8042,13 @@ slide-show {
   justify-content: flex-end;
 }
 .text-overlay--h-left .slideshow-ctrl--inline .slideshow-nav {
-  justify-content: var(--overlay-align-left, left);
+  justify-content: var(--overlay-align-left, flex-start);
 }
 .text-overlay--h-center .slideshow-ctrl--inline .slideshow-nav {
   justify-content: center;
 }
 .text-overlay--h-right .slideshow-ctrl--inline .slideshow-nav {
-  justify-content: var(--overlay-align-right, right);
+  justify-content: var(--overlay-align-right, flex-end);
 }
 
 .slideshow-nav__btn {
