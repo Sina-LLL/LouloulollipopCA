@@ -54,6 +54,23 @@
         "accessibility_info": ""
       }
     },
+    "featured_collection_R6h8Qg": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "OneC Silicone Pacifier Clips",
+        "text": "<p>Stretchy, durable, and designed to withstand real-life adventures.</p>",
+        "collection": "onec-silicone-pacifier-clips",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 4,
+        "rows": 1,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": false,
+        "text_alignment": "start"
+      }
+    },
     "custom_product_highlight_KJfQCU": {
       "type": "custom-product-highlight",
       "name": "Highlighted Collection",
@@ -1036,6 +1053,7 @@
   },
   "order": [
     "slideshow_JU4LXr",
+    "featured_collection_R6h8Qg",
     "custom_product_highlight_KJfQCU",
     "logo_list_kYmwNX",
     "collection_list_VHgK7g",
