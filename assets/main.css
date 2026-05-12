@@ -4741,7 +4741,7 @@ shopify-payment-terms {
     text-align: left !important;
   }
   .text-overlay.text-overlay--with-reveal h1{
-    margin: 0 auto;
+    margin: 0;
   }
 }
 .text-overlay {
