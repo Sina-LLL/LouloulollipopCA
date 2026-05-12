@@ -4803,6 +4803,7 @@ shopify-payment-terms {
 .text-overlay--h-left .text-overlay__title,
 .text-overlay--h-left .text-overlay__rte {
   margin-inline-end: auto;
+  text-align: left;
 }
 
 .text-overlay--h-right {
@@ -4814,6 +4815,7 @@ shopify-payment-terms {
 .text-overlay--h-right .text-overlay__rte {
   margin-left: var(--overlay-right-text-m-left, auto);
   margin-right: var(--overlay-right-text-m-right, 0);
+  text-align: right;
 }
 
 .text-overlay--v-top {
@@ -4832,6 +4834,7 @@ shopify-payment-terms {
 .text-overlay--h-center .text-overlay__rte {
   margin-right: auto;
   margin-left: auto;
+  text-align: center;
 }
 
 .text-overlay__title {
