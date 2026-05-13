@@ -4,8 +4,9 @@
 }
 
 .blog-posts h1{
-  font-size: 1.75rem;
-    line-height: 2rem;
+  font-size: 2em;
+  line-height: 1.5em;
+  text-align: left;
 }
 .bold{
   font-weight:600;
