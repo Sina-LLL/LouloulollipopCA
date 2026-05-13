@@ -19,7 +19,7 @@
       </div>
 
     {% else %}
-      <div class="page-header page-header--with-background img-fill {% if section.settings.enable_title_overlay %}image-overlay image-overlay--bg-{{ section.settings.overlay_style }}{% endif %} page-header--padded-{{ section.settings.featured_image_height }}">
+      <div class="blog-posts page-header page-header--with-background img-fill {% if section.settings.enable_title_overlay %}image-overlay image-overlay--bg-{{ section.settings.overlay_style }}{% endif %} page-header--padded-{{ section.settings.featured_image_height }}">
         {% if section.settings.enable_title_overlay %}
           <div class="image-overlay__image">
             {%- render 'image' with article.image, loading: 'eager' -%}
