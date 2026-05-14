@@ -237,7 +237,7 @@
             "collection": "sleep-bags",
             "tag": "",
             "image": "shopify://shop_images/Mobile-Hero_Lemon.png",
-            "subheading": "{{ block.settings.collection.title }}",
+            "subheading": "Sleep Bags & Sleep Sacks",
             "button_label": ""
           }
         },
