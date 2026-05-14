@@ -19,7 +19,7 @@
       </div>
 
     {% else %}
-      <div class="page-header page-header--with-background img-fill {% if section.settings.enable_title_overlay %}image-overlay image-overlay--bg-{{ section.settings.overlay_style }}{% endif %} page-header--padded-{{ section.settings.featured_image_height }}">
+      <div class="blog-posts page-header page-header--with-background img-fill {% if section.settings.enable_title_overlay %}image-overlay image-overlay--bg-{{ section.settings.overlay_style }}{% endif %} page-header--padded-{{ section.settings.featured_image_height }}">
         {% if section.settings.enable_title_overlay %}
           <div class="image-overlay__image">
             {%- render 'image' with article.image, loading: 'eager' -%}
@@ -41,8 +41,8 @@
 {% endif %}
 
 {% if section.settings.enable_title_overlay == false or section.settings.show_featured_image == false or article.image == blank %}
-  <div class="container" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
-      <div class="page-header cf">
+  <div class="container--reading-width container" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
+      <div class="blog-posts page-header cf">
         <h1 class="majortitle">{{ article.title | escape }}</h1>
       </div>
   </div>
