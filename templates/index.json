@@ -15,13 +15,13 @@
         "image_TKJkRj": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/OneC_hero_04f9ff95-3287-4574-af28-dbc0cf3f4c81_1.png",
+            "image": "shopify://shop_images/OneC_hero_1_04e288d5-8dfd-44fa-a662-5b88cb37facb.png",
             "mobile_image": "shopify://shop_images/OneC_hero-mobile_1.png",
             "slide_link": "",
             "subheading": "",
             "title": "The Beautiful Game",
             "heading_max_width": 14,
-            "title_size": 54,
+            "title_size": 72,
             "title_size_mobile": 32,
             "use_h1": true,
             "text": "<p>Our newest soccer-inspired print, has officially entered the lineup.</p>",
