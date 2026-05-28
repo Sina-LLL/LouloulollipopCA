@@ -173,7 +173,7 @@ a.navigation__link,.menu-promotion__text {
     line-height: 1.2em;
   }
   .navigation__item.navigation__column .navigation__link{
-    font-size:1em;
+    font-size:1rem;
   }
 }
 /* End Nav text */
