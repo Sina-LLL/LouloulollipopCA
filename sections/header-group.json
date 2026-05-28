@@ -220,6 +220,7 @@
         },
         "menu_promotion_small_9XzrdD": {
           "type": "menu-promotion-small",
+          "disabled": true,
           "settings": {
             "dropdown_link_title": "Top Gifts",
             "image": "shopify://shop_images/Newborn.jpg",
@@ -229,6 +230,7 @@
         },
         "menu_promotion_small_mgLirm": {
           "type": "menu-promotion-small",
+          "disabled": true,
           "settings": {
             "dropdown_link_title": "Bundles & Gifts",
             "image": "shopify://shop_images/DS-NB001_113.jpg",
@@ -238,6 +240,7 @@
         },
         "menu_promotion_small_9UBNbq": {
           "type": "menu-promotion-small",
+          "disabled": true,
           "settings": {
             "dropdown_link_title": "Bundles & Gifts",
             "image": "shopify://shop_images/Frame_1_26b00323-1524-4b29-9a8e-7396c839450b.png",
@@ -247,6 +250,7 @@
         },
         "menu_promotion_small_jbPGfw": {
           "type": "menu-promotion-small",
+          "disabled": true,
           "settings": {
             "dropdown_link_title": "SALE",
             "image": "shopify://shop_images/Muslin_Sleep_Bag_-_Football_0c59d1d0-f7a4-430a-826f-73ab11404543.jpg",
@@ -256,6 +260,7 @@
         },
         "menu_promotion_small_7d9UtM": {
           "type": "menu-promotion-small",
+          "disabled": true,
           "settings": {
             "dropdown_link_title": "Sale",
             "image": "shopify://shop_images/BLBodysuit-RustGeo_11_8b61ad77-2139-40ac-b88d-d18ebbbddb7e.jpg",
