@@ -462,7 +462,7 @@
     "type_logo_font": "sans-serif",
     "font_size_heading_int": 48,
     "font_size_base_int": 16,
-    "font_size_nav_int": 14,
+    "font_size_nav_int": 16,
     "font_size_logo_int": 26,
     "button_style": "caps",
     "button_shape": "slightlyrounded",
