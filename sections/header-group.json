@@ -333,7 +333,7 @@
         "enable_transparent": false,
         "transparent_color": "#ffffff",
         "transparent_logo": "shopify://shop_images/LLL-Logo_4x_90f5864f-2593-450c-9169-7190aa86050b.png",
-        "menu_linklist": "2026_main-menu",
+        "menu_linklist": "main-menu-05-2026-test",
         "menu_layout": "inline-menu-center",
         "nav_featured_link": "Sale",
         "menu_linklist_mobile": "",
