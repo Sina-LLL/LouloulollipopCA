@@ -132,9 +132,27 @@
           "type": "menu-promotion-small",
           "settings": {
             "dropdown_link_title": "Sleep & Bedding",
-            "image": "shopify://shop_images/Header_Image_-_Sleepbag.png",
+            "image": "shopify://shop_images/Nav_02.png",
             "title": "Sleep Bags",
             "link_url": "shopify://collections/sleep-bags"
+          }
+        },
+        "menu_promotion_small_bMCywj": {
+          "type": "menu-promotion-small",
+          "settings": {
+            "dropdown_link_title": "Sleep & Bedding",
+            "image": "shopify://shop_images/Nav_03.png",
+            "title": "Muslin Quilts",
+            "link_url": "shopify://collections/muslin-quilt"
+          }
+        },
+        "menu_promotion_small_npg4me": {
+          "type": "menu-promotion-small",
+          "settings": {
+            "dropdown_link_title": "Sleep & Bedding",
+            "image": "shopify://shop_images/Nav_01.png",
+            "title": "Swaddles",
+            "link_url": "shopify://collections/swaddles"
           }
         },
         "menu_promotion_small_8ghxfY": {
@@ -328,6 +346,8 @@
         "menu_promotion_small_i7xRFz",
         "menu_promotion_small_E3UFWP",
         "menu_promotion_small_tKL9pd",
+        "menu_promotion_small_bMCywj",
+        "menu_promotion_small_npg4me",
         "menu_promotion_small_8ghxfY",
         "menu_promotion_small_8BztDt",
         "menu_promotion_small_gxFhYf",
