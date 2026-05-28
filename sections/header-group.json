@@ -105,9 +105,9 @@
           "type": "menu-promotion-small",
           "settings": {
             "dropdown_link_title": "New & Featured",
-            "image": "shopify://shop_images/Header_Image.png",
-            "title": "Curious Cuddles",
-            "link_url": "shopify://collections/curious-cuddles"
+            "image": "shopify://shop_images/OneC_Nav.png",
+            "title": "OneC™ Pacifier Clips",
+            "link_url": "shopify://collections/onec-silicone-pacifier-clips"
           }
         },
         "menu_promotion_small_i7xRFz": {
@@ -117,6 +117,15 @@
             "image": "shopify://shop_images/Header-Safari_Jungle.png",
             "title": "Safari Jungle",
             "link_url": "shopify://collections/safari-jungle"
+          }
+        },
+        "menu_promotion_small_E3UFWP": {
+          "type": "menu-promotion-small",
+          "settings": {
+            "dropdown_link_title": "New & Featured",
+            "image": "shopify://shop_images/Canada_Nav.png",
+            "title": "O Canada!",
+            "link_url": "shopify://collections/canada"
           }
         },
         "menu_promotion_small_tKL9pd": {
@@ -132,16 +141,25 @@
           "type": "menu-promotion-small",
           "settings": {
             "dropdown_link_title": "Clothing",
-            "image": "shopify://shop_images/Header_Image_-_Dresses.png",
+            "image": "shopify://shop_images/Dress_Nav.png",
             "title": "Dresses",
             "link_url": "shopify://collections/dresses"
+          }
+        },
+        "menu_promotion_small_8BztDt": {
+          "type": "menu-promotion-small",
+          "settings": {
+            "dropdown_link_title": "Clothing",
+            "image": "shopify://shop_images/Sleeper_Nav.png",
+            "title": "Sleepers",
+            "link_url": "shopify://collections/sleepers"
           }
         },
         "menu_promotion_small_gxFhYf": {
           "type": "menu-promotion-small",
           "settings": {
             "dropdown_link_title": "Clothing",
-            "image": "shopify://shop_images/Header_Image_-_Pajamas.png",
+            "image": "shopify://shop_images/PJs_Nav.png",
             "title": "Pajamas",
             "link_url": "shopify://collections/pajamas"
           }
@@ -308,8 +326,10 @@
       "block_order": [
         "menu_promotion_small_LfPP96",
         "menu_promotion_small_i7xRFz",
+        "menu_promotion_small_E3UFWP",
         "menu_promotion_small_tKL9pd",
         "menu_promotion_small_8ghxfY",
+        "menu_promotion_small_8BztDt",
         "menu_promotion_small_gxFhYf",
         "menu_promotion_small_VjUPFk",
         "menu_promotion_small_88k4CY",
