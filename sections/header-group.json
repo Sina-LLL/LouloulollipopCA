@@ -381,7 +381,7 @@
       ],
       "settings": {
         "logo": "shopify://shop_images/Logo_LLL_14784c07-6192-4487-8fa1-cee0c9bc04b8.png",
-        "logo_img_width_int": 215,
+        "logo_img_width_int": 200,
         "mobile_logo_img_width_int": 180,
         "logo_h1": false,
         "enable_sticky": true,
@@ -396,7 +396,7 @@
         "enable_mobile_promo_carousel": true,
         "enable_nav_mob_products": false,
         "nav_mob_products_title": "Best Sellers",
-        "nav_mob_products_collection": "",
+        "nav_mob_products_collection": "best-sellers",
         "enable_search": true,
         "search_recommendations_title": "",
         "search_recommendations_menu": "",
