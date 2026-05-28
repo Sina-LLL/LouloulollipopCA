@@ -186,7 +186,7 @@
           "type": "menu-promotion-small",
           "settings": {
             "dropdown_link_title": "Feeding",
-            "image": "shopify://shop_images/Header_Image_-_SILBIB.png",
+            "image": "shopify://shop_images/Nav_4.png",
             "title": "Silicone Bibs",
             "link_url": "shopify://collections/silicone-bibs"
           }
@@ -195,7 +195,7 @@
           "type": "menu-promotion-small",
           "settings": {
             "dropdown_link_title": "Feeding",
-            "image": "shopify://shop_images/Header_Image_-_Suction_Plates.png",
+            "image": "shopify://shop_images/Nav_5.png",
             "title": "Suction Plates",
             "link_url": "shopify://collections/suction-plates"
           }
@@ -204,7 +204,7 @@
           "type": "menu-promotion-small",
           "settings": {
             "dropdown_link_title": "Feeding",
-            "image": "shopify://shop_images/Long_Sleeve_Bibs_-_Header_Image_1054c98c-a1a0-4514-bc1d-f566a2a17a43.png",
+            "image": "shopify://shop_images/Nav_6.png",
             "title": "Long Sleeve Bibs",
             "link_url": "shopify://collections/long-sleeve-bibs"
           }
@@ -234,6 +234,15 @@
             "image": "shopify://shop_images/Header_Image_-_WetDryBag.png",
             "title": "Wet Dry Bags",
             "link_url": "shopify://collections/wet-dry-bags"
+          }
+        },
+        "menu_promotion_small_EHrRR9": {
+          "type": "menu-promotion-small",
+          "settings": {
+            "dropdown_link_title": "Toys & Play",
+            "image": "shopify://shop_images/SILCPOCPQZ_01.jpg",
+            "title": "Pacifier Clips",
+            "link_url": "shopify://collections/pacifier-clips"
           }
         },
         "menu_promotion_small_pTVJy3": {
@@ -357,6 +366,7 @@
         "menu_promotion_small_AkrWYN",
         "menu_promotion_small_RmrAtN",
         "menu_promotion_small_FkQ6bx",
+        "menu_promotion_small_EHrRR9",
         "menu_promotion_small_pTVJy3",
         "menu_promotion_small_gjj8cX",
         "menu_promotion_small_9XzrdD",
