@@ -348,7 +348,10 @@
             </div>
           
           
-
+          {% when 'pr-mentions' %}
+            <div class="lightly-spaced-row not-in-quickbuy" {{ block.shopify_attributes }}>
+              {% render 'product-pr-mentions' %}
+            </div>
           {% when 'description' %}
             {%- if product.description != blank -%}
               <div class="{% unless block.settings.show_in_quickbuy %}not-in-quickbuy{% endunless %}{% if block.settings.show_in_tab %} product-info-accordion{% endif %}" {{ block.shopify_attributes }}>
@@ -386,9 +389,7 @@
                       <p><strong>For Ages:</strong> {{ product.metafields.product.age_group.value }}</p>
                     {% endif %}
                   </div>
-                {% endif %}
-              {% render 'product-pr-mentions' %}
-                
+                {% endif %}                
               </div>
               {% if product.metafields.custom.bundle_products != blank %}
                 <div class="bundle-products">
