@@ -67,6 +67,7 @@
         "height": "fixed",
         "height_desktop": 600,
         "height_mobile": 500,
+        "slide_max_width": 1200,
         "border_radius": 16,
         "peek_size": 32,
         "peek_size_mobile": 16,
