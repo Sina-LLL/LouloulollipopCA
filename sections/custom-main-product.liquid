@@ -1122,12 +1122,16 @@
                 label_right: block.settings.label_right
               %}
             </div>
-
+        {% when 'material-usp' %}
+          {% if product.metafields.custom.material != blank %}
+            <div class="lightly-spaced-row not-in-quickbuy" {{ block.shopify_attributes }}>
+              {% render 'custom-product-material-usp', material: section.settings.material_type %}
+            </div>
+          {% endif %}
         {% endcase %}
+        
       {% endfor %}
-      {% if product.metafields.custom.material != blank %}
-        {% render 'custom-product-material-usp', material: section.settings.material_type %}
-      {% endif %}
+     
 
       <div class="lightish-spaced-row-above only-in-quickbuy">
         <a class="more" href="{{ product.url }}">
@@ -1592,7 +1596,12 @@
     "type": "pr-mentions",
     "name": "PR Mentions",
     "limit": 1
-    },    
+    },
+    {
+    "type": "material-usp",
+    "name": "Material USP",
+    "limit": 1
+    },        
     {
       "type": "@app"
     },
