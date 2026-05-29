@@ -2,6 +2,9 @@
 <div id="hcr-{{ sid }}" class="hcr" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.2s"' -%}>
 
   {% style %}
+  .hcr__slide p{
+    font-size:1.5em;
+  }
     #hcr-{{ sid }} {
       margin-top: {{ section.settings.padding_top }}px;
       margin-bottom: var(--larger-section-padding);
