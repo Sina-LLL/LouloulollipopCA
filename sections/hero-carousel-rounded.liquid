@@ -181,16 +181,18 @@
     }
     #hcr-{{ sid }} .hcr__dot svg { display: block; width: 20px; height: 20px; }
     #hcr-{{ sid }} .hcr__dot .hcr__dot-bg {
-      transition: fill 0.2s, opacity 0.2s;
+      transition: fill 0.2s, opacity 0.2s, stroke 0.2s;
       stroke-width: 1px;
-      stroke: currentColor;
-      fill: transparent;
-      opacity: 0.4;
-    }
-    #hcr-{{ sid }} .hcr__dot.is-active .hcr__dot-bg {
-      fill: currentColor;
+      stroke: #D9E1E4;
+      fill: #D9E1E4;
       opacity: 1;
     }
+    #hcr-{{ sid }} .hcr__dot.is-active .hcr__dot-bg {
+      fill: #6A8B95;
+      stroke: #6A8B95;
+      opacity: 1;
+    }
+    
   {% endstyle %}
 
   <div class="hcr__inner" style="position: relative;">
