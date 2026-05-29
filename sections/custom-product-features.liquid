@@ -8,7 +8,45 @@
         </button>
       {% endif %}
 
-      <div class="custom-product-features__grid custom-accordion-content show">
+      {{- 'slideshow.js' | asset_url | script_tag -}}
+
+      <!-- Mobile carousel -->
+      <carousel-slider class="custom-features-carousel mobile-only block">
+        <div class="slider slider--no-scrollbar">
+          <div class="slider__grid">
+            {% for block in section.blocks %}
+              <div class="slider__item{% if forloop.first %} is-active{% endif %}" {{ block.shopify_attributes }}>
+                <div class="usp-block">
+                  <div class="image-cont">
+                    {% if block.settings.image != blank %}
+                      <div class="custom-product-features__image">
+                        {% render 'image' with block.settings.image, loading: 'lazy', size_cols_mobile: 1, size_cols_desktop: 4, custom_aspect_ratio: 1, custom_crop: 'center' %}
+                      </div>
+                    {% endif %}
+                  </div>
+                  {% if block.settings.title != blank %}
+                    <h3 class="custom-product-features__heading">{{ block.settings.title | escape }}</h3>
+                  {% endif %}
+                  {% if block.settings.description != blank %}
+                    <p class="custom-product-features__body">{{ block.settings.description | strip_html }}</p>
+                  {% endif %}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <!-- Dot indicators -->
+        <div class="custom-features-carousel__dots">
+          {% for block in section.blocks %}
+            <button class="custom-features-carousel__dot{% if forloop.first %} is-active{% endif %}"
+              aria-label="Slide {{ forloop.index }}"></button>
+          {% endfor %}
+        </div>
+      </carousel-slider>
+
+      <!-- Desktop grid -->
+      <div class="custom-product-features__grid custom-accordion-content show desktop-only">
         {% for block in section.blocks %}
           <div class="usp-block" {{ block.shopify_attributes }}>
             <div class="image-cont">
@@ -18,75 +56,16 @@
                 </div>
               {% endif %}
             </div>
-
             {% if block.settings.title != blank %}
               <h3 class="custom-product-features__heading">{{ block.settings.title | escape }}</h3>
             {% endif %}
-
             {% if block.settings.description != blank %}
               <p class="custom-product-features__body">{{ block.settings.description | strip_html }}</p>
             {% endif %}
           </div>
         {% endfor %}
       </div>
+
     </div>
   </div>
 {% endif %}
-
-
-{% schema %}
-{
-  "name": "Custom Product Features",
-  "tag": "section",
-  "class": "custom-product-features",
-  "settings": [
-    {
-      "type": "text",
-      "id": "section_heading",
-      "label": "Section Heading",
-      "default": "Why Choose Our Product?"
-    }
-  ],
-  "blocks": [
-    {
-      "type": "feature",
-      "name": "Feature",
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Feature Image"
-        },
-        {
-          "type": "text",
-          "id": "title",
-          "label": "Feature Title"
-        },
-        {
-          "type": "richtext",
-          "id": "description",
-          "label": "Feature Description"
-        }
-      ]
-    }
-  ],
-  "max_blocks": 4,
-  "presets": [
-    {
-      "name": "Custom Product Features",
-      "category": "Product",
-      "blocks": [
-        {
-          "type": "feature"
-        },
-        {
-          "type": "feature"
-        },
-        {
-          "type": "feature"
-        }
-      ]
-    }
-  ]
-}
-{% endschema %}
