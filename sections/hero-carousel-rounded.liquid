@@ -198,11 +198,9 @@
     }
   {% endstyle %}
 
-  <div class="container">
+  <div class="container--full-bleed">
     <div class="hcr-inner">
-
-      <div class="hcr-track-wrapper">
-        <div class="hcr-track" id="hcr-track-{{ section.id }}">
+      <div class="hcr-track" id="hcr-track-{{ section.id }}">
           {%- for block in section.blocks -%}
             {%- liquid
               assign show_text = false
