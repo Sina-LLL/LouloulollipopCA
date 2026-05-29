@@ -292,18 +292,26 @@
   </div>
 
   {%- if section.blocks.size > 1 -%}
-    <div class="hcr__dots js-only" id="hcr-dots-{{ sid }}" role="tablist">
-      {%- for block in section.blocks -%}
-        <button class="hcr__dot{% if forloop.first %} is-active{% endif %}"
-          role="tab"
-          data-index="{{ forloop.index0 }}"
-          aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }}">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-            <circle class="hcr__dot-bg" cx="12" cy="12" r="6" />
-          </svg>
+    {%- if section.blocks.size > 1 -%}
+      <div class="hcr__dots js-only" id="hcr-dots-{{ sid }}" role="tablist">
+        <button type="button" class="hcr__dots-arrow hcr__dots-arrow--prev" id="hcr-dots-prev-{{ sid }}" aria-label="{{ 'general.slider.previous' | t }}" disabled>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
         </button>
-      {%- endfor -%}
-    </div>
+        {%- for block in section.blocks -%}
+          <button class="hcr__dot{% if forloop.first %} is-active{% endif %}"
+            role="tab"
+            data-index="{{ forloop.index0 }}"
+            aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }}">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <circle class="hcr__dot-bg" cx="12" cy="12" r="6" />
+            </svg>
+          </button>
+        {%- endfor -%}
+        <button type="button" class="hcr__dots-arrow hcr__dots-arrow--next" id="hcr-dots-next-{{ sid }}" aria-label="{{ 'general.slider.next' | t }}">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+      </div>
+    {%- endif -%}
   {%- endif -%}
 
   {%- if section.blocks.size > 1 -%}
