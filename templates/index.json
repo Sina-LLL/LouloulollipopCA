@@ -63,11 +63,11 @@
       ],
       "name": "Hero Carousel – Rounded",
       "settings": {
-        "padding_top": 8,
+        "padding_top": 20,
         "height": "fixed",
         "height_desktop": 600,
         "height_mobile": 500,
-        "slide_max_width": 1300,
+        "slide_max_width": 1400,
         "border_radius": 16,
         "peek_size": 32,
         "peek_size_mobile": 16,
