@@ -77,10 +77,14 @@
             "button_placement": "before_selected"
           }
         },
-        "divider": {
-          "type": "divider",
+        "usp_Whm8xh": {
+          "type": "USP",
+          "repeater": "{{ product.metafields.custom.product_template.value.usp_icons.value }}",
           "settings": {
-            "show_in_quickbuy": false
+            "text": "{{ block.repeater.title.value }}",
+            "icon": "",
+            "custom_icon": "{{ block.repeater.icon.value }}",
+            "icon_size": "large"
           }
         },
         "complementary_BXxYXx": {
@@ -91,15 +95,9 @@
             "max_products": 10
           }
         },
-        "usp_Whm8xh": {
-          "type": "USP",
-          "repeater": "{{ product.metafields.custom.product_template.value.usp_icons.value }}",
-          "settings": {
-            "text": "{{ block.repeater.title.value }}",
-            "icon": "",
-            "custom_icon": "{{ block.repeater.icon.value }}",
-            "icon_size": "large"
-          }
+        "pr_mentions_93c7XY": {
+          "type": "pr-mentions",
+          "settings": {}
         },
         "description": {
           "type": "description",
@@ -136,6 +134,10 @@
             "show_in_quickbuy": false
           }
         },
+        "material_usp_nyjh4H": {
+          "type": "material-usp",
+          "settings": {}
+        },
         "swatch_highlight_86Qa4w": {
           "type": "swatch_highlight",
           "settings": {}
@@ -147,12 +149,13 @@
         "variant-picker",
         "buy-buttons",
         "advanced_myregistry_functions_add_to_registry_4H4jJ3",
-        "divider",
-        "complementary_BXxYXx",
         "usp_Whm8xh",
+        "complementary_BXxYXx",
+        "pr_mentions_93c7XY",
         "description",
         "accordion_yktgxC",
         "accordion_KqCkWX",
+        "material_usp_nyjh4H",
         "swatch_highlight_86Qa4w"
       ],
       "settings": {
@@ -167,7 +170,7 @@
         "sticky_atc_behavior": "add_to_cart",
         "sticky_atc_button_style": "primary",
         "gallery_size": "medium",
-        "gallery_layout": "collage-1",
+        "gallery_layout": "columns-2",
         "enable_zoom": true,
         "show_alt_text": false,
         "alt_text_icon": "",

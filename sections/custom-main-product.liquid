@@ -277,17 +277,21 @@
             </div>
 
           {% when 'price' %}
-            {% if product.tags contains "MoreToLoveDiscount" %}
+            {% comment %} {% if product.tags contains "MoreToLoveDiscount" %}
               <div class="lightly-spaced-row not-in-quickbuy" style="margin-bottom: 0; pointer-events: auto;"><div class="product-info-block with-icon text-box" style="--box-color: #fbeae5; --box-text-color: 174, 39, 0; pointer-events: auto;">
                 <svg class="icon icon--small icon--type-price_tag" stroke-width="1" aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="currentColor" d="M7.59 1.34a1 1 0 01.7-.29h5.66a1 1 0 011 1v5.66a1 1 0 01-.3.7L7.6 15.5a1 1 0 01-1.42 0L.52 9.83a1 1 0 010-1.42l7.07-7.07zm6.36 6.37l-7.07 7.07-5.66-5.66L8.3 2.05h5.66v5.66z" fill-rule="evenodd"></path>
                   <path fill="currentColor" d="M9.7 6.3a1 1 0 101.42-1.42 1 1 0 00-1.41 1.41zM9 7a2 2 0 102.83-2.83A2 2 0 009 7z" fill-rule="evenodd"></path>
                 </svg> 
                 <div class="with-icon__beside rte cf"><p>Buy 3, get 10% off!</p></div></div>
               </div>
-            {% endif %}
+            {% endif %} {% endcomment %}
             <div class="price-container" {{ block.shopify_attributes }}>
               <div class="product-info__price product-price product-price--large">
                 {% render 'price', product: product, show_currency_code: settings.product_currency_code_enabled, for_variant_picker: true, current_variant: current_variant %}
+                {% comment %} {% if product.tags contains "MoreToLoveDiscount" %}
+                  <p>Buy 3, get 10% off!</p>
+                {% endif %} {% endcomment %}
+
               </div>
 
               <div class="price-descriptors">
@@ -348,7 +352,10 @@
             </div>
           
           
-
+          {% when 'pr-mentions' %}
+            <div class="lightly-spaced-row not-in-quickbuy" {{ block.shopify_attributes }}>
+              {% render 'product-pr-mentions' %}
+            </div>
           {% when 'description' %}
             {%- if product.description != blank -%}
               <div class="{% unless block.settings.show_in_quickbuy %}not-in-quickbuy{% endunless %}{% if block.settings.show_in_tab %} product-info-accordion{% endif %}" {{ block.shopify_attributes }}>
@@ -386,9 +393,7 @@
                       <p><strong>For Ages:</strong> {{ product.metafields.product.age_group.value }}</p>
                     {% endif %}
                   </div>
-                {% endif %}
-              {% render 'product-pr-mentions' %}
-                
+                {% endif %}                
               </div>
               {% if product.metafields.custom.bundle_products != blank %}
                 <div class="bundle-products">
@@ -1121,12 +1126,16 @@
                 label_right: block.settings.label_right
               %}
             </div>
-
+        {% when 'material-usp' %}
+          {% if product.metafields.custom.material != blank %}
+            <div class="lightly-spaced-row not-in-quickbuy" {{ block.shopify_attributes }}>
+              {% render 'custom-product-material-usp', material: section.settings.material_type %}
+            </div>
+          {% endif %}
         {% endcase %}
+        
       {% endfor %}
-      {% if product.metafields.custom.material != blank %}
-        {% render 'custom-product-material-usp', material: section.settings.material_type %}
-      {% endif %}
+     
 
       <div class="lightish-spaced-row-above only-in-quickbuy">
         <a class="more" href="{{ product.url }}">
@@ -1587,6 +1596,16 @@
       "name": "Bundle Contents",
       "limit": 1
     },
+    {
+    "type": "pr-mentions",
+    "name": "PR Mentions",
+    "limit": 1
+    },
+    {
+    "type": "material-usp",
+    "name": "Material USP",
+    "limit": 1
+    },        
     {
       "type": "@app"
     },

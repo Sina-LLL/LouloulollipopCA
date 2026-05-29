@@ -416,10 +416,11 @@ li.slider__item.is-active {
 }
 .mobile-only .product-media.product-media--image .img-ar--contain img{
   object-fit:cover;
-      max-height: 450px;
+  max-height: 100%;
 }
 carousel-slider.mobile-only{
-  max-height:450px;
+  max-height:500px;
+  overflow:hidden;
 }
 label.opt-label.opt-label--btn.btn.relative.text-center{
   min-height:40px;
@@ -565,7 +566,22 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
   font-size:1rem;
   color: #848484;
 }
-
+.MoreToLove{
+  font-size:1.15rem;
+  font-weight:500;
+  display:none;
+  color:var(--product-label-overlay-reduction-bg);
+}
+.price-container .MoreToLove{
+  display: inline;
+}
+.price.price--on-sale .MoreToLove{
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+  line-height: 1;
+}
 .product-free-shipping__container{
   font-size:14px;
   margin-top:12px;
@@ -753,7 +769,7 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
     font-size: 0.875rem;
   }
   h1.product-title{
-    font-size: 3rem;
+    font-size: 1.5rem;
     line-height: 3.5rem; /* 125% */
   }
   .product-media.product-media--image .img-ar.img-ar--contain{
@@ -804,14 +820,15 @@ hr{
               }
 h1.product-title {
   font-family: avenir-next-lt-pro,sofia-pro,sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 700;
   letter-spacing: -.03rem;
   margin-bottom: 0px;
   margin-top: 4px;
-  line-height: 2rem;
+  line-height: 1.25em;
 }
+
 
 .overflow_hidden{
   overflow: hidden;

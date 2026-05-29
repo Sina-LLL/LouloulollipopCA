@@ -77,20 +77,6 @@
             "button_placement": "before_selected"
           }
         },
-        "divider_XNTBYb": {
-          "type": "divider",
-          "settings": {
-            "show_in_quickbuy": false
-          }
-        },
-        "complementary_d3EJbm": {
-          "type": "complementary",
-          "settings": {
-            "heading": "Pairs Perfectly With",
-            "enable_carousel": true,
-            "max_products": 10
-          }
-        },
         "usp_Whm8xh": {
           "type": "USP",
           "repeater": "{{ product.metafields.custom.product_template.value.usp_icons.value }}",
@@ -101,6 +87,18 @@
             "icon_size": "large"
           }
         },
+        "complementary_d3EJbm": {
+          "type": "complementary",
+          "settings": {
+            "heading": "Pairs Perfectly With",
+            "enable_carousel": true,
+            "max_products": 10
+          }
+        },
+        "pr_mentions_qbKGbp": {
+          "type": "pr-mentions",
+          "settings": {}
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -109,6 +107,10 @@
             "icon": "",
             "show_in_quickbuy": false
           }
+        },
+        "material_usp_g7Lfaj": {
+          "type": "material-usp",
+          "settings": {}
         },
         "accordion_yktgxC": {
           "type": "accordion",
@@ -143,10 +145,11 @@
         "variant-picker",
         "buy-buttons",
         "advanced_myregistry_functions_add_to_registry_4H4jJ3",
-        "divider_XNTBYb",
-        "complementary_d3EJbm",
         "usp_Whm8xh",
+        "complementary_d3EJbm",
+        "pr_mentions_qbKGbp",
         "description",
+        "material_usp_g7Lfaj",
         "accordion_yktgxC",
         "accordion_KqCkWX"
       ],
@@ -162,7 +165,7 @@
         "sticky_atc_behavior": "add_to_cart",
         "sticky_atc_button_style": "primary",
         "gallery_size": "medium",
-        "gallery_layout": "collage-1",
+        "gallery_layout": "columns-2",
         "enable_zoom": true,
         "show_alt_text": false,
         "alt_text_icon": "",
