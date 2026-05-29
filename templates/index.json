@@ -38,22 +38,24 @@
         "image_ReGAny": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/OneC_hero_04f9ff95-3287-4574-af28-dbc0cf3f4c81.png",
+            "mobile_image": "shopify://shop_images/OneC_hero-mobile.png",
             "slide_link": "",
             "subheading": "",
-            "title": "Slide heading",
+            "title": "The Pacifier Clip, Reinvented",
             "heading_max_width": 15,
             "title_size": 72,
-            "title_size_mobile": 40,
+            "title_size_mobile": 30,
             "use_h1": false,
-            "text": "",
+            "text": "<p>Made from a single piece of soft silicone for added durability, flexibility, and everyday peace of mind.</p>",
             "enlarge_text": false,
-            "button_label_1": "",
-            "button_url_1": "",
+            "button_label_1": "Shop OneC™ Pacifier Clips",
+            "button_url_1": "shopify://collections/onec-silicone-pacifier-clips",
             "button_tag_1": "",
             "button_label_2": "",
             "button_url_2": "",
             "button_tag_2": "",
-            "text_alignment": "center center"
+            "text_alignment": "bottom left"
           }
         }
       },
@@ -66,7 +68,7 @@
         "padding_top": 20,
         "height": "fixed",
         "height_desktop": 600,
-        "height_mobile": 500,
+        "height_mobile": 600,
         "slide_max_width": 1400,
         "border_radius": 16,
         "peek_size": 32,
