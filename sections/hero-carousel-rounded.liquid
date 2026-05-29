@@ -13,6 +13,10 @@
     #section-id-{{ section.id }} .hcr-inner {
       position: relative;
       border-radius: {{ section.settings.border_radius }}px;
+    }
+
+    #section-id-{{ section.id }} .hcr-track-wrapper {
+      border-radius: {{ section.settings.border_radius }}px;
       overflow: hidden;
     }
 
@@ -22,21 +26,30 @@
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
       scrollbar-width: none;
+      padding-right: {{ section.settings.peek_size_mobile }}px;
+      gap: 12px;
+    }
+    @media (min-width: 768px) {
+      #section-id-{{ section.id }} .hcr-track {
+        padding-right: {{ section.settings.peek_size }}px;
+        gap: 16px;
+      }
     }
     #section-id-{{ section.id }} .hcr-track::-webkit-scrollbar {
       display: none;
     }
 
     #section-id-{{ section.id }} .hcr-slide {
-      flex: 0 0 calc(100% - {{ section.settings.peek_size_mobile }}px);
+      flex: 0 0 calc(100% - {{ section.settings.peek_size_mobile }}px - 12px);
       min-width: 0;
       scroll-snap-align: start;
       position: relative;
       overflow: hidden;
+      border-radius: {{ section.settings.border_radius }}px;
     }
     @media (min-width: 768px) {
       #section-id-{{ section.id }} .hcr-slide {
-        flex: 0 0 calc(100% - {{ section.settings.peek_size }}px);
+        flex: 0 0 calc(100% - {{ section.settings.peek_size }}px - 16px);
       }
     }
 
@@ -159,90 +172,92 @@
       transition: stroke 0.2s, fill 0.2s, opacity 0.2s;
       stroke-width: 1px;
       stroke: currentColor;
-      fill: currentColor;
+      fill: transparent;
+      opacity: 0.4;
     }
     #section-id-{{ section.id }} .hcr-dot.is-active .hcr-dot__bg {
-      stroke-width: 2px;
-      opacity: 0.4;
-      fill: transparent;
+      fill: currentColor;
+      opacity: 1;
     }
   {% endstyle %}
 
   <div class="container">
     <div class="hcr-inner">
 
-      <div class="hcr-track" id="hcr-track-{{ section.id }}">
-        {%- for block in section.blocks -%}
-          {%- liquid
-            assign show_text = false
-            if block.settings.title != blank or block.settings.subheading != blank or block.settings.text != blank or block.settings.button_label_1 != blank or block.settings.button_label_2 != blank
-              assign show_text = true
-            endif
-            assign v_pos = block.settings.text_alignment | split: ' ' | first
-            assign h_pos = block.settings.text_alignment | split: ' ' | last
-          -%}
-          <div class="hcr-slide hcr-slide-{{ forloop.index }} image-overlay image-overlay--bg-{{ section.settings.overlay_style }}" {{ block.shopify_attributes }}>
+      <div class="hcr-track-wrapper">
+        <div class="hcr-track" id="hcr-track-{{ section.id }}">
+          {%- for block in section.blocks -%}
+            {%- liquid
+              assign show_text = false
+              if block.settings.title != blank or block.settings.subheading != blank or block.settings.text != blank or block.settings.button_label_1 != blank or block.settings.button_label_2 != blank
+                assign show_text = true
+              endif
+              assign v_pos = block.settings.text_alignment | split: ' ' | first
+              assign h_pos = block.settings.text_alignment | split: ' ' | last
+            -%}
+            <div class="hcr-slide hcr-slide-{{ forloop.index }} image-overlay image-overlay--bg-{{ section.settings.overlay_style }}" {{ block.shopify_attributes }}>
 
-            {%- if block.settings.image != blank -%}
-              {%- liquid
-                assign loading = 'lazy'
-                assign fetchpriority = nil
-                if forloop.first
-                  assign loading = 'eager'
-                  assign fetchpriority = 'high'
-                endif
-              -%}
-              {%- render 'image-desktop-and-mobile',
-                class: 'hcr-slide__image',
-                desktop_image: block.settings.image,
-                mobile_image: block.settings.mobile_image,
-                loading: loading,
-                fetchpriority: fetchpriority,
-                block: block
-              -%}
-            {%- else -%}
-              <div class="hcr-slide__image placeholder-image dark">
-                {%- capture current %}{% cycle 1, 2 %}{% endcapture -%}
-                {{- 'lifestyle-' | append: current | placeholder_svg_tag: 'placeholder-svg' -}}
-              </div>
-            {%- endif -%}
+              {%- if block.settings.image != blank -%}
+                {%- liquid
+                  assign loading = 'lazy'
+                  assign fetchpriority = nil
+                  if forloop.first
+                    assign loading = 'eager'
+                    assign fetchpriority = 'high'
+                  endif
+                -%}
+                {%- render 'image-desktop-and-mobile',
+                  class: 'hcr-slide__image',
+                  desktop_image: block.settings.image,
+                  mobile_image: block.settings.mobile_image,
+                  loading: loading,
+                  fetchpriority: fetchpriority,
+                  block: block
+                -%}
+              {%- else -%}
+                <div class="hcr-slide__image placeholder-image dark">
+                  {%- capture current %}{% cycle 1, 2 %}{% endcapture -%}
+                  {{- 'lifestyle-' | append: current | placeholder_svg_tag: 'placeholder-svg' -}}
+                </div>
+              {%- endif -%}
 
-            {%- if show_text -%}
-              <div class="text-overlay text-overlay--for-banner text-overlay--v-{{ v_pos }} text-overlay--h-{{ h_pos }} image-overlay__over">
-                <div class="text-overlay__inner" style="--heading-max-width: {{ block.settings.heading_max_width }}em">
-                  <div class="text-overlay__text">
-                    {%- if block.settings.subheading != blank -%}
-                      <div class="text-overlay__subheading subheading subheading--over">{{ block.settings.subheading | escape }}</div>
-                    {%- endif -%}
-                    {%- if block.settings.title != blank -%}
-                      {%- if block.settings.use_h1 -%}
-                        <h1 class="text-overlay__title">{% render 'multiline-text' with block.settings.title %}</h1>
-                      {%- else -%}
-                        <h2 class="text-overlay__title h1">{% render 'multiline-text' with block.settings.title %}</h2>
+              {%- if show_text -%}
+                <div class="text-overlay text-overlay--for-banner text-overlay--v-{{ v_pos }} text-overlay--h-{{ h_pos }} image-overlay__over">
+                  <div class="text-overlay__inner" style="--heading-max-width: {{ block.settings.heading_max_width }}em">
+                    <div class="text-overlay__text">
+                      {%- if block.settings.subheading != blank -%}
+                        <div class="text-overlay__subheading subheading subheading--over">{{ block.settings.subheading | escape }}</div>
                       {%- endif -%}
-                    {%- endif -%}
-                    {%- if block.settings.text != blank -%}
-                      <div class="text-overlay__rte rte {% if block.settings.enlarge_text %}large-text{% endif %}">{{ block.settings.text }}</div>
-                    {%- endif -%}
-                    {%- if block.settings.button_label_1 != blank or block.settings.button_label_2 != blank -%}
-                      <div class="text-overlay__button-row">
-                        {%- if block.settings.button_label_1 != blank -%}
-                          <a class="text-overlay__button btn btn--primary" href="{{ block.settings.button_url_1 }}{% if block.settings.button_tag_1 != blank %}/{{ block.settings.button_tag_1 | handle }}{% endif %}">{{ block.settings.button_label_1 | escape }}</a>
+                      {%- if block.settings.title != blank -%}
+                        {%- if block.settings.use_h1 -%}
+                          <h1 class="text-overlay__title">{% render 'multiline-text' with block.settings.title %}</h1>
+                        {%- else -%}
+                          <h2 class="text-overlay__title h1">{% render 'multiline-text' with block.settings.title %}</h2>
                         {%- endif -%}
-                        {%- if block.settings.button_label_2 != blank -%}
-                          <a class="text-overlay__button btn btn--secondary" href="{{ block.settings.button_url_2 }}{% if block.settings.button_tag_2 != blank %}/{{ block.settings.button_tag_2 | handle }}{% endif %}">{{ block.settings.button_label_2 | escape }}</a>
-                        {%- endif -%}
-                      </div>
-                    {%- endif -%}
+                      {%- endif -%}
+                      {%- if block.settings.text != blank -%}
+                        <div class="text-overlay__rte rte {% if block.settings.enlarge_text %}large-text{% endif %}">{{ block.settings.text }}</div>
+                      {%- endif -%}
+                      {%- if block.settings.button_label_1 != blank or block.settings.button_label_2 != blank -%}
+                        <div class="text-overlay__button-row">
+                          {%- if block.settings.button_label_1 != blank -%}
+                            <a class="text-overlay__button btn btn--primary" href="{{ block.settings.button_url_1 }}{% if block.settings.button_tag_1 != blank %}/{{ block.settings.button_tag_1 | handle }}{% endif %}">{{ block.settings.button_label_1 | escape }}</a>
+                          {%- endif -%}
+                          {%- if block.settings.button_label_2 != blank -%}
+                            <a class="text-overlay__button btn btn--secondary" href="{{ block.settings.button_url_2 }}{% if block.settings.button_tag_2 != blank %}/{{ block.settings.button_tag_2 | handle }}{% endif %}">{{ block.settings.button_label_2 | escape }}</a>
+                          {%- endif -%}
+                        </div>
+                      {%- endif -%}
+                    </div>
                   </div>
                 </div>
-              </div>
-            {%- elsif block.settings.slide_link != blank -%}
-              <a class="image-overlay__image-link" href="{{ block.settings.slide_link }}" aria-label="{{ block.settings.title | default: 'Slide' | escape }}"></a>
-            {%- endif -%}
+              {%- elsif block.settings.slide_link != blank -%}
+                <a class="image-overlay__image-link" href="{{ block.settings.slide_link }}" aria-label="{{ block.settings.title | default: 'Slide' | escape }}"></a>
+              {%- endif -%}
 
-          </div>
-        {%- endfor -%}
+            </div>
+          {%- endfor -%}
+        </div>
       </div>
 
       {%- if section.blocks.size > 1 -%}
@@ -275,17 +290,20 @@
   {%- if section.blocks.size > 1 -%}
   <script>
     (function() {
-      var track  = document.getElementById('hcr-track-{{ section.id }}');
-      var prev   = document.getElementById('hcr-prev-{{ section.id }}');
-      var next   = document.getElementById('hcr-next-{{ section.id }}');
+      var track       = document.getElementById('hcr-track-{{ section.id }}');
+      var prev        = document.getElementById('hcr-prev-{{ section.id }}');
+      var next        = document.getElementById('hcr-next-{{ section.id }}');
       var dotContainer = document.getElementById('hcr-dots-{{ section.id }}');
       if (!track) return;
-      var dots = dotContainer ? dotContainer.querySelectorAll('.hcr-dot') : [];
+      var dots  = dotContainer ? dotContainer.querySelectorAll('.hcr-dot') : [];
       var total = {{ section.blocks.size }};
       var current = 0;
 
       function slideWidth() {
-        return track.children[0] ? track.children[0].offsetWidth : 0;
+        var slide = track.children[0];
+        if (!slide) return 0;
+        var gap = parseFloat(getComputedStyle(track).gap) || 0;
+        return slide.offsetWidth + gap;
       }
 
       function goTo(index) {
