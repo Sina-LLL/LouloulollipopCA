@@ -70,7 +70,28 @@
   </div>
 {% endif %}
 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const carousel = document.querySelector('.custom-features-carousel');
+    if (!carousel) return;
 
+    const dots = carousel.querySelectorAll('.custom-features-carousel__dot');
+
+    carousel.addEventListener('slidechange', function (e) {
+      const activeIndex = e.detail?.index ?? 0;
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('is-active', i === activeIndex);
+      });
+    });
+
+    // Also make dots clickable
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', function () {
+        carousel.goToSlide?.(i);
+      });
+    });
+  });
+</script>
 {% schema %}
 {
   "name": "Custom Product Features",
