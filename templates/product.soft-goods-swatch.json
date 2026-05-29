@@ -101,6 +101,10 @@
             "icon_size": "large"
           }
         },
+        "pr_mentions_93c7XY": {
+          "type": "pr-mentions",
+          "settings": {}
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -136,6 +140,10 @@
             "show_in_quickbuy": false
           }
         },
+        "material_usp_nyjh4H": {
+          "type": "material-usp",
+          "settings": {}
+        },
         "swatch_highlight_86Qa4w": {
           "type": "swatch_highlight",
           "settings": {}
@@ -150,9 +158,11 @@
         "divider",
         "complementary_BXxYXx",
         "usp_Whm8xh",
+        "pr_mentions_93c7XY",
         "description",
         "accordion_yktgxC",
         "accordion_KqCkWX",
+        "material_usp_nyjh4H",
         "swatch_highlight_86Qa4w"
       ],
       "settings": {
