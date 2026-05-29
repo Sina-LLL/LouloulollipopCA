@@ -77,20 +77,6 @@
             "button_placement": "before_selected"
           }
         },
-        "divider": {
-          "type": "divider",
-          "settings": {
-            "show_in_quickbuy": false
-          }
-        },
-        "complementary_BXxYXx": {
-          "type": "complementary",
-          "settings": {
-            "heading": "Pairs Perfectly With",
-            "enable_carousel": true,
-            "max_products": 10
-          }
-        },
         "usp_Whm8xh": {
           "type": "USP",
           "repeater": "{{ product.metafields.custom.product_template.value.usp_icons.value }}",
@@ -99,6 +85,14 @@
             "icon": "",
             "custom_icon": "{{ block.repeater.icon.value }}",
             "icon_size": "large"
+          }
+        },
+        "complementary_BXxYXx": {
+          "type": "complementary",
+          "settings": {
+            "heading": "Pairs Perfectly With",
+            "enable_carousel": true,
+            "max_products": 10
           }
         },
         "pr_mentions_93c7XY": {
@@ -155,9 +149,8 @@
         "variant-picker",
         "buy-buttons",
         "advanced_myregistry_functions_add_to_registry_4H4jJ3",
-        "divider",
-        "complementary_BXxYXx",
         "usp_Whm8xh",
+        "complementary_BXxYXx",
         "pr_mentions_93c7XY",
         "description",
         "accordion_yktgxC",
