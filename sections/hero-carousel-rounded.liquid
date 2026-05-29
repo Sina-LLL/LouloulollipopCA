@@ -47,6 +47,8 @@
       transition: opacity 0.3s ease, transform 0.3s ease;
       opacity: 0.65;
       transform: scale(0.98);
+      overflow: hidden;
+
     }
 
     {% if section.blocks.size == 1 %}
@@ -88,7 +90,9 @@
       }
     {%- endif -%}
 
-    #hcr-{{ sid }} .hcr__slide-img {
+#hcr-{{ sid }} .hcr__slide-img,
+    #hcr-{{ sid }} .hcr__slide-img img,
+    #hcr-{{ sid }} .hcr__slide-img picture {
       position: absolute;
       inset: 0;
       width: 100%;
@@ -96,6 +100,7 @@
       object-fit: cover;
       display: block;
     }
+    
 
     /* Per-slide font sizes */
     {%- for block in section.blocks -%}
