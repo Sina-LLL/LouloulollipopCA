@@ -23,7 +23,7 @@
             "heading_max_width": 17,
             "title_size": 72,
             "title_size_mobile": 24,
-            "use_h1": false,
+            "use_h1": true,
             "text": "<p>Our newest soccer-inspired print, has officially entered the lineup.</p>",
             "enlarge_text": false,
             "button_label_1": "Shop the Beautiful Game",
@@ -105,6 +105,7 @@
       "block_order": [
         "image_TKJkRj"
       ],
+      "disabled": true,
       "name": "Slideshow",
       "settings": {
         "height": "fixed",
