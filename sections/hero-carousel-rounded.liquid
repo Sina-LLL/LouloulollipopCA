@@ -303,7 +303,17 @@
   </div>
 
   {%- if section.blocks.size > 1 -%}
+    
   <script>
+    function update(index) {
+        current = index;
+        dots.forEach(function(d, i) { d.classList.toggle('is-active', i === index); });
+        Array.prototype.forEach.call(track.children, function(slide, i) {
+          slide.classList.toggle('is-active', i === index);
+        });
+        if (prev) prev.disabled = index === 0;
+        if (next) next.disabled = index === total - 1;
+      }
     (function() {
       var track       = document.getElementById('hcr-track-{{ section.id }}');
       var prev        = document.getElementById('hcr-prev-{{ section.id }}');
