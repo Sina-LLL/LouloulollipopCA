@@ -1,157 +1,151 @@
-<div id="section-id-{{ section.id }}" class="hcr-section" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.2s"' -%}>
+{%- assign sid = section.id -%}
+<div id="hcr-{{ sid }}" class="hcr" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.2s"' -%}>
+
   {% style %}
-    /* Full-bleed track — no clipping wrapper needed */
-    #section-id-{{ section.id }} .hcr-inner {
-      position: relative;
+    #hcr-{{ sid }} {
+      margin-top: {{ section.settings.padding_top }}px;
+      margin-bottom: var(--larger-section-padding);
+      overflow: hidden;
+    }
+    @media (max-width: 767px) {
+      #hcr-{{ sid }} {
+        margin-bottom: var(--larger-section-padding-mobile);
+      }
     }
 
-    #section-id-{{ section.id }} .hcr-track {
+    #hcr-{{ sid }} .hcr__track {
       display: flex;
       overflow-x: auto;
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
       scrollbar-width: none;
-      gap: 12px;
-      {% if section.blocks.size > 1 %}
-        padding: 0 {{ section.settings.peek_size_mobile }}px;
-      {% else %}
-        justify-content: center;
-      {% endif %}
-      /* Break out of container */
-      width: 100vw;
-      position: relative;
-      left: 50%;
-      transform: translateX(-50%);
+      gap: 10px;
+      padding: 0 {{ section.settings.peek_size_mobile }}px;
+      box-sizing: border-box;
     }
+    #hcr-{{ sid }} .hcr__track::-webkit-scrollbar { display: none; }
+
     @media (min-width: 768px) {
-      #section-id-{{ section.id }} .hcr-track {
+      #hcr-{{ sid }} .hcr__track {
         gap: 16px;
-        {% if section.blocks.size > 1 %}
-          padding: 0 {{ section.settings.peek_size }}px;
-        {% endif %}
+        padding: 0 {{ section.settings.peek_size }}px;
       }
-    }
-    #section-id-{{ section.id }} .hcr-track::-webkit-scrollbar {
-      display: none;
     }
 
-    #section-id-{{ section.id }} .hcr-slide {
-      {% if section.blocks.size > 1 %}
-        flex: 0 0 calc(100vw - {{ section.settings.peek_size_mobile }}px * 2 - 12px);
-      {% else %}
-        flex: 0 0 100vw;
-      {% endif %}
-      min-width: 0;
+    {% if section.blocks.size == 1 %}
+      #hcr-{{ sid }} .hcr__track {
+        padding: 0;
+      }
+    {% endif %}
+
+    #hcr-{{ sid }} .hcr__slide {
+      flex: 0 0 calc(100% - {{ section.settings.peek_size_mobile }}px * 2 - 10px);
       scroll-snap-align: center;
       position: relative;
-      overflow: visible;
+      border-radius: {{ section.settings.border_radius }}px;
+      overflow: hidden;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      opacity: 0.65;
+      transform: scale(0.98);
     }
-    @media (min-width: 768px) {
-      #section-id-{{ section.id }} .hcr-slide {
-        {% if section.blocks.size > 1 %}
-          flex: 0 0 calc(100vw - {{ section.settings.peek_size }}px * 2 - 16px);
-        {% endif %}
+
+    {% if section.blocks.size == 1 %}
+      #hcr-{{ sid }} .hcr__slide {
+        flex: 0 0 100%;
+        opacity: 1;
+        transform: scale(1);
       }
+    {% endif %}
+
+    @media (min-width: 768px) {
+      #hcr-{{ sid }} .hcr__slide {
+        flex: 0 0 calc(100% - {{ section.settings.peek_size }}px * 2 - 16px);
+      }
+    }
+
+    #hcr-{{ sid }} .hcr__slide.is-active {
+      opacity: 1;
+      transform: scale(1);
     }
 
     {%- if section.settings.height == 'fixed' -%}
-    #section-id-{{ section.id }} .hcr-slide {
-      height: {{ section.settings.height_mobile }}px;
-    }
-    @media (min-width: 768px) {
-      #section-id-{{ section.id }} .hcr-slide {
-        height: {{ section.settings.height_desktop }}px;
+      #hcr-{{ sid }} .hcr__slide {
+        height: {{ section.settings.height_mobile }}px;
       }
-    }
+      @media (min-width: 768px) {
+        #hcr-{{ sid }} .hcr__slide {
+          height: {{ section.settings.height_desktop }}px;
+        }
+      }
     {%- else -%}
-    #section-id-{{ section.id }} .hcr-slide {
-      aspect-ratio: 1 / 1;
-    }
-    @media (min-width: 768px) {
-      #section-id-{{ section.id }} .hcr-slide {
-        aspect-ratio: 16 / 7;
+      #hcr-{{ sid }} .hcr__slide {
+        aspect-ratio: 1 / 1;
       }
-    }
+      @media (min-width: 768px) {
+        #hcr-{{ sid }} .hcr__slide {
+          aspect-ratio: 16 / 7;
+        }
+      }
     {%- endif -%}
 
-    /* Border radius lives on the image and overlay, not the container */
-    #section-id-{{ section.id }} .hcr-slide__image,
-    #section-id-{{ section.id }} .hcr-slide .image-overlay__over,
-    #section-id-{{ section.id }} .hcr-slide .placeholder-image {
-      border-radius: {{ section.settings.border_radius }}px;
-      overflow: hidden;
-    }
-
-    #section-id-{{ section.id }} .hcr-slide__image {
+    #hcr-{{ sid }} .hcr__slide-img {
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
+      display: block;
     }
 
-    /* Dim non-active slides slightly to draw focus */
-    #section-id-{{ section.id }} .hcr-slide__image,
-    #section-id-{{ section.id }} .hcr-slide .placeholder-image {
-      transition: opacity 0.3s ease, transform 0.3s ease;
-      opacity: 0.6;
-      transform: scale(0.97);
-    }
-    #section-id-{{ section.id }} .hcr-slide.is-active .hcr-slide__image,
-    #section-id-{{ section.id }} .hcr-slide.is-active .placeholder-image {
-      opacity: 1;
-      transform: scale(1);
-    }
-
+    /* Per-slide font sizes */
     {%- for block in section.blocks -%}
-    #section-id-{{ section.id }} .hcr-slide-{{ forloop.index }} .text-overlay__title {
-      font-size: {{ block.settings.title_size_mobile }}px;
-      {%- if block.settings.title_size_mobile >= 90 %}line-height: 1em;{%- endif %}
-    }
+      #hcr-{{ sid }} .hcr__slide-{{ forloop.index }} .text-overlay__title {
+        font-size: {{ block.settings.title_size_mobile }}px;
+        {%- if block.settings.title_size_mobile >= 90 %}line-height: 1em;{%- endif %}
+      }
     {%- endfor -%}
     @media (min-width: 768px) {
       {%- for block in section.blocks -%}
-      {%- assign title_mid = block.settings.title_size | times: 0.7 | at_least: block.settings.title_size_mobile -%}
-      #section-id-{{ section.id }} .hcr-slide-{{ forloop.index }} .text-overlay__title {
-        font-size: {{ title_mid }}px;
-        {%- if title_mid >= 90 %}line-height: 1em;{%- endif %}
-      }
+        {%- assign title_mid = block.settings.title_size | times: 0.7 | at_least: block.settings.title_size_mobile -%}
+        #hcr-{{ sid }} .hcr__slide-{{ forloop.index }} .text-overlay__title {
+          font-size: {{ title_mid }}px;
+          {%- if title_mid >= 90 %}line-height: 1em;{%- endif %}
+        }
       {%- endfor -%}
     }
     @media (min-width: 1100px) {
       {%- for block in section.blocks -%}
-      #section-id-{{ section.id }} .hcr-slide-{{ forloop.index }} .text-overlay__title {
-        font-size: {{ block.settings.title_size }}px;
-        {%- if block.settings.title_size >= 90 %}line-height: 1em;{%- endif %}
-      }
+        #hcr-{{ sid }} .hcr__slide-{{ forloop.index }} .text-overlay__title {
+          font-size: {{ block.settings.title_size }}px;
+          {%- if block.settings.title_size >= 90 %}line-height: 1em;{%- endif %}
+        }
       {%- endfor -%}
     }
 
     /* Arrows */
-    #section-id-{{ section.id }} .hcr-arrows {
-      pointer-events: none;
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      z-index: 2;
-    }
-    #section-id-{{ section.id }} .hcr-arrow {
-      pointer-events: auto;
+    #hcr-{{ sid }} .hcr__nav {
       display: none;
+    }
+    @media (min-width: 768px) {
+      #hcr-{{ sid }} .hcr__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        z-index: 2;
+      }
+    }
+    #hcr-{{ sid }} .hcr__arrow {
+      pointer-events: auto;
       background: transparent;
       border: none;
       cursor: pointer;
       color: rgb(var(--image-overlay-text-color));
       padding: 7px;
     }
-    @media (min-width: 768px) {
-      #section-id-{{ section.id }} .hcr-arrow {
-        display: block;
-      }
-    }
-    #section-id-{{ section.id }} .hcr-arrow svg {
+    #hcr-{{ sid }} .hcr__arrow svg {
       display: block;
       width: 60px;
       height: 60px;
@@ -161,23 +155,18 @@
       opacity: 0.8;
       filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5));
     }
-    #section-id-{{ section.id }} .hcr-arrow:hover svg {
-      opacity: 1;
-    }
-    #section-id-{{ section.id }} .hcr-arrow[disabled] {
-      opacity: 0;
-      pointer-events: none;
-    }
+    #hcr-{{ sid }} .hcr__arrow:hover svg { opacity: 1; }
+    #hcr-{{ sid }} .hcr__arrow:disabled { opacity: 0; pointer-events: none; }
 
     /* Dots */
-    #section-id-{{ section.id }} .hcr-dots {
+    #hcr-{{ sid }} .hcr__dots {
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 4px;
       padding: 10px 0 0;
     }
-    #section-id-{{ section.id }} .hcr-dot {
+    #hcr-{{ sid }} .hcr__dot {
       display: block;
       padding: 4px;
       background: transparent;
@@ -185,152 +174,141 @@
       cursor: pointer;
       color: rgb(var(--body-text-color));
     }
-    #section-id-{{ section.id }} .hcr-dot svg {
-      display: block;
-      width: 20px;
-      height: 20px;
-    }
-    #section-id-{{ section.id }} .hcr-dot .hcr-dot__bg {
-      transition: stroke 0.2s, fill 0.2s, opacity 0.2s;
+    #hcr-{{ sid }} .hcr__dot svg { display: block; width: 20px; height: 20px; }
+    #hcr-{{ sid }} .hcr__dot .hcr__dot-bg {
+      transition: fill 0.2s, opacity 0.2s;
       stroke-width: 1px;
       stroke: currentColor;
       fill: transparent;
       opacity: 0.4;
     }
-    #section-id-{{ section.id }} .hcr-dot.is-active .hcr-dot__bg {
+    #hcr-{{ sid }} .hcr__dot.is-active .hcr__dot-bg {
       fill: currentColor;
       opacity: 1;
     }
   {% endstyle %}
 
-  <div class="container--full-bleed">
-    <div class="hcr-inner">
-      <div class="hcr-track" id="hcr-track-{{ section.id }}">
-          {%- for block in section.blocks -%}
+  <div class="hcr__inner" style="position: relative;">
+
+    <div class="hcr__track" id="hcr-track-{{ sid }}">
+      {%- for block in section.blocks -%}
+        {%- liquid
+          assign show_text = false
+          if block.settings.title != blank or block.settings.subheading != blank or block.settings.text != blank or block.settings.button_label_1 != blank or block.settings.button_label_2 != blank
+            assign show_text = true
+          endif
+          assign v_pos = block.settings.text_alignment | split: ' ' | first
+          assign h_pos = block.settings.text_alignment | split: ' ' | last
+        -%}
+        <div class="hcr__slide hcr__slide-{{ forloop.index }}{% if forloop.first %} is-active{% endif %} image-overlay image-overlay--bg-{{ section.settings.overlay_style }}"
+          {{ block.shopify_attributes }}>
+
+          {%- if block.settings.image != blank -%}
             {%- liquid
-              assign show_text = false
-              if block.settings.title != blank or block.settings.subheading != blank or block.settings.text != blank or block.settings.button_label_1 != blank or block.settings.button_label_2 != blank
-                assign show_text = true
+              assign loading = 'lazy'
+              assign fetchpriority = nil
+              if forloop.first
+                assign loading = 'eager'
+                assign fetchpriority = 'high'
               endif
-              assign v_pos = block.settings.text_alignment | split: ' ' | first
-              assign h_pos = block.settings.text_alignment | split: ' ' | last
             -%}
-            <div class="hcr-slide hcr-slide-{{ forloop.index }} image-overlay image-overlay--bg-{{ section.settings.overlay_style }}" {{ block.shopify_attributes }}>
+            {%- render 'image-desktop-and-mobile',
+              class: 'hcr__slide-img',
+              desktop_image: block.settings.image,
+              mobile_image: block.settings.mobile_image,
+              loading: loading,
+              fetchpriority: fetchpriority,
+              block: block
+            -%}
+          {%- else -%}
+            <div class="hcr__slide-img placeholder-image dark">
+              {%- capture current %}{% cycle 1, 2 %}{% endcapture -%}
+              {{- 'lifestyle-' | append: current | placeholder_svg_tag: 'placeholder-svg' -}}
+            </div>
+          {%- endif -%}
 
-              {%- if block.settings.image != blank -%}
-                {%- liquid
-                  assign loading = 'lazy'
-                  assign fetchpriority = nil
-                  if forloop.first
-                    assign loading = 'eager'
-                    assign fetchpriority = 'high'
-                  endif
-                -%}
-                {%- render 'image-desktop-and-mobile',
-                  class: 'hcr-slide__image',
-                  desktop_image: block.settings.image,
-                  mobile_image: block.settings.mobile_image,
-                  loading: loading,
-                  fetchpriority: fetchpriority,
-                  block: block
-                -%}
-              {%- else -%}
-                <div class="hcr-slide__image placeholder-image dark">
-                  {%- capture current %}{% cycle 1, 2 %}{% endcapture -%}
-                  {{- 'lifestyle-' | append: current | placeholder_svg_tag: 'placeholder-svg' -}}
-                </div>
-              {%- endif -%}
-
-              {%- if show_text -%}
-                <div class="text-overlay text-overlay--for-banner text-overlay--v-{{ v_pos }} text-overlay--h-{{ h_pos }} image-overlay__over">
-                  <div class="text-overlay__inner" style="--heading-max-width: {{ block.settings.heading_max_width }}em">
-                    <div class="text-overlay__text">
-                      {%- if block.settings.subheading != blank -%}
-                        <div class="text-overlay__subheading subheading subheading--over">{{ block.settings.subheading | escape }}</div>
+          {%- if show_text -%}
+            <div class="text-overlay text-overlay--for-banner text-overlay--v-{{ v_pos }} text-overlay--h-{{ h_pos }} image-overlay__over">
+              <div class="text-overlay__inner" style="--heading-max-width: {{ block.settings.heading_max_width }}em">
+                <div class="text-overlay__text">
+                  {%- if block.settings.subheading != blank -%}
+                    <div class="text-overlay__subheading subheading subheading--over">{{ block.settings.subheading | escape }}</div>
+                  {%- endif -%}
+                  {%- if block.settings.title != blank -%}
+                    {%- if block.settings.use_h1 -%}
+                      <h1 class="text-overlay__title">{% render 'multiline-text' with block.settings.title %}</h1>
+                    {%- else -%}
+                      <h2 class="text-overlay__title h1">{% render 'multiline-text' with block.settings.title %}</h2>
+                    {%- endif -%}
+                  {%- endif -%}
+                  {%- if block.settings.text != blank -%}
+                    <div class="text-overlay__rte rte{% if block.settings.enlarge_text %} large-text{% endif %}">{{ block.settings.text }}</div>
+                  {%- endif -%}
+                  {%- if block.settings.button_label_1 != blank or block.settings.button_label_2 != blank -%}
+                    <div class="text-overlay__button-row">
+                      {%- if block.settings.button_label_1 != blank -%}
+                        <a class="text-overlay__button btn btn--primary" href="{{ block.settings.button_url_1 }}{% if block.settings.button_tag_1 != blank %}/{{ block.settings.button_tag_1 | handle }}{% endif %}">{{ block.settings.button_label_1 | escape }}</a>
                       {%- endif -%}
-                      {%- if block.settings.title != blank -%}
-                        {%- if block.settings.use_h1 -%}
-                          <h1 class="text-overlay__title">{% render 'multiline-text' with block.settings.title %}</h1>
-                        {%- else -%}
-                          <h2 class="text-overlay__title h1">{% render 'multiline-text' with block.settings.title %}</h2>
-                        {%- endif -%}
-                      {%- endif -%}
-                      {%- if block.settings.text != blank -%}
-                        <div class="text-overlay__rte rte {% if block.settings.enlarge_text %}large-text{% endif %}">{{ block.settings.text }}</div>
-                      {%- endif -%}
-                      {%- if block.settings.button_label_1 != blank or block.settings.button_label_2 != blank -%}
-                        <div class="text-overlay__button-row">
-                          {%- if block.settings.button_label_1 != blank -%}
-                            <a class="text-overlay__button btn btn--primary" href="{{ block.settings.button_url_1 }}{% if block.settings.button_tag_1 != blank %}/{{ block.settings.button_tag_1 | handle }}{% endif %}">{{ block.settings.button_label_1 | escape }}</a>
-                          {%- endif -%}
-                          {%- if block.settings.button_label_2 != blank -%}
-                            <a class="text-overlay__button btn btn--secondary" href="{{ block.settings.button_url_2 }}{% if block.settings.button_tag_2 != blank %}/{{ block.settings.button_tag_2 | handle }}{% endif %}">{{ block.settings.button_label_2 | escape }}</a>
-                          {%- endif -%}
-                        </div>
+                      {%- if block.settings.button_label_2 != blank -%}
+                        <a class="text-overlay__button btn btn--secondary" href="{{ block.settings.button_url_2 }}{% if block.settings.button_tag_2 != blank %}/{{ block.settings.button_tag_2 | handle }}{% endif %}">{{ block.settings.button_label_2 | escape }}</a>
                       {%- endif -%}
                     </div>
-                  </div>
+                  {%- endif -%}
                 </div>
-              {%- elsif block.settings.slide_link != blank -%}
-                <a class="image-overlay__image-link" href="{{ block.settings.slide_link }}" aria-label="{{ block.settings.title | default: 'Slide' | escape }}"></a>
-              {%- endif -%}
-
+              </div>
             </div>
-          {%- endfor -%}
-        </div>
-      </div>
+          {%- elsif block.settings.slide_link != blank -%}
+            <a class="image-overlay__image-link" href="{{ block.settings.slide_link }}" aria-label="{{ block.settings.title | default: 'Slide' | escape }}"></a>
+          {%- endif -%}
 
-      {%- if section.blocks.size > 1 -%}
-        <div class="hcr-arrows js-only">
-          <button class="hcr-arrow hcr-arrow--prev has-ltr-icon" id="hcr-prev-{{ section.id }}" aria-label="{{ 'general.slider.previous' | t }}" disabled>
-            {% render 'icon-chevron-left' %}
-          </button>
-          <button class="hcr-arrow hcr-arrow--next has-ltr-icon" id="hcr-next-{{ section.id }}" aria-label="{{ 'general.slider.next' | t }}">
-            {% render 'icon-chevron-right' %}
-          </button>
         </div>
-      {%- endif -%}
-
+      {%- endfor -%}
     </div>
 
     {%- if section.blocks.size > 1 -%}
-      <div class="hcr-dots js-only" id="hcr-dots-{{ section.id }}" role="tablist">
-        {%- for block in section.blocks -%}
-          <button class="hcr-dot{% if forloop.first %} is-active{% endif %}" role="tab" data-index="{{ forloop.index0 }}" aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }}">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-              <circle class="hcr-dot__bg" cx="12" cy="12" r="6" />
-            </svg>
-          </button>
-        {%- endfor -%}
+      <div class="hcr__nav js-only">
+        <button class="hcr__arrow hcr__arrow--prev has-ltr-icon" id="hcr-prev-{{ sid }}" aria-label="{{ 'general.slider.previous' | t }}" disabled>
+          {% render 'icon-chevron-left' %}
+        </button>
+        <button class="hcr__arrow hcr__arrow--next has-ltr-icon" id="hcr-next-{{ sid }}" aria-label="{{ 'general.slider.next' | t }}">
+          {% render 'icon-chevron-right' %}
+        </button>
       </div>
     {%- endif -%}
 
   </div>
 
   {%- if section.blocks.size > 1 -%}
-    
+    <div class="hcr__dots js-only" id="hcr-dots-{{ sid }}" role="tablist">
+      {%- for block in section.blocks -%}
+        <button class="hcr__dot{% if forloop.first %} is-active{% endif %}"
+          role="tab"
+          data-index="{{ forloop.index0 }}"
+          aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }}">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <circle class="hcr__dot-bg" cx="12" cy="12" r="6" />
+          </svg>
+        </button>
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+
+  {%- if section.blocks.size > 1 -%}
   <script>
-    function update(index) {
-        current = index;
-        dots.forEach(function(d, i) { d.classList.toggle('is-active', i === index); });
-        Array.prototype.forEach.call(track.children, function(slide, i) {
-          slide.classList.toggle('is-active', i === index);
-        });
-        if (prev) prev.disabled = index === 0;
-        if (next) next.disabled = index === total - 1;
-      }
     (function() {
-      var track       = document.getElementById('hcr-track-{{ section.id }}');
-      var prev        = document.getElementById('hcr-prev-{{ section.id }}');
-      var next        = document.getElementById('hcr-next-{{ section.id }}');
-      var dotContainer = document.getElementById('hcr-dots-{{ section.id }}');
+      var track        = document.getElementById('hcr-track-{{ sid }}');
+      var prev         = document.getElementById('hcr-prev-{{ sid }}');
+      var next         = document.getElementById('hcr-next-{{ sid }}');
+      var dotContainer = document.getElementById('hcr-dots-{{ sid }}');
       if (!track) return;
-      var dots  = dotContainer ? dotContainer.querySelectorAll('.hcr-dot') : [];
-      var total = {{ section.blocks.size }};
+
+      var slides  = Array.prototype.slice.call(track.children);
+      var dots    = dotContainer ? Array.prototype.slice.call(dotContainer.querySelectorAll('.hcr__dot')) : [];
+      var total   = slides.length;
       var current = 0;
 
       function slideWidth() {
-        var slide = track.children[0];
+        var slide = slides[0];
         if (!slide) return 0;
         var gap = parseFloat(getComputedStyle(track).gap) || 0;
         return slide.offsetWidth + gap;
@@ -338,11 +316,15 @@
 
       function goTo(index) {
         index = Math.max(0, Math.min(total - 1, index));
-        track.scrollTo({ left: slideWidth() * index, behavior: 'smooth' });
+        var sw = slideWidth();
+        // Account for leading padding
+        var padding = parseFloat(getComputedStyle(track).paddingLeft) || 0;
+        track.scrollTo({ left: (sw * index), behavior: 'smooth' });
       }
 
       function update(index) {
         current = index;
+        slides.forEach(function(s, i) { s.classList.toggle('is-active', i === index); });
         dots.forEach(function(d, i) { d.classList.toggle('is-active', i === index); });
         if (prev) prev.disabled = index === 0;
         if (next) next.disabled = index === total - 1;
@@ -350,7 +332,6 @@
 
       if (prev) prev.addEventListener('click', function() { goTo(current - 1); });
       if (next) next.addEventListener('click', function() { goTo(current + 1); });
-
       dots.forEach(function(dot, i) {
         dot.addEventListener('click', function() { goTo(i); });
       });
@@ -372,7 +353,6 @@
   {%- endif -%}
 
 </div>
-
 
 {% schema %}
 {
