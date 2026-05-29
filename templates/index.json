@@ -15,14 +15,16 @@
         "image_cPi9W3": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/OneC_hero_1_2a6dffe4-8118-48f6-9ff8-569cc8cbe3f0.png",
+            "mobile_image": "shopify://shop_images/OneC_hero-mobile_1.png",
             "slide_link": "",
             "subheading": "",
-            "title": "Slide heading",
-            "heading_max_width": 15,
+            "title": "The Beautiful Game",
+            "heading_max_width": 17,
             "title_size": 72,
-            "title_size_mobile": 40,
+            "title_size_mobile": 24,
             "use_h1": false,
-            "text": "",
+            "text": "<p>Our newest soccer-inspired print, has officially entered the lineup.</p>",
             "enlarge_text": false,
             "button_label_1": "",
             "button_url_1": "",
@@ -30,7 +32,7 @@
             "button_label_2": "",
             "button_url_2": "",
             "button_tag_2": "",
-            "text_alignment": "center center"
+            "text_alignment": "bottom left"
           }
         },
         "image_ReGAny": {
@@ -61,10 +63,13 @@
       ],
       "name": "Hero Carousel – Rounded",
       "settings": {
+        "padding_top": 8,
         "height": "fixed",
         "height_desktop": 560,
         "height_mobile": 440,
         "border_radius": 16,
+        "peek_size": 48,
+        "peek_size_mobile": 16,
         "overlay_style": "shadow",
         "accessibility_info": ""
       }
