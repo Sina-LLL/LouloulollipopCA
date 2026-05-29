@@ -568,7 +568,8 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
 .MoreToLove{
   font-size:1rem;
   font-weight:500;
-  color:var(--product-label-overlay-new-text);
+  display:inline;
+  color:var(--product-label-overlay-reduction-bg);
 }
 .product-free-shipping__container{
   font-size:14px;
