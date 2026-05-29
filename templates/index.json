@@ -9,6 +9,66 @@
  */
 {
   "sections": {
+    "hero_carousel_rounded_q34LBJ": {
+      "type": "hero-carousel-rounded",
+      "blocks": {
+        "image_cPi9W3": {
+          "type": "image",
+          "settings": {
+            "slide_link": "",
+            "subheading": "",
+            "title": "Slide heading",
+            "heading_max_width": 15,
+            "title_size": 72,
+            "title_size_mobile": 40,
+            "use_h1": false,
+            "text": "",
+            "enlarge_text": false,
+            "button_label_1": "",
+            "button_url_1": "",
+            "button_tag_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_tag_2": "",
+            "text_alignment": "center center"
+          }
+        },
+        "image_ReGAny": {
+          "type": "image",
+          "settings": {
+            "slide_link": "",
+            "subheading": "",
+            "title": "Slide heading",
+            "heading_max_width": 15,
+            "title_size": 72,
+            "title_size_mobile": 40,
+            "use_h1": false,
+            "text": "",
+            "enlarge_text": false,
+            "button_label_1": "",
+            "button_url_1": "",
+            "button_tag_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_tag_2": "",
+            "text_alignment": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "image_cPi9W3",
+        "image_ReGAny"
+      ],
+      "name": "Hero Carousel – Rounded",
+      "settings": {
+        "height": "fixed",
+        "height_desktop": 560,
+        "height_mobile": 440,
+        "border_radius": 16,
+        "overlay_style": "shadow",
+        "accessibility_info": ""
+      }
+    },
     "slideshow_JU4LXr": {
       "type": "slideshow",
       "blocks": {
@@ -1053,6 +1113,7 @@
     }
   },
   "order": [
+    "hero_carousel_rounded_q34LBJ",
     "slideshow_JU4LXr",
     "featured_collection_R6h8Qg",
     "collection_list_aakDiY",
