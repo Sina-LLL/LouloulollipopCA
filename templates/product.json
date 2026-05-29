@@ -101,6 +101,10 @@
             "icon_size": "large"
           }
         },
+        "pr_mentions_qbKGbp": {
+          "type": "pr-mentions",
+          "settings": {}
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -109,6 +113,10 @@
             "icon": "",
             "show_in_quickbuy": false
           }
+        },
+        "material_usp_g7Lfaj": {
+          "type": "material-usp",
+          "settings": {}
         },
         "accordion_yktgxC": {
           "type": "accordion",
@@ -146,7 +154,9 @@
         "divider_XNTBYb",
         "complementary_d3EJbm",
         "usp_Whm8xh",
+        "pr_mentions_qbKGbp",
         "description",
+        "material_usp_g7Lfaj",
         "accordion_yktgxC",
         "accordion_KqCkWX"
       ],
