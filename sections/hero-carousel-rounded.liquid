@@ -1,235 +1,328 @@
-{%- if section.blocks.size > 1 -%}
-  <script src="{{ 'slideshow.js' | asset_url }}" defer></script>
-{%- endif -%}
-
-{%- liquid
-  assign border_radius = section.settings.border_radius | append: 'px'
-  assign slide_count = section.blocks.size
--%}
-
-<div id="section-id-{{ section.id }}" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.2s"' -%}>
+<div id="section-id-{{ section.id }}" class="hcr-section" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.2s"' -%}>
   {% style %}
-    #section-id-{{ section.id }} .hero-carousel-rounded__inner {
-      border-radius: {{ border_radius }};
+    #section-id-{{ section.id }} {
+      margin-top: {{ section.settings.padding_top }}px;
+      margin-bottom: var(--larger-section-padding);
+    }
+    @media (max-width: 767px) {
+      #section-id-{{ section.id }} {
+        margin-bottom: var(--larger-section-padding-mobile);
+      }
+    }
+
+    #section-id-{{ section.id }} .hcr-inner {
+      position: relative;
+      border-radius: {{ section.settings.border_radius }}px;
       overflow: hidden;
     }
 
-    {%- if section.settings.autoplay -%}
-      #section-id-{{ section.id }} slide-show {
-        --duration: {{ section.settings.autoplay_speed }}s;
-        --play-state: paused;
+    #section-id-{{ section.id }} .hcr-track {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    #section-id-{{ section.id }} .hcr-track::-webkit-scrollbar {
+      display: none;
+    }
+
+    #section-id-{{ section.id }} .hcr-slide {
+      flex: 0 0 calc(100% - {{ section.settings.peek_size_mobile }}px);
+      min-width: 0;
+      scroll-snap-align: start;
+      position: relative;
+      overflow: hidden;
+    }
+    @media (min-width: 768px) {
+      #section-id-{{ section.id }} .hcr-slide {
+        flex: 0 0 calc(100% - {{ section.settings.peek_size }}px);
       }
+    }
+
+    {%- if section.settings.height == 'fixed' -%}
+    #section-id-{{ section.id }} .hcr-slide {
+      height: {{ section.settings.height_mobile }}px;
+    }
+    @media (min-width: 768px) {
+      #section-id-{{ section.id }} .hcr-slide {
+        height: {{ section.settings.height_desktop }}px;
+      }
+    }
+    {%- else -%}
+    #section-id-{{ section.id }} .hcr-slide {
+      aspect-ratio: 1 / 1;
+    }
+    @media (min-width: 768px) {
+      #section-id-{{ section.id }} .hcr-slide {
+        aspect-ratio: 16 / 7;
+      }
+    }
     {%- endif -%}
 
-    {%- if section.settings.height == 'fixed' %}
-      #section-id-{{ section.id }} .height--fixed {
-        --image-height: {{ section.settings.height_mobile }}px;
-      }
-      @media (min-width: 768px) {
-        #section-id-{{ section.id }} .height--fixed {
-          --image-height: {{ section.settings.height_desktop }}px;
-        }
-      }
-    {%- endif -%}
-
-    {%- if section.settings.height == 'adapt' %}
-      #section-id-{{ section.id }} .height--adapt {
-        {%- if section.blocks.first.settings.mobile_image -%}
-          --aspect-ratio: {{ section.blocks.first.settings.mobile_image.aspect_ratio }};
-        {%- else -%}
-          --aspect-ratio: {{ section.blocks.first.settings.image.aspect_ratio | default: 2.0 }};
-        {%- endif -%}
-      }
-      {%- if section.blocks.first.settings.mobile_image -%}
-      @media (min-width: 768px) {
-        #section-id-{{ section.id }} .height--adapt {
-          --aspect-ratio: {{ section.blocks.first.settings.image.aspect_ratio | default: 2.0 }};
-        }
-      }
-      {%- endif -%}
-    {%- endif -%}
+    #section-id-{{ section.id }} .hcr-slide__image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
     {%- for block in section.blocks -%}
-      #section-id-{{ section.id }} .slide-{{ forloop.index }} .text-overlay__title {
-        font-size: {{ block.settings.title_size_mobile }}px;
-        {%- if block.settings.title_size_mobile >= 90 -%}line-height: 1em;{%- endif %}
-      }
+    #section-id-{{ section.id }} .hcr-slide-{{ forloop.index }} .text-overlay__title {
+      font-size: {{ block.settings.title_size_mobile }}px;
+      {%- if block.settings.title_size_mobile >= 90 %}line-height: 1em;{%- endif %}
+    }
     {%- endfor -%}
-
     @media (min-width: 768px) {
       {%- for block in section.blocks -%}
-      #section-id-{{ section.id }} .slide-{{ forloop.index }} .text-overlay__title {
-        {%- assign title_size_medium = block.settings.title_size | times: 0.7 | at_least: block.settings.title_size_mobile -%}
-        font-size: {{ title_size_medium }}px;
-        {%- if title_size_medium >= 90 -%}line-height: 1em;{%- endif %}
+      {%- assign title_mid = block.settings.title_size | times: 0.7 | at_least: block.settings.title_size_mobile -%}
+      #section-id-{{ section.id }} .hcr-slide-{{ forloop.index }} .text-overlay__title {
+        font-size: {{ title_mid }}px;
+        {%- if title_mid >= 90 %}line-height: 1em;{%- endif %}
+      }
+      {%- endfor -%}
+    }
+    @media (min-width: 1100px) {
+      {%- for block in section.blocks -%}
+      #section-id-{{ section.id }} .hcr-slide-{{ forloop.index }} .text-overlay__title {
+        font-size: {{ block.settings.title_size }}px;
+        {%- if block.settings.title_size >= 90 %}line-height: 1em;{%- endif %}
       }
       {%- endfor -%}
     }
 
-    @media (min-width: 1100px) {
-      {%- for block in section.blocks -%}
-      #section-id-{{ section.id }} .slide-{{ forloop.index }} .text-overlay__title {
-        font-size: {{ block.settings.title_size }}px;
-        {%- if block.settings.title_size >= 90 -%}line-height: 1em;{%- endif %}
+    /* Arrows */
+    #section-id-{{ section.id }} .hcr-arrows {
+      pointer-events: none;
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 2;
+    }
+    #section-id-{{ section.id }} .hcr-arrow {
+      pointer-events: auto;
+      display: none;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: rgb(var(--image-overlay-text-color));
+      padding: 7px;
+    }
+    @media (min-width: 768px) {
+      #section-id-{{ section.id }} .hcr-arrow {
+        display: block;
       }
-      {%- endfor -%}
+    }
+    #section-id-{{ section.id }} .hcr-arrow svg {
+      display: block;
+      width: 60px;
+      height: 60px;
+      stroke-width: 0.6;
+      stroke: currentColor;
+      fill: transparent;
+      opacity: 0.8;
+      filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5));
+    }
+    #section-id-{{ section.id }} .hcr-arrow:hover svg {
+      opacity: 1;
+    }
+    #section-id-{{ section.id }} .hcr-arrow[disabled] {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Dots */
+    #section-id-{{ section.id }} .hcr-dots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      padding: 10px 0 0;
+    }
+    #section-id-{{ section.id }} .hcr-dot {
+      display: block;
+      padding: 4px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: rgb(var(--body-text-color));
+    }
+    #section-id-{{ section.id }} .hcr-dot svg {
+      display: block;
+      width: 20px;
+      height: 20px;
+    }
+    #section-id-{{ section.id }} .hcr-dot .hcr-dot__bg {
+      transition: stroke 0.2s, fill 0.2s, opacity 0.2s;
+      stroke-width: 1px;
+      stroke: currentColor;
+      fill: currentColor;
+    }
+    #section-id-{{ section.id }} .hcr-dot.is-active .hcr-dot__bg {
+      stroke-width: 2px;
+      opacity: 0.4;
+      fill: transparent;
     }
   {% endstyle %}
 
-  <div class="container fully-spaced-row--medium">
-    <div class="hero-carousel-rounded__inner">
+  <div class="container">
+    <div class="hcr-inner">
 
-      <slide-show
-        role="region"
-        aria-roledescription="{{ 'sections.slideshow.carousel' | t }}"
-        aria-label="{{ section.settings.accessibility_info | escape }}"
-        data-autoplay="{{ section.settings.autoplay }}"
-        data-speed="{{ section.settings.autoplay_speed }}"
-        data-transition="{{ section.settings.transition }}"
-        data-transition-out-delay="0"
-        data-pause-autoplay-on-mouseover="false">
+      <div class="hcr-track" id="hcr-track-{{ section.id }}">
+        {%- for block in section.blocks -%}
+          {%- liquid
+            assign show_text = false
+            if block.settings.title != blank or block.settings.subheading != blank or block.settings.text != blank or block.settings.button_label_1 != blank or block.settings.button_label_2 != blank
+              assign show_text = true
+            endif
+            assign v_pos = block.settings.text_alignment | split: ' ' | first
+            assign h_pos = block.settings.text_alignment | split: ' ' | last
+          -%}
+          <div class="hcr-slide hcr-slide-{{ forloop.index }} image-overlay image-overlay--bg-{{ section.settings.overlay_style }}" {{ block.shopify_attributes }}>
 
-        <div class="slideshow slideshow--navigation-{{ section.settings.navigation }}" id="slideshow-{{ section.id }}" aria-live="polite" aria-atomic="true">
-          {%- for block in section.blocks -%}
-            {%- liquid
-              assign show_overlay_text = false
-              if block.settings.title != blank or block.settings.subheading != blank or block.settings.text != blank or block.settings.button_label_1 != blank or block.settings.button_label_2 != blank
-                assign show_overlay_text = true
-                assign wrap_slide_with_link = true
-                if block.settings.slide_link == blank or block.settings.text contains '</a>' or block.settings.button_url_1 != blank or block.settings.button_url_2 != blank
-                  assign wrap_slide_with_link = false
+            {%- if block.settings.image != blank -%}
+              {%- liquid
+                assign loading = 'lazy'
+                assign fetchpriority = nil
+                if forloop.first
+                  assign loading = 'eager'
+                  assign fetchpriority = 'high'
                 endif
-              elsif block.settings.slide_link != blank
-                assign wrap_slide_with_link = true
-              endif
-            -%}
-
-            <image-with-text-overlay
-              class="slideshow__slide slide-{{ forloop.index }}{% if forloop.first %} is-active{% endif %} height--{{ section.settings.height }} image-overlay image-overlay--bg-{{ section.settings.overlay_style }}{% if section.settings.mobile_overlay_under %} text-overlay-parent--mobile-stack{% endif %}"
-              role="group"
-              aria-roledescription="{{ 'sections.slideshow.slide' | t }}"
-              aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
-              {%- unless forloop.first %}tabindex="-1"{% endunless %}
-              {%- if request.design_mode %}data-index="{{ forloop.index0 }}"{% endif %}
-              style="--slide-index: {{ forloop.index }}"
-              {{ block.shopify_attributes }}>
-
-              {%- if wrap_slide_with_link -%}
-                <a class="image-overlay__image-link" href="{{ block.settings.slide_link }}">
-              {%- endif -%}
-
-              {%- if block.settings.image == blank -%}
-                <div class="height__image image-overlay__image overflow-hidden">
-                  <div class="slideshow__motion-media has-motion placeholder-image{% if show_overlay_text %} dark{% endif %}">
-                    {%- capture current %}{% cycle 1, 2 %}{% endcapture -%}
-                    {{- 'lifestyle-' | append: current | placeholder_svg_tag: 'placeholder-svg' -}}
-                  </div>
-                </div>
-              {%- else -%}
-                {%- liquid
-                  assign loading = 'lazy'
-                  assign fetchpriority = nil
-                  if forloop.first
-                    if section.location == 'header' or section.location == 'template' and section.index == 1
-                      assign loading = 'eager'
-                      assign fetchpriority = 'high'
-                    endif
-                  endif
-                -%}
-                <div class="height__image image-overlay__image overflow-hidden">
-                  {%- render 'image-desktop-and-mobile',
-                    class: 'slideshow__motion-media has-motion',
-                    desktop_image: block.settings.image,
-                    mobile_image: block.settings.mobile_image,
-                    loading: loading,
-                    fetchpriority: fetchpriority,
-                    block: block
-                  -%}
-                </div>
-              {%- endif -%}
-
-              {%- if show_overlay_text -%}
-                <div class="text-overlay text-overlay--with-reveal text-overlay--for-banner text-overlay--v-{{ block.settings.text_alignment | split: ' ' | first }} text-overlay--h-{{ block.settings.text_alignment | split: ' ' | last }} image-overlay__over has-motion">
-                  <div class="text-overlay__inner" style="--heading-max-width: {{ block.settings.heading_max_width }}em">
-                    <div class="text-overlay__text slideshow__motion-overlay has-motion">
-                      {%- if block.settings.subheading != blank -%}
-                        <div class="text-overlay__reveal"><div class="text-overlay__subheading subheading subheading--over has-motion">{{ block.settings.subheading | escape }}</div></div>
-                      {%- endif -%}
-                      {%- if block.settings.title != blank -%}
-                        <div class="text-overlay__reveal">
-                          {%- if block.settings.use_h1 -%}
-                            <h1 class="text-overlay__title has-motion">{% render 'multiline-text' with block.settings.title %}</h1>
-                          {%- else -%}
-                            <h2 class="text-overlay__title h1 has-motion">{% render 'multiline-text' with block.settings.title %}</h2>
-                          {%- endif -%}
-                        </div>
-                      {%- endif -%}
-                      {%- if block.settings.text != blank -%}
-                        <div class="text-overlay__reveal"><div class="text-overlay__rte rte {% if block.settings.enlarge_text %}large-text{% endif %} has-motion">{{ block.settings.text }}</div></div>
-                      {%- endif -%}
-                      {%- if block.settings.button_label_1 != blank or block.settings.button_label_2 != blank -%}
-                        <div class="text-overlay__button-row">
-                          {%- if wrap_slide_with_link -%}
-                            {%- if block.settings.button_label_1 != blank -%}
-                              <span class="text-overlay__button btn btn--primary">{{ block.settings.button_label_1 | escape }}</span>
-                            {%- endif -%}
-                            {%- if block.settings.button_label_2 != blank -%}
-                              <span class="text-overlay__button btn btn--secondary">{{ block.settings.button_label_2 | escape }}</span>
-                            {%- endif -%}
-                          {%- else -%}
-                            {%- if block.settings.button_label_1 != blank -%}
-                              <a class="text-overlay__button btn btn--primary" href="{{ block.settings.button_url_1 }}{% if block.settings.button_tag_1 != blank %}/{{ block.settings.button_tag_1 | handle }}{% endif %}">{{ block.settings.button_label_1 | escape }}</a>
-                            {%- endif -%}
-                            {%- if block.settings.button_label_2 != blank -%}
-                              <a class="text-overlay__button btn btn--secondary" href="{{ block.settings.button_url_2 }}{% if block.settings.button_tag_2 != blank %}/{{ block.settings.button_tag_2 | handle }}{% endif %}">{{ block.settings.button_label_2 | escape }}</a>
-                            {%- endif -%}
-                          {%- endif -%}
-                        </div>
-                      {%- endif -%}
-                    </div>
-                  </div>
-                </div>
-              {%- endif -%}
-
-              {%- if wrap_slide_with_link -%}
-                </a>
-              {%- endif -%}
-            </image-with-text-overlay>
-          {%- endfor -%}
-        </div>
-
-        {%- if section.blocks.size > 1 and section.settings.navigation != 'none' -%}
-          <div class="slideshow-ctrl js-only{% if section.settings.mobile_overlay_under %} slideshow-ctrl--mobile-stack{% endif %}">
-            <div class="slideshow-pagination{% if section.settings.navigation == 'arrows' %} mobile-only{% endif %}">
-              {%- for block in section.blocks -%}
-                <button class="page-btn" data-index="{{ forloop.index0 }}" aria-controls="slideshow-{{ section.id }}"{% if forloop.first %} aria-current="true"{% endif %}>
-                  <span class="visually-hidden">{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}</span>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="page-btn__circle">
-                    <circle class="page-btn__fg-circle" cx="12" cy="12" r="6" />
-                    <circle class="page-btn__bg-circle" cx="12" cy="12" r="6" />
-                  </svg>
-                </button>
-              {%- endfor -%}
-            </div>
-            {%- if section.settings.navigation == 'arrows' or section.settings.navigation == 'arrows_and_dots' -%}
-              <div class="slideshow-nav desktop-only">
-                <button type="button" class="slideshow-nav__btn has-ltr-icon" name="prev" aria-controls="slideshow-{{ section.id }}">
-                  <span class="visually-hidden">{{ 'general.slider.previous' | t }}</span>
-                  {% render 'icon-chevron-left' %}
-                </button>
-                <button type="button" class="slideshow-nav__btn has-ltr-icon" name="next" aria-controls="slideshow-{{ section.id }}">
-                  <span class="visually-hidden">{{ 'general.slider.next' | t }}</span>
-                  {% render 'icon-chevron-right' %}
-                </button>
+              -%}
+              {%- render 'image-desktop-and-mobile',
+                class: 'hcr-slide__image',
+                desktop_image: block.settings.image,
+                mobile_image: block.settings.mobile_image,
+                loading: loading,
+                fetchpriority: fetchpriority,
+                block: block
+              -%}
+            {%- else -%}
+              <div class="hcr-slide__image placeholder-image dark">
+                {%- capture current %}{% cycle 1, 2 %}{% endcapture -%}
+                {{- 'lifestyle-' | append: current | placeholder_svg_tag: 'placeholder-svg' -}}
               </div>
             {%- endif -%}
-          </div>
-        {%- endif -%}
 
-      </slide-show>
+            {%- if show_text -%}
+              <div class="text-overlay text-overlay--for-banner text-overlay--v-{{ v_pos }} text-overlay--h-{{ h_pos }} image-overlay__over">
+                <div class="text-overlay__inner" style="--heading-max-width: {{ block.settings.heading_max_width }}em">
+                  <div class="text-overlay__text">
+                    {%- if block.settings.subheading != blank -%}
+                      <div class="text-overlay__subheading subheading subheading--over">{{ block.settings.subheading | escape }}</div>
+                    {%- endif -%}
+                    {%- if block.settings.title != blank -%}
+                      {%- if block.settings.use_h1 -%}
+                        <h1 class="text-overlay__title">{% render 'multiline-text' with block.settings.title %}</h1>
+                      {%- else -%}
+                        <h2 class="text-overlay__title h1">{% render 'multiline-text' with block.settings.title %}</h2>
+                      {%- endif -%}
+                    {%- endif -%}
+                    {%- if block.settings.text != blank -%}
+                      <div class="text-overlay__rte rte {% if block.settings.enlarge_text %}large-text{% endif %}">{{ block.settings.text }}</div>
+                    {%- endif -%}
+                    {%- if block.settings.button_label_1 != blank or block.settings.button_label_2 != blank -%}
+                      <div class="text-overlay__button-row">
+                        {%- if block.settings.button_label_1 != blank -%}
+                          <a class="text-overlay__button btn btn--primary" href="{{ block.settings.button_url_1 }}{% if block.settings.button_tag_1 != blank %}/{{ block.settings.button_tag_1 | handle }}{% endif %}">{{ block.settings.button_label_1 | escape }}</a>
+                        {%- endif -%}
+                        {%- if block.settings.button_label_2 != blank -%}
+                          <a class="text-overlay__button btn btn--secondary" href="{{ block.settings.button_url_2 }}{% if block.settings.button_tag_2 != blank %}/{{ block.settings.button_tag_2 | handle }}{% endif %}">{{ block.settings.button_label_2 | escape }}</a>
+                        {%- endif -%}
+                      </div>
+                    {%- endif -%}
+                  </div>
+                </div>
+              </div>
+            {%- elsif block.settings.slide_link != blank -%}
+              <a class="image-overlay__image-link" href="{{ block.settings.slide_link }}" aria-label="{{ block.settings.title | default: 'Slide' | escape }}"></a>
+            {%- endif -%}
+
+          </div>
+        {%- endfor -%}
+      </div>
+
+      {%- if section.blocks.size > 1 -%}
+        <div class="hcr-arrows js-only">
+          <button class="hcr-arrow hcr-arrow--prev has-ltr-icon" id="hcr-prev-{{ section.id }}" aria-label="{{ 'general.slider.previous' | t }}" disabled>
+            {% render 'icon-chevron-left' %}
+          </button>
+          <button class="hcr-arrow hcr-arrow--next has-ltr-icon" id="hcr-next-{{ section.id }}" aria-label="{{ 'general.slider.next' | t }}">
+            {% render 'icon-chevron-right' %}
+          </button>
+        </div>
+      {%- endif -%}
 
     </div>
+
+    {%- if section.blocks.size > 1 -%}
+      <div class="hcr-dots js-only" id="hcr-dots-{{ section.id }}" role="tablist">
+        {%- for block in section.blocks -%}
+          <button class="hcr-dot{% if forloop.first %} is-active{% endif %}" role="tab" data-index="{{ forloop.index0 }}" aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }}">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <circle class="hcr-dot__bg" cx="12" cy="12" r="6" />
+            </svg>
+          </button>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+
   </div>
+
+  {%- if section.blocks.size > 1 -%}
+  <script>
+    (function() {
+      var track  = document.getElementById('hcr-track-{{ section.id }}');
+      var prev   = document.getElementById('hcr-prev-{{ section.id }}');
+      var next   = document.getElementById('hcr-next-{{ section.id }}');
+      var dotContainer = document.getElementById('hcr-dots-{{ section.id }}');
+      if (!track) return;
+      var dots = dotContainer ? dotContainer.querySelectorAll('.hcr-dot') : [];
+      var total = {{ section.blocks.size }};
+      var current = 0;
+
+      function slideWidth() {
+        return track.children[0] ? track.children[0].offsetWidth : 0;
+      }
+
+      function goTo(index) {
+        index = Math.max(0, Math.min(total - 1, index));
+        track.scrollTo({ left: slideWidth() * index, behavior: 'smooth' });
+      }
+
+      function update(index) {
+        current = index;
+        dots.forEach(function(d, i) { d.classList.toggle('is-active', i === index); });
+        if (prev) prev.disabled = index === 0;
+        if (next) next.disabled = index === total - 1;
+      }
+
+      if (prev) prev.addEventListener('click', function() { goTo(current - 1); });
+      if (next) next.addEventListener('click', function() { goTo(current + 1); });
+
+      dots.forEach(function(dot, i) {
+        dot.addEventListener('click', function() { goTo(i); });
+      });
+
+      var ticking = false;
+      track.addEventListener('scroll', function() {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(function() {
+          var sw = slideWidth();
+          if (sw > 0) update(Math.round(track.scrollLeft / sw));
+          ticking = false;
+        });
+      }, { passive: true });
+
+      update(0);
+    })();
+  </script>
+  {%- endif -%}
+
 </div>
 
 
@@ -237,9 +330,7 @@
 {
   "name": "Hero Carousel – Rounded",
   "class": "section-hero-carousel-rounded",
-  "disabled_on": {
-    "groups": ["aside"]
-  },
+  "disabled_on": { "groups": ["aside"] },
   "max_blocks": 8,
   "settings": [
     {
@@ -247,11 +338,21 @@
       "content": "Layout"
     },
     {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Top spacing",
+      "default": 8
+    },
+    {
       "type": "radio",
       "id": "height",
       "label": "Slide height",
       "options": [
-        { "value": "adapt", "label": "Adapt to first image" },
+        { "value": "adapt", "label": "Adapt to screen ratio" },
         { "value": "fixed", "label": "Fixed height" }
       ],
       "default": "fixed"
@@ -287,10 +388,29 @@
       "default": 16
     },
     {
-      "type": "checkbox",
-      "id": "mobile_overlay_under",
-      "label": "Show text below image on mobile",
-      "default": false
+      "type": "header",
+      "content": "Peeking next slide"
+    },
+    {
+      "type": "range",
+      "id": "peek_size",
+      "min": 0,
+      "max": 120,
+      "step": 8,
+      "unit": "px",
+      "label": "Desktop peek amount",
+      "info": "How much of the next slide shows on desktop",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "peek_size_mobile",
+      "min": 0,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "label": "Mobile peek amount",
+      "default": 24
     },
     {
       "type": "header",
@@ -311,57 +431,13 @@
     },
     {
       "type": "header",
-      "content": "Navigation"
-    },
-    {
-      "type": "select",
-      "id": "transition",
-      "label": "Transition",
-      "options": [
-        { "value": "zoom-fade", "label": "Zoom" },
-        { "value": "fade", "label": "Fade" },
-        { "value": "slide-fade", "label": "Slide & Fade" },
-        { "value": "instant", "label": "Instant" }
-      ],
-      "default": "fade"
-    },
-    {
-      "id": "navigation",
-      "type": "select",
-      "label": "Navigation style",
-      "default": "arrows_and_dots",
-      "options": [
-        { "value": "arrows", "label": "Arrows only" },
-        { "value": "arrows_and_dots", "label": "Arrows and dots" },
-        { "value": "dots", "label": "Dots only" },
-        { "value": "none", "label": "None" }
-      ]
-    },
-    {
-      "id": "autoplay",
-      "type": "checkbox",
-      "label": "Auto-rotate slides",
-      "default": false
-    },
-    {
-      "type": "range",
-      "id": "autoplay_speed",
-      "min": 2,
-      "max": 20,
-      "step": 1,
-      "unit": "s",
-      "label": "Change slides every",
-      "default": 6
-    },
-    {
-      "type": "header",
       "content": "Accessibility"
     },
     {
       "type": "text",
       "id": "accessibility_info",
       "label": "Slideshow description",
-      "info": "Describe the slideshow for customers using screen readers."
+      "info": "Describe the slideshow for screen readers."
     }
   ],
   "blocks": [
@@ -385,7 +461,7 @@
           "type": "url",
           "id": "slide_link",
           "label": "Slide link",
-          "info": "Not used if buttons or text contain links"
+          "info": "Used when no buttons are set"
         },
         {
           "type": "header",
@@ -437,7 +513,6 @@
           "type": "checkbox",
           "id": "use_h1",
           "label": "Set as primary page heading",
-          "info": "Use <h1> tag. One per page recommended.",
           "default": false
         },
         {
