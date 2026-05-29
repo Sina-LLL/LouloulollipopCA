@@ -68,7 +68,7 @@
         "height_desktop": 600,
         "height_mobile": 500,
         "border_radius": 16,
-        "peek_size": 48,
+        "peek_size": 32,
         "peek_size_mobile": 16,
         "overlay_style": "shadow",
         "accessibility_info": ""
