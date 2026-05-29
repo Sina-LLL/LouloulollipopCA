@@ -65,7 +65,7 @@
       "settings": {
         "padding_top": 8,
         "height": "fixed",
-        "height_desktop": 600,
+        "height_desktop": 700,
         "height_mobile": 500,
         "slide_max_width": 1200,
         "border_radius": 16,
