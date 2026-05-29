@@ -22,6 +22,7 @@
       gap: 10px;
       padding: 0 {{ section.settings.peek_size_mobile }}px;
       box-sizing: border-box;
+      justify-content: center;
     }
     #hcr-{{ sid }} .hcr__track::-webkit-scrollbar { display: none; }
 
@@ -191,7 +192,11 @@
       stroke: #6A8B95;
       opacity: 1;
     }
-    
+    @media (min-width: 768px) {
+      #hcr-{{ sid }} .hcr__slide {
+        max-width: {{ section.settings.slide_max_width }}px;
+      }
+    }
   {% endstyle %}
 
   <div class="hcr__inner" style="position: relative;">
@@ -410,6 +415,16 @@
       "unit": "px",
       "label": "Mobile fixed height",
       "default": 440
+    },
+    {
+      "type": "range",
+      "id": "slide_max_width",
+      "min": 400,
+      "max": 1400,
+      "step": 20,
+      "unit": "px",
+      "label": "Maximum desktop slide width",
+      "default": 1000
     },
     {
       "type": "range",
