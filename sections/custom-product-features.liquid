@@ -11,8 +11,8 @@
       {{- 'slideshow.js' | asset_url | script_tag -}}
 
       <!-- Mobile carousel -->
-      <carousel-slider class="custom-features-carousel mobile-only block">
-        <div class="slider slider--no-scrollbar">
+        <carousel-slider class="custom-features-carousel mobile-only block" data-dispatch-events="true">
+          <div class="slider slider--no-scrollbar">
           <div class="slider__grid">
             {% for block in section.blocks %}
               <div class="slider__item{% if forloop.first %} is-active{% endif %}" {{ block.shopify_attributes }}>
