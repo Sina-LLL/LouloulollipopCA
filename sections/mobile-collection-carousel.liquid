@@ -66,13 +66,18 @@
   {% endstyle %}
 
   <div class="col-nav__track">
-    {%- for block in section.blocks -%}
+{%- for block in section.blocks -%}
+      {%- assign col = collections[block.settings.collection] -%}
+      {%- assign item_image = block.settings.image | default: col.image -%}
+      {%- assign item_label = block.settings.label | default: col.title -%}
+      {%- assign item_url = col.url | default: '#' -%}
+
       <a class="col-nav__item"
-        href="{{ block.settings.url | default: '#' }}"
+        href="{{ item_url }}"
         {{ block.shopify_attributes }}>
         <div class="col-nav__image-wrap">
-          {%- if block.settings.image != blank -%}
-            {%- render 'image' with block.settings.image,
+          {%- if item_image != blank -%}
+            {%- render 'image' with item_image,
               loading: 'lazy',
               widths: '160, 320',
               sizes: '{{ section.settings.item_width }}px'
@@ -81,8 +86,8 @@
             {{ 'collection-1' | placeholder_svg_tag: 'placeholder-svg' }}
           {%- endif -%}
         </div>
-        {%- if block.settings.label != blank -%}
-          <span class="col-nav__label">{{ block.settings.label | escape }}</span>
+        {%- if item_label != blank -%}
+          <span class="col-nav__label">{{ item_label | escape }}</span>
         {%- endif -%}
       </a>
     {%- endfor -%}
