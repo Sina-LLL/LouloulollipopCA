@@ -1,0 +1,195 @@
+{%- assign sid = section.id -%}
+<div id="col-nav-{{ sid }}" class="col-nav">
+  {% style %}
+    #col-nav-{{ sid }} {
+      display: block;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      padding: {{ section.settings.padding_vertical }}px {{ section.settings.padding_horizontal }}px;
+    }
+    #col-nav-{{ sid }}::-webkit-scrollbar { display: none; }
+
+    @media (min-width: 768px) {
+      #col-nav-{{ sid }} { display: none; }
+    }
+
+    #col-nav-{{ sid }} .col-nav__track {
+      display: flex;
+      gap: {{ section.settings.gap }}px;
+      width: max-content;
+    }
+
+    #col-nav-{{ sid }} .col-nav__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      color: rgb(var(--body-text-color));
+      width: {{ section.settings.item_width }}px;
+      flex-shrink: 0;
+    }
+
+    #col-nav-{{ sid }} .col-nav__image-wrap {
+      width: {{ section.settings.item_width }}px;
+      height: {{ section.settings.item_width }}px;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #f0f0f0;
+    }
+
+    #col-nav-{{ sid }} .col-nav__image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    #col-nav-{{ sid }} .col-nav__item:hover .col-nav__image-wrap img {
+      transform: scale(1.05);
+    }
+
+    #col-nav-{{ sid }} .col-nav__label {
+      font-size: {{ section.settings.label_size }}px;
+      font-weight: 600;
+      text-align: center;
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+
+    #col-nav-{{ sid }} .col-nav__item.is-active .col-nav__image-wrap {
+      outline: 2px solid rgb(var(--color-primary));
+      outline-offset: 2px;
+    }
+  {% endstyle %}
+
+  <div class="col-nav__track">
+    {%- for block in section.blocks -%}
+      <a class="col-nav__item"
+        href="{{ block.settings.url | default: '#' }}"
+        {{ block.shopify_attributes }}>
+        <div class="col-nav__image-wrap">
+          {%- if block.settings.image != blank -%}
+            {%- render 'image' with block.settings.image,
+              loading: 'lazy',
+              widths: '160, 320',
+              sizes: '{{ section.settings.item_width }}px'
+            -%}
+          {%- else -%}
+            {{ 'collection-1' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+        </div>
+        {%- if block.settings.label != blank -%}
+          <span class="col-nav__label">{{ block.settings.label | escape }}</span>
+        {%- endif -%}
+      </a>
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Mobile Collection Nav",
+  "tag": "section",
+  "class": "mobile-collection-nav",
+  "disabled_on": { "groups": ["aside"] },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "item_width",
+      "min": 60,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Item size",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "min": 4,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Gap between items",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal",
+      "min": 0,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Side padding",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding_vertical",
+      "min": 0,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Top / bottom padding",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Label"
+    },
+    {
+      "type": "range",
+      "id": "label_size",
+      "min": 10,
+      "max": 16,
+      "step": 1,
+      "unit": "px",
+      "label": "Label font size",
+      "default": 12
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "Mobile Collection Nav",
+      "blocks": [
+        { "type": "collection" },
+        { "type": "collection" },
+        { "type": "collection" },
+        { "type": "collection" },
+        { "type": "collection" }
+      ]
+    }
+  ]
+}
+{% endschema %}
