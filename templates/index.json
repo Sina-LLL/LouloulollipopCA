@@ -96,7 +96,7 @@
         "slide_max_width": 1400,
         "border_radius": 16,
         "peek_size": 32,
-        "peek_size_mobile": 16,
+        "peek_size_mobile": 12,
         "overlay_style": "shadow",
         "accessibility_info": ""
       }
