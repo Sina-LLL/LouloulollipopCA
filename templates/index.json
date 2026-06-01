@@ -15,30 +15,49 @@
         "collection_m8xPFH": {
           "type": "collection",
           "settings": {
+            "collection": "sleep-bags",
             "label": ""
           }
         },
         "collection_b9cNhg": {
           "type": "collection",
           "settings": {
+            "collection": "sleepers",
             "label": ""
           }
         },
         "collection_bgepzf": {
           "type": "collection",
           "settings": {
+            "collection": "long-sleeve-bibs",
             "label": ""
           }
         },
         "collection_DRa4yR": {
           "type": "collection",
           "settings": {
+            "collection": "silicone-bibs",
             "label": ""
           }
         },
         "collection_nT7naG": {
           "type": "collection",
           "settings": {
+            "collection": "pacifier-clips",
+            "label": ""
+          }
+        },
+        "collection_7DfJXw": {
+          "type": "collection",
+          "settings": {
+            "collection": "swaddles",
+            "label": ""
+          }
+        },
+        "collection_WGD3FG": {
+          "type": "collection",
+          "settings": {
+            "collection": "hooded-towel-sets",
             "label": ""
           }
         }
@@ -48,7 +67,9 @@
         "collection_b9cNhg",
         "collection_bgepzf",
         "collection_DRa4yR",
-        "collection_nT7naG"
+        "collection_nT7naG",
+        "collection_7DfJXw",
+        "collection_WGD3FG"
       ],
       "name": "Mobile Collection Nav",
       "settings": {
