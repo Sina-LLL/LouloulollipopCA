@@ -75,18 +75,15 @@
     const dots = carousel.querySelectorAll('.custom-features-carousel__dot');
 
     carousel.addEventListener('on:carousel-slider:select', function (e) {
-      const activeIndex = e.detail.index;
       dots.forEach((dot, i) => {
-        dot.classList.toggle('is-active', i === activeIndex);
+        dot.classList.toggle('is-active', i === e.detail.index);
       });
     });
 
     dots.forEach((dot, i) => {
       dot.addEventListener('click', function () {
         const slides = carousel.querySelectorAll('.slider__item');
-        if (slides[i]) {
-          carousel.scrollToElement(slides[i], 'smooth');
-        }
+        if (slides[i]) carousel.scrollToElement(slides[i], 'smooth');
       });
     });
   });
