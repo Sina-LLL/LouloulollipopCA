@@ -61,7 +61,7 @@
           "type": "collection",
           "settings": {
             "collection": "hooded-towel-sets",
-            "label": ""
+            "label": "Hooded Towels"
           }
         }
       },
@@ -81,7 +81,7 @@
         "gap": 8,
         "padding_horizontal": 16,
         "padding_vertical": 12,
-        "label_size": 12
+        "label_size": 14
       }
     },
     "hero_carousel_rounded_q34LBJ": {
