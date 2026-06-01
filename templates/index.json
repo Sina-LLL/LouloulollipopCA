@@ -16,6 +16,7 @@
           "type": "collection",
           "settings": {
             "collection": "sleep-bags",
+            "image": "shopify://shop_images/Lemon-Hero.png",
             "label": "Sleep Bags"
           }
         },
@@ -44,6 +45,7 @@
           "type": "collection",
           "settings": {
             "collection": "pacifier-clips",
+            "image": "shopify://shop_images/SILCPOCWHT_Pacifier_Clip_-_OneC_-_White_51WEB.jpg",
             "label": ""
           }
         },
@@ -51,6 +53,7 @@
           "type": "collection",
           "settings": {
             "collection": "swaddles",
+            "image": "shopify://shop_images/SWBMB_Muslin_Swaddle_Bumble_Bees_53.jpg",
             "label": ""
           }
         },
