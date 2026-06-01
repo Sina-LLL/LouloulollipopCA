@@ -1,12 +1,9 @@
 {% if section.blocks.size > 0 %}
   <div class="container custom-product-features">
     <div class="custom-product-features__wrapper">
-      {% if section.settings.section_heading != blank %}
-        <button class="accordion-toggle" type="button" aria-expanded="true">
-          <h2 class="hometitle h2">{{ section.settings.section_heading | escape }}</h2>
-          <span class="chevron">-</span>
-        </button>
-      {% endif %}
+    {% if section.settings.section_heading != blank %}
+      <h2 class="hometitle h2">{{ section.settings.section_heading | escape }}</h2>
+    {% endif %}
 
       {{- 'slideshow.js' | asset_url | script_tag -}}
 
@@ -78,18 +75,15 @@
     const dots = carousel.querySelectorAll('.custom-features-carousel__dot');
 
     carousel.addEventListener('on:carousel-slider:select', function (e) {
-      const activeIndex = e.detail.index;
       dots.forEach((dot, i) => {
-        dot.classList.toggle('is-active', i === activeIndex);
+        dot.classList.toggle('is-active', i === e.detail.index);
       });
     });
 
     dots.forEach((dot, i) => {
       dot.addEventListener('click', function () {
         const slides = carousel.querySelectorAll('.slider__item');
-        if (slides[i]) {
-          carousel.scrollToElement(slides[i], 'smooth');
-        }
+        if (slides[i]) carousel.scrollToElement(slides[i], 'smooth');
       });
     });
   });
