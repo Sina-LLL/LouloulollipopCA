@@ -79,7 +79,7 @@
         "item_width": 120,
         "item_height": 100,
         "gap": 8,
-        "padding_horizontal": 16,
+        "padding_horizontal": 12,
         "padding_vertical": 12,
         "label_size": 14
       }
