@@ -87,12 +87,14 @@
         {{ block.shopify_attributes }}>
         <div class="col-nav__image-wrap">
           {%- if item_image != blank -%}
-            {%- render 'image' with item_image,
-              loading: loading,
-              fetchpriority: fetchpriority,
-              widths: img_width_2x,
-              sizes: img_width | append: 'px'
-            -%}
+            {%- assign img_widths = img_width | append: ', ' | append: img_width_2x -%}
+
+    {%- render 'image' with item_image,
+      loading: loading,
+      fetchpriority: fetchpriority,
+      widths: img_widths,
+      sizes: img_width | append: 'px'
+    -%}
           {%- else -%}
             {{ 'collection-1' | placeholder_svg_tag: 'placeholder-svg' }}
           {%- endif -%}
