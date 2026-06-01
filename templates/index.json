@@ -9,6 +9,81 @@
  */
 {
   "sections": {
+    "mobile_collection_carousel_nzW98H": {
+      "type": "mobile-collection-carousel",
+      "blocks": {
+        "collection_m8xPFH": {
+          "type": "collection",
+          "settings": {
+            "collection": "sleep-bags",
+            "image": "shopify://shop_images/Mobile-Hero_Lemon.png",
+            "label": "Sleep Bags"
+          }
+        },
+        "collection_b9cNhg": {
+          "type": "collection",
+          "settings": {
+            "collection": "sleepers",
+            "label": ""
+          }
+        },
+        "collection_bgepzf": {
+          "type": "collection",
+          "settings": {
+            "collection": "long-sleeve-bibs",
+            "label": ""
+          }
+        },
+        "collection_DRa4yR": {
+          "type": "collection",
+          "settings": {
+            "collection": "silicone-bibs",
+            "label": ""
+          }
+        },
+        "collection_nT7naG": {
+          "type": "collection",
+          "settings": {
+            "collection": "pacifier-clips",
+            "image": "shopify://shop_images/SILCPOCWHT_Pacifier_Clip_-_OneC_-_White_51WEB.jpg",
+            "label": ""
+          }
+        },
+        "collection_7DfJXw": {
+          "type": "collection",
+          "settings": {
+            "collection": "swaddles",
+            "image": "shopify://shop_images/SWBMB_Muslin_Swaddle_Bumble_Bees_53.jpg",
+            "label": ""
+          }
+        },
+        "collection_WGD3FG": {
+          "type": "collection",
+          "settings": {
+            "collection": "hooded-towel-sets",
+            "label": "Hooded Towels"
+          }
+        }
+      },
+      "block_order": [
+        "collection_m8xPFH",
+        "collection_b9cNhg",
+        "collection_bgepzf",
+        "collection_DRa4yR",
+        "collection_nT7naG",
+        "collection_7DfJXw",
+        "collection_WGD3FG"
+      ],
+      "name": "Mobile Collection Nav",
+      "settings": {
+        "item_width": 120,
+        "item_height": 100,
+        "gap": 8,
+        "padding_horizontal": 12,
+        "padding_vertical": 12,
+        "label_size": 14
+      }
+    },
     "hero_carousel_rounded_q34LBJ": {
       "type": "hero-carousel-rounded",
       "blocks": {
@@ -89,7 +164,7 @@
       ],
       "name": "Hero Carousel – Rounded",
       "settings": {
-        "padding_top": 20,
+        "padding_top": 8,
         "height": "fixed",
         "height_desktop": 600,
         "height_mobile": 600,
@@ -1146,6 +1221,7 @@
     }
   },
   "order": [
+    "mobile_collection_carousel_nzW98H",
     "hero_carousel_rounded_q34LBJ",
     "slideshow_JU4LXr",
     "featured_collection_R6h8Qg",
