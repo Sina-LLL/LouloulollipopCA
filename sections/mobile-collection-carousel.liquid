@@ -19,13 +19,6 @@
       gap: {{ section.settings.gap }}px;
       width: max-content;
     }
-    #col-nav-{{ sid }} .col-nav__image-wrap {
-      width: {{ section.settings.item_width }}px;
-      height: {{ section.settings.item_height }}px;
-      border-radius: 12px;
-      overflow: hidden;
-      background: #f0f0f0;
-    }
 
     #col-nav-{{ sid }} .col-nav__item {
       display: flex;
@@ -36,6 +29,14 @@
       color: rgb(var(--body-text-color));
       width: {{ section.settings.item_width }}px;
       flex-shrink: 0;
+    }
+
+    #col-nav-{{ sid }} .col-nav__image-wrap {
+      width: {{ section.settings.item_width }}px;
+      height: {{ section.settings.item_height }}px;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #f0f0f0;
     }
 
     #col-nav-{{ sid }} .col-nav__image-wrap img {
@@ -65,11 +66,21 @@
   {% endstyle %}
 
   <div class="col-nav__track">
-{%- for block in section.blocks -%}
+    {%- assign img_width = section.settings.item_width -%}
+    {%- assign img_width_2x = section.settings.item_width | times: 2 -%}
+
+    {%- for block in section.blocks -%}
       {%- assign col = collections[block.settings.collection] -%}
       {%- assign item_image = block.settings.image | default: col.image -%}
       {%- assign item_label = block.settings.label | default: col.title -%}
       {%- assign item_url = col.url | default: '#' -%}
+
+      {%- assign loading = 'lazy' -%}
+      {%- assign fetchpriority = nil -%}
+      {%- if forloop.first -%}
+        {%- assign loading = 'eager' -%}
+        {%- assign fetchpriority = 'high' -%}
+      {%- endif -%}
 
       <a class="col-nav__item"
         href="{{ item_url }}"
@@ -77,9 +88,10 @@
         <div class="col-nav__image-wrap">
           {%- if item_image != blank -%}
             {%- render 'image' with item_image,
-              loading: 'lazy',
-              widths: '160, 320',
-              sizes: '{{ section.settings.item_width }}px'
+              loading: loading,
+              fetchpriority: fetchpriority,
+              widths: img_width_2x,
+              sizes: img_width | append: 'px'
             -%}
           {%- else -%}
             {{ 'collection-1' | placeholder_svg_tag: 'placeholder-svg' }}
@@ -108,10 +120,10 @@
       "type": "range",
       "id": "item_width",
       "min": 60,
-      "max": 200,
+      "max": 120,
       "step": 4,
       "unit": "px",
-      "label": "Item size",
+      "label": "Item width",
       "default": 80
     },
     {
