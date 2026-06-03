@@ -592,6 +592,24 @@
           "global_button_border_color": "#ffffff",
           "global_button_border_radius": 1
         }
+      },
+      "3552487190306752820": {
+        "type": "shopify://apps/little-registry/blocks/global-button/e928f21e-8b62-4c7f-85ee-59d669dbe8d9",
+        "disabled": false,
+        "settings": {
+          "global_button_color": "#6a8b95",
+          "global_button_text_color": "#ffffff",
+          "global_button_text": "Gift Registry",
+          "global_button_text_size": 16,
+          "global_button_padding_horizontal": 16,
+          "global_button_padding_vertical": 8,
+          "global_button_alignment": "left",
+          "global_button_position_horizontal": 2,
+          "global_button_position_vertical": 2,
+          "global_button_border_width": 0,
+          "global_button_border_color": "#ffffff",
+          "global_button_border_radius": 30
+        }
       }
     }
   }
