@@ -175,14 +175,6 @@
         "show_vendor": false,
         "grid": 5
       }
-    },
-    "custom_liquid_tqpgnB": {
-      "type": "custom-liquid",
-      "settings": {
-        "full_width": true,
-        "show_space": true,
-        "code": "<div class=\"wrapper--full\">\n          {% comment %}\n/snippets/bv-ratings-reviews.liquid\nBazaarvoice Ratings & Reviews\n{% endcomment %}\n{% render 'bv-ratings-reviews' %}\n{% comment %}\nEnd Bazaarvoice Ratings & Reviews\n{% endcomment %}\n</div>"
-      }
     }
   },
   "order": [
@@ -190,7 +182,6 @@
     "custom_product_features_g6K7P8",
     "custom_product_material_care_AB9yyi",
     "custom_product_list_by_print_Nbxwnx",
-    "related-products",
-    "custom_liquid_tqpgnB"
+    "related-products"
   ]
 }
