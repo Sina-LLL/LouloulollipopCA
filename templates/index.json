@@ -1218,6 +1218,13 @@
         "button_style": "primary",
         "color_scheme": "default"
       }
+    },
+    "1780593953a8b82cc7": {
+      "type": "apps",
+      "settings": {
+        "full_width": false,
+        "show_space": true
+      }
     }
   },
   "order": [
@@ -1243,6 +1250,7 @@
     "custom_product_highlight_JiGaUB",
     "collection_list_awHraC",
     "featured_collection_eXJhUx",
-    "multi_column_MR9q33"
+    "multi_column_MR9q33",
+    "1780593953a8b82cc7"
   ]
 }

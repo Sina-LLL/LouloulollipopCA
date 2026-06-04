@@ -229,14 +229,6 @@
       "name": "Mux Video",
       "settings": {}
     },
-    "custom_liquid_tqpgnB": {
-      "type": "custom-liquid",
-      "settings": {
-        "full_width": true,
-        "show_space": true,
-        "code": "<div class=\"wrapper--full\">\n          {% comment %}\n/snippets/bv-ratings-reviews.liquid\nBazaarvoice Ratings & Reviews\n{% endcomment %}\n{% render 'bv-ratings-reviews' %}\n{% comment %}\nEnd Bazaarvoice Ratings & Reviews\n{% endcomment %}\n</div>"
-      }
-    },
     "custom_liquid_kwF4yD": {
       "type": "custom-liquid",
       "custom_css": [],
@@ -249,6 +241,20 @@
     },
     "1775971838981c2d24": {
       "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_bbfCAU": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": true,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_bbfCAU"
+      ],
       "settings": {
         "full_width": false,
         "show_space": true
@@ -262,7 +268,6 @@
     "custom_product_list_by_print_Nbxwnx",
     "related-products",
     "mux_video_embed_xaVxRV",
-    "custom_liquid_tqpgnB",
     "custom_liquid_kwF4yD",
     "1775971838981c2d24"
   ]

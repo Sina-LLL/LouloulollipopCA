@@ -265,15 +265,7 @@
             </div>
 
           {% when 'title' %}
-             {% comment %}
-            /snippets/bv-summary.liquid
-            Bazaarvoice Summary Container
-            {% endcomment %}
-            {% render 'bv-summary' %}
-       
-            {% comment %}
-            End Bazaarvoice Summary Container
-            {% endcomment %}
+
             {% if section.settings.show_breadcrumbs %}
               {% render 'breadcrumbs', show_next_prev: false %}
             {% endif %}
