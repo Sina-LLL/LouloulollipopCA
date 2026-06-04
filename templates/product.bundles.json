@@ -219,6 +219,27 @@
       "name": "Mux Video",
       "settings": {}
     },
+    "178060728724a4f95c": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_AMUaF8": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_AMUaF8"
+      ],
+      "settings": {
+        "full_width": false,
+        "show_space": true
+      }
+    },
     "custom_liquid_XRhnan": {
       "type": "custom-liquid",
       "name": "Custom Liquid",
@@ -236,6 +257,7 @@
     "custom_product_list_by_print_Nbxwnx",
     "related-products",
     "mux_video_embed_xaVxRV",
+    "178060728724a4f95c",
     "custom_liquid_XRhnan"
   ]
 }

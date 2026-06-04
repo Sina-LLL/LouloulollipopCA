@@ -209,6 +209,27 @@
         "show_space": true,
         "code": "<script>\ndocument.addEventListener(\"DOMContentLoaded\", function () {\n\n    const source = document.querySelector(\".shopify-block.shopify-app-block.shopify-app-block--mr-add-to-reg\");\n\n    const target = document.querySelector(\".product-form .add-to-cart-wrapper\");\n\n    if (source && target && target.parentNode) {\n      target.parentNode.insertBefore(source, target.nextSibling);\n    }\n});\n</script>"
       }
+    },
+    "17806072352b8c9715": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_B8qRWU": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_B8qRWU"
+      ],
+      "settings": {
+        "full_width": false,
+        "show_space": true
+      }
     }
   },
   "order": [
@@ -218,6 +239,7 @@
     "custom_product_list_by_print_Nbxwnx",
     "related-products",
     "mux_video_embed_xaVxRV",
-    "custom_liquid_kwF4yD"
+    "custom_liquid_kwF4yD",
+    "17806072352b8c9715"
   ]
 }
