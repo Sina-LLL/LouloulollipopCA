@@ -1,0 +1,67 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "landing",
+  "sections": {
+    "lpc": {
+      "type": "lp-product-category",
+      "settings": {
+        "collection_handle": "sleepers",
+        "eyebrow": "Non-Toxic \u00b7 Canadian \u00b7 TENCEL\u2122",
+        "headline": "Pajamas They\u2019ll Want to Wear Every Night",
+        "subheadline": "Buttery-soft TENCEL\u2122 sleepers designed for safe, comfortable sleep \u2014 from first stretch to morning cuddles.",
+        "cta_label": "Shop Sleepers",
+        "features_heading": "Why Parents Love It",
+        "materials_heading": "What It\u2019s Made Of",
+        "materials_body": "<p><strong>TENCEL\u2122 Modal</strong> \u2014 Derived from sustainably harvested beechwood. Exceptionally soft, lightweight, and breathable. Naturally antibacterial and moisture-wicking, making it ideal for sensitive baby skin.</p><p>All fabrics are <strong>OEKO-TEX\u00ae certified</strong> \u2014 independently tested and verified free from over 100 harmful substances. No harsh dyes, no toxic finishes.</p>",
+        "products_heading": "Best Sellers"
+      },
+      "blocks": {
+        "feat_0": {
+          "type": "feature",
+          "settings": {
+            "heading": "2-Way Zip",
+            "body": "Opens from top or bottom for quick, low-disruption diaper changes in the middle of the night."
+          }
+        },
+        "feat_1": {
+          "type": "feature",
+          "settings": {
+            "heading": "Fold-Over Hand Cuffs",
+            "body": "Built-in mitts keep newborns from scratching their face \u2014 folds back as they grow."
+          }
+        },
+        "feat_2": {
+          "type": "feature",
+          "settings": {
+            "heading": "Snug Fit for Safe Sleep",
+            "body": "Close-fitting design meets safe sleep guidelines. No excess fabric, no loose parts."
+          }
+        },
+        "feat_3": {
+          "type": "feature",
+          "settings": {
+            "heading": "Temperature-Regulating",
+            "body": "TENCEL\u2122 naturally wicks moisture and adapts to body temperature so baby doesn\u2019t overheat or get too cold."
+          }
+        }
+      },
+      "block_order": [
+        "feat_0",
+        "feat_1",
+        "feat_2",
+        "feat_3"
+      ]
+    }
+  },
+  "order": [
+    "lpc"
+  ]
+}

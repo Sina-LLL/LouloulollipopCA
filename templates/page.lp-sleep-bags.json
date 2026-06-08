@@ -1,0 +1,67 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "landing",
+  "sections": {
+    "lpc": {
+      "type": "lp-product-category",
+      "settings": {
+        "collection_handle": "sleep-bags",
+        "eyebrow": "Non-Toxic \u00b7 Canadian \u00b7 Award-Winning",
+        "headline": "Safer Sleep Starts Here",
+        "subheadline": "Our award-winning sleep sacks replace loose blankets so your baby sleeps safely and soundly \u2014 every single night.",
+        "cta_label": "Shop Sleep Bags",
+        "features_heading": "Why Parents Love It",
+        "materials_heading": "What It\u2019s Made Of",
+        "materials_body": "<p><strong>TENCEL\u2122 Modal</strong> \u2014 Naturally derived from sustainably sourced wood pulp. Softer than cotton, moisture-wicking, and temperature-regulating so baby doesn\u2019t overheat.</p><p><strong>Bamboo Muslin</strong> \u2014 Ultra-lightweight and breathable, ideal for 0.5 TOG warm-weather sleep. Gets softer with every wash.</p><p><strong>Waffle Knit</strong> \u2014 Textured weave provides gentle insulation with built-in airflow. Perfect for year-round comfort.</p><p>All fabrics are <strong>OEKO-TEX\u00ae certified</strong> \u2014 tested and verified free from over 100 harmful substances.</p>",
+        "products_heading": "Best Sellers"
+      },
+      "blocks": {
+        "feat_0": {
+          "type": "feature",
+          "settings": {
+            "heading": "No Loose Blankets",
+            "body": "Eliminates the #1 sleep hazard. Safe sleep guidelines recommend sleep sacks over blankets for babies under 12 months."
+          }
+        },
+        "feat_1": {
+          "type": "feature",
+          "settings": {
+            "heading": "Multiple TOG Options",
+            "body": "From 0.5 TOG for summer to 2.5 TOG for winter \u2014 one system for every season and room temperature."
+          }
+        },
+        "feat_2": {
+          "type": "feature",
+          "settings": {
+            "heading": "Easy On, Easy Off",
+            "body": "Two-way zip and shoulder snaps make middle-of-the-night changes effortless without fully waking your baby."
+          }
+        },
+        "feat_3": {
+          "type": "feature",
+          "settings": {
+            "heading": "Grows With Your Baby",
+            "body": "Available from newborn to size 5-6 years so you never need to switch systems as they grow."
+          }
+        }
+      },
+      "block_order": [
+        "feat_0",
+        "feat_1",
+        "feat_2",
+        "feat_3"
+      ]
+    }
+  },
+  "order": [
+    "lpc"
+  ]
+}

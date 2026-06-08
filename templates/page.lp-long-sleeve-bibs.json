@@ -1,0 +1,67 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "landing",
+  "sections": {
+    "lpc": {
+      "type": "lp-product-category",
+      "settings": {
+        "collection_handle": "long-sleeve-bibs",
+        "eyebrow": "Non-Toxic \u00b7 Machine Washable \u00b7 OEKO-TEX\u00ae",
+        "headline": "Full Coverage for Adventurous Little Eaters",
+        "subheadline": "Long sleeve bibs that protect clothes from shoulder to wrist. For the messiest meals, from first solids to toddler chaos.",
+        "cta_label": "Shop Long Sleeve Bibs",
+        "features_heading": "Why Parents Love It",
+        "materials_heading": "What It\u2019s Made Of",
+        "materials_body": "<p><strong>100% Cotton Muslin</strong> \u2014 Soft, breathable, and lightweight so little arms stay comfortable throughout the meal. Gets softer with every wash.</p><p><strong>Waterproof PUL Lining</strong> \u2014 Food-safe polyurethane laminate backing keeps moisture from soaking through to clothes, without adding bulk.</p><p>All fabrics are <strong>OEKO-TEX\u00ae certified</strong> \u2014 free from harmful substances and safe against baby\u2019s skin.</p>",
+        "products_heading": "Best Sellers"
+      },
+      "blocks": {
+        "feat_0": {
+          "type": "feature",
+          "settings": {
+            "heading": "Full Arm Coverage",
+            "body": "Covers sleeves completely \u2014 ideal for purees, pasta, and anything that ends up everywhere."
+          }
+        },
+        "feat_1": {
+          "type": "feature",
+          "settings": {
+            "heading": "Easy Pull-On Design",
+            "body": "Wide elasticated cuffs slip on and off without a fight. No fiddly clips or awkward snaps."
+          }
+        },
+        "feat_2": {
+          "type": "feature",
+          "settings": {
+            "heading": "Machine Washable",
+            "body": "Goes straight in the wash with the rest of the laundry. No hand-washing, no special care."
+          }
+        },
+        "feat_3": {
+          "type": "feature",
+          "settings": {
+            "heading": "Waterproof Backing",
+            "body": "Water-resistant inner layer keeps clothes dry even through the wettest meals."
+          }
+        }
+      },
+      "block_order": [
+        "feat_0",
+        "feat_1",
+        "feat_2",
+        "feat_3"
+      ]
+    }
+  },
+  "order": [
+    "lpc"
+  ]
+}
