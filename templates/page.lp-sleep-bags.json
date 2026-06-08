@@ -8,7 +8,7 @@
  * ------------------------------------------------------------
  */
 {
-  "layout": "landing",
+  "layout": "theme",
   "sections": {
     "hero": {
       "type": "image-with-text",
