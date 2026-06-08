@@ -12,15 +12,11 @@
   "sections": {
     "hero": {
       "type": "image-with-text",
-      "settings": {
-        "image_position": "right",
-        "text_alignment": "left"
-      },
       "blocks": {
         "eyebrow": {
           "type": "subheading",
           "settings": {
-            "subheading": "Non-Toxic \u00b7 Canadian \u00b7 Award-Winning"
+            "subheading": "Non-Toxic · Canadian · Award-Winning"
           }
         },
         "heading": {
@@ -33,24 +29,24 @@
         "body": {
           "type": "text",
           "settings": {
-            "text": "<p>Our award-winning sleep sacks replace loose blankets \u2014 the AAP's #1 safe sleep recommendation for babies under 12 months. Available in TENCEL\u2122, Muslin, and Waffle Knit from 0.5 to 2.5 TOG.</p>",
-            "enlarge_text": true
+            "text": "<p>Our award-winning sleep sacks replace loose blankets — the AAP's #1 safe sleep recommendation for babies under 12 months. Available in TENCEL™, Muslin, and Waffle Knit from 0.5 to 2.5 TOG.</p>",
+            "enlarge_text": false
           }
         },
         "btn1": {
           "type": "button",
           "settings": {
             "button_label": "Shop Sleep Bags",
-            "button_link": "/collections/sleep-bags",
+            "button_link": "shopify://collections/sleep-bags",
             "button_style": "primary"
           }
         },
         "btn2": {
           "type": "button",
           "settings": {
-            "button_label": "Why a Sleep Bag?",
-            "button_link": "#why-sleep-bags",
-            "button_style": "secondary"
+            "button_label": "Why TENCEL?",
+            "button_link": "shopify://pages/tencel-lyocell",
+            "button_style": "primary"
           }
         }
       },
@@ -60,15 +56,18 @@
         "body",
         "btn1",
         "btn2"
-      ]
+      ],
+      "settings": {
+        "image": "shopify://shop_images/LouLouLollipopMarch2026-07306_96b209be-b46f-422b-98e6-2dbe22479a7c.jpg",
+        "image_width": 700,
+        "image_link": "",
+        "image_position": "right",
+        "text_alignment": "left",
+        "color_scheme": "default"
+      }
     },
     "proof_bar": {
       "type": "lp-proof-bar",
-      "settings": {
-        "bg_color": "#1F2937",
-        "text_color": "#FAF6F0",
-        "accent_color": "#C9A04A"
-      },
       "blocks": {
         "p1": {
           "type": "stat",
@@ -87,7 +86,7 @@
         "p3": {
           "type": "stat",
           "settings": {
-            "label": "5,000+ \u2605\u2605\u2605\u2605\u2605",
+            "label": "5,000+ ★★★★★",
             "desc": "Reviews across sleep products"
           }
         },
@@ -104,37 +103,57 @@
         "p2",
         "p3",
         "p4"
-      ]
+      ],
+      "settings": {
+        "bg_color": "#6a8b95",
+        "text_color": "#ffffff",
+        "accent_color": "#ffc748"
+      }
     },
     "products": {
       "type": "featured-collection",
       "settings": {
         "title": "Shop the Sleep Bags",
-        "text": "<p>Every print, every TOG \u2014 in TENCEL\u2122, Muslin, and Waffle Knit.</p>",
+        "text": "<p>Every print, every size — all in our buttery-soft TENCEL™ Lyocell with the 2-way zip parents actually ask for.</p>",
         "collection": "sleep-bags",
+        "show_vendor": false,
+        "enable_carousel": false,
         "grid": 4,
         "rows": 2,
+        "color_scheme": "default",
         "show_view_all": true,
+        "full_width": false,
         "text_alignment": "center"
       }
     },
     "why_sleep_bags": {
       "type": "image-with-text",
-      "settings": {
-        "image_position": "right",
-        "text_alignment": "left"
-      },
       "blocks": {
         "heading": {
           "type": "heading",
           "settings": {
-            "title": "Why a Sleep Bag?"
+            "title": "Why TENCEL™ for Babies",
+            "use_h1": false
           }
         },
         "body": {
           "type": "text",
           "settings": {
-            "text": "<p>Babies can't kick off blankets \u2014 so loose blankets either get kicked away or pile up, both of which disrupt sleep. Sleep sacks stay on all night and eliminate loose fabric in the crib.</p><p>The AAP recommends wearable blankets over loose bedding for the first 12 months. Our sleep bags meet that recommendation without sacrificing comfort.</p><ul><li><strong>0.5 TOG</strong> \u2014 Lightweight muslin. Summer and warm rooms (24\u00b0C+).</li><li><strong>1.0 TOG</strong> \u2014 Year-round TENCEL\u2122. The most versatile option.</li><li><strong>2.5 TOG</strong> \u2014 Cosy TENCEL\u2122 or Waffle Knit. Winter and cool rooms (below 20\u00b0C).</li></ul>"
+            "text": "<p>Babies sweat. A lot. They can't regulate body temperature like adults, and bad sleepwear makes the problem worse — clammy fabric, restless nights, parents up at 2am with a wide-awake baby.</p><p>TENCEL™ Lyocell solves a real problem. It's a botanic fiber made from eucalyptus wood pulp, and independent testing shows it absorbs moisture roughly <strong>50% more efficiently than cotton</strong>. When cotton gets damp, it clings. TENCEL keeps wicking. That difference matters when your baby is in the same garment for 10–12 hours.</p><p></p>",
+            "enlarge_text": false
+          }
+        },
+        "icon_YBN7gf": {
+          "type": "icon",
+          "settings": {
+            "icon": "star"
+          }
+        },
+        "text_XTEGfk": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to give customers insight into your brand. Tell a story, explain a product detail, or describe a new promotion.</p>",
+            "enlarge_text": false
           }
         },
         "btn": {
@@ -149,33 +168,35 @@
       "block_order": [
         "heading",
         "body",
+        "icon_YBN7gf",
+        "text_XTEGfk",
         "btn"
-      ]
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._4th_2024_-Web-29_9f6671bc-e7d8-419c-9021-719736b78ca0.jpg",
+        "image_width": 700,
+        "image_link": "",
+        "image_position": "right",
+        "text_alignment": "left",
+        "color_scheme": "default"
+      }
     },
     "comparison": {
       "type": "lp-comparison",
-      "settings": {
-        "title": "Sleep Bag vs Loose Blanket",
-        "intro": "Loose blankets have been the default for generations. The research tells a different story.",
-        "col_ours": "Loulou Lollipop Sleep Bag",
-        "col_other": "Loose Blanket",
-        "bottom_line": "Bottom line: Sleep bags are the safer choice. Paediatricians and the AAP recommend wearable blankets over loose bedding for the first 12 months.",
-        "bg_color": "#FFFFFF"
-      },
       "blocks": {
         "r1": {
           "type": "row",
           "settings": {
             "feature": "AAP safe sleep compliant",
-            "our_value": "Yes \u2014 recommended over loose blankets",
-            "other_value": "No \u2014 not recommended under 12 months"
+            "our_value": "Yes — recommended over loose blankets",
+            "other_value": "No — not recommended under 12 months"
           }
         },
         "r2": {
           "type": "row",
           "settings": {
             "feature": "Stays on all night",
-            "our_value": "Always \u2014 can't be kicked off",
+            "our_value": "Always — can't be kicked off",
             "other_value": "Often kicked off, baby wakes cold"
           }
         },
@@ -184,7 +205,7 @@
           "settings": {
             "feature": "Temperature control",
             "our_value": "TOG-rated for room temperature",
-            "other_value": "Uncontrolled \u2014 too hot or too cold"
+            "other_value": "Uncontrolled — too hot or too cold"
           }
         },
         "r4": {
@@ -192,14 +213,14 @@
           "settings": {
             "feature": "Loose fabric in crib",
             "our_value": "None",
-            "other_value": "Yes \u2014 suffocation risk"
+            "other_value": "Yes — suffocation risk"
           }
         },
         "r5": {
           "type": "row",
           "settings": {
             "feature": "Flame-retardant chemicals",
-            "our_value": "None \u2014 OEKO-TEX certified fabrics",
+            "our_value": "None — OEKO-TEX certified fabrics",
             "other_value": "Often present in treated fabrics"
           }
         },
@@ -207,7 +228,7 @@
           "type": "row",
           "settings": {
             "feature": "Suitable from newborn",
-            "our_value": "Yes \u2014 from 0\u20133M up to size 4\u20135Y",
+            "our_value": "Yes — from 0–3M up to size 4–5Y",
             "other_value": "Not recommended until 12+ months"
           }
         }
@@ -219,25 +240,31 @@
         "r4",
         "r5",
         "r6"
-      ]
+      ],
+      "settings": {
+        "bg_color": "#ffffff",
+        "title": "Sleep Bag vs Loose Blanket",
+        "intro": "Loose blankets have been the default for generations. The research tells a different story.",
+        "col_ours": "Loulou Lollipop Sleep Bag",
+        "col_other": "Loose Blanket",
+        "bottom_line": "Bottom line: Sleep bags are the safer choice. Paediatricians and the AAP recommend wearable blankets over loose bedding for the first 12 months."
+      }
     },
     "safety": {
       "type": "image-with-text",
-      "settings": {
-        "image_position": "left",
-        "text_alignment": "left"
-      },
       "blocks": {
         "heading": {
           "type": "heading",
           "settings": {
-            "title": "Built for Safe Sleep"
+            "title": "Built for Safe Sleep",
+            "use_h1": false
           }
         },
         "body": {
           "type": "text",
           "settings": {
-            "text": "<p>Every Loulou Lollipop sleep bag is designed to meet safe sleep guidelines \u2014 no shortcuts.</p><ul><li><strong>No loose fabric</strong> \u2014 wearable design eliminates the #1 crib hazard</li><li><strong>OEKO-TEX\u00ae certified</strong> \u2014 independently tested, free from 100+ harmful substances</li><li><strong>No flame-retardant chemicals</strong> \u2014 ever. The fabric is the safety feature</li><li><strong>AAP-aligned</strong> \u2014 wearable sleepwear is preferred over loose blankets for the first 12 months</li><li><strong>Shoulder snaps + 2-way zip</strong> \u2014 easy diaper changes without unwrapping baby</li></ul>"
+            "text": "<p>Every Loulou Lollipop sleep bag is designed to meet safe sleep guidelines — no shortcuts.</p><ul><li><strong>No loose fabric</strong> — wearable design eliminates the #1 crib hazard</li><li><strong>OEKO-TEX® certified</strong> — independently tested, free from 100+ harmful substances</li><li><strong>No flame-retardant chemicals</strong> — ever. The fabric is the safety feature</li><li><strong>AAP-aligned</strong> — wearable sleepwear is preferred over loose blankets for the first 12 months</li><li><strong>Shoulder snaps + 2-way zip</strong> — easy diaper changes without unwrapping baby</li></ul>",
+            "enlarge_text": false
           }
         },
         "btn": {
@@ -253,37 +280,49 @@
         "heading",
         "body",
         "btn"
-      ]
+      ],
+      "settings": {
+        "image_width": 700,
+        "image_link": "",
+        "image_position": "left",
+        "text_alignment": "left",
+        "color_scheme": "default"
+      }
     },
     "reviews": {
       "type": "testimonials",
-      "settings": {
-        "title": "What Parents Say",
-        "layout": "grid"
-      },
       "blocks": {
         "r1": {
           "type": "testimonial",
           "settings": {
             "star_rating": 5,
-            "testimonial": "We've tried three different brands and these are the only sleep bags our daughter doesn't fight at bedtime. The TENCEL fabric is so soft \u2014 you can feel the difference.",
-            "author": "Sarah K."
+            "testimonial-title": "Customer Review Title",
+            "testimonial": "We've tried three different brands and these are the only sleep bags our daughter doesn't fight at bedtime. The TENCEL fabric is so soft — you can feel the difference.",
+            "author": "Sarah K.",
+            "image_caption": "",
+            "link": ""
           }
         },
         "r2": {
           "type": "testimonial",
           "settings": {
             "star_rating": 5,
+            "testimonial-title": "Customer Review Title",
             "testimonial": "My son was waking up every time his blanket came off. Switched to the 1.0 TOG sleep bag and he's sleeping through. Worth every penny.",
-            "author": "Megan T."
+            "author": "Megan T.",
+            "image_caption": "",
+            "link": ""
           }
         },
         "r3": {
           "type": "testimonial",
           "settings": {
             "star_rating": 5,
-            "testimonial": "The 2.5 TOG waffle knit for winter is unreal. He looks forward to putting it on. We have four now \u2014 different TOGs for different seasons.",
-            "author": "Jamie R."
+            "testimonial-title": "Customer Review Title",
+            "testimonial": "The 2.5 TOG waffle knit for winter is unreal. He looks forward to putting it on. We have four now — different TOGs for different seasons.",
+            "author": "Jamie R.",
+            "image_caption": "",
+            "link": ""
           }
         }
       },
@@ -291,7 +330,18 @@
         "r1",
         "r2",
         "r3"
-      ]
+      ],
+      "settings": {
+        "title": "What Parents Say",
+        "layout": "grid",
+        "text_caps": false,
+        "quote_text_size": 30,
+        "quote_text_size_mobile": 20,
+        "image_shape": "square",
+        "color_scheme": "default",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
     },
     "bundles": {
       "type": "featured-collection",
@@ -299,37 +349,38 @@
         "title": "Save with a Sleep Starter Bundle",
         "text": "<p>Pair the sleep bag with the swaddle and fitted sheet your baby will actually use. Same print, fully coordinated.</p>",
         "collection": "baby-sleep-system-bundle",
+        "show_vendor": false,
+        "enable_carousel": true,
         "grid": 4,
         "rows": 1,
+        "color_scheme": "default",
         "show_view_all": true,
+        "full_width": false,
         "text_alignment": "center"
       }
     },
     "care": {
       "type": "collapsible-tabs",
-      "settings": {
-        "title": "Care & Sizing"
-      },
       "blocks": {
         "wash": {
           "type": "question",
           "settings": {
             "title": "How do I wash a sleep bag?",
-            "answer": "<p>Machine wash cold on a gentle cycle. Tumble dry low or hang dry. No bleach, no fabric softener \u2014 softener coats the fibres and reduces moisture-wicking performance on TENCEL\u2122.</p>"
+            "answer": "<p>Machine wash cold on a gentle cycle. Tumble dry low or hang dry. No bleach, no fabric softener — softener coats the fibres and reduces moisture-wicking performance on TENCEL™.</p>"
           }
         },
         "size": {
           "type": "question",
           "settings": {
             "title": "What size should I get?",
-            "answer": "<p>Sleep bags are sized by weight and height, not age. Check the size guide on the product page for exact measurements. When between sizes, size up \u2014 there should be room to kick and move.</p>"
+            "answer": "<p>Sleep bags are sized by weight and height, not age. Check the size guide on the product page for exact measurements. When between sizes, size up — there should be room to kick and move.</p>"
           }
         },
         "tog": {
           "type": "question",
           "settings": {
             "title": "Which TOG do I need?",
-            "answer": "<p>0.5 TOG for rooms 24\u00b0C and above. 1.0 TOG for year-round use in rooms 20\u201324\u00b0C. 2.5 TOG for cool rooms below 20\u00b0C or winter use. Always check room temperature before dressing baby for sleep.</p>"
+            "answer": "<p>0.5 TOG for rooms 24°C and above. 1.0 TOG for year-round use in rooms 20–24°C. 2.5 TOG for cool rooms below 20°C or winter use. Always check room temperature before dressing baby for sleep.</p>"
           }
         }
       },
@@ -337,40 +388,40 @@
         "wash",
         "size",
         "tog"
-      ]
+      ],
+      "settings": {
+        "title": "Care & Sizing"
+      }
     },
     "faq": {
       "type": "collapsible-tabs",
-      "settings": {
-        "title": "Frequently Asked Questions"
-      },
       "blocks": {
         "q1": {
           "type": "question",
           "settings": {
             "title": "When can a baby start using a sleep bag?",
-            "answer": "<p>From birth. Our sleep bags start at 0\u20133M (3\u20136kg). Ensure the neck opening is snug enough that baby can't slip inside \u2014 check the size guide.</p>"
+            "answer": "<p>From birth. Our sleep bags start at 0–3M (3–6kg). Ensure the neck opening is snug enough that baby can't slip inside — check the size guide.</p>"
           }
         },
         "q2": {
           "type": "question",
           "settings": {
-            "title": "Is TENCEL\u2122 safe for newborns?",
-            "answer": "<p>Yes. TENCEL\u2122 Lyocell is naturally hypoallergenic and listed by the National Eczema Society as suitable for sensitive skin. All our fabrics are OEKO-TEX\u00ae certified.</p>"
+            "title": "Is TENCEL™ safe for newborns?",
+            "answer": "<p>Yes. TENCEL™ Lyocell is naturally hypoallergenic and listed by the National Eczema Society as suitable for sensitive skin. All our fabrics are OEKO-TEX® certified.</p>"
           }
         },
         "q3": {
           "type": "question",
           "settings": {
             "title": "Can my baby wear a sleeper under the sleep bag?",
-            "answer": "<p>Yes \u2014 most parents do. A fitted TENCEL\u2122 sleeper under a 1.0 TOG bag is the most common combo. Avoid too many layers: one more layer than an adult would wear is a good rule of thumb.</p>"
+            "answer": "<p>Yes — most parents do. A fitted TENCEL™ sleeper under a 1.0 TOG bag is the most common combo. Avoid too many layers: one more layer than an adult would wear is a good rule of thumb.</p>"
           }
         },
         "q4": {
           "type": "question",
           "settings": {
             "title": "What's the difference between TENCEL, Muslin, and Waffle Knit?",
-            "answer": "<p>TENCEL\u2122 Modal is the softest and most temperature-regulating \u2014 great year-round. Bamboo Muslin is ultra-lightweight and breathable, ideal for warm weather (0.5 TOG). Waffle Knit provides gentle insulation with built-in airflow \u2014 perfect for the 2.5 TOG winter option.</p>"
+            "answer": "<p>TENCEL™ Modal is the softest and most temperature-regulating — great year-round. Bamboo Muslin is ultra-lightweight and breathable, ideal for warm weather (0.5 TOG). Waffle Knit provides gentle insulation with built-in airflow — perfect for the 2.5 TOG winter option.</p>"
           }
         },
         "q5": {
@@ -395,20 +446,20 @@
         "q4",
         "q5",
         "q6"
-      ]
+      ],
+      "settings": {
+        "title": "Frequently Asked Questions"
+      }
     },
     "related": {
       "type": "collection-list",
-      "settings": {
-        "title": "Keep Exploring",
-        "grid": 3
-      },
       "blocks": {
         "c1": {
           "type": "collection",
           "settings": {
             "collection": "sleepers",
-            "subheading": "Footed pajamas \u00b7 TENCEL\u2122",
+            "tag": "",
+            "subheading": "Footed pajamas · TENCEL™",
             "button_label": "Shop Sleepers"
           }
         },
@@ -416,7 +467,8 @@
           "type": "collection",
           "settings": {
             "collection": "swaddles",
-            "subheading": "Breathable bamboo muslin swaddles",
+            "tag": "",
+            "subheading": "Breathable muslin swaddles",
             "button_label": "Shop Swaddles"
           }
         },
@@ -424,6 +476,7 @@
           "type": "collection",
           "settings": {
             "collection": "baby-sleep-system-bundle",
+            "tag": "",
             "subheading": "Sleep bag + swaddle + sheet",
             "button_label": "Shop Bundles"
           }
@@ -433,13 +486,24 @@
         "c1",
         "c2",
         "c3"
-      ]
-    },
-    "sticky_cta": {
-      "type": "lp-sticky-cta",
+      ],
       "settings": {
-        "label": "Shop Sleep Bags \u2192",
-        "link": "/collections/sleep-bags"
+        "title": "Keep Exploring",
+        "text": "",
+        "text_alignment": "start",
+        "enable_carousel": true,
+        "grid": 3,
+        "color_scheme": "default",
+        "full_width": true,
+        "coll_grid_image_shape": "square",
+        "coll_grid_image_position": "center center",
+        "coll_thumb_mob_per_row": "2",
+        "coll_grid_show_count": true,
+        "coll_text_position": "below",
+        "coll_text_position_under_mobile": false,
+        "coll_thumb_text_align_x": "center",
+        "coll_thumb_text_align_y": "center",
+        "coll_button_style": "primary"
       }
     }
   },
@@ -454,7 +518,6 @@
     "bundles",
     "care",
     "faq",
-    "related",
-    "sticky_cta"
+    "related"
   ]
 }
