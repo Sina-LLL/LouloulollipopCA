@@ -61,7 +61,7 @@
         "image": "shopify://shop_images/LouLouLollipopMarch2026-07306_96b209be-b46f-422b-98e6-2dbe22479a7c.jpg",
         "image_width": 700,
         "image_link": "",
-        "image_position": "right",
+        "image_position": "below",
         "text_alignment": "left",
         "color_scheme": "default"
       }
@@ -113,8 +113,8 @@
     "products": {
       "type": "featured-collection",
       "settings": {
-        "title": "Shop the Sleep Bags",
-        "text": "<p>Every print, every size — all in our buttery-soft TENCEL™ Lyocell with the 2-way zip parents actually ask for.</p>",
+        "title": "Shop Sleep Bags",
+        "text": "<p>Every print, every size — all in our buttery-soft TENCEL™ Lyocell or breathable bamboo muslin with the 2-way zip parents actually ask for.</p>",
         "collection": "sleep-bags",
         "show_vendor": false,
         "enable_carousel": false,
@@ -176,7 +176,7 @@
         "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._4th_2024_-Web-29_9f6671bc-e7d8-419c-9021-719736b78ca0.jpg",
         "image_width": 700,
         "image_link": "",
-        "image_position": "right",
+        "image_position": "below",
         "text_alignment": "left",
         "color_scheme": "default"
       }
@@ -242,7 +242,7 @@
         "r6"
       ],
       "settings": {
-        "bg_color": "#ffffff",
+        "bg_color": "#faf9f6",
         "title": "Sleep Bag vs Loose Blanket",
         "intro": "Loose blankets have been the default for generations. Here's how they actually stack up.",
         "col_ours": "Loulou Lollipop Sleep Bag",
@@ -263,7 +263,7 @@
         "body": {
           "type": "text",
           "settings": {
-            "text": "<p>Every Loulou Lollipop sleep bag is built around the details that make a real difference at 2am.</p><ul><li><strong>TENCEL™ Lyocell fabric</strong> — moisture-wicking and temperature-regulating, keeping baby comfortable all night</li><li><strong>2-way zipper</strong> — opens from the bottom for quick diaper changes without fully unwrapping baby</li><li><strong>Sleeveless design</strong> — free arm movement for natural sleep positions</li><li><strong>Hidden seams + zipper guard</strong> — smooth against delicate skin, no friction points</li><li><strong>Wearable design</strong> — stays on all night, no loose fabric bunching or shifting</li><li><strong>TOG-rated in 0.5, 1.0, and 2.5</strong> — matched to room temperature so baby is never too hot or too cold</li></ul>",
+            "text": "<p>Every Loulou Lollipop sleep bag is built around the details that make a real difference at 2am.</p><ul><li><strong>2-way zipper</strong> — opens from the bottom for quick diaper changes without fully unwrapping baby</li><li><strong>Sleeveless design</strong> — free arm movement for natural sleep positions</li><li><strong>Hidden seams + zipper guard</strong> — smooth against delicate skin, no friction points</li><li><strong>Wearable design</strong> — stays on all night, no loose fabric bunching or shifting</li><li><strong>TOG-rated in 0.5, 1.0, and 2.5</strong> — matched to room temperature so baby is never too hot or too cold</li></ul>",
             "enlarge_text": false
           }
         },
@@ -282,6 +282,7 @@
         "btn"
       ],
       "settings": {
+        "image": "shopify://shop_images/BA9004U.APS_Tencel_Sleep_Bag_1.0_TOG_-_Alphabet_Smiles_52.jpg",
         "image_width": 700,
         "image_link": "",
         "image_position": "left",
