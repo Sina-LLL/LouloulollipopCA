@@ -126,61 +126,6 @@
         "text_alignment": "center"
       }
     },
-    "why_sleep_bags": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "title": "Why TENCEL™ for Babies",
-            "use_h1": false
-          }
-        },
-        "body": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Babies sweat. A lot. They can't regulate body temperature like adults, and bad sleepwear makes the problem worse — clammy fabric, restless nights, parents up at 2am with a wide-awake baby.</p><p>TENCEL™ Lyocell solves a real problem. It's a botanic fiber made from eucalyptus wood pulp, and independent testing shows it absorbs moisture roughly <strong>50% more efficiently than cotton</strong>. When cotton gets damp, it clings. TENCEL keeps wicking. That difference matters when your baby is in the same garment for 10–12 hours.</p>",
-            "enlarge_text": false
-          }
-        },
-        "icon_YBN7gf": {
-          "type": "icon",
-          "settings": {
-            "icon": "star"
-          }
-        },
-        "text_XTEGfk": {
-          "type": "text",
-          "settings": {
-            "text": "<p><strong>TENCEL™ Lyocell by Lenzing</strong> — smooth, continuous fibres that lie flat against skin. Less friction, less irritation, and more comfortable for babies who wear the same garment for 10–12 hours a night.</p>",
-            "enlarge_text": false
-          }
-        },
-        "btn": {
-          "type": "button",
-          "settings": {
-            "button_label": "Shop Sleep Bags",
-            "button_link": "/collections/sleep-bags",
-            "button_style": "primary"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "body",
-        "icon_YBN7gf",
-        "text_XTEGfk",
-        "btn"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._4th_2024_-Web-29_9f6671bc-e7d8-419c-9021-719736b78ca0.jpg",
-        "image_width": 700,
-        "image_link": "",
-        "image_position": "below",
-        "text_alignment": "left",
-        "color_scheme": "default"
-      }
-    },
     "comparison": {
       "type": "lp-comparison",
       "blocks": {
@@ -512,7 +457,6 @@
     "hero",
     "proof_bar",
     "products",
-    "why_sleep_bags",
     "comparison",
     "safety",
     "reviews",
