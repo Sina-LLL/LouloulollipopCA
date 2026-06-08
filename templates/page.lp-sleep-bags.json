@@ -319,6 +319,60 @@
         "color_scheme": "default"
       }
     },
+    "178096046403bd84d9": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_cards_carousel_hxPhx9": {
+          "type": "shopify://apps/judge-me-reviews/blocks/cards_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "show_sample_reviews": true,
+            "reviews_selection": "product_reviews",
+            "products": [
+              "muslin-lightweight-sleep-bag-0-5-tog-all-aboard",
+              "muslin-lightweight-sleep-bags-0-5-tog-alphabet-smiles",
+              "muslin-lightweight-sleep-bag-0-5-tog-animal-puzzle",
+              "muslin-lightweight-sleep-bag-0-5-tog-astro-explorers",
+              "muslin-lightweight-sleep-bag-0-5-tog-baby-dinomite",
+              "muslin-lightweight-sleep-bag-0-5-tog-bears-on-bikes",
+              "muslin-lightweight-sleep-bag-0-5-tog-bumble-bees",
+              "muslin-lightweight-sleep-bags-0-5-tog-bunny-meadow",
+              "muslin-lightweight-sleep-bags-0-5-tog-canada",
+              "muslin-lightweight-sleep-bag-0-5-tog-camper-vans"
+            ],
+            "star_rating": "all",
+            "show_review_media": true,
+            "display_order": "media_first",
+            "no_image_fallback": "review_text_only",
+            "max_reviews": 6,
+            "review_length": "small",
+            "text_size": "medium",
+            "image_ratio": "1",
+            "reviews_shown": 4,
+            "show_reviewer_name": true,
+            "show_product_name": true,
+            "hide_arrows_mobile": true,
+            "arrows_position": "sides",
+            "max_width": 1100,
+            "corner_styling": "soft",
+            "header_text_color": "#1d1d1d",
+            "text_color": "#1d1d1d",
+            "card_color": "#F9F9F9",
+            "stars_color": "",
+            "arrows_color": "#000000",
+            "transition_speed": 10,
+            "header_text": "What Parents Say",
+            "show_average_rating": true
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_cards_carousel_hxPhx9"
+      ],
+      "settings": {
+        "full_width": false,
+        "show_space": true
+      }
+    },
     "reviews": {
       "type": "testimonials",
       "blocks": {
@@ -368,7 +422,7 @@
         "quote_text_size": 30,
         "quote_text_size_mobile": 20,
         "image_shape": "square",
-        "color_scheme": "default",
+        "color_scheme": "2",
         "autoplay": true,
         "autoplay_speed": 5
       }
@@ -544,6 +598,7 @@
     "why_sleep_bags",
     "comparison",
     "safety",
+    "178096046403bd84d9",
     "reviews",
     "bundles",
     "care",
