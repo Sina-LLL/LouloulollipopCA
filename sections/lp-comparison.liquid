@@ -3,10 +3,10 @@
     {%- if section.settings.title != blank or section.settings.intro != blank -%}
       <div class="lp-comparison__head">
         {%- if section.settings.title != blank -%}
-          <h2>{{ section.settings.title }}</h2>
+          <h2 class="majortitle">{{ section.settings.title }}</h2>
         {%- endif -%}
         {%- if section.settings.intro != blank -%}
-          <p class="">{{ section.settings.intro }}</p>
+          <p class="lp-comparison__intro">{{ section.settings.intro }}</p>
         {%- endif -%}
       </div>
     {%- endif -%}
@@ -51,9 +51,8 @@
     margin: 0 auto 48px;
   }
   #section-id-{{ section.id }} .lp-comparison__intro {
-    font-size: 1.1rem;
-    color: var(--color-text);
-    opacity: 0.7;
+    color: rgb(var(--text-color));
+    opacity: 0.75;
     margin-top: 12px;
   }
   #section-id-{{ section.id }} .lp-comparison__wrap {
@@ -63,45 +62,55 @@
   #section-id-{{ section.id }} .lp-comparison__table {
     width: 100%;
     border-collapse: collapse;
-    background: #fff;
-    border: 1px solid #6A8B95;
+    background: rgb(var(--bg-color));
+    border: 1px solid rgb(var(--text-color) / var(--divider-opacity));
     border-radius: 6px;
     overflow: hidden;
-    font-size: 0.95rem;
   }
   #section-id-{{ section.id }} .lp-comparison__table thead {
-    background: #D1E3E6;
+    background: rgb(var(--text-color) / 0.06);
+  }
+  #section-id-{{ section.id }} .lp-comparison__table thead th {
     font-family: var(--heading-font-family);
+    font-style: var(--heading-font-style);
+    font-weight: var(--heading-font-weight);
+    letter-spacing: var(--heading-font-letter-spacing);
+    color: rgb(var(--text-color));
   }
   #section-id-{{ section.id }} .lp-comparison__table th,
   #section-id-{{ section.id }} .lp-comparison__table td {
     padding: 15px 20px;
     text-align: left;
-    border-bottom: 1px solid #6A8B95;
+    border-bottom: 1px solid rgb(var(--text-color) / var(--divider-opacity));
+    color: rgb(var(--text-color));
+    font-family: var(--base-font-family);
+    font-style: var(--base-font-style);
+    font-weight: var(--base-font-weight);
   }
   #section-id-{{ section.id }} .lp-comparison__table tbody tr:last-child td {
     border-bottom: none;
   }
-  #section-id-{{ section.id }} .lp-comparison__feature { font-weight: 600; }
-  #section-id-{{ section.id }} .lp-comparison__col-ours {
-    background: #BAD5D9;
-    font-weight: 500;
+  #section-id-{{ section.id }} .lp-comparison__feature {
+    font-weight: var(--heading-font-weight);
   }
-  #section-id-{{ section.id }} .lp-comparison__col-ours{
-    font-weight:600;
+  #section-id-{{ section.id }} .lp-comparison__col-ours {
+    background: rgb(var(--text-color) / 0.04);
   }
   #section-id-{{ section.id }} .lp-comparison__bottom-line {
     margin-top: 28px;
     padding: 18px 22px;
-    background: #D1E3E6;
-    border-left: 4px solid #6A8B95;
+    background: rgb(var(--text-color) / 0.05);
+    border-left: 4px solid rgb(var(--btn-border-color));
     border-radius: 4px;
-    font-size: 0.95rem;
+    color: rgb(var(--text-color));
+    font-family: var(--base-font-family);
+    font-style: var(--base-font-style);
+    font-weight: var(--base-font-weight);
   }
   @media (max-width: 640px) {
     #section-id-{{ section.id }} { padding: 48px 0; }
     #section-id-{{ section.id }} .lp-comparison__table th,
-    #section-id-{{ section.id }} .lp-comparison__table td { padding: 10px 12px; font-size: 0.82rem; }
+    #section-id-{{ section.id }} .lp-comparison__table td { padding: 10px 12px; }
   }
 </style>
 
@@ -121,9 +130,9 @@
       "type": "row",
       "name": "Row",
       "settings": [
-        { "type": "text", "id": "feature",     "label": "Feature"        },
-        { "type": "text", "id": "our_value",   "label": "Our value"      },
-        { "type": "text", "id": "other_value", "label": "Other value"    }
+        { "type": "text", "id": "feature",     "label": "Feature"     },
+        { "type": "text", "id": "our_value",   "label": "Our value"   },
+        { "type": "text", "id": "other_value", "label": "Other value" }
       ]
     }
   ],

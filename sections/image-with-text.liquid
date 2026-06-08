@@ -4,115 +4,63 @@
   else
     assign size_cols_desktop = 2
   endif
-  assign image_below = false
-  if section.settings.image_position == 'below'
-    assign image_below = true
-  endif
 -%}
-
-{%- if image_below -%}
-  {% style %}
-    #shopify-section-{{ section.id }} .iwt-below-grid {
-      display: flex;
-      flex-direction: column;
-    }
-    #shopify-section-{{ section.id }} .iwt-top-text,
-    #shopify-section-{{ section.id }} .iwt-image-col {
-      margin-bottom: 40px;
-    }
-    @media (min-width: 768px) {
-      #shopify-section-{{ section.id }} .iwt-below-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 40px;
-        align-items: start;
-      }
-      #shopify-section-{{ section.id }} .iwt-top-text {
-        grid-column: 1;
-        grid-row: 1;
-        align-self: end;
-        margin-bottom: 0;
-      }
-      #shopify-section-{{ section.id }} .iwt-image-col {
-        grid-column: 2;
-        grid-row: 1 / span 2;
-        align-self: center;
-        margin-bottom: 0;
-      }
-      #shopify-section-{{ section.id }} .iwt-bottom-text {
-        grid-column: 1;
-        grid-row: 2;
-        align-self: start;
-      }
-    }
-  {% endstyle %}
-{%- endif -%}
-
 <div class="{% if section.settings.color_scheme != 'default' %}use-color-scheme use-color-scheme--{{ section.settings.color_scheme }} fully-padded-row--medium{% else %}fully-spaced-row--medium{% endif %}">
   <div class="container">
+    <div class="flexible-layout valign-middle">
+      <div class="column column--half {% if section.settings.image_position == 'right' %}column--order-push-desktop{% endif %}">
+        {% if section.settings.image_link != blank %}<a class="block-link" href="{{ section.settings.image_link }}">{% endif %}
+          <div class="image-overlap" style="max-width: {{ section.settings.image_width }}px">
+            <div class="image-overlap__image image-overlap__image-1">
+              <div class="fade-in-up" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.1s"' -%}>
+                {%- if section.settings.image == blank -%}
+                  <div class="placeholder-image">{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}</div>
+                {%- else -%}
+                  {%- render 'image' with section.settings.image, size_cols_desktop: size_cols_desktop -%}
+                {%- endif -%}
+              </div>
+            </div>
 
-    {%- if image_below -%}
-
-      <div class="iwt-below-grid">
-
-        <div class="iwt-top-text feature-text-paired align-ltr-{{ section.settings.text_alignment }}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
-          {%- for block in section.blocks -%}
-            {%- if block.type == 'heading' -%}
-              {%- if block.settings.use_h1 -%}
-                <h1 class="majortitle in-content" {{ block.shopify_attributes }}>{{ block.settings.title | escape }}</h1>
-              {%- else -%}
-                <h2 class="majortitle in-content h1" {{ block.shopify_attributes }}>{{ block.settings.title | escape }}</h2>
-              {%- endif -%}
-            {%- elsif block.type == 'subheading' -%}
-              <div class="subheading subheading--over lightish-spaced-row-above" {{ block.shopify_attributes }}>{{ block.settings.subheading | escape }}</div>
-            {%- endif -%}
-          {%- endfor -%}
-        </div>
-
-        <div class="iwt-image-col">
-          {% if section.settings.image_link != blank %}<a class="block-link" href="{{ section.settings.image_link }}">{% endif %}
-            <div class="image-overlap" style="max-width: {{ section.settings.image_width }}px">
-              <div class="image-overlap__image image-overlap__image-1">
-                <div class="fade-in-up" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.1s"' -%}>
-                  {%- if section.settings.image == blank -%}
+            {%- if section.settings.image == blank or section.settings.image_2 != blank -%}
+              <div class="image-overlap__image image-overlap__image-2">
+                <div class="fade-in-up" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.3s"' -%}>
+                  {%- if section.settings.image_2 == blank -%}
                     <div class="placeholder-image">{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}</div>
                   {%- else -%}
-                    {%- render 'image' with section.settings.image, size_cols_desktop: size_cols_desktop -%}
+                    {%- render 'image' with section.settings.image_2, size_cols_desktop: size_cols_desktop -%}
                   {%- endif -%}
                 </div>
               </div>
-              {%- if section.settings.image == blank or section.settings.image_2 != blank -%}
-                <div class="image-overlap__image image-overlap__image-2">
-                  <div class="fade-in-up" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.3s"' -%}>
-                    {%- if section.settings.image_2 == blank -%}
-                      <div class="placeholder-image">{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}</div>
-                    {%- else -%}
-                      {%- render 'image' with section.settings.image_2, size_cols_desktop: size_cols_desktop -%}
-                    {%- endif -%}
-                  </div>
-                </div>
-              {%- endif -%}
-            </div>
-          {% if section.settings.image_link != blank %}</a>{% endif %}
-        </div>
+            {%- endif -%}
+          </div>
+        {% if section.settings.image_link != blank %}</a>{% endif %}
+      </div>
 
-        <div class="iwt-bottom-text feature-text-paired align-ltr-{{ section.settings.text_alignment }}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
-          {%- assign skip_block_count = 0 -%}
-          {%- for block in section.blocks -%}
+      <div class="column column--half align-ltr-{{ section.settings.text_alignment }}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
+        <div class="feature-text-paired">
+          {% assign skip_block_count = 0 %}
+          {% for block in section.blocks %}
             {%- liquid
               if skip_block_count > 0
                 assign skip_block_count = skip_block_count | minus: 1
                 continue
               endif
-              if block.type == 'heading' or block.type == 'subheading'
-                continue
-              endif
             -%}
-            {%- case block.type -%}
-              {%- when 'text' -%}
+            {% case block.type %}
+              {% when 'heading' %}
+                {% if block.settings.use_h1 %}
+                  <h1 class="majortitle in-content" {{ block.shopify_attributes }}>{{ block.settings.title | escape }}</h1>
+                {% else %}
+                  <h2 class="majortitle in-content h1" {{ block.shopify_attributes }}>{{ block.settings.title | escape }}</h2>
+                {% endif %}
+
+              {% when 'subheading' %}
+                <div class="subheading subheading--over lightish-spaced-row-above" {{ block.shopify_attributes }}>{{ block.settings.subheading | escape }}</div>
+
+              {% when 'text' %}
                 <div class="rte lightly-spaced-row {% if block.settings.enlarge_text %}large-text{% endif %}" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
 
-              {%- when 'button' -%}
+              {% when 'button' %}
                 <div class="lightly-spaced-row button-row" {{ block.shopify_attributes }}>
                   <a class="{% if block.settings.button_style != 'link' %}btn btn--{{ block.settings.button_style }}{% else %}small-feature-link{% endif %} button-row__btn" href="{{ block.settings.button_link }}">{{ block.settings.button_label | escape }}</a>
                   {%- assign skip_block_count = 0 -%}
@@ -126,7 +74,7 @@
                   {%- endfor -%}
                 </div>
 
-              {%- when 'image' -%}
+              {% when 'image' %}
                 <div class="lightly-spaced-row lightish-spaced-row-above inline-width-container" style="width: {{ block.settings.image_width }}px" {{ block.shopify_attributes }}>
                   {% if block.settings.url != blank %}<a href="{{ block.settings.url }}">{% endif %}
                     {% if block.settings.image != blank %}
@@ -136,140 +84,124 @@
                         render 'image' with block.settings.image, sizes: image_sizes, widths: image_widths
                       -%}
                     {% else %}
-                      <div class="placeholder-image">{{- 'image' | placeholder_svg_tag: 'placeholder-svg' -}}</div>
+                      <div class="placeholder-image">
+                        {{- 'image' | placeholder_svg_tag: 'placeholder-svg' -}}
+                      </div>
                     {% endif %}
                   {% if block.settings.url != blank %}</a>{% endif %}
                 </div>
 
-              {%- when 'icon' -%}
+              {% when 'icon' %}
                 <div class="lightly-spaced-row" {{ block.shopify_attributes }}>
-                  <span class="large-light-icon">{% render 'icon', icon: block.settings.icon, size: 'medium' %}</span>
+                  <span class="large-light-icon">
+                    {% render 'icon', icon: block.settings.icon, size: 'medium' %}
+                  </span>
+                </div>
+
+              {%- when 'list_item' -%}
+                {%- unless iwt_list_css_done -%}
+                  {%- assign iwt_list_css_done = true -%}
+                  {% style %}
+                    .iwt-list-item {
+                      display: flex;
+                      align-items: flex-start;
+                      gap: 18px;
+                      padding: 16px 0;
+                    }
+                    .iwt-list-item + .iwt-list-item {
+                      border-top: 1px solid rgb(var(--text-color) / var(--divider-opacity));
+                    }
+                    .iwt-list-item__marker {
+                      flex-shrink: 0;
+                      width: 52px;
+                      height: 52px;
+                      border-radius: 50%;
+                      border: 1.5px solid rgb(var(--btn-border-color));
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                    }
+                    .iwt-list-item__number {
+                      font-family: var(--heading-font-family);
+                      font-style: var(--heading-font-style);
+                      font-size: 1.35rem;
+                      line-height: 1;
+                      color: rgb(var(--btn-border-color));
+                    }
+                    .iwt-list-item__icon {
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      color: rgb(var(--btn-border-color));
+                    }
+                    .iwt-list-item__icon svg {
+                      width: 22px;
+                      height: 22px;
+                    }
+                    .iwt-list-item__content {
+                      flex: 1;
+                      min-width: 0;
+                      padding-top: 10px;
+                    }
+                    .iwt-list-item__title {
+                      font-family: var(--heading-font-family);
+                      font-weight: var(--heading-font-weight);
+                      font-style: var(--heading-font-style);
+                      font-size: 1rem;
+                      color: rgb(var(--text-color));
+                      margin: 0 0 6px;
+                      line-height: 1.4;
+                    }
+                    .iwt-list-item__body {
+                      color: rgb(var(--text-color));
+                      opacity: 0.65;
+                      margin: 0;
+                      line-height: 1.6;
+                    }
+                  {% endstyle %}
+                {%- endunless -%}
+                <div class="iwt-list-item" {{ block.shopify_attributes }}>
+                  <div class="iwt-list-item__marker">
+                    {%- if block.settings.use_icon -%}
+                      <span class="iwt-list-item__icon">{% render 'icon', icon: block.settings.icon, size: 'small' %}</span>
+                    {%- else -%}
+                      <span class="iwt-list-item__number">{{ block.settings.number | escape }}</span>
+                    {%- endif -%}
+                  </div>
+                  <div class="iwt-list-item__content">
+                    {%- if block.settings.title != blank -%}
+                      <p class="iwt-list-item__title">{{ block.settings.title | escape }}</p>
+                    {%- endif -%}
+                    {%- if block.settings.text != blank -%}
+                      <p class="iwt-list-item__body">{{ block.settings.text | escape }}</p>
+                    {%- endif -%}
+                  </div>
                 </div>
 
               {%- when 'countdown' -%}
                 <script src="{{ 'countdown-timer.js' | asset_url }}" defer></script>
                 {% style %}
-                  .block-id-{{ block.id }} .countdown { --countdown-desktop-size: {{ block.settings.number_size }}px; }
+                  .block-id-{{ block.id }} .countdown {
+                    --countdown-desktop-size: {{ block.settings.number_size }}px;
+                  }
                 {% endstyle %}
+
                 <div class="block-id-{{ block.id }} lightly-spaced-row lightish-spaced-row-above countdown-font-{{ block.settings.number_font }} countdown-divider-{{ block.settings.divider_type }}" {{ block.shopify_attributes }}>
-                  {% render 'countdown-timer', end_date: block.settings.end_date, end_time: block.settings.end_time, end_text: block.settings.end_text, end_midnight: true, hide_on_end: block.settings.hide_on_end, show_labels: block.settings.show_timer_labels %}
+                  {% render 'countdown-timer',
+                    end_date: block.settings.end_date,
+                    end_time: block.settings.end_time,
+                    end_text: block.settings.end_text,
+                    end_midnight: true,
+                    hide_on_end: block.settings.hide_on_end,
+                    show_labels: block.settings.show_timer_labels
+                  %}
                 </div>
 
-            {%- endcase -%}
-          {%- endfor -%}
+            {% endcase %}
+          {% endfor %}
         </div>
-
       </div>
-
-    {%- else -%}
-
-      <div class="flexible-layout valign-middle">
-
-        {%- unless image_below -%}
-          <div class="column column--half {% if section.settings.image_position == 'right' %}column--order-push-desktop{% endif %}">
-            {% if section.settings.image_link != blank %}<a class="block-link" href="{{ section.settings.image_link }}">{% endif %}
-              <div class="image-overlap" style="max-width: {{ section.settings.image_width }}px">
-                <div class="image-overlap__image image-overlap__image-1">
-                  <div class="fade-in-up" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.1s"' -%}>
-                    {%- if section.settings.image == blank -%}
-                      <div class="placeholder-image">{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}</div>
-                    {%- else -%}
-                      {%- render 'image' with section.settings.image, size_cols_desktop: size_cols_desktop -%}
-                    {%- endif -%}
-                  </div>
-                </div>
-                {%- if section.settings.image == blank or section.settings.image_2 != blank -%}
-                  <div class="image-overlap__image image-overlap__image-2">
-                    <div class="fade-in-up" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.3s"' -%}>
-                      {%- if section.settings.image_2 == blank -%}
-                        <div class="placeholder-image">{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}</div>
-                      {%- else -%}
-                        {%- render 'image' with section.settings.image_2, size_cols_desktop: size_cols_desktop -%}
-                      {%- endif -%}
-                    </div>
-                  </div>
-                {%- endif -%}
-              </div>
-            {% if section.settings.image_link != blank %}</a>{% endif %}
-          </div>
-        {%- endunless -%}
-
-        <div class="column column--half align-ltr-{{ section.settings.text_alignment }}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
-          <div class="feature-text-paired">
-            {% assign skip_block_count = 0 %}
-            {% for block in section.blocks %}
-              {%- liquid
-                if skip_block_count > 0
-                  assign skip_block_count = skip_block_count | minus: 1
-                  continue
-                endif
-              -%}
-              {% case block.type %}
-                {% when 'heading' %}
-                  {% if block.settings.use_h1 %}
-                    <h1 class="majortitle in-content" {{ block.shopify_attributes }}>{{ block.settings.title | escape }}</h1>
-                  {% else %}
-                    <h2 class="majortitle in-content h1" {{ block.shopify_attributes }}>{{ block.settings.title | escape }}</h2>
-                  {% endif %}
-
-                {% when 'subheading' %}
-                  <div class="subheading subheading--over lightish-spaced-row-above" {{ block.shopify_attributes }}>{{ block.settings.subheading | escape }}</div>
-
-                {% when 'text' %}
-                  <div class="rte lightly-spaced-row {% if block.settings.enlarge_text %}large-text{% endif %}" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
-
-                {% when 'button' %}
-                  <div class="lightly-spaced-row button-row" {{ block.shopify_attributes }}>
-                    <a class="{% if block.settings.button_style != 'link' %}btn btn--{{ block.settings.button_style }}{% else %}small-feature-link{% endif %} button-row__btn" href="{{ block.settings.button_link }}">{{ block.settings.button_label | escape }}</a>
-                    {%- assign skip_block_count = 0 -%}
-                    {%- for next_block in section.blocks offset: forloop.index -%}
-                      {%- if next_block.type == 'button' -%}
-                        {%- assign skip_block_count = skip_block_count | plus: 1 -%}
-                        <a class="{% if next_block.settings.button_style != 'link' %}btn btn--{{ next_block.settings.button_style }}{% else %}small-feature-link{% endif %} button-row__btn" href="{{ next_block.settings.button_link }}" {{ block.shopify_attributes }}>{{ next_block.settings.button_label | escape }}</a>
-                      {%- else -%}
-                        {%- break -%}
-                      {%- endif -%}
-                    {%- endfor -%}
-                  </div>
-
-                {% when 'image' %}
-                  <div class="lightly-spaced-row lightish-spaced-row-above inline-width-container" style="width: {{ block.settings.image_width }}px" {{ block.shopify_attributes }}>
-                    {% if block.settings.url != blank %}<a href="{{ block.settings.url }}">{% endif %}
-                      {% if block.settings.image != blank %}
-                        {%- liquid
-                          assign image_sizes = block.settings.image_width | append: 'px'
-                          assign image_widths = block.settings.image_width | times: 2 | prepend: ', ' | prepend: block.settings.image_width
-                          render 'image' with block.settings.image, sizes: image_sizes, widths: image_widths
-                        -%}
-                      {% else %}
-                        <div class="placeholder-image">{{- 'image' | placeholder_svg_tag: 'placeholder-svg' -}}</div>
-                      {% endif %}
-                    {% if block.settings.url != blank %}</a>{% endif %}
-                  </div>
-
-                {% when 'icon' %}
-                  <div class="lightly-spaced-row" {{ block.shopify_attributes }}>
-                    <span class="large-light-icon">{% render 'icon', icon: block.settings.icon, size: 'medium' %}</span>
-                  </div>
-
-                {%- when 'countdown' -%}
-                  <script src="{{ 'countdown-timer.js' | asset_url }}" defer></script>
-                  {% style %}
-                    .block-id-{{ block.id }} .countdown { --countdown-desktop-size: {{ block.settings.number_size }}px; }
-                  {% endstyle %}
-                  <div class="block-id-{{ block.id }} lightly-spaced-row lightish-spaced-row-above countdown-font-{{ block.settings.number_font }} countdown-divider-{{ block.settings.divider_type }}" {{ block.shopify_attributes }}>
-                    {% render 'countdown-timer', end_date: block.settings.end_date, end_time: block.settings.end_time, end_text: block.settings.end_text, end_midnight: true, hide_on_end: block.settings.hide_on_end, show_labels: block.settings.show_timer_labels %}
-                  </div>
-
-              {% endcase %}
-            {% endfor %}
-          </div>
-        </div>
-
-      </div>
-
-    {%- endif -%}
-
+    </div>
   </div>
 </div>
 
@@ -322,10 +254,6 @@
         {
           "value": "right",
           "label": "Right"
-        },
-        {
-          "value": "below",
-          "label": "Below heading (mobile only)"
         }
       ]
     },
@@ -431,9 +359,18 @@
           "label": "Button style",
           "default": "primary",
           "options": [
-            { "label": "Primary", "value": "primary" },
-            { "label": "Secondary", "value": "secondary" },
-            { "label": "Link", "value": "link" }
+            {
+              "label": "Primary",
+              "value": "primary"
+            },
+            {
+              "label": "Secondary",
+              "value": "secondary"
+            },
+            {
+              "label": "Link",
+              "value": "link"
+            }
           ]
         }
       ]
@@ -447,6 +384,195 @@
           "id": "icon",
           "label": "Icon",
           "default": "star",
+          "options": [
+            {
+              "value": "award",
+              "label": "Award"
+            },
+            {
+              "value": "box",
+              "label": "Box"
+            },
+            {
+              "value": "briefcase",
+              "label": "Briefcase"
+            },
+            {
+              "value": "calendar",
+              "label": "Calendar"
+            },
+            {
+              "value": "chat_bubble",
+              "label": "Chat bubble"
+            },
+            {
+              "value": "check_mark",
+              "label": "Check mark"
+            },
+            {
+              "value": "check_mark_in_circle",
+              "label": "Check mark in circle"
+            },
+            {
+              "value": "clock",
+              "label": "Clock"
+            },
+            {
+              "value": "credit_card",
+              "label": "Credit card"
+            },
+            {
+              "value": "dollar_sign",
+              "label": "Dollar sign"
+            },
+            {
+              "value": "dryer",
+              "label": "Dryer"
+            },
+            {
+              "value": "eye",
+              "label": "Eye"
+            },
+            {
+              "value": "feather",
+              "label": "Feather"
+            },
+            {
+              "value": "gift",
+              "label": "Gift"
+            },
+            {
+              "value": "heart",
+              "label": "Heart"
+            },
+            {
+              "value": "iron",
+              "label": "Iron"
+            },
+            {
+              "value": "leaf",
+              "label": "Leaf"
+            },
+            {
+              "value": "leather",
+              "label": "Leather"
+            },
+            {
+              "value": "lock",
+              "label": "Lock"
+            },
+            {
+              "value": "map_pin",
+              "label": "Map pin"
+            },
+            {
+              "value": "pants",
+              "label": "Pants"
+            },
+            {
+              "value": "percent",
+              "label": "Percent"
+            },
+            {
+              "value": "plane",
+              "label": "Plane"
+            },
+            {
+              "value": "price_tag",
+              "label": "Price tag"
+            },
+            {
+              "value": "question_mark",
+              "label": "Question mark"
+            },
+            {
+              "value": "return",
+              "label": "Return"
+            },
+            {
+              "value": "ruler",
+              "label": "Ruler"
+            },
+            {
+              "value": "scissors",
+              "label": "Scissors"
+            },
+            {
+              "value": "shirt",
+              "label": "Shirt"
+            },
+            {
+              "value": "shoe",
+              "label": "Shoe"
+            },
+            {
+              "value": "silhouette",
+              "label": "Silhouette"
+            },
+            {
+              "value": "star",
+              "label": "Star"
+            },
+            {
+              "value": "truck",
+              "label": "Truck"
+            },
+            {
+              "value": "washing",
+              "label": "Washing"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "range",
+          "id": "image_width",
+          "min": 60,
+          "max": 700,
+          "step": 10,
+          "unit": "px",
+          "label": "Image width",
+          "default": 260
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Link"
+        }
+      ]
+    },
+    {
+      "type": "list_item",
+      "name": "List item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "number",
+          "label": "Number",
+          "default": "1",
+          "info": "Shown inside the circle when 'Use icon' is off"
+        },
+        {
+          "type": "checkbox",
+          "id": "use_icon",
+          "label": "Use icon instead of number",
+          "default": false
+        },
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "default": "check_mark",
           "options": [
             { "value": "award", "label": "Award" },
             { "value": "box", "label": "Box" },
@@ -483,32 +609,17 @@
             { "value": "truck", "label": "Truck" },
             { "value": "washing", "label": "Washing" }
           ]
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "name": "Image",
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Image"
         },
         {
-          "type": "range",
-          "id": "image_width",
-          "min": 60,
-          "max": 700,
-          "step": 10,
-          "unit": "px",
-          "label": "Image width",
-          "default": 260
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "List item heading"
         },
         {
-          "type": "url",
-          "id": "url",
-          "label": "Link"
+          "type": "text",
+          "id": "text",
+          "label": "Description"
         }
       ]
     },
@@ -555,8 +666,14 @@
           "id": "number_font",
           "label": "Number font",
           "options": [
-            { "label": "Text font", "value": "base" },
-            { "label": "Heading font", "value": "heading" }
+            {
+              "label": "Text font",
+              "value": "base"
+            },
+            {
+              "label": "Heading font",
+              "value": "heading"
+            }
           ],
           "default": "base"
         },
@@ -566,10 +683,22 @@
           "label": "Divider type",
           "default": "colon",
           "options": [
-            { "value": "colon", "label": "Colon" },
-            { "value": "dot", "label": "Dot" },
-            { "value": "line", "label": "Line" },
-            { "value": "none", "label": "None" }
+            {
+              "value": "colon",
+              "label": "Colon"
+            },
+            {
+              "value": "dot",
+              "label": "Dot"
+            },
+            {
+              "value": "line",
+              "label": "Line"
+            },
+            {
+              "value": "none",
+              "label": "None"
+            }
           ]
         },
         {
@@ -584,11 +713,18 @@
   "presets": [
     {
       "name": "Image with text",
-      "settings": {},
+      "settings": {
+      },
       "blocks": [
-        { "type": "heading" },
-        { "type": "text" },
-        { "type": "button" }
+        {
+          "type": "heading"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "button"
+        }
       ]
     }
   ]
