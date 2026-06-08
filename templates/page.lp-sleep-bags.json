@@ -16,20 +16,20 @@
         "eyebrow": {
           "type": "subheading",
           "settings": {
-            "subheading": "Non-Toxic · Canadian · Award-Winning"
+            "subheading": "Canadian · Award-Winning · Since 2015"
           }
         },
         "heading": {
           "type": "heading",
           "settings": {
-            "title": "Safer Sleep, Every Night",
+            "title": "The Sleep Bag Built for Real Nights",
             "use_h1": true
           }
         },
         "body": {
           "type": "text",
           "settings": {
-            "text": "<p>Our award-winning sleep sacks replace loose blankets — the AAP's #1 safe sleep recommendation for babies under 12 months. Available in TENCEL™, Muslin, and Waffle Knit from 0.5 to 2.5 TOG.</p>",
+            "text": "<p>Our award-winning sleep sacks stay on all night — no kicked-off blankets, no disrupted sleep. Available in TENCEL™, Muslin, and Waffle Knit from 0.5 to 2.5 TOG.</p>",
             "enlarge_text": false
           }
         },
@@ -139,7 +139,7 @@
         "body": {
           "type": "text",
           "settings": {
-            "text": "<p>Babies sweat. A lot. They can't regulate body temperature like adults, and bad sleepwear makes the problem worse — clammy fabric, restless nights, parents up at 2am with a wide-awake baby.</p><p>TENCEL™ Lyocell solves a real problem. It's a botanic fiber made from eucalyptus wood pulp, and independent testing shows it absorbs moisture roughly <strong>50% more efficiently than cotton</strong>. When cotton gets damp, it clings. TENCEL keeps wicking. That difference matters when your baby is in the same garment for 10–12 hours.</p><p></p>",
+            "text": "<p>Babies sweat. A lot. They can't regulate body temperature like adults, and bad sleepwear makes the problem worse — clammy fabric, restless nights, parents up at 2am with a wide-awake baby.</p><p>TENCEL™ Lyocell solves a real problem. It's a botanic fiber made from eucalyptus wood pulp, and independent testing shows it absorbs moisture roughly <strong>50% more efficiently than cotton</strong>. When cotton gets damp, it clings. TENCEL keeps wicking. That difference matters when your baby is in the same garment for 10–12 hours.</p>",
             "enlarge_text": false
           }
         },
@@ -152,7 +152,7 @@
         "text_XTEGfk": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to give customers insight into your brand. Tell a story, explain a product detail, or describe a new promotion.</p>",
+            "text": "<p><strong>TENCEL™ Lyocell by Lenzing</strong> — smooth, continuous fibres that lie flat against skin. Less friction, less irritation, and more comfortable for babies who wear the same garment for 10–12 hours a night.</p>",
             "enlarge_text": false
           }
         },
@@ -187,9 +187,9 @@
         "r1": {
           "type": "row",
           "settings": {
-            "feature": "AAP safe sleep compliant",
-            "our_value": "Yes — recommended over loose blankets",
-            "other_value": "No — not recommended under 12 months"
+            "feature": "Wearable fit",
+            "our_value": "Yes — wraps securely around baby",
+            "other_value": "No — loose around baby all night"
           }
         },
         "r2": {
@@ -213,23 +213,23 @@
           "settings": {
             "feature": "Loose fabric in crib",
             "our_value": "None",
-            "other_value": "Yes — suffocation risk"
+            "other_value": "Yes — bunches and shifts during sleep"
           }
         },
         "r5": {
           "type": "row",
           "settings": {
-            "feature": "Flame-retardant chemicals",
-            "our_value": "None — OEKO-TEX certified fabrics",
-            "other_value": "Often present in treated fabrics"
+            "feature": "Fabric type",
+            "our_value": "TENCEL™ Lyocell — moisture-wicking, breathable",
+            "other_value": "Typically synthetic or treated cotton"
           }
         },
         "r6": {
           "type": "row",
           "settings": {
-            "feature": "Suitable from newborn",
-            "our_value": "Yes — from 0–3M up to size 4–5Y",
-            "other_value": "Not recommended until 12+ months"
+            "feature": "Sized for babies",
+            "our_value": "Yes — 0–3M up to size 4–5Y",
+            "other_value": "One size — not designed for infants"
           }
         }
       },
@@ -244,10 +244,10 @@
       "settings": {
         "bg_color": "#ffffff",
         "title": "Sleep Bag vs Loose Blanket",
-        "intro": "Loose blankets have been the default for generations. The research tells a different story.",
+        "intro": "Loose blankets have been the default for generations. Here's how they actually stack up.",
         "col_ours": "Loulou Lollipop Sleep Bag",
         "col_other": "Loose Blanket",
-        "bottom_line": "Bottom line: Sleep bags are the safer choice. Paediatricians and the AAP recommend wearable blankets over loose bedding for the first 12 months."
+        "bottom_line": "Bottom line: Sleep bags are designed to work with babies — wearable, TOG-rated, and built to stay on all night."
       }
     },
     "safety": {
@@ -256,14 +256,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "title": "Built for Safe Sleep",
+            "title": "Every Detail. Every Night.",
             "use_h1": false
           }
         },
         "body": {
           "type": "text",
           "settings": {
-            "text": "<p>Every Loulou Lollipop sleep bag is designed to meet safe sleep guidelines — no shortcuts.</p><ul><li><strong>No loose fabric</strong> — wearable design eliminates the #1 crib hazard</li><li><strong>OEKO-TEX® certified</strong> — independently tested, free from 100+ harmful substances</li><li><strong>No flame-retardant chemicals</strong> — ever. The fabric is the safety feature</li><li><strong>AAP-aligned</strong> — wearable sleepwear is preferred over loose blankets for the first 12 months</li><li><strong>Shoulder snaps + 2-way zip</strong> — easy diaper changes without unwrapping baby</li></ul>",
+            "text": "<p>Every Loulou Lollipop sleep bag is built around the details that make a real difference at 2am.</p><ul><li><strong>TENCEL™ Lyocell fabric</strong> — moisture-wicking and temperature-regulating, keeping baby comfortable all night</li><li><strong>2-way zipper</strong> — opens from the bottom for quick diaper changes without fully unwrapping baby</li><li><strong>Sleeveless design</strong> — free arm movement for natural sleep positions</li><li><strong>Hidden seams + zipper guard</strong> — smooth against delicate skin, no friction points</li><li><strong>Wearable design</strong> — stays on all night, no loose fabric bunching or shifting</li><li><strong>TOG-rated in 0.5, 1.0, and 2.5</strong> — matched to room temperature so baby is never too hot or too cold</li></ul>",
             "enlarge_text": false
           }
         },
@@ -406,8 +406,8 @@
         "q2": {
           "type": "question",
           "settings": {
-            "title": "Is TENCEL™ safe for newborns?",
-            "answer": "<p>Yes. TENCEL™ Lyocell is naturally hypoallergenic and listed by the National Eczema Society as suitable for sensitive skin. All our fabrics are OEKO-TEX® certified.</p>"
+            "title": "Is TENCEL™ good for babies with sensitive skin?",
+            "answer": "<p>Yes. TENCEL™ Lyocell has a smooth, continuous fibre structure that lies flat against skin — less friction and less irritation than cotton or synthetic fabrics. Its moisture-wicking properties also help keep skin dry throughout the night, which matters for babies who sleep 10–12 hours in the same garment.</p>"
           }
         },
         "q3": {
@@ -428,14 +428,14 @@
           "type": "question",
           "settings": {
             "title": "Are sleep bags good for babies with eczema?",
-            "answer": "<p>Many parents tell us yes. TENCEL's smooth fibre surface creates less friction against skin, and there are no flame-retardant chemicals on any of our fabrics. Talk to your paediatrician for your child's specific situation.</p>"
+            "answer": "<p>Many parents with eczema-prone babies tell us yes. TENCEL™ Lyocell's smooth fibre structure reduces friction against skin, and its moisture-wicking properties keep skin dry throughout the night — both factors that matter for babies with sensitive or reactive skin. Talk to your paediatrician for your child's specific situation.</p>"
           }
         },
         "q6": {
           "type": "question",
           "settings": {
-            "title": "Is TENCEL more sustainable than cotton?",
-            "answer": "<p>TENCEL is made in a closed-loop process that recycles roughly 99% of the solvents used. The wood pulp comes from sustainably managed forests. It uses significantly less water than conventional cotton and avoids pesticide use.</p>"
+            "title": "How does TENCEL compare to cotton for babies?",
+            "answer": "<p>For babywear, TENCEL™ Lyocell outperforms cotton in moisture absorption — independent testing shows it absorbs roughly 50% more moisture than cotton. It also has a naturally smooth fibre structure, which means it stays soft wash after wash without pilling or roughening. Cotton tends to get stiffer and more textured over time. For babies in the same garment all night, that difference shows up quickly.</p>"
           }
         }
       },
