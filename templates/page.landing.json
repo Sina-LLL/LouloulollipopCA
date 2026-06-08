@@ -1,0 +1,68 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "landing",
+  "sections": {
+    "lp_cats": {
+      "type": "lp-categories",
+      "settings": {
+        "headline": "Shop Our Hero Products",
+        "subheadline": "Premium sleep and feeding essentials designed for your little one."
+      },
+      "blocks": {
+        "sleep_bags": {
+          "type": "category",
+          "settings": {
+            "heading": "Sleep Bags",
+            "subheading": "Safer sleep from newborn to big kid.",
+            "url": "/collections/sleep-bags",
+            "cta_label": "Shop Sleep Bags"
+          }
+        },
+        "sleepers": {
+          "type": "category",
+          "settings": {
+            "heading": "Sleepers",
+            "subheading": "Cozy pajamas they'll want to wear every night.",
+            "url": "/collections/sleepers",
+            "cta_label": "Shop Sleepers"
+          }
+        },
+        "silicone_bibs": {
+          "type": "category",
+          "settings": {
+            "heading": "Silicone Bibs",
+            "subheading": "Easy to clean. Built to last.",
+            "url": "/collections/silicone-bibs",
+            "cta_label": "Shop Silicone Bibs"
+          }
+        },
+        "long_sleeve_bibs": {
+          "type": "category",
+          "settings": {
+            "heading": "Long Sleeve Bibs",
+            "subheading": "Full coverage for adventurous little eaters.",
+            "url": "/collections/long-sleeve-bibs",
+            "cta_label": "Shop Long Sleeve Bibs"
+          }
+        }
+      },
+      "block_order": [
+        "sleep_bags",
+        "sleepers",
+        "silicone_bibs",
+        "long_sleeve_bibs"
+      ]
+    }
+  },
+  "order": [
+    "lp_cats"
+  ]
+}

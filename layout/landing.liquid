@@ -1,0 +1,129 @@
+{%- liquid
+  assign base_font           = settings.type_base_font
+  assign base_font_bold      = base_font | font_modify: 'weight', 'bolder'
+  assign base_font_medium    = base_font | font_modify: 'weight', '500'
+  assign base_font_italic    = base_font | font_modify: 'style', 'italic'
+  assign base_font_bold_italic = base_font_bold | font_modify: 'style', 'italic'
+  assign heading_font        = settings.type_heading_font
+  assign logo_font           = settings.type_logo_font
+  assign nav_font            = settings.type_nav_font
+  assign nav_font_600        = nav_font | font_modify: 'weight', '600'
+-%}
+<!doctype html>
+<html class="no-js" lang="{{ request.locale.iso_code }}">
+<head>
+  {%- render 'doc-head-core' -%}
+  <style>
+    {{- base_font            | font_face: font_display: 'fallback' -}}
+    {{- base_font_bold       | font_face: font_display: 'fallback' -}}
+    {{- base_font_medium     | font_face: font_display: 'fallback' -}}
+    {{- base_font_italic     | font_face: font_display: 'fallback' -}}
+    {{- base_font_bold_italic| font_face: font_display: 'fallback' -}}
+    {{- heading_font         | font_face: font_display: 'fallback' -}}
+    {{- logo_font            | font_face: font_display: 'fallback' -}}
+    {{- nav_font             | font_face: font_display: 'fallback' -}}
+    {{- nav_font_600         | font_face: font_display: 'fallback' -}}
+    {%- render 'doc-head-styles' -%}
+  </style>
+  {{ 'main.css'          | asset_url | stylesheet_tag: preload: true }}
+  {{ 'design-system.css' | asset_url | stylesheet_tag: preload: true }}
+  {%- unless base_font.system? -%}
+    <link rel="preload" as="font" href="{{ base_font | font_url }}" type="font/woff2" crossorigin>
+  {%- endunless -%}
+  {%- unless heading_font.system? -%}
+    <link rel="preload" as="font" href="{{ heading_font | font_url }}" type="font/woff2" crossorigin>
+  {%- endunless -%}
+  <script>
+    document.documentElement.className = document.documentElement.className.replace('no-js','js');
+    window.theme = {
+      info: { name:'Symmetry', version:'7.4.0' },
+      device: { hasTouch: window.matchMedia('(any-pointer:coarse)').matches, hasHover: window.matchMedia('(hover:hover)').matches },
+      mediaQueries: { md:'(min-width:768px)' },
+      routes: {
+        base: '{{ shop.url }}',
+        cart: '{{ routes.cart_url }}',
+        cartAdd: '{{ routes.cart_add_url }}.js',
+        cartUpdate: '{{ routes.cart_update_url }}.js',
+        predictiveSearch: '{{ routes.predictive_search_url }}'
+      }
+    };
+  </script>
+  {{ content_for_header }}
+  <style>
+    *,*::before,*::after{box-sizing:border-box}
+    .lp-shipping-bar{
+      background:var(--color-text,#1a1a1a);color:#fff;
+      text-align:center;padding:10px 16px;
+      font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;
+    }
+    .lp-header{
+      display:flex;align-items:center;justify-content:center;
+      padding:18px 24px;border-bottom:1px solid rgba(0,0,0,.07);
+      background:#fff;
+    }
+    .lp-header__logo{display:block;line-height:0;}
+    .lp-header__logo-img{height:38px;width:auto;}
+    .lp-header__logo-text{
+      font-family:var(--logo-font-family);font-size:1.3rem;font-weight:600;
+      letter-spacing:.05em;color:var(--color-text);text-decoration:none;
+    }
+    .lp-main{min-height:60vh;}
+    .lp-trust{
+      border-top:1px solid rgba(0,0,0,.07);
+      padding:16px 24px;background:#fafafa;
+    }
+    .lp-trust__inner{
+      display:flex;align-items:center;justify-content:center;
+      gap:28px;flex-wrap:wrap;
+      max-width:900px;margin:0 auto;
+      font-size:.72rem;letter-spacing:.07em;text-transform:uppercase;
+      color:var(--color-text);opacity:.7;
+    }
+    .lp-trust__divider{opacity:.3;}
+    .lp-footer{
+      text-align:center;padding:14px;
+      font-size:.72rem;color:#aaa;
+    }
+    @media(max-width:600px){
+      .lp-trust__inner{gap:14px;}
+    }
+  </style>
+</head>
+<body class="template-page">
+  <a href="#MainContent" class="visually-hidden skip-to-content-link">{{ 'general.accessibility.skip_to_content' | t }}</a>
+
+  <div class="lp-shipping-bar">Free Shipping on Orders Over $75 CAD</div>
+
+  <header class="lp-header">
+    <a href="{{ shop.url }}" class="lp-header__logo" aria-label="{{ shop.name }}">
+      {%- if settings.logo != blank -%}
+        {{- settings.logo | image_url: width: 220 | image_tag: class: 'lp-header__logo-img', alt: shop.name, loading: 'eager', fetchpriority: 'high' -}}
+      {%- else -%}
+        <span class="lp-header__logo-text">{{ shop.name }}</span>
+      {%- endif -%}
+    </a>
+  </header>
+
+  <main id="MainContent" class="lp-main">
+    {{ content_for_layout }}
+  </main>
+
+  <div class="lp-trust">
+    <div class="lp-trust__inner">
+      <span>Canadian Brand</span>
+      <span class="lp-trust__divider">/</span>
+      <span>Non-Toxic Materials</span>
+      <span class="lp-trust__divider">/</span>
+      <span>Award-Winning</span>
+      <span class="lp-trust__divider">/</span>
+      <span>Free Returns</span>
+    </div>
+  </div>
+
+  <footer class="lp-footer">
+    &copy; {{ 'now' | date: '%Y' }} {{ shop.name }}
+  </footer>
+
+  <script src="{{ 'main.js' | asset_url }}" defer></script>
+</body>
+</html>
