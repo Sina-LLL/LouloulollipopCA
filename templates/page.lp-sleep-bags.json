@@ -373,60 +373,6 @@
         "show_space": true
       }
     },
-    "reviews": {
-      "type": "testimonials",
-      "blocks": {
-        "r1": {
-          "type": "testimonial",
-          "settings": {
-            "star_rating": 5,
-            "testimonial-title": "Customer Review Title",
-            "testimonial": "We've tried three different brands and these are the only sleep bags our daughter doesn't fight at bedtime. The TENCEL fabric is so soft — you can feel the difference.",
-            "author": "Sarah K.",
-            "image_caption": "",
-            "link": ""
-          }
-        },
-        "r2": {
-          "type": "testimonial",
-          "settings": {
-            "star_rating": 5,
-            "testimonial-title": "Customer Review Title",
-            "testimonial": "My son was waking up every time his blanket came off. Switched to the 1.0 TOG sleep bag and he's sleeping through. Worth every penny.",
-            "author": "Megan T.",
-            "image_caption": "",
-            "link": ""
-          }
-        },
-        "r3": {
-          "type": "testimonial",
-          "settings": {
-            "star_rating": 5,
-            "testimonial-title": "Customer Review Title",
-            "testimonial": "The 2.5 TOG waffle knit for winter is unreal. He looks forward to putting it on. We have four now — different TOGs for different seasons.",
-            "author": "Jamie R.",
-            "image_caption": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "r1",
-        "r2",
-        "r3"
-      ],
-      "settings": {
-        "title": "What Parents Say",
-        "layout": "grid",
-        "text_caps": false,
-        "quote_text_size": 30,
-        "quote_text_size_mobile": 20,
-        "image_shape": "square",
-        "color_scheme": "2",
-        "autoplay": true,
-        "autoplay_speed": 5
-      }
-    },
     "bundles": {
       "type": "featured-collection",
       "settings": {
@@ -543,7 +489,7 @@
           "settings": {
             "collection": "sleepers",
             "tag": "",
-            "subheading": "Footed pajamas · TENCEL™",
+            "subheading": "Footed TENCEL™ Sleepers",
             "button_label": "Shop Sleepers"
           }
         },
@@ -552,17 +498,18 @@
           "settings": {
             "collection": "swaddles",
             "tag": "",
-            "subheading": "Breathable muslin swaddles",
+            "image": "shopify://shop_images/Nav_01.png",
+            "subheading": "Breathable Muslin Swaddles",
             "button_label": "Shop Swaddles"
           }
         },
         "c3": {
           "type": "collection",
           "settings": {
-            "collection": "baby-sleep-system-bundle",
+            "collection": "crib-sheets",
             "tag": "",
-            "subheading": "Sleep bag + swaddle + sheet",
-            "button_label": "Shop Bundles"
+            "subheading": "Cozy Muslin Crib Sheets",
+            "button_label": "Shop Crib Sheets"
           }
         }
       },
@@ -582,7 +529,7 @@
         "coll_grid_image_shape": "square",
         "coll_grid_image_position": "center center",
         "coll_thumb_mob_per_row": "2",
-        "coll_grid_show_count": true,
+        "coll_grid_show_count": false,
         "coll_text_position": "below",
         "coll_text_position_under_mobile": false,
         "coll_thumb_text_align_x": "center",
@@ -599,7 +546,6 @@
     "comparison",
     "safety",
     "178096046403bd84d9",
-    "reviews",
     "bundles",
     "care",
     "faq",
