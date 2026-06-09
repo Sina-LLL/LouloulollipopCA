@@ -566,28 +566,6 @@
         "disabled": false,
         "settings": {}
       },
-      "4360339674108327344": {
-        "type": "shopify://apps/little-registry/blocks/add-gift-embed/e928f21e-8b62-4c7f-85ee-59d669dbe8d9",
-        "disabled": true,
-        "settings": {
-          "global_selector": "button[name='add']",
-          "global_button_icon_enabled": true,
-          "global_button_color": "#111827",
-          "global_button_text_color": "#ffffff",
-          "global_button_text": "Add to gift registry",
-          "global_button_width": "100%",
-          "global_button_classes": "",
-          "global_button_font_weight": 100,
-          "global_button_text_size": 16,
-          "global_button_padding_horizontal": 16,
-          "global_button_padding_vertical": 12,
-          "global_button_margin_top": 0,
-          "global_button_margin_bottom": 0,
-          "global_button_border_width": 0,
-          "global_button_border_color": "#ffffff",
-          "global_button_border_radius": 1
-        }
-      },
       "3552487190306752820": {
         "type": "shopify://apps/little-registry/blocks/global-button/e928f21e-8b62-4c7f-85ee-59d669dbe8d9",
         "disabled": true,
@@ -620,6 +598,28 @@
         "type": "shopify://apps/comergent-aeo-agentic-commerce/blocks/open-ai-pixels/019a4daa-4b39-75cd-9fb0-1a15665c4bbe",
         "disabled": false,
         "settings": {}
+      },
+      "4360339674108327344": {
+        "type": "shopify://apps/little-registry/blocks/add-gift-embed/e928f21e-8b62-4c7f-85ee-59d669dbe8d9",
+        "disabled": false,
+        "settings": {
+          "global_selector": "button[name='add']",
+          "global_button_icon_enabled": true,
+          "global_button_color": "#ffffff",
+          "global_button_text_color": "#4f676e",
+          "global_button_text": "ADD TO REGISTRY",
+          "global_button_width": "100%",
+          "global_button_classes": "AddToRegistryBtn",
+          "global_button_font_weight": 600,
+          "global_button_text_size": 14,
+          "global_button_padding_horizontal": 16,
+          "global_button_padding_vertical": 16,
+          "global_button_margin_top": 0,
+          "global_button_margin_bottom": 0,
+          "global_button_border_width": 0,
+          "global_button_border_color": "#d9e1e4",
+          "global_button_border_radius": 12
+        }
       }
     }
   }
