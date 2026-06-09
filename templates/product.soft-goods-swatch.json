@@ -49,38 +49,6 @@
             "show_gift_card_recipient": true
           }
         },
-        "advanced_myregistry_functions_add_to_registry_4H4jJ3": {
-          "type": "shopify://apps/advanced-myregistry-functions/blocks/add_to_registry/b23862ba-17b6-4df1-a6c8-81ff1fa21101",
-          "settings": {
-            "button_type": "shape",
-            "gift_icon": true,
-            "mr_brand_btn": false,
-            "its_universal": "icon",
-            "label": "add_to_reg",
-            "en_custom_label_text": "",
-            "bg_color": "#ffffff",
-            "text_color": "#4f676e",
-            "border_color": "#6a8b95",
-            "bg_color_hover": "#8ea7af",
-            "text_color_hover": "#faf9f6",
-            "border_color_hover": "#8ea7af",
-            "width": 100,
-            "horizontal_alignment": "center",
-            "padding_y": 13,
-            "margin_top": 12,
-            "margin_bottom": 0,
-            "margin_left": -1,
-            "margin_right": -1,
-            "is_custom_border_radius": true,
-            "border_radius": 10,
-            "select_variant_selector": "html_element",
-            "variant_selector": "",
-            "custom_class": "",
-            "custom_css": ".myregistry-add-button {\n\n    \n  }",
-            "custom_elememt_selector": "",
-            "button_placement": "before_selected"
-          }
-        },
         "usp_Whm8xh": {
           "type": "USP",
           "repeater": "{{ product.metafields.custom.product_template.value.usp_icons.value }}",
@@ -153,7 +121,6 @@
         "price",
         "variant-picker",
         "buy-buttons",
-        "advanced_myregistry_functions_add_to_registry_4H4jJ3",
         "usp_Whm8xh",
         "complementary_BXxYXx",
         "pr_mentions_93c7XY",
@@ -234,20 +201,6 @@
         "grid": 4
       }
     },
-    "mux_video_embed_xaVxRV": {
-      "type": "mux-video-embed",
-      "name": "Mux Video",
-      "settings": {}
-    },
-    "custom_liquid_nekM3e": {
-      "type": "custom-liquid",
-      "name": "Custom Liquid",
-      "settings": {
-        "full_width": true,
-        "show_space": true,
-        "code": "<script>\ndocument.addEventListener(\"DOMContentLoaded\", function () {\n\n    const source = document.querySelector(\".shopify-block.shopify-app-block.shopify-app-block--mr-add-to-reg\");\n\n    const target = document.querySelector(\".product-form .add-to-cart-wrapper\");\n\n    if (source && target && target.parentNode) {\n      target.parentNode.insertBefore(source, target.nextSibling);\n    }\n});\n</script>"
-      }
-    },
     "17805940792d3c4835": {
       "type": "apps",
       "blocks": {
@@ -276,8 +229,6 @@
     "custom_product_material_care_AB9yyi",
     "custom_product_list_by_print_Nbxwnx",
     "related-products",
-    "mux_video_embed_xaVxRV",
-    "custom_liquid_nekM3e",
     "17805940792d3c4835"
   ]
 }
