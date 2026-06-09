@@ -53,17 +53,16 @@
       "blocks": {
         "question_wmex7m": {
           "type": "question",
-          "disabled": true,
+          "repeater": "{{ collection.metafields.custom.faqs.value }}",
           "settings": {
-            "title": "Question{{ collection.metafields.custom.faqs | metafield_text: field: 'question' }}",
-            "answer": "<p>Answer</p>"
+            "title": "{{ block.repeater.question.value }}",
+            "answer": "{{ block.repeater.answers | metafield_tag }}"
           }
         }
       },
       "block_order": [
         "question_wmex7m"
       ],
-      "disabled": true,
       "name": "Collapsible tabs",
       "settings": {
         "title": "FAQs"
