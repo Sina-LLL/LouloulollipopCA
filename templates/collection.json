@@ -47,9 +47,49 @@
         "rel_coll_gall_text_alignment": "bottom left",
         "rel_coll_grid_mobile": "2"
       }
+    },
+    "multi_column_nq8tP6": {
+      "type": "multi-column",
+      "blocks": {
+        "text_block_RKhyhc": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": false,
+            "title": "",
+            "text": "{{ collection.description }}",
+            "button_label": "",
+            "link": ""
+          }
+        },
+        "text_block_kkhD8R": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": false,
+            "title": "",
+            "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
+            "button_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_RKhyhc",
+        "text_block_kkhD8R"
+      ],
+      "disabled": true,
+      "name": "Multi-column",
+      "settings": {
+        "title": "",
+        "media_aspect_ratio": "s",
+        "media_width": 700,
+        "text_alignment": "left",
+        "button_style": "primary",
+        "color_scheme": "default"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "multi_column_nq8tP6"
   ]
 }
