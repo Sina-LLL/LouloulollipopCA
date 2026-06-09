@@ -2243,7 +2243,7 @@ main-navigation {
 .pageheader {
   --link-color: var(--header-text-col);
   position: relative;
-  z-index: 4000; /* Place above slider for live-search dropdown */
+  z-index: 999; /* Place above slider for live-search dropdown */
   transition: background-color 175ms ease-in;
   background: var(--header-bg-col);
   color: var(--header-text-col);
