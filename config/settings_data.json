@@ -615,6 +615,11 @@
         "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": false,
         "settings": {}
+      },
+      "3321008817146872308": {
+        "type": "shopify://apps/comergent-aeo-agentic-commerce/blocks/open-ai-pixels/019a4daa-4b39-75cd-9fb0-1a15665c4bbe",
+        "disabled": false,
+        "settings": {}
       }
     }
   }
