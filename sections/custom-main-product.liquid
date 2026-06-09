@@ -1217,6 +1217,26 @@
   });
 });
 </script>
+<style>
+  .AddToRegistryBtn{
+      border: 1px #D9E1E4 solid;
+    margin-top: 8px;
+    border-radius: 10px;
+  }
+</style> 
+<script>
+  const observer = new MutationObserver(function() {
+    const registry = document.querySelector('#__littleregistry__app-embed-container');
+    const addToCart = document.querySelector('.add-to-cart-wrapper');
+
+    if (registry && addToCart) {
+      addToCart.parentNode.insertBefore(registry, addToCart.nextSibling);
+      observer.disconnect(); // stop watching once moved
+    }
+  });
+
+  observer.observe(document.body, { childList: true, subtree: true });
+</script>
 {% schema %}
 {
   "name": "Custom Product pages",
