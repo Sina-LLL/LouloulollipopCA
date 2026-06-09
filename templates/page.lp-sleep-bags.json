@@ -29,7 +29,7 @@
         "body": {
           "type": "text",
           "settings": {
-            "text": "<p>Our award-winning sleep sacks stay on all night — no kicked-off blankets, no disrupted sleep. Available in TENCEL™, Muslin, and Waffle Knit from 0.5 to 2.5 TOG.</p>",
+            "text": "<p>Our award-winning sleep sacks stay on all night — no kicked-off blankets, no disrupted sleep. Available in TENCEL™, and Muslin, from 0.5 to 2.5 TOG.</p>",
             "enlarge_text": false
           }
         },
@@ -356,7 +356,7 @@
             "corner_styling": "soft",
             "header_text_color": "#1d1d1d",
             "text_color": "#1d1d1d",
-            "card_color": "#F9F9F9",
+            "card_color": "#f9f9f9",
             "stars_color": "",
             "arrows_color": "#000000",
             "transition_speed": 10,
