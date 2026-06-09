@@ -48,6 +48,27 @@
         "rel_coll_grid_mobile": "2"
       }
     },
+    "collapsible_tabs_xCNcnJ": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "question_wmex7m": {
+          "type": "question",
+          "disabled": true,
+          "settings": {
+            "title": "Question{{ collection.metafields.custom.faqs | metafield_text: field: 'question' }}",
+            "answer": "<p>Answer</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_wmex7m"
+      ],
+      "disabled": true,
+      "name": "Collapsible tabs",
+      "settings": {
+        "title": "FAQs"
+      }
+    },
     "multi_column_nq8tP6": {
       "type": "multi-column",
       "blocks": {
@@ -90,6 +111,7 @@
   },
   "order": [
     "main",
+    "collapsible_tabs_xCNcnJ",
     "multi_column_nq8tP6"
   ]
 }
