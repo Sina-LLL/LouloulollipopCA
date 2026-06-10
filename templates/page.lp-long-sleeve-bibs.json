@@ -263,76 +263,51 @@
       }
     },
     "repreve": {
-      "type": "image-with-text",
+      "type": "multi-column",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "col1": {
+          "type": "text_block",
           "settings": {
-            "title": "The Shell Is Made from Recycled Plastic Bottles",
-            "use_h1": false
+            "enable_media": false,
+            "title": "Post-Consumer Plastic Bottles",
+            "text": "<p>The outer shell fiber is made from plastic bottles that would otherwise go to landfill or ocean. Same high-performance polyester — sourced differently.</p>",
+            "button_label": "",
+            "link": ""
           }
         },
-        "body": {
-          "type": "text",
+        "col2": {
+          "type": "text_block",
           "settings": {
-            "text": "<p>Most bib shells use virgin polyester. The Loulou Lollipop long sleeve bib uses <strong>REPREVE® recycled polyester</strong> for the outer shell — made from post-consumer plastic bottles. REPREVE® is a certified recycled fiber brand used by Patagonia, The North Face, and dozens of other performance brands. The certification tracks recycled content from source to finished product: not a marketing claim, a verified supply chain.</p><p>The waterproof TPU backing, the print quality, the wash durability — none of that changes. REPREVE® is a raw material decision, not a performance compromise.</p>",
-            "enlarge_text": false
+            "enable_media": false,
+            "title": "Certified Recycled Content",
+            "text": "<p>REPREVE® certification tracks recycled content from source to finished product. The claim is independently verified — not a marketing assumption.</p>",
+            "button_label": "",
+            "link": ""
           }
         },
-        "list_item_1": {
-          "type": "list_item",
+        "col3": {
+          "type": "text_block",
           "settings": {
-            "number": "1",
-            "use_icon": false,
-            "icon": "check_mark",
-            "title": "Made from post-consumer plastic bottles",
-            "text": "The outer shell fiber diverts plastic that would otherwise go to landfill or ocean. Same high-performance polyester — different source."
-          }
-        },
-        "list_item_2": {
-          "type": "list_item",
-          "settings": {
-            "number": "2",
-            "use_icon": false,
-            "icon": "check_mark",
-            "title": "Certified recycled content",
-            "text": "REPREVE® certification independently verifies the recycled supply chain. The claim is traceable, not assumed."
-          }
-        },
-        "list_item_3": {
-          "type": "list_item",
-          "settings": {
-            "number": "3",
-            "use_icon": false,
-            "icon": "check_mark",
-            "title": "No performance trade-off",
-            "text": "The TPU waterproof barrier, the print, the cuff elasticity — all identical to virgin polyester. Sustainability doesn't cost you anything here."
-          }
-        },
-        "btn": {
-          "type": "button",
-          "settings": {
-            "button_label": "Shop Long Sleeve Bibs",
-            "button_link": "/collections/long-sleeve-bibs",
-            "button_style": "primary"
+            "enable_media": false,
+            "title": "No Performance Trade-Off",
+            "text": "<p>The TPU waterproof barrier, the print, the cuff elasticity — all identical to virgin polyester. Sustainability is a raw material decision here, not a compromise.</p>",
+            "button_label": "",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "heading",
-        "body",
-        "list_item_1",
-        "list_item_2",
-        "list_item_3",
-        "btn"
+        "col1",
+        "col2",
+        "col3"
       ],
       "settings": {
-        "image": "shopify://shop_images/LouLouLollipopMarch2026-08214.jpg",
-        "image_width": 700,
-        "image_link": "",
-        "image_position": "left",
-        "text_alignment": "left",
-        "color_scheme": "default"
+        "title": "Made with REPREVE® Recycled Fibers",
+        "media_aspect_ratio": "s",
+        "media_width": 700,
+        "text_alignment": "center",
+        "button_style": "primary",
+        "color_scheme": "2"
       }
     },
     "safety": {
