@@ -145,10 +145,20 @@
             "text": "Highest grade — stable under heat, dishwasher, and microwave. Doesn't degrade the way peroxide-cured or blended silicone does."
           }
         },
-        "list_item_2": {
+        "list_item_lfgb": {
           "type": "list_item",
           "settings": {
             "number": "2",
+            "use_icon": false,
+            "icon": "check_mark",
+            "title": "LFGB food grade — Germany's highest standard",
+            "text": "Platinum-cured silicone meets LFGB, the German food safety standard — stricter than FDA food-grade and the benchmark used in European medical and food-contact products."
+          }
+        },
+        "list_item_2": {
+          "type": "list_item",
+          "settings": {
+            "number": "3",
             "use_icon": false,
             "icon": "check_mark",
             "title": "Print cured into the material",
@@ -158,7 +168,7 @@
         "list_item_3": {
           "type": "list_item",
           "settings": {
-            "number": "3",
+            "number": "4",
             "use_icon": false,
             "icon": "check_mark",
             "title": "Deep front pocket",
@@ -168,7 +178,7 @@
         "list_item_4": {
           "type": "list_item",
           "settings": {
-            "number": "4",
+            "number": "5",
             "use_icon": false,
             "icon": "check_mark",
             "title": "BPA, PVC, phthalate, and lead free",
@@ -180,6 +190,7 @@
         "heading",
         "body",
         "list_item_1",
+        "list_item_lfgb",
         "list_item_2",
         "list_item_3",
         "list_item_4"
@@ -407,7 +418,7 @@
           "type": "question",
           "settings": {
             "title": "What makes platinum-cured silicone better?",
-            "answer": "<p>Silicone is cured (hardened) using either a platinum catalyst or a peroxide catalyst. Platinum-cured is the higher grade — more chemically stable, doesn't degrade under heat, and doesn't release byproducts the way peroxide-cured silicone can. The third category to avoid is silicone-PVC blends, which are often sold as silicone but contain plasticizers. Platinum-cured plus OEKO-TEX® certification on the finished product is the combination that matters.</p>"
+            "answer": "<p>Silicone is cured (hardened) using either a platinum catalyst or a peroxide catalyst. Platinum-cured is the higher grade — more chemically stable, doesn't degrade under heat, and doesn't release byproducts the way peroxide-cured silicone can. The third category to avoid is silicone-PVC blends, which are often sold as silicone but contain plasticizers.</p><p>Platinum-cured silicone also meets LFGB — the German food safety standard. LFGB is stricter than FDA food-grade because it tests for substance migration, not just material composition. It's the benchmark used for European medical and food-contact products. Platinum-cured + LFGB + OEKO-TEX® on the finished product is the combination that matters.</p>"
           }
         },
         "q4": {
