@@ -2458,7 +2458,7 @@ main-navigation {
 @media (max-width: 767.98px) {
   .page-shade,
 .header-shade {
-    z-index: 7000;
+    z-index: 998;
   }
 }
 
