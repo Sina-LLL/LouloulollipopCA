@@ -150,12 +150,19 @@
             "image_width": 700,
             "url": ""
           }
+        },
+        "callout_A4b3gM": {
+          "type": "callout",
+          "settings": {
+            "text": "<p><strong>Comfort check:</strong> baby's chest and tummy should feel warm and dry — not clammy, sweaty, or cold. If your room temperature changes between seasons, adjust the TOG or the layer underneath accordingly.</p>"
+          }
         }
       },
       "block_order": [
         "heading_Dc6fQb",
         "text_rzE8hB",
-        "image_pzw4T6"
+        "image_pzw4T6",
+        "callout_A4b3gM"
       ],
       "name": "Rich text",
       "settings": {
@@ -163,17 +170,6 @@
         "text_alignment": "center",
         "full_width": false,
         "color_scheme": "default"
-      }
-    },
-    "tog_chart": {
-      "type": "lp-comparison",
-      "settings": {
-        "bg_color": "#faf9f6",
-        "title": "",
-        "intro": "",
-        "col_ours": "",
-        "col_other": "",
-        "bottom_line": "Comfort check: baby's chest and tummy should feel warm and dry — not clammy, sweaty, or cold. If your room temperature changes between seasons, adjust the TOG or the layer underneath accordingly."
       }
     },
     "why_sleep_bags": {
@@ -593,7 +589,6 @@
     "proof_bar",
     "products",
     "rich_text_XTVkdM",
-    "tog_chart",
     "why_sleep_bags",
     "comparison",
     "safety",
