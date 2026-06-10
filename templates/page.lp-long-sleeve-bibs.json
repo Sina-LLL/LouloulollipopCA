@@ -16,7 +16,7 @@
         "eyebrow": {
           "type": "subheading",
           "settings": {
-            "subheading": "Canadian · Award-Winning · Since 2015"
+            "subheading": "Best Waterproof Bib · Parents Magazine 2025"
           }
         },
         "heading": {
@@ -29,7 +29,7 @@
         "body": {
           "type": "text",
           "settings": {
-            "text": "<p>Full arm and chest coverage in buttery-soft TENCEL™. Machine washable, fast-drying, and gentle on sensitive skin — because mealtime shouldn't mean laundry time.</p>",
+            "text": "<p>Full sleeve and chest coverage with a waterproof TPU-sealed shell — not treated, sealed. Tomato sauce, blueberry juice, yogurt: none of it gets through. One size fits 4 to 24 months.</p>",
             "enlarge_text": false
           }
         },
@@ -40,22 +40,13 @@
             "button_link": "shopify://collections/long-sleeve-bibs",
             "button_style": "primary"
           }
-        },
-        "btn2": {
-          "type": "button",
-          "settings": {
-            "button_label": "Why TENCEL?",
-            "button_link": "shopify://pages/tencel-lyocell",
-            "button_style": "primary"
-          }
         }
       },
       "block_order": [
         "eyebrow",
         "heading",
         "body",
-        "btn1",
-        "btn2"
+        "btn1"
       ],
       "settings": {
         "image": "",
@@ -72,15 +63,15 @@
         "p1": {
           "type": "stat",
           "settings": {
-            "label": "Good Housekeeping",
-            "desc": "2025 Parenting Award Winner"
+            "label": "Parents Magazine",
+            "desc": "Best Waterproof Bib 2025"
           }
         },
         "p2": {
           "type": "stat",
           "settings": {
-            "label": "Parents Best for Baby",
-            "desc": "Award Winner"
+            "label": "Good Housekeeping",
+            "desc": "2025 Parenting Award Winner"
           }
         },
         "p3": {
@@ -114,7 +105,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "Shop Long Sleeve Bibs",
-        "text": "<p>Full-coverage TENCEL™ bibs in every print — soft against skin, machine washable, and designed to actually protect the outfit underneath.</p>",
+        "text": "<p>16 prints, refreshed seasonally. Waterproof TPU-sealed shell, soft elastic cuffs, two-snap closure. One size fits 4 to 24 months.</p>",
         "collection": "long-sleeve-bibs",
         "show_vendor": false,
         "enable_carousel": false,
@@ -132,14 +123,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "title": "Why TENCEL™ for Mealtime",
+            "title": "Why Waterproofing Actually Matters",
             "use_h1": false
           }
         },
         "body": {
           "type": "text",
           "settings": {
-            "text": "<p>A bib gets washed two or three times a day. That's 700+ wash cycles in the first year alone. Most fabrics don't survive that — cotton stiffens, terry pills, and plastic-backed bibs start to smell. TENCEL™ Lyocell is built for exactly this.</p><p>It's a botanic fiber derived from eucalyptus wood pulp. Independent testing shows it absorbs moisture <strong>50% more efficiently than cotton</strong> — and unlike cotton, it releases that moisture quickly instead of holding it against your baby's skin. That means a bib that dries faster between meals and stays soft after hundreds of washes.</p>",
+            "text": "<p>Most fabric bibs are water-resistant at best — a surface treatment that wears off after a few washes. When blueberry juice or tomato sauce hits, it soaks through to the outfit underneath. You're still doing a full change.</p><p>The Loulou Lollipop long sleeve bib uses a <strong>waterproof TPU-sealed backing</strong> on the front panel and both sleeves. That's a physical barrier, not a coating. Tested across full-strength tomato sauce, beet juice, and yogurt — none of it bleeds through. The bib takes the hit. The outfit doesn't.</p>",
             "enlarge_text": false
           }
         },
@@ -149,8 +140,8 @@
             "number": "1",
             "use_icon": false,
             "icon": "check_mark",
-            "title": "Dries faster than cotton",
-            "text": "Ready for the next meal in under two hours — not stuck in the dryer while lunch happens."
+            "title": "TPU sealed — not surface treated",
+            "text": "A physical waterproof barrier on both sleeves and chest. Doesn't wear off in the wash."
           }
         },
         "list_item_2": {
@@ -159,8 +150,8 @@
             "number": "2",
             "use_icon": false,
             "icon": "check_mark",
-            "title": "Stays soft wash after wash",
-            "text": "TENCEL™ doesn't stiffen or pill. The 500th wash feels the same as the first."
+            "title": "Full arm coverage",
+            "text": "The sleeves are where standard bibs fail. Ours cover all the way to the wrist."
           }
         },
         "list_item_3": {
@@ -169,8 +160,8 @@
             "number": "3",
             "use_icon": false,
             "icon": "check_mark",
-            "title": "Gentle on neck and arm skin",
-            "text": "Smooth fiber — no rough edges, no chafing on the soft skin babies actually have."
+            "title": "Cuffs that don't leave marks",
+            "text": "Wide, flat elastic at the wrist — holds the sleeve in place without imprinting on a chubby forearm."
           }
         },
         "list_item_4": {
@@ -179,8 +170,8 @@
             "number": "4",
             "use_icon": false,
             "icon": "check_mark",
-            "title": "OEKO-TEX® certified",
-            "text": "Independently tested and verified free from over 100 harmful substances. Safe for what goes near food."
+            "title": "Two snaps, one hand",
+            "text": "On in three seconds. Off in two. No ties getting sauced, no buttons getting fumbled at the end of a meal."
           }
         }
       },
@@ -215,41 +206,41 @@
         "r2": {
           "type": "row",
           "settings": {
-            "feature": "Stays on",
-            "our_value": "Back snap — secure for the full meal",
-            "other_value": "Slips, twists, falls off mid-feed"
+            "feature": "Waterproofing",
+            "our_value": "TPU-sealed barrier — tested against tomato, beet, yogurt",
+            "other_value": "Surface treatment — wears off after washing"
           }
         },
         "r3": {
           "type": "row",
           "settings": {
-            "feature": "Fabric",
-            "our_value": "TENCEL™ — soft, breathable, fast-drying",
-            "other_value": "Often plastic or terry — hot and slow to dry"
+            "feature": "Closure",
+            "our_value": "Two snaps at neck — on and off one-handed",
+            "other_value": "Ties or single button — fiddly, soaks up food"
           }
         },
         "r4": {
           "type": "row",
           "settings": {
-            "feature": "Washing",
-            "our_value": "Machine wash + tumble dry — every time",
-            "other_value": "Many are wipe-only or hand-wash recommended"
+            "feature": "Cuffs",
+            "our_value": "Wide flat elastic — no marks on forearm",
+            "other_value": "Thin elastic — imprints a ring by month 7"
           }
         },
         "r5": {
           "type": "row",
           "settings": {
-            "feature": "Skin comfort",
-            "our_value": "Smooth fiber — no irritation on neck or arms",
-            "other_value": "Plastic edges can chafe; terry pills over time"
+            "feature": "Washing",
+            "our_value": "Machine wash cold, tumble dry low",
+            "other_value": "Often wipe-only — bacteria builds up over time"
           }
         },
         "r6": {
           "type": "row",
           "settings": {
-            "feature": "Between-meal turnaround",
-            "our_value": "Dry and ready in 1–2 hours",
-            "other_value": "Slow to dry — need 4+ bibs in rotation"
+            "feature": "Age range",
+            "our_value": "One size: 4–24 months — entire messy phase",
+            "other_value": "Often sized for infants only, outgrown by month 9"
           }
         }
       },
@@ -264,10 +255,10 @@
       "settings": {
         "bg_color": "#faf9f6",
         "title": "Long Sleeve Bib vs Standard Bib",
-        "intro": "The regular bib has been the default for decades. Here's how it actually holds up at mealtime.",
+        "intro": "The regular bib has been the default for decades. Here's how it actually performs at mealtime.",
         "col_ours": "Loulou Lollipop Long Sleeve Bib",
         "col_other": "Standard Bib",
-        "bottom_line": "Bottom line: A long sleeve bib is the difference between a quick wipe-down and a full outfit change — three times a day."
+        "bottom_line": "Bottom line: A long sleeve waterproof bib is the difference between a quick wipe-down and a full outfit change — three times a day, for a year."
       }
     },
     "safety": {
@@ -276,14 +267,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "title": "Built for the Messiest Eaters",
+            "title": "Built for the Messiest Phase",
             "use_h1": false
           }
         },
         "body": {
           "type": "text",
           "settings": {
-            "text": "<p>Every detail on this bib is designed around what actually happens at a baby's high chair.</p><ul><li><strong>Full sleeve coverage</strong> — arms are where most bibs fail; ours don't</li><li><strong>Wide chest coverage</strong> — generous front coverage catches drips, purees, and snack explosions</li><li><strong>Back snap closure</strong> — stays secure without being difficult to put on or take off</li><li><strong>No scratch hardware</strong> — smooth snap sits flat against the back of the neck</li><li><strong>TENCEL™ fabric</strong> — soft against sensitive neck and arm skin, no synthetic irritants</li><li><strong>Machine washable</strong> — toss it in with the rest of the laundry, no special care</li></ul>",
+            "text": "<p>Every detail on this bib is designed around what actually happens at a baby's high chair.</p><ul><li><strong>Waterproof TPU backing</strong> — sealed barrier on front and both sleeves, not a surface treatment</li><li><strong>Full sleeve coverage</strong> — cut wide at the elbow for movement, tapered at the wrist to stay in place</li><li><strong>Wide chest panel</strong> — generous coverage catches drips, purees, and BLW meals</li><li><strong>Two-snap neck closure</strong> — faster than ties or buttons, goes on and off one-handed</li><li><strong>Soft flat elastic cuffs</strong> — wide elastic holds without leaving marks on chubby arms</li><li><strong>CPSIA compliant, no lead in print or hardware</strong> — U.S. children's product safety baseline</li><li><strong>One size fits 4–24 months</strong> — covers the full messy feeding phase without resizing</li></ul>",
             "enlarge_text": false
           }
         },
@@ -366,22 +357,22 @@
         "wash": {
           "type": "question",
           "settings": {
-            "title": "How do I wash a long sleeve bib?",
-            "answer": "<p>Machine wash cold on a gentle cycle. Tumble dry low or hang dry. No bleach, no fabric softener — softener coats the fibres and reduces absorbency over time. For food stains, rinse or spot-treat before washing. TENCEL™ dries significantly faster than cotton, so a hang-dry is usually ready within a couple of hours.</p>"
+            "title": "How do I wash the long sleeve bib?",
+            "answer": "<p>Machine wash cold, tumble dry low or hang dry. Avoid high heat — the TPU backing lasts longer without it. For food stains, rinse immediately after use and spot-treat with dish soap before washing. Most purees and soft foods come out in a standard cold wash.</p>"
           }
         },
         "size": {
           "type": "question",
           "settings": {
-            "title": "What size fits my baby?",
-            "answer": "<p>The long sleeve bib is designed to fit babies from roughly 6 months through toddler age. The back snap closure is adjustable for a secure fit without being restrictive. Check the size guide on the product page for specific measurements.</p>"
+            "title": "What size is it?",
+            "answer": "<p>One size fits approximately 4 months through 24 months — the full puree and baby-led weaning phase. The two-snap neck closure and wide elasticized cuffs adjust to fit comfortably through the entire range without needing to resize.</p>"
           }
         },
         "stain": {
           "type": "question",
           "settings": {
-            "title": "How do I get food stains out?",
-            "answer": "<p>Rinse immediately after use — most purees and soft foods come out easily in a cold wash. For tougher stains (berry, tomato, turmeric), apply a small amount of dish soap directly to the stain before washing. Avoid hot water — it can set protein-based stains.</p>"
+            "title": "How do I get tough stains out?",
+            "answer": "<p>Rinse immediately — the TPU shell doesn't absorb, so most stains come off quickly. For tougher stains like beet or turmeric on the fabric exterior, apply dish soap directly to the stain before washing. Avoid hot water — it can set protein-based stains and degrade the waterproof backing faster.</p>"
           }
         }
       },
@@ -400,43 +391,43 @@
         "q1": {
           "type": "question",
           "settings": {
-            "title": "Does a long sleeve bib actually protect the outfit underneath?",
-            "answer": "<p>Yes — that's the entire point. The long sleeves cover the arms (where standard bibs fail completely) and the wide chest piece covers the front of the outfit. For most meals, a quick wipe-down of the bib is all you need. You're not doing a full outfit change every time your baby eats.</p>"
+            "title": "Does it actually protect the outfit underneath?",
+            "answer": "<p>Yes — that's the core design goal. The waterproof TPU backing on the front panel and both sleeves creates a physical barrier, not a surface treatment. It's been tested against full-strength tomato sauce, beet juice, and yogurt without bleed-through. The sleeves cover the arms where standard bibs fail completely. For most meals, you wipe the bib down and move on — no outfit change.</p>"
           }
         },
         "q2": {
           "type": "question",
           "settings": {
-            "title": "Is TENCEL™ safe for contact with food?",
-            "answer": "<p>Yes. All Loulou Lollipop TENCEL™ products are OEKO-TEX® Standard 100 certified — independently tested and verified free from over 100 harmful substances, including heavy metals, pesticides, and harmful dyes. Safe for what goes near your baby's food and mouth.</p>"
+            "title": "Long sleeve bib vs silicone bib — which one?",
+            "answer": "<p>They solve different problems. Long sleeve is for puree feeding and baby-led weaning — full body coverage when food is going everywhere. Silicone is for self-feeding and snacks — the pocket catches what drops. Most families use both. The long sleeve bib is the right call from month 4 through the BLW phase; the silicone bib stays useful longer as kids get more coordinated.</p>"
           }
         },
         "q3": {
           "type": "question",
           "settings": {
-            "title": "How many long sleeve bibs do I need?",
-            "answer": "<p>Most families find 3–4 works well. With TENCEL™ drying in 1–2 hours on a hang dry, you can turn bibs around quickly between meals. If you're doing laundry every other day, 3 is usually enough. 4–5 gives comfortable margin for messier phases like self-feeding with a spoon.</p>"
+            "title": "When should I start using a long sleeve bib?",
+            "answer": "<p>Month 4 is the right time — when puree feeding starts reaching the forearms. That's when a standard short bib stops doing its job. The one-size design fits through approximately 24 months, which covers the full messy phase through baby-led weaning.</p>"
           }
         },
         "q4": {
           "type": "question",
           "settings": {
-            "title": "Is it better than a plastic-backed bib?",
-            "answer": "<p>Depends on what you're optimizing for. Plastic-backed bibs catch liquid but are uncomfortable against skin and don't dry flat — they hold moisture and can start to smell. TENCEL™ is breathable and comfortable for the full meal, washes completely clean, and doesn't develop odor the way plastic-backed options do. For a baby in the high chair 2–3 times a day, the comfort and wash performance of TENCEL™ makes it the better daily driver.</p>"
+            "title": "Is the waterproofing reliable wash after wash?",
+            "answer": "<p>Yes — the TPU backing is sealed into the fabric, not a surface spray or coating. Avoid high-heat drying, which degrades TPU faster than low heat. Cold wash and low tumble dry maintains the waterproof performance through regular use for the full 4–24 month range.</p>"
           }
         },
         "q5": {
           "type": "question",
           "settings": {
-            "title": "Is TENCEL™ better than bamboo for bibs?",
-            "answer": "<p>For something washed this frequently, yes. Bamboo rayon is soft initially but pills and thins faster through repeated washing. TENCEL™ Lyocell holds its surface and hand through hundreds of wash cycles. For a bib that sees 700+ washes in its first year, durability matters more than first-touch softness.</p>"
+            "title": "How many do I need?",
+            "answer": "<p>Most families find 3–4 works well for three meals a day. The bib wipes clean quickly and machine washes easily, so you're not stuck waiting on laundry between meals. 2 is workable if you're washing every day; 4–5 gives comfortable margin during high-mess phases like BLW.</p>"
           }
         },
         "q6": {
           "type": "question",
           "settings": {
-            "title": "At what age can my baby start using this bib?",
-            "answer": "<p>From the start of solids — typically around 6 months. The adjustable back snap fits from early solids through toddler age. The long sleeves are equally useful for art, sensory play, and craft time as babies get older and messier in new and creative ways.</p>"
+            "title": "Does the elastic cuff leave marks on baby's arms?",
+            "answer": "<p>No — that's a specific design decision. Most long sleeve bibs use narrow elastic that imprints a ring on a chubby forearm by month 7. The Loulou Lollipop cuffs use wide, flat elastic with low compression. It holds the sleeve in place without digging in, even on babies with chunky wrists.</p>"
           }
         }
       },
