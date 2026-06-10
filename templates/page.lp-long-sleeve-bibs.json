@@ -166,77 +166,42 @@
         "color_scheme": "2"
       }
     },
-    "why_bibs": {
+    "safety": {
       "type": "image-with-text",
       "blocks": {
         "heading": {
           "type": "heading",
           "settings": {
-            "title": "Why Waterproofing Actually Matters",
+            "title": "Built for the Messiest Phase",
             "use_h1": false
           }
         },
         "body": {
           "type": "text",
           "settings": {
-            "text": "<p>Most fabric bibs are water-resistant at best — a surface treatment that wears off after a few washes. When blueberry juice or tomato sauce hits, it soaks through to the outfit underneath. You're still doing a full change.</p><p>The Loulou Lollipop long sleeve bib uses a <strong>waterproof TPU-sealed backing</strong> on the front panel and both sleeves. That's a physical barrier, not a coating. Tested across full-strength tomato sauce, beet juice, and yogurt — none of it bleeds through. The bib takes the hit. The outfit doesn't.</p>",
+            "text": "<p>Every detail on this bib is designed around what actually happens at a baby's high chair.</p><ul><li><strong>Waterproof TPU backing</strong> — sealed barrier on front and both sleeves, not a surface treatment</li><li><strong>Full sleeve coverage</strong> — cut wide at the elbow for movement, tapered at the wrist to stay in place</li><li><strong>Wide chest panel</strong> — generous coverage catches drips, purees, and BLW meals</li><li><strong>Two-snap neck closure</strong> — faster than ties or buttons, goes on and off one-handed</li><li><strong>Soft flat elastic cuffs</strong> — wide elastic holds without leaving marks on chubby arms</li><li><strong>CPSIA compliant, no lead in print or hardware</strong> — U.S. children's product safety baseline</li><li><strong>One size fits 4–24 months</strong> — covers the full messy feeding phase without resizing</li></ul>",
             "enlarge_text": false
           }
         },
-        "list_item_1": {
-          "type": "list_item",
+        "btn": {
+          "type": "button",
           "settings": {
-            "number": "1",
-            "use_icon": false,
-            "icon": "check_mark",
-            "title": "TPU sealed — not surface treated",
-            "text": "A physical waterproof barrier on both sleeves and chest. Doesn't wear off in the wash."
-          }
-        },
-        "list_item_2": {
-          "type": "list_item",
-          "settings": {
-            "number": "2",
-            "use_icon": false,
-            "icon": "check_mark",
-            "title": "Full arm coverage",
-            "text": "The sleeves are where standard bibs fail. Ours cover all the way to the wrist."
-          }
-        },
-        "list_item_3": {
-          "type": "list_item",
-          "settings": {
-            "number": "3",
-            "use_icon": false,
-            "icon": "check_mark",
-            "title": "Cuffs that don't leave marks",
-            "text": "Wide, flat elastic at the wrist — holds the sleeve in place without imprinting on a chubby forearm."
-          }
-        },
-        "list_item_4": {
-          "type": "list_item",
-          "settings": {
-            "number": "4",
-            "use_icon": false,
-            "icon": "check_mark",
-            "title": "Two snaps, one hand",
-            "text": "On in three seconds. Off in two. No ties getting sauced, no buttons getting fumbled at the end of a meal."
+            "button_label": "Shop Long Sleeve Bibs",
+            "button_link": "/collections/long-sleeve-bibs",
+            "button_style": "primary"
           }
         }
       },
       "block_order": [
         "heading",
         "body",
-        "list_item_1",
-        "list_item_2",
-        "list_item_3",
-        "list_item_4"
+        "btn"
       ],
       "settings": {
-        "image": "shopify://shop_images/LuluLollipopEdits-09962.jpg",
+        "image": "shopify://shop_images/Long_Sleeve_Bibs_-_Header_Image_e3fd199f-6fbf-4f70-ad8b-6953ae7f414b.png",
         "image_width": 700,
         "image_link": "",
-        "image_position": "below",
+        "image_position": "left",
         "text_alignment": "left",
         "color_scheme": "default"
       }
@@ -310,42 +275,33 @@
         "bottom_line": "Bottom line: A long sleeve waterproof bib is the difference between a quick wipe-down and a full outfit change — three times a day, for a year."
       }
     },
-    "safety": {
+    "why_bibs": {
       "type": "image-with-text",
       "blocks": {
         "heading": {
           "type": "heading",
           "settings": {
-            "title": "Built for the Messiest Phase",
+            "title": "Why Waterproofing Actually Matters",
             "use_h1": false
           }
         },
         "body": {
           "type": "text",
           "settings": {
-            "text": "<p>Every detail on this bib is designed around what actually happens at a baby's high chair.</p><ul><li><strong>Waterproof TPU backing</strong> — sealed barrier on front and both sleeves, not a surface treatment</li><li><strong>Full sleeve coverage</strong> — cut wide at the elbow for movement, tapered at the wrist to stay in place</li><li><strong>Wide chest panel</strong> — generous coverage catches drips, purees, and BLW meals</li><li><strong>Two-snap neck closure</strong> — faster than ties or buttons, goes on and off one-handed</li><li><strong>Soft flat elastic cuffs</strong> — wide elastic holds without leaving marks on chubby arms</li><li><strong>CPSIA compliant, no lead in print or hardware</strong> — U.S. children's product safety baseline</li><li><strong>One size fits 4–24 months</strong> — covers the full messy feeding phase without resizing</li></ul>",
+            "text": "<p>Most fabric bibs are water-resistant at best — a surface treatment that wears off after a few washes. When blueberry juice or tomato sauce hits, it soaks through to the outfit underneath. You're still doing a full change.</p><p>The Loulou Lollipop long sleeve bib uses a <strong>waterproof TPU-sealed backing</strong> on the front panel and both sleeves. That's a physical barrier, not a coating. Tested across full-strength tomato sauce, beet juice, and yogurt — none of it bleeds through. The bib takes the hit. The outfit doesn't.</p>",
             "enlarge_text": false
-          }
-        },
-        "btn": {
-          "type": "button",
-          "settings": {
-            "button_label": "Shop Long Sleeve Bibs",
-            "button_link": "/collections/long-sleeve-bibs",
-            "button_style": "primary"
           }
         }
       },
       "block_order": [
         "heading",
-        "body",
-        "btn"
+        "body"
       ],
       "settings": {
-        "image": "shopify://shop_images/Long_Sleeve_Bibs_-_Header_Image_e3fd199f-6fbf-4f70-ad8b-6953ae7f414b.png",
+        "image": "shopify://shop_images/LuluLollipopEdits-09962.jpg",
         "image_width": 700,
         "image_link": "",
-        "image_position": "left",
+        "image_position": "below",
         "text_alignment": "left",
         "color_scheme": "default"
       }
