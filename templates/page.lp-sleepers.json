@@ -37,7 +37,7 @@
           "type": "button",
           "settings": {
             "button_label": "Shop Sleepers",
-            "button_link": "shopify://collections/sleepers-pajamas",
+            "button_link": "shopify://collections/sleepers",
             "button_style": "primary"
           }
         },
@@ -58,7 +58,7 @@
         "btn2"
       ],
       "settings": {
-        "image": "shopify://shop_images/Sleeper_Nav.png",
+        "image": "shopify://shop_images/LuluLollipopEdits-01002-2_4_4d814491-693c-47fe-98a2-f3a64881883b.png",
         "image_2": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._4th_2024_-Web-42_7dc4a622-474f-409a-8052-c65828728b6e.jpg",
         "image_width": 700,
         "image_link": "",
@@ -203,6 +203,7 @@
         "btn"
       ],
       "settings": {
+        "image": "shopify://shop_images/BA1002U.SSC_Sleeper_-_She_Shoots_She_Scores_51.jpg",
         "image_width": 700,
         "image_link": "",
         "image_position": "below",
@@ -311,6 +312,7 @@
         "btn"
       ],
       "settings": {
+        "image": "shopify://shop_images/SILCPOCWHT_Pacifier_Clip_-_OneC_-_White_63WEB.jpg",
         "image_width": 700,
         "image_link": "",
         "image_position": "left",
@@ -372,8 +374,8 @@
       "type": "featured-collection",
       "settings": {
         "title": "Save with a Sleep Starter Bundle",
-        "text": "<p>Pair the sleeper with a matching sleep bag and swaddle. Same print, fully coordinated, 15% off the set.</p>",
-        "collection": "sleep-bedding-bundles",
+        "text": "<p>Pair the sleeper with a matching sleep bag, swaddle, and quilt. Same print, fully coordinated, 14% off the set.</p>",
+        "collection": "newborn-sleep-gift-bundle",
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 4,
@@ -421,6 +423,13 @@
     "faq": {
       "type": "collapsible-tabs",
       "blocks": {
+        "q6": {
+          "type": "question",
+          "settings": {
+            "title": "How does TENCEL™ compare to bamboo for baby sleepers?",
+            "answer": "<p>Both are soft at first, but TENCEL™ Lyocell outperforms bamboo rayon over time. Bamboo rayon pills and thins through repeated washing. TENCEL™ holds its surface through fifty wash cycles — important for a garment your baby wears three or four nights a week. For the first few washes, bamboo may feel marginally softer. By month three, TENCEL™ wins.</p>"
+          }
+        },
         "q1": {
           "type": "question",
           "settings": {
@@ -448,29 +457,14 @@
             "title": "When do babies move out of footed sleepers?",
             "answer": "<p>Most families switch to two-piece pajamas around 18 months, when the toddler starts potty training or protests the zipper. Some children stay in one-piece footed sleepers through age 3. There's no fixed age — it's about what works for your child and your routine.</p>"
           }
-        },
-        "q5": {
-          "type": "question",
-          "settings": {
-            "title": "What's the difference between the TENCEL™ sleeper and the waffle knit sleeper?",
-            "answer": "<p>The TENCEL™ Lyocell sleeper is the softest and most moisture-wicking — the go-to for everyday wear and for pairing with sleep bags. The waffle knit provides slightly more insulation with built-in airflow — a good option for cooler rooms when worn solo. Both are OEKO-TEX® certified.</p>"
-          }
-        },
-        "q6": {
-          "type": "question",
-          "settings": {
-            "title": "How does TENCEL™ compare to bamboo for baby sleepers?",
-            "answer": "<p>Both are soft at first, but TENCEL™ Lyocell outperforms bamboo rayon over time. Bamboo rayon pills and thins through repeated washing. TENCEL™ holds its surface through fifty wash cycles — important for a garment your baby wears three or four nights a week. For the first few washes, bamboo may feel marginally softer. By month three, TENCEL™ wins.</p>"
-          }
         }
       },
       "block_order": [
+        "q6",
         "q1",
         "q2",
         "q3",
-        "q4",
-        "q5",
-        "q6"
+        "q4"
       ],
       "settings": {
         "title": "Frequently Asked Questions"
@@ -491,19 +485,19 @@
         "c2": {
           "type": "collection",
           "settings": {
-            "collection": "sleepsuits",
+            "collection": "swaddles",
             "tag": "",
-            "subheading": "For Walking Toddlers",
-            "button_label": "Shop Sleepsuits"
+            "subheading": "Breathable Muslin Swaddles",
+            "button_label": "Shop Swaddles"
           }
         },
         "c3": {
           "type": "collection",
           "settings": {
-            "collection": "sleep-bedding-bundles",
+            "collection": "crib-sheets",
             "tag": "",
-            "subheading": "Bundle & Save 15%",
-            "button_label": "Shop Bundles"
+            "subheading": "Cozy Muslin Crib Sheets",
+            "button_label": "Shop Crib Sheets"
           }
         }
       },
