@@ -126,6 +126,57 @@
         "text_alignment": "center"
       }
     },
+    "tog_chart": {
+      "type": "lp-comparison",
+      "blocks": {
+        "tog1": {
+          "type": "row",
+          "settings": {
+            "feature": "0.5 TOG",
+            "our_value": "24–27°C (75–81°F)",
+            "other_value": "Short-sleeved onesie or diaper only"
+          }
+        },
+        "tog2": {
+          "type": "row",
+          "settings": {
+            "feature": "1.0 TOG",
+            "our_value": "23–24°C (72–75°F)",
+            "other_value": "Long-sleeved onesie under sleep bag"
+          }
+        },
+        "tog3": {
+          "type": "row",
+          "settings": {
+            "feature": "1.5 TOG",
+            "our_value": "20–22°C (68–72°F)",
+            "other_value": "Layered short and long-sleeved onesies"
+          }
+        },
+        "tog4": {
+          "type": "row",
+          "settings": {
+            "feature": "2.5 TOG",
+            "our_value": "17–19°C (64–68°F)",
+            "other_value": "Footed pajamas under sleep bag"
+          }
+        }
+      },
+      "block_order": [
+        "tog1",
+        "tog2",
+        "tog3",
+        "tog4"
+      ],
+      "settings": {
+        "bg_color": "#faf9f6",
+        "title": "Which TOG Do I Need?",
+        "intro": "TOG (Thermal Overall Grade) measures how warm a sleep bag keeps your baby. The right TOG depends on your room temperature — not the season. Most homes sit between 20–24°C year-round, which puts a 1.0 TOG as the default. The ideal sleep temperature is 18–20°C.",
+        "col_ours": "Room Temperature",
+        "col_other": "What to Wear Under the Sleep Bag",
+        "bottom_line": "Comfort check: baby's chest and tummy should feel warm and dry — not clammy, sweaty, or cold. If your room temperature changes between seasons, adjust the TOG or the layer underneath accordingly."
+      }
+    },
     "why_sleep_bags": {
       "type": "image-with-text",
       "blocks": {
@@ -542,6 +593,7 @@
     "hero",
     "proof_bar",
     "products",
+    "tog_chart",
     "why_sleep_bags",
     "comparison",
     "safety",
