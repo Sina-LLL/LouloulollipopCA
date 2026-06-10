@@ -49,7 +49,7 @@
         "btn1"
       ],
       "settings": {
-        "image": "",
+        "image": "shopify://shop_images/LouLouLollipopMarch2026-08214.jpg",
         "image_width": 700,
         "image_link": "",
         "image_position": "below",
@@ -184,7 +184,7 @@
         "list_item_4"
       ],
       "settings": {
-        "image": "",
+        "image": "shopify://shop_images/LuluLollipopEdits-09962.jpg",
         "image_width": 700,
         "image_link": "",
         "image_position": "below",
@@ -293,7 +293,7 @@
         "btn"
       ],
       "settings": {
-        "image": "",
+        "image": "shopify://shop_images/Long_Sleeve_Bibs_-_Header_Image_e3fd199f-6fbf-4f70-ad8b-6953ae7f414b.png",
         "image_width": 700,
         "image_link": "",
         "image_position": "left",
@@ -451,6 +451,7 @@
           "settings": {
             "collection": "silicone-bibs",
             "tag": "",
+            "image": "shopify://shop_images/Nav_4.png",
             "subheading": "Easy-Clean Silicone Bibs",
             "button_label": "Shop Silicone Bibs"
           }
@@ -458,19 +459,20 @@
         "c2": {
           "type": "collection",
           "settings": {
-            "collection": "silicone-plates-bowls",
+            "collection": "suction-plates",
             "tag": "",
-            "subheading": "Plates, Bowls & Utensils",
-            "button_label": "Shop Feeding"
+            "subheading": "Mess‑Free Suction Plates",
+            "button_label": "Shop Suction Plates"
           }
         },
         "c3": {
           "type": "collection",
           "settings": {
-            "collection": "sleepers-pajamas",
+            "collection": "utensils",
             "tag": "",
-            "subheading": "TENCEL™ Sleepers",
-            "button_label": "Shop Sleepers"
+            "image": "shopify://shop_images/Baby-eating-with-lion-utensil.jpg",
+            "subheading": "Easy to Grab Utensils",
+            "button_label": "Shop Utensils"
           }
         }
       },
