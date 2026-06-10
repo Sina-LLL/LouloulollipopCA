@@ -127,6 +127,52 @@
         "text_alignment": "center"
       }
     },
+    "tog_chart": {
+      "type": "lp-comparison",
+      "blocks": {
+        "tog1": {
+          "type": "row",
+          "settings": {
+            "feature": "0.5 TOG",
+            "our_value": "24–27°C (75–81°F)",
+            "other_value": "Short-sleeved bodysuit — sleeper not needed"
+          }
+        },
+        "tog2": {
+          "type": "row",
+          "settings": {
+            "feature": "1.0 TOG",
+            "our_value": "23–24°C (72–75°F)",
+            "other_value": "This TENCEL™ long-sleeve sleeper"
+          }
+        },
+        "tog3": {
+          "type": "row",
+          "settings": {
+            "feature": "1.5 TOG",
+            "our_value": "20–22°C (68–72°F)",
+            "other_value": "This TENCEL™ long-sleeve sleeper"
+          }
+        },
+        "tog4": {
+          "type": "row",
+          "settings": {
+            "feature": "2.5 TOG",
+            "our_value": "17–19°C (64–68°F)",
+            "other_value": "This TENCEL™ long-sleeve sleeper"
+          }
+        }
+      },
+      "block_order": ["tog1", "tog2", "tog3", "tog4"],
+      "settings": {
+        "bg_color": "#faf9f6",
+        "title": "Pairing Your Sleeper with a Sleep Bag",
+        "intro": "TOG measures how warm the sleep bag keeps your baby. The sleeper is the variable you adjust underneath. A TENCEL™ long-sleeve sleeper is the right under-layer for 1.0 and 2.5 TOG — the two bags most families use year-round.",
+        "col_ours": "Room Temperature",
+        "col_other": "What to Wear Under the Sleep Bag",
+        "bottom_line": "Most parents keep two sleep bags: a 1.0 TOG for year-round use and a 2.5 TOG for winter. One TENCEL™ sleeper handles both."
+      }
+    },
     "why_sleepers": {
       "type": "image-with-text",
       "blocks": {
@@ -219,7 +265,7 @@
           "settings": {
             "feature": "Fabric feel",
             "our_value": "Buttery-soft TENCEL™ — smooth against skin",
-            "other_value": "Often rough cotton — can feel scratchy"
+            "other_value": "Soft initially — varies by brand and processing"
           }
         },
         "r2": {
@@ -227,39 +273,39 @@
           "settings": {
             "feature": "Softness over time",
             "our_value": "Gets softer with every wash",
-            "other_value": "Stiffens, pills, and roughens with washing"
+            "other_value": "Pills and thins through repeated washing — noticeable by month 3"
           }
         },
         "r3": {
           "type": "row",
           "settings": {
             "feature": "Moisture management",
-            "our_value": "Wicks sweat away — baby stays dry all night",
-            "other_value": "Absorbs and holds moisture against skin"
+            "our_value": "Wicks sweat away and releases it — baby stays dry",
+            "other_value": "Absorbs but holds moisture — less effective under a sleep bag"
           }
         },
         "r4": {
           "type": "row",
           "settings": {
             "feature": "Sensitive skin",
-            "our_value": "Smooth fiber, minimal friction — eczema-friendly",
-            "other_value": "Rougher weave can irritate reactive skin"
+            "our_value": "Smooth fibre, minimal friction — eczema-friendly",
+            "other_value": "Depends on processing quality — rayon treatment varies widely"
           }
         },
         "r5": {
           "type": "row",
           "settings": {
-            "feature": "Temperature regulation",
-            "our_value": "Naturally breathable — adapts with body heat",
-            "other_value": "Traps heat — baby can overheat under sleep bag"
+            "feature": "Durability",
+            "our_value": "Surface holds through 50+ washes",
+            "other_value": "Degrades faster — especially with 3–4 washes per week"
           }
         },
         "r6": {
           "type": "row",
           "settings": {
             "feature": "Production",
-            "our_value": "Closed-loop — 99% solvent recycled",
-            "other_value": "Conventional cotton — heavy water and chemical use"
+            "our_value": "Closed-loop — 99% solvent recycled, botanic source",
+            "other_value": "Heavy chemical processing to convert bamboo into rayon fibre"
           }
         }
       },
@@ -273,11 +319,11 @@
       ],
       "settings": {
         "bg_color": "#faf9f6",
-        "title": "TENCEL™ Sleeper vs Cotton Pajamas",
-        "intro": "Cotton has been the default for baby pajamas for decades. Here's how it actually performs overnight.",
+        "title": "TENCEL™ Sleeper vs Bamboo Rayon Pajamas",
+        "intro": "Bamboo rayon and TENCEL™ Lyocell both market themselves as premium baby fabrics. Here's how they actually compare over time.",
         "col_ours": "Loulou Lollipop TENCEL™ Sleeper",
-        "col_other": "Standard Cotton Pajamas",
-        "bottom_line": "Bottom line: What baby wears under their sleep bag matters as much as the sleep bag itself. TENCEL™ keeps the whole system working."
+        "col_other": "Bamboo Rayon Pajamas",
+        "bottom_line": "Bottom line: Bamboo rayon feels similar in the store. By month three of washing 3–4 nights a week, the difference is clear."
       }
     },
     "safety": {
@@ -530,6 +576,7 @@
     "hero",
     "proof_bar",
     "products",
+    "tog_chart",
     "why_sleepers",
     "comparison",
     "safety",
