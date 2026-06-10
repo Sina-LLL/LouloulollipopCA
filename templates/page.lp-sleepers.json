@@ -91,11 +91,11 @@
             "desc": "Reviews across sleep products"
           }
         },
-        "p4": {
+        "stat_hVr77C": {
           "type": "stat",
           "settings": {
-            "label": "Designed in Vancouver",
-            "desc": "Since 2015"
+            "label": "Premium Materials",
+            "desc": "TENCEL™  and Tanboocel from Bamboo"
           }
         }
       },
@@ -103,7 +103,7 @@
         "p1",
         "p2",
         "p3",
-        "p4"
+        "stat_hVr77C"
       ],
       "settings": {
         "bg_color": "#6a8b95",
