@@ -128,49 +128,48 @@
       }
     },
     "tog_chart": {
-      "type": "lp-comparison",
+      "type": "rich-text",
       "blocks": {
-        "tog1": {
-          "type": "row",
+        "tog_heading": {
+          "type": "heading",
           "settings": {
-            "feature": "0.5 TOG",
-            "our_value": "24–27°C (75–81°F)",
-            "other_value": "Short-sleeved bodysuit — sleeper not needed"
+            "title": "Pairing Your Sleeper with a Sleep Bag",
+            "use_h1": false
           }
         },
-        "tog2": {
-          "type": "row",
+        "tog_text": {
+          "type": "text",
           "settings": {
-            "feature": "1.0 TOG",
-            "our_value": "23–24°C (72–75°F)",
-            "other_value": "This TENCEL™ long-sleeve sleeper"
+            "text": "<p>TOG measures how warm a sleep bag keeps your baby. The sleeper is the layer underneath — the variable you control. A TENCEL™ long-sleeve sleeper is the right choice under a 1.0 or 2.5 TOG bag, the two most families use year-round. For rooms above 24°C, skip the sleeper and use a short-sleeve bodysuit under a 0.5 TOG bag instead.</p>",
+            "enlarge_text": false
           }
         },
-        "tog3": {
-          "type": "row",
+        "tog_image": {
+          "type": "image",
           "settings": {
-            "feature": "1.5 TOG",
-            "our_value": "20–22°C (68–72°F)",
-            "other_value": "This TENCEL™ long-sleeve sleeper"
+            "image": "shopify://shop_images/TOG_Chart_b3ae96d7-6832-44c5-a8c0-89017d0216a7.png",
+            "image_width": 700,
+            "url": ""
           }
         },
-        "tog4": {
-          "type": "row",
+        "tog_callout": {
+          "type": "callout",
           "settings": {
-            "feature": "2.5 TOG",
-            "our_value": "17–19°C (64–68°F)",
-            "other_value": "This TENCEL™ long-sleeve sleeper"
+            "text": "<p><strong>Pairing tip:</strong> a TENCEL™ long-sleeve sleeper under a 1.0 TOG sleep bag works in most Canadian homes year-round. Add a 2.5 TOG bag for winter. One sleeper, two bags — that's the system.</p>"
           }
         }
       },
-      "block_order": ["tog1", "tog2", "tog3", "tog4"],
+      "block_order": [
+        "tog_heading",
+        "tog_text",
+        "tog_image",
+        "tog_callout"
+      ],
       "settings": {
-        "bg_color": "#faf9f6",
-        "title": "Pairing Your Sleeper with a Sleep Bag",
-        "intro": "TOG measures how warm the sleep bag keeps your baby. The sleeper is the variable you adjust underneath. A TENCEL™ long-sleeve sleeper is the right under-layer for 1.0 and 2.5 TOG — the two bags most families use year-round.",
-        "col_ours": "Room Temperature",
-        "col_other": "What to Wear Under the Sleep Bag",
-        "bottom_line": "Most parents keep two sleep bags: a 1.0 TOG for year-round use and a 2.5 TOG for winter. One TENCEL™ sleeper handles both."
+        "height": "medium",
+        "text_alignment": "center",
+        "full_width": false,
+        "color_scheme": "default"
       }
     },
     "why_sleepers": {
