@@ -8,60 +8,516 @@
  * ------------------------------------------------------------
  */
 {
-  "layout": "landing",
+  "layout": "theme",
   "sections": {
-    "lpc": {
-      "type": "lp-product-category",
-      "settings": {
-        "collection_handle": "long-sleeve-bibs",
-        "eyebrow": "Non-Toxic \u00b7 Machine Washable \u00b7 OEKO-TEX\u00ae",
-        "headline": "Full Coverage for Adventurous Little Eaters",
-        "subheadline": "Long sleeve bibs that protect clothes from shoulder to wrist. For the messiest meals, from first solids to toddler chaos.",
-        "cta_label": "Shop Long Sleeve Bibs",
-        "features_heading": "Why Parents Love It",
-        "materials_heading": "What It\u2019s Made Of",
-        "materials_body": "<p><strong>100% Cotton Muslin</strong> \u2014 Soft, breathable, and lightweight so little arms stay comfortable throughout the meal. Gets softer with every wash.</p><p><strong>Waterproof PUL Lining</strong> \u2014 Food-safe polyurethane laminate backing keeps moisture from soaking through to clothes, without adding bulk.</p><p>All fabrics are <strong>OEKO-TEX\u00ae certified</strong> \u2014 free from harmful substances and safe against baby\u2019s skin.</p>",
-        "products_heading": "Best Sellers"
-      },
+    "hero": {
+      "type": "image-with-text",
       "blocks": {
-        "feat_0": {
-          "type": "feature",
+        "eyebrow": {
+          "type": "subheading",
           "settings": {
-            "heading": "Full Arm Coverage",
-            "body": "Covers sleeves completely \u2014 ideal for purees, pasta, and anything that ends up everywhere."
+            "subheading": "Canadian · Award-Winning · Since 2015"
           }
         },
-        "feat_1": {
-          "type": "feature",
+        "heading": {
+          "type": "heading",
           "settings": {
-            "heading": "Easy Pull-On Design",
-            "body": "Wide elasticated cuffs slip on and off without a fight. No fiddly clips or awkward snaps."
+            "title": "One Bib. Zero Outfit Changes.",
+            "use_h1": true
           }
         },
-        "feat_2": {
-          "type": "feature",
+        "body": {
+          "type": "text",
           "settings": {
-            "heading": "Machine Washable",
-            "body": "Goes straight in the wash with the rest of the laundry. No hand-washing, no special care."
+            "text": "<p>Full arm and chest coverage in buttery-soft TENCEL™. Machine washable, fast-drying, and gentle on sensitive skin — because mealtime shouldn't mean laundry time.</p>",
+            "enlarge_text": false
           }
         },
-        "feat_3": {
-          "type": "feature",
+        "btn1": {
+          "type": "button",
           "settings": {
-            "heading": "Waterproof Backing",
-            "body": "Water-resistant inner layer keeps clothes dry even through the wettest meals."
+            "button_label": "Shop Long Sleeve Bibs",
+            "button_link": "shopify://collections/long-sleeve-bibs",
+            "button_style": "primary"
+          }
+        },
+        "btn2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Why TENCEL?",
+            "button_link": "shopify://pages/tencel-lyocell",
+            "button_style": "primary"
           }
         }
       },
       "block_order": [
-        "feat_0",
-        "feat_1",
-        "feat_2",
-        "feat_3"
-      ]
+        "eyebrow",
+        "heading",
+        "body",
+        "btn1",
+        "btn2"
+      ],
+      "settings": {
+        "image": "",
+        "image_width": 700,
+        "image_link": "",
+        "image_position": "below",
+        "text_alignment": "left",
+        "color_scheme": "default"
+      }
+    },
+    "proof_bar": {
+      "type": "lp-proof-bar",
+      "blocks": {
+        "p1": {
+          "type": "stat",
+          "settings": {
+            "label": "Good Housekeeping",
+            "desc": "2025 Parenting Award Winner"
+          }
+        },
+        "p2": {
+          "type": "stat",
+          "settings": {
+            "label": "Parents Best for Baby",
+            "desc": "Award Winner"
+          }
+        },
+        "p3": {
+          "type": "stat",
+          "settings": {
+            "label": "5,000+ ★★★★★",
+            "desc": "Reviews across feeding products"
+          }
+        },
+        "p4": {
+          "type": "stat",
+          "settings": {
+            "label": "Designed in Vancouver",
+            "desc": "Since 2015"
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3",
+        "p4"
+      ],
+      "settings": {
+        "bg_color": "#6a8b95",
+        "text_color": "#ffffff",
+        "accent_color": "#ffc748"
+      }
+    },
+    "products": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Shop Long Sleeve Bibs",
+        "text": "<p>Full-coverage TENCEL™ bibs in every print — soft against skin, machine washable, and designed to actually protect the outfit underneath.</p>",
+        "collection": "long-sleeve-bibs",
+        "show_vendor": false,
+        "enable_carousel": false,
+        "grid": 4,
+        "rows": 2,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": false,
+        "text_alignment": "center"
+      }
+    },
+    "why_bibs": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Why TENCEL™ for Mealtime",
+            "use_h1": false
+          }
+        },
+        "body": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A bib gets washed two or three times a day. That's 700+ wash cycles in the first year alone. Most fabrics don't survive that — cotton stiffens, terry pills, and plastic-backed bibs start to smell. TENCEL™ Lyocell is built for exactly this.</p><p>It's a botanic fiber derived from eucalyptus wood pulp. Independent testing shows it absorbs moisture <strong>50% more efficiently than cotton</strong> — and unlike cotton, it releases that moisture quickly instead of holding it against your baby's skin. That means a bib that dries faster between meals and stays soft after hundreds of washes.</p>",
+            "enlarge_text": false
+          }
+        },
+        "list_item_1": {
+          "type": "list_item",
+          "settings": {
+            "number": "1",
+            "use_icon": false,
+            "icon": "check_mark",
+            "title": "Dries faster than cotton",
+            "text": "Ready for the next meal in under two hours — not stuck in the dryer while lunch happens."
+          }
+        },
+        "list_item_2": {
+          "type": "list_item",
+          "settings": {
+            "number": "2",
+            "use_icon": false,
+            "icon": "check_mark",
+            "title": "Stays soft wash after wash",
+            "text": "TENCEL™ doesn't stiffen or pill. The 500th wash feels the same as the first."
+          }
+        },
+        "list_item_3": {
+          "type": "list_item",
+          "settings": {
+            "number": "3",
+            "use_icon": false,
+            "icon": "check_mark",
+            "title": "Gentle on neck and arm skin",
+            "text": "Smooth fiber — no rough edges, no chafing on the soft skin babies actually have."
+          }
+        },
+        "list_item_4": {
+          "type": "list_item",
+          "settings": {
+            "number": "4",
+            "use_icon": false,
+            "icon": "check_mark",
+            "title": "OEKO-TEX® certified",
+            "text": "Independently tested and verified free from over 100 harmful substances. Safe for what goes near food."
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "body",
+        "list_item_1",
+        "list_item_2",
+        "list_item_3",
+        "list_item_4"
+      ],
+      "settings": {
+        "image": "",
+        "image_width": 700,
+        "image_link": "",
+        "image_position": "below",
+        "text_alignment": "left",
+        "color_scheme": "default"
+      }
+    },
+    "comparison": {
+      "type": "lp-comparison",
+      "blocks": {
+        "r1": {
+          "type": "row",
+          "settings": {
+            "feature": "Coverage",
+            "our_value": "Full arms + chest — outfit stays clean",
+            "other_value": "Chest only — sleeves always get it"
+          }
+        },
+        "r2": {
+          "type": "row",
+          "settings": {
+            "feature": "Stays on",
+            "our_value": "Back snap — secure for the full meal",
+            "other_value": "Slips, twists, falls off mid-feed"
+          }
+        },
+        "r3": {
+          "type": "row",
+          "settings": {
+            "feature": "Fabric",
+            "our_value": "TENCEL™ — soft, breathable, fast-drying",
+            "other_value": "Often plastic or terry — hot and slow to dry"
+          }
+        },
+        "r4": {
+          "type": "row",
+          "settings": {
+            "feature": "Washing",
+            "our_value": "Machine wash + tumble dry — every time",
+            "other_value": "Many are wipe-only or hand-wash recommended"
+          }
+        },
+        "r5": {
+          "type": "row",
+          "settings": {
+            "feature": "Skin comfort",
+            "our_value": "Smooth fiber — no irritation on neck or arms",
+            "other_value": "Plastic edges can chafe; terry pills over time"
+          }
+        },
+        "r6": {
+          "type": "row",
+          "settings": {
+            "feature": "Between-meal turnaround",
+            "our_value": "Dry and ready in 1–2 hours",
+            "other_value": "Slow to dry — need 4+ bibs in rotation"
+          }
+        }
+      },
+      "block_order": [
+        "r1",
+        "r2",
+        "r3",
+        "r4",
+        "r5",
+        "r6"
+      ],
+      "settings": {
+        "bg_color": "#faf9f6",
+        "title": "Long Sleeve Bib vs Standard Bib",
+        "intro": "The regular bib has been the default for decades. Here's how it actually holds up at mealtime.",
+        "col_ours": "Loulou Lollipop Long Sleeve Bib",
+        "col_other": "Standard Bib",
+        "bottom_line": "Bottom line: A long sleeve bib is the difference between a quick wipe-down and a full outfit change — three times a day."
+      }
+    },
+    "safety": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Built for the Messiest Eaters",
+            "use_h1": false
+          }
+        },
+        "body": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Every detail on this bib is designed around what actually happens at a baby's high chair.</p><ul><li><strong>Full sleeve coverage</strong> — arms are where most bibs fail; ours don't</li><li><strong>Wide chest coverage</strong> — generous front coverage catches drips, purees, and snack explosions</li><li><strong>Back snap closure</strong> — stays secure without being difficult to put on or take off</li><li><strong>No scratch hardware</strong> — smooth snap sits flat against the back of the neck</li><li><strong>TENCEL™ fabric</strong> — soft against sensitive neck and arm skin, no synthetic irritants</li><li><strong>Machine washable</strong> — toss it in with the rest of the laundry, no special care</li></ul>",
+            "enlarge_text": false
+          }
+        },
+        "btn": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Long Sleeve Bibs",
+            "button_link": "/collections/long-sleeve-bibs",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "body",
+        "btn"
+      ],
+      "settings": {
+        "image": "",
+        "image_width": 700,
+        "image_link": "",
+        "image_position": "left",
+        "text_alignment": "left",
+        "color_scheme": "default"
+      }
+    },
+    "reviews": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_bibs_carousel": {
+          "type": "shopify://apps/judge-me-reviews/blocks/cards_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "show_sample_reviews": true,
+            "reviews_selection": "custom_products",
+            "products": [
+              "long-sleeve-bib-sweet-treats",
+              "long-sleeve-bib-french-breakfast",
+              "long-sleeve-bib-safari-jungle",
+              "long-sleeve-bib-magical-dragons",
+              "long-sleeve-bib-smiley-sharks",
+              "long-sleeve-bib-alphabet-smiles"
+            ],
+            "star_rating": "all",
+            "show_review_media": false,
+            "display_order": "most_recent",
+            "no_image_fallback": "review_text_only",
+            "max_reviews": 6,
+            "review_length": "small",
+            "text_size": "medium",
+            "image_ratio": "1",
+            "reviews_shown": 4,
+            "show_reviewer_name": true,
+            "show_product_name": true,
+            "hide_arrows_mobile": true,
+            "arrows_position": "sides",
+            "max_width": 1100,
+            "corner_styling": "soft",
+            "header_text_color": "#1d1d1d",
+            "text_color": "#1d1d1d",
+            "card_color": "#f9f9f9",
+            "stars_color": "",
+            "arrows_color": "#000000",
+            "transition_speed": 10,
+            "header_text": "What Parents Say",
+            "show_average_rating": true
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_bibs_carousel"
+      ],
+      "settings": {
+        "full_width": false,
+        "show_space": true
+      }
+    },
+    "care": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "wash": {
+          "type": "question",
+          "settings": {
+            "title": "How do I wash a long sleeve bib?",
+            "answer": "<p>Machine wash cold on a gentle cycle. Tumble dry low or hang dry. No bleach, no fabric softener — softener coats the fibres and reduces absorbency over time. For food stains, rinse or spot-treat before washing. TENCEL™ dries significantly faster than cotton, so a hang-dry is usually ready within a couple of hours.</p>"
+          }
+        },
+        "size": {
+          "type": "question",
+          "settings": {
+            "title": "What size fits my baby?",
+            "answer": "<p>The long sleeve bib is designed to fit babies from roughly 6 months through toddler age. The back snap closure is adjustable for a secure fit without being restrictive. Check the size guide on the product page for specific measurements.</p>"
+          }
+        },
+        "stain": {
+          "type": "question",
+          "settings": {
+            "title": "How do I get food stains out?",
+            "answer": "<p>Rinse immediately after use — most purees and soft foods come out easily in a cold wash. For tougher stains (berry, tomato, turmeric), apply a small amount of dish soap directly to the stain before washing. Avoid hot water — it can set protein-based stains.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "wash",
+        "size",
+        "stain"
+      ],
+      "settings": {
+        "title": "Care & Sizing"
+      }
+    },
+    "faq": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "title": "Does a long sleeve bib actually protect the outfit underneath?",
+            "answer": "<p>Yes — that's the entire point. The long sleeves cover the arms (where standard bibs fail completely) and the wide chest piece covers the front of the outfit. For most meals, a quick wipe-down of the bib is all you need. You're not doing a full outfit change every time your baby eats.</p>"
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "title": "Is TENCEL™ safe for contact with food?",
+            "answer": "<p>Yes. All Loulou Lollipop TENCEL™ products are OEKO-TEX® Standard 100 certified — independently tested and verified free from over 100 harmful substances, including heavy metals, pesticides, and harmful dyes. Safe for what goes near your baby's food and mouth.</p>"
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "title": "How many long sleeve bibs do I need?",
+            "answer": "<p>Most families find 3–4 works well. With TENCEL™ drying in 1–2 hours on a hang dry, you can turn bibs around quickly between meals. If you're doing laundry every other day, 3 is usually enough. 4–5 gives comfortable margin for messier phases like self-feeding with a spoon.</p>"
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "title": "Is it better than a plastic-backed bib?",
+            "answer": "<p>Depends on what you're optimizing for. Plastic-backed bibs catch liquid but are uncomfortable against skin and don't dry flat — they hold moisture and can start to smell. TENCEL™ is breathable and comfortable for the full meal, washes completely clean, and doesn't develop odor the way plastic-backed options do. For a baby in the high chair 2–3 times a day, the comfort and wash performance of TENCEL™ makes it the better daily driver.</p>"
+          }
+        },
+        "q5": {
+          "type": "question",
+          "settings": {
+            "title": "Is TENCEL™ better than bamboo for bibs?",
+            "answer": "<p>For something washed this frequently, yes. Bamboo rayon is soft initially but pills and thins faster through repeated washing. TENCEL™ Lyocell holds its surface and hand through hundreds of wash cycles. For a bib that sees 700+ washes in its first year, durability matters more than first-touch softness.</p>"
+          }
+        },
+        "q6": {
+          "type": "question",
+          "settings": {
+            "title": "At what age can my baby start using this bib?",
+            "answer": "<p>From the start of solids — typically around 6 months. The adjustable back snap fits from early solids through toddler age. The long sleeves are equally useful for art, sensory play, and craft time as babies get older and messier in new and creative ways.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ],
+      "settings": {
+        "title": "Frequently Asked Questions"
+      }
+    },
+    "related": {
+      "type": "collection-list",
+      "blocks": {
+        "c1": {
+          "type": "collection",
+          "settings": {
+            "collection": "silicone-bibs",
+            "tag": "",
+            "subheading": "Easy-Clean Silicone Bibs",
+            "button_label": "Shop Silicone Bibs"
+          }
+        },
+        "c2": {
+          "type": "collection",
+          "settings": {
+            "collection": "silicone-plates-bowls",
+            "tag": "",
+            "subheading": "Plates, Bowls & Utensils",
+            "button_label": "Shop Feeding"
+          }
+        },
+        "c3": {
+          "type": "collection",
+          "settings": {
+            "collection": "sleepers-pajamas",
+            "tag": "",
+            "subheading": "TENCEL™ Sleepers",
+            "button_label": "Shop Sleepers"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "title": "Keep Exploring",
+        "text": "",
+        "text_alignment": "start",
+        "enable_carousel": false,
+        "grid": 3,
+        "color_scheme": "default",
+        "full_width": true,
+        "coll_grid_image_shape": "square",
+        "coll_grid_image_position": "center center",
+        "coll_thumb_mob_per_row": "1",
+        "coll_grid_show_count": false,
+        "coll_text_position": "below",
+        "coll_text_position_under_mobile": false,
+        "coll_thumb_text_align_x": "center",
+        "coll_thumb_text_align_y": "center",
+        "coll_button_style": "primary"
+      }
     }
   },
   "order": [
-    "lpc"
+    "hero",
+    "proof_bar",
+    "products",
+    "why_bibs",
+    "comparison",
+    "safety",
+    "reviews",
+    "care",
+    "faq",
+    "related"
   ]
 }
