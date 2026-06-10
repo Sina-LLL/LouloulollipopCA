@@ -126,54 +126,53 @@
         "text_alignment": "center"
       }
     },
-    "tog_chart": {
-      "type": "lp-comparison",
+    "rich_text_XTVkdM": {
+      "type": "rich-text",
       "blocks": {
-        "tog1": {
-          "type": "row",
+        "heading_Dc6fQb": {
+          "type": "heading",
           "settings": {
-            "feature": "0.5 TOG",
-            "our_value": "24–27°C (75–81°F)",
-            "other_value": "Short-sleeved onesie or diaper only"
+            "title": "Which TOG Do I Need?",
+            "use_h1": false
           }
         },
-        "tog2": {
-          "type": "row",
+        "text_rzE8hB": {
+          "type": "text",
           "settings": {
-            "feature": "1.0 TOG",
-            "our_value": "23–24°C (72–75°F)",
-            "other_value": "Long-sleeved onesie under sleep bag"
+            "text": "<p>TOG (Thermal Overall Grade) measures how warm a sleep bag keeps your baby. The right TOG depends on your room temperature — not the season. Most homes sit between 20–24°C year-round, which puts a 1.0 TOG as the default. The ideal sleep temperature is 18–20°C.</p>",
+            "enlarge_text": false
           }
         },
-        "tog3": {
-          "type": "row",
+        "image_pzw4T6": {
+          "type": "image",
           "settings": {
-            "feature": "1.5 TOG",
-            "our_value": "20–22°C (68–72°F)",
-            "other_value": "Layered short and long-sleeved onesies"
-          }
-        },
-        "tog4": {
-          "type": "row",
-          "settings": {
-            "feature": "2.5 TOG",
-            "our_value": "17–19°C (64–68°F)",
-            "other_value": "Footed pajamas under sleep bag"
+            "image": "shopify://shop_images/TOG_Chart_b3ae96d7-6832-44c5-a8c0-89017d0216a7.png",
+            "image_width": 700,
+            "url": ""
           }
         }
       },
       "block_order": [
-        "tog1",
-        "tog2",
-        "tog3",
-        "tog4"
+        "heading_Dc6fQb",
+        "text_rzE8hB",
+        "image_pzw4T6"
       ],
+      "name": "Rich text",
+      "settings": {
+        "height": "medium",
+        "text_alignment": "center",
+        "full_width": false,
+        "color_scheme": "default"
+      }
+    },
+    "tog_chart": {
+      "type": "lp-comparison",
       "settings": {
         "bg_color": "#faf9f6",
-        "title": "Which TOG Do I Need?",
-        "intro": "TOG (Thermal Overall Grade) measures how warm a sleep bag keeps your baby. The right TOG depends on your room temperature — not the season. Most homes sit between 20–24°C year-round, which puts a 1.0 TOG as the default. The ideal sleep temperature is 18–20°C.",
-        "col_ours": "Room Temperature",
-        "col_other": "What to Wear Under the Sleep Bag",
+        "title": "",
+        "intro": "",
+        "col_ours": "",
+        "col_other": "",
         "bottom_line": "Comfort check: baby's chest and tummy should feel warm and dry — not clammy, sweaty, or cold. If your room temperature changes between seasons, adjust the TOG or the layer underneath accordingly."
       }
     },
@@ -593,6 +592,7 @@
     "hero",
     "proof_bar",
     "products",
+    "rich_text_XTVkdM",
     "tog_chart",
     "why_sleep_bags",
     "comparison",
