@@ -118,6 +118,54 @@
         "text_alignment": "center"
       }
     },
+    "repreve": {
+      "type": "multi-column",
+      "blocks": {
+        "col1": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": false,
+            "title": "Post-Consumer Plastic Bottles",
+            "text": "<p>The outer shell fiber is made from plastic bottles that would otherwise go to landfill or ocean. Same high-performance polyester — sourced differently.</p>",
+            "button_label": "",
+            "link": ""
+          }
+        },
+        "col2": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": false,
+            "title": "Certified Recycled Content",
+            "text": "<p>REPREVE® certification tracks recycled content from source to finished product. The claim is independently verified — not a marketing assumption.</p>",
+            "button_label": "",
+            "link": ""
+          }
+        },
+        "col3": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": false,
+            "title": "No Performance Trade-Off",
+            "text": "<p>The TPU waterproof barrier, the print, the cuff elasticity — all identical to virgin polyester. Sustainability is a raw material decision here, not a compromise.</p>",
+            "button_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "col1",
+        "col2",
+        "col3"
+      ],
+      "settings": {
+        "title": "Made with REPREVE® Recycled Fibers",
+        "media_aspect_ratio": "s",
+        "media_width": 700,
+        "text_alignment": "center",
+        "button_style": "primary",
+        "color_scheme": "2"
+      }
+    },
     "why_bibs": {
       "type": "image-with-text",
       "blocks": {
@@ -260,54 +308,6 @@
         "col_ours": "Loulou Lollipop Long Sleeve Bib",
         "col_other": "Standard Bib",
         "bottom_line": "Bottom line: A long sleeve waterproof bib is the difference between a quick wipe-down and a full outfit change — three times a day, for a year."
-      }
-    },
-    "repreve": {
-      "type": "multi-column",
-      "blocks": {
-        "col1": {
-          "type": "text_block",
-          "settings": {
-            "enable_media": false,
-            "title": "Post-Consumer Plastic Bottles",
-            "text": "<p>The outer shell fiber is made from plastic bottles that would otherwise go to landfill or ocean. Same high-performance polyester — sourced differently.</p>",
-            "button_label": "",
-            "link": ""
-          }
-        },
-        "col2": {
-          "type": "text_block",
-          "settings": {
-            "enable_media": false,
-            "title": "Certified Recycled Content",
-            "text": "<p>REPREVE® certification tracks recycled content from source to finished product. The claim is independently verified — not a marketing assumption.</p>",
-            "button_label": "",
-            "link": ""
-          }
-        },
-        "col3": {
-          "type": "text_block",
-          "settings": {
-            "enable_media": false,
-            "title": "No Performance Trade-Off",
-            "text": "<p>The TPU waterproof barrier, the print, the cuff elasticity — all identical to virgin polyester. Sustainability is a raw material decision here, not a compromise.</p>",
-            "button_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "col1",
-        "col2",
-        "col3"
-      ],
-      "settings": {
-        "title": "Made with REPREVE® Recycled Fibers",
-        "media_aspect_ratio": "s",
-        "media_width": 700,
-        "text_alignment": "center",
-        "button_style": "primary",
-        "color_scheme": "2"
       }
     },
     "safety": {
@@ -554,10 +554,10 @@
     "hero",
     "proof_bar",
     "products",
-    "why_bibs",
-    "comparison",
     "repreve",
     "safety",
+    "comparison",
+    "why_bibs",
     "reviews",
     "care",
     "faq",
