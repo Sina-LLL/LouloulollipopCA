@@ -58,7 +58,8 @@
         "btn2"
       ],
       "settings": {
-        "image": "",
+        "image": "shopify://shop_images/Sleeper_Nav.png",
+        "image_2": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._4th_2024_-Web-42_7dc4a622-474f-409a-8052-c65828728b6e.jpg",
         "image_width": 700,
         "image_link": "",
         "image_position": "below",
@@ -202,7 +203,6 @@
         "btn"
       ],
       "settings": {
-        "image": "",
         "image_width": 700,
         "image_link": "",
         "image_position": "below",
@@ -311,7 +311,6 @@
         "btn"
       ],
       "settings": {
-        "image": "",
         "image_width": 700,
         "image_link": "",
         "image_position": "left",
