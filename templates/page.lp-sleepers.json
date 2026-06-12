@@ -157,12 +157,20 @@
           "settings": {
             "text": "<p><strong>Pairing tip:</strong> a TENCEL\u2122 long-sleeve sleeper under a 1.0 TOG sleep bag works in most Canadian homes year-round. Add a 2.5 TOG bag for winter. One sleeper, two bags \u2014 that's the system.</p>"
           }
+        },
+        "tog_ratings": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li><strong>0.5 TOG \u2013 Summer / warm rooms (24\u00b0C\u201327\u00b0C \u00b7 75\u00b0F\u201381\u00b0F):</strong> Lightweight and breathable. Ideal when room temperature stays above 24\u00b0C. Pair with a short-sleeve bodysuit or light onesie underneath.</li><li><strong>1.0 TOG \u2013 Spring, fall &amp; mild rooms (20\u00b0C\u201324\u00b0C \u00b7 68\u00b0F\u201375\u00b0F):</strong> Our most popular weight. Versatile enough for year-round use in most homes. Pair with a long-sleeve bodysuit or fitted sleeper.</li><li><strong>2.5 TOG \u2013 Winter / cool rooms (16\u00b0C\u201320\u00b0C \u00b7 61\u00b0F\u201368\u00b0F):</strong> Extra warmth for cold bedrooms or winter nights. Pair with a full-coverage sleeper for the coldest rooms.</li></ul>",
+            "enlarge_text": false
+          }
         }
       },
       "block_order": [
         "tog_heading",
         "tog_text",
         "tog_image",
+        "tog_ratings",
         "tog_callout"
       ],
       "settings": {
