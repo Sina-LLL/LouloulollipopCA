@@ -16,7 +16,7 @@
         "eyebrow": {
           "type": "subheading",
           "settings": {
-            "subheading": "Canadian \u00b7 Award-Winning \u00b7 Since 2015"
+            "subheading": "Canadian · Award-Winning · Since 2015"
           }
         },
         "heading": {
@@ -29,7 +29,7 @@
         "body": {
           "type": "text",
           "settings": {
-            "text": "<p>Our TENCEL\u2122 sleepers are designed as the perfect under-layer for sleep bags \u2014 or worn solo on warmer nights.</p>",
+            "text": "<p>Our TENCEL™ sleepers are designed as the perfect under-layer for sleep bags — or worn solo on warmer nights.</p>",
             "enlarge_text": false
           }
         },
@@ -87,7 +87,7 @@
         "p3": {
           "type": "stat",
           "settings": {
-            "label": "5,000+ \u2605\u2605\u2605\u2605\u2605",
+            "label": "5,000+ ★★★★★",
             "desc": "Reviews across sleep products"
           }
         },
@@ -95,7 +95,7 @@
           "type": "stat",
           "settings": {
             "label": "Premium Materials",
-            "desc": "TENCEL\u2122  and Tanboocel from Bamboo"
+            "desc": "TENCEL™  and Tanboocel from Bamboo"
           }
         }
       },
@@ -115,7 +115,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "Shop Sleepers & Pajamas",
-        "text": "<p>Every print, every size \u2014 made from buttery-soft TENCEL\u2122 Lyocell. The under-layer your sleep bag was designed to pair with.</p>",
+        "text": "<p>Every print, every size — made from buttery-soft TENCEL™ Lyocell. The under-layer your sleep bag was designed to pair with.</p>",
         "collection": "sleepers-pajamas",
         "show_vendor": false,
         "enable_carousel": false,
@@ -140,7 +140,14 @@
         "tog_text": {
           "type": "text",
           "settings": {
-            "text": "<p>TOG measures how warm a sleep bag keeps your baby. The sleeper is the layer underneath \u2014 the variable you control. A TENCEL\u2122 long-sleeve sleeper is the right choice under a 1.0 or 2.5 TOG bag, the two most families use year-round. For rooms above 24\u00b0C, skip the sleeper and use a short-sleeve bodysuit under a 0.5 TOG bag instead.</p>",
+            "text": "<p>TOG measures how warm a sleep bag keeps your baby. The sleeper is the layer underneath — the variable you control. A TENCEL™ long-sleeve sleeper is the right choice under a 1.0 or 2.5 TOG bag, the two most families use year-round. For rooms above 24°C, skip the sleeper and use a short-sleeve bodysuit under a 0.5 TOG bag instead.</p>",
+            "enlarge_text": false
+          }
+        },
+        "tog_ratings": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li><strong>0.5 TOG – Summer / warm rooms (24°C–27°C · 75°F–81°F):</strong> Lightweight and breathable. Ideal when room temperature stays above 24°C. Pair with a short-sleeve bodysuit or light onesie underneath.</li><li><strong>1.0 TOG – Spring, fall & mild rooms (20°C–24°C · 68°F–75°F):</strong> Our most popular weight. Versatile enough for year-round use in most homes. Pair with a long-sleeve bodysuit or fitted sleeper.</li><li><strong>2.5 TOG – Winter / cool rooms (16°C–20°C · 61°F–68°F):</strong> Extra warmth for cold bedrooms or winter nights. Pair with a full-coverage sleeper for the coldest rooms.</li></ul>",
             "enlarge_text": false
           }
         },
@@ -155,22 +162,15 @@
         "tog_callout": {
           "type": "callout",
           "settings": {
-            "text": "<p><strong>Pairing tip:</strong> a TENCEL\u2122 long-sleeve sleeper under a 1.0 TOG sleep bag works in most Canadian homes year-round. Add a 2.5 TOG bag for winter. One sleeper, two bags \u2014 that's the system.</p>"
-          }
-        },
-        "tog_ratings": {
-          "type": "text",
-          "settings": {
-            "text": "<ul><li><strong>0.5 TOG \u2013 Summer / warm rooms (24\u00b0C\u201327\u00b0C \u00b7 75\u00b0F\u201381\u00b0F):</strong> Lightweight and breathable. Ideal when room temperature stays above 24\u00b0C. Pair with a short-sleeve bodysuit or light onesie underneath.</li><li><strong>1.0 TOG \u2013 Spring, fall &amp; mild rooms (20\u00b0C\u201324\u00b0C \u00b7 68\u00b0F\u201375\u00b0F):</strong> Our most popular weight. Versatile enough for year-round use in most homes. Pair with a long-sleeve bodysuit or fitted sleeper.</li><li><strong>2.5 TOG \u2013 Winter / cool rooms (16\u00b0C\u201320\u00b0C \u00b7 61\u00b0F\u201368\u00b0F):</strong> Extra warmth for cold bedrooms or winter nights. Pair with a full-coverage sleeper for the coldest rooms.</li></ul>",
-            "enlarge_text": false
+            "text": "<p><strong>Pairing tip:</strong> a TENCEL™ long-sleeve sleeper under a 1.0 TOG sleep bag works in most Canadian homes year-round. Add a 2.5 TOG bag for winter. One sleeper, two bags — that's the system.</p>"
           }
         }
       },
       "block_order": [
         "tog_heading",
         "tog_text",
-        "tog_image",
         "tog_ratings",
+        "tog_image",
         "tog_callout"
       ],
       "settings": {
@@ -193,7 +193,7 @@
         "body": {
           "type": "text",
           "settings": {
-            "text": "<p>Most parents focus on the sleep bag TOG rating \u2014 but what baby wears underneath determines whether the system actually works. Cotton traps moisture against the skin. That's why a baby in a cotton onesie under their sleep bag wakes up damp, clammy, and uncomfortable at 2am.</p><p>TENCEL\u2122 Lyocell solves this at the source. It's a botanic fiber made from eucalyptus wood pulp, and independent testing shows it absorbs moisture roughly <strong>50% more efficiently than cotton</strong>. It keeps wicking where cotton gives up \u2014 so your baby stays dry and comfortable for the full 10\u201312 hours they're in that garment.</p>",
+            "text": "<p>Most parents focus on the sleep bag TOG rating — but what baby wears underneath determines whether the system actually works. Cotton traps moisture against the skin. That's why a baby in a cotton onesie under their sleep bag wakes up damp, clammy, and uncomfortable at 2am.</p><p>TENCEL™ Lyocell solves this at the source. It's a botanic fiber made from eucalyptus wood pulp, and independent testing shows it absorbs moisture roughly <strong>50% more efficiently than cotton</strong>. It keeps wicking where cotton gives up — so your baby stays dry and comfortable for the full 10–12 hours they're in that garment.</p>",
             "enlarge_text": false
           }
         },
@@ -204,7 +204,7 @@
             "use_icon": false,
             "icon": "check_mark",
             "title": "Moisture-wicking all night",
-            "text": "Pulls sweat away from skin and releases it \u2014 doesn't hold it against baby."
+            "text": "Pulls sweat away from skin and releases it — doesn't hold it against baby."
           }
         },
         "list_item_2": {
@@ -214,7 +214,7 @@
             "use_icon": false,
             "icon": "check_mark",
             "title": "Gets softer with every wash",
-            "text": "Unlike cotton, TENCEL\u2122 doesn't stiffen or pill over time. The fiftieth wash feels as good as the first."
+            "text": "Unlike cotton, TENCEL™ doesn't stiffen or pill over time. The fiftieth wash feels as good as the first."
           }
         },
         "list_item_3": {
@@ -224,7 +224,7 @@
             "use_icon": false,
             "icon": "check_mark",
             "title": "Gentle on eczema-prone skin",
-            "text": "Smooth fiber structure means less friction against skin. The National Eczema Society lists TENCEL\u2122 alongside cotton as suitable for sensitive skin."
+            "text": "Smooth fiber structure means less friction against skin. The National Eczema Society lists TENCEL™ alongside cotton as suitable for sensitive skin."
           }
         },
         "list_item_4": {
@@ -271,8 +271,8 @@
           "type": "row",
           "settings": {
             "feature": "Fabric feel",
-            "our_value": "Buttery-soft TENCEL\u2122 \u2014 smooth against skin",
-            "other_value": "Soft initially \u2014 varies by brand and processing"
+            "our_value": "Buttery-soft TENCEL™ — smooth against skin",
+            "other_value": "Soft initially — varies by brand and processing"
           }
         },
         "r2": {
@@ -280,23 +280,23 @@
           "settings": {
             "feature": "Softness over time",
             "our_value": "Gets softer with every wash",
-            "other_value": "Pills and thins through repeated washing \u2014 noticeable by month 3"
+            "other_value": "Pills and thins through repeated washing — noticeable by month 3"
           }
         },
         "r3": {
           "type": "row",
           "settings": {
             "feature": "Moisture management",
-            "our_value": "Wicks sweat away and releases it \u2014 baby stays dry",
-            "other_value": "Absorbs but holds moisture \u2014 less effective under a sleep bag"
+            "our_value": "Wicks sweat away and releases it — baby stays dry",
+            "other_value": "Absorbs but holds moisture — less effective under a sleep bag"
           }
         },
         "r4": {
           "type": "row",
           "settings": {
             "feature": "Sensitive skin",
-            "our_value": "Smooth fibre, minimal friction \u2014 eczema-friendly",
-            "other_value": "Depends on processing quality \u2014 rayon treatment varies widely"
+            "our_value": "Smooth fibre, minimal friction — eczema-friendly",
+            "other_value": "Depends on processing quality — rayon treatment varies widely"
           }
         },
         "r5": {
@@ -304,14 +304,14 @@
           "settings": {
             "feature": "Durability",
             "our_value": "Surface holds through 50+ washes",
-            "other_value": "Degrades faster \u2014 especially with 3\u20134 washes per week"
+            "other_value": "Degrades faster — especially with 3–4 washes per week"
           }
         },
         "r6": {
           "type": "row",
           "settings": {
             "feature": "Production",
-            "our_value": "Closed-loop \u2014 99% solvent recycled, botanic source",
+            "our_value": "Closed-loop — 99% solvent recycled, botanic source",
             "other_value": "Heavy chemical processing to convert bamboo into rayon fibre"
           }
         }
@@ -326,11 +326,11 @@
       ],
       "settings": {
         "bg_color": "#faf9f6",
-        "title": "TENCEL\u2122 Sleeper vs Bamboo Rayon Pajamas",
-        "intro": "Bamboo rayon and TENCEL\u2122 Lyocell both market themselves as premium baby fabrics. Here's how they actually compare over time.",
-        "col_ours": "Loulou Lollipop TENCEL\u2122 Sleeper",
+        "title": "TENCEL™ Sleeper vs Bamboo Rayon Pajamas",
+        "intro": "Bamboo rayon and TENCEL™ Lyocell both market themselves as premium baby fabrics. Here's how they actually compare over time.",
+        "col_ours": "Loulou Lollipop TENCEL™ Sleeper",
         "col_other": "Bamboo Rayon Pajamas",
-        "bottom_line": "Bottom line: Bamboo rayon feels similar in the store. By month three of washing 3\u20134 nights a week, the difference is clear."
+        "bottom_line": "Bottom line: Bamboo rayon feels similar in the store. By month three of washing 3–4 nights a week, the difference is clear."
       }
     },
     "safety": {
@@ -346,7 +346,7 @@
         "body": {
           "type": "text",
           "settings": {
-            "text": "<p>Every detail on a Loulou Lollipop sleeper exists for a reason.</p><ul><li><strong>2-way zipper</strong> \u2014 opens from the bottom for nighttime diaper changes without fully unwrapping baby</li><li><strong>Fold-over hand cuffs</strong> \u2014 built-in mitts protect newborn faces from scratches, fold back as baby grows</li><li><strong>Footed design</strong> \u2014 no separate socks to lose, keeps feet warm all night</li><li><strong>Snug fit</strong> \u2014 close-fitting per safe sleep guidelines, no excess fabric in the crib</li><li><strong>Hidden zipper guard</strong> \u2014 smooth against delicate skin at the chin and neck</li><li><strong>Sizes NB\u20134Y</strong> \u2014 grown with your baby, sized by weight and height not age</li></ul>",
+            "text": "<p>Every detail on a Loulou Lollipop sleeper exists for a reason.</p><ul><li><strong>2-way zipper</strong> — opens from the bottom for nighttime diaper changes without fully unwrapping baby</li><li><strong>Fold-over hand cuffs</strong> — built-in mitts protect newborn faces from scratches, fold back as baby grows</li><li><strong>Footed design</strong> — no separate socks to lose, keeps feet warm all night</li><li><strong>Snug fit</strong> — close-fitting per safe sleep guidelines, no excess fabric in the crib</li><li><strong>Hidden zipper guard</strong> — smooth against delicate skin at the chin and neck</li><li><strong>Sizes NB–4Y</strong> — grown with your baby, sized by weight and height not age</li></ul>",
             "enlarge_text": false
           }
         },
@@ -445,22 +445,22 @@
         "wash": {
           "type": "question",
           "settings": {
-            "title": "How do I wash a TENCEL\u2122 sleeper?",
-            "answer": "<p>Machine wash cold on a gentle cycle. Tumble dry low or hang dry. No bleach, no fabric softener \u2014 softener coats the fibres and reduces moisture-wicking performance over time. TENCEL\u2122 actually gets softer with each wash, so no special treatment needed.</p>"
+            "title": "How do I wash a TENCEL™ sleeper?",
+            "answer": "<p>Machine wash cold on a gentle cycle. Tumble dry low or hang dry. No bleach, no fabric softener — softener coats the fibres and reduces moisture-wicking performance over time. TENCEL™ actually gets softer with each wash, so no special treatment needed.</p>"
           }
         },
         "size": {
           "type": "question",
           "settings": {
             "title": "What size should I get?",
-            "answer": "<p>Sleepers are sized by weight and height, not age. Check the size guide on the product page for exact measurements. Snug fit is important for safe sleep \u2014 when between sizes, do not size up as excess fabric is not recommended.</p>"
+            "answer": "<p>Sleepers are sized by weight and height, not age. Check the size guide on the product page for exact measurements. Snug fit is important for safe sleep — when between sizes, do not size up as excess fabric is not recommended.</p>"
           }
         },
         "layer": {
           "type": "question",
           "settings": {
             "title": "How should I layer with a sleep bag?",
-            "answer": "<p>A TENCEL\u2122 sleeper under a 1.0 TOG sleep bag is the most common pairing for year-round nurseries (20\u201324\u00b0C). For warmer rooms (24\u00b0C+) use a short-sleeve bodysuit under a 0.5 TOG bag. For cooler rooms (below 20\u00b0C), the same long-sleeve sleeper under a 2.5 TOG bag. One more layer than you'd wear is the right rule of thumb.</p>"
+            "answer": "<p>A TENCEL™ sleeper under a 1.0 TOG sleep bag is the most common pairing for year-round nurseries (20–24°C). For warmer rooms (24°C+) use a short-sleeve bodysuit under a 0.5 TOG bag. For cooler rooms (below 20°C), the same long-sleeve sleeper under a 2.5 TOG bag. One more layer than you'd wear is the right rule of thumb.</p>"
           }
         }
       },
@@ -479,36 +479,36 @@
         "q6": {
           "type": "question",
           "settings": {
-            "title": "How does TENCEL\u2122 compare to bamboo for baby sleepers?",
-            "answer": "<p>Both are soft at first, but TENCEL\u2122 Lyocell outperforms bamboo rayon over time. Bamboo rayon pills and thins through repeated washing. TENCEL\u2122 holds its surface through fifty wash cycles \u2014 important for a garment your baby wears three or four nights a week. For the first few washes, bamboo may feel marginally softer. By month three, TENCEL\u2122 wins.</p>"
+            "title": "How does TENCEL™ compare to bamboo for baby sleepers?",
+            "answer": "<p>Both are soft at first, but TENCEL™ Lyocell outperforms bamboo rayon over time. Bamboo rayon pills and thins through repeated washing. TENCEL™ holds its surface through fifty wash cycles — important for a garment your baby wears three or four nights a week. For the first few washes, bamboo may feel marginally softer. By month three, TENCEL™ wins.</p>"
           }
         },
         "q1": {
           "type": "question",
           "settings": {
             "title": "Can my baby sleep in just a sleeper without a sleep bag?",
-            "answer": "<p>Yes \u2014 on warmer nights or in rooms above 24\u00b0C, a TENCEL\u2122 sleeper alone is enough. For cooler rooms, pair it with a TOG-rated sleep bag. The sleeper is designed to work both ways.</p>"
+            "answer": "<p>Yes — on warmer nights or in rooms above 24°C, a TENCEL™ sleeper alone is enough. For cooler rooms, pair it with a TOG-rated sleep bag. The sleeper is designed to work both ways.</p>"
           }
         },
         "q2": {
           "type": "question",
           "settings": {
-            "title": "Is TENCEL\u2122 good for babies with sensitive skin or eczema?",
-            "answer": "<p>Yes. TENCEL\u2122 Lyocell has a smooth, continuous fibre structure that lies flat against skin \u2014 less friction and less irritation than cotton or synthetic fabrics. Its moisture-wicking properties also keep skin dry overnight, which matters for babies prone to eczema flare-ups. The National Eczema Society lists TENCEL\u2122 alongside cotton as suitable for sensitive skin.</p>"
+            "title": "Is TENCEL™ good for babies with sensitive skin or eczema?",
+            "answer": "<p>Yes. TENCEL™ Lyocell has a smooth, continuous fibre structure that lies flat against skin — less friction and less irritation than cotton or synthetic fabrics. Its moisture-wicking properties also keep skin dry overnight, which matters for babies prone to eczema flare-ups. The National Eczema Society lists TENCEL™ alongside cotton as suitable for sensitive skin.</p>"
           }
         },
         "q3": {
           "type": "question",
           "settings": {
             "title": "What do the fold-over hand cuffs do?",
-            "answer": "<p>Newborn fingernails grow fast and babies frequently scratch their own faces during sleep. The fold-over cuffs cover the hands without needing separate mittens that fall off. Around 4\u20136 months, fold them back \u2014 the baby wants hands free to explore.</p>"
+            "answer": "<p>Newborn fingernails grow fast and babies frequently scratch their own faces during sleep. The fold-over cuffs cover the hands without needing separate mittens that fall off. Around 4–6 months, fold them back — the baby wants hands free to explore.</p>"
           }
         },
         "q4": {
           "type": "question",
           "settings": {
             "title": "When do babies move out of footed sleepers?",
-            "answer": "<p>Most families switch to two-piece pajamas around 18 months, when the toddler starts potty training or protests the zipper. Some children stay in one-piece footed sleepers through age 3. There's no fixed age \u2014 it's about what works for your child and your routine.</p>"
+            "answer": "<p>Most families switch to two-piece pajamas around 18 months, when the toddler starts potty training or protests the zipper. Some children stay in one-piece footed sleepers through age 3. There's no fixed age — it's about what works for your child and your routine.</p>"
           }
         }
       },
