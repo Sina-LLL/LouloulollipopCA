@@ -16,7 +16,7 @@
         "eyebrow": {
           "type": "subheading",
           "settings": {
-            "subheading": "Best Waterproof Bib · Parents Magazine 2025"
+            "subheading": "Best Waterproof Bib \u00b7 Parents Magazine 2025"
           }
         },
         "heading": {
@@ -29,7 +29,7 @@
         "body": {
           "type": "text",
           "settings": {
-            "text": "<p>Full sleeve and chest coverage with a waterproof TPU-sealed shell — not treated, sealed. Tomato sauce, blueberry juice, yogurt: none of it gets through. One size fits 4 to 24 months.</p>",
+            "text": "<p>Tame the mess, with this waterproof bib that is made from recycled polyester. Tomato sauce, blueberry juice, yogurt: none of it gets through. It is multi purpose too, think art projects, sandboxes and more. The ideas for use are endless. One size fits 4 to 24 months.</p>",
             "enlarge_text": false
           }
         },
@@ -78,7 +78,7 @@
         "p3": {
           "type": "stat",
           "settings": {
-            "label": "5,000+ ★★★★★",
+            "label": "5,000+ \u2605\u2605\u2605\u2605\u2605",
             "desc": "Reviews across feeding products"
           }
         },
@@ -126,7 +126,7 @@
           "settings": {
             "enable_media": false,
             "title": "Post-Consumer Plastic Bottles",
-            "text": "<p>The outer shell fiber is made from plastic bottles that would otherwise go to landfill or ocean. Same high-performance polyester — sourced differently.</p>",
+            "text": "<p>The outer shell fiber is made from plastic bottles that would otherwise go to landfill or ocean. Same high-performance polyester \u2014 sourced differently.</p>",
             "button_label": "",
             "link": ""
           }
@@ -136,7 +136,7 @@
           "settings": {
             "enable_media": false,
             "title": "Certified Recycled Content",
-            "text": "<p>REPREVE® certification tracks recycled content from source to finished product. The claim is independently verified — not a marketing assumption.</p>",
+            "text": "<p>REPREVE\u00ae certification tracks recycled content from source to finished product. The claim is independently verified \u2014 not a marketing assumption.</p>",
             "button_label": "",
             "link": ""
           }
@@ -146,7 +146,7 @@
           "settings": {
             "enable_media": false,
             "title": "No Performance Trade-Off",
-            "text": "<p>The TPU waterproof barrier, the print, the cuff elasticity — all identical to virgin polyester. Sustainability is a raw material decision here, not a compromise.</p>",
+            "text": "<p>The TPU waterproof barrier, the print, the cuff elasticity \u2014 all identical to virgin polyester. Sustainability is a raw material decision here, not a compromise.</p>",
             "button_label": "",
             "link": ""
           }
@@ -158,7 +158,7 @@
         "col3"
       ],
       "settings": {
-        "title": "Made with REPREVE® Recycled Fibers",
+        "title": "Made with REPREVE\u00ae Recycled Fibers",
         "media_aspect_ratio": "s",
         "media_width": 700,
         "text_alignment": "center",
@@ -179,7 +179,7 @@
         "body": {
           "type": "text",
           "settings": {
-            "text": "<p>Every detail on this bib is designed around what actually happens at a baby's high chair.</p><ul><li><strong>Waterproof TPU backing</strong> — sealed barrier on front and both sleeves, not a surface treatment</li><li><strong>Full sleeve coverage</strong> — cut wide at the elbow for movement, tapered at the wrist to stay in place</li><li><strong>Wide chest panel</strong> — generous coverage catches drips, purees, and BLW meals</li><li><strong>Two-snap neck closure</strong> — faster than ties or buttons, goes on and off one-handed</li><li><strong>Soft flat elastic cuffs</strong> — wide elastic holds without leaving marks on chubby arms</li><li><strong>CPSIA compliant, no lead in print or hardware</strong> — U.S. children's product safety baseline</li><li><strong>One size fits 4–24 months</strong> — covers the full messy feeding phase without resizing</li></ul>",
+            "text": "<p>Every detail on this bib is designed around what actually happens at a baby's high chair.</p><ul><li><strong>Waterproof TPU backing</strong> \u2014 sealed barrier on front and both sleeves, not a surface treatment</li><li><strong>Full sleeve coverage</strong> \u2014 cut wide at the elbow for movement, tapered at the wrist to stay in place</li><li><strong>Wide chest panel</strong> \u2014 generous coverage catches drips, purees, and BLW meals</li><li><strong>Two-snap neck closure</strong> \u2014 faster than ties or buttons, goes on and off one-handed</li><li><strong>Soft flat elastic cuffs</strong> \u2014 wide elastic holds without leaving marks on chubby arms</li><li><strong>CPSIA compliant, no lead in print or hardware</strong> \u2014 U.S. children's product safety baseline</li><li><strong>One size fits 4\u201324 months</strong> \u2014 covers the full messy feeding phase without resizing</li></ul>",
             "enlarge_text": false
           }
         },
@@ -213,32 +213,32 @@
           "type": "row",
           "settings": {
             "feature": "Coverage",
-            "our_value": "Full arms + chest — outfit stays clean",
-            "other_value": "Chest only — sleeves always get it"
+            "our_value": "Full arms + chest \u2014 outfit stays clean",
+            "other_value": "Chest only \u2014 sleeves always get it"
           }
         },
         "r2": {
           "type": "row",
           "settings": {
             "feature": "Waterproofing",
-            "our_value": "TPU-sealed barrier — tested against tomato, beet, yogurt",
-            "other_value": "Surface treatment — wears off after washing"
+            "our_value": "TPU-sealed barrier \u2014 tested against tomato, beet, yogurt",
+            "other_value": "Surface treatment \u2014 wears off after washing"
           }
         },
         "r3": {
           "type": "row",
           "settings": {
             "feature": "Closure",
-            "our_value": "Two snaps at neck — on and off one-handed",
-            "other_value": "Ties or single button — fiddly, soaks up food"
+            "our_value": "Two snaps at neck \u2014 on and off one-handed",
+            "other_value": "Ties or single button \u2014 fiddly, soaks up food"
           }
         },
         "r4": {
           "type": "row",
           "settings": {
             "feature": "Cuffs",
-            "our_value": "Wide flat elastic — no marks on forearm",
-            "other_value": "Thin elastic — imprints a ring by month 7"
+            "our_value": "Wide flat elastic \u2014 no marks on forearm",
+            "other_value": "Thin elastic \u2014 imprints a ring by month 7"
           }
         },
         "r5": {
@@ -246,14 +246,14 @@
           "settings": {
             "feature": "Washing",
             "our_value": "Machine wash cold, tumble dry low",
-            "other_value": "Often wipe-only — bacteria builds up over time"
+            "other_value": "Often wipe-only \u2014 bacteria builds up over time"
           }
         },
         "r6": {
           "type": "row",
           "settings": {
             "feature": "Age range",
-            "our_value": "One size: 4–24 months — entire messy phase",
+            "our_value": "One size: 4\u201324 months \u2014 entire messy phase",
             "other_value": "Often sized for infants only, outgrown by month 9"
           }
         }
@@ -272,7 +272,7 @@
         "intro": "The regular bib has been the default for decades. Here's how it actually performs at mealtime.",
         "col_ours": "Loulou Lollipop Long Sleeve Bib",
         "col_other": "Standard Bib",
-        "bottom_line": "Bottom line: A long sleeve waterproof bib is the difference between a quick wipe-down and a full outfit change — three times a day, for a year."
+        "bottom_line": "Bottom line: A long sleeve waterproof bib is the difference between a quick wipe-down and a full outfit change \u2014 three times a day, for a year."
       }
     },
     "why_bibs": {
@@ -288,7 +288,7 @@
         "body": {
           "type": "text",
           "settings": {
-            "text": "<p>Most fabric bibs are water-resistant at best — a surface treatment that wears off after a few washes. When blueberry juice or tomato sauce hits, it soaks through to the outfit underneath. You're still doing a full change.</p><p>The Loulou Lollipop long sleeve bib uses a <strong>waterproof TPU-sealed backing</strong> on the front panel and both sleeves. That's a physical barrier, not a coating. Tested across full-strength tomato sauce, beet juice, and yogurt — none of it bleeds through. The bib takes the hit. The outfit doesn't.</p>",
+            "text": "<p>Most fabric bibs are water-resistant at best \u2014 a surface treatment that wears off after a few washes. When blueberry juice or tomato sauce hits, it soaks through to the outfit underneath. You're still doing a full change.</p><p>The Loulou Lollipop long sleeve bib uses a <strong>waterproof TPU-sealed backing</strong> on the front panel and both sleeves. That's a physical barrier, not a coating. Tested across full-strength tomato sauce, beet juice, and yogurt \u2014 none of it bleeds through. The bib takes the hit. The outfit doesn't.</p>",
             "enlarge_text": false
           }
         }
@@ -363,21 +363,21 @@
           "type": "question",
           "settings": {
             "title": "How do I wash the long sleeve bib?",
-            "answer": "<p>Machine wash cold, tumble dry low or hang dry. Avoid high heat — the TPU backing lasts longer without it. For food stains, rinse immediately after use and spot-treat with dish soap before washing. Most purees and soft foods come out in a standard cold wash.</p>"
+            "answer": "<p>Machine wash cold, tumble dry low or hang dry. Avoid high heat \u2014 the TPU backing lasts longer without it. For food stains, rinse immediately after use and spot-treat with dish soap before washing. Most purees and soft foods come out in a standard cold wash.</p>"
           }
         },
         "size": {
           "type": "question",
           "settings": {
             "title": "What size is it?",
-            "answer": "<p>One size fits approximately 4 months through 24 months — the full puree and baby-led weaning phase. The two-snap neck closure and wide elasticized cuffs adjust to fit comfortably through the entire range without needing to resize.</p>"
+            "answer": "<p>One size fits approximately 4 months through 24 months \u2014 the full puree and baby-led weaning phase. The two-snap neck closure and wide elasticized cuffs adjust to fit comfortably through the entire range without needing to resize.</p>"
           }
         },
         "stain": {
           "type": "question",
           "settings": {
             "title": "How do I get tough stains out?",
-            "answer": "<p>Rinse immediately — the TPU shell doesn't absorb, so most stains come off quickly. For tougher stains like beet or turmeric on the fabric exterior, apply dish soap directly to the stain before washing. Avoid hot water — it can set protein-based stains and degrade the waterproof backing faster.</p>"
+            "answer": "<p>Rinse immediately \u2014 the TPU shell doesn't absorb, so most stains come off quickly. For tougher stains like beet or turmeric on the fabric exterior, apply dish soap directly to the stain before washing. Avoid hot water \u2014 it can set protein-based stains and degrade the waterproof backing faster.</p>"
           }
         }
       },
@@ -397,42 +397,42 @@
           "type": "question",
           "settings": {
             "title": "Does it actually protect the outfit underneath?",
-            "answer": "<p>Yes — that's the core design goal. The waterproof TPU backing on the front panel and both sleeves creates a physical barrier, not a surface treatment. It's been tested against full-strength tomato sauce, beet juice, and yogurt without bleed-through. The sleeves cover the arms where standard bibs fail completely. For most meals, you wipe the bib down and move on — no outfit change.</p>"
+            "answer": "<p>Yes \u2014 that's the core design goal. The waterproof TPU backing on the front panel and both sleeves creates a physical barrier, not a surface treatment. It's been tested against full-strength tomato sauce, beet juice, and yogurt without bleed-through. The sleeves cover the arms where standard bibs fail completely. For most meals, you wipe the bib down and move on \u2014 no outfit change.</p>"
           }
         },
         "q2": {
           "type": "question",
           "settings": {
-            "title": "Long sleeve bib vs silicone bib — which one?",
-            "answer": "<p>They solve different problems. Long sleeve is for puree feeding and baby-led weaning — full body coverage when food is going everywhere. Silicone is for self-feeding and snacks — the pocket catches what drops. Most families use both. The long sleeve bib is the right call from month 4 through the BLW phase; the silicone bib stays useful longer as kids get more coordinated.</p>"
+            "title": "Long sleeve bib vs silicone bib \u2014 which one?",
+            "answer": "<p>They solve different problems. Long sleeve is for puree feeding and baby-led weaning \u2014 full body coverage when food is going everywhere. Silicone is for self-feeding and snacks \u2014 the pocket catches what drops. Most families use both. The long sleeve bib is the right call from month 4 through the BLW phase; the silicone bib stays useful longer as kids get more coordinated.</p>"
           }
         },
         "q3": {
           "type": "question",
           "settings": {
             "title": "When should I start using a long sleeve bib?",
-            "answer": "<p>Month 4 is the right time — when puree feeding starts reaching the forearms. That's when a standard short bib stops doing its job. The one-size design fits through approximately 24 months, which covers the full messy phase through baby-led weaning.</p>"
+            "answer": "<p>Month 4 is the right time \u2014 when puree feeding starts reaching the forearms. That's when a standard short bib stops doing its job. The one-size design fits through approximately 24 months, which covers the full messy phase through baby-led weaning.</p>"
           }
         },
         "q4": {
           "type": "question",
           "settings": {
             "title": "Is the waterproofing reliable wash after wash?",
-            "answer": "<p>Yes — the TPU backing is sealed into the fabric, not a surface spray or coating. Avoid high-heat drying, which degrades TPU faster than low heat. Cold wash and low tumble dry maintains the waterproof performance through regular use for the full 4–24 month range.</p>"
+            "answer": "<p>Yes \u2014 the TPU backing is sealed into the fabric, not a surface spray or coating. Avoid high-heat drying, which degrades TPU faster than low heat. Cold wash and low tumble dry maintains the waterproof performance through regular use for the full 4\u201324 month range.</p>"
           }
         },
         "q5": {
           "type": "question",
           "settings": {
             "title": "How many do I need?",
-            "answer": "<p>Most families find 3–4 works well for three meals a day. The bib wipes clean quickly and machine washes easily, so you're not stuck waiting on laundry between meals. 2 is workable if you're washing every day; 4–5 gives comfortable margin during high-mess phases like BLW.</p>"
+            "answer": "<p>Most families find 3\u20134 works well for three meals a day. The bib wipes clean quickly and machine washes easily, so you're not stuck waiting on laundry between meals. 2 is workable if you're washing every day; 4\u20135 gives comfortable margin during high-mess phases like BLW.</p>"
           }
         },
         "q6": {
           "type": "question",
           "settings": {
             "title": "Does the elastic cuff leave marks on baby's arms?",
-            "answer": "<p>No — that's a specific design decision. Most long sleeve bibs use narrow elastic that imprints a ring on a chubby forearm by month 7. The Loulou Lollipop cuffs use wide, flat elastic with low compression. It holds the sleeve in place without digging in, even on babies with chunky wrists.</p>"
+            "answer": "<p>No \u2014 that's a specific design decision. Most long sleeve bibs use narrow elastic that imprints a ring on a chubby forearm by month 7. The Loulou Lollipop cuffs use wide, flat elastic with low compression. It holds the sleeve in place without digging in, even on babies with chunky wrists.</p>"
           }
         }
       },
@@ -466,7 +466,7 @@
           "settings": {
             "collection": "suction-plates",
             "tag": "",
-            "subheading": "Mess‑Free Suction Plates",
+            "subheading": "Mess\u2011Free Suction Plates",
             "button_label": "Shop Suction Plates"
           }
         },
