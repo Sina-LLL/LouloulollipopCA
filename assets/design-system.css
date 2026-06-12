@@ -627,7 +627,7 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
 }
 .opt-label__tag.product-label--sale{
   background-color: var(--product-label-overlay-reduction-bg);
-  color: var(--product-label-overlay-new-text);
+  color: var(--product-label-overlay-reduction-text); /* was borrowing the new-badge text var; sale text is white */
 }
 .opt-btn.is-unavailable+.opt-label{
   color:var(--lll-slate-border) !important;
