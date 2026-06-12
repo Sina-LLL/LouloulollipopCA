@@ -173,7 +173,11 @@ Parameters:
               {%- if show_vendor -%}
                 <div class="vendor">{{ product.vendor | escape }}</div>
               {%- endif -%}
-
+              <!-- Start of Judge.me code -->
+                  <div style='{{ jm_style }}' class='jdgm-widget jdgm-preview-badge' data-id='{{ product.id }}' data-auto-install='false'>
+                      {{ product.metafields.judgeme.badge }}
+                  </div>
+              <!-- End of Judge.me code -->
               {% assign title_parts = product.title | split: ' - ' %}
               {% assign main_title = title_parts | first %}
               {% assign sub_title = title_parts | last %}

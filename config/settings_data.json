@@ -613,7 +613,7 @@
           "global_button_text_size": 14,
           "global_button_padding_horizontal": 16,
           "global_button_padding_vertical": 8,
-          "global_button_alignment": "left",
+          "global_button_alignment": "right",
           "global_button_position_horizontal": 2,
           "global_button_position_vertical": 2,
           "global_button_border_width": 0,
