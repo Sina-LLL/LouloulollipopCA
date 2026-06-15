@@ -96,52 +96,6 @@
     "hero_carousel_rounded_q34LBJ": {
       "type": "hero-carousel-rounded",
       "blocks": {
-        "image_ReGAny": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/OneC_hero_04f9ff95-3287-4574-af28-dbc0cf3f4c81.png",
-            "mobile_image": "shopify://shop_images/OneC_hero-mobile.png",
-            "slide_link": "",
-            "subheading": "",
-            "title": "The Pacifier Clip, Reinvented",
-            "heading_max_width": 15,
-            "title_size": 60,
-            "title_size_mobile": 30,
-            "use_h1": false,
-            "text": "<p>Made from a single piece of soft silicone for added durability and flexibility.</p>",
-            "enlarge_text": false,
-            "button_label_1": "Shop OneC™ Pacifier Clips",
-            "button_url_1": "shopify://collections/onec-silicone-pacifier-clips",
-            "button_tag_1": "",
-            "button_label_2": "",
-            "button_url_2": "",
-            "button_tag_2": "",
-            "text_alignment": "bottom left"
-          }
-        },
-        "image_cPi9W3": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/OneC_hero_1_2a6dffe4-8118-48f6-9ff8-569cc8cbe3f0.png",
-            "mobile_image": "shopify://shop_images/OneC_hero-mobile_1.png",
-            "slide_link": "",
-            "subheading": "",
-            "title": "The Beautiful Game",
-            "heading_max_width": 17,
-            "title_size": 72,
-            "title_size_mobile": 32,
-            "use_h1": true,
-            "text": "<p>Our newest soccer-inspired print, has officially entered the lineup.</p>",
-            "enlarge_text": false,
-            "button_label_1": "Shop the Beautiful Game",
-            "button_url_1": "shopify://collections/the-beautiful-game",
-            "button_tag_1": "",
-            "button_label_2": "",
-            "button_url_2": "",
-            "button_tag_2": "",
-            "text_alignment": "bottom left"
-          }
-        },
         "image_8myg9K": {
           "type": "image",
           "settings": {
@@ -164,12 +118,58 @@
             "button_tag_2": "",
             "text_alignment": "bottom left"
           }
+        },
+        "image_cPi9W3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Silicone_hero.png",
+            "mobile_image": "shopify://shop_images/Tableware_Hero.png",
+            "slide_link": "",
+            "subheading": "SILICONE ESSENTIALS",
+            "title": "For everyday meals",
+            "heading_max_width": 17,
+            "title_size": 72,
+            "title_size_mobile": 32,
+            "use_h1": true,
+            "text": "<p>Thoughtfully designed plates, bowls, and cups with food-grade silicone.</p>",
+            "enlarge_text": false,
+            "button_label_1": "Shop Tableware",
+            "button_url_1": "shopify://collections/tableware",
+            "button_tag_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_tag_2": "",
+            "text_alignment": "bottom left"
+          }
+        },
+        "image_ReGAny": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/OneC_hero_04f9ff95-3287-4574-af28-dbc0cf3f4c81.png",
+            "mobile_image": "shopify://shop_images/OneC_hero-mobile.png",
+            "slide_link": "",
+            "subheading": "",
+            "title": "The Pacifier Clip, Reinvented",
+            "heading_max_width": 15,
+            "title_size": 60,
+            "title_size_mobile": 30,
+            "use_h1": false,
+            "text": "<p>Made from a single piece of soft silicone for added durability and flexibility.</p>",
+            "enlarge_text": false,
+            "button_label_1": "Shop OneC™ Pacifier Clips",
+            "button_url_1": "shopify://collections/onec-silicone-pacifier-clips",
+            "button_tag_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_tag_2": "",
+            "text_alignment": "bottom left"
+          }
         }
       },
       "block_order": [
-        "image_ReGAny",
+        "image_8myg9K",
         "image_cPi9W3",
-        "image_8myg9K"
+        "image_ReGAny"
       ],
       "name": "Hero Carousel – Rounded",
       "settings": {
