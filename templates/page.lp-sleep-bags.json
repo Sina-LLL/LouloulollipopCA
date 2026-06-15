@@ -29,7 +29,7 @@
         "body": {
           "type": "text",
           "settings": {
-            "text": "<p>Our award-winning sleep sacks stay on all night — no kicked-off blankets, no disrupted sleep. Available in TENCEL™, and Muslin, from 0.5 to 2.5 TOG.</p>",
+            "text": "<p>Our award-winning sleep sacks stay on all night — no kicked-off blankets, no disrupted sleep. Available in TENCEL™, and Tanboocel® Bamboo Viscose, from 0.5 to 2.5 TOG.</p>",
             "enlarge_text": false
           }
         },
@@ -93,8 +93,8 @@
         "p4": {
           "type": "stat",
           "settings": {
-            "label": "Designed in Vancouver",
-            "desc": "Since 2015"
+            "label": "Premium Materials",
+            "desc": "TENCEL™ and Tanboocel® Bamboo Viscose"
           }
         }
       },
@@ -114,7 +114,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "Shop Sleep Bags",
-        "text": "<p>Every print, every size — all in our buttery-soft TENCEL™ Lyocell or breathable bamboo muslin with the 2-way zip parents actually ask for.</p>",
+        "text": "<p>Every print, every size — all in our buttery-soft TENCEL™ Lyocell or breathable Tanboocel® Bamboo Viscose with the 2-way zip parents actually ask for.</p>",
         "collection": "sleep-bags",
         "show_vendor": false,
         "enable_carousel": false,
@@ -124,6 +124,60 @@
         "show_view_all": true,
         "full_width": false,
         "text_alignment": "center"
+      }
+    },
+    "rich_text_XTVkdM": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Dc6fQb": {
+          "type": "heading",
+          "settings": {
+            "title": "Which TOG Do I Need?",
+            "use_h1": false
+          }
+        },
+        "text_rzE8hB": {
+          "type": "text",
+          "settings": {
+            "text": "<p>TOG (Thermal Overall Grade) measures how warm a sleep bag keeps your baby. The right TOG depends on your room temperature — not the season. Most homes sit between 20–24°C year-round, which puts a 1.0 TOG as the default. The ideal sleep temperature is 18–20°C.</p>",
+            "enlarge_text": false
+          }
+        },
+        "tog_ratings": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li><strong>0.5 TOG – Summer / warm rooms (24°C–27°C · 75°F–81°F):</strong> Lightweight and breathable. Ideal when room temperature stays above 24°C. Pair with a short-sleeve bodysuit or light onesie underneath.</li><li><strong>1.0 TOG – Spring, fall & mild rooms (20°C–24°C · 68°F–75°F):</strong> Our most popular weight. Versatile enough for year-round use in most homes. Pair with a long-sleeve bodysuit or fitted sleeper.</li><li><strong>2.5 TOG – Winter / cool rooms (16°C–20°C · 61°F–68°F):</strong> Extra warmth for cold bedrooms or winter nights. Pair with a full-coverage sleeper for the coldest rooms.</li></ul>",
+            "enlarge_text": false
+          }
+        },
+        "image_pzw4T6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/TOG_Chart_b3ae96d7-6832-44c5-a8c0-89017d0216a7.png",
+            "image_width": 700,
+            "url": ""
+          }
+        },
+        "callout_A4b3gM": {
+          "type": "callout",
+          "settings": {
+            "text": "<p><strong>Comfort check:</strong> baby's chest and tummy should feel warm and dry — not clammy, sweaty, or cold. If your room temperature changes between seasons, adjust the TOG or the layer underneath accordingly.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Dc6fQb",
+        "text_rzE8hB",
+        "tog_ratings",
+        "image_pzw4T6",
+        "callout_A4b3gM"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "height": "medium",
+        "text_alignment": "center",
+        "full_width": false,
+        "color_scheme": "default"
       }
     },
     "why_sleep_bags": {
@@ -447,13 +501,6 @@
             "answer": "<p>Yes — most parents do. A fitted TENCEL™ sleeper under a 1.0 TOG bag is the most common combo. Avoid too many layers: one more layer than an adult would wear is a good rule of thumb.</p>"
           }
         },
-        "q4": {
-          "type": "question",
-          "settings": {
-            "title": "What's the difference between TENCEL, Muslin, and Waffle Knit?",
-            "answer": "<p>TENCEL™ Modal is the softest and most temperature-regulating — great year-round. Bamboo Muslin is ultra-lightweight and breathable, ideal for warm weather (0.5 TOG). Waffle Knit provides gentle insulation with built-in airflow — perfect for the 2.5 TOG winter option.</p>"
-          }
-        },
         "q5": {
           "type": "question",
           "settings": {
@@ -473,7 +520,6 @@
         "q1",
         "q2",
         "q3",
-        "q4",
         "q5",
         "q6"
       ],
@@ -542,6 +588,7 @@
     "hero",
     "proof_bar",
     "products",
+    "rich_text_XTVkdM",
     "why_sleep_bags",
     "comparison",
     "safety",

@@ -12,6 +12,14 @@
     "mobile_collection_carousel_nzW98H": {
       "type": "mobile-collection-carousel",
       "blocks": {
+        "collection_H8wgyR": {
+          "type": "collection",
+          "settings": {
+            "collection": "bundles-and-sets",
+            "image": "shopify://shop_images/DS-NB002_2.jpg",
+            "label": ""
+          }
+        },
         "collection_m8xPFH": {
           "type": "collection",
           "settings": {
@@ -66,6 +74,7 @@
         }
       },
       "block_order": [
+        "collection_H8wgyR",
         "collection_m8xPFH",
         "collection_b9cNhg",
         "collection_bgepzf",
@@ -87,22 +96,45 @@
     "hero_carousel_rounded_q34LBJ": {
       "type": "hero-carousel-rounded",
       "blocks": {
+        "image_8myg9K": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Desktop_-_Hero_bda1e5fa-a6b6-44de-9dec-9f86f5fda160.png",
+            "mobile_image": "shopify://shop_images/Mobile_-_Hero_13cb4ff0-ffec-4f49-be1c-af6bb9afbfa2.png",
+            "slide_link": "",
+            "subheading": "",
+            "title": "Made for Cozy Summer Sleep",
+            "heading_max_width": 15,
+            "title_size": 60,
+            "title_size_mobile": 32,
+            "use_h1": false,
+            "text": "<p>Soft, breathable, and lightweight to help little ones stay cozy without overheating.</p>",
+            "enlarge_text": false,
+            "button_label_1": "Shop muslin sleep bags",
+            "button_url_1": "shopify://collections/0-5-tog-sleep-bags",
+            "button_tag_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_tag_2": "",
+            "text_alignment": "bottom left"
+          }
+        },
         "image_cPi9W3": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/OneC_hero_1_2a6dffe4-8118-48f6-9ff8-569cc8cbe3f0.png",
-            "mobile_image": "shopify://shop_images/OneC_hero-mobile_1.png",
+            "image": "shopify://shop_images/Silicone_hero.png",
+            "mobile_image": "shopify://shop_images/Tableware_Hero.png",
             "slide_link": "",
-            "subheading": "",
-            "title": "The Beautiful Game",
+            "subheading": "SILICONE ESSENTIALS",
+            "title": "For everyday meals",
             "heading_max_width": 17,
             "title_size": 72,
             "title_size_mobile": 32,
             "use_h1": true,
-            "text": "<p>Our newest soccer-inspired print, has officially entered the lineup.</p>",
+            "text": "<p>Thoughtfully designed plates, bowls, and cups with food-grade silicone.</p>",
             "enlarge_text": false,
-            "button_label_1": "Shop the Beautiful Game",
-            "button_url_1": "shopify://collections/the-beautiful-game",
+            "button_label_1": "Shop Tableware",
+            "button_url_1": "shopify://collections/tableware",
             "button_tag_1": "",
             "button_label_2": "",
             "button_url_2": "",
@@ -132,35 +164,12 @@
             "button_tag_2": "",
             "text_alignment": "bottom left"
           }
-        },
-        "image_8myg9K": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Desktop_-_Hero_bda1e5fa-a6b6-44de-9dec-9f86f5fda160.png",
-            "mobile_image": "shopify://shop_images/Mobile_-_Hero_13cb4ff0-ffec-4f49-be1c-af6bb9afbfa2.png",
-            "slide_link": "",
-            "subheading": "",
-            "title": "Made for Cozy Summer Sleep",
-            "heading_max_width": 15,
-            "title_size": 60,
-            "title_size_mobile": 32,
-            "use_h1": false,
-            "text": "<p>Soft, breathable, and lightweight to help little ones stay cozy without overheating.</p>",
-            "enlarge_text": false,
-            "button_label_1": "Shop muslin sleep bags",
-            "button_url_1": "shopify://collections/0-5-tog-sleep-bags",
-            "button_tag_1": "",
-            "button_label_2": "",
-            "button_url_2": "",
-            "button_tag_2": "",
-            "text_alignment": "bottom left"
-          }
         }
       },
       "block_order": [
+        "image_8myg9K",
         "image_cPi9W3",
-        "image_ReGAny",
-        "image_8myg9K"
+        "image_ReGAny"
       ],
       "name": "Hero Carousel – Rounded",
       "settings": {
@@ -174,6 +183,24 @@
         "peek_size_mobile": 12,
         "overlay_style": "shadow",
         "accessibility_info": ""
+      }
+    },
+    "custom_product_highlight_rrgUK8": {
+      "type": "custom-product-highlight",
+      "name": "Highlighted Collection",
+      "settings": {
+        "title": "Made for little Canadians",
+        "text": "<p>Our signature Canada print, made for rest. Breathable fabric that move with your baby and keep them comfortable all night long.</p>",
+        "image": "shopify://shop_images/Canada_Nav.png",
+        "order": true,
+        "product_list": [
+          "muslin-lightweight-sleep-bags-0-5-tog-canada",
+          "muslin-swaddle-canada"
+        ],
+        "button_label": "Shop Canada",
+        "link": "shopify://collections/canada",
+        "button_style": "primary",
+        "color_scheme": "default"
       }
     },
     "slideshow_JU4LXr": {
@@ -224,6 +251,7 @@
     },
     "featured_collection_R6h8Qg": {
       "type": "featured-collection",
+      "disabled": true,
       "name": "Featured collection",
       "settings": {
         "title": "The Beautiful Game",
@@ -1230,6 +1258,7 @@
   "order": [
     "mobile_collection_carousel_nzW98H",
     "hero_carousel_rounded_q34LBJ",
+    "custom_product_highlight_rrgUK8",
     "slideshow_JU4LXr",
     "featured_collection_R6h8Qg",
     "collection_list_aakDiY",
