@@ -185,6 +185,24 @@
         "accessibility_info": ""
       }
     },
+    "custom_product_highlight_rrgUK8": {
+      "type": "custom-product-highlight",
+      "name": "Highlighted Collection",
+      "settings": {
+        "title": "Made for little Canadians",
+        "text": "<p>Our signature Canada print, made for rest. Breathable fabric that move with your baby and keep them comfortable all night long.</p>",
+        "image": "shopify://shop_images/Canada_Nav.png",
+        "order": true,
+        "product_list": [
+          "muslin-lightweight-sleep-bags-0-5-tog-canada",
+          "muslin-swaddle-canada"
+        ],
+        "button_label": "Shop Canada",
+        "link": "shopify://collections/canada",
+        "button_style": "primary",
+        "color_scheme": "default"
+      }
+    },
     "slideshow_JU4LXr": {
       "type": "slideshow",
       "blocks": {
@@ -233,6 +251,7 @@
     },
     "featured_collection_R6h8Qg": {
       "type": "featured-collection",
+      "disabled": true,
       "name": "Featured collection",
       "settings": {
         "title": "The Beautiful Game",
@@ -1239,6 +1258,7 @@
   "order": [
     "mobile_collection_carousel_nzW98H",
     "hero_carousel_rounded_q34LBJ",
+    "custom_product_highlight_rrgUK8",
     "slideshow_JU4LXr",
     "featured_collection_R6h8Qg",
     "collection_list_aakDiY",
