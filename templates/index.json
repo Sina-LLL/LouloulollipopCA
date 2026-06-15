@@ -12,6 +12,14 @@
     "mobile_collection_carousel_nzW98H": {
       "type": "mobile-collection-carousel",
       "blocks": {
+        "collection_H8wgyR": {
+          "type": "collection",
+          "settings": {
+            "collection": "bundles-and-sets",
+            "image": "shopify://shop_images/DS-NB002_2.jpg",
+            "label": ""
+          }
+        },
         "collection_m8xPFH": {
           "type": "collection",
           "settings": {
@@ -66,6 +74,7 @@
         }
       },
       "block_order": [
+        "collection_H8wgyR",
         "collection_m8xPFH",
         "collection_b9cNhg",
         "collection_bgepzf",
@@ -87,29 +96,6 @@
     "hero_carousel_rounded_q34LBJ": {
       "type": "hero-carousel-rounded",
       "blocks": {
-        "image_cPi9W3": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/OneC_hero_1_2a6dffe4-8118-48f6-9ff8-569cc8cbe3f0.png",
-            "mobile_image": "shopify://shop_images/OneC_hero-mobile_1.png",
-            "slide_link": "",
-            "subheading": "",
-            "title": "The Beautiful Game",
-            "heading_max_width": 17,
-            "title_size": 72,
-            "title_size_mobile": 32,
-            "use_h1": true,
-            "text": "<p>Our newest soccer-inspired print, has officially entered the lineup.</p>",
-            "enlarge_text": false,
-            "button_label_1": "Shop the Beautiful Game",
-            "button_url_1": "shopify://collections/the-beautiful-game",
-            "button_tag_1": "",
-            "button_label_2": "",
-            "button_url_2": "",
-            "button_tag_2": "",
-            "text_alignment": "bottom left"
-          }
-        },
         "image_ReGAny": {
           "type": "image",
           "settings": {
@@ -126,6 +112,29 @@
             "enlarge_text": false,
             "button_label_1": "Shop OneC™ Pacifier Clips",
             "button_url_1": "shopify://collections/onec-silicone-pacifier-clips",
+            "button_tag_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_tag_2": "",
+            "text_alignment": "bottom left"
+          }
+        },
+        "image_cPi9W3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/OneC_hero_1_2a6dffe4-8118-48f6-9ff8-569cc8cbe3f0.png",
+            "mobile_image": "shopify://shop_images/OneC_hero-mobile_1.png",
+            "slide_link": "",
+            "subheading": "",
+            "title": "The Beautiful Game",
+            "heading_max_width": 17,
+            "title_size": 72,
+            "title_size_mobile": 32,
+            "use_h1": true,
+            "text": "<p>Our newest soccer-inspired print, has officially entered the lineup.</p>",
+            "enlarge_text": false,
+            "button_label_1": "Shop the Beautiful Game",
+            "button_url_1": "shopify://collections/the-beautiful-game",
             "button_tag_1": "",
             "button_label_2": "",
             "button_url_2": "",
@@ -158,8 +167,8 @@
         }
       },
       "block_order": [
-        "image_cPi9W3",
         "image_ReGAny",
+        "image_cPi9W3",
         "image_8myg9K"
       ],
       "name": "Hero Carousel – Rounded",
