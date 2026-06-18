@@ -1319,14 +1319,17 @@ cart-form .page-header:not(.page-header--with-background){
     }
 
 /* ============================================================
-   TYPOGRAPHY PREVIEW (brand sans-serif) — updated 2026-06-17 (Staging)
-   Serif experiment REVERSED per request: headings keep the brand
-   sans fonts (avenir-next-lt-pro display + sofia-pro body) at their
-   original weights. Retained from the preview: a cleaner size scale,
-   systematized line-heights, lighter body prose, and pill buttons.
+   TYPOGRAPHY PREVIEW (brand sans-serif) — updated 2026-06-18 (Staging)
+   - Headings keep the brand sans fonts (avenir-next-lt-pro display +
+     sofia-pro body) at their original weights.
+   - Retained: cleaner size scale, systematized line-heights, lighter
+     body prose.
+   - Buttons: REVERTED to the theme's default radius (no pill).
+   - PDP fix: the "Materials & Care" accordion heading now matches
+     "Why Parents Love This" — both are h2.h3, but .accordion-toggle h2
+     was forcing it to 1.5rem; it now uses the shared h3 size token.
    AA color tokens untouched.
-   REVERSIBLE: delete everything below this banner to restore the
-   original look.
+   REVERSIBLE: delete everything below this banner to restore original.
    ============================================================ */
 :root {
   /* Type scale tokens — single source of truth (fluid: mobile -> desktop) */
@@ -1369,21 +1372,24 @@ h4, .h4 {
   line-height: 1.35;
 }
 
+/* PDP fix: the accordion ("Materials & Care") heading is h2.h3 just like
+   "Why Parents Love This", but .accordion-toggle h2 { font-size:1.5rem }
+   was overriding it. Match the shared h3 size so both render identically. */
+.accordion-toggle h2,
+.accordion-toggle h2.h3 {
+  font-size: var(--lll-text-h3);
+}
+
 /* Body prose: regular weight (was 500) + more generous leading.
-   Scoped so product titles/prices keep their emphasis. */
+   Scoped so product titles/prices keep their emphasis. Includes the
+   PDP feature body so it matches other section body text. */
 .text-column__text p,
+.custom-product-features__body,
 .rte p,
 .rte.text-center p,
 .large-text {
   font-weight: 400;
   line-height: var(--lll-leading-body);
-}
-
-/* Primary CTA shape: full pill */
-.btn,
-.btn--large,
-.btn--small {
-  border-radius: var(--lll-radius-pill);
 }
 /* ============================================================
    END TYPOGRAPHY PREVIEW
