@@ -1394,3 +1394,48 @@ h4, .h4 {
 /* ============================================================
    END TYPOGRAPHY PREVIEW
    ============================================================ */
+
+/* ============================================================
+   SPACING SYSTEM (base-4) — added 2026-06-18 (Staging)
+   Normalizes the theme's spacing tokens to a 4px scale and fixes a
+   few off-grid values so grids and sections read consistently.
+   These win because this sheet loads after main.css + doc-head-styles.
+   REVERSIBLE: delete everything below this banner to restore.
+   ============================================================ */
+:root {
+  /* Base-4 spacing scale — reference these going forward */
+  --lll-space-1: 4px;
+  --lll-space-2: 8px;
+  --lll-space-3: 12px;
+  --lll-space-4: 16px;
+  --lll-space-5: 20px;
+  --lll-space-6: 24px;
+  --lll-space-8: 32px;
+  --lll-space-10: 40px;
+  --lll-space-12: 48px;
+  --lll-space-16: 64px;
+
+  /* Normalize Symmetry's spacing tokens to base-4 (were 30 / 50 / 110) */
+  --gutter-large: 32px;
+  --section-padding: 48px;
+  --largest-section-padding: 112px;
+}
+
+/* Font-independent row spacing (theme used margin-bottom: 1em, which
+   drifts with the surrounding font size). */
+.lightly-spaced-row { margin-bottom: var(--lll-space-4); }
+
+/* Product highlight: tighten the image-to-content gap to a base-4 value
+   so the product grid no longer sits too far below the image. */
+.custom-product-highlight__image { margin-bottom: var(--lll-space-6); }
+
+/* Off-grid value cleanups (grids read cleaner on a 4px rhythm) */
+.opt-label { padding: var(--lll-space-3); }                 /* was 11px 11px */
+.swatch-style-icon_square .option-selector .opt-label--image {
+  margin-right: var(--lll-space-3);                          /* was 10px */
+  margin-top: var(--lll-space-3);                            /* was 10px */
+}
+.shipping-info-tooltip { top: var(--lll-space-12); }         /* was 50px */
+/* ============================================================
+   END SPACING SYSTEM
+   ============================================================ */
