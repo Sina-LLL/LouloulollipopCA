@@ -1425,9 +1425,16 @@ h4, .h4 {
    drifts with the surrounding font size). */
 .lightly-spaced-row { margin-bottom: var(--lll-space-4); }
 
-/* Product highlight: tighten the image-to-content gap to a base-4 value
-   so the product grid no longer sits too far below the image. */
-.custom-product-highlight__image { margin-bottom: var(--lll-space-6); }
+/* Product highlight: the off-grid gap is the image COLUMN's stacking
+   margin (.custom-product-highlight__image-container) when it sits above
+   the product grid on mobile — not the inner image. Scope a clean 24px to
+   this section's image column and zero the inner image to avoid doubling. */
+.custom-product-highlight__container .custom-product-highlight__image-container {
+  margin-bottom: var(--lll-space-6);
+}
+.custom-product-highlight__image {
+  margin-bottom: 0;
+}
 
 /* Off-grid value cleanups (grids read cleaner on a 4px rhythm) */
 .opt-label { padding: var(--lll-space-3); }                 /* was 11px 11px */
