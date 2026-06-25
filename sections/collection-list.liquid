@@ -25,6 +25,8 @@
               assign chosen_aspect_ratio = 0.8
             elsif section.settings.coll_grid_image_shape == 'square'
               assign chosen_aspect_ratio = 1.0
+            elsif section.settings.coll_grid_image_shape == 'circle'
+              assign chosen_aspect_ratio = 1.0
             elsif section.settings.coll_grid_image_shape == 'landscape-54'
               assign chosen_aspect_ratio = 1.25
             elsif section.settings.coll_grid_image_shape == 'landscape-32'
@@ -219,6 +221,10 @@
         {
           "value": "square",
           "label": "Square (1:1)"
+        },
+        {
+          "value": "circle",
+          "label": "Circle (1:1)"
         },
         {
           "value": "portrait-45",
