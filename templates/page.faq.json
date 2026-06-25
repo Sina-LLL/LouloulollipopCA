@@ -139,7 +139,7 @@
         "para-1": {
           "type": "content",
           "settings": {
-            "content": "<p>All Canada orders over $100 ship for free! Shipping within BC is $12 for orders under $100, and $18 for the rest of Canada. If you need expedited shipping, the shipping fee will be calculated at checkout.</p>"
+            "content": "<p>All Canada orders over $100 ship for free! Shipping within BC is $12 for orders under $100, and $15 for the rest of Canada. If you need expedited shipping, the shipping fee will be calculated at checkout.</p>"
           }
         },
         "question-1": {
