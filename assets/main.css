@@ -8846,6 +8846,12 @@ html:has(.drawer[open]) > body {
 .product-grid--per-row-mob-2 {
   --product-columns-desktop: 2;
 }
+.product-grid--per-row-mob-3 {
+  --product-columns-desktop: 3;
+}
+.product-grid--per-row-mob-4 {
+  --product-columns-desktop: 4;
+}
 
 @media (min-width: 768px) {
   .product-grid--per-row-2 {
