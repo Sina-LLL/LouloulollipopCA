@@ -14,11 +14,7 @@
     {%- endif -%}
 
    
-<style>
-  .coll_thumb_per_column{
-    grid-tempalate-rows: 1fr 1fr;
-  }
-</style>
+
     <div class="collection-listing fade-in-up{% if section.settings.enable_carousel %} slider {% if section.settings.full_width %}slider--edge-peek{% endif %} slider--mobile-container-pad {% endif %}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
       <div style="grid-template-rows"class="coll_thumb_per_column product-grid product-grid--per-row-{{ section.settings.grid }} product-grid--per-row-mob-{{ section.settings.coll_thumb_mob_per_row }} product-grid--image-shape-{{ section.settings.coll_grid_image_shape }}{% if section.settings.enable_carousel %} slider__grid product-grid--carousel{% endif %}">
         {%- liquid
@@ -93,7 +89,11 @@
         -%}
       </div>
     </div>
-
+<style>
+  .coll_thumb_per_column{
+    grid-tempalate-rows: 1fr 1fr;
+  }
+</style>
     {%- if section.settings.enable_carousel -%}
          <div class="slider-nav slider-nav--floating no-js-hidden">
           <button type="button" class="slider-nav__btn has-ltr-icon" name="prev" aria-controls="slider-{{ section.id }}">
