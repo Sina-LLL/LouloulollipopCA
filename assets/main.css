@@ -8852,7 +8852,9 @@ html:has(.drawer[open]) > body {
 .product-grid--per-row-mob-4 {
   --product-columns-desktop: 4;
 }
-
+.coll_thumb_per_column-2{
+  grid-template-columns: 1fr 1fr;
+}
 @media (min-width: 768px) {
   .product-grid--per-row-2 {
     --product-columns-desktop: 2;
