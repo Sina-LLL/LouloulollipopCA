@@ -190,13 +190,28 @@
       "type": "custom-hero-banner",
       "name": "Custom hero banner",
       "settings": {
-        "image": "shopify://shop_images/Canada_Hero.png",
-        "mobile_image": "shopify://shop_images/Canada_Mobile_Hero.png",
-        "link": "",
+        "image": "shopify://shop_images/Canada_Hero_5a20c39b-2914-4761-8bea-4e820e071660.png",
+        "mobile_image": "shopify://shop_images/Canada_Mobile_Hero_a17a2f82-31ce-4262-a7e8-34a0baccdeb0.png",
         "full_width": true,
         "max_width": 0,
-        "heading": "",
-        "use_h1": false
+        "image_width_desktop": 60,
+        "desktop_min_height": 480,
+        "panel_color": "#faf9f6",
+        "heading": "Made for Little Canadians",
+        "use_h1": true,
+        "heading_size": 40,
+        "heading_size_mobile": 22,
+        "subheading": "Our signature Canada print, made for rest.",
+        "text_align": "center",
+        "text_max_width": 20,
+        "text_color_desktop": "#587681",
+        "text_color_mobile": "#ffffff",
+        "button_label": "Shop Canada",
+        "button_url": "shopify://collections/canada",
+        "link": "",
+        "text_position_desktop": "center center",
+        "text_position_mobile": "bottom center",
+        "mobile_scrim": false
       }
     },
     "custom_product_highlight_rrgUK8": {
