@@ -1,111 +1,65 @@
 {%- comment -%}
   Custom hero banner
-  Responsive single-image hero with real HTML text (heading / subtext / button).
-
-  - Desktop (>=768px): a true two-column layout. The photo sits in the left
-    column (cover-fills its side) next to a solid-colour panel holding the
-    text. No blank space is exported in the image — the panel is CSS.
-  - Mobile (<768px): a single image shown uncropped (object-fit: contain,
-    image-driven height) with the text floated over it (optional dark scrim).
-  - Desktop/mobile image swap via the 'image-desktop-and-mobile' snippet.
-  - Text is real HTML: translatable (Weglot), selectable, crisp; the button
-    is a real focusable link.
-  - Styling is in assets/design-system.css (.custom-hero-banner*). Per-section
-    values are passed as CSS variables on the root element below.
-
-  Image export tips:
-  - Desktop image: the photos only (no text, no blank panel).
-  - Mobile image: the photo only (no text).
+  Single image hero with separate desktop and mobile images.
+  - Image is shown with object-fit: contain so nothing is cropped (text baked
+    into the image stays fully visible at any width).
+  - The section height follows the natural height of the image (height: auto),
+    so it is never letterboxed and never cropped.
+  - Uses the theme's 'image-desktop-and-mobile' snippet for the responsive
+    <picture> (desktop <img> + mobile <source>), srcset and focal point.
+  - Styling is in assets/design-system.css (.custom-hero-banner*). The only
+    dynamic value, max image width, is passed via the --custom-hero-max-width
+    CSS variable below.
 {%- endcomment -%}
 
 {%- liquid
-  assign has_button = false
-  if section.settings.button_label != blank and section.settings.button_url != blank
-    assign has_button = true
+  assign has_link = false
+  if section.settings.link != blank
+    assign has_link = true
   endif
-
-  assign has_text = false
-  if section.settings.heading != blank or section.settings.subheading != blank or has_button
-    assign has_text = true
-  endif
-
-  assign wrap_whole_link = false
-  if section.settings.link != blank and has_button == false
-    assign wrap_whole_link = true
-  endif
-
-  assign dpos = section.settings.text_position_desktop | split: ' '
-  assign dv = dpos[0]
-  assign dh = dpos[1]
-  assign mpos = section.settings.text_position_mobile | split: ' '
-  assign mv = mpos[0]
-  assign mh = mpos[1]
-
-  assign img_w = section.settings.image_width_desktop
-  assign panel_w = 100 | minus: img_w
 -%}
-
-{%- capture root_style -%}
-{%- if section.settings.max_width > 0 %}--custom-hero-max-width: {{ section.settings.max_width }}px;{% endif %}--custom-hero-cols: {{ img_w }}% {{ panel_w }}%;--custom-hero-desktop-min-height: {{ section.settings.desktop_min_height }}px;--custom-hero-panel-bg: {{ section.settings.panel_color }};--custom-hero-heading-size-d: {{ section.settings.heading_size }}px;--custom-hero-heading-size-m: {{ section.settings.heading_size_mobile }}px;--custom-hero-text-max-width: {{ section.settings.text_max_width }}em;--custom-hero-text-color-d: {{ section.settings.text_color_desktop }};--custom-hero-text-color-m: {{ section.settings.text_color_mobile }};
-{%- endcapture -%}
 
 <div
   id="custom-hero-{{ section.id }}"
   class="custom-hero-banner"
-  style="{{ root_style }}"
   {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}
 >
   {%- unless section.settings.full_width -%}
     <div class="container">
   {%- endunless -%}
 
-  {%- if wrap_whole_link -%}
+  {%- if has_link -%}
     <a class="custom-hero-banner__link" href="{{ section.settings.link }}">
   {%- endif -%}
 
-  <div class="custom-hero-banner__grid">
-    <div class="custom-hero-banner__media">
-      {%- if section.settings.image == blank and section.settings.mobile_image == blank -%}
-        <div class="placeholder-image">
-          {{- 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' -}}
-        </div>
-      {%- else -%}
-        {%- render 'image-desktop-and-mobile',
-          class: 'custom-hero-banner__img',
-          desktop_image: section.settings.image,
-          mobile_image: section.settings.mobile_image,
-          loading: 'eager',
-          fetchpriority: 'high'
-        -%}
-      {%- endif -%}
-    </div>
+  {%- if section.settings.heading != blank -%}
+    {%- if section.settings.use_h1 -%}
+      <h1 class="visually-hidden">{{ section.settings.heading | escape }}</h1>
+    {%- else -%}
+      <h2 class="visually-hidden">{{ section.settings.heading | escape }}</h2>
+    {%- endif -%}
+  {%- endif -%}
 
-    {%- if has_text -%}
-      <div class="custom-hero-banner__panel custom-hero-banner__panel--d-v-{{ dv }} custom-hero-banner__panel--d-h-{{ dh }} custom-hero-banner__panel--m-v-{{ mv }} custom-hero-banner__panel--m-h-{{ mh }}{% if section.settings.mobile_scrim %} custom-hero-banner__panel--scrim{% endif %}">
-        <div class="custom-hero-banner__text custom-hero-banner__text--{{ section.settings.text_align }}">
-          {%- if section.settings.heading != blank -%}
-            {%- if section.settings.use_h1 -%}
-              <h1 class="custom-hero-banner__heading">{% render 'multiline-text' with section.settings.heading %}</h1>
-            {%- else -%}
-              <h2 class="custom-hero-banner__heading">{% render 'multiline-text' with section.settings.heading %}</h2>
-            {%- endif -%}
-          {%- endif -%}
-
-          {%- if section.settings.subheading != blank -%}
-            <p class="custom-hero-banner__subheading">{{ section.settings.subheading | escape }}</p>
-          {%- endif -%}
-
-          {%- if has_button -%}
-            <div class="custom-hero-banner__btn-row">
-              <a class="btn btn--primary" href="{{ section.settings.button_url }}">{{ section.settings.button_label | escape }}</a>
-            </div>
-          {%- endif -%}
-        </div>
+  <div
+    class="custom-hero-banner__media"
+    {%- if section.settings.max_width > 0 %} style="--custom-hero-max-width: {{ section.settings.max_width }}px"{% endif %}
+  >
+    {%- if section.settings.image == blank and section.settings.mobile_image == blank -%}
+      <div class="placeholder-image">
+        {{- 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' -}}
       </div>
+    {%- else -%}
+      {%- render 'image-desktop-and-mobile',
+        class: 'custom-hero-banner__img',
+        desktop_image: section.settings.image,
+        mobile_image: section.settings.mobile_image,
+        loading: 'eager',
+        fetchpriority: 'high'
+      -%}
     {%- endif -%}
   </div>
 
-  {%- if wrap_whole_link -%}
+  {%- if has_link -%}
     </a>
   {%- endif -%}
 
@@ -124,19 +78,25 @@
   "settings": [
     {
       "type": "paragraph",
-      "content": "Desktop shows the photo beside a colour panel with real text. Mobile shows the photo with text floated over it. Export images WITHOUT any text — desktop = photos only (no blank panel), mobile = photo only."
+      "content": "A single full-width image that is never cropped. Best for images that already contain text. Set the image's alt text in Shopify for accessibility and SEO."
     },
     {
       "type": "image_picker",
       "id": "image",
-      "label": "Desktop image (photos only)",
-      "info": "Fills the left column on screens 768px and wider."
+      "label": "Desktop image",
+      "info": "Shown on screens 768px and wider."
     },
     {
       "type": "image_picker",
       "id": "mobile_image",
-      "label": "Mobile image (photo only)",
+      "label": "Mobile image",
       "info": "Shown below 768px. Falls back to the desktop image if left empty."
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Image link",
+      "info": "Optional. Wraps the whole banner in a link."
     },
     {
       "type": "checkbox",
@@ -151,179 +111,26 @@
       "max": 2560,
       "step": 40,
       "unit": "px",
-      "label": "Maximum banner width",
-      "info": "0 = no limit.",
+      "label": "Maximum image width",
+      "info": "0 = no limit. Prevents the image upscaling on very wide screens.",
       "default": 0
     },
     {
       "type": "header",
-      "content": "Desktop layout"
-    },
-    {
-      "type": "range",
-      "id": "image_width_desktop",
-      "min": 30,
-      "max": 80,
-      "step": 1,
-      "unit": "%",
-      "label": "Image column width",
-      "info": "The text panel takes the rest.",
-      "default": 64
-    },
-    {
-      "type": "range",
-      "id": "desktop_min_height",
-      "min": 300,
-      "max": 900,
-      "step": 20,
-      "unit": "px",
-      "label": "Desktop minimum height",
-      "default": 480
-    },
-    {
-      "type": "color",
-      "id": "panel_color",
-      "label": "Text panel colour",
-      "default": "#FAF9F6"
-    },
-    {
-      "type": "header",
-      "content": "Text"
+      "content": "Accessibility / SEO"
     },
     {
       "type": "text",
       "id": "heading",
-      "label": "Heading",
-      "info": "Enter <br> for a line break.",
-      "default": "Made for Little Canadians."
+      "label": "Hidden heading",
+      "info": "Optional. Read by screen readers and search engines but not shown on screen (the text is in the image)."
     },
     {
       "type": "checkbox",
       "id": "use_h1",
-      "label": "Set heading as primary page heading (H1)",
+      "label": "Set hidden heading as primary page heading (H1)",
       "info": "Use one H1 per page.",
       "default": false
-    },
-    {
-      "type": "range",
-      "id": "heading_size",
-      "min": 24,
-      "max": 150,
-      "step": 2,
-      "unit": "px",
-      "label": "Desktop heading size",
-      "default": 72
-    },
-    {
-      "type": "range",
-      "id": "heading_size_mobile",
-      "min": 20,
-      "max": 100,
-      "step": 2,
-      "unit": "px",
-      "label": "Mobile heading size",
-      "default": 40
-    },
-    {
-      "type": "text",
-      "id": "subheading",
-      "label": "Subtext",
-      "default": "Our signature Canada print, made for rest."
-    },
-    {
-      "type": "select",
-      "id": "text_align",
-      "label": "Text alignment",
-      "default": "center",
-      "options": [
-        { "value": "left", "label": "Left" },
-        { "value": "center", "label": "Center" },
-        { "value": "right", "label": "Right" }
-      ]
-    },
-    {
-      "type": "range",
-      "id": "text_max_width",
-      "min": 8,
-      "max": 40,
-      "step": 1,
-      "unit": "em",
-      "label": "Text block max width",
-      "default": 18
-    },
-    {
-      "type": "color",
-      "id": "text_color_desktop",
-      "label": "Text colour (desktop panel)",
-      "default": "#587681"
-    },
-    {
-      "type": "color",
-      "id": "text_color_mobile",
-      "label": "Text colour (mobile, over photo)",
-      "default": "#FFFFFF"
-    },
-    {
-      "type": "text",
-      "id": "button_label",
-      "label": "Button label",
-      "default": "Shop Canada"
-    },
-    {
-      "type": "url",
-      "id": "button_url",
-      "label": "Button link"
-    },
-    {
-      "type": "url",
-      "id": "link",
-      "label": "Whole-banner link",
-      "info": "Used only when there is no button."
-    },
-    {
-      "type": "header",
-      "content": "Placement"
-    },
-    {
-      "type": "select",
-      "id": "text_position_desktop",
-      "label": "Desktop text position (in panel)",
-      "default": "center center",
-      "options": [
-        { "value": "top left", "label": "Top left" },
-        { "value": "top center", "label": "Top center" },
-        { "value": "top right", "label": "Top right" },
-        { "value": "center left", "label": "Middle left" },
-        { "value": "center center", "label": "Middle center" },
-        { "value": "center right", "label": "Middle right" },
-        { "value": "bottom left", "label": "Bottom left" },
-        { "value": "bottom center", "label": "Bottom center" },
-        { "value": "bottom right", "label": "Bottom right" }
-      ]
-    },
-    {
-      "type": "select",
-      "id": "text_position_mobile",
-      "label": "Mobile text position (over photo)",
-      "default": "bottom center",
-      "options": [
-        { "value": "top left", "label": "Top left" },
-        { "value": "top center", "label": "Top center" },
-        { "value": "top right", "label": "Top right" },
-        { "value": "center left", "label": "Middle left" },
-        { "value": "center center", "label": "Middle center" },
-        { "value": "center right", "label": "Middle right" },
-        { "value": "bottom left", "label": "Bottom left" },
-        { "value": "bottom center", "label": "Bottom center" },
-        { "value": "bottom right", "label": "Bottom right" }
-      ]
-    },
-    {
-      "type": "checkbox",
-      "id": "mobile_scrim",
-      "label": "Add dark gradient behind text on mobile",
-      "info": "Improves legibility when text sits over the photo.",
-      "default": true
     }
   ],
   "presets": [
