@@ -16,7 +16,7 @@
    
 
     <div class="collection-listing fade-in-up{% if section.settings.enable_carousel %} slider {% if section.settings.full_width %}slider--edge-peek{% endif %} slider--mobile-container-pad {% endif %}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
-      <div class="product-grid product-grid--per-row-{{ section.settings.grid }} product-grid--per-row-mob-{{ section.settings.coll_thumb_mob_per_row }} product-grid--image-shape-{{ section.settings.coll_grid_image_shape }}{% if section.settings.enable_carousel %} slider__grid product-grid--carousel{% endif %}">
+      <div class="coll_thumb_per_column-{{ section.settings.coll_thumb_per_column }} product-grid product-grid--per-row-{{ section.settings.grid }} product-grid--per-row-mob-{{ section.settings.coll_thumb_mob_per_row }} product-grid--image-shape-{{ section.settings.coll_grid_image_shape }}{% if section.settings.enable_carousel %} slider__grid product-grid--carousel{% endif %}">
         {%- liquid
           if section.blocks.size > 0
             if section.settings.coll_grid_image_shape == 'portrait-23'
@@ -24,6 +24,8 @@
             elsif section.settings.coll_grid_image_shape == 'portrait-45'
               assign chosen_aspect_ratio = 0.8
             elsif section.settings.coll_grid_image_shape == 'square'
+              assign chosen_aspect_ratio = 1.0
+            elsif section.settings.coll_grid_image_shape == 'circle'
               assign chosen_aspect_ratio = 1.0
             elsif section.settings.coll_grid_image_shape == 'landscape-54'
               assign chosen_aspect_ratio = 1.25
@@ -161,7 +163,7 @@
       "id": "grid",
       "label": "Collections per row",
       "min": 2,
-      "max": 5,
+      "max": 8,
       "step": 1,
       "default": 4
     },
@@ -219,6 +221,10 @@
         {
           "value": "square",
           "label": "Square (1:1)"
+        },
+        {
+          "value": "circle",
+          "label": "Circle (1:1)"
         },
         {
           "value": "portrait-45",
@@ -280,6 +286,30 @@
       "type": "select",
       "id": "coll_thumb_mob_per_row",
       "label": "Collections per row on mobile",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        },
+        {
+          "value": "4",
+          "label": "4"
+        }
+      ],
+      "default": "2"
+    },
+    {
+      "type": "select",
+      "id": "coll_thumb_per_column",
+      "label": "Collections per column",
       "options": [
         {
           "value": "1",

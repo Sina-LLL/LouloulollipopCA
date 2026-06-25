@@ -171,6 +171,7 @@
         "image_cPi9W3",
         "image_ReGAny"
       ],
+      "disabled": true,
       "name": "Hero Carousel – Rounded",
       "settings": {
         "padding_top": 8,
@@ -185,8 +186,22 @@
         "accessibility_info": ""
       }
     },
+    "custom_hero_banner_i8RgHw": {
+      "type": "custom-hero-banner",
+      "name": "Custom hero banner",
+      "settings": {
+        "image": "shopify://shop_images/Canada_Hero.png",
+        "mobile_image": "shopify://shop_images/Canada_Mobile_Hero.png",
+        "link": "shopify://collections/canada",
+        "full_width": true,
+        "max_width": 0,
+        "heading": "Made for Little Canadians",
+        "use_h1": true
+      }
+    },
     "custom_product_highlight_rrgUK8": {
       "type": "custom-product-highlight",
+      "disabled": true,
       "name": "Highlighted Collection",
       "settings": {
         "title": "Made for little Canadians",
@@ -203,62 +218,15 @@
         "color_scheme": "default"
       }
     },
-    "slideshow_JU4LXr": {
-      "type": "slideshow",
-      "blocks": {
-        "image_TKJkRj": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/OneC_hero_1_a4464434-ad2d-4e4f-94d9-a700cc2e22e3.png",
-            "mobile_image": "shopify://shop_images/OneC_hero-mobile_1.png",
-            "slide_link": "",
-            "subheading": "",
-            "title": "The Beautiful Game",
-            "heading_max_width": 14,
-            "title_size": 72,
-            "title_size_mobile": 32,
-            "use_h1": true,
-            "text": "<p>Our newest soccer-inspired print, has officially entered the lineup.</p>",
-            "enlarge_text": true,
-            "button_label_1": "Shop The beautiful Game",
-            "button_url_1": "shopify://collections/the-beautiful-game",
-            "button_tag_1": "",
-            "button_label_2": "",
-            "button_url_2": "",
-            "button_tag_2": "",
-            "text_alignment": "center left"
-          }
-        }
-      },
-      "block_order": [
-        "image_TKJkRj"
-      ],
-      "disabled": true,
-      "name": "Slideshow",
-      "settings": {
-        "height": "fixed",
-        "height_desktop": 660,
-        "height_mobile": 600,
-        "full_width": true,
-        "mobile_overlay_under": false,
-        "overlay_style": "shadow",
-        "transition": "fade",
-        "navigation": "dots",
-        "autoplay": true,
-        "autoplay_speed": 7,
-        "accessibility_info": ""
-      }
-    },
-    "featured_collection_R6h8Qg": {
+    "featured_collection_dfUJQq": {
       "type": "featured-collection",
-      "disabled": true,
-      "name": "Featured collection",
+      "name": "Best Sellers Carousel",
       "settings": {
-        "title": "The Beautiful Game",
+        "title": "O Canada!",
         "text": "",
-        "collection": "the-beautiful-game",
+        "collection": "canada",
         "show_vendor": false,
-        "enable_carousel": true,
+        "enable_carousel": false,
         "grid": 4,
         "rows": 1,
         "color_scheme": "default",
@@ -275,18 +243,8 @@
           "settings": {
             "collection": "sleep-bags",
             "tag": "",
-            "image": "shopify://shop_images/Mobile-Hero_Lemon.png",
-            "subheading": "Sleep Bags & Sleep Sacks",
-            "button_label": ""
-          }
-        },
-        "collection_84DAwU": {
-          "type": "collection",
-          "settings": {
-            "collection": "sleepers",
-            "tag": "",
-            "image": "shopify://shop_images/LouLouLollipopMarch2026-03439.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
+            "image": "shopify://shop_images/BA9004U.BOB.18_136.jpg",
+            "subheading": "Sleep Bags",
             "button_label": ""
           }
         },
@@ -295,17 +253,17 @@
           "settings": {
             "collection": "silicone-bibs",
             "tag": "",
-            "image": "shopify://shop_images/LouLouLollipopMarch2026-05425.jpg",
+            "image": "shopify://shop_images/SILBIBPLANET_1.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
         },
-        "collection_PHnrb8": {
+        "collection_84DAwU": {
           "type": "collection",
           "settings": {
-            "collection": "swaddles",
+            "collection": "sleepers",
             "tag": "",
-            "image": "shopify://shop_images/Copy_of_SWSHK_Muslin_Swaddle_Sharks_52.jpg",
+            "image": "shopify://shop_images/BA1002U.SAF.4_1.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -315,7 +273,17 @@
           "settings": {
             "collection": "long-sleeve-bibs",
             "tag": "",
-            "image": "shopify://shop_images/LouLouLollipopMarch2026-06428.jpg",
+            "image": "shopify://shop_images/LSBIBMGD_1.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_PHnrb8": {
+          "type": "collection",
+          "settings": {
+            "collection": "swaddles",
+            "tag": "",
+            "image": "shopify://shop_images/SWUNB_1.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -325,7 +293,7 @@
           "settings": {
             "collection": "hooded-towel-sets",
             "tag": "",
-            "image": "shopify://shop_images/559C3E6A-A680-492D-B898-C0F8E1FC8353.jpg",
+            "image": "shopify://shop_images/TWBMB_1.jpg",
             "subheading": "Hooded Towels",
             "button_label": ""
           }
@@ -335,7 +303,7 @@
           "settings": {
             "collection": "muslin-quilt",
             "tag": "",
-            "image": "shopify://shop_images/DSC00442-2.jpg",
+            "image": "shopify://shop_images/QTCAN_02.jpg",
             "subheading": "Muslin Quilts",
             "button_label": ""
           }
@@ -345,34 +313,101 @@
           "settings": {
             "collection": "silicone-teethers",
             "tag": "",
-            "image": "shopify://shop_images/WTR-WOF_Wild_Teether_-_Wolfie_51.jpg",
+            "image": "shopify://shop_images/WTR-009-BFG-01.jpg",
             "subheading": "Teethers",
+            "button_label": ""
+          }
+        },
+        "collection_3x8qc4": {
+          "type": "collection",
+          "settings": {
+            "collection": "pacifier-clips",
+            "tag": "",
+            "image": "shopify://shop_images/SILCPOCSAG_01.jpg",
+            "subheading": "Pacifier Clips",
+            "button_label": ""
+          }
+        },
+        "collection_3JnEWj": {
+          "type": "collection",
+          "settings": {
+            "collection": "utensils",
+            "tag": "",
+            "image": "shopify://shop_images/LSET-006-CRM_1.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_rVWmWm": {
+          "type": "collection",
+          "settings": {
+            "collection": "crib-sheets",
+            "tag": "",
+            "image": "shopify://shop_images/CRIBFBK_01.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_WmjURA": {
+          "type": "collection",
+          "settings": {
+            "collection": "pajamas",
+            "tag": "",
+            "image": "shopify://shop_images/KA1006U.ENG_01.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_hyrDKL": {
+          "type": "collection",
+          "settings": {
+            "collection": "suction-plates",
+            "tag": "",
+            "image": "shopify://shop_images/SPL-002-BPK_01_0c5386a6-6815-4712-8a19-15013428c529.jpg",
+            "subheading": "Suction Plates",
+            "button_label": ""
+          }
+        },
+        "collection_jUtTeP": {
+          "type": "collection",
+          "settings": {
+            "collection": "bandana-bibs",
+            "tag": "",
+            "image": "shopify://shop_images/BIBSAFARI_01.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
         }
       },
       "block_order": [
         "collection_CULp7a",
-        "collection_84DAwU",
         "collection_nLyac9",
-        "collection_PHnrb8",
+        "collection_84DAwU",
         "collection_caXU8w",
+        "collection_PHnrb8",
         "collection_AHpkwx",
         "collection_j8GdED",
-        "collection_4HbMHd"
+        "collection_4HbMHd",
+        "collection_3x8qc4",
+        "collection_3JnEWj",
+        "collection_rVWmWm",
+        "collection_WmjURA",
+        "collection_hyrDKL",
+        "collection_jUtTeP"
       ],
       "name": "Shop by Category",
       "settings": {
         "title": "Shop by Category",
         "text": "",
         "text_alignment": "start",
-        "enable_carousel": false,
-        "grid": 4,
+        "enable_carousel": true,
+        "grid": 7,
         "color_scheme": "1",
         "full_width": true,
-        "coll_grid_image_shape": "square",
-        "coll_grid_image_position": "center center",
-        "coll_thumb_mob_per_row": "2",
+        "coll_grid_image_shape": "portrait-45",
+        "coll_grid_image_position": "top center",
+        "coll_thumb_mob_per_row": "3",
+        "coll_thumb_per_column": "2",
         "coll_grid_show_count": false,
         "coll_text_position": "below",
         "coll_text_position_under_mobile": false,
@@ -586,6 +621,7 @@
         "coll_grid_image_shape": "square",
         "coll_grid_image_position": "center center",
         "coll_thumb_mob_per_row": "2",
+        "coll_thumb_per_column": "1",
         "coll_grid_show_count": false,
         "coll_text_position": "below",
         "coll_text_position_under_mobile": false,
@@ -656,6 +692,7 @@
         "coll_grid_image_shape": "portrait-23",
         "coll_grid_image_position": "center center",
         "coll_thumb_mob_per_row": "2",
+        "coll_thumb_per_column": "2",
         "coll_grid_show_count": false,
         "coll_text_position": "below",
         "coll_text_position_under_mobile": false,
@@ -779,6 +816,7 @@
         "coll_grid_image_shape": "landscape-54",
         "coll_grid_image_position": "top center",
         "coll_thumb_mob_per_row": "1",
+        "coll_thumb_per_column": "1",
         "coll_grid_show_count": false,
         "coll_text_position": "over-shadow",
         "coll_text_position_under_mobile": false,
@@ -1102,16 +1140,6 @@
         "text_alignment": "start"
       }
     },
-    "custom_liquid_RDK4Gg": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "name": "Custom Liquid",
-      "settings": {
-        "full_width": true,
-        "show_space": true,
-        "code": "<script src=\"https://apps.bazaarvoice.com/deployments/louloulollipop/ca/production/en_US/bv.js\"></script>\n<div id=\"BVSellerRatingsContainer\"></div>\n<script>BV.seller_ratings.render();</script>"
-      }
-    },
     "custom_product_highlight_JiGaUB": {
       "type": "custom-product-highlight",
       "disabled": true,
@@ -1131,122 +1159,6 @@
         "color_scheme": "1"
       }
     },
-    "collection_list_awHraC": {
-      "type": "collection-list",
-      "blocks": {
-        "collection_hHixLy": {
-          "type": "collection",
-          "settings": {
-            "collection": "long-sleeve-bibs",
-            "tag": "",
-            "image": "shopify://shop_images/LSBIBSHK_LongSleeveBib_Sharks_51.jpg",
-            "subheading": "",
-            "button_label": ""
-          }
-        },
-        "collection_JKYbEQ": {
-          "type": "collection",
-          "settings": {
-            "collection": "silicone-bibs",
-            "tag": "",
-            "image": "shopify://shop_images/Bibs_LouLou_Lollipop-85.jpg",
-            "subheading": "",
-            "button_label": ""
-          }
-        },
-        "collection_UeeFME": {
-          "type": "collection",
-          "settings": {
-            "collection": "burp-cloths",
-            "tag": "",
-            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._11th_2024_-Web-16.jpg",
-            "subheading": "",
-            "button_label": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection_hHixLy",
-        "collection_JKYbEQ",
-        "collection_UeeFME"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "",
-        "text": "",
-        "text_alignment": "start",
-        "enable_carousel": false,
-        "grid": 3,
-        "color_scheme": "default",
-        "full_width": true,
-        "coll_grid_image_shape": "portrait-45",
-        "coll_grid_image_position": "center center",
-        "coll_thumb_mob_per_row": "1",
-        "coll_grid_show_count": false,
-        "coll_text_position": "over-shadow",
-        "coll_text_position_under_mobile": false,
-        "coll_thumb_text_align_x": "center",
-        "coll_thumb_text_align_y": "bottom",
-        "coll_button_style": "primary"
-      }
-    },
-    "featured_collection_eXJhUx": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "title": "",
-        "text": "",
-        "collection": "snack-plate",
-        "show_vendor": false,
-        "enable_carousel": false,
-        "grid": 5,
-        "rows": 1,
-        "color_scheme": "default",
-        "show_view_all": true,
-        "full_width": true,
-        "text_alignment": "start"
-      }
-    },
-    "multi_column_MR9q33": {
-      "type": "multi-column",
-      "blocks": {
-        "text_block_zy7AYT": {
-          "type": "text_block",
-          "settings": {
-            "enable_media": true,
-            "image": "shopify://shop_images/Muslin_Swaddle_-_Football__4_8959d690-2457-4717-a308-c87fcb045ec6.jpg",
-            "title": "Safety First",
-            "text": "<p>As a company run by moms, we know what it’s like to stress over every detail—and we do the same. Thanks to our thoroughly vetted, non-toxic materials, and meticulous innovation and design process, you can rest assured that we’ve put product safety first, every step of the way.</p>",
-            "button_label": "",
-            "link": ""
-          }
-        },
-        "text_block_VkTHha": {
-          "type": "text_block",
-          "settings": {
-            "enable_media": true,
-            "image": "shopify://shop_images/Bibs_LouLou_Lollipop-69.jpg",
-            "title": "Functional Design",
-            "text": "<p>Parenthood is HARD! That's why we have committed to making it easier for parents by bringing you exceptional quality products that are beautiful, functional, and safe.</p>",
-            "button_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "text_block_zy7AYT",
-        "text_block_VkTHha"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "",
-        "media_aspect_ratio": "1.25",
-        "media_width": 700,
-        "text_alignment": "center",
-        "button_style": "primary",
-        "color_scheme": "default"
-      }
-    },
     "1780593953a8b82cc7": {
       "type": "apps",
       "settings": {
@@ -1258,9 +1170,9 @@
   "order": [
     "mobile_collection_carousel_nzW98H",
     "hero_carousel_rounded_q34LBJ",
+    "custom_hero_banner_i8RgHw",
     "custom_product_highlight_rrgUK8",
-    "slideshow_JU4LXr",
-    "featured_collection_R6h8Qg",
+    "featured_collection_dfUJQq",
     "collection_list_aakDiY",
     "logo_list_kYmwNX",
     "featured_collection_RGPeGr",
@@ -1275,11 +1187,7 @@
     "16359276425da8ce46",
     "shop_the_look_HrgpQK",
     "featured_collection_HNkD47",
-    "custom_liquid_RDK4Gg",
     "custom_product_highlight_JiGaUB",
-    "collection_list_awHraC",
-    "featured_collection_eXJhUx",
-    "multi_column_MR9q33",
     "1780593953a8b82cc7"
   ]
 }
