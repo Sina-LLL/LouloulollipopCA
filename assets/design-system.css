@@ -1448,16 +1448,22 @@ h4, .h4 {
    ============================================================ */
 
 /* ============================================================
-   CUSTOM HERO BANNER — added 2026-06-25 (Staging)
-   Styles for sections/custom-hero-banner.liquid — a single-image hero for
-   images that already contain text. The image is shown uncropped
-   (object-fit: contain) and the section height follows the image's natural
-   ratio (height: auto), so nothing is cropped or letterboxed. The desktop /
-   mobile swap is handled by the image-desktop-and-mobile snippet. Every
-   selector is scoped to .custom-hero-banner so no other section is affected.
-   Max image width is supplied per-section via --custom-hero-max-width.
+   CUSTOM HERO BANNER — added 2026-06-25 (Staging); text overlay 2026-06-25
+   Styles for sections/custom-hero-banner.liquid — a single-image hero with
+   real HTML text (heading / subtext / button) optionally overlaid on top.
+   The image is shown uncropped (object-fit: contain) and the section height
+   follows the image's natural ratio (height: auto), so nothing is cropped or
+   letterboxed. The desktop / mobile swap is handled by the
+   image-desktop-and-mobile snippet. Every selector is scoped to
+   .custom-hero-banner so no other section is affected. Per-section values
+   (max width, heading sizes, text colour, text width) arrive via CSS vars
+   set on the section root; placement is set with --d-*/--m-* modifier
+   classes resolved in the media queries below.
    REVERSIBLE: delete this block + sections/custom-hero-banner.liquid.
    ============================================================ */
+.custom-hero-banner__inner {
+  position: relative;
+}
 .custom-hero-banner__media,
 .custom-hero-banner__media picture {
   display: block;
@@ -1477,6 +1483,72 @@ h4, .h4 {
   height: auto;
   object-fit: contain;
   max-width: 100%;
+}
+
+/* --- Optional real-text overlay --- */
+.custom-hero-banner__content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  padding: clamp(16px, 4vw, 64px);
+  pointer-events: none;
+}
+.custom-hero-banner__content > * {
+  pointer-events: auto;
+}
+.custom-hero-banner__text {
+  max-width: var(--custom-hero-text-max-width, 18em);
+  color: var(--custom-hero-text-color, var(--lll-ink));
+}
+.custom-hero-banner__heading {
+  font-family: var(--lll-font-display);
+  font-weight: 800;
+  line-height: 1.05;
+  margin: 0 0 0.5rem;
+  color: inherit;
+  font-size: var(--custom-hero-heading-size-m, 2.5rem);
+}
+.custom-hero-banner__subheading {
+  margin: 0 0 1.25rem;
+  font-size: 1.0625rem;
+  color: inherit;
+}
+.custom-hero-banner__btn-row {
+  display: flex;
+}
+.custom-hero-banner__text--left { text-align: left; }
+.custom-hero-banner__text--center { text-align: center; }
+.custom-hero-banner__text--right { text-align: right; }
+.custom-hero-banner__text--center .custom-hero-banner__btn-row { justify-content: center; }
+.custom-hero-banner__text--right .custom-hero-banner__btn-row { justify-content: flex-end; }
+
+/* Mobile placement + optional legibility scrim */
+@media (max-width: 767.98px) {
+  .custom-hero-banner__content--m-v-top { align-items: flex-start; }
+  .custom-hero-banner__content--m-v-center { align-items: center; }
+  .custom-hero-banner__content--m-v-bottom { align-items: flex-end; }
+  .custom-hero-banner__content--m-h-left { justify-content: flex-start; }
+  .custom-hero-banner__content--m-h-center { justify-content: center; }
+  .custom-hero-banner__content--m-h-right { justify-content: flex-end; }
+  .custom-hero-banner__content--scrim::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0) 55%);
+    pointer-events: none;
+  }
+}
+
+/* Desktop placement + sizes */
+@media (min-width: 768px) {
+  .custom-hero-banner__heading { font-size: var(--custom-hero-heading-size-d, 4rem); }
+  .custom-hero-banner__subheading { font-size: 1.25rem; }
+  .custom-hero-banner__content--d-v-top { align-items: flex-start; }
+  .custom-hero-banner__content--d-v-center { align-items: center; }
+  .custom-hero-banner__content--d-v-bottom { align-items: flex-end; }
+  .custom-hero-banner__content--d-h-left { justify-content: flex-start; }
+  .custom-hero-banner__content--d-h-center { justify-content: center; }
+  .custom-hero-banner__content--d-h-right { justify-content: flex-end; }
 }
 /* ============================================================
    END CUSTOM HERO BANNER
