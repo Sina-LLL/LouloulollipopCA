@@ -317,6 +317,26 @@
             "subheading": "Teethers",
             "button_label": ""
           }
+        },
+        "collection_3x8qc4": {
+          "type": "collection",
+          "settings": {
+            "collection": "pacifier-clips",
+            "tag": "",
+            "image": "shopify://shop_images/SILCPOCGRY_Pacifier_Clip_-_OneC_-_Grey_64WEB_f23f4409-b77c-4a60-87c4-4a5b8199ca3f.jpg",
+            "subheading": "Pacifier Clips",
+            "button_label": ""
+          }
+        },
+        "collection_3JnEWj": {
+          "type": "collection",
+          "settings": {
+            "collection": "suction-plates",
+            "tag": "",
+            "image": "shopify://shop_images/Nav_5.png",
+            "subheading": "Suction Plates",
+            "button_label": ""
+          }
         }
       },
       "block_order": [
@@ -327,20 +347,23 @@
         "collection_caXU8w",
         "collection_AHpkwx",
         "collection_j8GdED",
-        "collection_4HbMHd"
+        "collection_4HbMHd",
+        "collection_3x8qc4",
+        "collection_3JnEWj"
       ],
       "name": "Shop by Category",
       "settings": {
         "title": "Shop by Category",
         "text": "",
         "text_alignment": "start",
-        "enable_carousel": true,
-        "grid": 6,
+        "enable_carousel": false,
+        "grid": 5,
         "color_scheme": "1",
         "full_width": true,
         "coll_grid_image_shape": "square",
         "coll_grid_image_position": "center center",
         "coll_thumb_mob_per_row": "3",
+        "coll_thumb_per_column": "1",
         "coll_grid_show_count": false,
         "coll_text_position": "below",
         "coll_text_position_under_mobile": false,
@@ -554,6 +577,7 @@
         "coll_grid_image_shape": "square",
         "coll_grid_image_position": "center center",
         "coll_thumb_mob_per_row": "2",
+        "coll_thumb_per_column": "2",
         "coll_grid_show_count": false,
         "coll_text_position": "below",
         "coll_text_position_under_mobile": false,
@@ -624,6 +648,7 @@
         "coll_grid_image_shape": "portrait-23",
         "coll_grid_image_position": "center center",
         "coll_thumb_mob_per_row": "2",
+        "coll_thumb_per_column": "2",
         "coll_grid_show_count": false,
         "coll_text_position": "below",
         "coll_text_position_under_mobile": false,
@@ -747,6 +772,7 @@
         "coll_grid_image_shape": "landscape-54",
         "coll_grid_image_position": "top center",
         "coll_thumb_mob_per_row": "1",
+        "coll_thumb_per_column": "2",
         "coll_grid_show_count": false,
         "coll_text_position": "over-shadow",
         "coll_text_position_under_mobile": false,
