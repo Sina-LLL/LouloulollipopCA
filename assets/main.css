@@ -8860,6 +8860,15 @@ html:has(.drawer[open]) > body {
   .product-grid--per-row-5 {
     --product-columns-desktop: 5;
   }
+  .product-grid--per-row-6 {
+    --product-columns-desktop: 6;
+  }
+  .product-grid--per-row-7 {
+    --product-columns-desktop: 7;
+  }
+  .product-grid--per-row-8 {
+    --product-columns-desktop: 8;
+  }
 }
 .product-grid .quickbuy-container {
   position: absolute;
