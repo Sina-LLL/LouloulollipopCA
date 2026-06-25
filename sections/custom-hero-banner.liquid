@@ -1,15 +1,21 @@
 {%- comment -%}
   Custom hero banner
-  Single image hero with separate desktop and mobile images, plus an optional
-  real-text overlay (heading / subheading / button) rendered on top.
-  - Image is shown with object-fit: contain so nothing is cropped, and the
-    section height follows the image's natural ratio (height: auto).
+  Responsive single-image hero with real HTML text (heading / subtext / button).
+
+  - Desktop (>=768px): a true two-column layout. The photo sits in the left
+    column (cover-fills its side) next to a solid-colour panel holding the
+    text. No blank space is exported in the image — the panel is CSS.
+  - Mobile (<768px): a single image shown uncropped (object-fit: contain,
+    image-driven height) with the text floated over it (optional dark scrim).
   - Desktop/mobile image swap via the 'image-desktop-and-mobile' snippet.
-  - Overlay text is real HTML: translatable (Weglot), selectable, crisp, and
-    the button is a real focusable link. Placement is set separately for
-    desktop and mobile so the same image works at both sizes.
+  - Text is real HTML: translatable (Weglot), selectable, crisp; the button
+    is a real focusable link.
   - Styling is in assets/design-system.css (.custom-hero-banner*). Per-section
     values are passed as CSS variables on the root element below.
+
+  Image export tips:
+  - Desktop image: the photos only (no text, no blank panel).
+  - Mobile image: the photo only (no text).
 {%- endcomment -%}
 
 {%- liquid
@@ -34,10 +40,13 @@
   assign mpos = section.settings.text_position_mobile | split: ' '
   assign mv = mpos[0]
   assign mh = mpos[1]
+
+  assign img_w = section.settings.image_width_desktop
+  assign panel_w = 100 | minus: img_w
 -%}
 
 {%- capture root_style -%}
-{%- if section.settings.max_width > 0 %}--custom-hero-max-width: {{ section.settings.max_width }}px;{% endif %}--custom-hero-heading-size-d: {{ section.settings.heading_size }}px;--custom-hero-heading-size-m: {{ section.settings.heading_size_mobile }}px;--custom-hero-text-max-width: {{ section.settings.text_max_width }}em;{% if section.settings.text_color != blank %}--custom-hero-text-color: {{ section.settings.text_color }};{% endif %}
+{%- if section.settings.max_width > 0 %}--custom-hero-max-width: {{ section.settings.max_width }}px;{% endif %}--custom-hero-cols: {{ img_w }}% {{ panel_w }}%;--custom-hero-desktop-min-height: {{ section.settings.desktop_min_height }}px;--custom-hero-panel-bg: {{ section.settings.panel_color }};--custom-hero-heading-size-d: {{ section.settings.heading_size }}px;--custom-hero-heading-size-m: {{ section.settings.heading_size_mobile }}px;--custom-hero-text-max-width: {{ section.settings.text_max_width }}em;--custom-hero-text-color-d: {{ section.settings.text_color_desktop }};--custom-hero-text-color-m: {{ section.settings.text_color_mobile }};
 {%- endcapture -%}
 
 <div
@@ -54,7 +63,7 @@
     <a class="custom-hero-banner__link" href="{{ section.settings.link }}">
   {%- endif -%}
 
-  <div class="custom-hero-banner__inner">
+  <div class="custom-hero-banner__grid">
     <div class="custom-hero-banner__media">
       {%- if section.settings.image == blank and section.settings.mobile_image == blank -%}
         <div class="placeholder-image">
@@ -72,7 +81,7 @@
     </div>
 
     {%- if has_text -%}
-      <div class="custom-hero-banner__content custom-hero-banner__content--d-v-{{ dv }} custom-hero-banner__content--d-h-{{ dh }} custom-hero-banner__content--m-v-{{ mv }} custom-hero-banner__content--m-h-{{ mh }}{% if section.settings.mobile_scrim %} custom-hero-banner__content--scrim{% endif %}">
+      <div class="custom-hero-banner__panel custom-hero-banner__panel--d-v-{{ dv }} custom-hero-banner__panel--d-h-{{ dh }} custom-hero-banner__panel--m-v-{{ mv }} custom-hero-banner__panel--m-h-{{ mh }}{% if section.settings.mobile_scrim %} custom-hero-banner__panel--scrim{% endif %}">
         <div class="custom-hero-banner__text custom-hero-banner__text--{{ section.settings.text_align }}">
           {%- if section.settings.heading != blank -%}
             {%- if section.settings.use_h1 -%}
@@ -115,18 +124,18 @@
   "settings": [
     {
       "type": "paragraph",
-      "content": "A single image that is never cropped, with real text laid over it. Export your image WITHOUT the words (keep any background panel); the heading, subtext and button below are rendered as real text so they stay crisp and translate via Weglot."
+      "content": "Desktop shows the photo beside a colour panel with real text. Mobile shows the photo with text floated over it. Export images WITHOUT any text — desktop = photos only (no blank panel), mobile = photo only."
     },
     {
       "type": "image_picker",
       "id": "image",
-      "label": "Desktop image",
-      "info": "Shown on screens 768px and wider."
+      "label": "Desktop image (photos only)",
+      "info": "Fills the left column on screens 768px and wider."
     },
     {
       "type": "image_picker",
       "id": "mobile_image",
-      "label": "Mobile image",
+      "label": "Mobile image (photo only)",
       "info": "Shown below 768px. Falls back to the desktop image if left empty."
     },
     {
@@ -142,9 +151,40 @@
       "max": 2560,
       "step": 40,
       "unit": "px",
-      "label": "Maximum image width",
+      "label": "Maximum banner width",
       "info": "0 = no limit.",
       "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Desktop layout"
+    },
+    {
+      "type": "range",
+      "id": "image_width_desktop",
+      "min": 30,
+      "max": 80,
+      "step": 1,
+      "unit": "%",
+      "label": "Image column width",
+      "info": "The text panel takes the rest.",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "desktop_min_height",
+      "min": 300,
+      "max": 900,
+      "step": 20,
+      "unit": "px",
+      "label": "Desktop minimum height",
+      "default": 480
+    },
+    {
+      "type": "color",
+      "id": "panel_color",
+      "label": "Text panel colour",
+      "default": "#FAF9F6"
     },
     {
       "type": "header",
@@ -172,7 +212,7 @@
       "step": 2,
       "unit": "px",
       "label": "Desktop heading size",
-      "default": 76
+      "default": 72
     },
     {
       "type": "range",
@@ -189,12 +229,6 @@
       "id": "subheading",
       "label": "Subtext",
       "default": "Our signature Canada print, made for rest."
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "label": "Text colour",
-      "default": "#587681"
     },
     {
       "type": "select",
@@ -216,6 +250,18 @@
       "unit": "em",
       "label": "Text block max width",
       "default": 18
+    },
+    {
+      "type": "color",
+      "id": "text_color_desktop",
+      "label": "Text colour (desktop panel)",
+      "default": "#587681"
+    },
+    {
+      "type": "color",
+      "id": "text_color_mobile",
+      "label": "Text colour (mobile, over photo)",
+      "default": "#FFFFFF"
     },
     {
       "type": "text",
@@ -241,8 +287,8 @@
     {
       "type": "select",
       "id": "text_position_desktop",
-      "label": "Desktop text position",
-      "default": "center right",
+      "label": "Desktop text position (in panel)",
+      "default": "center center",
       "options": [
         { "value": "top left", "label": "Top left" },
         { "value": "top center", "label": "Top center" },
@@ -258,7 +304,7 @@
     {
       "type": "select",
       "id": "text_position_mobile",
-      "label": "Mobile text position",
+      "label": "Mobile text position (over photo)",
       "default": "bottom center",
       "options": [
         { "value": "top left", "label": "Top left" },
@@ -277,7 +323,7 @@
       "id": "mobile_scrim",
       "label": "Add dark gradient behind text on mobile",
       "info": "Improves legibility when text sits over the photo.",
-      "default": false
+      "default": true
     }
   ],
   "presets": [
