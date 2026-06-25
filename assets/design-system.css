@@ -1446,3 +1446,38 @@ h4, .h4 {
 /* ============================================================
    END SPACING SYSTEM
    ============================================================ */
+
+/* ============================================================
+   CUSTOM HERO BANNER — added 2026-06-25 (Staging)
+   Styles for sections/custom-hero-banner.liquid — a single-image hero for
+   images that already contain text. The image is shown uncropped
+   (object-fit: contain) and the section height follows the image's natural
+   ratio (height: auto), so nothing is cropped or letterboxed. The desktop /
+   mobile swap is handled by the image-desktop-and-mobile snippet. Every
+   selector is scoped to .custom-hero-banner so no other section is affected.
+   Max image width is supplied per-section via --custom-hero-max-width.
+   REVERSIBLE: delete this block + sections/custom-hero-banner.liquid.
+   ============================================================ */
+.custom-hero-banner__media,
+.custom-hero-banner__media picture {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  max-width: var(--custom-hero-max-width, none);
+}
+.custom-hero-banner__link {
+  display: block;
+}
+/* Override the theme's default img behaviour (cover, via wrapper classes
+   like .img-fill): contain + image-driven height, scoped to this section. */
+.custom-hero-banner__media .theme-img {
+  position: static;
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-width: 100%;
+}
+/* ============================================================
+   END CUSTOM HERO BANNER
+   ============================================================ */
