@@ -1479,3 +1479,28 @@ h4, .h4 {
 /* ============================================================
    END CUSTOM HERO BANNER
    ============================================================ */
+
+/* ============================================================
+   COLLECTION LIST — 6–8 columns + two-row carousel — added 2026-06-25
+   1) The theme's main.css only defines desktop column counts up to 5
+      (.product-grid--per-row-2 … -5). These add 6–8 so the section's
+      "Collections per row" range (max 8) renders correctly on desktop.
+      Applies to any .product-grid (collection-list, product-list, etc.).
+   2) The "Collections per column = 2" setting (.coll_thumb_per_column-2)
+      previously had NO css. When the carousel is on, give the grid a second
+      template row so items scroll sideways two-up (Quince-style). The
+      carousel already sets grid-auto-flow: column, so one extra row is enough.
+   REVERSIBLE: delete this block.
+   ============================================================ */
+@media (min-width: 768px) {
+  .product-grid--per-row-6 { --product-columns-desktop: 6; }
+  .product-grid--per-row-7 { --product-columns-desktop: 7; }
+  .product-grid--per-row-8 { --product-columns-desktop: 8; }
+}
+.product-grid--carousel.coll_thumb_per_column-2 {
+  grid-template-rows: repeat(2, auto);
+  row-gap: var(--gutter);
+}
+/* ============================================================
+   END COLLECTION LIST
+   ============================================================ */
