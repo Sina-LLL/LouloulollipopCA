@@ -1547,6 +1547,7 @@ h4, .h4 {
     display: grid;
     grid-template-columns: var(--custom-hero-cols, 64% 36%);
     min-height: var(--custom-hero-desktop-min-height, 480px);
+    position:relative;
   }
   /* Image column fills its side with cover (no text in it to crop). */
   .custom-hero-banner__media {
