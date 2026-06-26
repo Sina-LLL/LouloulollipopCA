@@ -1543,10 +1543,13 @@ h4, .h4 {
   border: 1px solid var(--lll-cream);
   border-radius: var(--lll-radius-full);
   background:var(--lll-cream);
-  color: var(--lll-slate) !important;
+  color: var(--lll-slate);
   cursor: pointer;
   transition: background var(--lll-duration-fast) ease, opacity var(--lll-duration-fast) ease;
   box-shadow: 0 3.2px 6.4px 0 rgba(0, 0, 0, .15);
+}
+[class*="floating"] svg path{
+  stroke: var(--lll-slate) !important;
 }
 .section-product-grid .slider-nav__btn[name="prev"],
  .collection-slider__nav-btn[data-dir="prev"] {
@@ -1584,7 +1587,7 @@ h4, .h4 {
  .use-color-scheme--1 .collection-slider__nav-btn {
   background: var(--lll-white);
   border-color: var(--lll-white);
-  color: var(--lll-slate) !important;
+  color: var(--lll-slate);
   
 }
 .section-product-grid .use-color-scheme--1 .slider-nav__btn:hover,
