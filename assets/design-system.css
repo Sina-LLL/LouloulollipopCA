@@ -775,10 +775,7 @@ carousel-slider.mobile-only.custom-features-carousel{
   margin: 0;
   font-size: 1.5rem;
 }
-[class*="floating"] svg path{
-  stroke:var(--lll-ink) !important;
 
-}
 .accordion-toggle .chevron {
   font-size: 28px;
   line-height: 1;
@@ -1503,4 +1500,100 @@ h4, .h4 {
 }
 /* ============================================================
    END COLLECTION LIST
+   ============================================================ */
+
+/* ============================================================
+   CONTENT CAROUSEL ARROWS — unified product-list + collection-list — 2026-06-26
+   Both carousels share one floating side-arrow style. Product list uses the
+   theme's native .slider-nav__btn (+ native slider JS); collection list uses
+   the custom .collection-slider__nav-btn (+ custom paged-scroll JS, since the
+   native nav breaks in its 2-row layout). Scoped to the two section classes so
+   other carousels are untouched. Brand-slate buttons; scheme 1 = white + slate.
+   REVERSIBLE: delete this block (restores native arrows on product list and
+   removes the collection-list arrow styling).
+   ============================================================ */
+/* Positioning context + full-bleed overlay nav (buttons float over the row). */
+.section-product-grid carousel-slider,
+ carousel-slider {
+  position: relative;
+}
+.section-product-grid .slider-nav,
+ .collection-slider__nav {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+/* Buttons */
+.section-product-grid .slider-nav__btn,
+ .collection-slider__nav-btn, .slider-nav__btn, .slider-nav--floating .slider-nav__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--lll-cream);
+  border-radius: var(--lll-radius-full);
+  background:var(--lll-cream);
+  color: var(--lll-slate);
+  cursor: pointer;
+  transition: background var(--lll-duration-fast) ease, opacity var(--lll-duration-fast) ease;
+  box-shadow: 0 3.2px 6.4px 0 rgba(0, 0, 0, .15);
+}
+[class*="floating"] svg path{
+  stroke: var(--lll-slate) !important;
+}
+.section-product-grid .slider-nav__btn[name="prev"],
+ .collection-slider__nav-btn[data-dir="prev"] {
+  left: 8px;
+  right: auto;
+}
+.section-product-grid .slider-nav__btn[name="next"],
+ .collection-slider__nav-btn[data-dir="next"] {
+  right: 8px;
+  left: auto;
+}
+/* .section-product-grid .slider-nav__btn:hover,
+ .collection-slider__nav-btn:hover {
+  background: var(--lll-slate-hover);
+} */
+.section-product-grid .slider-nav__btn[disabled],
+ .collection-slider__nav-btn[disabled] {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+.section-product-grid .slider-nav__btn svg,
+ .collection-slider__nav-btn svg {
+  width: 18px;
+  height: 18px;
+}
+/* Beat the global [class*="floating"] chevron-stroke !important rule so the
+   product-list chevrons (its nav is .slider-nav--floating) stay slate. */
+.section-product-grid .slider-nav__btn svg path,
+ .collection-slider__nav-btn svg path {
+  stroke: currentColor !important;
+}
+/* Color scheme 1: white button, brand-slate chevron. */
+.section-product-grid .use-color-scheme--1 .slider-nav__btn,
+ .use-color-scheme--1 .collection-slider__nav-btn {
+  background: var(--lll-white);
+  border-color: var(--lll-white);
+  color: var(--lll-slate);
+  
+}
+.section-product-grid .use-color-scheme--1 .slider-nav__btn:hover,
+ .use-color-scheme--1 .collection-slider__nav-btn:hover {
+  background: var(--lll-cream);
+}
+/* ============================================================
+   END CONTENT CAROUSEL ARROWS
    ============================================================ */
