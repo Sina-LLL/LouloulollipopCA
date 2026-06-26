@@ -1512,7 +1512,10 @@ h4, .h4 {
    width) and the container is left empty when there's nothing to scroll, so
    :empty hides it — dots appear on mobile / whenever the row overflows and
    disappear when everything fits. Mirrors the .custom-features-carousel__dot
-   style. REVERSIBLE: delete this block.
+   style.
+   Colours are color-scheme aware: they use the active scheme's --text-color
+   (muted for inactive, solid for active), so they contrast on Default / 1 / 2.
+   REVERSIBLE: delete this block.
    ============================================================ */
 .collection-slider__dots {
   display: flex;
@@ -1529,12 +1532,18 @@ h4, .h4 {
   padding: 0;
   border: none;
   border-radius: var(--lll-radius-full);
-  background: var(--lll-slate-border);
+  /* Use the active color scheme's text colour; falls back to brand slate
+     (6A8B95) if --text-color isn't set. Opacity gives the muted look. */
+  background: rgb(var(--text-color, 106 139 149));
+  opacity: 0.35;
   cursor: pointer;
-  transition: background var(--lll-duration-fast) ease, transform var(--lll-duration-fast) ease;
+  transition: opacity var(--lll-duration-fast) ease, transform var(--lll-duration-fast) ease;
+}
+.collection-slider__dot:not(.is-active):hover {
+  opacity: 0.6;
 }
 .collection-slider__dot.is-active {
-  background: var(--lll-slate);
+  opacity: 1;
   transform: scale(1.15);
 }
 /* ============================================================
