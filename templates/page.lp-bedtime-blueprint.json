@@ -13,38 +13,106 @@
     "hero": {
       "type": "image-with-text",
       "blocks": {
-        "eyebrow": {
-          "type": "subheading",
-          "settings": {
-            "subheading": "Free Guide · For New Parents · Newborn to Toddler Age"
-          }
-        },
         "heading": {
           "type": "heading",
           "settings": {
-            "title": "Your Bedtime Blueprint",
+            "title": "Not Sure How to Dress Your Baby for Sleep?",
             "use_h1": true
           }
         },
         "body": {
           "type": "text",
           "settings": {
-            "text": "<p>Stop guessing what your baby should wear at night. This free guide covers TOG ratings, swaddling, sleep bags, and layering — everything you need to dress your baby for safe, comfortable sleep from newborn to toddler age.</p>",
+            "text": "<p>We made a simple bedtime blueprint for that.</p><p>From newborn swaddling to TOG ratings and toddler sleep bags, this free guide breaks down exactly what to wear, when—without the overwhelm.</p>",
+            "enlarge_text": false
+          }
+        },
+        "btn1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get the Free Guide",
+            "button_link": "#section-id-form_top",
+            "button_style": "primary"
+          }
+        },
+        "tagline": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Practical sleep guidance for newborns, babies, and toddlers — delivered straight to your inbox.</p>",
             "enlarge_text": false
           }
         }
       },
       "block_order": [
-        "eyebrow",
         "heading",
-        "body"
+        "body",
+        "btn1",
+        "tagline"
       ],
       "settings": {
-        "image": "shopify://shop_images/03_5138cbb3-11ee-4d26-b084-16188ea497dd.png",
+        "image": "",
         "image_width": 700,
         "image_link": "",
         "image_position": "below",
         "text_alignment": "left",
+        "color_scheme": "default"
+      }
+    },
+    "whats_inside": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_wi": {
+          "type": "heading",
+          "settings": {
+            "title": "Inside the Guide",
+            "use_h1": false
+          }
+        },
+        "chapters_wi": {
+          "type": "text",
+          "settings": {
+            "text": "<p>✔ How to swaddle (and when to stop)<br>✔ What TOG actually means<br>✔ How to dress baby based on room temperature<br>✔ Signs your baby is too hot or too cold<br>✔ Sleep bags vs. sleep suits<br>✔ Real parent tips that actually help</p>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_wi",
+        "chapters_wi"
+      ],
+      "settings": {
+        "height": "medium",
+        "text_alignment": "center",
+        "full_width": false,
+        "color_scheme": "default"
+      }
+    },
+    "brand_story": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_bs": {
+          "type": "heading",
+          "settings": {
+            "title": "Created by parents who know baby and toddler sleep can feel overwhelming.",
+            "use_h1": false
+          }
+        },
+        "quote_bs": {
+          "type": "text",
+          "settings": {
+            "text": "<p>One of the most common questions new parents ask is:</p><p><em>\"What should my baby wear to sleep tonight?\"</em></p><p>This guide was designed to make that question feel a whole lot simpler.</p><p>No complicated rules. No judgment. Just practical guidance that grows with your baby — from the newborn stage through toddlerhood.</p>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_bs",
+        "quote_bs"
+      ],
+      "settings": {
+        "height": "medium",
+        "text_alignment": "center",
+        "full_width": false,
         "color_scheme": "default"
       }
     },
@@ -54,43 +122,6 @@
         "full_width": false,
         "show_space": true,
         "code": "<div style=\"text-align:center; max-width:560px; margin:0 auto;\"><p style=\"font-size:18px; font-weight:600; margin-bottom:8px;\">Get Instant Free Access</p><p style=\"font-size:15px; color:#666; margin-bottom:24px;\">Enter your email and we'll send the guide straight to your inbox.</p><!-- PASTE YOUR KLAVIYO FORM EMBED CODE BELOW -->\n\n<!-- PASTE YOUR KLAVIYO FORM EMBED CODE ABOVE --></div>"
-      }
-    },
-    "whats_inside": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_wi": {
-          "type": "heading",
-          "settings": {
-            "title": "What's Inside the Bedtime Blueprint",
-            "use_h1": false
-          }
-        },
-        "intro_wi": {
-          "type": "text",
-          "settings": {
-            "text": "<p>A practical, no-fluff guide written for parents who want real answers — not another Google rabbit hole.</p>",
-            "enlarge_text": false
-          }
-        },
-        "chapters_wi": {
-          "type": "text",
-          "settings": {
-            "text": "<p><strong>Understanding TOG ratings</strong><br/>What TOG actually means and how to pick the right one for your room temperature, season by season.</p><p><strong>Swaddling from newborn</strong><br/>How to swaddle safely, when to stop, and what signs tell you baby is ready to transition.</p><p><strong>Sleep bags — when and how</strong><br/>When to switch from swaddle to sleep bag, what size to choose, and how to layer correctly underneath.</p><p><strong>Layering for every season</strong><br/>Exactly what to put under a sleep bag at 0.5, 1.0, and 2.5 TOG so baby is never too hot or too cold.</p><p><strong>Room temperature + TOG + comfort check</strong><br/>A simple system to run every night so you always know your baby is dressed right.</p>",
-            "enlarge_text": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_wi",
-        "intro_wi",
-        "chapters_wi"
-      ],
-      "settings": {
-        "height": "medium",
-        "text_alignment": "left",
-        "full_width": false,
-        "color_scheme": "default"
       }
     },
     "proof_bar": {
@@ -174,8 +205,7 @@
             "arrows_color": "#000000",
             "transition_speed": 10,
             "header_text": "What Parents Say",
-            "show_average_rating": true,
-            "rating_display": "default"
+            "show_average_rating": true
           }
         }
       },
@@ -242,7 +272,6 @@
         "coll_grid_image_shape": "square",
         "coll_grid_image_position": "center center",
         "coll_thumb_mob_per_row": "1",
-        "coll_thumb_per_column": "1",
         "coll_grid_show_count": false,
         "coll_text_position": "below",
         "coll_text_position_under_mobile": false,
@@ -254,8 +283,9 @@
   },
   "order": [
     "hero",
-    "form_top",
     "whats_inside",
+    "brand_story",
+    "form_top",
     "proof_bar",
     "reviews",
     "form_bottom",
