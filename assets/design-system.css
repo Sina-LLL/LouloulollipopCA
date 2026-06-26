@@ -1506,28 +1506,42 @@ h4, .h4 {
    ============================================================ */
 
 /* ============================================================
-   COLLECTION LIST — carousel arrows — added 2026-06-26 (replaces page dots)
-   Prev/next arrows for the collection-list carousel. The section's inline
-   script scrolls by one visible page (the columns currently in view) per
-   click and clamps to the ends, and hides this nav (via [hidden]) when the
-   row doesn't overflow. Colours are color-scheme aware (active scheme
-   --text-color), with a brand-slate fallback. REVERSIBLE: delete this block.
+   CONTENT CAROUSEL ARROWS — unified product-list + collection-list — 2026-06-26
+   Both carousels share one floating side-arrow style. Product list uses the
+   theme's native .slider-nav__btn (+ native slider JS); collection list uses
+   the custom .collection-slider__nav-btn (+ custom paged-scroll JS, since the
+   native nav breaks in its 2-row layout). Scoped to the two section classes so
+   other carousels are untouched. Brand-slate buttons; scheme 1 = white + slate.
+   REVERSIBLE: delete this block (restores native arrows on product list and
+   removes the collection-list arrow styling).
    ============================================================ */
-.collection-slider__nav {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 16px;
+/* Positioning context + full-bleed overlay nav (buttons float over the row). */
+.section-product-grid carousel-slider,
+.section-collection-list carousel-slider {
+  position: relative;
 }
-.collection-slider__nav[hidden] {
-  display: none;
+.section-product-grid .slider-nav,
+.section-collection-list .collection-slider__nav {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+  z-index: 2;
 }
-.collection-slider__nav-btn {
+/* Buttons */
+.section-product-grid .slider-nav__btn,
+.section-collection-list .collection-slider__nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: auto;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 30px;
   height: 30px;
+  margin: 0;
   padding: 0;
   border: 1px solid var(--lll-slate);
   border-radius: var(--lll-radius-full);
@@ -1536,32 +1550,48 @@ h4, .h4 {
   cursor: pointer;
   transition: background var(--lll-duration-fast) ease, opacity var(--lll-duration-fast) ease;
 }
-.collection-slider__nav-btn:hover {
+.section-product-grid .slider-nav__btn[name="prev"],
+.section-collection-list .collection-slider__nav-btn[data-dir="prev"] {
+  left: 8px;
+  right: auto;
+}
+.section-product-grid .slider-nav__btn[name="next"],
+.section-collection-list .collection-slider__nav-btn[data-dir="next"] {
+  right: 8px;
+  left: auto;
+}
+.section-product-grid .slider-nav__btn:hover,
+.section-collection-list .collection-slider__nav-btn:hover {
   background: var(--lll-slate-hover);
 }
-.collection-slider__nav-btn[disabled] {
+.section-product-grid .slider-nav__btn[disabled],
+.section-collection-list .collection-slider__nav-btn[disabled] {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
 }
-.collection-slider__nav-btn svg {
+.section-product-grid .slider-nav__btn svg,
+.section-collection-list .collection-slider__nav-btn svg {
   width: 18px;
   height: 18px;
 }
-.collection-slider__nav-btn svg path {
-  stroke: currentColor;
+/* Beat the global [class*="floating"] chevron-stroke !important rule so the
+   product-list chevrons (its nav is .slider-nav--floating) stay slate. */
+.section-product-grid .slider-nav__btn svg path,
+.section-collection-list .collection-slider__nav-btn svg path {
+  stroke: currentColor !important;
 }
-/* Color scheme 1: filled white arrow buttons with a brand-slate chevron.
-   Applies to the usable (active) buttons; the disabled end-state button
-   still dims via the [disabled] rule above. */
-.use-color-scheme--1 .collection-slider__nav-btn {
+/* Color scheme 1: white button, brand-slate chevron. */
+.section-product-grid .use-color-scheme--1 .slider-nav__btn,
+.section-collection-list .use-color-scheme--1 .collection-slider__nav-btn {
   background: var(--lll-white);
   border-color: var(--lll-white);
   color: var(--lll-slate);
 }
-.use-color-scheme--1 .collection-slider__nav-btn:hover {
+.section-product-grid .use-color-scheme--1 .slider-nav__btn:hover,
+.section-collection-list .use-color-scheme--1 .collection-slider__nav-btn:hover {
   background: var(--lll-cream);
 }
 /* ============================================================
-   END COLLECTION LIST carousel arrows
+   END CONTENT CAROUSEL ARROWS
    ============================================================ */
