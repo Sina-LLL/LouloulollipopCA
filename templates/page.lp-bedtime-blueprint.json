@@ -1,0 +1,262 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme",
+  "sections": {
+    "hero": {
+      "type": "image-with-text",
+      "blocks": {
+        "eyebrow": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Free Guide · For New Parents · Newborn to 2 Years"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Your Bedtime Blueprint",
+            "use_h1": true
+          }
+        },
+        "body": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Stop guessing what your baby should wear at night. This free guide covers TOG ratings, swaddling, sleep bags, and layering — everything you need to dress your baby for safe, comfortable sleep from newborn to age 2.</p>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "eyebrow",
+        "heading",
+        "body"
+      ],
+      "settings": {
+        "image": "",
+        "image_width": 700,
+        "image_link": "",
+        "image_position": "below",
+        "text_alignment": "left",
+        "color_scheme": "default"
+      }
+    },
+    "form_top": {
+      "type": "custom-liquid",
+      "settings": {
+        "full_width": false,
+        "show_space": true,
+        "code": "<div style=\"text-align:center; max-width:560px; margin:0 auto;\"><p style=\"font-size:18px; font-weight:600; margin-bottom:8px;\">Get Instant Free Access</p><p style=\"font-size:15px; color:#666; margin-bottom:24px;\">Enter your email and we'll send the guide straight to your inbox.</p><!-- PASTE YOUR KLAVIYO FORM EMBED CODE BELOW -->\n\n<!-- PASTE YOUR KLAVIYO FORM EMBED CODE ABOVE --></div>"
+      }
+    },
+    "whats_inside": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_wi": {
+          "type": "heading",
+          "settings": {
+            "title": "What's Inside the Bedtime Blueprint",
+            "use_h1": false
+          }
+        },
+        "intro_wi": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A practical, no-fluff guide written for parents who want real answers — not another Google rabbit hole.</p>",
+            "enlarge_text": false
+          }
+        },
+        "chapters_wi": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li><strong>Understanding TOG ratings</strong> — What TOG actually means and how to pick the right one for your room temperature, season by season.</li><li><strong>Swaddling from newborn</strong> — How to swaddle safely, when to stop, and what signs tell you baby is ready to transition.</li><li><strong>Sleep bags — when and how</strong> — When to switch from swaddle to sleep bag, what size to choose, and how to layer correctly underneath.</li><li><strong>Layering for every season</strong> — Exactly what to put under a sleep bag at 0.5, 1.0, and 2.5 TOG so baby is never too hot or too cold.</li><li><strong>Room temperature + TOG + comfort check</strong> — A simple system to run every night so you always know your baby is dressed right.</li></ul>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_wi",
+        "intro_wi",
+        "chapters_wi"
+      ],
+      "settings": {
+        "height": "medium",
+        "text_alignment": "center",
+        "full_width": false,
+        "color_scheme": "default"
+      }
+    },
+    "proof_bar": {
+      "type": "lp-proof-bar",
+      "blocks": {
+        "p1": {
+          "type": "stat",
+          "settings": {
+            "label": "Good Housekeeping",
+            "desc": "2025 Parenting Award Winner"
+          }
+        },
+        "p2": {
+          "type": "stat",
+          "settings": {
+            "label": "Parents Best for Baby",
+            "desc": "Award Winner"
+          }
+        },
+        "p3": {
+          "type": "stat",
+          "settings": {
+            "label": "5,000+ ★★★★★",
+            "desc": "Reviews across sleep products"
+          }
+        },
+        "p4": {
+          "type": "stat",
+          "settings": {
+            "label": "Trusted Since 2015",
+            "desc": "Canadian-made baby essentials"
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3",
+        "p4"
+      ],
+      "settings": {
+        "bg_color": "#6a8b95",
+        "text_color": "#ffffff",
+        "accent_color": "#ffc748"
+      }
+    },
+    "reviews": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_sleep_carousel": {
+          "type": "shopify://apps/judge-me-reviews/blocks/cards_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "show_sample_reviews": true,
+            "reviews_selection": "custom_products",
+            "products": [
+              "muslin-lightweight-sleep-bag-0-5-tog-bumble-bees",
+              "muslin-lightweight-sleep-bag-0-5-tog-safari-jungle",
+              "sleeper-bumble-bees",
+              "sleeper-bears-on-bikes",
+              "muslin-swaddle-set-wild-safari"
+            ],
+            "star_rating": "all",
+            "show_review_media": false,
+            "display_order": "most_recent",
+            "no_image_fallback": "review_text_only",
+            "max_reviews": 6,
+            "review_length": "small",
+            "text_size": "medium",
+            "image_ratio": "1",
+            "reviews_shown": 4,
+            "show_reviewer_name": true,
+            "show_product_name": true,
+            "hide_arrows_mobile": true,
+            "arrows_position": "sides",
+            "max_width": 1100,
+            "corner_styling": "soft",
+            "header_text_color": "#1d1d1d",
+            "text_color": "#1d1d1d",
+            "card_color": "#f9f9f9",
+            "stars_color": "",
+            "arrows_color": "#000000",
+            "transition_speed": 10,
+            "header_text": "What Parents Say",
+            "show_average_rating": true
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_sleep_carousel"
+      ],
+      "settings": {
+        "full_width": false,
+        "show_space": true
+      }
+    },
+    "form_bottom": {
+      "type": "custom-liquid",
+      "settings": {
+        "full_width": false,
+        "show_space": true,
+        "code": "<div style=\"text-align:center; max-width:560px; margin:0 auto;\"><p style=\"font-size:20px; font-weight:600; margin-bottom:8px;\">Still reading? Grab the guide — it's free.</p><p style=\"font-size:15px; color:#666; margin-bottom:24px;\">Your Bedtime Blueprint, delivered straight to your inbox.</p><!-- PASTE YOUR KLAVIYO FORM EMBED CODE BELOW -->\n\n<!-- PASTE YOUR KLAVIYO FORM EMBED CODE ABOVE --></div>"
+      }
+    },
+    "related": {
+      "type": "collection-list",
+      "blocks": {
+        "c1": {
+          "type": "collection",
+          "settings": {
+            "collection": "sleep-bags",
+            "tag": "",
+            "subheading": "TOG-Rated Sleep Bags",
+            "button_label": "Shop Sleep Bags"
+          }
+        },
+        "c2": {
+          "type": "collection",
+          "settings": {
+            "collection": "sleepers-pajamas",
+            "tag": "",
+            "subheading": "TENCEL™ Sleepers & Pajamas",
+            "button_label": "Shop Sleepers"
+          }
+        },
+        "c3": {
+          "type": "collection",
+          "settings": {
+            "collection": "swaddles",
+            "tag": "",
+            "subheading": "Breathable Muslin Swaddles",
+            "button_label": "Shop Swaddles"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "title": "Shop the Sleep Collection",
+        "text": "",
+        "text_alignment": "start",
+        "enable_carousel": false,
+        "grid": 3,
+        "color_scheme": "default",
+        "full_width": true,
+        "coll_grid_image_shape": "square",
+        "coll_grid_image_position": "center center",
+        "coll_thumb_mob_per_row": "1",
+        "coll_grid_show_count": false,
+        "coll_text_position": "below",
+        "coll_text_position_under_mobile": false,
+        "coll_thumb_text_align_x": "center",
+        "coll_thumb_text_align_y": "center",
+        "coll_button_style": "primary"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "form_top",
+    "whats_inside",
+    "proof_bar",
+    "reviews",
+    "form_bottom",
+    "related"
+  ]
+}
