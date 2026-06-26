@@ -91,17 +91,16 @@
     </div>
 
     {%- if section.settings.enable_carousel -%}
-         <div class="slider-nav slider-nav--floating no-js-hidden">
-          <button type="button" class="slider-nav__btn has-ltr-icon" name="prev" aria-controls="slider-{{ section.id }}">
+        <div class="collection-slider__nav no-js-hidden" id="nav-{{ section.id }}" hidden>
+          <button type="button" class="collection-slider__nav-btn has-ltr-icon" data-dir="prev" aria-controls="slider-{{ section.id }}">
             <span class="visually-hidden">{{ 'general.slider.previous' | t }}</span>
             {%- render 'icon-chevron-left', stroke_width: 1.5 -%}
           </button>
-          <button type="button" class="slider-nav__btn has-ltr-icon" name="next" aria-controls="slider-{{ section.id }}">
+          <button type="button" class="collection-slider__nav-btn has-ltr-icon" data-dir="next" aria-controls="slider-{{ section.id }}">
             <span class="visually-hidden">{{ 'general.slider.next' | t }}</span>
             {%- render 'icon-chevron-right', stroke_width: 1.5 -%}
           </button>
         </div>
-        <div class="collection-slider__dots" id="dots-{{ section.id }}" role="tablist" aria-label="Collection list pages"></div>
       </carousel-slider>
     {%- endif -%}
   </div>
@@ -113,49 +112,48 @@
       var root = document.getElementById('slider-{{ section.id }}');
       if (!root) return;
       var scroller = root.querySelector('.slider');
-      var dots = document.getElementById('dots-{{ section.id }}');
-      if (!scroller || !dots) return;
+      var grid = root.querySelector('.slider__grid');
+      var nav = document.getElementById('nav-{{ section.id }}');
+      if (!scroller || !nav) return;
+      var prevBtn = nav.querySelector('[data-dir="prev"]');
+      var nextBtn = nav.querySelector('[data-dir="next"]');
 
-      function pageCount() {
-        var w = scroller.clientWidth;
-        if (!w) return 1;
-        return Math.max(1, Math.round(scroller.scrollWidth / w));
+      function maxScroll() {
+        return scroller.scrollWidth - scroller.clientWidth;
       }
 
-      function activePage() {
-        var w = scroller.clientWidth || 1;
-        var max = dots.children.length - 1;
-        return Math.min(max, Math.max(0, Math.round(scroller.scrollLeft / w)));
+      function gap() {
+        if (!grid) return 0;
+        var g = parseFloat(getComputedStyle(grid).columnGap);
+        return isNaN(g) ? 0 : g;
+      }
+
+      // One "page" = the columns currently in view. The grid sizes columns to
+      // fit the viewport exactly, so a viewport width (+ one gap to land on a
+      // column edge) advances by exactly the number of visible columns.
+      function step() {
+        return scroller.clientWidth + gap();
+      }
+
+      function go(dir) {
+        var target = scroller.scrollLeft + dir * step();
+        // Clamp to the ends: if fewer columns remain than are shown, this lands
+        // exactly at the start/end rather than overscrolling.
+        target = Math.max(0, Math.min(target, maxScroll()));
+        scroller.scrollTo({ left: target, behavior: 'smooth' });
       }
 
       function update() {
-        if (!dots.children.length) return;
-        var active = activePage();
-        for (var i = 0; i < dots.children.length; i++) {
-          dots.children[i].classList.toggle('is-active', i === active);
-        }
+        var scrollable = maxScroll() > 1;
+        nav.hidden = !scrollable;
+        if (!scrollable) return;
+        var x = scroller.scrollLeft;
+        prevBtn.disabled = x <= 1;
+        nextBtn.disabled = x >= maxScroll() - 1;
       }
 
-      function build() {
-        var pages = pageCount();
-        if (pages <= 1) { dots.innerHTML = ''; return; }
-        if (dots.children.length !== pages) {
-          dots.innerHTML = '';
-          for (var i = 0; i < pages; i++) {
-            var b = document.createElement('button');
-            b.type = 'button';
-            b.className = 'collection-slider__dot';
-            b.setAttribute('aria-label', 'Go to page ' + (i + 1));
-            b.addEventListener('click', (function (idx) {
-              return function () {
-                scroller.scrollTo({ left: idx * scroller.clientWidth, behavior: 'smooth' });
-              };
-            })(i));
-            dots.appendChild(b);
-          }
-        }
-        update();
-      }
+      prevBtn.addEventListener('click', function () { go(-1); });
+      nextBtn.addEventListener('click', function () { go(1); });
 
       var raf;
       scroller.addEventListener('scroll', function () {
@@ -166,11 +164,11 @@
       var rt;
       window.addEventListener('resize', function () {
         clearTimeout(rt);
-        rt = setTimeout(build, 200);
+        rt = setTimeout(update, 200);
       });
 
-      setTimeout(build, 50);
-      setTimeout(build, 450);
+      setTimeout(update, 50);
+      setTimeout(update, 450);
     })();
   </script>
 {%- endif -%}
