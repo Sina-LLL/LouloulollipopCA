@@ -1551,6 +1551,17 @@ h4, .h4 {
 .collection-slider__nav-btn svg path {
   stroke: currentColor;
 }
+/* Color scheme 1: filled white arrow buttons with a brand-slate chevron.
+   Applies to the usable (active) buttons; the disabled end-state button
+   still dims via the [disabled] rule above. */
+.use-color-scheme--1 .collection-slider__nav-btn {
+  background: var(--lll-white);
+  border-color: var(--lll-white);
+  color: var(--lll-slate);
+}
+.use-color-scheme--1 .collection-slider__nav-btn:hover {
+  background: var(--lll-cream);
+}
 /* ============================================================
    END COLLECTION LIST carousel arrows
    ============================================================ */
