@@ -1545,8 +1545,8 @@ h4, .h4 {
   padding: 0;
   border: 1px solid var(--lll-cream);
   border-radius: var(--lll-radius-full);
-  background: transparent;
-  color: var(--lll-cream);
+  background:var(--lll-cream);
+  color: var(--lll-slate);
   cursor: pointer;
   transition: background var(--lll-duration-fast) ease, opacity var(--lll-duration-fast) ease;
 }
