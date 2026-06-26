@@ -1521,7 +1521,7 @@ h4, .h4 {
   position: relative;
 }
 .section-product-grid .slider-nav,
-.section-collection-list .collection-slider__nav {
+ .collection-slider__nav {
   position: absolute;
   inset: 0;
   margin: 0;
@@ -1588,6 +1588,7 @@ h4, .h4 {
   background: var(--lll-white);
   border-color: var(--lll-white);
   color: var(--lll-slate);
+  
 }
 .section-product-grid .use-color-scheme--1 .slider-nav__btn:hover,
 .section-collection-list .use-color-scheme--1 .collection-slider__nav-btn:hover {
