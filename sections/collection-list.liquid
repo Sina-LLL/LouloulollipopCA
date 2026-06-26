@@ -101,11 +101,79 @@
             {%- render 'icon-chevron-right', stroke_width: 1.5 -%}
           </button>
         </div>
+        <div class="collection-slider__dots" id="dots-{{ section.id }}" role="tablist" aria-label="Collection list pages"></div>
       </carousel-slider>
     {%- endif -%}
   </div>
 </div>
 
+{%- if section.settings.enable_carousel -%}
+  <script>
+    (function () {
+      var root = document.getElementById('slider-{{ section.id }}');
+      if (!root) return;
+      var scroller = root.querySelector('.slider');
+      var dots = document.getElementById('dots-{{ section.id }}');
+      if (!scroller || !dots) return;
+
+      function pageCount() {
+        var w = scroller.clientWidth;
+        if (!w) return 1;
+        return Math.max(1, Math.round(scroller.scrollWidth / w));
+      }
+
+      function activePage() {
+        var w = scroller.clientWidth || 1;
+        var max = dots.children.length - 1;
+        return Math.min(max, Math.max(0, Math.round(scroller.scrollLeft / w)));
+      }
+
+      function update() {
+        if (!dots.children.length) return;
+        var active = activePage();
+        for (var i = 0; i < dots.children.length; i++) {
+          dots.children[i].classList.toggle('is-active', i === active);
+        }
+      }
+
+      function build() {
+        var pages = pageCount();
+        if (pages <= 1) { dots.innerHTML = ''; return; }
+        if (dots.children.length !== pages) {
+          dots.innerHTML = '';
+          for (var i = 0; i < pages; i++) {
+            var b = document.createElement('button');
+            b.type = 'button';
+            b.className = 'collection-slider__dot';
+            b.setAttribute('aria-label', 'Go to page ' + (i + 1));
+            b.addEventListener('click', (function (idx) {
+              return function () {
+                scroller.scrollTo({ left: idx * scroller.clientWidth, behavior: 'smooth' });
+              };
+            })(i));
+            dots.appendChild(b);
+          }
+        }
+        update();
+      }
+
+      var raf;
+      scroller.addEventListener('scroll', function () {
+        if (raf) cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(update);
+      }, { passive: true });
+
+      var rt;
+      window.addEventListener('resize', function () {
+        clearTimeout(rt);
+        rt = setTimeout(build, 200);
+      });
+
+      setTimeout(build, 50);
+      setTimeout(build, 450);
+    })();
+  </script>
+{%- endif -%}
 
 {% schema %}
 {
