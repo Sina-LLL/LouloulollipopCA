@@ -1504,3 +1504,39 @@ h4, .h4 {
 /* ============================================================
    END COLLECTION LIST
    ============================================================ */
+
+/* ============================================================
+   COLLECTION LIST — page-dot scroll indicator — added 2026-06-26
+   Tappable page dots for the collection-list carousel. The dots are built by
+   the section's inline script (one per swipe-page, from the slider's scroll
+   width) and the container is left empty when there's nothing to scroll, so
+   :empty hides it — dots appear on mobile / whenever the row overflows and
+   disappear when everything fits. Mirrors the .custom-features-carousel__dot
+   style. REVERSIBLE: delete this block.
+   ============================================================ */
+.collection-slider__dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+.collection-slider__dots:empty {
+  display: none;
+}
+.collection-slider__dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: var(--lll-radius-full);
+  background: var(--lll-slate-border);
+  cursor: pointer;
+  transition: background var(--lll-duration-fast) ease, transform var(--lll-duration-fast) ease;
+}
+.collection-slider__dot.is-active {
+  background: var(--lll-slate);
+  transform: scale(1.15);
+}
+/* ============================================================
+   END COLLECTION LIST page dots
+   ============================================================ */
