@@ -775,10 +775,7 @@ carousel-slider.mobile-only.custom-features-carousel{
   margin: 0;
   font-size: 1.5rem;
 }
-[class*="floating"] svg path{
-  stroke:var(--lll-ink) !important;
 
-}
 .accordion-toggle .chevron {
   font-size: 28px;
   line-height: 1;
