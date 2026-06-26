@@ -16,7 +16,7 @@
         "eyebrow": {
           "type": "subheading",
           "settings": {
-            "subheading": "Free Guide · For New Parents · Newborn to 2 Years"
+            "subheading": "Free Guide · For New Parents · Newborn to Toddler Age"
           }
         },
         "heading": {
@@ -29,7 +29,7 @@
         "body": {
           "type": "text",
           "settings": {
-            "text": "<p>Stop guessing what your baby should wear at night. This free guide covers TOG ratings, swaddling, sleep bags, and layering — everything you need to dress your baby for safe, comfortable sleep from newborn to age 2.</p>",
+            "text": "<p>Stop guessing what your baby should wear at night. This free guide covers TOG ratings, swaddling, sleep bags, and layering — everything you need to dress your baby for safe, comfortable sleep from newborn to toddler age.</p>",
             "enlarge_text": false
           }
         }
@@ -40,7 +40,7 @@
         "body"
       ],
       "settings": {
-        "image": "",
+        "image": "shopify://shop_images/03_5138cbb3-11ee-4d26-b084-16188ea497dd.png",
         "image_width": 700,
         "image_link": "",
         "image_position": "below",
@@ -76,7 +76,7 @@
         "chapters_wi": {
           "type": "text",
           "settings": {
-            "text": "<ul><li><strong>Understanding TOG ratings</strong> — What TOG actually means and how to pick the right one for your room temperature, season by season.</li><li><strong>Swaddling from newborn</strong> — How to swaddle safely, when to stop, and what signs tell you baby is ready to transition.</li><li><strong>Sleep bags — when and how</strong> — When to switch from swaddle to sleep bag, what size to choose, and how to layer correctly underneath.</li><li><strong>Layering for every season</strong> — Exactly what to put under a sleep bag at 0.5, 1.0, and 2.5 TOG so baby is never too hot or too cold.</li><li><strong>Room temperature + TOG + comfort check</strong> — A simple system to run every night so you always know your baby is dressed right.</li></ul>",
+            "text": "<p><strong>Understanding TOG ratings</strong><br/>What TOG actually means and how to pick the right one for your room temperature, season by season.</p><p><strong>Swaddling from newborn</strong><br/>How to swaddle safely, when to stop, and what signs tell you baby is ready to transition.</p><p><strong>Sleep bags — when and how</strong><br/>When to switch from swaddle to sleep bag, what size to choose, and how to layer correctly underneath.</p><p><strong>Layering for every season</strong><br/>Exactly what to put under a sleep bag at 0.5, 1.0, and 2.5 TOG so baby is never too hot or too cold.</p><p><strong>Room temperature + TOG + comfort check</strong><br/>A simple system to run every night so you always know your baby is dressed right.</p>",
             "enlarge_text": false
           }
         }
@@ -88,7 +88,7 @@
       ],
       "settings": {
         "height": "medium",
-        "text_alignment": "center",
+        "text_alignment": "left",
         "full_width": false,
         "color_scheme": "default"
       }
@@ -174,7 +174,8 @@
             "arrows_color": "#000000",
             "transition_speed": 10,
             "header_text": "What Parents Say",
-            "show_average_rating": true
+            "show_average_rating": true,
+            "rating_display": "default"
           }
         }
       },
@@ -241,6 +242,7 @@
         "coll_grid_image_shape": "square",
         "coll_grid_image_position": "center center",
         "coll_thumb_mob_per_row": "1",
+        "coll_thumb_per_column": "1",
         "coll_grid_show_count": false,
         "coll_text_position": "below",
         "coll_text_position_under_mobile": false,
