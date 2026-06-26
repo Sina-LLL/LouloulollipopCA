@@ -1537,7 +1537,7 @@ h4, .h4 {
   transition: background var(--lll-duration-fast) ease, opacity var(--lll-duration-fast) ease;
 }
 .collection-slider__nav-btn:hover {
-  background: rgb(var(--text-color, 106 139 149) / 0.08);
+  background: var(--lll-slate-hover);
 }
 .collection-slider__nav-btn[disabled] {
   opacity: 0.3;
