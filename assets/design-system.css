@@ -1560,10 +1560,10 @@ h4, .h4 {
   right: 8px;
   left: auto;
 }
-.section-product-grid .slider-nav__btn:hover,
+/* .section-product-grid .slider-nav__btn:hover,
 .section-collection-list .collection-slider__nav-btn:hover {
   background: var(--lll-slate-hover);
-}
+} */
 .section-product-grid .slider-nav__btn[disabled],
 .section-collection-list .collection-slider__nav-btn[disabled] {
   opacity: 0.3;
