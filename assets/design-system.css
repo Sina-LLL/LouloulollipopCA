@@ -1517,7 +1517,7 @@ h4, .h4 {
    ============================================================ */
 /* Positioning context + full-bleed overlay nav (buttons float over the row). */
 .section-product-grid carousel-slider,
-.section-collection-list carousel-slider {
+ carousel-slider {
   position: relative;
 }
 .section-product-grid .slider-nav,
@@ -1531,7 +1531,7 @@ h4, .h4 {
 }
 /* Buttons */
 .section-product-grid .slider-nav__btn,
-.section-collection-list .collection-slider__nav-btn {
+ .collection-slider__nav-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -1552,46 +1552,46 @@ h4, .h4 {
   box-shadow: 0 3.2px 6.4px 0 rgba(0, 0, 0, .15);
 }
 .section-product-grid .slider-nav__btn[name="prev"],
-.section-collection-list .collection-slider__nav-btn[data-dir="prev"] {
+ .collection-slider__nav-btn[data-dir="prev"] {
   left: 8px;
   right: auto;
 }
 .section-product-grid .slider-nav__btn[name="next"],
-.section-collection-list .collection-slider__nav-btn[data-dir="next"] {
+ .collection-slider__nav-btn[data-dir="next"] {
   right: 8px;
   left: auto;
 }
 /* .section-product-grid .slider-nav__btn:hover,
-.section-collection-list .collection-slider__nav-btn:hover {
+ .collection-slider__nav-btn:hover {
   background: var(--lll-slate-hover);
 } */
 .section-product-grid .slider-nav__btn[disabled],
-.section-collection-list .collection-slider__nav-btn[disabled] {
+ .collection-slider__nav-btn[disabled] {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
 }
 .section-product-grid .slider-nav__btn svg,
-.section-collection-list .collection-slider__nav-btn svg {
+ .collection-slider__nav-btn svg {
   width: 18px;
   height: 18px;
 }
 /* Beat the global [class*="floating"] chevron-stroke !important rule so the
    product-list chevrons (its nav is .slider-nav--floating) stay slate. */
 .section-product-grid .slider-nav__btn svg path,
-.section-collection-list .collection-slider__nav-btn svg path {
+ .collection-slider__nav-btn svg path {
   stroke: currentColor !important;
 }
 /* Color scheme 1: white button, brand-slate chevron. */
 .section-product-grid .use-color-scheme--1 .slider-nav__btn,
-.section-collection-list .use-color-scheme--1 .collection-slider__nav-btn {
+ .use-color-scheme--1 .collection-slider__nav-btn {
   background: var(--lll-white);
   border-color: var(--lll-white);
   color: var(--lll-slate);
   
 }
 .section-product-grid .use-color-scheme--1 .slider-nav__btn:hover,
-.section-collection-list .use-color-scheme--1 .collection-slider__nav-btn:hover {
+ .use-color-scheme--1 .collection-slider__nav-btn:hover {
   background: var(--lll-cream);
 }
 /* ============================================================
