@@ -1525,6 +1525,8 @@ h4, .h4 {
   padding: 0;
   pointer-events: none;
   z-index: 2;
+  background-color: unset !important;
+
 }
 /* Buttons */
 .section-product-grid .slider-nav__btn,
@@ -1550,6 +1552,7 @@ h4, .h4 {
 }
 [class*="floating"] svg path{
   stroke: var(--lll-slate) !important;
+
 }
 .section-product-grid .slider-nav__btn[name="prev"],
  .collection-slider__nav-btn[data-dir="prev"] {
