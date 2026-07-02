@@ -58,7 +58,7 @@
         "liquid_6JmR8t": {
           "type": "liquid",
           "settings": {
-            "custom_liquid": "<div class=\"klaviyo-form-UmrqSu\"></div>"
+            "custom_liquid": "<p style=\"font-size:18px; font-weight:600; margin-bottom:8px;\">Get Your Free Sleep Guide\n</p><p style=\"font-size:15px; margin-bottom:24px;\">Enter your email and we'll send the guide straight to your inbox.</p>\n<div class=\"klaviyo-form-UmrqSu\"></div>"
           }
         }
       },
