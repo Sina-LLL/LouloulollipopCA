@@ -54,12 +54,19 @@
             "text": "<p>Practical sleep guidance for newborns, babies, and toddlers — delivered straight to your inbox.</p>",
             "enlarge_text": false
           }
+        },
+        "liquid_6JmR8t": {
+          "type": "liquid",
+          "settings": {
+            "code": "<div class=\"klaviyo-form-UmrqSu\"></div>"
+          }
         }
       },
       "block_order": [
         "subheading_MDKFBH",
         "body",
-        "tagline"
+        "tagline",
+        "liquid_6JmR8t"
       ],
       "settings": {
         "image": "shopify://shop_images/03_5138cbb3-11ee-4d26-b084-16188ea497dd.png",
