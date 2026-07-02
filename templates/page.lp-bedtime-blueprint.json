@@ -48,14 +48,6 @@
             "enlarge_text": false
           }
         },
-        "btn1": {
-          "type": "button",
-          "settings": {
-            "button_label": "Get the Free Guide",
-            "button_link": "#section-id-form_top",
-            "button_style": "primary"
-          }
-        },
         "tagline": {
           "type": "text",
           "settings": {
@@ -67,7 +59,6 @@
       "block_order": [
         "subheading_MDKFBH",
         "body",
-        "btn1",
         "tagline"
       ],
       "settings": {
@@ -77,6 +68,14 @@
         "image_position": "below",
         "text_alignment": "left",
         "color_scheme": "default"
+      }
+    },
+    "form_top": {
+      "type": "custom-liquid",
+      "settings": {
+        "full_width": false,
+        "show_space": false,
+        "code": "<div id=\"#section-id-form_top\" style=\"text-align:center; max-width:560px; margin:0 auto;\"><p style=\"font-size:18px; font-weight:600; margin-bottom:8px;\">Get Your Free Sleep Guide\n</p><p style=\"font-size:15px; color:#666; margin-bottom:24px;\">Enter your email and we'll send the guide straight to your inbox.</p><!-- PASTE YOUR KLAVIYO FORM EMBED CODE BELOW -->\n<div class=\"klaviyo-form-UmrqSu\"></div>\n<!-- PASTE YOUR KLAVIYO FORM EMBED CODE ABOVE --></div>"
       }
     },
     "proof_bar": {
@@ -184,7 +183,7 @@
         "color_scheme": "default"
       }
     },
-    "form_top": {
+    "custom_liquid_rGbfL8": {
       "type": "custom-liquid",
       "settings": {
         "full_width": false,
@@ -302,10 +301,11 @@
   "order": [
     "rich_text_DdFdCj",
     "hero",
+    "form_top",
     "proof_bar",
     "image_with_text_bjp7it",
     "brand_story",
-    "form_top",
+    "custom_liquid_rGbfL8",
     "reviews",
     "related"
   ]
