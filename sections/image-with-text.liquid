@@ -220,6 +220,8 @@
                     {%- if block.settings.text != blank -%}<p class="iwt-list-item__body">{{ block.settings.text | escape }}</p>{%- endif -%}
                   </div>
                 </div>
+              {%- when 'liquid' -%}
+                <div class="lightly-spaced-row iwt-custom-liquid" {{ block.shopify_attributes }}>{{ block.settings.custom_liquid }}</div>
               {%- when 'countdown' -%}
                 <script src="{{ 'countdown-timer.js' | asset_url }}" defer></script>
                 {% style %}.block-id-{{ block.id }} .countdown { --countdown-desktop-size: {{ block.settings.number_size }}px; }{% endstyle %}
@@ -286,10 +288,7 @@
 
               {% when 'text' %}
                 <div class="rte lightly-spaced-row {% if block.settings.enlarge_text %}large-text{% endif %}" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
-              {% when 'liquid' %}
-                <div class="custom-html lightly-spaced-row button-row" {{ block.shopify_attributes }}">
-                  {{ section.settings.code }}
-                </div>
+
               {% when 'button' %}
                 <div class="lightly-spaced-row button-row" {{ block.shopify_attributes }}>
                   <a class="{% if block.settings.button_style != 'link' %}btn btn--{{ block.settings.button_style }}{% else %}small-feature-link{% endif %} button-row__btn" href="{{ block.settings.button_link }}">{{ block.settings.button_label | escape }}</a>
@@ -346,6 +345,9 @@
                     {%- endif -%}
                   </div>
                 </div>
+
+              {%- when 'liquid' -%}
+                <div class="lightly-spaced-row iwt-custom-liquid" {{ block.shopify_attributes }}>{{ block.settings.custom_liquid }}</div>
 
               {%- when 'countdown' -%}
                 <script src="{{ 'countdown-timer.js' | asset_url }}" defer></script>
@@ -507,17 +509,6 @@
           "id": "enlarge_text",
           "label": "Enlarge text",
           "default": false
-        }
-      ]
-    },
-    {
-      "type": "liquid",
-      "name": "Code",
-      "settings": [
-        {
-          "type": "liquid",
-          "id": "code",
-          "label": "Custom Code"
         }
       ]
     },
@@ -807,6 +798,18 @@
           "type": "text",
           "id": "text",
           "label": "Description"
+        }
+      ]
+    },
+    {
+      "type": "liquid",
+      "name": "Liquid",
+      "settings": [
+        {
+          "type": "liquid",
+          "id": "custom_liquid",
+          "label": "Liquid",
+          "info": "Add app snippets or other Liquid code to create advanced customizations. [Read more](https://help.shopify.com/en/manual/online-store/themes/theme-structure/extend/custom-liquid)"
         }
       ]
     },
