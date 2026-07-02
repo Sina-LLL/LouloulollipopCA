@@ -58,7 +58,7 @@
         "liquid_6JmR8t": {
           "type": "liquid",
           "settings": {
-            "code": "<div class=\"klaviyo-form-UmrqSu\"></div>"
+            "custom_liquid": "<div class=\"klaviyo-form-UmrqSu\"></div>"
           }
         }
       },
@@ -79,6 +79,7 @@
     },
     "form_top": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "full_width": false,
         "show_space": true,
@@ -192,6 +193,7 @@
     },
     "custom_liquid_rGbfL8": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "full_width": false,
         "show_space": true,
