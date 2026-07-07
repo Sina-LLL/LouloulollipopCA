@@ -191,7 +191,7 @@
       "name": "Custom hero banner",
       "settings": {
         "image": "shopify://shop_images/EOSS_-_Hero_0a08942f-f217-4038-921e-75adcd4d719f.png",
-        "mobile_image": "shopify://shop_images/Canada_Mobile_Hero.png",
+        "mobile_image": "shopify://shop_images/EOSS_-_Mobile_Hero_1.gif",
         "link": "shopify://collections/end-of-season-sale",
         "full_width": true,
         "max_width": 0,
@@ -224,7 +224,7 @@
       "settings": {
         "title": "End of Season Sale!",
         "text": "",
-        "collection": "end-of-season-sale",
+        "collection": "canada",
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 4,
