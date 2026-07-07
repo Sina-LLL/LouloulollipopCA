@@ -224,7 +224,7 @@
       "settings": {
         "title": "End of Season Sale!",
         "text": "",
-        "collection": "canada",
+        "collection": "end-of-season-sale",
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 4,
