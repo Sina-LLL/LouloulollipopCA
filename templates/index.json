@@ -190,12 +190,12 @@
       "type": "custom-hero-banner",
       "name": "Custom hero banner",
       "settings": {
-        "image": "shopify://shop_images/Canada_Hero.png",
+        "image": "shopify://shop_images/EOSS_-_Hero_0a08942f-f217-4038-921e-75adcd4d719f.png",
         "mobile_image": "shopify://shop_images/Canada_Mobile_Hero.png",
-        "link": "shopify://collections/canada",
+        "link": "shopify://collections/end-of-season-sale",
         "full_width": true,
         "max_width": 0,
-        "heading": "Made for Little Canadians",
+        "heading": "End of Season Sale - Shop Now",
         "use_h1": true
       }
     },
@@ -222,11 +222,11 @@
       "type": "featured-collection",
       "name": "Best Sellers Carousel",
       "settings": {
-        "title": "O Canada!",
+        "title": "End of Season Sale!",
         "text": "",
-        "collection": "canada",
+        "collection": "end-of-season-sale",
         "show_vendor": false,
-        "enable_carousel": false,
+        "enable_carousel": true,
         "grid": 4,
         "rows": 1,
         "color_scheme": "default",
