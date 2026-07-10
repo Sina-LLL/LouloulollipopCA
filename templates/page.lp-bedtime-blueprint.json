@@ -38,7 +38,7 @@
         "subheading_MDKFBH": {
           "type": "subheading",
           "settings": {
-            "subheading": "We made a simple bedtime blueprint for that."
+            "subheading": "Not Sure How to Dress Your Baby for Sleep? We made a simple bedtime blueprint for that."
           }
         },
         "body": {
@@ -51,14 +51,14 @@
         "tagline": {
           "type": "text",
           "settings": {
-            "text": "<p>Practical sleep guidance for newborns, babies, and toddlers — delivered straight to your inbox.</p>",
+            "text": "<p>Practical sleep guidance for newborns, babies, and toddlers — delivered straight to your inbox.</p><p>Enter your email and we'll send the guide straight to your inbox.</p>",
             "enlarge_text": false
           }
         },
         "liquid_6JmR8t": {
           "type": "liquid",
           "settings": {
-            "custom_liquid": "<p style=\"font-size:18px; font-weight:600; margin-bottom:8px;\">Not Sure How to Dress Your Baby for Sleep?\n</p><p style=\"font-size:15px; margin-bottom:24px;\">Enter your email and we'll send the guide straight to your inbox.</p>\n<div class=\"klaviyo-form-UmrqSu\"></div>"
+            "custom_liquid": "<div class=\"klaviyo-form-UmrqSu\"></div>"
           }
         }
       },
