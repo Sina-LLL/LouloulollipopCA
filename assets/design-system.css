@@ -1027,7 +1027,7 @@ label.filter-group__item.filter-group__item--active:before{
   margin-left:20px;
 }
 .announcement-bar__right .language-option a{
-  color:var(--lll-slate-deep) !important; /* was --lll-white: 3.66:1 fails AA; 5.70:1 */
+  color:var(--lll-white) !important; /* was --lll-white: 3.66:1 fails AA; 5.70:1 */
 }
 .announcement-bar__right .language-option:hover a{
   color:var(--lll-slate-deep) !important;
