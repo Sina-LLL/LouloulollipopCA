@@ -564,7 +564,7 @@
           "settings": {
             "collection": "bears-on-bikes",
             "tag": "",
-            "subheading": "Ocean Explorer",
+            "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
         },
@@ -589,9 +589,9 @@
         "collection_ExCE9F": {
           "type": "collection",
           "settings": {
-            "collection": "stargazing-bears",
+            "collection": "sushi",
             "tag": "",
-            "subheading": "Stargazing Bear",
+            "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
         }
