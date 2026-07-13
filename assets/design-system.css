@@ -404,7 +404,9 @@ li.slider__item.is-active {
   width:fit-content;
   margin: auto;
 }
-
+button#annbar-localization-country-button{
+  color:var(--lll-white);
+}
 .opt-label__media.media{
   height:100%;
 }
