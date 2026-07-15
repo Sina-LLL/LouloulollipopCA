@@ -1645,7 +1645,7 @@ h6,
 }
 
 .small-feature-link {
-  color: rgb(var(--link-color));
+  color: var(--link-color);
   font-size: var(--small-feature-link-font-size);
   font-weight: 500;
   letter-spacing: var(--btn-letter-spacing);
