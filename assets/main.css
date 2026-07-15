@@ -1645,12 +1645,12 @@ h6,
 }
 
 .small-feature-link {
-  color: var(--link-color);
+  /* color: var(--link-color); */
   font-size: var(--small-feature-link-font-size);
   font-weight: 500;
   letter-spacing: var(--btn-letter-spacing);
   text-decoration: underline;
-  text-decoration-color: rgb(var(--link-color)/0.4);
+  /* text-decoration-color: rgb(var(--link-color)/0.4); */
   text-transform: var(--btn-text-transform);
   text-underline-offset: 2px;
   text-decoration-thickness: 1px;
