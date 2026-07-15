@@ -1654,6 +1654,8 @@ h6,
   text-transform: var(--btn-text-transform);
   text-underline-offset: 2px;
   text-decoration-thickness: 1px;
+  margin-top:1em;
+  display:block;
 }
 .small-feature-link:hover {
   text-decoration-color: rgb(var(--link-color));
