@@ -1606,12 +1606,12 @@ h4, .h4 {
 /* ============================================================
    ACCESSIBILITY — WCAG 2.1 AA CONTRAST FIXES (1.4.3) — 2026-07-13
    ============================================================ */
-.announcement-bar {
+/* .announcement-bar {
   /* top bar text failed 3.47:1 (near-white on --lll-slate); use --lll-slate-deep -> 5.70:1 */
   --text-color: 79, 103, 110 !important;
   --heading-color: 79, 103, 110 !important;
   --link-color: #59757D !important;
-}
+} */
 :root {
   /* merchant nav_featured_col (#db3f30) failed 4.19:1; reuse --lll-sale -> 4.72:1 */
   --main-nav-link-featured-col: var(--lll-sale);
