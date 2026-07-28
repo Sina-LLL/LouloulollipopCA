@@ -938,6 +938,7 @@
         "testimonial_PAPAeQ",
         "testimonial_xULPJF"
       ],
+      "disabled": true,
       "settings": {
         "title": "The Quality That Lasts",
         "layout": "image-right",
@@ -953,6 +954,38 @@
     "1737676593fa7ff914": {
       "type": "apps",
       "blocks": {
+        "judge_me_reviews_cards_carousel_pkBpTm": {
+          "type": "shopify://apps/judge-me-reviews/blocks/cards_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "show_sample_reviews": true,
+            "reviews_selection": "product_reviews",
+            "products": [],
+            "star_rating": "all",
+            "show_review_media": true,
+            "display_order": "most_recent",
+            "no_image_fallback": "product_image",
+            "max_reviews": 30,
+            "review_length": "large",
+            "text_size": "medium",
+            "image_ratio": "1.33",
+            "reviews_shown": 4,
+            "show_reviewer_name": true,
+            "show_product_name": true,
+            "hide_arrows_mobile": true,
+            "arrows_position": "sides",
+            "max_width": 1600,
+            "corner_styling": "soft",
+            "header_text_color": "#1D1D1D",
+            "text_color": "#1D1D1D",
+            "card_color": "#FFFFFF",
+            "stars_color": "",
+            "arrows_color": "#1D1D1D",
+            "transition_speed": 5,
+            "header_text": "What parents are saying",
+            "show_average_rating": true,
+            "rating_display": "default"
+          }
+        },
         "instafeed_app_block_NHdWgb": {
           "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
           "settings": {
@@ -973,6 +1006,7 @@
         }
       },
       "block_order": [
+        "judge_me_reviews_cards_carousel_pkBpTm",
         "instafeed_app_block_NHdWgb"
       ],
       "settings": {
@@ -1158,13 +1192,6 @@
         "button_style": "primary",
         "color_scheme": "1"
       }
-    },
-    "1780593953a8b82cc7": {
-      "type": "apps",
-      "settings": {
-        "full_width": false,
-        "show_space": true
-      }
     }
   },
   "order": [
@@ -1187,7 +1214,6 @@
     "16359276425da8ce46",
     "shop_the_look_HrgpQK",
     "featured_collection_HNkD47",
-    "custom_product_highlight_JiGaUB",
-    "1780593953a8b82cc7"
+    "custom_product_highlight_JiGaUB"
   ]
 }
