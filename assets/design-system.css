@@ -422,21 +422,23 @@ carousel-slider.carousel.block.thumbnails.mobile-only {
   bottom: 0;
   width:100%;
 }
-.thumbnails .slider__item {
-  height: 10px;
-  width: 10px;
-  border-radius: var(--lll-radius-pill);
-  background-color: var(--lll-slate-border);
-  margin:0 4px
-}
-li.slider__item.is-active {
-  border: 1px solid  var(--lll-slate-border);
-  background: var(--lll-white);
-  width: 36px;
-}
-.thumbnails .slider__grid{
-  width:fit-content;
-  margin: auto;
+@media (max-width: 768px) {
+  .thumbnails .slider__item {
+    height: 10px;
+    width: 10px;
+    border-radius: var(--lll-radius-pill);
+    background-color: var(--lll-slate-border);
+    margin:0 4px
+  }
+  li.slider__item.is-active {
+    border: 1px solid  var(--lll-slate-border);
+    background: var(--lll-white);
+    width: 36px;
+  }
+  .thumbnails .slider__grid{
+    width:fit-content;
+    margin: auto;
+  }
 }
 button#annbar-localization-country-button{
   color:var(--lll-white);
