@@ -638,7 +638,7 @@
               {% endform %}
 
               {%- if product.available and block.settings.show_pickup_availability -%}
-                {% render 'pickup-availability', current_variant: current_variant %}
+                {% render 'pickup-availability', current_variant: current_variant -%}
               {%- endif -%}
             </buy-buttons>
 
