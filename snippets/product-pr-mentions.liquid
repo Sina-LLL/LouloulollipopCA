@@ -3,7 +3,7 @@
   Add this code where you want the logos to appear (after product description)
 {% endcomment %}
 
-{% assign publications = product.metafields.custom.pr_mentions.value %}
+{% assign publications = product.metafields.product_template.pr_mentions.value %}
 {% if publications != blank and publications.size > 0 %}
   <hr {% unless block.settings.show_in_quickbuy %}class="not-in-quickbuy"{% endunless %} {{ block.shopify_attributes }}>
   <div class="publications-section">
