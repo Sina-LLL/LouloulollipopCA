@@ -76,6 +76,7 @@
         },
         "complementary_d3EJbm": {
           "type": "complementary",
+          "disabled": true,
           "settings": {
             "heading": "Pairs Perfectly With",
             "enable_carousel": true,
