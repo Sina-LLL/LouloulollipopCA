@@ -942,7 +942,6 @@ carousel-slider.mobile-only.custom-features-carousel{
   }
   h1.product-title{
     font-size: 1.5rem;
-    line-height: 3.5rem; /* 125% */
   }
   .product-media.product-media--image .img-ar.img-ar--contain{
     --aspect-ratio: 0.66666666 !important;
@@ -998,7 +997,7 @@ h1.product-title {
   letter-spacing: -.03rem;
   margin-bottom: 0px;
   margin-top: 4px;
-  line-height: 1.25em;
+  line-height: 1.5em;
 }
 
 
