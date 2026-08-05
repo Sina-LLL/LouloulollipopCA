@@ -61,6 +61,7 @@
         },
         "complementary_BXxYXx": {
           "type": "complementary",
+          "disabled": true,
           "settings": {
             "heading": "Pairs Perfectly With",
             "enable_carousel": true,
@@ -142,7 +143,7 @@
         "sticky_atc_behavior": "add_to_cart",
         "sticky_atc_button_style": "primary",
         "gallery_size": "medium",
-        "gallery_layout": "columns-2",
+        "gallery_layout": "collage-1",
         "enable_zoom": true,
         "show_alt_text": false,
         "alt_text_icon": "",
@@ -181,7 +182,7 @@
     "custom_product_list_by_print_Nbxwnx": {
       "type": "custom-product-list-by-print",
       "custom_css": [
-        ".collection-slider-row {padding-bottom: 0;}"
+        ".collection-slider-row {padding-bottom: 12px;}"
       ],
       "name": "Custom Product List by Print",
       "settings": {

@@ -39,6 +39,21 @@
             "size_chart_page": "{{ product.metafields.custom.size_chart.value }}"
           }
         },
+        "feature_rating_HL8RN4": {
+          "type": "feature-rating",
+          "disabled": true,
+          "settings": {
+            "heading": "Fit",
+            "segments": 5,
+            "active_segment": "4",
+            "fill_segments": true,
+            "show_labels": true,
+            "label_left": "Small",
+            "label_middle": "True to size",
+            "label_right": "Large",
+            "show_in_quickbuy": false
+          }
+        },
         "buy-buttons": {
           "type": "buy-buttons",
           "settings": {
@@ -61,6 +76,7 @@
         },
         "complementary_d3EJbm": {
           "type": "complementary",
+          "disabled": true,
           "settings": {
             "heading": "Pairs Perfectly With",
             "enable_carousel": true,
@@ -116,6 +132,7 @@
         "title",
         "price",
         "variant-picker",
+        "feature_rating_HL8RN4",
         "buy-buttons",
         "usp_Whm8xh",
         "complementary_d3EJbm",
@@ -137,7 +154,7 @@
         "sticky_atc_behavior": "add_to_cart",
         "sticky_atc_button_style": "primary",
         "gallery_size": "medium",
-        "gallery_layout": "columns-2",
+        "gallery_layout": "collage-1",
         "enable_zoom": true,
         "show_alt_text": false,
         "alt_text_icon": "",

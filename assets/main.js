@@ -3410,7 +3410,7 @@ class CarouselSlider extends HTMLElement {
       this.setButtonStates();
     }
 
-    if (this.dataset.dynamicHeight === 'true') {
+    if (this.dataset.dynamicHeight === 'true') { 
       this.updateDynamicHeight();
     }
 
