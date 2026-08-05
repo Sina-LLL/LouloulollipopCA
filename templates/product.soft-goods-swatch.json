@@ -181,7 +181,7 @@
     "custom_product_list_by_print_Nbxwnx": {
       "type": "custom-product-list-by-print",
       "custom_css": [
-        ".collection-slider-row {padding-bottom: 0;}"
+        ".collection-slider-row {padding-bottom: 12px;}"
       ],
       "name": "Custom Product List by Print",
       "settings": {
