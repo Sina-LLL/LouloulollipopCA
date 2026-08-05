@@ -58,8 +58,7 @@ class CarouselSlider extends HTMLElement {
     this.totalPages = this.slides.length - this.slidesPerPage + 1;
 
     this.setCarouselState(this.totalPages > 1);
-    if (this.dataset.dynamicHeight === 'true' && window.matchMedia('(min-width: 768px)').matches) {
-      // Skip on mobile so the gallery container doesn't resize while swiping between images.
+    if (this.dataset.dynamicHeight === 'true') {
       this.updateDynamicHeight();
     }
     this.addListeners();
@@ -143,8 +142,7 @@ class CarouselSlider extends HTMLElement {
       this.setButtonStates();
     }
 
-    if (this.dataset.dynamicHeight === 'true' && window.matchMedia('(min-width: 768px)').matches) {
-      // Skip on mobile so the gallery container doesn't resize while swiping between images.
+    if (this.dataset.dynamicHeight === 'true') {
       this.updateDynamicHeight();
     }
 
