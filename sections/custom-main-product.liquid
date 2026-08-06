@@ -47,6 +47,7 @@
 
     <div class="media-gallery__inner{% if section.settings.enable_sticky_columns %} sticky-content-container{% endif %}">
     {% render 'product-label-detail', product: product, current_variant: current_variant %}
+    {% render 'product-award-badge', product: product %}
 
       <div class="main-image">
         {%- liquid
