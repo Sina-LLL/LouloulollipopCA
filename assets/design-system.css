@@ -1646,7 +1646,7 @@ h4, .h4 {
 .product-award-badges {
   position: absolute;
   top: 7.5px;
-  right: 7.5px;
+  left: 7.5px;
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -1674,7 +1674,7 @@ h4, .h4 {
 
 .product-award-badge__publication {
   font-family: var(--lll-font-display);
-  font-weight: 700;
+  font-weight: 800;
   font-size: clamp(9px, 1.1vw, 11px);
   line-height: 1.15;
   color: var(--lll-ink);
