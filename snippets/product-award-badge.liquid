@@ -7,8 +7,6 @@
 {%- assign award_template = product.metafields.custom.product_template.value -%}
 {%- assign awards = award_template.product_awards.value -%}
 
-<!-- AWARD DEBUG: awards_raw={{ award_template.product_awards | json }} awards_value={{ awards | json }} -->
-
 {%- if awards != blank and awards.size > 0 -%}
   <div class="product-award-badges">
     {%- for award in awards -%}
