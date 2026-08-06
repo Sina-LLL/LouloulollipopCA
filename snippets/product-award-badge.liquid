@@ -8,7 +8,7 @@
 {%- assign awards = award_template.product_awards.value -%}
 
 {%- if awards != blank and awards.size > 0 -%}
-  <div class="product-award-badges">
+  <div class="product-award-badges{% if context == 'slide' %} product-award-badges--slide{% endif %}">
     {%- for award in awards -%}
       {%- assign badge_color = award.color.value | default: '#F2B321' -%}
       <div class="product-award-badge" style="--award-badge-color: {{ badge_color }};">

@@ -1675,7 +1675,7 @@ h4, .h4 {
 .product-award-badge__publication {
   font-family: var(--lll-font-display);
   font-weight: 800;
-  font-size: 11px;
+  font-size: 8px;
   line-height: 1.15;
   color: var(--lll-ink);
 }
@@ -1687,4 +1687,29 @@ h4, .h4 {
   line-height: 1.15;
   color: var(--lll-ink);
   margin-top: 2px;
+}
+
+/* ============================================================
+   PRODUCT AWARD BADGES — mobile carousel behavior
+   On mobile the gallery is a swipeable carousel (not the static
+   desktop collage), so the badge is duplicated into the first
+   slide itself (context: 'slide') and scrolls away with it
+   instead of staying pinned over whichever slide is in view.
+   ============================================================ */
+.media-gallery .main-image .slider__item {
+  position: relative;
+}
+
+@media (max-width: 767.98px) {
+  /* the pinned instance is redundant on mobile — the slide-scoped one covers it */
+  .product-award-badges:not(.product-award-badges--slide) {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  /* the slide-scoped instance is only needed for the mobile carousel */
+  .product-award-badges--slide {
+    display: none;
+  }
 }
