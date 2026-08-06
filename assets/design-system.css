@@ -1675,7 +1675,7 @@ h4, .h4 {
 .product-award-badge__publication {
   font-family: var(--lll-font-display);
   font-weight: 800;
-  font-size: 8px;
+  font-size: 11px;
   line-height: 1.15;
   color: var(--lll-ink);
 }
