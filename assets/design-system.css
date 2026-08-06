@@ -1637,3 +1637,54 @@ h4, .h4 {
 /* ============================================================
    END ACCESSIBILITY FIXES
    ============================================================ */
+
+/* ============================================================
+   PRODUCT AWARD BADGES — circular seals over the main PDP image
+   Sourced from product_awards metaobjects (publication/awards_name/
+   color) linked via product_template.product_awards
+   ============================================================ */
+.product-award-badges {
+  position: absolute;
+  top: 7.5px;
+  right: 7.5px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  pointer-events: none;
+}
+
+.product-award-badge {
+  --award-badge-color: var(--lll-warning);
+  width: clamp(64px, 9vw, 96px);
+  height: clamp(64px, 9vw, 96px);
+  border-radius: var(--lll-radius-full);
+  background: var(--award-badge-color);
+  border: 4px solid var(--lll-white);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6px;
+}
+
+.product-award-badge__publication {
+  font-family: var(--lll-font-display);
+  font-weight: 700;
+  font-size: clamp(9px, 1.1vw, 11px);
+  line-height: 1.15;
+  color: var(--lll-ink);
+}
+
+.product-award-badge__name {
+  font-family: var(--lll-font-body);
+  font-weight: 400;
+  font-size: clamp(7px, 0.9vw, 9px);
+  line-height: 1.15;
+  color: var(--lll-ink);
+  margin-top: 2px;
+}
