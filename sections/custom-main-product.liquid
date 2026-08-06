@@ -70,10 +70,6 @@
                   {%- if request.design_mode %} data-index="{{ forloop.index0 }}"{% endif %}
                   data-media-id="{{ media.id }}">
 
-                  {%- if forloop.index0 == initial_slide -%}
-                    {% render 'product-award-badge', product: product, context: 'slide' %}
-                  {%- endif -%}
-
                   {%- if media.media_type == 'image' and section.settings.enable_zoom -%}
                     <a class="block show-gallery" href="{{ media.preview_image | image_url: width: zoom_size }}" aria-label="{{ 'products.product.media.load_image' | t: index: forloop.index }}">
                   {%- endif -%}
@@ -92,6 +88,10 @@
 
                   {%- if media.media_type == 'image' and section.settings.enable_zoom -%}
                     </a>
+                  {%- endif -%}
+
+                  {%- if forloop.index0 == initial_slide -%}
+                    {% render 'product-award-badge', product: product, context: 'slide' %}
                   {%- endif -%}
 
                 </div>
