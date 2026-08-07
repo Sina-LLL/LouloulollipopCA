@@ -108,6 +108,29 @@
         "image_8myg9K": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/Hero_585d6c11-35fe-46b6-99e1-7f5756b1a44c.png",
+            "mobile_image": "shopify://shop_images/Baby_Sleep_Sack_Swaddle_Wrap_Zipper_-_Safari_Jungle.jpg",
+            "slide_link": "",
+            "subheading": "",
+            "title": "Adventure starts here.",
+            "heading_max_width": 15,
+            "title_size": 48,
+            "title_size_mobile": 32,
+            "use_h1": true,
+            "text": "<p><strong>Meet our newest print: Llama Adventures.</strong></p>",
+            "enlarge_text": false,
+            "button_label_1": "Shop Llama Adventures",
+            "button_url_1": "shopify://collections/llama-adventures",
+            "button_tag_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_tag_2": "",
+            "text_alignment": "bottom left"
+          }
+        },
+        "image_zzn6hP": {
+          "type": "image",
+          "settings": {
             "image": "shopify://shop_images/Hero.png",
             "mobile_image": "shopify://shop_images/Baby_Sleep_Sack_Swaddle_Wrap_Zipper_-_Safari_Jungle.jpg",
             "slide_link": "",
@@ -154,6 +177,7 @@
       },
       "block_order": [
         "image_8myg9K",
+        "image_zzn6hP",
         "image_cPi9W3"
       ],
       "name": "Hero Carousel – Rounded",
