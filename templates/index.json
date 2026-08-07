@@ -208,6 +208,23 @@
         "use_h1": true
       }
     },
+    "featured_collection_dfUJQq": {
+      "type": "featured-collection",
+      "name": "Best Sellers Carousel",
+      "settings": {
+        "title": "Llama Adventures",
+        "text": "",
+        "collection": "llama-adventures",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 4,
+        "rows": 1,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": false,
+        "text_alignment": "start"
+      }
+    },
     "custom_product_highlight_rrgUK8": {
       "type": "custom-product-highlight",
       "name": "Highlighted Collection",
@@ -224,23 +241,6 @@
         "link": "shopify://collections/swaddle-wrap",
         "button_style": "primary",
         "color_scheme": "default"
-      }
-    },
-    "featured_collection_dfUJQq": {
-      "type": "featured-collection",
-      "name": "Best Sellers Carousel",
-      "settings": {
-        "title": "End of Season Sale!",
-        "text": "",
-        "collection": "end-of-season-sale",
-        "show_vendor": false,
-        "enable_carousel": true,
-        "grid": 4,
-        "rows": 1,
-        "color_scheme": "default",
-        "show_view_all": true,
-        "full_width": false,
-        "text_alignment": "start"
       }
     },
     "collection_list_aakDiY": {
@@ -1209,8 +1209,8 @@
     "mobile_collection_carousel_nzW98H",
     "hero_carousel_rounded_q34LBJ",
     "custom_hero_banner_i8RgHw",
-    "custom_product_highlight_rrgUK8",
     "featured_collection_dfUJQq",
+    "custom_product_highlight_rrgUK8",
     "collection_list_aakDiY",
     "logo_list_kYmwNX",
     "featured_collection_RGPeGr",
