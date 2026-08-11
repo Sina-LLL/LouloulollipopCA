@@ -30,6 +30,8 @@ elsif template.name == 'list-collections'
   assign item_url = routes.collections_url
 elsif template.name == 'collection' or template.name == 'product'
   assign collections_title = 'general.breadcrumbs.collections' | t
+  # BreadcrumbList is already emitted by snippets/structured-data.liquid for these two templates; avoid duplicating it here.
+  assign show_structured_data = false
 elsif template.name == 'search'
   assign item_title = 'general.search.title' | t
   assign item_url = routes.search_url
