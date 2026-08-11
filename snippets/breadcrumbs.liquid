@@ -30,6 +30,8 @@ elsif template.name == 'list-collections'
   assign item_url = routes.collections_url
 elsif template.name == 'collection' or template.name == 'product'
   assign collections_title = 'general.breadcrumbs.collections' | t
+  # BreadcrumbList is already emitted by snippets/structured-data.liquid for these two templates; avoid duplicating it here.
+  assign show_structured_data = false
 elsif template.name == 'search'
   assign item_title = 'general.search.title' | t
   assign item_url = routes.search_url
@@ -167,9 +169,9 @@ endif
 {%- capture crumbs_html -%}
 <nav class="breadcrumbs" aria-label="{{ breadcrumbs_title }}">
   <ol class="breadcrumbs-list">
-    <!-- <li class="breadcrumbs-list__item">
+    <li class="breadcrumbs-list__item">
       <a class="breadcrumbs-list__link" href="{{ routes.root_url }}">{{ home_title | escape }}</a> {{ divider }}
-    </li> -->
+    </li>
 
     {%- if template.name == 'collection' and collection.handle -%}
       {%- if show_collection_listing_link -%}

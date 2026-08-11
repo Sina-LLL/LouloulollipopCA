@@ -51,6 +51,12 @@
 <div class="article article--main">
   <div class="container container--reading-width">
 
+    {% if section.settings.show_breadcrumbs %}
+      <div class="page-header" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
+        {% render 'breadcrumbs' %}
+      </div>
+    {% endif %}
+
     <div class="rte cf spaced-row" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
       {{ article.content }}
     </div>
@@ -189,6 +195,12 @@
   "name": "Article pages",
   "class": "page-section-spacing",
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_breadcrumbs",
+      "label": "Show breadcrumbs",
+      "default": true
+    },
     {
       "type": "checkbox",
       "id": "show_date",
