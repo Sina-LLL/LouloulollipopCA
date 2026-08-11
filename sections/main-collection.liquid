@@ -6,7 +6,7 @@
 
 <div data-section-id="{{ section.id }}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%} class="">
 {% if section.settings.show_breadcrumbs %}
-  <div class="container desktop-only" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
+  <div class="container container--no-max" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
     <div class="page-header">
       {% render 'breadcrumbs' %}
     </div>
