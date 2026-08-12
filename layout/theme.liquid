@@ -10,7 +10,7 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}" dir="{{ lang_dir }}">
 <head>
-    <meta name="google-site-verification" content="google9c60a402ae102b9f.html"
+    <meta name="google-site-verification" content="google9c60a402ae102b9f.html">
 
 {% assign canonical_path = canonical_url | remove: shop.url %}
 
@@ -157,56 +157,6 @@
     <script src="{{ 'animate-on-scroll.js' | asset_url }}" defer></script>
     {{ 'animate-on-scroll.css' | asset_url | stylesheet_tag: preload: true }}
   {% endif %}
-{% comment %} JsonLd {% endcomment %}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Loulou Lollipop",
-  "url": "https://louloulollipop.ca",
-  "logo": "https://louloulollipop.ca/cdn/shop/files/Logo_LLL_14784c07-6192-4487-8fa1-cee0c9bc04b8.png",
-  "foundingDate": "2015",
-  "foundingLocation": {
-    "@type": "Place",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Richmond",
-      "addressRegion": "BC",
-      "addressCountry": "CA"
-    }
-  },
-  "description": "Loulou Lollipop is a B Corp-certified, women-owned, AAPI-owned Canadian baby brand founded in 2015, making sustainable sleep bags, muslin swaddles, silicone feeding products, and clothing using TENCEL™ and food-grade silicone materials.",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "Customer Service",
-    "url": "https://louloulollipop.ca/pages/contact-us"
-  },
-  "sameAs": [
-    "https://ca.linkedin.com/company/loulou-lollipop",
-    "https://www.instagram.com/louloulollipop",
-    "https://www.facebook.com/louloulollipop",
-    "https://www.pinterest.com/louloulollipop",
-    "https://louloulollipop.com"
-  ]
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Loulou Lollipop",
-  "url": "https://louloulollipop.ca",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": {
-      "@type": "EntryPoint",
-      "urlTemplate": "https://louloulollipop.ca/search?q={search_term_string}"
-    },
-    "query-input": "required name=search_term_string"
-  }
-}
-</script>
   {{ content_for_header }}
 
   {%- if settings.custom_html_head -%}

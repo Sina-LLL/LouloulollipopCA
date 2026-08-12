@@ -1,14 +1,21 @@
 {%- comment -%}
+  Standalone Product JSON-LD entity. Emits its own <script> tag (not
+  nested inside a @graph array) so it can be safely rendered from two
+  different contexts:
+    - snippets/structured-data.liquid, on the real PDP (request.page_type
+      == 'product'), where its "@id" is cross-referenced by that file's
+      WebPage.mainEntity in a separate <script> block (valid per JSON-LD:
+      consumers merge @id references across script tags on the same page).
+    - sections/featured-product.liquid, which can embed a single product
+      on non-product templates (e.g. a collection page) via its own
+      section-scoped `product` setting.
+
   Parameters:
   - product {Object} - Product object.
-  - current_variant {Object} - Current variant object.
+  - current_variant {Object} - Current/selected variant object.
 {%- endcomment -%}
 
 {%- liquid
-  assign jm_review_count = product.metafields.reviews.rating_count
-  assign jm_rating = product.metafields.reviews.rating.value
-  assign jm_count_int = jm_review_count | plus: 0
-
   if product.metafields.custom.material != blank
     assign material_raw = product.metafields.custom.material.value
     if material_raw.first != blank
@@ -27,41 +34,84 @@
   else
     assign material_value = product.type
   endif
+
+  assign jm_rating_obj = product.metafields.reviews.rating.value
+  assign jm_review_count = product.metafields.reviews.rating_count | plus: 0
+  assign show_rating = false
+  if jm_rating_obj != blank and jm_review_count > 0
+    assign show_rating = true
+  endif
 -%}
 
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org/",
+  "@context": "https://schema.org",
   "@type": "Product",
+  "@id": "{{ shop.url }}{{ product.url }}#product",
   "name": {{ product.title | json }},
+  "description": {{ product.description | strip_html | strip_newlines | truncate: 1000 | json }},
   "url": "{{ shop.url }}{{ product.url }}",
-  "image": {{ product.images | map: 'src' | json }},
-  "description": {{ product.description | strip_html | strip | truncate: 300 | json }},
+  "image": [
+    {%- for image in product.images limit: 5 -%}
+    "{{ image | image_url: width: 1200 | prepend: 'https:' }}"{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+  ],
+  {%- if current_variant.sku != blank -%}
   "sku": {{ current_variant.sku | json }},
+  {%- endif -%}
   "brand": {
     "@type": "Brand",
-    "name": "Loulou Lollipop"
+    "name": {% if product.vendor != blank %}{{ product.vendor | json }}{% else %}{{ shop.name | json }}{% endif %}
   },
-  "material": {{ material_value | json }},
+  "material": {{ material_value | json }}
+  {%- if product.collections.first -%},
+  "category": {{ product.collections.first.title | json }}
+  {%- endif -%},
   "offers": {
     "@type": "AggregateOffer",
     "url": "{{ shop.url }}{{ product.url }}",
-    "priceCurrency": "{{ cart.currency.iso_code }}",
-    "lowPrice": "{{ product.price_min | money_without_currency | remove: ',' }}",
-    "highPrice": "{{ product.price_max | money_without_currency | remove: ',' }}",
+    "priceCurrency": "{{ shop.currency }}",
     "offerCount": {{ product.variants.size }},
-    "availability": "{% if product.available %}https://schema.org/InStock{% else %}https://schema.org/OutOfStock{% endif %}",
-    "seller": {
-      "@type": "Organization",
-      "name": "Loulou Lollipop"
-    }
-  },
+    "lowPrice": {{ product.price_min | times: 0.01 | round: 2 }},
+    "highPrice": {{ product.price_max | times: 0.01 | round: 2 }},
+    "offers": [
+      {%- for v in product.variants -%}
+      {
+        "@type": "Offer",
+        "url": "{{ shop.url }}{{ product.url }}?variant={{ v.id }}",
+        "priceCurrency": "{{ shop.currency }}",
+        "price": {{ v.price | times: 0.01 | round: 2 }},
+        "availability": "https://schema.org/{% if v.available %}InStock{% else %}OutOfStock{% endif %}"
+        {%- if v.sku != blank -%},"sku": {{ v.sku | json }}{%- endif -%}
+        {%- assign bc = v.barcode | strip -%}
+        {%- if bc != blank -%}
+          {%- assign bc_len = bc | size -%}
+          {%- if bc_len == 14 -%},"gtin14": {{ bc | json }}{%- endif -%}
+          {%- if bc_len == 13 -%},"gtin13": {{ bc | json }}{%- endif -%}
+          {%- if bc_len == 12 -%},"gtin12": {{ bc | json }}{%- endif -%}
+          {%- if bc_len == 8 -%},"gtin8": {{ bc | json }}{%- endif -%}
+        {%- endif -%},
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@type": "Organization",
+          "@id": "{{ shop.url }}#organization",
+          "name": {{ shop.name | json }}
+        }
+      }{% unless forloop.last %},{% endunless %}
+      {%- endfor -%}
+    ]
+  }
+  {%- if show_rating -%},
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "100",
-    "bestRating": "5",
-    "worstRating": "1"
+    "ratingValue": {{ jm_rating_obj.rating | json }},
+    "reviewCount": {{ jm_review_count | json }},
+    "bestRating": {{ jm_rating_obj.scale_max | default: 5 | json }},
+    "worstRating": {{ jm_rating_obj.scale_min | default: 1 | json }}
   }
+  {%- endif -%}
+  {%- if product.metafields.reviews.recent_json != blank -%},
+  "review": {{ product.metafields.reviews.recent_json }}
+  {%- endif -%}
 }
 </script>
