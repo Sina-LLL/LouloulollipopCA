@@ -308,7 +308,18 @@
     margin: var(--lll-space-2) 0 0;
     cursor: pointer;
   }
-  #section-id-{{ section.id }} .lp-tog__range::-webkit-slider-runnable-track,
+  {%- comment -%}
+    Vendor-prefixed pseudo-elements MUST each get their own rule.
+    A comma-separated group is discarded wholesale by any browser that
+    does not recognise one of its selectors -- grouping the -webkit- and
+    -moz- track selectors meant Chrome dropped both and the slider
+    rendered with no visible track at all.
+  {%- endcomment -%}
+  #section-id-{{ section.id }} .lp-tog__range::-webkit-slider-runnable-track {
+    height: 8px;
+    border-radius: var(--lll-radius-pill);
+    background: linear-gradient(90deg, #8FB0C4 0%, var(--lll-slate-border) 30%, var(--lll-peach) 70%, #D98F6E 100%);
+  }
   #section-id-{{ section.id }} .lp-tog__range::-moz-range-track {
     height: 8px;
     border-radius: var(--lll-radius-pill);
@@ -600,7 +611,7 @@
   "tag": "section",
   "settings": [
     { "type": "header", "content": "Content" },
-    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Step one" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "info": "Optional. Leave blank unless it earns its place -- avoid step numbering, since these sections are not a wizard." },
     { "type": "text", "id": "title", "label": "Heading", "default": "Which TOG do I need?" },
     { "type": "richtext", "id": "intro", "label": "Intro" },
     { "type": "richtext", "id": "comfort_check", "label": "Comfort-check callout" },
