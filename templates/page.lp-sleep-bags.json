@@ -548,36 +548,36 @@
           "type": "band",
           "settings": {
             "tog": "2.5",
-            "tag": "2.5 Tog",
             "temp_min_c": 16,
             "temp_max_c": 20,
             "title": "Winter and cool rooms",
             "body": "Extra warmth for cold bedrooms or winter nights. If the room drops below 16°C, add a warmer layer underneath rather than a warmer bag.",
-            "layer": "a full-coverage sleeper"
+            "layer": "a full-coverage sleeper",
+            "collection": "2-5-tog"
           }
         },
         "band_10": {
           "type": "band",
           "settings": {
             "tog": "1.0",
-            "tag": "1.0 Tog",
             "temp_min_c": 20,
             "temp_max_c": 24,
             "title": "Spring, fall and mild rooms",
             "body": "Our most popular weight and the safe default — most homes sit between 20–24°C year-round. Versatile enough for three-season use.",
-            "layer": "a long-sleeve bodysuit or fitted sleeper"
+            "layer": "a long-sleeve bodysuit or fitted sleeper",
+            "collection": "1-0-tog"
           }
         },
         "band_05": {
           "type": "band",
           "settings": {
             "tog": "0.5",
-            "tag": "0.5 Tog",
             "temp_min_c": 24,
             "temp_max_c": 27,
             "title": "Summer and warm rooms",
             "body": "Lightweight and breathable. Ideal when room temperature stays above 24°C — top-floor bedrooms, heatwaves, and rooms without air conditioning.",
-            "layer": "a short-sleeve bodysuit or light onesie"
+            "layer": "a short-sleeve bodysuit or light onesie",
+            "collection": "0-5-tog"
           }
         }
       },
@@ -587,7 +587,7 @@
         "band_05"
       ],
       "settings": {
-        "eyebrow": "Step one",
+        "eyebrow": "",
         "title": "Which TOG do I need?",
         "intro": "<p>TOG (Thermal Overall Grade) measures how warm a sleep bag keeps your baby. The right TOG depends on your room temperature — not the season. The ideal sleep temperature is 18–20°C. Set your nursery temperature below and we'll show you the weight, the layer underneath, and the bags that match.</p>",
         "comfort_check": "<p><strong>Comfort check:</strong> baby's chest and tummy should feel warm and dry — not clammy, sweaty, or cold. Hands and feet run cooler and aren't a reliable guide. If your room temperature changes between seasons, adjust the layer underneath before you change the TOG.</p>",
@@ -609,7 +609,8 @@
         "empty_text": "Nothing in this weight is in stock right now. Try the next weight up or down.",
         "bg_color": "#FAF9F6",
         "padding_top": 24,
-        "padding_bottom": 40
+        "padding_bottom": 40,
+        "filter_tag": "sleep_bag"
       }
     }
   },
