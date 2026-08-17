@@ -11,10 +11,19 @@
     so copy and chart cannot drift apart -- there is only one source.
   - Celsius is primary (this is the .ca storefront); Fahrenheit is
     derived at render time and in JS, so the two can never disagree.
-  - Products are matched by their existing TOG tags ("0.5 Tog",
-    "1.0 Tog", "2.5 Tog") and rendered server-side with the theme's
-    own 'product-block' snippet, so cards look identical to every
-    other grid on the site.
+  - Each band points at its own TOG collection (0-5-tog / 1-0-tog /
+    2-5-tog). It previously matched on TOG *tags*, which was wrong for
+    this catalogue: of the 18 products in "2.5 TOG Sleep Wear" exactly
+    one carries a TOG tag, and it reads "2.5 tog" while the 1.0 and 0.5
+    products use "1.0 Tog" / "0.5 Tog". Liquid `contains` is
+    case-sensitive, so 2.5 matched nothing -- and even case-insensitively
+    it would have matched 1 product out of 18. The collections are
+    curated and complete; the tags are not.
+  - Those collections are "Sleep Wear", so they also carry sleepsuits.
+    `filter_tag` (default: sleep_bag) narrows them to sleep bags, matched
+    case-insensitively and on whole tags, not substrings.
+  - Rendered server-side with the theme's own 'product-block' snippet,
+    so cards look identical to every other grid on the site.
 
   No-JS / pre-hydration: every band and every product group renders
   visible with a heading. The JS only *narrows* what is shown.
@@ -160,21 +169,59 @@
               {{ section.settings.match_noun | default: 'sleep bags' }}
               <span data-tog-count-suffix></span>
             </p>
-            <a class="lp-tog__viewall" href="{{ coll.url }}">
-              {{ section.settings.view_all_label | default: 'See all' }}
+            <a class="lp-tog__viewall" href="{{ coll.url }}" data-tog-viewall>
+              <span data-tog-viewall-label>{{ section.settings.view_all_label | default: 'See all' }}</span>
               <span aria-hidden="true">&rarr;</span>
             </a>
           </div>
 
+          {%- comment -%}
+            Whole-tag, case-insensitive match. Tags are joined and padded
+            with delimiters so "sleep" cannot match "sleep_bag", and so
+            inconsistent capitalisation in the catalogue cannot silently
+            drop products the way the old tag matching did.
+          {%- endcomment -%}
+          {%- assign filter_tag = section.settings.filter_tag | downcase | strip -%}
+          {%- assign needle = filter_tag | prepend: '||' | append: '||' -%}
+
           {%- for block in section.blocks -%}
             {%- if block.type == 'band' -%}
-              {%- assign tag = block.settings.tag -%}
-              <div class="lp-tog__group" data-tog-group="{{ block.settings.tog | escape }}">
+              {%- assign band_coll = collections[block.settings.collection] -%}
+              <div
+                class="lp-tog__group"
+                data-tog-group="{{ block.settings.tog | escape }}"
+                data-view-all="{{ band_coll.url | default: coll.url }}"
+                data-view-all-label="{{ section.settings.view_all_label | default: 'See all' }} {{ block.settings.tog }} TOG"
+              >
                 <h3 class="lp-tog__group-title">{{ block.settings.tog }} TOG</h3>
                 <div class="product-grid product-grid--per-row-{{ section.settings.grid }} product-grid--per-row-mob-{{ settings.prod_thumb_mob_per_row }}">
+                  {%- comment -%}
+                    Liquid caps an unpaginated collection.products at 50.
+                    Every TOG collection is well under that today; if one
+                    grows past it, the tail simply is not scanned.
+                  {%- endcomment -%}
                   {%- assign shown = 0 -%}
-                  {%- for product in coll.products -%}
-                    {%- if shown < section.settings.limit and tag != blank and product.tags contains tag -%}
+                  {%- for product in band_coll.products -%}
+                    {%- comment -%}
+                      Resolved into a single boolean first. Liquid has no
+                      parentheses and evaluates and/or right-to-left, so a
+                      compound condition here would not mean what it looks
+                      like it means.
+                    {%- endcomment -%}
+                    {%- liquid
+                      assign tags_lower = product.tags | join: '||' | downcase | prepend: '||' | append: '||'
+                      assign matches = false
+                      if filter_tag == blank
+                        assign matches = true
+                      elsif tags_lower contains needle
+                        assign matches = true
+                      endif
+                      assign room = false
+                      if shown < section.settings.limit
+                        assign room = true
+                      endif
+                    -%}
+                    {%- if matches and room -%}
                       {%- liquid
                         assign shown = shown | plus: 1
                         assign size_data = ''
@@ -194,7 +241,7 @@
                         {%- endcomment -%}
                         {%- render 'product-block',
                           product: product,
-                          collection: coll,
+                          collection: band_coll,
                           grid: section.settings.grid
                         -%}
                       </div>
@@ -529,6 +576,8 @@
     var countEl = root.querySelector('[data-tog-count]');
     var suffixEl = root.querySelector('[data-tog-count-suffix]');
     var sizeEmpty = root.querySelector('[data-tog-size-empty]');
+    var viewAll = root.querySelector('[data-tog-viewall]');
+    var viewAllLabel = root.querySelector('[data-tog-viewall-label]');
 
     if (!range || !bands.length) return;
 
@@ -571,6 +620,10 @@
         var match = g.dataset.togGroup === tog;
         if (match) { g.removeAttribute('hidden'); } else { g.setAttribute('hidden', ''); }
         if (!match) return;
+
+        // Point "see all" at the collection for the weight on screen.
+        if (viewAll && g.dataset.viewAll) viewAll.href = g.dataset.viewAll;
+        if (viewAllLabel && g.dataset.viewAllLabel) viewAllLabel.textContent = g.dataset.viewAllLabel;
 
         Array.prototype.slice.call(g.querySelectorAll('[data-tog-item]')).forEach(function (item) {
           var ok = !activeSize || (item.dataset.sizes || '').indexOf(activeSize) !== -1;
@@ -631,7 +684,8 @@
     { "type": "text", "id": "size_empty_text", "label": "No-results text", "default": "No bags in that size are in stock in this weight right now." },
 
     { "type": "header", "content": "Matching products" },
-    { "type": "collection", "id": "collection", "label": "Collection to match against" },
+    { "type": "collection", "id": "collection", "label": "Fallback collection", "info": "Used for the \"see all\" link before a weight is chosen. Each band supplies its own collection." },
+    { "type": "text", "id": "filter_tag", "label": "Narrow to tag", "info": "The TOG collections are \"Sleep Wear\" and include sleepsuits. Matched case-insensitively on whole tags. Leave blank to show everything in each collection.", "default": "sleep_bag" },
     { "type": "range", "id": "limit", "label": "Max products per TOG", "min": 2, "max": 12, "step": 1, "default": 4 },
     { "type": "range", "id": "grid", "label": "Products per row", "min": 2, "max": 5, "step": 1, "default": 4 },
     { "type": "text", "id": "match_noun", "label": "Product noun", "default": "sleep bags" },
@@ -649,7 +703,7 @@
       "name": "TOG band",
       "settings": [
         { "type": "text", "id": "tog", "label": "TOG value", "info": "Shown on the badge, e.g. 1.0", "default": "1.0" },
-        { "type": "text", "id": "tag", "label": "Product tag", "info": "Products carrying this tag are shown for this band, e.g. 1.0 Tog", "default": "1.0 Tog" },
+        { "type": "collection", "id": "collection", "label": "Collection for this weight", "info": "e.g. \"1.0 TOG Sleep Wear\". Collections are used rather than TOG tags because the tags are incomplete and inconsistently capitalised across the catalogue." },
         { "type": "range", "id": "temp_min_c", "label": "From (°C)", "min": 10, "max": 32, "step": 1, "default": 20 },
         { "type": "range", "id": "temp_max_c", "label": "To (°C)", "min": 10, "max": 32, "step": 1, "default": 24 },
         { "type": "text", "id": "title", "label": "Heading", "default": "Spring, fall and most heated homes" },
