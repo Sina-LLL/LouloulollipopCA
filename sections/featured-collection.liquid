@@ -11,7 +11,7 @@
   <div class="container{% if section.settings.full_width %} container--no-max{% endif %}">
 
     <div class="hometitle">
-      <h2 class=" h4 text-{{ section.settings.text_alignment}}" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.3s"' -%}>
+      <h2 class=" {{ section.settings.heading_size | default: 'h4' }} text-{{ section.settings.text_alignment}}" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.3s"' -%}>
         <a class="has-paging__title" href="{{ collection.url }}">{{ section.settings.title | escape }}</a>
       </h2>
       
@@ -141,6 +141,18 @@
       "id": "title",
       "label": "Heading",
       "default": "Featured collection"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading size",
+      "info": "Default (h4) matches every existing featured-collection section. Use h2 when this grid is the primary content of a landing page.",
+      "default": "h4",
+      "options": [
+        { "value": "h4", "label": "Small (h4)" },
+        { "value": "h3", "label": "Medium (h3)" },
+        { "value": "h2", "label": "Large (h2)" }
+      ]
     },
     {
       "type": "richtext",
