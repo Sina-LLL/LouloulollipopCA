@@ -108,18 +108,26 @@
     height: 0;
     scroll-margin-top: 90px;
   }
+  /* One centred column at a single width. Every neighbouring section on
+     this template (comparison table, rich text) is centred, so a
+     flush-left block here reads as a layout bug and leaves ~740px of
+     dead space on a wide viewport. Head, table, rule, callout and link
+     all share the same max-width so their left edges line up. */
   #section-id-{{ section.id }} .lp-size__head {
-    max-width: 640px;
-    margin: 0 0 var(--lll-space-6);
+    max-width: 720px;
+    margin: 0 auto var(--lll-space-6);
   }
   #section-id-{{ section.id }} .lp-size__head h2 { margin: 0; }
   #section-id-{{ section.id }} .lp-size__intro {
     margin-top: var(--lll-space-4);
     line-height: var(--lll-leading-body);
-    max-width: 60ch;
   }
 
-  #section-id-{{ section.id }} .lp-size__wrap { max-width: 720px; }
+  #section-id-{{ section.id }} .lp-size__wrap {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   #section-id-{{ section.id }} .lp-size__table {
     width: 100%;
     border-collapse: separate;
@@ -167,23 +175,24 @@
   }
 
   #section-id-{{ section.id }} .lp-size__rule {
-    margin-top: var(--lll-space-6);
-    max-width: 60ch;
+    margin: var(--lll-space-6) auto 0;
+    max-width: 720px;
     line-height: var(--lll-leading-body);
   }
   #section-id-{{ section.id }} .lp-size__safety {
-    margin-top: var(--lll-space-5);
+    margin: var(--lll-space-5) auto 0;
     padding: var(--lll-space-4) var(--lll-space-5);
     background: #D1E3E6;
     border-left: 4px solid var(--lll-slate);
     border-radius: var(--lll-radius-sm);
     font-size: 0.95rem;
     line-height: var(--lll-leading-body);
-    max-width: 62ch;
+    max-width: 720px;
   }
   #section-id-{{ section.id }} .lp-size__safety p:last-child { margin-bottom: 0; }
   #section-id-{{ section.id }} .lp-size__more {
-    margin: var(--lll-space-6) 0 0;
+    margin: var(--lll-space-6) auto 0;
+    max-width: 720px;
     font-size: 0.9rem;
     font-weight: var(--lll-weight-subhead);
   }
