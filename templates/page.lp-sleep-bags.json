@@ -110,6 +110,62 @@
         "accent_color": "#ffc748"
       }
     },
+    "size_guide": {
+      "type": "lp-size-guide",
+      "blocks": {
+        "s1": {
+          "type": "size",
+          "settings": {
+            "size": "0–6 M",
+            "height": "23–26\"",
+            "height_metric": "58–66 cm",
+            "weight": "10–16 lbs",
+            "weight_metric": "4.5–7.3 kg"
+          }
+        },
+        "s2": {
+          "type": "size",
+          "settings": {
+            "size": "6–18 M",
+            "height": "26–34\"",
+            "height_metric": "66–86 cm",
+            "weight": "16–26 lbs",
+            "weight_metric": "7.3–11.8 kg"
+          }
+        },
+        "s3": {
+          "type": "size",
+          "settings": {
+            "size": "18–36 M",
+            "height": "34–40\"",
+            "height_metric": "86–102 cm",
+            "weight": "26–40 lbs",
+            "weight_metric": "11.8–18.1 kg"
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "settings": {
+        "title": "What size sleep bag do I need?",
+        "intro": "<p>Sleep bags come in three sizes: 0–6 M, 6–18 M and 18–36 M. The age on the label is a rough guide — babies of the same age vary a lot. Measure instead.</p>",
+        "anchor_id": "sizing",
+        "table_caption": "Sleep bag size chart — height and weight",
+        "col_size": "Size",
+        "col_height": "Height",
+        "col_weight": "Weight",
+        "rule": "<p><strong>If your baby falls between two sizes, go by weight rather than the age label.</strong> Weight is the better predictor of fit around the chest and shoulders, which is the part of a sleep bag that has to be right.</p>",
+        "safety_note": "<p><strong>How it should fit:</strong> snug at the top, roomy at the bottom. The neck opening and armholes should be small enough that your baby can't slip down inside the bag, and the bottom should be wide enough for free hip and leg movement. This is why buying a size up \"to grow into\" isn't the safer choice it sounds like.</p>",
+        "link_label": "See the full size chart",
+        "link_url": "shopify://pages/size-chart-sleep-bags",
+        "bg_color": "#ffffff",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
     "products": {
       "type": "featured-collection",
       "settings": {
@@ -291,6 +347,60 @@
         "padding_bottom": 48
       }
     },
+    "sleep_safety": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Are sleep bags safe?",
+            "use_h1": false
+          }
+        },
+        "body": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A sleep bag is a wearable blanket. It keeps your baby warm without putting anything loose in the crib — which is the reason paediatric guidance points to them in the first place.</p><p>The American Academy of Pediatrics' 2022 safe sleep recommendations put it directly: if you're worried about your baby getting cold, you can dress them in layers of clothing or use a wearable blanket. The same guidance notes that a baby needs only one more layer than you would wear in the same environment to be comfortable, and advises against weighted swaddles, weighted sleep sacks, and weighted objects placed on or near a sleeping baby. None of our sleep bags are weighted.</p><p><strong>The rules that matter, every night:</strong></p><ul><li><strong>Back to sleep, on a firm flat surface.</strong> A sleep bag doesn't change this — baby still goes down on their back, in a crib or bassinet that meets current safety standards.</li><li><strong>Nothing else in the crib.</strong> A fitted sheet and the sleep bag. No pillows, bumpers, positioners, or loose blankets.</li><li><strong>Safe once your baby rolls.</strong> Sleep bags leave the arms free, so unlike a swaddle they don't have to be stopped when your baby starts rolling. Rolling is usually the signal to move from a swaddle into a sleep bag.</li><li><strong>Snug at the top, roomy at the bottom.</strong> The neck opening and armholes should be small enough that baby can't slip down inside; the bottom should be wide enough for free hip and leg movement.</li><li><strong>Don't over-layer.</strong> Check your baby's chest or back — it should feel warm and dry, not damp or hot. Hands and feet run cooler and aren't a reliable guide.</li></ul>",
+            "enlarge_text": false
+          }
+        },
+        "callout": {
+          "type": "callout",
+          "settings": {
+            "text": "<p>This is general information, not medical advice. For guidance specific to your baby, talk to your paediatrician or public health nurse. The full recommendations are published by the American Academy of Pediatrics at <a href=\"https://www.healthychildren.org/English/ages-stages/baby/sleep/Pages/a-parents-guide-to-safe-sleep.aspx\" target=\"_blank\" rel=\"noopener\">healthychildren.org</a>.</p>"
+          }
+        },
+        "btn1": {
+          "type": "button",
+          "settings": {
+            "button_label": "When can babies start using a sleep bag?",
+            "button_link": "/blogs/the-lastest-scoop/when-can-babies-start-using-sleep-sacks",
+            "button_style": "link"
+          }
+        },
+        "btn2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Moving from a swaddle to a sleep bag",
+            "button_link": "/blogs/the-lastest-scoop/when-to-transition-out-of-a-swaddle",
+            "button_style": "link"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "body",
+        "callout",
+        "btn1",
+        "btn2"
+      ],
+      "settings": {
+        "height": "medium",
+        "text_alignment": "left",
+        "full_width": false,
+        "color_scheme": "default"
+      }
+    },
     "safety": {
       "type": "image-with-text",
       "blocks": {
@@ -312,7 +422,7 @@
           "type": "button",
           "settings": {
             "button_label": "See sizes and weights",
-            "button_link": "/pages/sleep-bags#tog-picker",
+            "button_link": "/pages/sleep-bags#sizing",
             "button_style": "secondary"
           }
         }
@@ -415,7 +525,7 @@
           "type": "question",
           "settings": {
             "title": "What size should I get?",
-            "answer": "<p>Sleep bags are sized by weight and height, not age. Check the size guide on the product page for exact measurements. When between sizes, size up — there should be room to kick and move.</p>"
+            "answer": "<p>Sleep bags are sized by height and weight, not age — see the size chart on this page or on any product page for the exact ranges. If your baby falls between two sizes, go by weight rather than the age label. The fit that matters is at the top: the neck and armholes should be snug enough that baby can't slip down inside the bag, with plenty of room to kick at the bottom.</p>"
           }
         },
         "tog": {
@@ -442,7 +552,7 @@
           "type": "question",
           "settings": {
             "title": "When can a baby start using a sleep bag?",
-            "answer": "<p>From birth. Our smallest sleep bag is 0–6 M. Check the size guide on the product page for the weight and height range, and make sure the neck opening is snug enough that baby can't slip down inside.</p>"
+            "answer": "<p>From birth. Our smallest sleep bag is 0–6 M, which fits 23–26\" and 10–16 lbs — check the size chart on this page to confirm your baby is in range, and make sure the neck opening is snug enough that they can't slip down inside.</p>"
           }
         },
         "q2": {
@@ -614,7 +724,7 @@
         "gift_label": "Not sure — buying as a gift?",
         "gift_temp": 21,
         "gift_size": "6-18 M",
-        "gift_note": "1.0 TOG in 6–18 M suits most homes and most babies, and it's the weight and size parents reorder most. If you're between sizes, size up — babies grow into a sleep bag, and a roomier fit is the safer one."
+        "gift_note": "1.0 TOG in 6–18 M suits most homes and most babies, and it's the weight and size parents reorder most. Sizing goes by height and weight rather than the age label — the chart below has the exact ranges. Don't buy a size up to grow into: a sleep bag needs to be snug at the neck and armholes so baby can't slip down inside."
       }
     }
   },
@@ -622,9 +732,11 @@
     "hero",
     "proof_bar",
     "tog_picker",
+    "size_guide",
     "products",
     "why_sleep_bags",
     "comparison",
+    "sleep_safety",
     "safety",
     "178096046403bd84d9",
     "bundles",
