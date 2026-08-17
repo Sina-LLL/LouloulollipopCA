@@ -108,6 +108,29 @@
         "image_8myg9K": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/Sushi_-_home.png",
+            "mobile_image": "shopify://shop_images/Mobile-sushi.png",
+            "slide_link": "",
+            "subheading": "",
+            "title": "Now serving more Sushi",
+            "heading_max_width": 15,
+            "title_size": 48,
+            "title_size_mobile": 32,
+            "use_h1": true,
+            "text": "<p>Your fave print just got <strong>NEW additions.</strong></p>",
+            "enlarge_text": false,
+            "button_label_1": "Shop Sushi",
+            "button_url_1": "shopify://collections/sushi",
+            "button_tag_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_tag_2": "",
+            "text_alignment": "bottom left"
+          }
+        },
+        "image_9tiyYq": {
+          "type": "image",
+          "settings": {
             "image": "shopify://shop_images/Hero_585d6c11-35fe-46b6-99e1-7f5756b1a44c.png",
             "mobile_image": "shopify://shop_images/LoulouJune2026Edits-04901.jpg",
             "slide_link": "",
@@ -153,6 +176,7 @@
         },
         "image_cPi9W3": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/SWSGB_Muslin_Swaddle_-_Stargazing_Bear_51.jpg",
             "mobile_image": "shopify://shop_images/SWSGB_Muslin_Swaddle_-_Stargazing_Bear_51.jpg",
@@ -177,6 +201,7 @@
       },
       "block_order": [
         "image_8myg9K",
+        "image_9tiyYq",
         "image_zzn6hP",
         "image_cPi9W3"
       ],
@@ -212,9 +237,9 @@
       "type": "featured-collection",
       "name": "Best Sellers Carousel",
       "settings": {
-        "title": "Llama Adventures",
+        "title": "Sushi",
         "text": "",
-        "collection": "llama-adventures",
+        "collection": "sushi",
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 4,
