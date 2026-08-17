@@ -95,6 +95,25 @@
           <span>{{ section.settings.temp_default }}&deg;C</span>
           <span>{{ section.settings.temp_max }}&deg;C</span>
         </div>
+
+        {%- comment -%}
+          Gift escape hatch. A gift buyer has never stood in the nursery,
+          so the temperature question is unanswerable for them and the
+          picker silently fails. This gives them a safe default instead
+          of a dead end.
+        {%- endcomment -%}
+        {%- if section.settings.gift_label != blank -%}
+          <div class="lp-tog__gift">
+            <button type="button" class="lp-tog__gift-btn" data-tog-gift
+              data-gift-temp="{{ section.settings.gift_temp }}"
+              data-gift-size="{{ section.settings.gift_size | downcase | escape }}">
+              {{ section.settings.gift_label }}
+            </button>
+            {%- if section.settings.gift_note != blank -%}
+              <p class="lp-tog__gift-note" data-tog-gift-note hidden>{{ section.settings.gift_note }}</p>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
       </div>
 
       {%- comment -%} ---- Step 2: the recommendation ---- {%- endcomment -%}
@@ -401,6 +420,33 @@
     color: var(--lll-text-muted);
   }
 
+  #section-id-{{ section.id }} .lp-tog__gift {
+    margin-top: var(--lll-space-4);
+  }
+  #section-id-{{ section.id }} .lp-tog__gift-btn {
+    font-family: var(--lll-font-body);
+    font-size: 0.875rem;
+    background: none;
+    border: 0;
+    padding: 0;
+    color: var(--lll-slate-deep);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    cursor: pointer;
+    transition: color var(--lll-duration-fast) ease;
+  }
+  #section-id-{{ section.id }} .lp-tog__gift-btn:hover { color: var(--lll-ink); }
+  #section-id-{{ section.id }} .lp-tog__gift-note {
+    margin: var(--lll-space-3) 0 0;
+    padding: var(--lll-space-3) var(--lll-space-4);
+    background: var(--lll-cream);
+    border-radius: var(--lll-radius-md);
+    font-size: 0.875rem;
+    line-height: var(--lll-leading-body);
+    max-width: 58ch;
+  }
+  #section-id-{{ section.id }} .lp-tog__gift-note[hidden] { display: none; }
+
   #section-id-{{ section.id }} .lp-tog__result {
     margin-top: var(--lll-space-6);
     padding-top: var(--lll-space-6);
@@ -645,6 +691,28 @@
 
     range.addEventListener('input', render);
 
+    // Gift default: answer the temperature question on their behalf.
+    var giftBtn = root.querySelector('[data-tog-gift]');
+    var giftNote = root.querySelector('[data-tog-gift-note]');
+    if (giftBtn) {
+      giftBtn.addEventListener('click', function () {
+        var t = parseInt(giftBtn.dataset.giftTemp, 10);
+        if (!isNaN(t)) range.value = t;
+
+        var wanted = (giftBtn.dataset.giftSize || '').trim();
+        if (wanted) {
+          chips.forEach(function (c) {
+            var isMatch = (c.dataset.togSize || '') === wanted;
+            c.setAttribute('aria-pressed', isMatch ? 'true' : 'false');
+            if (isMatch) activeSize = wanted;
+          });
+        }
+
+        if (giftNote) giftNote.removeAttribute('hidden');
+        render();
+      });
+    }
+
     chips.forEach(function (chip) {
       chip.addEventListener('click', function () {
         chips.forEach(function (c) { c.setAttribute('aria-pressed', 'false'); });
@@ -676,6 +744,13 @@
     { "type": "range", "id": "temp_max", "label": "Maximum (°C)", "min": 24, "max": 32, "step": 1, "default": 27 },
     { "type": "range", "id": "temp_default", "label": "Starting value (°C)", "min": 10, "max": 32, "step": 1, "default": 21 },
     { "type": "text", "id": "layer_label", "label": "Layer prefix", "default": "Wear underneath:" },
+
+    { "type": "header", "content": "Gift default" },
+    { "type": "paragraph", "content": "A gift buyer cannot answer the temperature question. This gives them a safe default rather than a dead end. Leave the label blank to hide it." },
+    { "type": "text", "id": "gift_label", "label": "Link text", "default": "Not sure — buying as a gift?" },
+    { "type": "range", "id": "gift_temp", "label": "Temperature to assume (°C)", "min": 10, "max": 32, "step": 1, "default": 21 },
+    { "type": "text", "id": "gift_size", "label": "Size to preselect", "info": "Must match one of the sizes above exactly.", "default": "6-18 M" },
+    { "type": "textarea", "id": "gift_note", "label": "Note shown after clicking" },
 
     { "type": "header", "content": "Sizes" },
     { "type": "text", "id": "size_label", "label": "Size group label", "default": "Your baby's size" },
