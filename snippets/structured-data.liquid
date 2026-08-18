@@ -17,6 +17,8 @@
     1. Homepage   -> Organization, WebSite, SearchAction, WebPage, (optional LocalBusiness)
     2. PDP        -> BreadcrumbList, WebPage/ItemPage, Product, AggregateOffer, (optional FAQ)
     3. PLP        -> BreadcrumbList, WebPage/CollectionPage, ItemList, (optional FAQ)
+    4. Page       -> Organization, WebPage
+                     (BreadcrumbList stays in snippets/breadcrumbs.liquid)
 
   Notes:
   - Uses the Liquid `json` filter for all free-text fields (handles quotes/
@@ -38,6 +40,10 @@
     (via show_structured_data) to avoid duplicating this block, but still
     renders the visible breadcrumb nav and still emits BreadcrumbList
     JSON-LD on blog/article/page templates, which this file doesn't cover.
+    Section 4 deliberately does not add a page BreadcrumbList for that
+    reason -- see the note there.
+  - The Organization node lives in snippets/structured-data-organization.liquid
+    so sections 1 and 4 share one definition rather than two that drift.
   - This file replaces the former snippets/structured-data-header.liquid
     and snippets/structured-data-product.liquid (deleted) to avoid the
     duplicate/conflicting Organization + Product schema problem those
@@ -74,76 +80,7 @@
 {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "{{ shop.url }}#organization",
-      "name": {{ shop.name | json }},
-      "url": "{{ shop.url }}"
-      {%- if logo -%},
-      "logo": {
-        "@type": "ImageObject",
-        "url": "{{ logo | image_url: width: logo.width | prepend: 'https:' }}",
-        "width": {{ logo.width }},
-        "height": {{ logo.height }}
-      }
-      {%- elsif shop.brand and shop.brand.logo -%},
-      "logo": {
-        "@type": "ImageObject",
-        "url": "{{ shop.brand.logo | image_url: width: 300 | prepend: 'https:' }}",
-        "width": 300,
-        "height": 300
-      }
-      {%- endif -%},
-      "foundingDate": "2015",
-      "foundingLocation": {
-        "@type": "Place",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Richmond",
-          "addressRegion": "BC",
-          "addressCountry": "CA"
-        }
-      },
-      "description": {{ "Loulou Lollipop is a B Corp-certified, women-owned, AAPI-owned Canadian baby brand founded in 2015, making sustainable sleep bags, muslin swaddles, silicone feeding products, and clothing using TENCEL™ and food-grade silicone materials." | json }},
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "contactType": "customer service",
-          "url": {{ shop.url | append: '/pages/contact-us' | json }}
-          {%- if shop.phone != blank -%},
-          "telephone": {{ shop.phone | json }}
-          {%- endif -%}
-          {%- if shop.email != blank -%},
-          "email": {{ shop.email | json }}
-          {%- endif -%}
-        }
-      ]
-      {%- capture sameAs_json -%}
-        {%- if settings.social_facebook_url != blank -%}{{ settings.social_facebook_url | json }},{%- endif -%}
-        {%- if settings.social_youtube_url != blank -%}{{ settings.social_youtube_url | json }},{%- endif -%}
-        {%- if settings.social_instagram_url != blank -%}{{ settings.social_instagram_url | json }},{%- endif -%}
-        {%- if settings.social_whatsapp_url != blank -%}{{ settings.social_whatsapp_url | json }},{%- endif -%}
-        {%- if settings.social_tiktok_url != blank -%}{{ settings.social_tiktok_url | json }},{%- endif -%}
-        {%- if settings.social_snapchat_url != blank -%}{{ settings.social_snapchat_url | json }},{%- endif -%}
-        {%- if settings.social_pinterest_url != blank -%}{{ settings.social_pinterest_url | json }},{%- endif -%}
-        {%- if settings.social_twitter_url != blank -%}{{ settings.social_twitter_url | json }},{%- endif -%}
-        {%- if settings.social_linkedin_url != blank -%}{{ settings.social_linkedin_url | json }},{%- endif -%}
-        {%- if settings.social_wechat_url != blank -%}{{ settings.social_wechat_url | json }},{%- endif -%}
-        {%- if settings.social_vimeo_url != blank -%}{{ settings.social_vimeo_url | json }},{%- endif -%}
-        {%- if settings.social_tumblr_url != blank -%}{{ settings.social_tumblr_url | json }},{%- endif -%}
-        {%- if settings.social_twitch_url != blank -%}{{ settings.social_twitch_url | json }},{%- endif -%}
-        {%- if settings.social_spotify_url != blank -%}{{ settings.social_spotify_url | json }},{%- endif -%}
-        {%- if settings.social_discord_url != blank -%}{{ settings.social_discord_url | json }},{%- endif -%}
-        {%- if settings.social_mastodon_url != blank -%}{{ settings.social_mastodon_url | json }},{%- endif -%}
-        {%- if settings.social_threads_url != blank -%}{{ settings.social_threads_url | json }},{%- endif -%}
-        {%- if settings.social_custom_url != blank -%}{{ settings.social_custom_url | json }},{%- endif -%}
-      {%- endcapture -%}
-      {%- if sameAs_json != blank -%},
-      "sameAs": [
-        {{ sameAs_json | remove_last: ',' }}
-      ]
-      {%- endif -%}
-    },
+    {%- render 'structured-data-organization', logo: logo -%},
     {
       "@type": "WebSite",
       "@id": "{{ shop.url }}#website",
@@ -391,6 +328,52 @@
       }
     }{% unless forloop.last %},{% endunless %}
     {%- endfor -%}
+  ]
+}
+</script>
+{%- endif -%}
+
+
+{%- comment -%}
+  ================= 4. PAGE =================
+  Pages had no branch here at all, so /pages/sleep-bags emitted zero
+  JSON-LD -- verified on the live page, 0 ld+json scripts.
+
+  Deliberately NO BreadcrumbList here. snippets/breadcrumbs.liquid already
+  emits one for 'page' and is rendered by sections/main-page.liquid; a
+  custom landing template that wants it simply includes a main-page
+  section (which also gives the shopper a visible breadcrumb, so the
+  markup describes something actually on the page). Duplicating it here
+  would mean suppressing it there, and that is a much larger change to a
+  snippet every template depends on.
+
+  Organization is included so informational pages carry brand identity as
+  a real entity rather than relying on a cross-page @id reference, which
+  Google does not resolve between documents. The WebPage node's
+  "breadcrumb" key points at the @id breadcrumbs.liquid emits when it is
+  present, and is simply unresolved when it isn't -- harmless either way.
+
+  Deliberately no ItemList: this snippet renders from the header and has
+  no way to know which products a given page template puts on the page.
+  Emitting a guessed list risks describing products that aren't there.
+{%- endcomment -%}
+{%- if request.page_type == 'page' and page -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {%- render 'structured-data-organization', logo: logo -%},
+    {
+      "@type": "WebPage",
+      "@id": "{{ shop.url }}{{ page.url }}#webpage",
+      "url": "{{ shop.url }}{{ page.url }}",
+      "name": {{ page.title | json }},
+      "description": {{ page.metafields.global.description_tag | default: page.content | strip_html | strip_newlines | truncate: 300 | json }},
+      "isPartOf": { "@id": "{{ shop.url }}#website" },
+      "about": { "@id": "{{ shop.url }}#organization" },
+      "publisher": { "@id": "{{ shop.url }}#organization" },
+      "inLanguage": "{{ request.locale.iso_code | default: 'en' }}"
+    }
   ]
 }
 </script>
