@@ -10,6 +10,14 @@
 {
   "layout": "theme",
   "sections": {
+    "crumbs": {
+      "type": "main-page",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_page_title": false,
+        "full_width": false
+      }
+    },
     "hero": {
       "type": "image-with-text",
       "blocks": {
@@ -729,6 +737,7 @@
     }
   },
   "order": [
+    "crumbs",
     "hero",
     "proof_bar",
     "tog_picker",

@@ -1,0 +1,87 @@
+{%- comment -%}
+  snippets/structured-data-organization.liquid
+  ------------------------------------------------------------
+  The Organization node, extracted verbatim from
+  snippets/structured-data.liquid so it can be emitted on more than one
+  page type without the two copies drifting apart.
+
+  Emits a bare JSON object -- no @graph wrapper, no trailing comma -- so
+  the caller controls its position in the graph:
+
+    {%- render 'structured-data-organization', logo: logo -%},
+
+  Params:
+    logo {image} [optional] - header logo. Falls back to shop.brand.logo,
+                              and omits the "logo" key entirely if neither
+                              is set.
+{%- endcomment -%}
+    {
+      "@type": "Organization",
+      "@id": "{{ shop.url }}#organization",
+      "name": {{ shop.name | json }},
+      "url": "{{ shop.url }}"
+      {%- if logo -%},
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ logo | image_url: width: logo.width | prepend: 'https:' }}",
+        "width": {{ logo.width }},
+        "height": {{ logo.height }}
+      }
+      {%- elsif shop.brand and shop.brand.logo -%},
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ shop.brand.logo | image_url: width: 300 | prepend: 'https:' }}",
+        "width": 300,
+        "height": 300
+      }
+      {%- endif -%},
+      "foundingDate": "2015",
+      "foundingLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Richmond",
+          "addressRegion": "BC",
+          "addressCountry": "CA"
+        }
+      },
+      "description": {{ "Loulou Lollipop is a B Corp-certified, women-owned, AAPI-owned Canadian baby brand founded in 2015, making sustainable sleep bags, muslin swaddles, silicone feeding products, and clothing using TENCEL™ and food-grade silicone materials." | json }},
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "url": {{ shop.url | append: '/pages/contact-us' | json }}
+          {%- if shop.phone != blank -%},
+          "telephone": {{ shop.phone | json }}
+          {%- endif -%}
+          {%- if shop.email != blank -%},
+          "email": {{ shop.email | json }}
+          {%- endif -%}
+        }
+      ]
+      {%- capture sameAs_json -%}
+        {%- if settings.social_facebook_url != blank -%}{{ settings.social_facebook_url | json }},{%- endif -%}
+        {%- if settings.social_youtube_url != blank -%}{{ settings.social_youtube_url | json }},{%- endif -%}
+        {%- if settings.social_instagram_url != blank -%}{{ settings.social_instagram_url | json }},{%- endif -%}
+        {%- if settings.social_whatsapp_url != blank -%}{{ settings.social_whatsapp_url | json }},{%- endif -%}
+        {%- if settings.social_tiktok_url != blank -%}{{ settings.social_tiktok_url | json }},{%- endif -%}
+        {%- if settings.social_snapchat_url != blank -%}{{ settings.social_snapchat_url | json }},{%- endif -%}
+        {%- if settings.social_pinterest_url != blank -%}{{ settings.social_pinterest_url | json }},{%- endif -%}
+        {%- if settings.social_twitter_url != blank -%}{{ settings.social_twitter_url | json }},{%- endif -%}
+        {%- if settings.social_linkedin_url != blank -%}{{ settings.social_linkedin_url | json }},{%- endif -%}
+        {%- if settings.social_wechat_url != blank -%}{{ settings.social_wechat_url | json }},{%- endif -%}
+        {%- if settings.social_vimeo_url != blank -%}{{ settings.social_vimeo_url | json }},{%- endif -%}
+        {%- if settings.social_tumblr_url != blank -%}{{ settings.social_tumblr_url | json }},{%- endif -%}
+        {%- if settings.social_twitch_url != blank -%}{{ settings.social_twitch_url | json }},{%- endif -%}
+        {%- if settings.social_spotify_url != blank -%}{{ settings.social_spotify_url | json }},{%- endif -%}
+        {%- if settings.social_discord_url != blank -%}{{ settings.social_discord_url | json }},{%- endif -%}
+        {%- if settings.social_mastodon_url != blank -%}{{ settings.social_mastodon_url | json }},{%- endif -%}
+        {%- if settings.social_threads_url != blank -%}{{ settings.social_threads_url | json }},{%- endif -%}
+        {%- if settings.social_custom_url != blank -%}{{ settings.social_custom_url | json }},{%- endif -%}
+      {%- endcapture -%}
+      {%- if sameAs_json != blank -%},
+      "sameAs": [
+        {{ sameAs_json | remove_last: ',' }}
+      ]
+      {%- endif -%}
+    }
