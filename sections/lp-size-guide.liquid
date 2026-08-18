@@ -207,41 +207,33 @@
     #section-id-{{ section.id }} {
       padding: {{ section.settings.padding_top | times: 0.7 | round }}px 0 {{ section.settings.padding_bottom | times: 0.7 | round }}px;
     }
-    /* Stack to cards. A 3-column table at 390px is unreadable, and this
-       is the section people open ON their phone in the nursery. */
-    #section-id-{{ section.id }} .lp-size__table,
-    #section-id-{{ section.id }} .lp-size__table tbody,
-    #section-id-{{ section.id }} .lp-size__table tr,
-    #section-id-{{ section.id }} .lp-size__table th,
-    #section-id-{{ section.id }} .lp-size__table td { display: block; width: auto; }
-    #section-id-{{ section.id }} .lp-size__table thead {
-      position: absolute;
-      width: 1px; height: 1px;
-      overflow: hidden;
-      clip: rect(0 0 0 0);
-      clip-path: inset(50%);
-    }
-    #section-id-{{ section.id }} .lp-size__table tbody tr {
-      border-bottom: 1px solid var(--lll-slate-border);
-      padding: var(--lll-space-2) 0;
-    }
-    #section-id-{{ section.id }} .lp-size__table tbody tr:last-child { border-bottom: 0; }
+    /* Stay a real table. The job here is comparing three rows to find the
+       one that matches your baby, and stacked cards make that comparison
+       harder, not easier -- you lose the shared column alignment.
+       Verified at 320/360/390/430px: no page or table overflow.
+
+       The previous revision stacked to cards, which also broke the
+       <caption>: with the table set to display:block the caption has no
+       table box to size against, so it shrank to its longest word and
+       rendered one word per line inside the card. Keeping display:table
+       avoids that class of bug entirely. */
+    #section-id-{{ section.id }} .lp-size__table { font-size: 0.95rem; }
     #section-id-{{ section.id }} .lp-size__table th,
     #section-id-{{ section.id }} .lp-size__table td {
-      border-bottom: 0;
-      padding: var(--lll-space-1) var(--lll-space-4);
+      padding: var(--lll-space-3) var(--lll-space-2);
     }
-    #section-id-{{ section.id }} .lp-size__name { padding-top: var(--lll-space-3); }
-    #section-id-{{ section.id }} .lp-size__table td::before {
-      content: attr(data-label);
-      display: block;
-      font-size: 0.6875rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--lll-text-muted);
-      font-weight: var(--lll-weight-subhead);
+    /* Keep the outer edges breathing while the inner gutters tighten. */
+    #section-id-{{ section.id }} .lp-size__table th:first-child,
+    #section-id-{{ section.id }} .lp-size__table td:first-child { padding-left: var(--lll-space-4); }
+    #section-id-{{ section.id }} .lp-size__table th:last-child,
+    #section-id-{{ section.id }} .lp-size__table td:last-child { padding-right: var(--lll-space-4); }
+    #section-id-{{ section.id }} .lp-size__caption { letter-spacing: 0.08em; }
+    #section-id-{{ section.id }} .lp-size__table thead th {
+      font-size: 0.75rem;
+      letter-spacing: 0.02em;
     }
-    #section-id-{{ section.id }} .lp-size__alt { display: inline; margin-left: var(--lll-space-2); }
+    #section-id-{{ section.id }} .lp-size__name { font-size: 0.95rem; }
+    #section-id-{{ section.id }} .lp-size__alt { font-size: 0.75rem; }
   }
 </style>
 
