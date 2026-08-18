@@ -16,7 +16,7 @@
         "eyebrow": {
           "type": "subheading",
           "settings": {
-            "subheading": "Canadian · Award-Winning · Since 2015"
+            "subheading": "Canadian Designed · Award-Winning · Since 2015"
           }
         },
         "heading": {
@@ -393,6 +393,9 @@
               "muslin-lightweight-sleep-bags-0-5-tog-canada",
               "muslin-lightweight-sleep-bag-0-5-tog-camper-vans"
             ],
+            "filter_pinned": false,
+            "filter_featured": false,
+            "filter_custom_tags": "",
             "star_rating": "all",
             "show_review_media": false,
             "display_order": "most_recent",
@@ -415,7 +418,8 @@
             "arrows_color": "#000000",
             "transition_speed": 10,
             "header_text": "What Parents Say",
-            "show_average_rating": true
+            "show_average_rating": true,
+            "rating_display": "default"
           }
         }
       },
@@ -575,6 +579,7 @@
         "coll_grid_image_shape": "square",
         "coll_grid_image_position": "center center",
         "coll_thumb_mob_per_row": "1",
+        "coll_thumb_per_column": "1",
         "coll_grid_show_count": false,
         "coll_text_position": "below",
         "coll_text_position_under_mobile": false,
