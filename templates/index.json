@@ -243,11 +243,11 @@
         "collection": "sushi",
         "show_vendor": false,
         "enable_carousel": true,
-        "grid": 4,
+        "grid": 5,
         "rows": 1,
         "color_scheme": "default",
         "show_view_all": true,
-        "full_width": false,
+        "full_width": true,
         "text_alignment": "start"
       }
     },
@@ -608,12 +608,12 @@
         "text": "",
         "collection": "best-sellers",
         "show_vendor": false,
-        "enable_carousel": false,
-        "grid": 4,
+        "enable_carousel": true,
+        "grid": 5,
         "rows": 1,
         "color_scheme": "default",
         "show_view_all": true,
-        "full_width": false,
+        "full_width": true,
         "text_alignment": "start"
       }
     },
