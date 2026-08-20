@@ -58,7 +58,7 @@
               {%- else -%}
                 {%- for product in section.settings.product_list limit: 6 -%}
                   <div class="slider__item">
-                    {%- render 'product-block', product: product, custom_aspect_ratio: 1, no_swiping: true, no_quick_buy_markup: true -%}
+                    {%- render 'product-block', product: product, custom_aspect_ratio: 0.8, no_swiping: true, no_quick_buy_markup: true -%}
                   </div>
                 {%- endfor -%}
               {%- endif -%}
