@@ -1491,8 +1491,8 @@
         "bottom_line_2": "<p>“Bamboo” isn’t a regulated or certified term — anyone can put it on a label. Tanboocel® carries OEKO-TEX® Standard 100 certification, meaning it’s independently tested for harmful substances, not just marketed as bamboo.</p>",
         "cta_label_2": "Shop Tanboocel® Swaddles",
         "cta_link_2": "shopify://collections/swaddles",
-        "padding_top": 88,
-        "padding_bottom": 88
+        "padding_top": 112,
+        "padding_bottom": 112
       }
     }
   },
