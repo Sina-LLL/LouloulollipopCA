@@ -1202,6 +1202,45 @@
         "color_scheme": "default"
       }
     },
+    "image_with_text_foundersHome": {
+      "type": "image-with-text",
+      "name": "Founders Spotlight",
+      "blocks": {
+        "subheading_foundersHome": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Family First"
+          }
+        },
+        "heading_foundersHome": {
+          "type": "heading",
+          "settings": {
+            "title": "A Note From Our Founders",
+            "use_h1": false
+          }
+        },
+        "text_foundersHome": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Loulou Lollipop started in 2015 with twin sisters Eleanor and Angel, two teether designs, and a mission to make safer, softer essentials for the babies they loved most.</p><p>As twins ourselves, family is our reason for everything we do — and we hope what you find here helps you make many more sweet memories.</p><p><a href=\"/pages/about-us\">Read Our Story →</a></p>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "subheading_foundersHome",
+        "heading_foundersHome",
+        "text_foundersHome"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/about_portrait.png",
+        "image_width": 700,
+        "image_link": "",
+        "image_position": "right",
+        "text_alignment": "left",
+        "color_scheme": "default"
+      }
+    },
     "testimonials_QcyQ3m": {
       "type": "testimonials",
       "blocks": {
@@ -1538,6 +1577,7 @@
     "logo_list_ywatnw",
     "collection_list_FxKgEx",
     "multi_column_KCzHEY",
+    "image_with_text_foundersHome",
     "testimonials_QcyQ3m",
     "1737676593fa7ff914",
     "16359276425da8ce46",
