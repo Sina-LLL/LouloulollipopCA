@@ -1176,7 +1176,9 @@ cart-form .page-header:not(.page-header--with-background){
     padding:20px;
   }
 }
-
+.section-image-with-text .flexible-layout .column{
+  margin-bottom: 0;
+}
 /* Carousel edits */
 .slider--no-max{
   padding-left: var(--container-pad-x);
