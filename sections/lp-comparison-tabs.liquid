@@ -1,22 +1,12 @@
 <link rel="stylesheet" href="{{ 'lp-comparison-tabs.css' | asset_url }}" {%- render 'lazy-stylesheet-attrs' %}>
 
-{%- capture tag_icon -%}
-  <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-    <rect x="1" y="1" width="12" height="12" rx="3.5" stroke="currentColor" stroke-width="1.2"/>
-    <circle cx="4.4" cy="4.4" r="1" fill="currentColor"/>
-  </svg>
-{%- endcapture -%}
-
 <section
   class="lp-fabric"
   style="--fab-bg: {{ section.settings.bg_color }}; --fab-padding-top: {{ section.settings.padding_top | default: 112 }}px; --fab-padding-bottom: {{ section.settings.padding_bottom | default: 112 }}px;"
 >
   <div class="lp-fabric__container">
-    {%- if section.settings.eyebrow != blank or section.settings.title != blank or section.settings.intro != blank -%}
+    {%- if section.settings.title != blank or section.settings.intro != blank -%}
       <div class="lp-fabric__head">
-        {%- if section.settings.eyebrow != blank -%}
-          <span class="lp-fabric__eyebrow">{{ section.settings.eyebrow }}</span>
-        {%- endif -%}
         {%- if section.settings.title != blank -%}
           <h2>{{ section.settings.title }}</h2>
         {%- endif -%}
@@ -30,102 +20,81 @@
     <input type="radio" class="lp-fabric__radio" name="lp-fabric-tabs" id="lp-fabric-tab2">
 
     <div class="lp-fabric__switch" role="tablist">
-      <div class="lp-fabric__switch-track">
-        <span class="lp-fabric__switch-indicator" aria-hidden="true"></span>
-        <label class="lp-fabric__switch-label" for="lp-fabric-tab1" role="tab">{{ section.settings.tab1_label }}</label>
-        <label class="lp-fabric__switch-label" for="lp-fabric-tab2" role="tab">{{ section.settings.tab2_label }}</label>
-      </div>
+      <label class="lp-fabric__switch-label" for="lp-fabric-tab1" role="tab">{{ section.settings.tab1_label }}</label>
+      <label class="lp-fabric__switch-label" for="lp-fabric-tab2" role="tab">{{ section.settings.tab2_label }}</label>
     </div>
 
     <div class="lp-fabric__panel" data-panel="1" role="tabpanel">
-      <div class="lp-fabric__card">
-        <div class="lp-fabric__scroll">
-          <table class="lp-fabric__table">
-            <thead>
-              <tr>
-                <th></th>
-                <th class="lp-fabric__col-ours">
-                  <span class="lp-fabric__tag">{{ tag_icon }}Loulou Lollipop</span>
-                  <span class="lp-fabric__col-ours-name">{{ section.settings.tab1_col_ours }}</span>
-                </th>
-                <th class="lp-fabric__col-competitor">{{ section.settings.tab1_col_other_1 }}</th>
-                <th class="lp-fabric__col-competitor">{{ section.settings.tab1_col_other_2 }}</th>
-              </tr>
-            </thead>
-            <tbody>
-              {%- for block in section.blocks -%}
-                {%- if block.type == 'row' and block.settings.tab == 'tab1' -%}
-                  <tr {{ block.shopify_attributes }}>
-                    <th scope="row" class="lp-fabric__feature">{{ block.settings.feature }}</th>
-                    <td class="lp-fabric__col-ours">{{ block.settings.our_value }}</td>
-                    <td class="lp-fabric__col-competitor">{{ block.settings.other_value_1 }}</td>
-                    <td class="lp-fabric__col-competitor">{{ block.settings.other_value_2 }}</td>
-                  </tr>
-                {%- endif -%}
-              {%- endfor -%}
-            </tbody>
-          </table>
-        </div>
-        <div class="lp-fabric__scroll-hint" aria-hidden="true"></div>
+      <div class="lp-fabric__scroll">
+        <table class="lp-fabric__table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>{{ section.settings.tab1_col_ours }}</th>
+              <th>{{ section.settings.tab1_col_other_1 }}</th>
+              <th>{{ section.settings.tab1_col_other_2 }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {%- for block in section.blocks -%}
+              {%- if block.type == 'row' and block.settings.tab == 'tab1' -%}
+                <tr {{ block.shopify_attributes }}>
+                  <th scope="row">{{ block.settings.feature }}</th>
+                  <td>{{ block.settings.our_value }}</td>
+                  <td>{{ block.settings.other_value_1 }}</td>
+                  <td>{{ block.settings.other_value_2 }}</td>
+                </tr>
+              {%- endif -%}
+            {%- endfor -%}
+          </tbody>
+        </table>
       </div>
 
       {%- if section.settings.bottom_line_1 != blank or section.settings.cta_label_1 != blank -%}
         <div class="lp-fabric__bottom">
           {%- if section.settings.bottom_line_1 != blank -%}
-            <span class="lp-fabric__bottom-label">Bottom Line</span>
             <p>{{ section.settings.bottom_line_1 }}</p>
           {%- endif -%}
           {%- if section.settings.cta_label_1 != blank -%}
-            <div class="lp-fabric__cta">
-              <a href="{{ section.settings.cta_link_1 }}">{{ section.settings.cta_label_1 }}</a>
-            </div>
+            <a href="{{ section.settings.cta_link_1 }}" class="btn btn--primary">{{ section.settings.cta_label_1 }}</a>
           {%- endif -%}
         </div>
       {%- endif -%}
     </div>
 
     <div class="lp-fabric__panel" data-panel="2" role="tabpanel">
-      <div class="lp-fabric__card">
-        <div class="lp-fabric__scroll">
-          <table class="lp-fabric__table">
-            <thead>
-              <tr>
-                <th></th>
-                <th class="lp-fabric__col-ours">
-                  <span class="lp-fabric__tag">{{ tag_icon }}Loulou Lollipop</span>
-                  <span class="lp-fabric__col-ours-name">{{ section.settings.tab2_col_ours }}</span>
-                </th>
-                <th class="lp-fabric__col-competitor">{{ section.settings.tab2_col_other_1 }}</th>
-                <th class="lp-fabric__col-competitor">{{ section.settings.tab2_col_other_2 }}</th>
-              </tr>
-            </thead>
-            <tbody>
-              {%- for block in section.blocks -%}
-                {%- if block.type == 'row' and block.settings.tab == 'tab2' -%}
-                  <tr {{ block.shopify_attributes }}>
-                    <th scope="row" class="lp-fabric__feature">{{ block.settings.feature }}</th>
-                    <td class="lp-fabric__col-ours">{{ block.settings.our_value }}</td>
-                    <td class="lp-fabric__col-competitor">{{ block.settings.other_value_1 }}</td>
-                    <td class="lp-fabric__col-competitor">{{ block.settings.other_value_2 }}</td>
-                  </tr>
-                {%- endif -%}
-              {%- endfor -%}
-            </tbody>
-          </table>
-        </div>
-        <div class="lp-fabric__scroll-hint" aria-hidden="true"></div>
+      <div class="lp-fabric__scroll">
+        <table class="lp-fabric__table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>{{ section.settings.tab2_col_ours }}</th>
+              <th>{{ section.settings.tab2_col_other_1 }}</th>
+              <th>{{ section.settings.tab2_col_other_2 }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {%- for block in section.blocks -%}
+              {%- if block.type == 'row' and block.settings.tab == 'tab2' -%}
+                <tr {{ block.shopify_attributes }}>
+                  <th scope="row">{{ block.settings.feature }}</th>
+                  <td>{{ block.settings.our_value }}</td>
+                  <td>{{ block.settings.other_value_1 }}</td>
+                  <td>{{ block.settings.other_value_2 }}</td>
+                </tr>
+              {%- endif -%}
+            {%- endfor -%}
+          </tbody>
+        </table>
       </div>
 
       {%- if section.settings.bottom_line_2 != blank or section.settings.cta_label_2 != blank -%}
         <div class="lp-fabric__bottom">
           {%- if section.settings.bottom_line_2 != blank -%}
-            <span class="lp-fabric__bottom-label">Bottom Line</span>
             <p>{{ section.settings.bottom_line_2 }}</p>
           {%- endif -%}
           {%- if section.settings.cta_label_2 != blank -%}
-            <div class="lp-fabric__cta">
-              <a href="{{ section.settings.cta_link_2 }}">{{ section.settings.cta_label_2 }}</a>
-            </div>
+            <a href="{{ section.settings.cta_link_2 }}" class="btn btn--primary">{{ section.settings.cta_label_2 }}</a>
           {%- endif -%}
         </div>
       {%- endif -%}
@@ -138,23 +107,22 @@
   "name": "LP Comparison Tabs",
   "settings": [
     { "type": "color",    "id": "bg_color",       "label": "Background colour", "default": "#FAF9F6" },
-    { "type": "text",     "id": "eyebrow",         "label": "Eyebrow label", "default": "The Fine Print" },
     { "type": "text",     "id": "title",           "label": "Heading" },
     { "type": "textarea", "id": "intro",           "label": "Intro text" },
     { "type": "header",   "content": "Tab 1" },
     { "type": "text",     "id": "tab1_label",       "label": "Tab 1 label", "default": "TENCEL™ vs Bamboo vs Polyester" },
-    { "type": "text",     "id": "tab1_col_ours",    "label": "Tab 1 – our column header", "default": "TENCEL™" },
-    { "type": "text",     "id": "tab1_col_other_1", "label": "Tab 1 – competitor column 1", "default": "Conventional Bamboo" },
+    { "type": "text",     "id": "tab1_col_ours",    "label": "Tab 1 – our column header", "default": "TENCEL™ Lyocell" },
+    { "type": "text",     "id": "tab1_col_other_1", "label": "Tab 1 – competitor column 1", "default": "Bamboo Viscose/Rayon" },
     { "type": "text",     "id": "tab1_col_other_2", "label": "Tab 1 – competitor column 2", "default": "Polyester" },
-    { "type": "textarea", "id": "bottom_line_1",    "label": "Tab 1 – bottom-line callout" },
+    { "type": "textarea", "id": "bottom_line_1",    "label": "Tab 1 – closing note" },
     { "type": "text",     "id": "cta_label_1",      "label": "Tab 1 – CTA label" },
     { "type": "url",      "id": "cta_link_1",       "label": "Tab 1 – CTA link" },
     { "type": "header",   "content": "Tab 2" },
     { "type": "text",     "id": "tab2_label",       "label": "Tab 2 label", "default": "Tanboocel® vs Bamboo vs Polyester" },
     { "type": "text",     "id": "tab2_col_ours",    "label": "Tab 2 – our column header", "default": "Tanboocel®" },
-    { "type": "text",     "id": "tab2_col_other_1", "label": "Tab 2 – competitor column 1", "default": "Conventional Bamboo" },
+    { "type": "text",     "id": "tab2_col_other_1", "label": "Tab 2 – competitor column 1", "default": "Bamboo Viscose/Rayon" },
     { "type": "text",     "id": "tab2_col_other_2", "label": "Tab 2 – competitor column 2", "default": "Polyester" },
-    { "type": "textarea", "id": "bottom_line_2",    "label": "Tab 2 – bottom-line callout" },
+    { "type": "textarea", "id": "bottom_line_2",    "label": "Tab 2 – closing note" },
     { "type": "text",     "id": "cta_label_2",      "label": "Tab 2 – CTA label" },
     { "type": "url",      "id": "cta_link_2",       "label": "Tab 2 – CTA link" },
     { "type": "header",   "content": "Spacing" },
