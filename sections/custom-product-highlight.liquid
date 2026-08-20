@@ -17,11 +17,11 @@
   <div class="custom-product-highlight__container container container--no-max">
     <div class="custom-product-highlight__layout{% if section.settings.order %} custom-product-highlight__layout--reverse{% endif %}">
 
-      <div class="custom-product-highlight__media height--adapt image-overlay image-overlay--bg-shadow fade-in-up" style="--aspect-ratio: 1;" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
+      <div class="custom-product-highlight__media height--adapt image-overlay image-overlay--bg-shadow fade-in-up" style="--aspect-ratio: 0.8;" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
         {%- if section.settings.link != blank -%}<a class="image-overlay__image-link" href="{{ section.settings.link }}">{%- endif -%}
         <div class="height__image image-overlay__image">
           {%- if section.settings.image != blank -%}
-            {%- render 'image' with section.settings.image, sizes: '(min-width: 900px) 46vw, 100vw', widths: '640, 960, 1280, 1600', custom_aspect_ratio: 1 -%}
+            {%- render 'image' with section.settings.image, sizes: '(min-width: 900px) 46vw, 100vw', widths: '640, 960, 1280, 1600', custom_aspect_ratio: 0.8 -%}
           {%- else -%}
             <div class="placeholder-image dark">{{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}</div>
           {%- endif -%}
