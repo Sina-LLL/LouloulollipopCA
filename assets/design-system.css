@@ -1861,6 +1861,69 @@ h4, .h4 {
   text-align: center;
 }
 
+.lp-fabric__accordion {
+  border: 1px solid #6A8B95;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.lp-fabric__accordion-row {
+  border-top: none;
+  border-bottom: 1px solid #6A8B95;
+}
+
+.lp-fabric__accordion-row:last-child {
+  border-bottom: none;
+}
+
+.lp-fabric__accordion-row .disclosure__title {
+  padding: 15px 20px;
+  font-weight: 600;
+}
+
+.lp-fabric__accordion-row .disclosure__content {
+  padding: 0 20px 18px;
+  color: inherit;
+}
+
+.lp-fabric__accordion-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #D9E1E4;
+  font-size: 0.9rem;
+}
+
+.lp-fabric__accordion-item:last-child {
+  border-bottom: none;
+}
+
+.lp-fabric__accordion-item--ours {
+  margin: 0 -20px;
+  padding: 8px 20px;
+  background: #BAD5D9;
+  font-weight: 600;
+  border-bottom: none;
+}
+
+.lp-fabric__accordion-label {
+  color: #6A8B95;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.lp-fabric__accordion-item--ours .lp-fabric__accordion-label {
+  color: inherit;
+}
+
+.lp-fabric__accordion-value {
+  text-align: right;
+}
+
 @media (max-width: 640px) {
   .lp-fabric {
     padding: calc(var(--fab-padding-top, 72px) * 0.67) 0 calc(var(--fab-padding-bottom, 72px) * 0.67);
