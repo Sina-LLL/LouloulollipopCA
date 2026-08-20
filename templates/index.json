@@ -1231,7 +1231,6 @@
     },
     "rich_text_materialsIntro": {
       "type": "rich-text",
-      "name": "Materials Intro",
       "blocks": {
         "heading_materialsIntro": {
           "type": "heading",
@@ -1252,6 +1251,7 @@
         "heading_materialsIntro",
         "text_materialsIntro"
       ],
+      "name": "Materials Intro",
       "settings": {
         "height": "small",
         "text_alignment": "center",
@@ -1261,7 +1261,6 @@
     },
     "multi_column_materialsUSP": {
       "type": "multi-column",
-      "name": "Our Materials",
       "blocks": {
         "text_block_tencel": {
           "type": "text_block",
@@ -1302,6 +1301,7 @@
         "text_block_tanboocel",
         "text_block_silicone"
       ],
+      "name": "Our Materials",
       "settings": {
         "title": "",
         "media_aspect_ratio": "1",
@@ -1313,24 +1313,37 @@
     },
     "lp_comparison_tabs_fabrics": {
       "type": "lp-comparison-tabs",
-      "name": "Fabric Comparison Tabs",
       "blocks": {
-        "row_t_cert": {
+        "row_t_source": {
           "type": "row",
           "settings": {
             "tab": "tab1",
-            "feature": "Certification",
-            "our_value": "OEKO-TEX® Standard 100 certified",
-            "other_value": "Varies by brand — not always certified"
+            "feature": "Fiber source",
+            "our_value": "Wood pulp from certified, sustainably managed forests"
           }
         },
-        "row_t_dyes": {
+        "row_t_absorption": {
           "type": "row",
           "settings": {
             "tab": "tab1",
-            "feature": "Dyes & processing",
-            "our_value": "Low-impact, non-toxic dyes",
-            "other_value": "Not always disclosed"
+            "feature": "Moisture absorption",
+            "our_value": "Absorbs up to 50% more moisture than cotton"
+          }
+        },
+        "row_t_biodegradable": {
+          "type": "row",
+          "settings": {
+            "tab": "tab1",
+            "feature": "Biodegradability",
+            "our_value": "Fully biodegradable & compostable, including in soil and marine conditions"
+          }
+        },
+        "row_t_water": {
+          "type": "row",
+          "settings": {
+            "tab": "tab1",
+            "feature": "Production process",
+            "our_value": "Closed-loop process recovers 99%+ of the solvent used"
           }
         },
         "row_t_feel": {
@@ -1338,53 +1351,31 @@
           "settings": {
             "tab": "tab1",
             "feature": "Feel",
-            "our_value": "Silky-soft, holds its shape wash after wash",
-            "other_value": "Feel and quality vary by brand"
+            "our_value": "Naturally smooth fiber, silky against sensitive skin"
           }
         },
-        "row_t_breathability": {
+        "row_t_cert": {
           "type": "row",
           "settings": {
             "tab": "tab1",
-            "feature": "Breathability",
-            "our_value": "Naturally temperature-regulating & moisture-wicking",
-            "other_value": "Breathability varies by weave and blend"
-          }
-        },
-        "row_t_accountability": {
-          "type": "row",
-          "settings": {
-            "tab": "tab1",
-            "feature": "Brand accountability",
-            "our_value": "Certified B Corp — verified sourcing & labor standards",
-            "other_value": "Standards not independently verified"
-          }
-        },
-        "row_b_cert": {
-          "type": "row",
-          "settings": {
-            "tab": "tab2",
             "feature": "Certification",
-            "our_value": "OEKO-TEX® Standard 100 certified",
-            "other_value": "Varies by brand — not always certified"
+            "our_value": "OEKO-TEX® Standard 100 certified"
           }
         },
-        "row_b_dyes": {
+        "row_b_source": {
           "type": "row",
           "settings": {
             "tab": "tab2",
-            "feature": "Dyes & processing",
-            "our_value": "Low-impact, non-toxic dyes",
-            "other_value": "Not always disclosed"
+            "feature": "Fiber source",
+            "our_value": "Bamboo pulp"
           }
         },
-        "row_b_feel": {
+        "row_b_processing": {
           "type": "row",
           "settings": {
             "tab": "tab2",
-            "feature": "Feel",
-            "our_value": "Silky-soft, consistent quality every wash",
-            "other_value": "Feel and quality vary by brand"
+            "feature": "Testing & processing",
+            "our_value": "OEKO-TEX® Standard 100 certified — independently tested for harmful substances"
           }
         },
         "row_b_breathability": {
@@ -1392,44 +1383,50 @@
           "settings": {
             "tab": "tab2",
             "feature": "Breathability",
-            "our_value": "Naturally moisture-wicking & temperature-regulating",
-            "other_value": "Breathability varies by processing method"
+            "our_value": "Naturally moisture-wicking and temperature-regulating"
           }
         },
-        "row_b_accountability": {
+        "row_b_feel": {
           "type": "row",
           "settings": {
             "tab": "tab2",
-            "feature": "Brand accountability",
-            "our_value": "Certified B Corp — verified sourcing & labor standards",
-            "other_value": "Standards not independently verified"
+            "feature": "Feel",
+            "our_value": "Silky-soft, consistent quality every wash"
+          }
+        },
+        "row_b_cert": {
+          "type": "row",
+          "settings": {
+            "tab": "tab2",
+            "feature": "Certification",
+            "our_value": "OEKO-TEX® Standard 100 certified"
           }
         }
       },
       "block_order": [
-        "row_t_cert",
-        "row_t_dyes",
+        "row_t_source",
+        "row_t_absorption",
+        "row_t_biodegradable",
+        "row_t_water",
         "row_t_feel",
-        "row_t_breathability",
-        "row_t_accountability",
-        "row_b_cert",
-        "row_b_dyes",
-        "row_b_feel",
+        "row_t_cert",
+        "row_b_source",
+        "row_b_processing",
         "row_b_breathability",
-        "row_b_accountability"
+        "row_b_feel",
+        "row_b_cert"
       ],
+      "name": "Fabric Comparison Tabs",
       "settings": {
         "bg_color": "#FFFFFF",
         "title": "Better Fabrics, By Design",
         "intro": "Not all “soft” and “sustainable” claims are equal. See what sets our TENCEL™ and Tanboocel® apart from the fabrics other baby brands use.",
-        "tab1_label": "TENCEL™ vs Cotton",
+        "tab1_label": "TENCEL™ vs Cotton vs Polyester",
         "tab1_col_ours": "TENCEL™ (Loulou Lollipop)",
-        "tab1_col_other": "Conventional Cotton",
-        "bottom_line_1": "<p>“Soft” on the label doesn’t guarantee quality — how it’s grown, processed, and certified does. That’s what makes TENCEL™ our fabric of choice over conventional cotton.</p>",
-        "tab2_label": "Tanboocel® vs Bamboo",
+        "bottom_line_1": "<p>TENCEL™ isn’t just softer — it’s independently certified, made in a closed-loop process that reclaims its own solvent, and fully biodegradable. Cotton and polyester can’t match all three.</p>",
+        "tab2_label": "Tanboocel® vs Bamboo vs Cotton",
         "tab2_col_ours": "Tanboocel® (Loulou Lollipop)",
-        "tab2_col_other": "Regular Bamboo Viscose",
-        "bottom_line_2": "<p>“Bamboo” on the label doesn’t guarantee quality — how it’s grown, processed, and certified does. That’s what makes Tanboocel® better bamboo.</p>",
+        "bottom_line_2": "<p>“Bamboo” isn’t a regulated or certified term — anyone can put it on a label. Tanboocel® carries OEKO-TEX® Standard 100 certification, meaning it’s independently tested for harmful substances, not just marketed as bamboo.</p>",
         "padding_top": 72,
         "padding_bottom": 72
       }

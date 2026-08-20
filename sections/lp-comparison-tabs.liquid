@@ -21,52 +21,60 @@
       </div>
 
       <div class="lp-comparison-tabs__panel" data-panel="1" role="tabpanel">
-        <table class="lp-comparison-tabs__table">
-          <thead>
-            <tr>
-              <th></th>
-              <th class="lp-comparison-tabs__col-ours">{{ section.settings.tab1_col_ours }}</th>
-              <th>{{ section.settings.tab1_col_other }}</th>
-            </tr>
-          </thead>
-          <tbody>
-            {%- for block in section.blocks -%}
-              {%- if block.type == 'row' and block.settings.tab == 'tab1' -%}
-                <tr {{ block.shopify_attributes }}>
-                  <td class="lp-comparison-tabs__feature">{{ block.settings.feature }}</td>
-                  <td class="lp-comparison-tabs__col-ours">{{ block.settings.our_value }}</td>
-                  <td>{{ block.settings.other_value }}</td>
-                </tr>
-              {%- endif -%}
-            {%- endfor -%}
-          </tbody>
-        </table>
+        <div class="lp-comparison-tabs__scroll">
+          <table class="lp-comparison-tabs__table">
+            <thead>
+              <tr>
+                <th></th>
+                <th class="lp-comparison-tabs__col-ours">{{ section.settings.tab1_col_ours }}</th>
+                <th>{{ section.settings.tab1_col_other_1 }}</th>
+                <th>{{ section.settings.tab1_col_other_2 }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {%- for block in section.blocks -%}
+                {%- if block.type == 'row' and block.settings.tab == 'tab1' -%}
+                  <tr {{ block.shopify_attributes }}>
+                    <td class="lp-comparison-tabs__feature">{{ block.settings.feature }}</td>
+                    <td class="lp-comparison-tabs__col-ours">{{ block.settings.our_value }}</td>
+                    <td>{{ block.settings.other_value_1 }}</td>
+                    <td>{{ block.settings.other_value_2 }}</td>
+                  </tr>
+                {%- endif -%}
+              {%- endfor -%}
+            </tbody>
+          </table>
+        </div>
         {%- if section.settings.bottom_line_1 != blank -%}
           <div class="lp-comparison-tabs__bottom-line">{{ section.settings.bottom_line_1 }}</div>
         {%- endif -%}
       </div>
 
       <div class="lp-comparison-tabs__panel" data-panel="2" role="tabpanel">
-        <table class="lp-comparison-tabs__table">
-          <thead>
-            <tr>
-              <th></th>
-              <th class="lp-comparison-tabs__col-ours">{{ section.settings.tab2_col_ours }}</th>
-              <th>{{ section.settings.tab2_col_other }}</th>
-            </tr>
-          </thead>
-          <tbody>
-            {%- for block in section.blocks -%}
-              {%- if block.type == 'row' and block.settings.tab == 'tab2' -%}
-                <tr {{ block.shopify_attributes }}>
-                  <td class="lp-comparison-tabs__feature">{{ block.settings.feature }}</td>
-                  <td class="lp-comparison-tabs__col-ours">{{ block.settings.our_value }}</td>
-                  <td>{{ block.settings.other_value }}</td>
-                </tr>
-              {%- endif -%}
-            {%- endfor -%}
-          </tbody>
-        </table>
+        <div class="lp-comparison-tabs__scroll">
+          <table class="lp-comparison-tabs__table">
+            <thead>
+              <tr>
+                <th></th>
+                <th class="lp-comparison-tabs__col-ours">{{ section.settings.tab2_col_ours }}</th>
+                <th>{{ section.settings.tab2_col_other_1 }}</th>
+                <th>{{ section.settings.tab2_col_other_2 }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {%- for block in section.blocks -%}
+                {%- if block.type == 'row' and block.settings.tab == 'tab2' -%}
+                  <tr {{ block.shopify_attributes }}>
+                    <td class="lp-comparison-tabs__feature">{{ block.settings.feature }}</td>
+                    <td class="lp-comparison-tabs__col-ours">{{ block.settings.our_value }}</td>
+                    <td>{{ block.settings.other_value_1 }}</td>
+                    <td>{{ block.settings.other_value_2 }}</td>
+                  </tr>
+                {%- endif -%}
+              {%- endfor -%}
+            </tbody>
+          </table>
+        </div>
         {%- if section.settings.bottom_line_2 != blank -%}
           <div class="lp-comparison-tabs__bottom-line">{{ section.settings.bottom_line_2 }}</div>
         {%- endif -%}
@@ -92,8 +100,12 @@
     margin-top: 12px;
   }
   #section-id-{{ section.id }} .lp-comparison-tabs__wrap {
-    max-width: 900px;
+    max-width: 1080px;
     margin: 0 auto;
+  }
+  #section-id-{{ section.id }} .lp-comparison-tabs__scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
   #section-id-{{ section.id }} .lp-comparison-tabs__radio {
     position: absolute;
@@ -134,12 +146,21 @@
   }
   #section-id-{{ section.id }} .lp-comparison-tabs__table {
     width: 100%;
+    min-width: 640px;
     border-collapse: collapse;
     background: #fff;
     border: 1px solid #6A8B95;
     border-radius: 6px;
     overflow: hidden;
-    font-size: 0.95rem;
+    font-size: 0.92rem;
+  }
+  #section-id-{{ section.id }} .lp-comparison-tabs__table th,
+  #section-id-{{ section.id }} .lp-comparison-tabs__table td {
+    min-width: 160px;
+  }
+  #section-id-{{ section.id }} .lp-comparison-tabs__table th:first-child,
+  #section-id-{{ section.id }} .lp-comparison-tabs__table td:first-child {
+    min-width: 140px;
   }
   #section-id-{{ section.id }} .lp-comparison-tabs__table thead {
     background: #D1E3E6;
@@ -194,15 +215,17 @@
     { "type": "text",     "id": "title",           "label": "Heading" },
     { "type": "textarea", "id": "intro",           "label": "Intro text" },
     { "type": "header",   "content": "Tab 1" },
-    { "type": "text",     "id": "tab1_label",      "label": "Tab 1 label", "default": "TENCEL™ vs Cotton" },
-    { "type": "text",     "id": "tab1_col_ours",   "label": "Tab 1 – our column header", "default": "TENCEL™ (Loulou Lollipop)" },
-    { "type": "text",     "id": "tab1_col_other",  "label": "Tab 1 – other column header", "default": "Conventional Cotton" },
-    { "type": "textarea", "id": "bottom_line_1",   "label": "Tab 1 – bottom-line callout" },
+    { "type": "text",     "id": "tab1_label",       "label": "Tab 1 label", "default": "TENCEL™ vs Cotton vs Polyester" },
+    { "type": "text",     "id": "tab1_col_ours",    "label": "Tab 1 – our column header", "default": "TENCEL™ (Loulou Lollipop)" },
+    { "type": "text",     "id": "tab1_col_other_1", "label": "Tab 1 – competitor column 1", "default": "Conventional Cotton" },
+    { "type": "text",     "id": "tab1_col_other_2", "label": "Tab 1 – competitor column 2", "default": "Polyester" },
+    { "type": "textarea", "id": "bottom_line_1",    "label": "Tab 1 – bottom-line callout" },
     { "type": "header",   "content": "Tab 2" },
-    { "type": "text",     "id": "tab2_label",      "label": "Tab 2 label", "default": "Tanboocel® vs Bamboo" },
-    { "type": "text",     "id": "tab2_col_ours",   "label": "Tab 2 – our column header", "default": "Tanboocel® (Loulou Lollipop)" },
-    { "type": "text",     "id": "tab2_col_other",  "label": "Tab 2 – other column header", "default": "Regular Bamboo Viscose" },
-    { "type": "textarea", "id": "bottom_line_2",   "label": "Tab 2 – bottom-line callout" },
+    { "type": "text",     "id": "tab2_label",       "label": "Tab 2 label", "default": "Tanboocel® vs Bamboo vs Cotton" },
+    { "type": "text",     "id": "tab2_col_ours",    "label": "Tab 2 – our column header", "default": "Tanboocel® (Loulou Lollipop)" },
+    { "type": "text",     "id": "tab2_col_other_1", "label": "Tab 2 – competitor column 1", "default": "Regular Bamboo Viscose" },
+    { "type": "text",     "id": "tab2_col_other_2", "label": "Tab 2 – competitor column 2", "default": "Cotton" },
+    { "type": "textarea", "id": "bottom_line_2",    "label": "Tab 2 – bottom-line callout" },
     { "type": "header",   "content": "Spacing" },
     { "type": "range", "id": "padding_top",    "label": "Padding top",    "min": 0, "max": 120, "step": 4, "default": 72, "unit": "px" },
     { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 0, "max": 120, "step": 4, "default": 72, "unit": "px" }
@@ -222,9 +245,10 @@
             { "value": "tab2", "label": "Tab 2" }
           ]
         },
-        { "type": "text", "id": "feature",     "label": "Feature" },
-        { "type": "text", "id": "our_value",   "label": "Our value" },
-        { "type": "text", "id": "other_value", "label": "Other value" }
+        { "type": "text", "id": "feature",       "label": "Feature" },
+        { "type": "text", "id": "our_value",     "label": "Our value" },
+        { "type": "text", "id": "other_value_1", "label": "Competitor 1 value" },
+        { "type": "text", "id": "other_value_2", "label": "Competitor 2 value" }
       ]
     }
   ],
