@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="{{ 'custom-product-highlight.css' | asset_url }}" {%- render 'lazy-stylesheet-attrs' %}>
-
 {%- liquid
   assign product_count = section.settings.product_list | size
   if section.settings.products_per_row == 'auto'
