@@ -44,30 +44,28 @@
   pointer-events: none;
 }
 
+/* Base look comes from the real .btn / .btn--secondary classes applied
+   in the markup (radius, padding, font, hover, focus — all real).
+   This file only adds layout (flex/gap) and the active-state override,
+   using the real --lll-* tokens the button system itself resolves to
+   (--lll-slate-action for primary bg/border, --lll-cream for its text). */
 .lp-fabric__switch-label {
   cursor: pointer;
-  padding: 12px 24px;
-  border: 1px solid #6A8B95;
-  border-radius: 6px;
-  background: #fff;
-  font-family: var(--heading-font-family);
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #6A8B95;
+  padding: 14px 24px;
   text-align: center;
   user-select: none;
-  transition: background-color 150ms, color 150ms;
 }
 
 #lp-fabric-tab1:checked ~ .lp-fabric__switch label[for="lp-fabric-tab1"],
 #lp-fabric-tab2:checked ~ .lp-fabric__switch label[for="lp-fabric-tab2"] {
-  background: #6A8B95;
-  color: #fff;
+  background-color: var(--lll-slate-action);
+  border-color: var(--lll-slate-action);
+  color: var(--lll-cream);
 }
 
 #lp-fabric-tab1:focus-visible ~ .lp-fabric__switch label[for="lp-fabric-tab1"],
 #lp-fabric-tab2:focus-visible ~ .lp-fabric__switch label[for="lp-fabric-tab2"] {
-  outline: 2px solid #6A8B95;
+  outline: 2px solid var(--lll-slate-action);
   outline-offset: 2px;
 }
 
