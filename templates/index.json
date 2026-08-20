@@ -299,7 +299,7 @@
           "type": "text_block",
           "settings": {
             "enable_media": true,
-            "image": "shopify://shop_images/ICON-bamboo.png",
+            "image": "shopify://shop_images/ICON-bamboo.svg",
             "title": "Tanboocel® Viscose from Bamboo",
             "text": "<p>Naturally breathable and hypoallergenic, our Tanboocel® bamboo viscose stays cool through the night — the fabric behind our muslin swaddles, quilts, and crib sheets.</p>",
             "button_label": "Shop Tanboocel®",
@@ -310,7 +310,7 @@
           "type": "text_block",
           "settings": {
             "enable_media": true,
-            "image": "shopify://shop_images/SILBIBPLANET_1.jpg",
+            "image": "shopify://shop_images/Food_Grade_Silicone.svg",
             "title": "LFGB Food-Grade Silicone",
             "text": "<p>Every feeding piece is made from LFGB-certified, phthalate-free silicone — safe enough to chew, durable enough for daily mealtime chaos.</p>",
             "button_label": "Shop Feeding",
@@ -329,8 +329,8 @@
       "name": "Our Materials",
       "settings": {
         "title": "",
-        "media_aspect_ratio": "t",
-        "media_width": 90,
+        "media_aspect_ratio": "s",
+        "media_width": 210,
         "text_alignment": "center",
         "button_style": "link",
         "color_scheme": "default"
