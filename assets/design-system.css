@@ -1164,6 +1164,9 @@ cart-form .page-header:not(.page-header--with-background){
   top: 40px;
   margin-bottom: 0;
 }
+.custom-product-highlight .text-overlay__inner{
+  padding:20px;
+}
 @media (max-width: 768px){
   .custom-product-highlight__container .button-row--primary{
     display: flex;
