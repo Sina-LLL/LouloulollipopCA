@@ -1,0 +1,339 @@
+/* Fabric comparison chart — styled as a garment care-label / swatch card */
+
+.lp-fabric {
+  --fab-cream: #FAF9F6;
+  --fab-white: #FFFFFF;
+  --fab-ink: #1D1D1D;
+  --fab-ink-soft: #4F676E;
+  --fab-sage: #6A8B95;
+  --fab-sage-deep: #4F676E;
+  --fab-peach-tint: #FBEFE7;
+  --fab-peach-deep: #E3B79A;
+  --fab-line: rgba(29, 29, 29, 0.09);
+  background: var(--fab-bg, var(--fab-cream));
+  padding: var(--fab-padding-top, 88px) 0 var(--fab-padding-bottom, 88px);
+}
+
+.lp-fabric__container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---- Head ---- */
+.lp-fabric__head {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 40px;
+}
+
+.lp-fabric__eyebrow {
+  display: inline-block;
+  font-family: var(--heading-font-family);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fab-sage-deep);
+  margin: 0 0 12px;
+}
+
+.lp-fabric__head h2 {
+  font-family: var(--heading-font-family);
+  font-size: clamp(1.75rem, 1.4rem + 1.4vw, 2.5rem);
+  line-height: 1.15;
+  color: var(--fab-ink);
+  margin: 0 0 14px;
+}
+
+.lp-fabric__head p {
+  font-size: 1.02rem;
+  line-height: 1.55;
+  color: var(--fab-ink);
+  opacity: 0.72;
+  margin: 0;
+}
+
+/* ---- Segmented tab switch ---- */
+.lp-fabric__switch {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 36px;
+}
+
+.lp-fabric__radio {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.lp-fabric__switch-track {
+  position: relative;
+  display: inline-flex;
+  background: var(--fab-white);
+  border: 1px solid var(--fab-line);
+  border-radius: 999px;
+  padding: 4px;
+  box-shadow: 0 1px 2px rgba(29, 29, 29, 0.04);
+}
+
+.lp-fabric__switch-indicator {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: calc(50% - 4px);
+  height: calc(100% - 8px);
+  background: var(--fab-sage);
+  border-radius: 999px;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#lp-fabric-tab2:checked ~ .lp-fabric__switch .lp-fabric__switch-track .lp-fabric__switch-indicator {
+  transform: translateX(100%);
+}
+
+.lp-fabric__switch-label {
+  position: relative;
+  z-index: 1;
+  padding: 11px 22px;
+  cursor: pointer;
+  font-family: var(--heading-font-family);
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--fab-sage-deep);
+  text-align: center;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+  user-select: none;
+  border-radius: 999px;
+}
+
+#lp-fabric-tab1:checked ~ .lp-fabric__switch .lp-fabric__switch-track label[for="lp-fabric-tab1"],
+#lp-fabric-tab2:checked ~ .lp-fabric__switch .lp-fabric__switch-track label[for="lp-fabric-tab2"] {
+  color: var(--fab-white);
+}
+
+#lp-fabric-tab1:focus-visible ~ .lp-fabric__switch .lp-fabric__switch-track label[for="lp-fabric-tab1"],
+#lp-fabric-tab2:focus-visible ~ .lp-fabric__switch .lp-fabric__switch-track label[for="lp-fabric-tab2"] {
+  outline: 2px solid var(--fab-sage-deep);
+  outline-offset: 2px;
+}
+
+/* ---- Panels ---- */
+.lp-fabric__panel {
+  display: none;
+}
+
+#lp-fabric-tab1:checked ~ .lp-fabric__panel[data-panel="1"],
+#lp-fabric-tab2:checked ~ .lp-fabric__panel[data-panel="2"] {
+  display: block;
+}
+
+/* ---- Card + scroll ---- */
+.lp-fabric__card {
+  position: relative;
+  background: var(--fab-white);
+  border: 1px solid var(--fab-line);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px -20px rgba(29, 29, 29, 0.25);
+}
+
+.lp-fabric__scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+/* ---- Table ---- */
+.lp-fabric__table {
+  width: 100%;
+  min-width: 620px;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.lp-fabric__table th,
+.lp-fabric__table td {
+  padding: 18px 22px;
+  text-align: left;
+  vertical-align: top;
+  font-size: 0.94rem;
+  line-height: 1.45;
+  border-bottom: 1px solid var(--fab-line);
+}
+
+.lp-fabric__table thead th {
+  background: var(--fab-cream);
+  border-bottom: 1px solid var(--fab-line);
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.lp-fabric__table tbody tr:last-child th,
+.lp-fabric__table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* sticky feature-label column, like a tag pinned to the edge */
+.lp-fabric__table th:first-child,
+.lp-fabric__table td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  min-width: 152px;
+  background: var(--fab-white);
+  border-right: 1px solid var(--fab-line);
+}
+
+.lp-fabric__table thead th:first-child {
+  background: var(--fab-cream);
+}
+
+.lp-fabric__feature {
+  font-family: var(--heading-font-family);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--fab-sage-deep);
+}
+
+.lp-fabric__col-competitor {
+  color: var(--fab-ink);
+  opacity: 0.78;
+  min-width: 190px;
+}
+
+/* ---- "Ours" column: elevated like the highlighted swatch ---- */
+.lp-fabric__col-ours {
+  background: var(--fab-peach-tint);
+  font-weight: 600;
+  color: var(--fab-ink);
+  min-width: 200px;
+}
+
+.lp-fabric__table thead th.lp-fabric__col-ours {
+  background: var(--fab-peach-tint);
+  border-bottom: 1px solid var(--fab-peach-deep);
+}
+
+.lp-fabric__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--heading-font-family);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fab-sage-deep);
+  margin-bottom: 4px;
+}
+
+.lp-fabric__tag svg {
+  flex-shrink: 0;
+}
+
+.lp-fabric__col-ours-name {
+  display: block;
+  font-family: var(--heading-font-family);
+  font-size: 1rem;
+  color: var(--fab-ink);
+}
+
+/* mobile scroll hint */
+.lp-fabric__scroll-hint {
+  display: none;
+}
+
+@media (max-width: 899px) {
+  .lp-fabric__scroll-hint {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 36px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--fab-white));
+    pointer-events: none;
+  }
+}
+
+/* ---- Bottom line: pull-quote, not an alert box ---- */
+.lp-fabric__bottom {
+  max-width: 640px;
+  margin: 36px auto 0;
+  text-align: center;
+  position: relative;
+  padding: 0 8px;
+}
+
+.lp-fabric__bottom-mark {
+  display: block;
+  width: 30px;
+  height: 22px;
+  margin: 0 auto 10px;
+  color: var(--fab-peach-deep);
+}
+
+.lp-fabric__bottom p {
+  font-family: var(--heading-font-family);
+  font-size: 1.08rem;
+  line-height: 1.5;
+  color: var(--fab-ink);
+  margin: 0;
+}
+
+.lp-fabric__cta {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 22px;
+  flex-wrap: wrap;
+}
+
+.lp-fabric__cta a {
+  font-family: var(--heading-font-family);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--fab-sage-deep);
+  text-decoration: none;
+  border-bottom: 1px solid var(--fab-sage);
+  padding-bottom: 2px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.lp-fabric__cta a:hover {
+  color: var(--fab-ink);
+  border-color: var(--fab-ink);
+}
+
+@media (max-width: 640px) {
+  .lp-fabric {
+    padding: 56px 0;
+  }
+  .lp-fabric__container {
+    padding: 0 16px;
+  }
+  .lp-fabric__table th,
+  .lp-fabric__table td {
+    padding: 14px 16px;
+    font-size: 0.85rem;
+  }
+  .lp-fabric__switch-label {
+    padding: 10px 14px;
+    font-size: 0.76rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lp-fabric__switch-indicator,
+  .lp-fabric__cta a {
+    transition: none;
+  }
+}
