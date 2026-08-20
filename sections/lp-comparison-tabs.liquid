@@ -2,7 +2,7 @@
 
 <section
   class="lp-fabric"
-  style="--fab-bg: {{ section.settings.bg_color }}; --fab-padding-top: {{ section.settings.padding_top | default: 112 }}px; --fab-padding-bottom: {{ section.settings.padding_bottom | default: 112 }}px;"
+  style="--fab-bg: {{ section.settings.bg_color }}; --fab-padding-top: {{ section.settings.padding_top | default: 72 }}px; --fab-padding-bottom: {{ section.settings.padding_bottom | default: 72 }}px;"
 >
   <div class="lp-fabric__container">
     {%- if section.settings.title != blank or section.settings.intro != blank -%}
@@ -25,79 +25,81 @@
     </div>
 
     <div class="lp-fabric__panel" data-panel="1" role="tabpanel">
-      <div class="lp-fabric__scroll">
-        <table class="lp-fabric__table">
-          <thead>
-            <tr>
-              <th>Feature</th>
-              <th>{{ section.settings.tab1_col_ours }}</th>
-              <th>{{ section.settings.tab1_col_other_1 }}</th>
-              <th>{{ section.settings.tab1_col_other_2 }}</th>
-            </tr>
-          </thead>
-          <tbody>
-            {%- for block in section.blocks -%}
-              {%- if block.type == 'row' and block.settings.tab == 'tab1' -%}
-                <tr {{ block.shopify_attributes }}>
-                  <th scope="row">{{ block.settings.feature }}</th>
-                  <td>{{ block.settings.our_value }}</td>
-                  <td>{{ block.settings.other_value_1 }}</td>
-                  <td>{{ block.settings.other_value_2 }}</td>
-                </tr>
-              {%- endif -%}
-            {%- endfor -%}
-          </tbody>
-        </table>
-      </div>
-
-      {%- if section.settings.bottom_line_1 != blank or section.settings.cta_label_1 != blank -%}
-        <div class="lp-fabric__bottom">
-          {%- if section.settings.bottom_line_1 != blank -%}
-            <p>{{ section.settings.bottom_line_1 }}</p>
-          {%- endif -%}
-          {%- if section.settings.cta_label_1 != blank -%}
-            <a href="{{ section.settings.cta_link_1 }}" class="btn btn--primary">{{ section.settings.cta_label_1 }}</a>
-          {%- endif -%}
+      <div class="lp-fabric__wrap">
+        <div class="lp-fabric__scroll">
+          <table class="lp-fabric__table">
+            <thead>
+              <tr>
+                <th></th>
+                <th class="lp-fabric__col-ours">{{ section.settings.tab1_col_ours }}</th>
+                <th>{{ section.settings.tab1_col_other_1 }}</th>
+                <th>{{ section.settings.tab1_col_other_2 }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {%- for block in section.blocks -%}
+                {%- if block.type == 'row' and block.settings.tab == 'tab1' -%}
+                  <tr {{ block.shopify_attributes }}>
+                    <td class="lp-fabric__feature">{{ block.settings.feature }}</td>
+                    <td class="lp-fabric__col-ours">{{ block.settings.our_value }}</td>
+                    <td>{{ block.settings.other_value_1 }}</td>
+                    <td>{{ block.settings.other_value_2 }}</td>
+                  </tr>
+                {%- endif -%}
+              {%- endfor -%}
+            </tbody>
+          </table>
         </div>
-      {%- endif -%}
+        {%- if section.settings.bottom_line_1 != blank -%}
+          <div class="lp-fabric__bottom-line">
+            {{ section.settings.bottom_line_1 }}
+          </div>
+        {%- endif -%}
+        {%- if section.settings.cta_label_1 != blank -%}
+          <div class="lp-fabric__cta">
+            <a href="{{ section.settings.cta_link_1 }}" class="btn btn--primary">{{ section.settings.cta_label_1 }}</a>
+          </div>
+        {%- endif -%}
+      </div>
     </div>
 
     <div class="lp-fabric__panel" data-panel="2" role="tabpanel">
-      <div class="lp-fabric__scroll">
-        <table class="lp-fabric__table">
-          <thead>
-            <tr>
-              <th>Feature</th>
-              <th>{{ section.settings.tab2_col_ours }}</th>
-              <th>{{ section.settings.tab2_col_other_1 }}</th>
-              <th>{{ section.settings.tab2_col_other_2 }}</th>
-            </tr>
-          </thead>
-          <tbody>
-            {%- for block in section.blocks -%}
-              {%- if block.type == 'row' and block.settings.tab == 'tab2' -%}
-                <tr {{ block.shopify_attributes }}>
-                  <th scope="row">{{ block.settings.feature }}</th>
-                  <td>{{ block.settings.our_value }}</td>
-                  <td>{{ block.settings.other_value_1 }}</td>
-                  <td>{{ block.settings.other_value_2 }}</td>
-                </tr>
-              {%- endif -%}
-            {%- endfor -%}
-          </tbody>
-        </table>
-      </div>
-
-      {%- if section.settings.bottom_line_2 != blank or section.settings.cta_label_2 != blank -%}
-        <div class="lp-fabric__bottom">
-          {%- if section.settings.bottom_line_2 != blank -%}
-            <p>{{ section.settings.bottom_line_2 }}</p>
-          {%- endif -%}
-          {%- if section.settings.cta_label_2 != blank -%}
-            <a href="{{ section.settings.cta_link_2 }}" class="btn btn--primary">{{ section.settings.cta_label_2 }}</a>
-          {%- endif -%}
+      <div class="lp-fabric__wrap">
+        <div class="lp-fabric__scroll">
+          <table class="lp-fabric__table">
+            <thead>
+              <tr>
+                <th></th>
+                <th class="lp-fabric__col-ours">{{ section.settings.tab2_col_ours }}</th>
+                <th>{{ section.settings.tab2_col_other_1 }}</th>
+                <th>{{ section.settings.tab2_col_other_2 }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {%- for block in section.blocks -%}
+                {%- if block.type == 'row' and block.settings.tab == 'tab2' -%}
+                  <tr {{ block.shopify_attributes }}>
+                    <td class="lp-fabric__feature">{{ block.settings.feature }}</td>
+                    <td class="lp-fabric__col-ours">{{ block.settings.our_value }}</td>
+                    <td>{{ block.settings.other_value_1 }}</td>
+                    <td>{{ block.settings.other_value_2 }}</td>
+                  </tr>
+                {%- endif -%}
+              {%- endfor -%}
+            </tbody>
+          </table>
         </div>
-      {%- endif -%}
+        {%- if section.settings.bottom_line_2 != blank -%}
+          <div class="lp-fabric__bottom-line">
+            {{ section.settings.bottom_line_2 }}
+          </div>
+        {%- endif -%}
+        {%- if section.settings.cta_label_2 != blank -%}
+          <div class="lp-fabric__cta">
+            <a href="{{ section.settings.cta_link_2 }}" class="btn btn--primary">{{ section.settings.cta_label_2 }}</a>
+          </div>
+        {%- endif -%}
+      </div>
     </div>
   </div>
 </section>
@@ -114,7 +116,7 @@
     { "type": "text",     "id": "tab1_col_ours",    "label": "Tab 1 – our column header", "default": "TENCEL™ Lyocell" },
     { "type": "text",     "id": "tab1_col_other_1", "label": "Tab 1 – competitor column 1", "default": "Bamboo Viscose/Rayon" },
     { "type": "text",     "id": "tab1_col_other_2", "label": "Tab 1 – competitor column 2", "default": "Polyester" },
-    { "type": "textarea", "id": "bottom_line_1",    "label": "Tab 1 – closing note" },
+    { "type": "textarea", "id": "bottom_line_1",    "label": "Tab 1 – bottom-line callout", "info": "Type the full sentence, e.g. \"Bottom line: ...\"" },
     { "type": "text",     "id": "cta_label_1",      "label": "Tab 1 – CTA label" },
     { "type": "url",      "id": "cta_link_1",       "label": "Tab 1 – CTA link" },
     { "type": "header",   "content": "Tab 2" },
@@ -122,12 +124,12 @@
     { "type": "text",     "id": "tab2_col_ours",    "label": "Tab 2 – our column header", "default": "Tanboocel®" },
     { "type": "text",     "id": "tab2_col_other_1", "label": "Tab 2 – competitor column 1", "default": "Bamboo Viscose/Rayon" },
     { "type": "text",     "id": "tab2_col_other_2", "label": "Tab 2 – competitor column 2", "default": "Polyester" },
-    { "type": "textarea", "id": "bottom_line_2",    "label": "Tab 2 – closing note" },
+    { "type": "textarea", "id": "bottom_line_2",    "label": "Tab 2 – bottom-line callout", "info": "Type the full sentence, e.g. \"Bottom line: ...\"" },
     { "type": "text",     "id": "cta_label_2",      "label": "Tab 2 – CTA label" },
     { "type": "url",      "id": "cta_link_2",       "label": "Tab 2 – CTA link" },
     { "type": "header",   "content": "Spacing" },
-    { "type": "range", "id": "padding_top",    "label": "Padding top",    "min": 0, "max": 160, "step": 4, "default": 112, "unit": "px" },
-    { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 0, "max": 160, "step": 4, "default": 112, "unit": "px" }
+    { "type": "range", "id": "padding_top",    "label": "Padding top",    "min": 0, "max": 120, "step": 4, "default": 72, "unit": "px" },
+    { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 0, "max": 120, "step": 4, "default": 72, "unit": "px" }
   ],
   "blocks": [
     {
