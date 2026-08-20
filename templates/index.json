@@ -237,37 +237,18 @@
       "type": "featured-collection",
       "name": "Best Sellers Carousel",
       "settings": {
-        "title": "Sushi",
+        "title": "Swaddling Made Simple",
         "heading_size": "h4",
         "text": "",
-        "collection": "sushi",
+        "collection": "swaddle-wrap",
         "show_vendor": false,
-        "enable_carousel": true,
-        "grid": 4,
+        "enable_carousel": false,
+        "grid": 3,
         "rows": 1,
         "color_scheme": "default",
         "show_view_all": true,
         "full_width": false,
         "text_alignment": "start"
-      }
-    },
-    "custom_product_highlight_rrgUK8": {
-      "type": "custom-product-highlight",
-      "name": "Highlighted Collection",
-      "settings": {
-        "title": "Swaddling Made Simple",
-        "text": "<p>Quiet closures, two-way zip, room to grow.</p>",
-        "image": "shopify://shop_images/Swaddle_Wrap_zoomed_out_1.gif",
-        "order": true,
-        "product_list": [
-          "swaddle-wrap-1-0-tog-safari-jungle",
-          "swaddle-wrap-1-0-tog-english-garden"
-        ],
-        "products_per_row": "auto",
-        "button_label": "Shop Swaddle Wraps",
-        "link": "shopify://collections/swaddle-wrap",
-        "button_style": "primary",
-        "color_scheme": "default"
       }
     },
     "rich_text_materialsIntro": {
@@ -349,6 +330,27 @@
         "media_width": 400,
         "text_alignment": "center",
         "button_style": "link",
+        "color_scheme": "default"
+      }
+    },
+    "custom_product_highlight_rrgUK8": {
+      "type": "custom-product-highlight",
+      "name": "Highlighted Collection",
+      "settings": {
+        "title": "Sushi",
+        "text": "<p><strong>Nigiri, maki, smiling onigiri</strong></p>",
+        "image": "shopify://shop_images/LoulouJune2026Edits-05024.jpg",
+        "order": true,
+        "product_list": [
+          "long-sleeve-pajama-set-sushi",
+          "baby-sleep-bag-1-0-tog-in-tencel-lyocell-sushi",
+          "sleeper-sushi",
+          "muslin-swaddle-sushi"
+        ],
+        "products_per_row": "auto",
+        "button_label": "Shop Sushi",
+        "link": "shopify://collections/sushi",
+        "button_style": "primary",
         "color_scheme": "default"
       }
     },
@@ -609,12 +611,12 @@
         "text": "",
         "collection": "best-sellers",
         "show_vendor": false,
-        "enable_carousel": false,
-        "grid": 4,
+        "enable_carousel": true,
+        "grid": 5,
         "rows": 1,
         "color_scheme": "default",
         "show_view_all": true,
-        "full_width": false,
+        "full_width": true,
         "text_alignment": "start"
       }
     },
@@ -825,6 +827,7 @@
     },
     "custom_product_highlight_KJfQCU": {
       "type": "custom-product-highlight",
+      "disabled": true,
       "name": "Highlighted Collection",
       "settings": {
         "title": "Gift-able Bundles",
@@ -954,6 +957,45 @@
         "coll_thumb_text_align_x": "center",
         "coll_thumb_text_align_y": "center",
         "coll_button_style": "primary"
+      }
+    },
+    "image_with_text_foundersHome": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_foundersHome": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Family First"
+          }
+        },
+        "heading_foundersHome": {
+          "type": "heading",
+          "settings": {
+            "title": "A Note From Our Founders",
+            "use_h1": false
+          }
+        },
+        "text_foundersHome": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Loulou Lollipop started in 2015 with twin sisters Eleanor and Angel, two teether designs, and a mission to make safer, softer essentials for the babies they loved most.</p><p>As twins ourselves, family is our reason for everything we do — and we hope what you find here helps you make many more sweet memories.</p><p><a href=\"/pages/about-us\">Read Our Story →</a></p>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "subheading_foundersHome",
+        "heading_foundersHome",
+        "text_foundersHome"
+      ],
+      "name": "Founders Spotlight",
+      "settings": {
+        "image": "shopify://shop_images/about_portrait.png",
+        "image_width": 700,
+        "image_link": "",
+        "image_position": "right",
+        "text_alignment": "left",
+        "color_scheme": "default"
       }
     },
     "collection_list_VHgK7g": {
@@ -1206,45 +1248,6 @@
         "color_scheme": "default"
       }
     },
-    "image_with_text_foundersHome": {
-      "type": "image-with-text",
-      "blocks": {
-        "subheading_foundersHome": {
-          "type": "subheading",
-          "settings": {
-            "subheading": "Family First"
-          }
-        },
-        "heading_foundersHome": {
-          "type": "heading",
-          "settings": {
-            "title": "A Note From Our Founders",
-            "use_h1": false
-          }
-        },
-        "text_foundersHome": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Loulou Lollipop started in 2015 with twin sisters Eleanor and Angel, two teether designs, and a mission to make safer, softer essentials for the babies they loved most.</p><p>As twins ourselves, family is our reason for everything we do — and we hope what you find here helps you make many more sweet memories.</p><p><a href=\"/pages/about-us\">Read Our Story →</a></p>",
-            "enlarge_text": false
-          }
-        }
-      },
-      "block_order": [
-        "subheading_foundersHome",
-        "heading_foundersHome",
-        "text_foundersHome"
-      ],
-      "name": "Founders Spotlight",
-      "settings": {
-        "image": "shopify://shop_images/about_portrait.png",
-        "image_width": 700,
-        "image_link": "",
-        "image_position": "right",
-        "text_alignment": "left",
-        "color_scheme": "default"
-      }
-    },
     "testimonials_QcyQ3m": {
       "type": "testimonials",
       "blocks": {
@@ -1336,7 +1339,7 @@
             "review_length": "large",
             "text_size": "medium",
             "image_ratio": "1.33",
-            "reviews_shown": 4,
+            "reviews_shown": 5,
             "show_reviewer_name": true,
             "show_product_name": true,
             "hide_arrows_mobile": true,
@@ -1569,20 +1572,20 @@
     "hero_carousel_rounded_q34LBJ",
     "custom_hero_banner_i8RgHw",
     "featured_collection_dfUJQq",
-    "custom_product_highlight_rrgUK8",
     "rich_text_materialsIntro",
     "multi_column_materialsUSP",
+    "custom_product_highlight_rrgUK8",
     "collection_list_aakDiY",
     "logo_list_kYmwNX",
     "featured_collection_RGPeGr",
     "lp_comparison_tabs_fabrics",
     "custom_product_highlight_KJfQCU",
     "collection_list_zhMrUA",
+    "image_with_text_foundersHome",
     "collection_list_VHgK7g",
     "logo_list_ywatnw",
     "collection_list_FxKgEx",
     "multi_column_KCzHEY",
-    "image_with_text_foundersHome",
     "testimonials_QcyQ3m",
     "1737676593fa7ff914",
     "16359276425da8ce46",
