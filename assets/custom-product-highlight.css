@@ -1,14 +1,16 @@
 /* Product highlight: image with text overlaid on it (title/subtitle/Shop
    Now button, bottom-left) beside a product grid — up to 6 products, a
-   static 3x2 grid on desktop and a swipeable single row on mobile.
+   static grid on desktop (2 or 3 columns depending on count) and a
+   swipeable single row on mobile.
 
    Reuses the site's real components rather than inventing new ones:
    - text-over-image markup/classes come from image-with-text-overlay.liquid
-     (.image-overlay / .height--fixed / .text-overlay system)
+     (.image-overlay / .height--adapt / .text-overlay system)
    - the product row comes from featured-collection.liquid's real carousel
      (.product-grid--carousel / .slider__grid / carousel-slider)
-   This file only adds the two-column layout and the desktop override that
-   turns the carousel into a static grid (mobile keeps the native swipe). */
+   This file only adds the two-column layout, the image's square crop +
+   radius, and the desktop override that turns the carousel into a static
+   grid (mobile keeps the native swipe). */
 
 .custom-product-highlight__layout {
   display: grid;
@@ -19,7 +21,7 @@
 @media (min-width: 900px) {
   .custom-product-highlight__layout {
     grid-template-columns: minmax(0, 0.92fr) minmax(0, 1fr);
-    align-items: stretch;
+    align-items: start;
   }
   .custom-product-highlight__layout--reverse {
     grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
@@ -31,6 +33,8 @@
 
 .custom-product-highlight__media {
   position: relative;
+  border-radius: var(--lll-radius-lg, 12px);
+  overflow: hidden;
 }
 
 /* The overlay title inherits font-family/weight from the site's h2 rule
@@ -38,12 +42,6 @@
    the bare .h1 class here inherited the full hero-banner scale. */
 .custom-product-highlight__overlay-title {
   font-size: var(--lll-text-h3, 1.75rem);
-}
-
-@media (min-width: 900px) {
-  .custom-product-highlight__media.height--fixed {
-    height: 100%;
-  }
 }
 
 .custom-product-highlight__products {
@@ -54,7 +52,7 @@
 @media (min-width: 900px) {
   .custom-product-highlight__products .product-grid--carousel {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(var(--product-highlight-cols, 3), 1fr);
     grid-auto-flow: row;
     gap: var(--gutter, 24px);
     overflow: visible;
