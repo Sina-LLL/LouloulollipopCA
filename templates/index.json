@@ -694,7 +694,7 @@
           "type": "row",
           "settings": {
             "tab": "tab1",
-            "feature": "Eco-Certifications",
+            "feature": "Certifications",
             "our_value": "Certified by OEKO-TEX®, tested free from 1,000+ harmful substances",
             "other_value_1": "Not all bamboo viscose is certified; depends on manufacturer",
             "other_value_2": "Rarely certified for chemical safety"
@@ -774,7 +774,7 @@
           "type": "row",
           "settings": {
             "tab": "tab2",
-            "feature": "Eco-Certifications",
+            "feature": "Certifications",
             "our_value": "Certified by OEKO-TEX®, tested free from 1,000+ harmful substances",
             "other_value_1": "Not all bamboo viscose is certified; depends on manufacturer",
             "other_value_2": "Rarely certified for chemical safety"
@@ -804,20 +804,20 @@
         "bg_color": "rgba(0,0,0,0)",
         "title": "Better Fabrics, By Design",
         "intro": "Not all “soft” and “sustainable” claims are equal. See what sets our TENCEL™ and Tanboocel® apart from the fabrics other baby brands use.",
-        "tab1_label": "TENCEL™ vs Bamboo vs Polyester",
+        "tab1_label": "TENCEL™",
         "tab1_col_ours": "TENCEL™ Lyocell",
         "tab1_col_other_1": "Bamboo Viscose/Rayon",
         "tab1_col_other_2": "Polyester",
         "bottom_line_1": "Bottom line: TENCEL™ is the fabric behind our sleepers, pajamas, sleep bags, and swaddle wraps — soft enough for the most sensitive skin.",
-        "cta_label_1": "Shop TENCEL™ Sleepwear",
-        "cta_link_1": "shopify://collections/sleepers",
-        "tab2_label": "Tanboocel® vs Bamboo vs Polyester",
+        "cta_label_1": "Shop TENCEL™",
+        "cta_link_1": "shopify://collections/made-with-tencel-fibres",
+        "tab2_label": "Tanboocel®",
         "tab2_col_ours": "Tanboocel®",
         "tab2_col_other_1": "Bamboo Viscose/Rayon",
         "tab2_col_other_2": "Polyester",
         "bottom_line_2": "Bottom line: Tanboocel® is the fabric behind our muslin swaddles, quilts, and crib sheets — breathable enough for every season.",
-        "cta_label_2": "Shop Tanboocel® Swaddles",
-        "cta_link_2": "shopify://collections/swaddles",
+        "cta_label_2": "Shop Tanboocel®",
+        "cta_link_2": "shopify://collections/made-with-tanboocel",
         "padding_top": 72,
         "padding_bottom": 72
       }
