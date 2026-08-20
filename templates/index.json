@@ -258,7 +258,6 @@
         "title": "Swaddling Made Simple",
         "text": "<p>Quiet closures, two-way zip, room to grow.</p>",
         "image": "shopify://shop_images/Swaddle_Wrap_zoomed_out_1.gif",
-        "image_height_mobile": 460,
         "order": true,
         "product_list": [
           "swaddle-wrap-1-0-tog-safari-jungle",
@@ -831,7 +830,6 @@
         "title": "Gift-able Bundles",
         "text": "<p>Complete systems. Everything parents actually need.</p>",
         "image": "shopify://shop_images/Gift_Box_1_aabfbfc7-d3bf-4d8a-ac63-8df2bbc3bb9f.jpg",
-        "image_height_mobile": 460,
         "order": true,
         "product_list": [
           "newborn-sleep-starter-bundle-safari-jungle",
