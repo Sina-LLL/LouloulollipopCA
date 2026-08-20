@@ -1321,17 +1321,17 @@
             "tab": "tab1",
             "feature": "Fiber source",
             "our_value": "Wood pulp from certified, sustainably managed forests",
-            "other_value_1": "Natural cotton plant fiber",
+            "other_value_1": "Bamboo pulp",
             "other_value_2": "Petroleum-based synthetic fiber"
           }
         },
-        "row_t_absorption": {
+        "row_t_breathability": {
           "type": "row",
           "settings": {
             "tab": "tab1",
-            "feature": "Moisture absorption",
-            "our_value": "Absorbs up to 50% more moisture than cotton",
-            "other_value_1": "Absorbs moisture but dries slowly",
+            "feature": "Breathability",
+            "our_value": "Naturally temperature-regulating, absorbs up to 50% more moisture than cotton",
+            "other_value_1": "Naturally breathable, but performance depends on processing",
             "other_value_2": "Poor absorption — traps moisture & heat against skin"
           }
         },
@@ -1341,18 +1341,18 @@
             "tab": "tab1",
             "feature": "Biodegradability",
             "our_value": "Fully biodegradable & compostable, including in soil and marine conditions",
-            "other_value_1": "Biodegradable when undyed and untreated",
+            "other_value_1": "Biodegradable, though processing can affect breakdown",
             "other_value_2": "Not biodegradable — persists for decades"
           }
         },
-        "row_t_water": {
+        "row_t_processing": {
           "type": "row",
           "settings": {
             "tab": "tab1",
-            "feature": "Production process",
+            "feature": "Processing",
             "our_value": "Closed-loop process recovers 99%+ of the solvent used",
-            "other_value_1": "One of the most water-intensive crops grown globally",
-            "other_value_2": "Lower water use, but made from fossil fuels"
+            "other_value_1": "Conventional bamboo rayon is typically processed with carbon disulfide, a solvent with documented worker-safety and environmental concerns",
+            "other_value_2": "Made from fossil fuels; non-renewable source"
           }
         },
         "row_t_feel": {
@@ -1361,8 +1361,18 @@
             "tab": "tab1",
             "feature": "Feel",
             "our_value": "Naturally smooth fiber, silky against sensitive skin",
-            "other_value_1": "Can feel rougher, especially at lower thread counts",
+            "other_value_1": "Feel and softness vary by processing method",
             "other_value_2": "Can feel synthetic; prone to static and pilling"
+          }
+        },
+        "row_t_longevity": {
+          "type": "row",
+          "settings": {
+            "tab": "tab1",
+            "feature": "Longevity",
+            "our_value": "Holds its shape and softness wash after wash",
+            "other_value_1": "Can lose shape or pill if processed poorly",
+            "other_value_2": "Durable, but doesn’t soften over time and can trap odor"
           }
         },
         "row_t_cert": {
@@ -1371,7 +1381,7 @@
             "tab": "tab1",
             "feature": "Certification",
             "our_value": "OEKO-TEX® Standard 100 certified",
-            "other_value_1": "Must be separately GOTS-certified to verify organic claims",
+            "other_value_1": "“Bamboo” is not a regulated or certified term on its own",
             "other_value_2": "Rarely certified for chemical safety"
           }
         },
@@ -1382,17 +1392,7 @@
             "feature": "Fiber source",
             "our_value": "Bamboo pulp",
             "other_value_1": "Bamboo pulp",
-            "other_value_2": "Cotton plant fiber"
-          }
-        },
-        "row_b_processing": {
-          "type": "row",
-          "settings": {
-            "tab": "tab2",
-            "feature": "Testing & processing",
-            "our_value": "OEKO-TEX® Standard 100 certified — independently tested for harmful substances",
-            "other_value_1": "Conventional bamboo rayon is typically processed with carbon disulfide, a solvent with documented worker-safety and environmental concerns",
-            "other_value_2": "Often bleached and treated with synthetic dyes"
+            "other_value_2": "Petroleum-based synthetic fiber"
           }
         },
         "row_b_breathability": {
@@ -1401,8 +1401,28 @@
             "tab": "tab2",
             "feature": "Breathability",
             "our_value": "Naturally moisture-wicking and temperature-regulating",
-            "other_value_1": "Breathable, but final quality depends heavily on processing",
-            "other_value_2": "Breathable, but absorbs and holds moisture rather than wicking it"
+            "other_value_1": "Breathable, but performance depends heavily on processing",
+            "other_value_2": "Poor absorption — traps moisture & heat against skin"
+          }
+        },
+        "row_b_biodegradable": {
+          "type": "row",
+          "settings": {
+            "tab": "tab2",
+            "feature": "Biodegradability",
+            "our_value": "Fully biodegradable",
+            "other_value_1": "Biodegradable, though processing can affect breakdown",
+            "other_value_2": "Not biodegradable — persists for decades"
+          }
+        },
+        "row_b_processing": {
+          "type": "row",
+          "settings": {
+            "tab": "tab2",
+            "feature": "Processing",
+            "our_value": "OEKO-TEX® Standard 100 certified — independently tested for harmful substances",
+            "other_value_1": "Conventional bamboo rayon is typically processed with carbon disulfide, a solvent with documented worker-safety and environmental concerns",
+            "other_value_2": "Made from fossil fuels; non-renewable source"
           }
         },
         "row_b_feel": {
@@ -1412,7 +1432,17 @@
             "feature": "Feel",
             "our_value": "Silky-soft, consistent quality every wash",
             "other_value_1": "Feel and softness vary by processing method",
-            "other_value_2": "Can feel rougher, especially at lower thread counts"
+            "other_value_2": "Can feel synthetic; prone to static and pilling"
+          }
+        },
+        "row_b_longevity": {
+          "type": "row",
+          "settings": {
+            "tab": "tab2",
+            "feature": "Longevity",
+            "our_value": "Holds its softness and shape wash after wash",
+            "other_value_1": "Can lose shape or pill if processed poorly",
+            "other_value_2": "Durable, but doesn’t soften over time and can trap odor"
           }
         },
         "row_b_cert": {
@@ -1422,36 +1452,39 @@
             "feature": "Certification",
             "our_value": "OEKO-TEX® Standard 100 certified",
             "other_value_1": "“Bamboo” is not a regulated or certified term on its own",
-            "other_value_2": "Must be separately GOTS-certified to verify organic claims"
+            "other_value_2": "Rarely certified for chemical safety"
           }
         }
       },
       "block_order": [
         "row_t_source",
-        "row_t_absorption",
+        "row_t_breathability",
         "row_t_biodegradable",
-        "row_t_water",
+        "row_t_processing",
         "row_t_feel",
+        "row_t_longevity",
         "row_t_cert",
         "row_b_source",
-        "row_b_processing",
         "row_b_breathability",
+        "row_b_biodegradable",
+        "row_b_processing",
         "row_b_feel",
+        "row_b_longevity",
         "row_b_cert"
       ],
       "settings": {
         "bg_color": "#FFFFFF",
         "title": "Better Fabrics, By Design",
         "intro": "Not all “soft” and “sustainable” claims are equal. See what sets our TENCEL™ and Tanboocel® apart from the fabrics other baby brands use.",
-        "tab1_label": "TENCEL™ vs Cotton vs Polyester",
+        "tab1_label": "TENCEL™ vs Bamboo vs Polyester",
         "tab1_col_ours": "TENCEL™ (Loulou Lollipop)",
-        "tab1_col_other_1": "Conventional Cotton",
+        "tab1_col_other_1": "Conventional Bamboo",
         "tab1_col_other_2": "Polyester",
-        "bottom_line_1": "<p>TENCEL™ isn’t just softer — it’s independently certified, made in a closed-loop process that reclaims its own solvent, and fully biodegradable. Cotton and polyester can’t match all three.</p>",
-        "tab2_label": "Tanboocel® vs Bamboo vs Cotton",
+        "bottom_line_1": "<p>TENCEL™ isn’t just softer — it’s independently certified, made in a closed-loop process that reclaims its own solvent, and fully biodegradable. Conventional bamboo and polyester can’t match all three.</p>",
+        "tab2_label": "Tanboocel® vs Bamboo vs Polyester",
         "tab2_col_ours": "Tanboocel® (Loulou Lollipop)",
-        "tab2_col_other_1": "Regular Bamboo Viscose",
-        "tab2_col_other_2": "Cotton",
+        "tab2_col_other_1": "Conventional Bamboo",
+        "tab2_col_other_2": "Polyester",
         "bottom_line_2": "<p>“Bamboo” isn’t a regulated or certified term — anyone can put it on a label. Tanboocel® carries OEKO-TEX® Standard 100 certification, meaning it’s independently tested for harmful substances, not just marketed as bamboo.</p>",
         "padding_top": 72,
         "padding_bottom": 72
