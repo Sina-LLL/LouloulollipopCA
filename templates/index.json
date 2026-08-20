@@ -243,11 +243,11 @@
         "collection": "sushi",
         "show_vendor": false,
         "enable_carousel": true,
-        "grid": 5,
+        "grid": 4,
         "rows": 1,
         "color_scheme": "default",
         "show_view_all": true,
-        "full_width": true,
+        "full_width": false,
         "text_alignment": "start"
       }
     },
@@ -256,12 +256,14 @@
       "name": "Highlighted Collection",
       "settings": {
         "title": "Swaddling Made Simple",
-        "text": "<ul><li>Quiet Secure Closures</li><li>Two-Way Zipper</li><li>Grows With Baby</li><li>Premium comfort</li></ul>",
+        "text": "<p>Quiet closures, two-way zip, room to grow.</p>",
         "image": "shopify://shop_images/Swaddle_Wrap_zoomed_out_1.gif",
+        "image_height_mobile": 460,
         "order": true,
         "product_list": [
           "swaddle-wrap-1-0-tog-safari-jungle",
-          "swaddle-wrap-1-0-tog-magical-dragons"
+          "swaddle-wrap-1-0-tog-magical-dragons",
+          "swaddle-wrap-1-0-tog-english-garden"
         ],
         "button_label": "Shop Swaddle Wraps",
         "link": "shopify://collections/swaddle-wrap",
@@ -608,12 +610,12 @@
         "text": "",
         "collection": "best-sellers",
         "show_vendor": false,
-        "enable_carousel": true,
-        "grid": 5,
+        "enable_carousel": false,
+        "grid": 4,
         "rows": 1,
         "color_scheme": "default",
         "show_view_all": true,
-        "full_width": true,
+        "full_width": false,
         "text_alignment": "start"
       }
     },
@@ -829,12 +831,15 @@
         "title": "Gift-able Bundles",
         "text": "<p>Complete systems. Everything parents actually need.</p>",
         "image": "shopify://shop_images/Gift_Box_1_aabfbfc7-d3bf-4d8a-ac63-8df2bbc3bb9f.jpg",
+        "image_height_mobile": 460,
         "order": true,
         "product_list": [
           "newborn-sleep-starter-bundle-safari-jungle",
           "wild-teether-bundle-llama-bunny",
           "baby-learning-feeding-bundle-bailey-bunny",
-          "baby-sleep-system-bundle-magical-dragons"
+          "baby-sleep-system-bundle-magical-dragons",
+          "spill-proof-bundle-ditsy-floral",
+          "ocean-wonder-collection-seashell"
         ],
         "button_label": "Shop Bundles",
         "link": "shopify://collections/bundles-and-sets",
@@ -1204,6 +1209,7 @@
     },
     "image_with_text_foundersHome": {
       "type": "image-with-text",
+      "name": "Founders Spotlight",
       "blocks": {
         "subheading_foundersHome": {
           "type": "subheading",
@@ -1231,7 +1237,6 @@
         "heading_foundersHome",
         "text_foundersHome"
       ],
-      "name": "Founders Spotlight",
       "settings": {
         "image": "shopify://shop_images/about_portrait.png",
         "image_width": 700,
