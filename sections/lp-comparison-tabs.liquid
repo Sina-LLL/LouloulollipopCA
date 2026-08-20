@@ -7,13 +7,6 @@
   </svg>
 {%- endcapture -%}
 
-{%- capture quote_mark -%}
-  <svg class="lp-fabric__bottom-mark" viewBox="0 0 30 22" fill="none" aria-hidden="true">
-    <path d="M0 22V13.2C0 6.6 4.2 1.5 12 0L13.4 3.3C8.4 5 6.6 8 6.6 11.4H12V22H0Z" fill="currentColor"/>
-    <path d="M17.6 22V13.2C17.6 6.6 21.8 1.5 29.6 0L31 3.3C26 5 24.2 8 24.2 11.4H29.6V22H17.6Z" fill="currentColor"/>
-  </svg>
-{%- endcapture -%}
-
 <section
   class="lp-fabric"
   style="--fab-bg: {{ section.settings.bg_color }}; --fab-padding-top: {{ section.settings.padding_top | default: 88 }}px; --fab-padding-bottom: {{ section.settings.padding_bottom | default: 88 }}px;"
@@ -79,7 +72,7 @@
       {%- if section.settings.bottom_line_1 != blank or section.settings.cta_label_1 != blank -%}
         <div class="lp-fabric__bottom">
           {%- if section.settings.bottom_line_1 != blank -%}
-            {{ quote_mark }}
+            <span class="lp-fabric__bottom-label">Bottom Line</span>
             <p>{{ section.settings.bottom_line_1 }}</p>
           {%- endif -%}
           {%- if section.settings.cta_label_1 != blank -%}
@@ -126,7 +119,7 @@
       {%- if section.settings.bottom_line_2 != blank or section.settings.cta_label_2 != blank -%}
         <div class="lp-fabric__bottom">
           {%- if section.settings.bottom_line_2 != blank -%}
-            {{ quote_mark }}
+            <span class="lp-fabric__bottom-label">Bottom Line</span>
             <p>{{ section.settings.bottom_line_2 }}</p>
           {%- endif -%}
           {%- if section.settings.cta_label_2 != blank -%}
