@@ -1861,12 +1861,13 @@ h4, .h4 {
   text-align: center;
 }
 
-.lp-fabric__accordion-row {
+.lp-fabric__accordion-row.disclosure {
+  margin-bottom: 0;
   border-top: none;
   border-bottom: 1px solid var(--lll-slate-border, #D9E1E4);
 }
 
-.lp-fabric__accordion-row:first-child {
+.lp-fabric__accordion-row.disclosure:first-child {
   border-top: 1px solid var(--lll-slate-border, #D9E1E4);
 }
 
