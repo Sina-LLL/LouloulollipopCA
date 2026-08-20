@@ -1996,6 +1996,12 @@ h4, .h4 {
 .custom-product-highlight__products {
   display: flex;
   align-items: center;
+  min-width: 0;
+}
+
+.custom-product-highlight__products carousel-slider {
+  min-width: 0;
+  width: 100%;
 }
 
 @media (min-width: 900px) {
