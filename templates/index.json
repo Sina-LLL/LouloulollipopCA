@@ -1473,21 +1473,26 @@
         "row_b_cert"
       ],
       "settings": {
-        "bg_color": "#FFFFFF",
+        "bg_color": "#FAF9F6",
+        "eyebrow": "The Fine Print",
         "title": "Better Fabrics, By Design",
         "intro": "Not all “soft” and “sustainable” claims are equal. See what sets our TENCEL™ and Tanboocel® apart from the fabrics other baby brands use.",
         "tab1_label": "TENCEL™ vs Bamboo vs Polyester",
-        "tab1_col_ours": "TENCEL™ (Loulou Lollipop)",
+        "tab1_col_ours": "TENCEL™",
         "tab1_col_other_1": "Conventional Bamboo",
         "tab1_col_other_2": "Polyester",
         "bottom_line_1": "<p>TENCEL™ isn’t just softer — it’s independently certified, made in a closed-loop process that reclaims its own solvent, and fully biodegradable. Conventional bamboo and polyester can’t match all three.</p>",
+        "cta_label_1": "Shop TENCEL™ Sleepwear",
+        "cta_link_1": "shopify://collections/sleepers",
         "tab2_label": "Tanboocel® vs Bamboo vs Polyester",
-        "tab2_col_ours": "Tanboocel® (Loulou Lollipop)",
+        "tab2_col_ours": "Tanboocel®",
         "tab2_col_other_1": "Conventional Bamboo",
         "tab2_col_other_2": "Polyester",
         "bottom_line_2": "<p>“Bamboo” isn’t a regulated or certified term — anyone can put it on a label. Tanboocel® carries OEKO-TEX® Standard 100 certification, meaning it’s independently tested for harmful substances, not just marketed as bamboo.</p>",
-        "padding_top": 72,
-        "padding_bottom": 72
+        "cta_label_2": "Shop Tanboocel® Swaddles",
+        "cta_link_2": "shopify://collections/swaddles",
+        "padding_top": 88,
+        "padding_bottom": 88
       }
     }
   },
