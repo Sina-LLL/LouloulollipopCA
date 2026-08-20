@@ -283,7 +283,7 @@
           "type": "text",
           "settings": {
             "text": "<p>Loulou Lollipop started with two sisters and one teether. From there we've focused on better materials, like TENCEL™ and Tanboocel® fabrics, and LFGB-certified food-grade silicone. More than a decade later, we’re still committed to making products parents can trust.</p>",
-            "enlarge_text": true
+            "enlarge_text": false
           }
         }
       },
@@ -804,7 +804,7 @@
         "bg_color": "rgba(0,0,0,0)",
         "title": "Better Fabrics, By Design",
         "intro": "Not all “soft” and “sustainable” claims are equal. See what sets our TENCEL™ and Tanboocel® apart from the fabrics other baby brands use.",
-        "tab1_label": "TENCEL™",
+        "tab1_label": "TENCEL™ Lyocell",
         "tab1_col_ours": "TENCEL™ Lyocell",
         "tab1_col_other_1": "Bamboo Viscose/Rayon",
         "tab1_col_other_2": "Polyester",
@@ -818,8 +818,8 @@
         "bottom_line_2": "Bottom line: Tanboocel® is the fabric behind our muslin swaddles, quilts, and crib sheets — breathable enough for every season.",
         "cta_label_2": "Shop Tanboocel®",
         "cta_link_2": "shopify://collections/made-with-tanboocel",
-        "padding_top": 72,
-        "padding_bottom": 72
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "custom_product_highlight_KJfQCU": {
