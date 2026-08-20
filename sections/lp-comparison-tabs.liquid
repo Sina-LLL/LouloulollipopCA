@@ -9,7 +9,7 @@
 
 <section
   class="lp-fabric"
-  style="--fab-bg: {{ section.settings.bg_color }}; --fab-padding-top: {{ section.settings.padding_top | default: 88 }}px; --fab-padding-bottom: {{ section.settings.padding_bottom | default: 88 }}px;"
+  style="--fab-bg: {{ section.settings.bg_color }}; --fab-padding-top: {{ section.settings.padding_top | default: 112 }}px; --fab-padding-bottom: {{ section.settings.padding_bottom | default: 112 }}px;"
 >
   <div class="lp-fabric__container">
     {%- if section.settings.eyebrow != blank or section.settings.title != blank or section.settings.intro != blank -%}
@@ -158,8 +158,8 @@
     { "type": "text",     "id": "cta_label_2",      "label": "Tab 2 – CTA label" },
     { "type": "url",      "id": "cta_link_2",       "label": "Tab 2 – CTA link" },
     { "type": "header",   "content": "Spacing" },
-    { "type": "range", "id": "padding_top",    "label": "Padding top",    "min": 0, "max": 140, "step": 4, "default": 88, "unit": "px" },
-    { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 0, "max": 140, "step": 4, "default": 88, "unit": "px" }
+    { "type": "range", "id": "padding_top",    "label": "Padding top",    "min": 0, "max": 160, "step": 4, "default": 112, "unit": "px" },
+    { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 0, "max": 160, "step": 4, "default": 112, "unit": "px" }
   ],
   "blocks": [
     {

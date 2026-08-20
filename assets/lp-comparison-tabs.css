@@ -1,56 +1,49 @@
-/* Fabric comparison chart — styled as a garment care-label / swatch card */
+/* Fabric comparison chart — styled as a garment care-label / swatch card.
+   Every color, radius, and font below is a --lll-* token from design-system.css
+   (the site's single source of truth) — nothing invented locally. */
 
 .lp-fabric {
-  --fab-cream: #FAF9F6;
-  --fab-white: #FFFFFF;
-  --fab-ink: #1D1D1D;
-  --fab-ink-muted: #5C5955;
-  --fab-ink-soft: #4F676E;
-  --fab-sage: #6A8B95;
-  --fab-sage-deep: #4F676E;
-  --fab-peach-tint: #FBEFE7;
-  --fab-peach-deep: #E3B79A;
-  --fab-line: rgba(29, 29, 29, 0.09);
-  background: var(--fab-bg, var(--fab-cream));
-  padding: var(--fab-padding-top, 88px) 0 var(--fab-padding-bottom, 88px);
+  background: var(--fab-bg, var(--lll-cream));
+  padding: var(--fab-padding-top, 112px) 0 var(--fab-padding-bottom, 112px);
 }
 
 .lp-fabric__container {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 var(--lll-space-6);
 }
 
 /* ---- Head ---- */
 .lp-fabric__head {
   text-align: center;
   max-width: 640px;
-  margin: 0 auto 40px;
+  margin: 0 auto var(--lll-space-10);
 }
 
 .lp-fabric__eyebrow {
   display: inline-block;
-  font-family: var(--heading-font-family);
+  font-family: var(--lll-font-display);
   font-size: 0.72rem;
-  font-weight: 600;
+  font-weight: var(--lll-weight-subhead);
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--fab-sage-deep);
-  margin: 0 0 12px;
+  color: var(--lll-slate-deep);
+  margin: 0 0 var(--lll-space-3);
 }
 
 .lp-fabric__head h2 {
-  font-family: var(--heading-font-family);
-  font-size: clamp(1.75rem, 1.4rem + 1.4vw, 2.5rem);
-  line-height: 1.15;
-  color: var(--fab-ink);
-  margin: 0 0 14px;
+  font-family: var(--lll-font-display);
+  font-size: var(--lll-text-h2);
+  line-height: var(--lll-leading-heading);
+  font-weight: var(--lll-weight-heading);
+  color: var(--lll-ink);
+  margin: 0 0 var(--lll-space-4);
 }
 
 .lp-fabric__head p {
   font-size: 1.02rem;
-  line-height: 1.55;
-  color: var(--fab-ink-muted);
+  line-height: var(--lll-leading-body);
+  color: var(--lll-text-muted);
   margin: 0;
 }
 
@@ -58,7 +51,7 @@
 .lp-fabric__switch {
   display: flex;
   justify-content: center;
-  margin-bottom: 36px;
+  margin-bottom: var(--lll-space-8);
 }
 
 .lp-fabric__radio {
@@ -72,22 +65,22 @@
 .lp-fabric__switch-track {
   position: relative;
   display: inline-flex;
-  background: var(--fab-white);
-  border: 1px solid var(--fab-line);
-  border-radius: 999px;
-  padding: 4px;
-  box-shadow: 0 1px 2px rgba(29, 29, 29, 0.04);
+  background: var(--lll-white);
+  border: 1px solid var(--lll-slate-border);
+  border-radius: var(--lll-radius-pill);
+  padding: var(--lll-space-1);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
 }
 
 .lp-fabric__switch-indicator {
   position: absolute;
-  top: 4px;
-  left: 4px;
+  top: var(--lll-space-1);
+  left: var(--lll-space-1);
   width: calc(50% - 4px);
   height: calc(100% - 8px);
-  background: var(--fab-sage);
-  border-radius: 999px;
-  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  background: var(--lll-slate);
+  border-radius: var(--lll-radius-pill);
+  transition: transform var(--lll-duration-med) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #lp-fabric-tab2:checked ~ .lp-fabric__switch .lp-fabric__switch-track .lp-fabric__switch-indicator {
@@ -97,27 +90,27 @@
 .lp-fabric__switch-label {
   position: relative;
   z-index: 1;
-  padding: 11px 22px;
+  padding: 11px var(--lll-space-5);
   cursor: pointer;
-  font-family: var(--heading-font-family);
+  font-family: var(--lll-font-display);
   font-size: 0.86rem;
-  font-weight: 600;
-  color: var(--fab-sage-deep);
+  font-weight: var(--lll-weight-subhead);
+  color: var(--lll-slate-deep);
   text-align: center;
   white-space: nowrap;
-  transition: color 0.2s ease;
+  transition: color var(--lll-duration-fast) ease;
   user-select: none;
-  border-radius: 999px;
+  border-radius: var(--lll-radius-pill);
 }
 
 #lp-fabric-tab1:checked ~ .lp-fabric__switch .lp-fabric__switch-track label[for="lp-fabric-tab1"],
 #lp-fabric-tab2:checked ~ .lp-fabric__switch .lp-fabric__switch-track label[for="lp-fabric-tab2"] {
-  color: var(--fab-white);
+  color: var(--lll-white);
 }
 
 #lp-fabric-tab1:focus-visible ~ .lp-fabric__switch .lp-fabric__switch-track label[for="lp-fabric-tab1"],
 #lp-fabric-tab2:focus-visible ~ .lp-fabric__switch .lp-fabric__switch-track label[for="lp-fabric-tab2"] {
-  outline: 2px solid var(--fab-sage-deep);
+  outline: 2px solid var(--lll-slate-deep);
   outline-offset: 2px;
 }
 
@@ -134,11 +127,11 @@
 /* ---- Card + scroll ---- */
 .lp-fabric__card {
   position: relative;
-  background: var(--fab-white);
-  border: 1px solid var(--fab-line);
-  border-radius: 20px;
+  background: var(--lll-white);
+  border: 1px solid var(--lll-slate-border);
+  border-radius: var(--lll-radius-lg);
   overflow: hidden;
-  box-shadow: 0 12px 32px -20px rgba(29, 29, 29, 0.25);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
 .lp-fabric__scroll {
@@ -157,19 +150,19 @@
 
 .lp-fabric__table th,
 .lp-fabric__table td {
-  padding: 18px 22px;
+  padding: var(--lll-space-5) var(--lll-space-6);
   text-align: left;
   vertical-align: top;
   font-size: 0.94rem;
-  line-height: 1.45;
-  border-bottom: 1px solid var(--fab-line);
+  line-height: var(--lll-leading-snug);
+  border-bottom: 1px solid var(--lll-slate-border);
 }
 
 .lp-fabric__table thead th {
-  background: var(--fab-cream);
-  border-bottom: 1px solid var(--fab-line);
-  padding-top: 16px;
-  padding-bottom: 16px;
+  background: var(--lll-cream);
+  border-bottom: 1px solid var(--lll-slate-border);
+  padding-top: var(--lll-space-4);
+  padding-bottom: var(--lll-space-4);
 }
 
 .lp-fabric__table tbody tr:last-child th,
@@ -184,63 +177,67 @@
   left: 0;
   z-index: 2;
   min-width: 152px;
-  background: var(--fab-white);
-  border-right: 1px solid var(--fab-line);
+  background: var(--lll-white);
+  border-right: 1px solid var(--lll-slate-border);
 }
 
 .lp-fabric__table thead th:first-child {
-  background: var(--fab-cream);
+  background: var(--lll-cream);
 }
 
 .lp-fabric__feature {
-  font-family: var(--heading-font-family);
+  font-family: var(--lll-font-display);
   font-size: 0.72rem;
-  font-weight: 600;
+  font-weight: var(--lll-weight-subhead);
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: var(--fab-sage-deep);
+  color: var(--lll-slate-deep);
 }
 
 .lp-fabric__col-competitor {
-  color: var(--fab-ink-muted);
+  color: var(--lll-text-muted);
   min-width: 190px;
 }
 
-/* ---- "Ours" column: elevated like the highlighted swatch ---- */
+/* ---- "Ours" column: elevated with the site's blush wash + border pairing
+   (the same tint/border combo design-system.css defines for soft
+   highlighted areas — --lll-peach itself is reserved for smaller, more
+   saturated fills like badges, so it's used only on the tag icon below). */
 .lp-fabric__col-ours {
-  background: var(--fab-peach-tint);
-  font-weight: 600;
-  color: var(--fab-ink);
+  background: var(--lll-blush);
+  font-weight: var(--lll-weight-subhead);
+  color: var(--lll-ink);
   min-width: 200px;
 }
 
 .lp-fabric__table thead th.lp-fabric__col-ours {
-  background: var(--fab-peach-tint);
-  border-bottom: 1px solid var(--fab-peach-deep);
+  background: var(--lll-blush);
+  border-bottom: 1px solid var(--lll-blush-border);
 }
 
 .lp-fabric__tag {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  font-family: var(--heading-font-family);
+  gap: var(--lll-space-2);
+  font-family: var(--lll-font-display);
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--fab-sage-deep);
-  margin-bottom: 4px;
+  color: var(--lll-slate-deep);
+  margin-bottom: var(--lll-space-1);
 }
 
 .lp-fabric__tag svg {
   flex-shrink: 0;
+  color: var(--lll-peach);
 }
 
 .lp-fabric__col-ours-name {
   display: block;
-  font-family: var(--heading-font-family);
+  font-family: var(--lll-font-display);
   font-size: 1rem;
-  color: var(--fab-ink);
+  color: var(--lll-ink);
 }
 
 /* mobile scroll hint */
@@ -256,7 +253,7 @@
     right: 0;
     bottom: 0;
     width: 36px;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--fab-white));
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--lll-white));
     pointer-events: none;
   }
 }
@@ -264,70 +261,70 @@
 /* ---- Bottom line: our own summary, labeled as such — not a testimonial ---- */
 .lp-fabric__bottom {
   max-width: 640px;
-  margin: 36px auto 0;
+  margin: var(--lll-space-8) auto 0;
   text-align: center;
-  padding: 0 8px;
+  padding: 0 var(--lll-space-2);
 }
 
 .lp-fabric__bottom-label {
   display: block;
-  font-family: var(--heading-font-family);
+  font-family: var(--lll-font-display);
   font-size: 0.7rem;
-  font-weight: 600;
+  font-weight: var(--lll-weight-subhead);
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--fab-peach-deep);
-  margin-bottom: 8px;
+  color: var(--lll-slate-deep);
+  margin-bottom: var(--lll-space-2);
 }
 
 .lp-fabric__bottom p {
-  font-family: var(--heading-font-family);
+  font-family: var(--lll-font-display);
   font-size: 1.08rem;
-  line-height: 1.5;
-  color: var(--fab-ink);
+  line-height: var(--lll-leading-body);
+  color: var(--lll-ink);
   margin: 0;
 }
 
 .lp-fabric__cta {
   display: flex;
   justify-content: center;
-  gap: 12px;
-  margin-top: 22px;
+  gap: var(--lll-space-3);
+  margin-top: var(--lll-space-5);
   flex-wrap: wrap;
 }
 
 .lp-fabric__cta a {
-  font-family: var(--heading-font-family);
+  font-family: var(--lll-font-display);
   font-size: 0.78rem;
-  font-weight: 600;
+  font-weight: var(--lll-weight-subhead);
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--fab-sage-deep);
+  color: var(--lll-slate-deep);
   text-decoration: none;
-  border-bottom: 1px solid var(--fab-sage);
+  border-bottom: 1px solid var(--lll-slate);
   padding-bottom: 2px;
-  transition: color 0.15s ease, border-color 0.15s ease;
+  transition: color var(--lll-duration-fast) ease, border-color var(--lll-duration-fast) ease;
 }
 
 .lp-fabric__cta a:hover {
-  color: var(--fab-ink);
-  border-color: var(--fab-ink);
+  color: var(--lll-ink);
+  border-color: var(--lll-ink);
 }
 
 @media (max-width: 640px) {
   .lp-fabric {
-    padding: 56px 0;
+    padding: var(--lll-space-16) 0;
   }
   .lp-fabric__container {
-    padding: 0 16px;
+    padding: 0 var(--lll-space-4);
   }
   .lp-fabric__table th,
   .lp-fabric__table td {
-    padding: 14px 16px;
+    padding: var(--lll-space-4);
     font-size: 0.85rem;
   }
   .lp-fabric__switch-label {
-    padding: 10px 14px;
+    padding: var(--lll-space-3) var(--lll-space-4);
     font-size: 0.76rem;
   }
 }
