@@ -1889,10 +1889,9 @@ h4, .h4 {
 
 .lp-fabric__accordion-item {
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 8px 0;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 0;
   border-bottom: 1px solid #D9E1E4;
   font-size: 0.9rem;
 }
@@ -1903,7 +1902,7 @@ h4, .h4 {
 
 .lp-fabric__accordion-item--ours {
   margin: 0 -20px;
-  padding: 8px 20px;
+  padding: 10px 20px;
   background: #BAD5D9;
   font-weight: 600;
   border-bottom: none;
@@ -1911,7 +1910,7 @@ h4, .h4 {
 
 .lp-fabric__accordion-label {
   color: #6A8B95;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.03em;
 }
@@ -1921,7 +1920,7 @@ h4, .h4 {
 }
 
 .lp-fabric__accordion-value {
-  text-align: right;
+  text-align: left;
 }
 
 @media (max-width: 640px) {
