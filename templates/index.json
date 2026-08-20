@@ -1204,7 +1204,6 @@
     },
     "image_with_text_foundersHome": {
       "type": "image-with-text",
-      "name": "Founders Spotlight",
       "blocks": {
         "subheading_foundersHome": {
           "type": "subheading",
@@ -1232,6 +1231,7 @@
         "heading_foundersHome",
         "text_foundersHome"
       ],
+      "name": "Founders Spotlight",
       "settings": {
         "image": "shopify://shop_images/about_portrait.png",
         "image_width": 700,
