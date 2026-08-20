@@ -1,7 +1,22 @@
-<section id="section-id-{{ section.id }}" class="lp-comparison-tabs">
-  <div class="container">
-    {%- if section.settings.title != blank or section.settings.intro != blank -%}
-      <div class="lp-comparison-tabs__head">
+<link rel="stylesheet" href="{{ 'lp-comparison-tabs.css' | asset_url }}" {%- render 'lazy-stylesheet-attrs' %}>
+
+{%- capture tag_icon -%}
+  <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+    <rect x="1" y="1" width="12" height="12" rx="3.5" stroke="currentColor" stroke-width="1.2"/>
+    <circle cx="4.4" cy="4.4" r="1" fill="currentColor"/>
+  </svg>
+{%- endcapture -%}
+
+<section
+  class="lp-fabric"
+  style="--fab-bg: {{ section.settings.bg_color }}; --fab-padding-top: {{ section.settings.padding_top | default: 88 }}px; --fab-padding-bottom: {{ section.settings.padding_bottom | default: 88 }}px;"
+>
+  <div class="lp-fabric__container">
+    {%- if section.settings.eyebrow != blank or section.settings.title != blank or section.settings.intro != blank -%}
+      <div class="lp-fabric__head">
+        {%- if section.settings.eyebrow != blank -%}
+          <span class="lp-fabric__eyebrow">{{ section.settings.eyebrow }}</span>
+        {%- endif -%}
         {%- if section.settings.title != blank -%}
           <h2>{{ section.settings.title }}</h2>
         {%- endif -%}
@@ -11,224 +26,138 @@
       </div>
     {%- endif -%}
 
-    <div class="lp-comparison-tabs__wrap">
-      <input type="radio" class="lp-comparison-tabs__radio" name="lp-comparison-tabs-{{ section.id }}" id="lp-comparison-tab1-{{ section.id }}" checked>
-      <input type="radio" class="lp-comparison-tabs__radio" name="lp-comparison-tabs-{{ section.id }}" id="lp-comparison-tab2-{{ section.id }}">
+    <input type="radio" class="lp-fabric__radio" name="lp-fabric-tabs" id="lp-fabric-tab1" checked>
+    <input type="radio" class="lp-fabric__radio" name="lp-fabric-tabs" id="lp-fabric-tab2">
 
-      <div class="lp-comparison-tabs__nav" role="tablist">
-        <label class="lp-comparison-tabs__tab" for="lp-comparison-tab1-{{ section.id }}" role="tab">{{ section.settings.tab1_label }}</label>
-        <label class="lp-comparison-tabs__tab" for="lp-comparison-tab2-{{ section.id }}" role="tab">{{ section.settings.tab2_label }}</label>
+    <div class="lp-fabric__switch" role="tablist">
+      <div class="lp-fabric__switch-track">
+        <span class="lp-fabric__switch-indicator" aria-hidden="true"></span>
+        <label class="lp-fabric__switch-label" for="lp-fabric-tab1" role="tab">{{ section.settings.tab1_label }}</label>
+        <label class="lp-fabric__switch-label" for="lp-fabric-tab2" role="tab">{{ section.settings.tab2_label }}</label>
       </div>
+    </div>
 
-      <div class="lp-comparison-tabs__panel" data-panel="1" role="tabpanel">
-        <div class="lp-comparison-tabs__scroll">
-          <table class="lp-comparison-tabs__table">
+    <div class="lp-fabric__panel" data-panel="1" role="tabpanel">
+      <div class="lp-fabric__card">
+        <div class="lp-fabric__scroll">
+          <table class="lp-fabric__table">
             <thead>
               <tr>
                 <th></th>
-                <th class="lp-comparison-tabs__col-ours">{{ section.settings.tab1_col_ours }}</th>
-                <th>{{ section.settings.tab1_col_other_1 }}</th>
-                <th>{{ section.settings.tab1_col_other_2 }}</th>
+                <th class="lp-fabric__col-ours">
+                  <span class="lp-fabric__tag">{{ tag_icon }}Loulou Lollipop</span>
+                  <span class="lp-fabric__col-ours-name">{{ section.settings.tab1_col_ours }}</span>
+                </th>
+                <th class="lp-fabric__col-competitor">{{ section.settings.tab1_col_other_1 }}</th>
+                <th class="lp-fabric__col-competitor">{{ section.settings.tab1_col_other_2 }}</th>
               </tr>
             </thead>
             <tbody>
               {%- for block in section.blocks -%}
                 {%- if block.type == 'row' and block.settings.tab == 'tab1' -%}
                   <tr {{ block.shopify_attributes }}>
-                    <td class="lp-comparison-tabs__feature">{{ block.settings.feature }}</td>
-                    <td class="lp-comparison-tabs__col-ours">{{ block.settings.our_value }}</td>
-                    <td>{{ block.settings.other_value_1 }}</td>
-                    <td>{{ block.settings.other_value_2 }}</td>
+                    <th scope="row" class="lp-fabric__feature">{{ block.settings.feature }}</th>
+                    <td class="lp-fabric__col-ours">{{ block.settings.our_value }}</td>
+                    <td class="lp-fabric__col-competitor">{{ block.settings.other_value_1 }}</td>
+                    <td class="lp-fabric__col-competitor">{{ block.settings.other_value_2 }}</td>
                   </tr>
                 {%- endif -%}
               {%- endfor -%}
             </tbody>
           </table>
         </div>
-        {%- if section.settings.bottom_line_1 != blank -%}
-          <div class="lp-comparison-tabs__bottom-line">{{ section.settings.bottom_line_1 }}</div>
-        {%- endif -%}
+        <div class="lp-fabric__scroll-hint" aria-hidden="true"></div>
       </div>
 
-      <div class="lp-comparison-tabs__panel" data-panel="2" role="tabpanel">
-        <div class="lp-comparison-tabs__scroll">
-          <table class="lp-comparison-tabs__table">
+      {%- if section.settings.bottom_line_1 != blank or section.settings.cta_label_1 != blank -%}
+        <div class="lp-fabric__bottom">
+          {%- if section.settings.bottom_line_1 != blank -%}
+            <p>{{ section.settings.bottom_line_1 }}</p>
+          {%- endif -%}
+          {%- if section.settings.cta_label_1 != blank -%}
+            <div class="lp-fabric__cta">
+              <a href="{{ section.settings.cta_link_1 }}">{{ section.settings.cta_label_1 }}</a>
+            </div>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+
+    <div class="lp-fabric__panel" data-panel="2" role="tabpanel">
+      <div class="lp-fabric__card">
+        <div class="lp-fabric__scroll">
+          <table class="lp-fabric__table">
             <thead>
               <tr>
                 <th></th>
-                <th class="lp-comparison-tabs__col-ours">{{ section.settings.tab2_col_ours }}</th>
-                <th>{{ section.settings.tab2_col_other_1 }}</th>
-                <th>{{ section.settings.tab2_col_other_2 }}</th>
+                <th class="lp-fabric__col-ours">
+                  <span class="lp-fabric__tag">{{ tag_icon }}Loulou Lollipop</span>
+                  <span class="lp-fabric__col-ours-name">{{ section.settings.tab2_col_ours }}</span>
+                </th>
+                <th class="lp-fabric__col-competitor">{{ section.settings.tab2_col_other_1 }}</th>
+                <th class="lp-fabric__col-competitor">{{ section.settings.tab2_col_other_2 }}</th>
               </tr>
             </thead>
             <tbody>
               {%- for block in section.blocks -%}
                 {%- if block.type == 'row' and block.settings.tab == 'tab2' -%}
                   <tr {{ block.shopify_attributes }}>
-                    <td class="lp-comparison-tabs__feature">{{ block.settings.feature }}</td>
-                    <td class="lp-comparison-tabs__col-ours">{{ block.settings.our_value }}</td>
-                    <td>{{ block.settings.other_value_1 }}</td>
-                    <td>{{ block.settings.other_value_2 }}</td>
+                    <th scope="row" class="lp-fabric__feature">{{ block.settings.feature }}</th>
+                    <td class="lp-fabric__col-ours">{{ block.settings.our_value }}</td>
+                    <td class="lp-fabric__col-competitor">{{ block.settings.other_value_1 }}</td>
+                    <td class="lp-fabric__col-competitor">{{ block.settings.other_value_2 }}</td>
                   </tr>
                 {%- endif -%}
               {%- endfor -%}
             </tbody>
           </table>
         </div>
-        {%- if section.settings.bottom_line_2 != blank -%}
-          <div class="lp-comparison-tabs__bottom-line">{{ section.settings.bottom_line_2 }}</div>
-        {%- endif -%}
+        <div class="lp-fabric__scroll-hint" aria-hidden="true"></div>
       </div>
+
+      {%- if section.settings.bottom_line_2 != blank or section.settings.cta_label_2 != blank -%}
+        <div class="lp-fabric__bottom">
+          {%- if section.settings.bottom_line_2 != blank -%}
+            <p>{{ section.settings.bottom_line_2 }}</p>
+          {%- endif -%}
+          {%- if section.settings.cta_label_2 != blank -%}
+            <div class="lp-fabric__cta">
+              <a href="{{ section.settings.cta_link_2 }}">{{ section.settings.cta_label_2 }}</a>
+            </div>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
     </div>
   </div>
 </section>
-
-<style>
-  #section-id-{{ section.id }} {
-    padding: {{ section.settings.padding_top | default: 72 }}px 0 {{ section.settings.padding_bottom | default: 72 }}px;
-    background: {{ section.settings.bg_color }};
-  }
-  #section-id-{{ section.id }} .lp-comparison-tabs__head {
-    text-align: center;
-    max-width: 720px;
-    margin: 0 auto 32px;
-  }
-  #section-id-{{ section.id }} .lp-comparison-tabs__head p {
-    font-size: 1.05rem;
-    color: var(--color-text);
-    opacity: 0.7;
-    margin-top: 12px;
-  }
-  #section-id-{{ section.id }} .lp-comparison-tabs__wrap {
-    max-width: 1080px;
-    margin: 0 auto;
-  }
-  #section-id-{{ section.id }} .lp-comparison-tabs__scroll {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  #section-id-{{ section.id }} .lp-comparison-tabs__radio {
-    position: absolute;
-    opacity: 0;
-    pointer-events: none;
-  }
-  #section-id-{{ section.id }} .lp-comparison-tabs__nav {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin-bottom: 28px;
-  }
-  #section-id-{{ section.id }} .lp-comparison-tabs__tab {
-    cursor: pointer;
-    padding: 12px 24px;
-    border-radius: 999px;
-    border: 1px solid #6A8B95;
-    font-family: var(--heading-font-family);
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: #6A8B95;
-    background: #fff;
-    text-align: center;
-    transition: background 0.15s ease, color 0.15s ease;
-    user-select: none;
-  }
-  #section-id-{{ section.id }} .lp-comparison-tabs__panel {
-    display: none;
-  }
-  #section-id-{{ section.id }} #lp-comparison-tab1-{{ section.id }}:checked ~ .lp-comparison-tabs__nav label[for="lp-comparison-tab1-{{ section.id }}"],
-  #section-id-{{ section.id }} #lp-comparison-tab2-{{ section.id }}:checked ~ .lp-comparison-tabs__nav label[for="lp-comparison-tab2-{{ section.id }}"] {
-    background: #6A8B95;
-    color: #fff;
-  }
-  #section-id-{{ section.id }} #lp-comparison-tab1-{{ section.id }}:checked ~ .lp-comparison-tabs__panel[data-panel="1"],
-  #section-id-{{ section.id }} #lp-comparison-tab2-{{ section.id }}:checked ~ .lp-comparison-tabs__panel[data-panel="2"] {
-    display: block;
-  }
-  #section-id-{{ section.id }} .lp-comparison-tabs__table {
-    width: 100%;
-    min-width: 640px;
-    border-collapse: collapse;
-    background: #fff;
-    border: 1px solid #6A8B95;
-    border-radius: 6px;
-    overflow: hidden;
-    font-size: 0.92rem;
-  }
-  #section-id-{{ section.id }} .lp-comparison-tabs__table th,
-  #section-id-{{ section.id }} .lp-comparison-tabs__table td {
-    min-width: 160px;
-  }
-  #section-id-{{ section.id }} .lp-comparison-tabs__table th:first-child,
-  #section-id-{{ section.id }} .lp-comparison-tabs__table td:first-child {
-    min-width: 140px;
-  }
-  #section-id-{{ section.id }} .lp-comparison-tabs__table thead {
-    background: #D1E3E6;
-    font-family: var(--heading-font-family);
-  }
-  #section-id-{{ section.id }} .lp-comparison-tabs__table th,
-  #section-id-{{ section.id }} .lp-comparison-tabs__table td {
-    padding: 15px 20px;
-    text-align: left;
-    border-bottom: 1px solid #6A8B95;
-  }
-  #section-id-{{ section.id }} .lp-comparison-tabs__table tbody tr:last-child td {
-    border-bottom: none;
-  }
-  #section-id-{{ section.id }} .lp-comparison-tabs__feature { font-weight: 600; }
-  #section-id-{{ section.id }} .lp-comparison-tabs__col-ours {
-    background: #BAD5D9;
-    font-weight: 600;
-  }
-  #section-id-{{ section.id }} .lp-comparison-tabs__bottom-line {
-    margin-top: 28px;
-    padding: 18px 22px;
-    background: #D1E3E6;
-    border-left: 4px solid #6A8B95;
-    border-radius: 4px;
-    font-size: 0.95rem;
-  }
-  @media (max-width: 640px) {
-    #section-id-{{ section.id }} {
-      padding: {{ section.settings.padding_top | default: 72 | times: 0.67 | round }}px 0 {{ section.settings.padding_bottom | default: 72 | times: 0.67 | round }}px;
-    }
-    #section-id-{{ section.id }} .lp-comparison-tabs__nav {
-      gap: 6px;
-    }
-    #section-id-{{ section.id }} .lp-comparison-tabs__tab {
-      padding: 10px 14px;
-      font-size: 0.82rem;
-    }
-    #section-id-{{ section.id }} .lp-comparison-tabs__table th,
-    #section-id-{{ section.id }} .lp-comparison-tabs__table td {
-      padding: 10px 12px;
-      font-size: 0.82rem;
-    }
-  }
-</style>
 
 {% schema %}
 {
   "name": "LP Comparison Tabs",
   "settings": [
-    { "type": "color",    "id": "bg_color",       "label": "Background colour", "default": "#FFFFFF" },
+    { "type": "color",    "id": "bg_color",       "label": "Background colour", "default": "#FAF9F6" },
+    { "type": "text",     "id": "eyebrow",         "label": "Eyebrow label", "default": "The Fine Print" },
     { "type": "text",     "id": "title",           "label": "Heading" },
     { "type": "textarea", "id": "intro",           "label": "Intro text" },
     { "type": "header",   "content": "Tab 1" },
-    { "type": "text",     "id": "tab1_label",       "label": "Tab 1 label", "default": "TENCEL™ vs Cotton vs Polyester" },
-    { "type": "text",     "id": "tab1_col_ours",    "label": "Tab 1 – our column header", "default": "TENCEL™ (Loulou Lollipop)" },
-    { "type": "text",     "id": "tab1_col_other_1", "label": "Tab 1 – competitor column 1", "default": "Conventional Cotton" },
+    { "type": "text",     "id": "tab1_label",       "label": "Tab 1 label", "default": "TENCEL™ vs Bamboo vs Polyester" },
+    { "type": "text",     "id": "tab1_col_ours",    "label": "Tab 1 – our column header", "default": "TENCEL™" },
+    { "type": "text",     "id": "tab1_col_other_1", "label": "Tab 1 – competitor column 1", "default": "Conventional Bamboo" },
     { "type": "text",     "id": "tab1_col_other_2", "label": "Tab 1 – competitor column 2", "default": "Polyester" },
     { "type": "textarea", "id": "bottom_line_1",    "label": "Tab 1 – bottom-line callout" },
+    { "type": "text",     "id": "cta_label_1",      "label": "Tab 1 – CTA label" },
+    { "type": "url",      "id": "cta_link_1",       "label": "Tab 1 – CTA link" },
     { "type": "header",   "content": "Tab 2" },
-    { "type": "text",     "id": "tab2_label",       "label": "Tab 2 label", "default": "Tanboocel® vs Bamboo vs Cotton" },
-    { "type": "text",     "id": "tab2_col_ours",    "label": "Tab 2 – our column header", "default": "Tanboocel® (Loulou Lollipop)" },
-    { "type": "text",     "id": "tab2_col_other_1", "label": "Tab 2 – competitor column 1", "default": "Regular Bamboo Viscose" },
-    { "type": "text",     "id": "tab2_col_other_2", "label": "Tab 2 – competitor column 2", "default": "Cotton" },
+    { "type": "text",     "id": "tab2_label",       "label": "Tab 2 label", "default": "Tanboocel® vs Bamboo vs Polyester" },
+    { "type": "text",     "id": "tab2_col_ours",    "label": "Tab 2 – our column header", "default": "Tanboocel®" },
+    { "type": "text",     "id": "tab2_col_other_1", "label": "Tab 2 – competitor column 1", "default": "Conventional Bamboo" },
+    { "type": "text",     "id": "tab2_col_other_2", "label": "Tab 2 – competitor column 2", "default": "Polyester" },
     { "type": "textarea", "id": "bottom_line_2",    "label": "Tab 2 – bottom-line callout" },
+    { "type": "text",     "id": "cta_label_2",      "label": "Tab 2 – CTA label" },
+    { "type": "url",      "id": "cta_link_2",       "label": "Tab 2 – CTA link" },
     { "type": "header",   "content": "Spacing" },
-    { "type": "range", "id": "padding_top",    "label": "Padding top",    "min": 0, "max": 120, "step": 4, "default": 72, "unit": "px" },
-    { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 0, "max": 120, "step": 4, "default": 72, "unit": "px" }
+    { "type": "range", "id": "padding_top",    "label": "Padding top",    "min": 0, "max": 140, "step": 4, "default": 88, "unit": "px" },
+    { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 0, "max": 140, "step": 4, "default": 88, "unit": "px" }
   ],
   "blocks": [
     {
