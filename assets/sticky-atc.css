@@ -20,7 +20,9 @@
   transition-duration: 0.2s;
   transition-timing-function: ease;
 }
-
+.cky-btn-revisit-wrapper{
+  z-index:999 !important;
+}
 @media (max-width: 767.98px) {
   padding-bottom:40px;
 }
