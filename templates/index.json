@@ -242,12 +242,12 @@
         "text": "",
         "collection": "swaddle-wrap",
         "show_vendor": false,
-        "enable_carousel": false,
+        "enable_carousel": true,
         "grid": 3,
         "rows": 1,
         "color_scheme": "default",
         "show_view_all": true,
-        "full_width": false,
+        "full_width": true,
         "text_alignment": "start"
       }
     },
@@ -325,7 +325,7 @@
       ],
       "custom_css": [
         ".img-ar--cover img {object-fit: fill;}",
-        ".strongly-spaced-row, .fully-spaced-row--medium{margin-top:40px;}"
+        ".strongly-spaced-row,.fully-spaced-row--medium {margin-top: 40px;}"
       ],
       "name": "Our Materials",
       "settings": {
