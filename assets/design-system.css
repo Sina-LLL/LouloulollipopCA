@@ -489,6 +489,9 @@ button#annbar-localization-country-button{
 .price.price--on-sale.price--sold-out .price__default{
   display:flex;
 }
+.price__default{
+  line-height:0;
+}
 .price-label--sold-out{
   font-weight: 600;
 
