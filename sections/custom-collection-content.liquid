@@ -1,0 +1,45 @@
+{%- liquid
+  assign blocks = collection.metafields.content.blocks.value
+-%}
+
+{%- for b in blocks -%}
+  {%- liquid
+    assign layout = b.layout | default: 'prose'
+
+    # degrade when the layout has nothing to work with
+    if layout == 'media_split' or layout == 'emphasis_band'
+      if b.image == blank and layout == 'media_split'
+        assign layout = 'prose'
+      endif
+    endif
+
+    # never two identical layouts back to back
+    if forloop.index0 > 0
+      assign i = forloop.index0 | minus: 1
+      assign prev = blocks[i]
+      if prev.layout == layout and layout != 'prose'
+        assign layout = 'prose'
+      endif
+    endif
+
+    # banding derives from position, not from a field
+    assign mod = forloop.index0 | modulo: 2
+    assign band = 'cream'
+    if layout == 'emphasis_band'
+      assign band = 'blush'
+    elsif mod == 1
+      assign band = 'white'
+    endif
+
+    assign anchor = b.heading | handleize
+  -%}
+
+  <section id="{{ anchor }}" class="cc cc--{{ layout }} band-{{ band }}">
+    <h2>{{ b.heading }}</h2>
+    {%- if layout == 'media_split' or layout == 'emphasis_band' -%}
+      {%- render 'cc-media', block: b, layout: layout, flip: forloop.index0 -%}
+    {%- else -%}
+      <div class="cc__body">{{ b.body }}</div>
+    {%- endif -%}
+  </section>
+{%- endfor -%}
