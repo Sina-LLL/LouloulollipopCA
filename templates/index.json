@@ -387,7 +387,7 @@
             "collection": "sleepers",
             "tag": "",
             "image": "shopify://shop_images/BA1002U.SAF.4_1.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
+            "subheading": "Sleepers",
             "button_label": ""
           }
         },
@@ -407,7 +407,7 @@
             "collection": "swaddles",
             "tag": "",
             "image": "shopify://shop_images/SWUNB_1.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
+            "subheading": "Swaddles",
             "button_label": ""
           }
         },
@@ -467,7 +467,7 @@
             "collection": "crib-sheets",
             "tag": "",
             "image": "shopify://shop_images/CRIBFBK_01.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
+            "subheading": "Crib Sheets",
             "button_label": ""
           }
         },
@@ -477,7 +477,7 @@
             "collection": "pajamas",
             "tag": "",
             "image": "shopify://shop_images/KA1006U.ENG_01.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
+            "subheading": "Pajamas",
             "button_label": ""
           }
         },
