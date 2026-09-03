@@ -2131,6 +2131,9 @@ h4, .h4 {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: var(--lll-space-4);
   margin-top: var(--lll-space-6);
+  /* .rte ul sets margin-inline-start: 2em — reset it so the row lines up
+     with the heading above, not indented 32px from it. */
+  margin-inline-start: 0;
   padding: 0;
   list-style: none;
 }
@@ -2170,6 +2173,7 @@ h4, .h4 {
   counter-reset: cc-step;
   max-width: var(--cc-wide);
   margin-top: var(--lll-space-6);
+  margin-inline-start: 0;
   padding: 0;
   list-style: none;
   border-top: 1px solid var(--lll-slate-border);
@@ -2209,6 +2213,7 @@ h4, .h4 {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--lll-space-4);
   margin-top: var(--lll-space-6);
+  margin-inline-start: 0;
   padding: 0;
   list-style: none;
 }
