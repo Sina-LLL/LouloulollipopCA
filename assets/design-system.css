@@ -2242,7 +2242,7 @@ h4, .h4 {
 .cc__img {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: var(--lll-radius-lg);
 }
