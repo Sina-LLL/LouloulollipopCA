@@ -89,7 +89,7 @@
             "collection": "sleep-bags",
             "tag": "",
             "image": "shopify://shop_images/BA9004U.SAF.18_1.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
+            "subheading": "Sleep Bags",
             "button_label": ""
           }
         },
@@ -99,7 +99,7 @@
             "collection": "sleepers",
             "tag": "",
             "image": "shopify://shop_images/BA1002U.APS_Sleeper-AlphabetSmiles_01.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
+            "subheading": "Sleepers",
             "button_label": ""
           }
         },
@@ -109,7 +109,7 @@
             "collection": "crib-sheets",
             "tag": "",
             "image": "shopify://shop_images/CRIBBMB_180.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
+            "subheading": "Crib Sheets",
             "button_label": ""
           }
         },
@@ -119,7 +119,7 @@
             "collection": "pajamas",
             "tag": "",
             "image": "shopify://shop_images/KA1004U.MGD_1.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
+            "subheading": "Pajamas",
             "button_label": ""
           }
         },
@@ -129,7 +129,7 @@
             "collection": "swaddles",
             "tag": "",
             "image": "shopify://shop_images/SWPLANET_2.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
+            "subheading": "Swaddles",
             "button_label": ""
           }
         },
