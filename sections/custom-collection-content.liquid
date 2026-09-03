@@ -81,7 +81,6 @@
         assign prev_layout = layout
       -%}
 
-      <p style="background:yellow">DEBUG raw={{ b.layout.value | json }} layout={{ layout }} img={{ img | json }}</p>
       <section
         {% if anchor != blank %}id="{{ anchor }}"{% endif %}
         class="cc cc--{{ layout }} cc--band-{{ band }}{% if flip %} cc--flip{% endif %}{% if has_media %} cc--has-media{% endif %}"
