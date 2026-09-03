@@ -1,10 +1,10 @@
 {% comment %}
   ---------------------------------------------------------------------------
   Collection content
-  Renders collection.metafields.content.blocks — a list of
-  `collection_content_block` metaobject entries.
+  Renders collection.metafields.custom.content_blocks — a list of
+  `collection_content_blocks` metaobject entries.
 
-  Each entry supplies: heading (text) · body (rich text) · layout (choice) · image (file)
+  Each entry supplies: headline (text) · body (rich text) · layout (choice) · image (file)
 
   The section decides banding, image side, and layout fallbacks. Nothing here
   is collection-specific, and no layout requires copy the writer didn't supply.
@@ -12,9 +12,8 @@
   Styles live in design-system.css under "Collection content blocks".
   ---------------------------------------------------------------------------
 {% endcomment %}
-
 {%- liquid
-  assign blocks = collection.metafields.content.blocks.value
+  assign blocks = collection.metafields.custom.content_blocks.value
   assign prev_layout = ''
   assign media_count = 0
 -%}
@@ -29,7 +28,7 @@
       <nav class="cc-toc" aria-label="{{ section.settings.toc_label | escape }}">
         <div class="container cc-toc__row">
           {%- for b in blocks -%}
-            {%- assign h = b.heading.value -%}
+            {%- assign h = b.headline.value -%}
             {%- if h != blank -%}
               <a class="cc-toc__link" href="#{{ h | handleize }}">{{ h }}</a>
             {%- endif -%}
@@ -40,7 +39,7 @@
 
     {%- for b in blocks -%}
       {%- liquid
-        assign heading = b.heading.value
+        assign heading = b.headline.value
         assign img     = b.image.value
         assign layout  = b.layout.value | default: 'prose'
 
@@ -106,13 +105,13 @@
               </div>
               <div class="cc__col">
                 {%- if heading != blank -%}<h2 class="cc__h2">{{ heading }}</h2>{%- endif -%}
-                <div class="cc__body rte">{{ b.body }}</div>
+                <div class="cc__body rte">{{ b.body.value }}</div>
               </div>
 
             {%- when 'emphasis_band' -%}
               <div class="cc__col">
                 {%- if heading != blank -%}<h2 class="cc__h2">{{ heading }}</h2>{%- endif -%}
-                <div class="cc__body rte">{{ b.body }}</div>
+                <div class="cc__body rte">{{ b.body.value }}</div>
               </div>
               {%- if has_media -%}
                 <div class="cc__media">
@@ -132,7 +131,7 @@
             {%- else -%}
               {# prose · prose_split · definition_list · numbered_list · two_up #}
               {%- if heading != blank -%}<h2 class="cc__h2">{{ heading }}</h2>{%- endif -%}
-              <div class="cc__body rte">{{ b.body }}</div>
+              <div class="cc__body rte">{{ b.body.value }}</div>
 
           {%- endcase -%}
 
@@ -151,7 +150,7 @@
   "settings": [
     {
       "type": "paragraph",
-      "content": "Renders the blocks attached to this collection's content.blocks metafield. Add blocks in Content → Metaobjects, then attach them on the collection page."
+      "content": "Renders the blocks attached to this collection's custom.content_blocks metafield. Add blocks in Content → Metaobjects, then attach them on the collection page."
     },
     {
       "type": "header",
