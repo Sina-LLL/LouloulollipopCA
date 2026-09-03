@@ -2237,7 +2237,8 @@ h4, .h4 {
 .cc__img {
   display: block;
   width: 100%;
-  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
   border-radius: var(--lll-radius-lg);
 }
 
