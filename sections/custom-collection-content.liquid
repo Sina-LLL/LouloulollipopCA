@@ -41,7 +41,7 @@
       {%- liquid
         assign heading = b.headline.value
         assign img     = b.image.value
-        assign layout  = b.layout.value | default: 'prose'
+        assign layout  = b.layout.value | first | default: 'prose'
 
         # a media layout with no image is just prose
         if layout == 'media_split' and img == blank
