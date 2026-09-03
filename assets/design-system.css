@@ -2110,7 +2110,7 @@ h4, .h4 {
 
 @media (min-width: 769px) {
   .cc--prose_split .cc__body {
-    max-width: var(--cc-wide);
+    /* max-width: var(--cc-wide); */
     columns: 2;
     column-gap: var(--lll-space-12);
   }
