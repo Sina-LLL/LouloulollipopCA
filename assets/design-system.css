@@ -2036,14 +2036,6 @@ h4, .h4 {
   --cc-wide: 60rem;
 }
 
-/* The site's real content edge is .container.container--no-max (padding-x
-   only, no width cap) — this section's markup uses plain .container, which
-   caps at --page-container-width and re-centers, drifting from every other
-   section's left edge on wide viewports. Neutralize the cap to match. */
-.cc-sections .container {
-  max-width: none;
-}
-
 /* --- section shell + banding ---------------------------------------------- */
 
 .cc {
