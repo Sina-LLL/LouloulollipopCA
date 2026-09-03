@@ -105,13 +105,13 @@
               </div>
               <div class="cc__col">
                 {%- if heading != blank -%}<h2 class="cc__h2">{{ heading }}</h2>{%- endif -%}
-                <div class="cc__body rte">{{ b.body }}</div>
+                <div class="cc__body rte">{{ b.body | metafield_tag }}</div>
               </div>
 
             {%- when 'emphasis_band' -%}
               <div class="cc__col">
                 {%- if heading != blank -%}<h2 class="cc__h2">{{ heading }}</h2>{%- endif -%}
-                <div class="cc__body rte">{{ b.body }}</div>
+                <div class="cc__body rte">{{ b.body | metafield_tag }}</div>
               </div>
               {%- if has_media -%}
                 <div class="cc__media">
@@ -131,7 +131,7 @@
             {%- else -%}
               {# prose · prose_split · definition_list · numbered_list · two_up #}
               {%- if heading != blank -%}<h2 class="cc__h2">{{ heading }}</h2>{%- endif -%}
-              <div class="cc__body rte">{{ b.body }}</div>
+              <div class="cc__body rte">{{ b.body | metafield_tag }}</div>
 
           {%- endcase -%}
 
