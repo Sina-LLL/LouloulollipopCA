@@ -2068,6 +2068,12 @@ h4, .h4 {
   font-family: var(--lll-font-body);
   line-height: var(--lll-leading-body);
 }
+/* metafield_tag wraps rich text in its own div — collapse it out of the box
+   tree so every ".cc__body > *" rule below still reaches the real
+   paragraphs/lists instead of this one wrapper. */
+.cc__body > .metafield-rich_text_field {
+  display: contents;
+}
 .cc__body > * { margin: 0; }
 .cc__body > * + * { margin-top: var(--lll-space-4); }
 
