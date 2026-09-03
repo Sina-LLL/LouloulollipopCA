@@ -19,6 +19,12 @@ count    : {{ collection.metafields.content.blocks.value.size }}
 heading 1: {{ collection.metafields.content.blocks.value[0].heading.value }}
 layout  1: {{ collection.metafields.content.blocks.value[0].layout.value }}
 </pre>
+<pre style="background:#ffe;padding:12px;font:12px/1.5 monospace;white-space:pre-wrap">
+{% for ns in collection.metafields %}{{ ns[0] }}
+{% for f in ns[1] %}    {{ f[0] }} — {{ f[1].type }}
+{% endfor %}{% else %}(no storefront-visible metafields on this collection)
+{% endfor %}
+</pre>
 {%- liquid
   assign blocks = collection.metafields.content.blocks.value
   assign prev_layout = ''
