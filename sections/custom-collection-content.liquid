@@ -12,7 +12,13 @@
   Styles live in design-system.css under "Collection content blocks".
   ---------------------------------------------------------------------------
 {% endcomment %}
-
+<pre style="background:#ffe;padding:12px;font:12px/1.5 monospace;white-space:pre-wrap">
+exists   : {{ collection.metafields.content.blocks | json }}
+type     : {{ collection.metafields.content.blocks.type }}
+count    : {{ collection.metafields.content.blocks.value.size }}
+heading 1: {{ collection.metafields.content.blocks.value[0].heading.value }}
+layout  1: {{ collection.metafields.content.blocks.value[0].layout.value }}
+</pre>
 {%- liquid
   assign blocks = collection.metafields.content.blocks.value
   assign prev_layout = ''
