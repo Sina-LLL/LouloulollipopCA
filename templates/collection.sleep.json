@@ -13,6 +13,7 @@
       "type": "main-collection",
       "disabled": true,
       "settings": {
+        "show_breadcrumbs": true,
         "show_title": true,
         "show_image_behind_heading": true,
         "heading_image_height": "large",
@@ -49,6 +50,36 @@
         "rel_coll_grid_mobile": "2"
       }
     },
+    "rich_text_apdekU": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_WeHHFP": {
+          "type": "heading",
+          "settings": {
+            "title": "{{ collection.title }}",
+            "use_h1": true
+          }
+        },
+        "text_MYiit7": {
+          "type": "text",
+          "settings": {
+            "text": "{{ collection.description }}",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_WeHHFP",
+        "text_MYiit7"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "height": "medium",
+        "text_alignment": "center",
+        "full_width": false,
+        "color_scheme": "default"
+      }
+    },
     "collection_list_4KKNJE": {
       "type": "collection-list",
       "blocks": {
@@ -58,7 +89,7 @@
             "collection": "sleep-bags",
             "tag": "",
             "image": "shopify://shop_images/BA9004U.SAF.18_1.jpg",
-            "subheading": "Sleep Bags",
+            "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
         },
@@ -68,7 +99,7 @@
             "collection": "sleepers",
             "tag": "",
             "image": "shopify://shop_images/BA1002U.APS_Sleeper-AlphabetSmiles_01.jpg",
-            "subheading": "Sleepers",
+            "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
         },
@@ -78,7 +109,7 @@
             "collection": "crib-sheets",
             "tag": "",
             "image": "shopify://shop_images/CRIBBMB_180.jpg",
-            "subheading": "Crib Sheets",
+            "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
         },
@@ -88,7 +119,7 @@
             "collection": "pajamas",
             "tag": "",
             "image": "shopify://shop_images/KA1004U.MGD_1.jpg",
-            "subheading": "Pajamas",
+            "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
         },
@@ -98,7 +129,7 @@
             "collection": "swaddles",
             "tag": "",
             "image": "shopify://shop_images/SWPLANET_2.jpg",
-            "subheading": "Swaddles",
+            "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
         },
@@ -225,6 +256,7 @@
       "name": "Featured collection",
       "settings": {
         "title": "Sweet Dreams Are Made With These",
+        "heading_size": "h4",
         "text": "<p>Our bedtime best sellers</p>",
         "collection": "best-selling-sleep",
         "show_vendor": false,
@@ -242,6 +274,7 @@
       "name": "Featured collection",
       "settings": {
         "title": "Lightweight Sleep Bags",
+        "heading_size": "h4",
         "text": "<p>Soft, airy, and just right for warm nights </p>",
         "collection": "0-5-tog",
         "show_vendor": false,
@@ -266,6 +299,7 @@
           "sleeper-bumble-bees",
           "sleeper-magical-dragons"
         ],
+        "products_per_row": "auto",
         "button_label": "Shop Sleepers",
         "link": "shopify://collections/sleepers",
         "button_style": "primary",
@@ -277,6 +311,7 @@
       "name": "Featured collection",
       "settings": {
         "title": "Wrapped Up Just Right",
+        "heading_size": "h4",
         "text": "<p>Cozy, breathable swaddles to help baby sleep tight, all night</p>",
         "collection": "swaddles",
         "show_vendor": false,
@@ -294,6 +329,7 @@
       "name": "Featured collection",
       "settings": {
         "title": "Cozy Crib Sheets",
+        "heading_size": "h4",
         "text": "<p>Soft and gentle for baby’s best sleep </p>",
         "collection": "crib-sheets",
         "show_vendor": false,
@@ -305,10 +341,42 @@
         "full_width": false,
         "text_alignment": "start"
       }
+    },
+    "custom_collection_content_km4Brf": {
+      "type": "custom-collection-content",
+      "name": "Collection content",
+      "settings": {
+        "show_toc": false,
+        "toc_label": "On this page",
+        "animate": true,
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "collapsible_tabs_6MJgax": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "question_M9DCXQ": {
+          "type": "question",
+          "repeater": "{{ collection.metafields.custom.faqs.value }}",
+          "settings": {
+            "title": "{{ block.repeater.question.value }}",
+            "answer": "{{ block.repeater.answers | metafield_tag }}"
+          }
+        }
+      },
+      "block_order": [
+        "question_M9DCXQ"
+      ],
+      "name": "Collapsible tabs",
+      "settings": {
+        "title": "Baby Sleep Essentials FAQs"
+      }
     }
   },
   "order": [
     "main",
+    "rich_text_apdekU",
     "collection_list_4KKNJE",
     "gallery_xaHCdy",
     "product_list_jGJn7D",
@@ -316,6 +384,8 @@
     "featured_collection_BFFzFH",
     "custom_product_highlight_pTqNGi",
     "featured_collection_YUXjBF",
-    "featured_collection_gfYhgH"
+    "featured_collection_gfYhgH",
+    "custom_collection_content_km4Brf",
+    "collapsible_tabs_6MJgax"
   ]
 }
