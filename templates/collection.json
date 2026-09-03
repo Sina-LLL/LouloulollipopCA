@@ -51,7 +51,6 @@
     },
     "custom_collection_content_F7d8FN": {
       "type": "custom-collection-content",
-      "disabled": true,
       "name": "Collection content",
       "settings": {
         "show_toc": false,
