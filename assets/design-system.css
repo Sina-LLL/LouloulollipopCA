@@ -2141,6 +2141,10 @@ h4, .h4 {
   background: var(--lll-white);
   border: 1px solid var(--lll-slate-border);
   border-radius: var(--lll-radius-lg);
+  /* list-style-type is inherited from the ul's "none" above, but the theme's
+     .rte ul li sets it directly on this element, and a direct declaration
+     always wins over an inherited one — so it has to be reset here too. */
+  list-style: none;
 }
 .cc--band-white.cc--definition_list .cc__body ul li { background: var(--lll-cream); }
 
@@ -2179,6 +2183,9 @@ h4, .h4 {
   margin: 0;
   padding-block: var(--lll-space-5);
   border-bottom: 1px solid var(--lll-slate-border);
+  /* same inherited-vs-direct fight as definition_list — .rte ol li sets its
+     own decimal marker directly on the element, overriding the ol's "none". */
+  list-style: none;
 }
 
 .cc--numbered_list .cc__body ol li::before {
@@ -2212,6 +2219,7 @@ h4, .h4 {
   background: var(--lll-white);
   border: 1px solid var(--lll-slate-border);
   border-radius: var(--lll-radius-lg);
+  list-style: none;
 }
 .cc--band-white.cc--two_up .cc__body ul li { background: var(--lll-cream); }
 
