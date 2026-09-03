@@ -12,6 +12,7 @@
     "main": {
       "type": "main-collection",
       "settings": {
+        "show_breadcrumbs": true,
         "show_title": true,
         "show_image_behind_heading": false,
         "heading_image_height": "large",
@@ -46,6 +47,18 @@
         "rel_coll_gall_text_placement": true,
         "rel_coll_gall_text_alignment": "bottom left",
         "rel_coll_grid_mobile": "2"
+      }
+    },
+    "custom_collection_content_F7d8FN": {
+      "type": "custom-collection-content",
+      "disabled": true,
+      "name": "Collection content",
+      "settings": {
+        "show_toc": false,
+        "toc_label": "On this page",
+        "animate": true,
+        "padding_top": 48,
+        "padding_bottom": 48
       }
     },
     "collapsible_tabs_xCNcnJ": {
@@ -110,6 +123,7 @@
   },
   "order": [
     "main",
+    "custom_collection_content_F7d8FN",
     "collapsible_tabs_xCNcnJ",
     "multi_column_nq8tP6"
   ]
