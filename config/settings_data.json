@@ -566,11 +566,6 @@
         "disabled": false,
         "settings": {}
       },
-      "14815887870077050570": {
-        "type": "shopify://apps/bazaarvoice-reviews-photos/blocks/bvjs_block/766ed9d3-b120-48f3-8444-448f45152f47",
-        "disabled": true,
-        "settings": {}
-      },
       "14060646107696862457": {
         "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": false,
@@ -578,6 +573,11 @@
       },
       "3321008817146872308": {
         "type": "shopify://apps/comergent-aeo-agentic-commerce/blocks/open-ai-pixels/019a4daa-4b39-75cd-9fb0-1a15665c4bbe",
+        "disabled": false,
+        "settings": {}
+      },
+      "2567389343055140935": {
+        "type": "shopify://apps/microsoft-clarity/blocks/clarity_js/31c3d126-8116-4b4a-8ba1-baeda7c4aeea",
         "disabled": false,
         "settings": {}
       },
@@ -590,8 +590,8 @@
           "global_button_color": "#ffffff",
           "global_button_text_color": "#4f676e",
           "global_button_text": "ADD TO REGISTRY",
+          "global_button_text_logged_out": "Create your registry",
           "global_button_width": "100%",
-          "global_button_classes": "AddToRegistryBtn",
           "global_button_font_weight": 600,
           "global_button_text_size": 14,
           "global_button_padding_horizontal": 16,
@@ -600,31 +600,30 @@
           "global_button_margin_bottom": 0,
           "global_button_border_width": 0,
           "global_button_border_color": "#d9e1e4",
-          "global_button_border_radius": 12
+          "global_button_border_radius": 12,
+          "global_button_classes": "AddToRegistryBtn",
+          "global_button_new_manager_enabled": true
         }
       },
       "3552487190306752820": {
         "type": "shopify://apps/little-registry/blocks/global-button/e928f21e-8b62-4c7f-85ee-59d669dbe8d9",
         "disabled": false,
         "settings": {
+          "lr__manager_style": "label",
+          "global_button_alignment": "center-left",
           "global_button_color": "#4f676e",
           "global_button_text_color": "#ffffff",
           "global_button_text": "Gift Registry",
           "global_button_text_size": 14,
           "global_button_padding_horizontal": 16,
           "global_button_padding_vertical": 8,
-          "global_button_alignment": "right",
           "global_button_position_horizontal": 2,
           "global_button_position_vertical": 2,
           "global_button_border_width": 0,
           "global_button_border_color": "#ffffff",
-          "global_button_border_radius": 30
+          "global_button_border_radius": 30,
+          "global_button_new_manager_enabled": true
         }
-      },
-      "2567389343055140935": {
-        "type": "shopify://apps/microsoft-clarity/blocks/clarity_js/31c3d126-8116-4b4a-8ba1-baeda7c4aeea",
-        "disabled": false,
-        "settings": {}
       }
     }
   }

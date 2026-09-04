@@ -59,6 +59,7 @@
       "type": "main-page",
       "disabled": true,
       "settings": {
+        "show_breadcrumbs": true,
         "show_page_title": true,
         "full_width": false
       }
@@ -84,7 +85,8 @@
             "find_button_text": "FIND A REGISTRY",
             "button_border_radius": 12,
             "button_padding_horizontal": 15,
-            "button_padding_vertical": 12
+            "button_padding_vertical": 12,
+            "hero_new_manager_enabled": true
           }
         }
       },
