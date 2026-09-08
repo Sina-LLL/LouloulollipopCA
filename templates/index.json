@@ -25,7 +25,7 @@
           "settings": {
             "collection": "swaddle-wrap",
             "image": "shopify://shop_images/Baby_Sleep_Sack_Swaddle_Wrap_Zipper_Detail_-_Magical_Dragons.jpg",
-            "label": ""
+            "label": "Swaddle Wraps"
           }
         },
         "collection_m8xPFH": {
@@ -36,25 +36,32 @@
             "label": "Sleep Bags"
           }
         },
+        "collection_Lgi9eV": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "label": "Sleep Bags"
+          }
+        },
         "collection_b9cNhg": {
           "type": "collection",
           "settings": {
             "collection": "sleepers",
-            "label": ""
+            "label": "Sleepers"
           }
         },
         "collection_bgepzf": {
           "type": "collection",
           "settings": {
             "collection": "long-sleeve-bibs",
-            "label": ""
+            "label": "Long Sleeve Bibs"
           }
         },
         "collection_DRa4yR": {
           "type": "collection",
           "settings": {
             "collection": "silicone-bibs",
-            "label": ""
+            "label": "Silicone Bibs"
           }
         },
         "collection_nT7naG": {
@@ -62,7 +69,7 @@
           "settings": {
             "collection": "pacifier-clips",
             "image": "shopify://shop_images/SILCPOCWHT_Pacifier_Clip_-_OneC_-_White_51WEB.jpg",
-            "label": ""
+            "label": "pacifier Clips"
           }
         },
         "collection_7DfJXw": {
@@ -70,7 +77,7 @@
           "settings": {
             "collection": "swaddles",
             "image": "shopify://shop_images/SWBMB_Muslin_Swaddle_Bumble_Bees_53.jpg",
-            "label": ""
+            "label": "Swaddles"
           }
         },
         "collection_WGD3FG": {
@@ -85,6 +92,7 @@
         "collection_H8wgyR",
         "collection_ngaEpL",
         "collection_m8xPFH",
+        "collection_Lgi9eV",
         "collection_b9cNhg",
         "collection_bgepzf",
         "collection_DRa4yR",
