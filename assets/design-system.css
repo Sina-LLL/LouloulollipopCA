@@ -2329,4 +2329,6 @@ line-height: 0.73344rem; /* 97.792% */
 letter-spacing: 0.00375rem;
 text-transform: uppercase;
 background-color: var(--lll-sale);
+border-radius: 0.25rem;
+padding: 2px;
 }
