@@ -12,13 +12,24 @@
     "main": {
       "type": "custom-main-product",
       "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
         "judge_me_reviews_preview_badge_DVkDne": {
           "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {}
         },
-        "title": {
-          "type": "title",
-          "settings": {}
+        "text_Ey4aL9": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.custom.product_template.value.hook.value }}",
+            "icon": "",
+            "icon_size": "small",
+            "enable_box": false,
+            "box_color": "#e0f4d5",
+            "show_in_quickbuy": false
+          }
         },
         "price": {
           "type": "price",
@@ -90,46 +101,70 @@
         "description": {
           "type": "description",
           "settings": {
-            "show_in_tab": false,
+            "show_in_tab": true,
             "open_tab": false,
             "icon": "",
             "show_in_quickbuy": false
           }
         },
-        "material_usp_g7Lfaj": {
-          "type": "material-usp",
-          "settings": {}
-        },
         "accordion_yktgxC": {
           "type": "accordion",
-          "disabled": true,
           "settings": {
-            "title": "Materials & Care",
+            "title": "Why We Love It",
             "icon": "",
-            "content": "",
+            "content": "{{ product.metafields.custom.product_template.value.why_we_love_it | metafield_tag }}",
             "page": "",
-            "custom_liquid": "{{ product.metafields.custom.materials_care.value }}",
+            "custom_liquid": "",
             "open": false,
             "show_in_quickbuy": false
           }
         },
         "accordion_KqCkWX": {
           "type": "accordion",
-          "disabled": true,
           "settings": {
-            "title": "Shipping & Returns",
+            "title": "The Details",
             "icon": "",
-            "content": "<p>Free Canada Shipping over $100</p><p>Flat rate shipping on everything else — $12 standard shipping in BC, $18 rest of Canada<br/><br/><a href=\"/pages/faqs\" title=\"FAQs\">See Details</a></p>",
+            "content": "{{ product.metafields.custom.product_template.value.the_details | metafield_tag }}",
             "page": "",
             "custom_liquid": "",
             "open": false,
             "show_in_quickbuy": false
           }
+        },
+        "accordion_J9PWpT": {
+          "type": "accordion",
+          "settings": {
+            "title": "Materials & Care",
+            "icon": "",
+            "content": "<p>{{ product.metafields.custom.materials_care | metafield_tag }}</p><p>Machine wash cold and tumble dry low. Don't bleach, and don't iron the printed areas. Two or three washes a week is the baby-laundry baseline — TENCEL™ is built for exactly that cadence.</p>",
+            "page": "",
+            "custom_liquid": "",
+            "open": false,
+            "show_in_quickbuy": false
+          }
+        },
+        "accordion_xTzVna": {
+          "type": "accordion",
+          "settings": {
+            "title": "SWATCH",
+            "icon": "",
+            "content": "",
+            "page": "",
+            "custom_liquid": "",
+            "open": false,
+            "show_in_quickbuy": false
+          }
+        },
+        "material_usp_g7Lfaj": {
+          "type": "material-usp",
+          "disabled": true,
+          "settings": {}
         }
       },
       "block_order": [
-        "judge_me_reviews_preview_badge_DVkDne",
         "title",
+        "judge_me_reviews_preview_badge_DVkDne",
+        "text_Ey4aL9",
         "price",
         "variant-picker",
         "feature_rating_HL8RN4",
@@ -138,9 +173,11 @@
         "complementary_d3EJbm",
         "pr_mentions_qbKGbp",
         "description",
-        "material_usp_g7Lfaj",
         "accordion_yktgxC",
-        "accordion_KqCkWX"
+        "accordion_KqCkWX",
+        "accordion_J9PWpT",
+        "accordion_xTzVna",
+        "material_usp_g7Lfaj"
       ],
       "settings": {
         "show_breadcrumbs": true,
