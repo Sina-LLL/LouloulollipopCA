@@ -601,8 +601,7 @@
           "global_button_border_width": 0,
           "global_button_border_color": "#d9e1e4",
           "global_button_border_radius": 12,
-          "global_button_classes": "AddToRegistryBtn",
-          "global_button_new_manager_enabled": true
+          "global_button_classes": "AddToRegistryBtn"
         }
       },
       "3552487190306752820": {
@@ -621,8 +620,24 @@
           "global_button_position_vertical": 2,
           "global_button_border_width": 0,
           "global_button_border_color": "#ffffff",
-          "global_button_border_radius": 30,
-          "global_button_new_manager_enabled": true
+          "global_button_border_radius": 30
+        }
+      },
+      "6225119484267483809": {
+        "type": "shopify://apps/ethos/blocks/loyalty-color-config/e6f2bd3b-e2fd-4f16-b73c-bf198b58bb45",
+        "disabled": false,
+        "settings": {
+          "background_color": "",
+          "text_color": "",
+          "headline_color": "",
+          "primary_button_background": "#59757D",
+          "primary_button_text_color": "#FFFFFF",
+          "secondary_button_background": "#59757D",
+          "secondary_button_text_color": "#FFFFFF",
+          "card_background_color": "",
+          "border_color": "",
+          "accent_color": "",
+          "accent_text_color": ""
         }
       }
     }
