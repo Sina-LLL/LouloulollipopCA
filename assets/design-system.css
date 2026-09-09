@@ -2310,3 +2310,8 @@ h4, .h4 {
 .product-info-block{
   font-size: 14px;
 }
+.product-form .lightly-spaced-row{
+  margin-bottom: 4px;
+  margin-top: 4px;
+
+}
