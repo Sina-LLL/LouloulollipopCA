@@ -952,6 +952,9 @@ carousel-slider.mobile-only.custom-features-carousel{
   .product-media.product-media--image .img-ar--contain img{
     object-fit:cover;
   }
+  .product-media.product-media--video.product-media--frame{
+    padding-bottom: 150% !important;
+  }
   .custom-product-features__wrapper {
     padding: 28px 40px;
     margin: 20px 20px;
