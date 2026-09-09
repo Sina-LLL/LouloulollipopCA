@@ -106,6 +106,7 @@
             "media_type": "image",
             "media_position": "left",
             "content_position": "center",
+            "image": "shopify://shop_images/Baby_Sleeper_in_TENCEL_Lyocell_-_Planets.jpg",
             "use_global_colors": false,
             "background_color": "",
             "headline_color": "",
@@ -129,6 +130,7 @@
         "ethos_landing_page_members_editorial_DLzCjE": {
           "type": "shopify://apps/ethos/blocks/landing-page-members-editorial/e6f2bd3b-e2fd-4f16-b73c-bf198b58bb45",
           "settings": {
+            "image": "shopify://shop_images/Kids_Muslin_Blanket_-_Sushi.jpg",
             "image_position": "right",
             "content_padding": 56,
             "list_gap": 8,
@@ -225,7 +227,7 @@
         "ethos_landing_page_table_3y68yH": {
           "type": "shopify://apps/ethos/blocks/landing-page-table/e6f2bd3b-e2fd-4f16-b73c-bf198b58bb45",
           "settings": {
-            "layout": "cards",
+            "layout": "table",
             "header_alignment": "center",
             "use_global_colors": false,
             "background_color": "",
