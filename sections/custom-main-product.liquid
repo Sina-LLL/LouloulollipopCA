@@ -298,11 +298,10 @@
             {% endif %} {% endcomment %}
             <div class="price-container" {{ block.shopify_attributes }}>
               <div class="product-info__price product-price product-price--large">
-                {% render 'price', product: product, show_currency_code: settings.product_currency_code_enabled, for_variant_picker: true, current_variant: current_variant %}
                 {% if product.tags contains "MoreToLoveDiscount" %}
                   <p class="MoreToLove">Buy Any 3 & Save 10%</p>
                 {% endif %} 
-
+                {% render 'price', product: product, show_currency_code: settings.product_currency_code_enabled, for_variant_picker: true, current_variant: current_variant %}
               </div>
 
               <div class="price-descriptors">
