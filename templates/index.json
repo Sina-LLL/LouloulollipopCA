@@ -25,7 +25,7 @@
           "settings": {
             "collection": "swaddle-wrap",
             "image": "shopify://shop_images/Baby_Sleep_Sack_Swaddle_Wrap_Zipper_Detail_-_Magical_Dragons.jpg",
-            "label": ""
+            "label": "Swaddle Wraps"
           }
         },
         "collection_m8xPFH": {
@@ -40,21 +40,21 @@
           "type": "collection",
           "settings": {
             "collection": "sleepers",
-            "label": ""
+            "label": "Sleepers"
           }
         },
         "collection_bgepzf": {
           "type": "collection",
           "settings": {
             "collection": "long-sleeve-bibs",
-            "label": ""
+            "label": "Long Sleeve Bibs"
           }
         },
         "collection_DRa4yR": {
           "type": "collection",
           "settings": {
             "collection": "silicone-bibs",
-            "label": ""
+            "label": "Silicone Bibs"
           }
         },
         "collection_nT7naG": {
@@ -62,7 +62,7 @@
           "settings": {
             "collection": "pacifier-clips",
             "image": "shopify://shop_images/SILCPOCWHT_Pacifier_Clip_-_OneC_-_White_51WEB.jpg",
-            "label": ""
+            "label": "pacifier Clips"
           }
         },
         "collection_7DfJXw": {
@@ -70,7 +70,7 @@
           "settings": {
             "collection": "swaddles",
             "image": "shopify://shop_images/SWBMB_Muslin_Swaddle_Bumble_Bees_53.jpg",
-            "label": ""
+            "label": "Swaddles"
           }
         },
         "collection_WGD3FG": {
@@ -242,12 +242,12 @@
         "text": "",
         "collection": "swaddle-wrap",
         "show_vendor": false,
-        "enable_carousel": false,
+        "enable_carousel": true,
         "grid": 3,
         "rows": 1,
         "color_scheme": "default",
         "show_view_all": true,
-        "full_width": false,
+        "full_width": true,
         "text_alignment": "start"
       }
     },
@@ -325,7 +325,7 @@
       ],
       "custom_css": [
         ".img-ar--cover img {object-fit: fill;}",
-        ".strongly-spaced-row, .fully-spaced-row--medium{margin-top:40px;}"
+        ".strongly-spaced-row,.fully-spaced-row--medium {margin-top: 40px;}"
       ],
       "name": "Our Materials",
       "settings": {
@@ -387,7 +387,7 @@
             "collection": "sleepers",
             "tag": "",
             "image": "shopify://shop_images/BA1002U.SAF.4_1.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
+            "subheading": "Sleepers",
             "button_label": ""
           }
         },
@@ -407,7 +407,7 @@
             "collection": "swaddles",
             "tag": "",
             "image": "shopify://shop_images/SWUNB_1.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
+            "subheading": "Swaddles",
             "button_label": ""
           }
         },
@@ -467,7 +467,7 @@
             "collection": "crib-sheets",
             "tag": "",
             "image": "shopify://shop_images/CRIBFBK_01.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
+            "subheading": "Crib Sheets",
             "button_label": ""
           }
         },
@@ -477,7 +477,7 @@
             "collection": "pajamas",
             "tag": "",
             "image": "shopify://shop_images/KA1006U.ENG_01.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
+            "subheading": "Pajamas",
             "button_label": ""
           }
         },
