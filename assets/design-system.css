@@ -2319,7 +2319,7 @@ h4, .h4 {
   display:none;
 }
 .MoreToLove{
-color: --lll-cream;
+color: var(--lll-cream);
 text-align: center;
 font-family: "Avenir Next";
 font-size: 0.75rem;
@@ -2328,5 +2328,5 @@ font-weight: 600;
 line-height: 0.73344rem; /* 97.792% */
 letter-spacing: 0.00375rem;
 text-transform: uppercase;
-background-color:--lll-sale;
+background-color: var(--lll-sale);
 }
