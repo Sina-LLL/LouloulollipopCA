@@ -2332,3 +2332,7 @@ background-color: var(--lll-sale);
 border-radius: 0.25rem;
 padding: 4px 8px;
 }
+.disclosure{
+      border-top: 0.5px solid rgb(var(--body-text-color) / .15);
+    border-bottom: 0.5px solid rgb(var(--body-text-color) / .15);
+}
