@@ -2304,3 +2304,9 @@ h4, .h4 {
 @media (prefers-reduced-motion: reduce) {
   .cc-toc__link { transition: none; }
 }
+
+
+/* PDP Update */
+.product-info-block{
+  font-size: 14px;
+}
