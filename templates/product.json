@@ -330,7 +330,7 @@
       "settings": {
         "height": "medium",
         "text_alignment": "left",
-        "full_width": false,
+        "full_width": true,
         "color_scheme": "default"
       }
     },
