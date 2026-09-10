@@ -360,7 +360,7 @@
       ],
       "name": "Image with text",
       "settings": {
-        "image": "shopify://shop_images/LoulouJune2026Edits-04694-SAF.jpg",
+        "image": "{{ product.metafields.custom.product_template.value.safety_message_image.value }}",
         "image_width": 700,
         "image_link": "",
         "image_position": "right",
