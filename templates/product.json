@@ -75,6 +75,16 @@
             "show_gift_card_recipient": true
           }
         },
+        "usp_Whm8xh": {
+          "type": "USP",
+          "repeater": "{{ product.metafields.custom.product_template.value.usp_icons.value }}",
+          "settings": {
+            "text": "{{ block.repeater.title.value }}",
+            "icon": "",
+            "custom_icon": "{{ block.repeater.icon.value }}",
+            "icon_size": "large"
+          }
+        },
         "complementary_d3EJbm": {
           "type": "complementary",
           "disabled": true,
@@ -126,7 +136,7 @@
           "settings": {
             "title": "Materials & Care",
             "icon": "",
-            "content": "<p>{{ product.metafields.custom.materials_care | metafield_tag }}</p><p>Machine wash cold and tumble dry low. Don't bleach, and don't iron the printed areas. Two or three washes a week is the baby-laundry baseline \u2014 TENCEL\u2122 is built for exactly that cadence.</p>",
+            "content": "<p>{{ product.metafields.custom.materials_care | metafield_tag }}</p><p>Machine wash cold and tumble dry low. Don't bleach, and don't iron the printed areas. Two or three washes a week is the baby-laundry baseline — TENCEL™ is built for exactly that cadence.</p>",
             "page": "",
             "custom_liquid": "",
             "open": false,
@@ -149,10 +159,6 @@
           "type": "material-usp",
           "disabled": true,
           "settings": {}
-        },
-        "auto_usp_grid_1": {
-          "type": "auto_usp_grid",
-          "settings": {}
         }
       },
       "block_order": [
@@ -163,7 +169,7 @@
         "variant-picker",
         "feature_rating_HL8RN4",
         "buy-buttons",
-        "auto_usp_grid_1",
+        "usp_Whm8xh",
         "complementary_d3EJbm",
         "pr_mentions_qbKGbp",
         "description",
@@ -193,6 +199,133 @@
         "enable_video_looping": true,
         "enable_media_grouping": false,
         "media_grouping_option": "Color,Colour,Couleur,Farbe"
+      }
+    },
+    "logo_list_rDpCbA": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_rtiPnA": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Certified_B_Corporation_B_Corp_Logo_2022_Black_RGB_svg.webp",
+            "image_width": 80,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_HiJFNy": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Benefits-of-Partnering-with-a-WBENC-Certified-Women-Business-Enterprise-Public-Relations-and-Marketing-Agency-feature.webp",
+            "image_width": 160,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_Yz9iRC": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/OEKO_TEX.png",
+            "image_width": 80,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_CHqmkb": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/30Day_Return_56dd8d70-3237-4ca1-91b8-395f7e213e96.png",
+            "image_width": 100,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_p8qri8": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Free_ShippingCA.png",
+            "image_width": 100,
+            "link": "",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_rtiPnA",
+        "logo_HiJFNy",
+        "logo_Yz9iRC",
+        "logo_CHqmkb",
+        "logo_p8qri8"
+      ],
+      "name": "Logo list",
+      "settings": {
+        "title": "",
+        "enable_carousel": false,
+        "carousel_speed": 30,
+        "image_opacity": 100,
+        "color_scheme": "default"
+      }
+    },
+    "multi_column_M4Nxjr": {
+      "type": "multi-column",
+      "blocks": {
+        "text_block_D4y3Hj": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": true,
+            "image": "shopify://shop_images/Certified_B_Corporation_B_Corp_Logo_2022_Black_RGB_svg.webp",
+            "title": "Add a title or tagline",
+            "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
+            "button_label": "",
+            "link": ""
+          }
+        },
+        "text_block_md99ri": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": true,
+            "image": "shopify://shop_images/Benefits-of-Partnering-with-a-WBENC-Certified-Women-Business-Enterprise-Public-Relations-and-Marketing-Agency-feature.webp",
+            "title": "Add a title or tagline",
+            "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
+            "button_label": "",
+            "link": ""
+          }
+        },
+        "text_block_haMRmn": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": true,
+            "title": "Add a title or tagline",
+            "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
+            "button_label": "",
+            "link": ""
+          }
+        },
+        "text_block_neg6tq": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": true,
+            "title": "Add a title or tagline",
+            "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
+            "button_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_D4y3Hj",
+        "text_block_md99ri",
+        "text_block_haMRmn",
+        "text_block_neg6tq"
+      ],
+      "name": "Multi-column",
+      "settings": {
+        "title": "Multi-column",
+        "media_aspect_ratio": "s",
+        "media_width": 700,
+        "text_alignment": "center",
+        "button_style": "primary",
+        "color_scheme": "default"
       }
     },
     "custom_product_features_g6K7P8": {
@@ -288,6 +421,8 @@
   },
   "order": [
     "main",
+    "logo_list_rDpCbA",
+    "multi_column_M4Nxjr",
     "custom_product_features_g6K7P8",
     "custom_product_list_by_print_Nbxwnx",
     "related-products",
