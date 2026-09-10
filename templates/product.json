@@ -143,7 +143,7 @@
             "title": "{{ product.metafields.custom.design.value.name.value }}",
             "icon": "",
             "content": "<p>{{ product.metafields.custom.design.value.design_description | metafield_tag }}</p>",
-            "image": "{{ metaobjects.design[\"english-garden\"].colour_pattern.value.image.value }}",
+            "image": "{{ product.metafields.custom.design.value.colour_pattern.value.image.value }}",
             "page": "",
             "custom_liquid": "",
             "open": false,
