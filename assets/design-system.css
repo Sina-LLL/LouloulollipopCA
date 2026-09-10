@@ -2382,3 +2382,10 @@ h1.product-title{
   font-size: 14px;
   line-height: 1.35;
 }
+
+.product-info-accordion__image {
+  margin-bottom: 16px;
+}
+.product-info-accordion__image img {
+  display: block;
+}
