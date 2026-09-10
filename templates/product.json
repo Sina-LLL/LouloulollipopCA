@@ -75,15 +75,9 @@
             "show_gift_card_recipient": true
           }
         },
-        "usp_Whm8xh": {
-          "type": "USP",
-          "repeater": "{{ product.metafields.custom.product_template.value.usp_icons.value }}",
-          "settings": {
-            "text": "{{ block.repeater.title.value }}",
-            "icon": "",
-            "custom_icon": "{{ block.repeater.icon.value }}",
-            "icon_size": "large"
-          }
+        "auto_usp_grid_1": {
+          "type": "auto_usp_grid",
+          "settings": {}
         },
         "complementary_d3EJbm": {
           "type": "complementary",
@@ -170,7 +164,7 @@
         "variant-picker",
         "feature_rating_HL8RN4",
         "buy-buttons",
-        "usp_Whm8xh",
+        "auto_usp_grid_1",
         "complementary_d3EJbm",
         "pr_mentions_qbKGbp",
         "description",
