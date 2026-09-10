@@ -128,7 +128,9 @@
         "auto_materials_care_1": {
           "type": "auto_materials_care",
           "settings": {
-            "title": "Materials & Care"
+            "title": "Materials & Care",
+            "open": false,
+            "show_in_quickbuy": false
           }
         },
         "accordion_xTzVna": {
@@ -136,8 +138,20 @@
           "settings": {
             "title": "{{ product.metafields.custom.design.value.name.value }}",
             "icon": "",
-            "content": "<p>{{ product.metafields.custom.design.value.design_description | metafield_tag }}</p>",
+            "content": "{{ product.metafields.custom.design.value.design_description | metafield_tag }}",
             "image": "{{ product.metafields.custom.design.value.colour_pattern.value.image.value }}",
+            "page": "",
+            "custom_liquid": "",
+            "open": false,
+            "show_in_quickbuy": false
+          }
+        },
+        "accordion_3wmzgQ": {
+          "type": "accordion",
+          "settings": {
+            "title": "Shipping & Returns",
+            "icon": "",
+            "content": "<p>We ship every order from right here in Canada. Orders over $100 CAD ship free within Canada; smaller orders are a flat $12 (BC) or $15 (rest of Canada), with most arriving in 5–10 business days. We also ship internationally with tracking included — duties and taxes are calculated at checkout and are the recipient's responsibility.</p><p>Change your mind? Regular-priced items can be returned within 30 days of purchase, as long as they're unworn, unwashed, and unused with original tags and packaging intact. Sale and marked-down items are final sale.<br/></p>",
             "page": "",
             "custom_liquid": "",
             "open": false,
@@ -166,6 +180,7 @@
         "accordion_KqCkWX",
         "auto_materials_care_1",
         "accordion_xTzVna",
+        "accordion_3wmzgQ",
         "material_usp_g7Lfaj"
       ],
       "settings": {
