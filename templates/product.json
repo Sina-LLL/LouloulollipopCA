@@ -221,14 +221,9 @@
         "section_heading": "Why Parents Love This"
       }
     },
-    "custom_product_material_care_AB9yyi": {
-      "type": "custom-product-material-care",
-      "settings": {
-        "section_heading": "Material & Care"
-      }
-    },
     "custom_product_list_by_print_Nbxwnx": {
       "type": "custom-product-list-by-print",
+      "disabled": true,
       "custom_css": [
         ".collection-slider-row {padding-bottom: 0;}"
       ],
@@ -275,15 +270,35 @@
         "full_width": false,
         "show_space": true
       }
+    },
+    "collapsible_tabs_T6tNKd": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "question_9Y8Dkm": {
+          "type": "question",
+          "repeater": "{{ product.metafields.custom.product_template.value.faqs.value }}",
+          "settings": {
+            "title": "{{ block.repeater.question.value }}",
+            "answer": "{{ block.repeater.answers | metafield_tag }}"
+          }
+        }
+      },
+      "block_order": [
+        "question_9Y8Dkm"
+      ],
+      "name": "Collapsible tabs",
+      "settings": {
+        "title": "FAQs"
+      }
     }
   },
   "order": [
     "main",
     "custom_product_features_g6K7P8",
-    "custom_product_material_care_AB9yyi",
     "custom_product_list_by_print_Nbxwnx",
     "related-products",
     "mux_video_embed_xaVxRV",
-    "1775971838981c2d24"
+    "1775971838981c2d24",
+    "collapsible_tabs_T6tNKd"
   ]
 }
