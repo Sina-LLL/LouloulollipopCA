@@ -260,7 +260,8 @@
       ],
       "custom_css": [
         "#section-id-template--18966821830759__logo_list_rDpCbA h2.hometitle.h4.align-center.spaced-row.cc-animate-init.cc-animate-in {display: none;}",
-        "#section-id-template--18966821830759__logo_list_rDpCbA {padding: 20px 0;}"
+        "#section-id-template--18966821830759__logo_list_rDpCbA {padding: 2px 0;}",
+        "#section-id-template--18966821830759__logo_list_rDpCbA .logo-list{margin-bottom: 0;}"
       ],
       "name": "Logo list",
       "settings": {
