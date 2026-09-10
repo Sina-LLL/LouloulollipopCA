@@ -588,7 +588,7 @@
               endif
               assign content = content | append: block.settings.custom_liquid
             -%}
-            {%- if content != blank -%}
+            {%- if content != blank or block.settings.image != blank -%}
               <div class="product-info-accordion{% unless block.settings.show_in_quickbuy %} not-in-quickbuy{% endunless %}" {{ block.shopify_attributes }}>
                 <details-disclosure>
                   <details class="disclosure"{% if block.settings.open %} open{% endif %}>
@@ -604,6 +604,11 @@
                     </summary>
                     <div class="disclosure__panel has-motion">
                       <div class="disclosure__content rte cf">
+                        {%- if block.settings.image != blank -%}
+                          <div class="product-info-accordion__image">
+                            {{- block.settings.image | image_url: width: 600 | image_tag: loading: 'lazy', widths: '300, 600', sizes: '(min-width: 769px) 300px, 90vw', alt: block.settings.image.alt | default: block.settings.title | escape -}}
+                          </div>
+                        {%- endif -%}
                         {{- content -}}
                       </div>
                     </div>
@@ -2162,6 +2167,12 @@
           "id": "content",
           "label": "Tab content",
           "default": "<p>Collapsible tab content</p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Tab image",
+          "info": "Optional. Use \"Connect dynamic source\" to bind this to a metaobject's image field (e.g. a design/swatch metaobject)."
         },
         {
           "type": "page",
