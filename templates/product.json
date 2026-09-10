@@ -75,16 +75,6 @@
             "show_gift_card_recipient": true
           }
         },
-        "usp_Whm8xh": {
-          "type": "USP",
-          "repeater": "{{ product.metafields.custom.product_template.value.usp_icons.value }}",
-          "settings": {
-            "text": "{{ block.repeater.title.value }}",
-            "icon": "",
-            "custom_icon": "{{ block.repeater.icon.value }}",
-            "icon_size": "large"
-          }
-        },
         "complementary_d3EJbm": {
           "type": "complementary",
           "disabled": true,
@@ -136,7 +126,7 @@
           "settings": {
             "title": "Materials & Care",
             "icon": "",
-            "content": "<p>{{ product.metafields.custom.materials_care | metafield_tag }}</p><p>Machine wash cold and tumble dry low. Don't bleach, and don't iron the printed areas. Two or three washes a week is the baby-laundry baseline — TENCEL™ is built for exactly that cadence.</p>",
+            "content": "<p>{{ product.metafields.custom.materials_care | metafield_tag }}</p><p>Machine wash cold and tumble dry low. Don't bleach, and don't iron the printed areas. Two or three washes a week is the baby-laundry baseline \u2014 TENCEL\u2122 is built for exactly that cadence.</p>",
             "page": "",
             "custom_liquid": "",
             "open": false,
@@ -159,6 +149,10 @@
           "type": "material-usp",
           "disabled": true,
           "settings": {}
+        },
+        "auto_usp_grid_1": {
+          "type": "auto_usp_grid",
+          "settings": {}
         }
       },
       "block_order": [
@@ -169,7 +163,7 @@
         "variant-picker",
         "feature_rating_HL8RN4",
         "buy-buttons",
-        "usp_Whm8xh",
+        "auto_usp_grid_1",
         "complementary_d3EJbm",
         "pr_mentions_qbKGbp",
         "description",
