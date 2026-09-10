@@ -2437,11 +2437,12 @@ h1.product-title{
 }
 .iwt-icon-row__item {
   display: flex;
+  flex: 1 1 0;
+  min-width: 90px;
   flex-direction: column;
   align-items: center;
   text-align: center;
   gap: 10px;
-  max-width: 110px;
 }
 .iwt-icon-row__icon {
   width: 56px;
