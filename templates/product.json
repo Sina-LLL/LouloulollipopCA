@@ -75,9 +75,15 @@
             "show_gift_card_recipient": true
           }
         },
-        "auto_usp_grid_1": {
-          "type": "auto_usp_grid",
-          "settings": {}
+        "usp_Whm8xh": {
+          "type": "USP",
+          "repeater": "{{ product.metafields.custom.product_template.value.usp_icons.value }}",
+          "settings": {
+            "text": "{{ block.repeater.title.value }}",
+            "icon": "",
+            "custom_icon": "{{ block.repeater.icon.value }}",
+            "icon_size": "large"
+          }
         },
         "complementary_d3EJbm": {
           "type": "complementary",
@@ -140,9 +146,9 @@
         "accordion_xTzVna": {
           "type": "accordion",
           "settings": {
-            "title": "SWATCH",
+            "title": "{{ product.metafields.custom.design.value.name.value }}",
             "icon": "",
-            "content": "",
+            "content": "{{ product.metafields.custom.design.value.design_description | metafield_tag }}",
             "page": "",
             "custom_liquid": "",
             "open": false,
@@ -163,7 +169,7 @@
         "variant-picker",
         "feature_rating_HL8RN4",
         "buy-buttons",
-        "auto_usp_grid_1",
+        "usp_Whm8xh",
         "complementary_d3EJbm",
         "pr_mentions_qbKGbp",
         "description",
