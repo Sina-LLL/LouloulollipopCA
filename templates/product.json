@@ -125,16 +125,10 @@
             "show_in_quickbuy": false
           }
         },
-        "accordion_J9PWpT": {
-          "type": "accordion",
+        "auto_materials_care_1": {
+          "type": "auto_materials_care",
           "settings": {
-            "title": "Materials & Care",
-            "icon": "",
-            "content": "<p>{{ product.metafields.custom.materials_care | metafield_tag }}</p><p>Machine wash cold and tumble dry low. Don't bleach, and don't iron the printed areas. Two or three washes a week is the baby-laundry baseline — TENCEL™ is built for exactly that cadence.</p>",
-            "page": "",
-            "custom_liquid": "",
-            "open": false,
-            "show_in_quickbuy": false
+            "title": "Materials & Care"
           }
         },
         "accordion_xTzVna": {
@@ -170,7 +164,7 @@
         "description",
         "accordion_yktgxC",
         "accordion_KqCkWX",
-        "accordion_J9PWpT",
+        "auto_materials_care_1",
         "accordion_xTzVna",
         "material_usp_g7Lfaj"
       ],
