@@ -224,6 +224,7 @@
         },
         "logo_Yz9iRC": {
           "type": "logo",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/OEKO_TEX.png",
             "image_width": 80,
