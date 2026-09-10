@@ -138,7 +138,7 @@
           "settings": {
             "title": "{{ product.metafields.custom.design.value.name.value }}",
             "icon": "",
-            "content": "{{ product.metafields.custom.design.value.design_description | metafield_tag }}",
+            "content": "<p>{{ product.metafields.custom.design.value.design_description | metafield_tag }}</p>",
             "image": "{{ product.metafields.custom.design.value.colour_pattern.value.image.value }}",
             "page": "",
             "custom_liquid": "",
@@ -272,7 +272,7 @@
         "enable_carousel": false,
         "carousel_speed": 30,
         "image_opacity": 100,
-        "color_scheme": "2"
+        "color_scheme": "default"
       }
     },
     "custom_product_features_g6K7P8": {
