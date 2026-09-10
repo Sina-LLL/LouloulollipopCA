@@ -259,8 +259,8 @@
         "logo_p8qri8"
       ],
       "custom_css": [
-        "h2.hometitle.h4.align-center.spaced-row.cc-animate-init.cc-animate-in {display: none;}",
-        "#section-id-template--18966821830759__logo_list_rDpCbA{}"
+        "#section-id-template--18966821830759__logo_list_rDpCbA h2.hometitle.h4.align-center.spaced-row.cc-animate-init.cc-animate-in {display: none;}",
+        "#section-id-template--18966821830759__logo_list_rDpCbA {padding: 20px 0;}"
       ],
       "name": "Logo list",
       "settings": {
