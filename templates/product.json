@@ -308,7 +308,7 @@
         "text_7GGBb7": {
           "type": "text",
           "settings": {
-            "text": "<p>Tested to Health Canada's Textile Flammability Regulations, and to CPSIA and ASTM standards. The material is certified to OEKO-TEX Standard 100, and Loulou Lollipop is a Certified B Corporation.</p>",
+            "text": "{{ product.metafields.custom.product_template.value.safety_message | metafield_tag }}",
             "enlarge_text": false
           }
         },
