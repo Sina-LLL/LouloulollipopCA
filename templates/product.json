@@ -334,6 +334,47 @@
         "color_scheme": "default"
       }
     },
+    "image_with_text_6gBpYa": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_dFVgz3": {
+          "type": "heading",
+          "settings": {
+            "title": "Our Safety Standards",
+            "use_h1": false
+          }
+        },
+        "text_7GGBb7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Tested to Health Canada's Textile Flammability Regulations, and to CPSIA and ASTM standards. The material is certified to OEKO-TEX Standard 100, and Loulou Lollipop is a Certified B Corporation.</p>",
+            "enlarge_text": false
+          }
+        },
+        "button_9NMXaK": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read the safety report",
+            "button_link": "shopify://pages/safety",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_dFVgz3",
+        "text_7GGBb7",
+        "button_9NMXaK"
+      ],
+      "name": "Image with text",
+      "settings": {
+        "image": "shopify://shop_images/LoulouJune2026Edits-04694-SAF.jpg",
+        "image_width": 700,
+        "image_link": "",
+        "image_position": "below",
+        "text_alignment": "left",
+        "color_scheme": "default"
+      }
+    },
     "custom_product_list_by_print_Nbxwnx": {
       "type": "custom-product-list-by-print",
       "disabled": true,
@@ -410,6 +451,7 @@
     "logo_list_rDpCbA",
     "custom_product_features_g6K7P8",
     "rich_text_rp6WzA",
+    "image_with_text_6gBpYa",
     "custom_product_list_by_print_Nbxwnx",
     "related-products",
     "mux_video_embed_xaVxRV",
