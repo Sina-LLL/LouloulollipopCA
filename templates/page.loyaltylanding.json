@@ -64,6 +64,15 @@
         "full_width": false
       }
     },
+    "custom_liquid_48rWEi": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "show_space": true,
+        "code": "<style>\n.strongly-spaced-row, .fully-spaced-row--medium {\n    margin-top: 0px;\n    margin-bottom: 0px;\n}\n.landing-join-login--block .landing-join-login__button--primary {\n    box-shadow: none !important;\n    padding-bottom: 2px !important;\n    background: var(--benefit-your-points-action-bg, var(--ethos-primary-button-bg, var(--theme-button-background, rgb(var(--color-button, 243 244 246))))) !important;\n}\n.landing-join-login--block .landing-join-login__button:not(.landing-join-login__button--loading):hover {\n    transform: translateY(0px) !important;\n    box-shadow: none !important;\n    filter: brightness(0.92) !important;\n}\n</style>"
+      }
+    },
     "1788916293144a23e3": {
       "type": "apps",
       "blocks": {
@@ -74,13 +83,13 @@
             "membership_page": "",
             "background_media_type": "image",
             "min_height": 260,
-            "padding_top": 20,
+            "padding_top": 80,
             "padding_bottom": 80,
             "margin_bottom": 0,
             "enable_full_width": true,
             "content_alignment": "center",
             "use_global_colors": false,
-            "background_color": "#FAF9F6",
+            "background_color": "#faf9f6",
             "headline_color": "",
             "text_color": "",
             "headline_size": 36,
@@ -108,7 +117,7 @@
             "content_position": "center",
             "image": "shopify://shop_images/Baby_Sleeper_in_TENCEL_Lyocell_-_Planets.jpg",
             "use_global_colors": false,
-            "background_color": "#FAF9F6",
+            "background_color": "#faf9f6",
             "headline_color": "",
             "item_title_color": "",
             "body_text_color": "",
@@ -145,7 +154,7 @@
             "border_width": 1,
             "border_color": "",
             "use_global_colors": false,
-            "background_color": "#FAF9F6",
+            "background_color": "#faf9f6",
             "headline_color": "",
             "body_text_color": ""
           }
@@ -156,7 +165,7 @@
             "join_login_page": "",
             "layout": "grid",
             "use_global_colors": false,
-            "background_color": "#FAF9F6",
+            "background_color": "#faf9f6",
             "card_background_color": "",
             "card_corner_radius": 14,
             "headline_color": "",
@@ -194,7 +203,7 @@
           "settings": {
             "layout": "grid",
             "use_global_colors": false,
-            "background_color": "#FAF9F6",
+            "background_color": "#faf9f6",
             "card_background_color": "",
             "card_corner_radius": 18,
             "card_padding_top": 26,
@@ -230,7 +239,7 @@
             "layout": "table",
             "header_alignment": "center",
             "use_global_colors": true,
-            "background_color": "#FAF9F6",
+            "background_color": "#faf9f6",
             "card_background_color": "",
             "headline_color": "",
             "copy_color": "",
@@ -276,6 +285,7 @@
   "order": [
     "custom_content_Hpam3z",
     "main",
+    "custom_liquid_48rWEi",
     "1788916293144a23e3"
   ]
 }
