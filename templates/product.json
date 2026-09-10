@@ -148,7 +148,8 @@
           "settings": {
             "title": "{{ product.metafields.custom.design.value.name.value }}",
             "icon": "",
-            "content": "{{ product.metafields.custom.design.value.design_description | metafield_tag }}",
+            "content": "<p>{{ product.metafields.custom.design.value.design_description | metafield_tag }}</p>",
+            "image": "{{ metaobjects.design[\"english-garden\"].colour_pattern.value.image.value }}",
             "page": "",
             "custom_liquid": "",
             "open": false,
