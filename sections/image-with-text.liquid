@@ -69,7 +69,7 @@
     {%- break -%}
   {%- endif -%}
 {%- endfor -%}
-<div class="{% if section.settings.color_scheme != 'default' %}use-color-scheme use-color-scheme--{{ section.settings.color_scheme }} fully-padded-row--medium{% else %}fully-spaced-row--medium{% endif %}">
+<div class="{% if section.settings.color_scheme != 'default' %}use-color-scheme use-color-scheme--{{ section.settings.color_scheme }} fully-padded-row--medium{% else %}fully-spaced-row--medium{% endif %}{% if section.settings.mobile_image_below and image_below == false %} iwt-row--mobile-image-bleed{% endif %}">
   <div class="container">
 
     {%- if image_below -%}
