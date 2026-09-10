@@ -443,6 +443,9 @@ button.btn.btn--large.no-stock {
     object-fit: cover;
     max-height: 100%;
   }
+  .slider__item:has(.product-media--video) {
+    align-self: flex-start;
+  }
   .product-media.product-media--video.product-media--frame {
     padding-bottom: 133.333% !important;
   }
