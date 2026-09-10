@@ -2425,6 +2425,19 @@ h1.product-title{
   .column--order-push-mobile {
     order: 1;
   }
+  /* Full-bleed the pushed image: break out of .container padding to the viewport edges
+     and drop its own bottom margin so it touches the bottom of the section. */
+  .flexible-layout .column.column--order-push-mobile {
+    width: 100vw !important;
+    max-width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    margin-bottom: 0;
+  }
+  .column--order-push-mobile .image-overlap {
+    max-width: 100vw !important;
+    margin: 0;
+  }
 }
 
 /* Image with text: "Icon row item" blocks */
@@ -2438,7 +2451,7 @@ h1.product-title{
 .iwt-icon-row__item {
   display: flex;
   flex: 1 1 0;
-  min-width: 50px;
+  min-width: 90px;
   flex-direction: column;
   align-items: center;
   text-align: center;
