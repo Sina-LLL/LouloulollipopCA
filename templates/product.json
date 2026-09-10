@@ -217,7 +217,7 @@
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/Benefits-of-Partnering-with-a-WBENC-Certified-Women-Business-Enterprise-Public-Relations-and-Marketing-Agency-feature.webp",
-            "image_width": 160,
+            "image_width": 120,
             "link": "",
             "title": ""
           }
@@ -236,7 +236,7 @@
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/30Day_Return_56dd8d70-3237-4ca1-91b8-395f7e213e96.png",
-            "image_width": 100,
+            "image_width": 90,
             "link": "",
             "title": ""
           }
@@ -245,7 +245,7 @@
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/Free_ShippingCA.png",
-            "image_width": 100,
+            "image_width": 90,
             "link": "",
             "title": ""
           }
@@ -257,6 +257,10 @@
         "logo_Yz9iRC",
         "logo_CHqmkb",
         "logo_p8qri8"
+      ],
+      "custom_css": [
+        "h2.hometitle.h4.align-center.spaced-row.cc-animate-init.cc-animate-in {display: none;}",
+        "#section-id-template--18966821830759__logo_list_rDpCbA{}"
       ],
       "name": "Logo list",
       "settings": {
