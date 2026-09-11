@@ -151,7 +151,7 @@
           "settings": {
             "title": "Shipping & Returns",
             "icon": "",
-            "content": "<p>We ship every order from right here in Canada. Orders over $100 CAD ship free within Canada; smaller orders are a flat $12 (BC) or $15 (rest of Canada), with most arriving in 5–10 business days. We also ship internationally with tracking included — duties and taxes are calculated at checkout and are the recipient's responsibility.</p><p>Change your mind? Regular-priced items can be returned within 30 days of purchase, as long as they're unworn, unwashed, and unused with original tags and packaging intact. Sale and marked-down items are final sale.<br/></p>",
+            "content": "<p>We ship every order from right here in Canada. Orders over $100 CAD ship free within Canada; smaller orders are a flat $12 (BC) or $15 (rest of Canada), with most arriving in 5\u201310 business days. We also ship internationally with tracking included \u2014 duties and taxes are calculated at checkout and are the recipient's responsibility.</p><p>Change your mind? Regular-priced items can be returned within 30 days of purchase, as long as they're unworn, unwashed, and unused with original tags and packaging intact. Sale and marked-down items are final sale.<br/></p>",
             "page": "",
             "custom_liquid": "",
             "open": false,
@@ -296,22 +296,8 @@
       }
     },
     "image_with_text_6gBpYa": {
-      "type": "image-with-text",
+      "type": "custom-product-safety",
       "blocks": {
-        "heading_dFVgz3": {
-          "type": "heading",
-          "settings": {
-            "title": "Our Safety Standards",
-            "use_h1": false
-          }
-        },
-        "text_7GGBb7": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.metafields.custom.product_template.value.safety_message | metafield_tag }}",
-            "enlarge_text": false
-          }
-        },
         "icon_row_item_gM63wK": {
           "type": "icon_row_item",
           "settings": {
@@ -350,21 +336,17 @@
         }
       },
       "block_order": [
-        "heading_dFVgz3",
-        "text_7GGBb7",
         "icon_row_item_gM63wK",
         "icon_row_item_cGQeMm",
         "icon_row_item_YRL7qC",
         "icon_row_item_gVjjYU",
         "button_9NMXaK"
       ],
-      "name": "Image with text",
+      "name": "Custom Safety Info",
       "settings": {
-        "image": "{{ product.metafields.custom.product_template.value.safety_message_image.value }}",
+        "heading": "Our Safety Standards",
         "image_width": 700,
-        "image_link": "",
         "image_position": "right",
-        "mobile_image_below": true,
         "text_alignment": "left",
         "color_scheme": "2"
       }
