@@ -280,7 +280,7 @@
       "blocks": {
         "feature_74ANHV": {
           "type": "feature",
-          "repeater": "{{ product.metafields.custom.product_template.value.features.value }}",
+          "repeater": "{{ product.metafields.custom.material_new.value.material_features.value }}",
           "settings": {
             "image": "{{ block.repeater.image.value }}",
             "title": "{{ block.repeater.title.value }}",
