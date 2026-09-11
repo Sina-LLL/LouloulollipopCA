@@ -138,7 +138,7 @@
           "settings": {
             "title": "{{ product.metafields.custom.design.value.name.value }}",
             "icon": "",
-            "content": "{{ product.metafields.custom.design.value.design_description | metafield_tag }}",
+            "content": "<p>{{ product.metafields.custom.design.value.design_description | metafield_tag }}</p>",
             "image": "{{ product.metafields.custom.design.value.colour_pattern.value.image.value }}",
             "page": "",
             "custom_liquid": "",
@@ -151,7 +151,7 @@
           "settings": {
             "title": "Shipping & Returns",
             "icon": "",
-            "content": "<p>We ship every order from right here in Canada. Orders over $100 CAD ship free within Canada; smaller orders are a flat $12 (BC) or $15 (rest of Canada), with most arriving in 5\u201310 business days. We also ship internationally with tracking included \u2014 duties and taxes are calculated at checkout and are the recipient's responsibility.</p><p>Change your mind? Regular-priced items can be returned within 30 days of purchase, as long as they're unworn, unwashed, and unused with original tags and packaging intact. Sale and marked-down items are final sale.<br/></p>",
+            "content": "<p>We ship every order from right here in Canada. <strong>Orders over $100 CAD ship free within Canada</strong>; smaller orders are a flat $12 (BC) or $15 (rest of Canada), with most arriving in <strong>5–10 business days</strong>. We also ship internationally with tracking included — duties and taxes are calculated at checkout and are the recipient's responsibility.</p><p>Change your mind? Regular-priced items can be <strong>returned within 30 days of purchase</strong>, as long as they're unworn, unwashed, and unused with original tags and packaging intact. Sale and marked-down items are final sale.<br/></p>",
             "page": "",
             "custom_liquid": "",
             "open": false,
@@ -420,6 +420,36 @@
       "settings": {
         "title": "FAQs"
       }
+    },
+    "rich_text_yfiWim": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_8UqiRg": {
+          "type": "heading",
+          "settings": {
+            "title": "Designed in Canada",
+            "use_h1": false
+          }
+        },
+        "text_x4Pzg4": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Loulou Lollipop launched in Vancouver in 2014 with one swaddle and one teether.</p>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_8UqiRg",
+        "text_x4Pzg4"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "height": "medium",
+        "text_alignment": "center",
+        "full_width": false,
+        "color_scheme": "default"
+      }
     }
   },
   "order": [
@@ -431,6 +461,7 @@
     "related-products",
     "mux_video_embed_xaVxRV",
     "1775971838981c2d24",
-    "collapsible_tabs_T6tNKd"
+    "collapsible_tabs_T6tNKd",
+    "rich_text_yfiWim"
   ]
 }
