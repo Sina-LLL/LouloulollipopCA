@@ -161,7 +161,7 @@
                   <div class="opt-label__tag product-label--new">NEW</div>
                   <div class="overflow_hidden">
                     <div class="opt-label__media media">
-                      {%- if sibling.metafields.custom.design.value.colour_pattern.value.image.value != blank -%}
+                      {%- if sibling.metafields.custom.design.value.colour_pattern.value.image.value != blank and sibling.metafields.custom.product_template.value.hide_swatch_image.value != true -%}
                         {%- render 'image', image: sibling.metafields.custom.design.value.colour_pattern.value.image.value, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
                       {%- else -%}
                         {%- render 'image', image: sibling.images.first, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
@@ -185,7 +185,7 @@
                     {% if sibling.handle == product.handle %}data-selected="true"{% endif %}>
                     <div class="overflow_hidden">
                       <div class="opt-label__media media">
-                        {%- if sibling.metafields.custom.design.value.colour_pattern.value.image.value != blank -%}
+                        {%- if sibling.metafields.custom.design.value.colour_pattern.value.image.value != blank and sibling.metafields.custom.product_template.value.hide_swatch_image.value != true -%}
                           {%- render 'image', image: sibling.metafields.custom.design.value.colour_pattern.value.image.value, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
                         {%- else -%}
                           {%- render 'image', image: sibling.images.first, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
@@ -210,7 +210,7 @@
                   <div class="opt-label__tag product-label--sale">SALE</div>
                   <div class="overflow_hidden">
                     <div class="opt-label__media media">
-                      {%- if sibling.metafields.custom.design.value.colour_pattern.value.image.value != blank -%}
+                      {%- if sibling.metafields.custom.design.value.colour_pattern.value.image.value != blank and sibling.metafields.custom.product_template.value.hide_swatch_image.value != true -%}
                         {%- render 'image', image: sibling.metafields.custom.design.value.colour_pattern.value.image.value, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
                       {%- else -%}
                         {%- render 'image', image: sibling.images.first, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
@@ -235,7 +235,7 @@
                   <div class="overflow_hidden">
                     <div class="opt-label__media media">
                       <div class="sold-out-line"></div>
-                      {%- if sibling.metafields.custom.design.value.colour_pattern.value.image.value != blank -%}
+                      {%- if sibling.metafields.custom.design.value.colour_pattern.value.image.value != blank and sibling.metafields.custom.product_template.value.hide_swatch_image.value != true -%}
                         {%- render 'image', image: sibling.metafields.custom.design.value.colour_pattern.value.image.value, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
                       {%- else -%}
                         {%- render 'image', image: sibling.images.first, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
@@ -267,7 +267,7 @@
                   <div class="opt-label__tag product-label--new">NEW</div>
                   <div class="overflow_hidden">
                     <div class="opt-label__media media">
-                      {%- if sibling.metafields.custom.design.value.colour_pattern.value.image.value != blank -%}
+                      {%- if sibling.metafields.custom.design.value.colour_pattern.value.image.value != blank and sibling.metafields.custom.product_template.value.hide_swatch_image.value != true -%}
                         {%- render 'image', image: sibling.metafields.custom.design.value.colour_pattern.value.image.value, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
                       {%- else -%}
                         {%- render 'image', image: sibling.images.first, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
@@ -290,7 +290,7 @@
                   {% if sibling.handle == product.handle %}data-selected="true"{% endif %}>
                   <div class="overflow_hidden">
                     <div class="opt-label__media media">
-                      {%- if sibling.metafields.custom.design.value.colour_pattern.value.image.value != blank -%}
+                      {%- if sibling.metafields.custom.design.value.colour_pattern.value.image.value != blank and sibling.metafields.custom.product_template.value.hide_swatch_image.value != true -%}
                         {%- render 'image', image: sibling.metafields.custom.design.value.colour_pattern.value.image.value, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
                       {%- else -%}
                         {%- render 'image', image: sibling.images.first, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
@@ -317,7 +317,7 @@
                     <div class="overflow_hidden">
                       <div class="opt-label__media media">
                         <div class="sold-out-line"></div>
-                        {%- if sibling.metafields.custom.design.value.colour_pattern.value.image.value != blank -%}
+                        {%- if sibling.metafields.custom.design.value.colour_pattern.value.image.value != blank and sibling.metafields.custom.product_template.value.hide_swatch_image.value != true -%}
                           {%- render 'image', image: sibling.metafields.custom.design.value.colour_pattern.value.image.value, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
                         {%- else -%}
                           {%- render 'image', image: sibling.images.first, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
@@ -349,7 +349,7 @@
                   {%- if sib_tags contains '|new|' -%}<div class="opt-label__tag product-label--new">NEW</div>{%- endif -%}
                   <div class="overflow_hidden">
                     <div class="opt-label__media media">
-                      {%- if sibling.metafields.custom.design.value.colour_pattern.value.image.value != blank -%}
+                      {%- if sibling.metafields.custom.design.value.colour_pattern.value.image.value != blank and sibling.metafields.custom.product_template.value.hide_swatch_image.value != true -%}
                         {%- render 'image', image: sibling.metafields.custom.design.value.colour_pattern.value.image.value, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
                       {%- else -%}
                         {%- render 'image', image: sibling.images.first, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
@@ -376,7 +376,7 @@
                     <div class="overflow_hidden">
                       <div class="opt-label__media media">
                         <div class="sold-out-line"></div>
-                        {%- if sibling.metafields.custom.design.value.colour_pattern.value.image.value != blank -%}
+                        {%- if sibling.metafields.custom.design.value.colour_pattern.value.image.value != blank and sibling.metafields.custom.product_template.value.hide_swatch_image.value != true -%}
                           {%- render 'image', image: sibling.metafields.custom.design.value.colour_pattern.value.image.value, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
                         {%- else -%}
                           {%- render 'image', image: sibling.images.first, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
@@ -407,7 +407,7 @@
                   <div class="opt-label__tag product-label--sale">SALE</div>
                   <div class="overflow_hidden">
                     <div class="opt-label__media media">
-                      {%- if sibling.metafields.custom.design.value.colour_pattern.value.image.value != blank -%}
+                      {%- if sibling.metafields.custom.design.value.colour_pattern.value.image.value != blank and sibling.metafields.custom.product_template.value.hide_swatch_image.value != true -%}
                         {%- render 'image', image: sibling.metafields.custom.design.value.colour_pattern.value.image.value, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
                       {%- else -%}
                         {%- render 'image', image: sibling.images.first, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
@@ -432,7 +432,7 @@
                     <div class="overflow_hidden">
                       <div class="opt-label__media media">
                         <div class="sold-out-line"></div>
-                        {%- if sibling.metafields.custom.design.value.colour_pattern.value.image.value != blank -%}
+                        {%- if sibling.metafields.custom.design.value.colour_pattern.value.image.value != blank and sibling.metafields.custom.product_template.value.hide_swatch_image.value != true -%}
                           {%- render 'image', image: sibling.metafields.custom.design.value.colour_pattern.value.image.value, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
                         {%- else -%}
                           {%- render 'image', image: sibling.images.first, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
