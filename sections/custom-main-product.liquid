@@ -589,6 +589,9 @@
               assign content = content | append: block.settings.custom_liquid
 
               assign accordion_image = block.settings.image
+            -%}
+            <!-- DEBUG block.id={{ block.id }} -->
+            {%- liquid
               if block.id == 'accordion_xTzVna' and product.metafields.custom.product_template.value.hide_swatch_image.value
                 assign accordion_image = blank
               endif
