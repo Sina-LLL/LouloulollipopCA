@@ -803,7 +803,7 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
   background: var(--lll-slate);
 }
 .custom-product-features__wrapper {
-  background: var(--lll-white);
+  /* background: var(--lll-white); */
   padding-top: 28px;
   padding-bottom: 28px;
 }
@@ -962,7 +962,7 @@ carousel-slider.mobile-only.custom-features-carousel{
     padding-bottom: 133.333% !important;
   }
   .custom-product-features__wrapper {
-    padding: 28px 40px;
+    /* padding: 28px 40px; */
     margin: 20px 20px;
 
   }
