@@ -846,7 +846,7 @@ carousel-slider.mobile-only.custom-features-carousel{
 .custom-product-features__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 16px;
+  gap: 32px;
   justify-items: stretch;
   opacity: 0;
   max-height: 0;
