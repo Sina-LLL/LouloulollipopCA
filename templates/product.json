@@ -151,7 +151,7 @@
           "settings": {
             "title": "Shipping & Returns",
             "icon": "",
-            "content": "<p>We ship every order from right here in Canada. Orders over $100 CAD ship free within Canada; smaller orders are a flat $12 (BC) or $15 (rest of Canada), with most arriving in 5–10 business days. We also ship internationally with tracking included — duties and taxes are calculated at checkout and are the recipient's responsibility.</p><p>Change your mind? Regular-priced items can be returned within 30 days of purchase, as long as they're unworn, unwashed, and unused with original tags and packaging intact. Sale and marked-down items are final sale.<br/></p>",
+            "content": "<p>We ship every order from right here in Canada. <strong>Orders over $100 CAD ship free within Canada</strong>; smaller orders are a flat $12 (BC) or $15 (rest of Canada), with most arriving in <strong>5–10 business days</strong>. We also ship internationally with tracking included — duties and taxes are calculated at checkout and are the recipient's responsibility.</p><p>Change your mind? Regular-priced items can be <strong>returned within 30 days of purchase</strong>, as long as they're unworn, unwashed, and unused with original tags and packaging intact. Sale and marked-down items are final sale.<br/></p>",
             "page": "",
             "custom_liquid": "",
             "open": false,
