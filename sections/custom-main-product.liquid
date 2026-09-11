@@ -590,7 +590,7 @@
 
               assign accordion_image = block.settings.image
             -%}
-            <!-- DEBUG block.id={{ block.id }} hs_dotvalue=[{{ product.metafields.custom.product_template.value.hide_swatch_image.value }}] hs_novalue=[{{ product.metafields.custom.product_template.value.hide_swatch_image }}] -->
+            <!-- DEBUG block.id={{ block.id }} settings.image=[{{ block.settings.image }}] accordion_image=[{{ accordion_image }}] accordion_image_blank=[{% if accordion_image == blank %}YES{% else %}NO{% endif %}] -->
             {%- liquid
               if block.id == 'accordion_xTzVna' and product.metafields.custom.product_template.value.hide_swatch_image.value
                 assign accordion_image = blank
