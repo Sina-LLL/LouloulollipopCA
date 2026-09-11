@@ -865,13 +865,19 @@
             <hr {% unless block.settings.show_in_quickbuy %}class="not-in-quickbuy"{% endunless %} {{ block.shopify_attributes }}>
           
           {% when 'swatch_highlight' %}
-            {% assign swatch_name = product.metafields.theme.cutline %}
-            {% assign swatch_handle = swatch_name | handleize %}
-            {% assign swatch_collection = collections[swatch_handle] %}
+            {% liquid
+              assign swatch_design = product.metafields.custom.design.value
+              assign swatch_name = swatch_design.name.value
+              assign swatch_collection = swatch_design.design_collection.value
+              assign swatch_highlight_image = swatch_design.colour_pattern.value.image.value
+              if swatch_highlight_image == blank
+                assign swatch_highlight_image = product.featured_image
+              endif
+            %}
 
             <div class="swatch-highlight-container lightly-spaced-row inline-width-container{% unless block.settings.show_in_quickbuy %} not-in-quickbuy{% endunless %}" {{ block.shopify_attributes }}>
               {%- render 'image',
-                image: product.metafields.custom.swatch.value.image.value,
+                image: swatch_highlight_image,
                 sizes: img_sizes,
                 widths: img_widths,
                 custom_aspect_ratio: img_aspect_ratio,
@@ -1181,12 +1187,12 @@
 {% endcomment %}
 
 {% comment %}
-  Section: Related Products by Cutline Metafield using product_recommendations
-  Filters recommendations to match a tag = product.metafields.theme.cutline
+  Section: Related Products by Design Metafield using product_recommendations
+  Filters recommendations to match a tag = product.metafields.custom.design.value.name
 {% endcomment %}
 
-{% if product.metafields.theme.cutline.value %}
-  {% assign cutline_tag = product.metafields.theme.cutline.value | downcase %}
+{% if product.metafields.custom.design.value.name.value %}
+  {% assign cutline_tag = product.metafields.custom.design.value.name.value | downcase %}
 
   {% if product_recommendations.products.size > 0 %}
     <div class="related-products">
