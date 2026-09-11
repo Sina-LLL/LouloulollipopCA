@@ -2366,6 +2366,10 @@ h1.product-title{
   text-align: center;
   gap: 12px;
 }
+.product-usp-grid__item--centered {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
 .product-usp-grid__icon {
   width: 64px;
   height: 64px;

@@ -655,11 +655,16 @@
               endif
             -%}
             {%- if usp_icons != blank -%}
+              {%- assign usp_is_odd = false -%}
+              {%- assign usp_odd_check = usp_icons.size | modulo: 2 -%}
+              {%- if usp_odd_check == 1 -%}
+                {%- assign usp_is_odd = true -%}
+              {%- endif -%}
               <div class="product-usp-grid not-in-quickbuy" {{ block.shopify_attributes }}>
                 {%- for usp in usp_icons -%}
                   {%- assign usp_title = usp.title.value -%}
                   {%- assign usp_icon = usp.icon.value -%}
-                  <div class="product-usp-grid__item">
+                  <div class="product-usp-grid__item{% if usp_is_odd and forloop.last %} product-usp-grid__item--centered{% endif %}">
                     {%- if usp_icon != blank -%}
                       <div class="product-usp-grid__icon">
                         {{- usp_icon | image_url: width: 128 | image_tag: loading: 'lazy', widths: '64, 128', sizes: '64px', class: 'product-usp-grid__icon-img', alt: usp_title | escape -}}
