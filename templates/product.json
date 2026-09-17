@@ -162,6 +162,10 @@
           "type": "material-usp",
           "disabled": true,
           "settings": {}
+        },
+        "tog_guide_test1": {
+          "type": "tog_guide",
+          "settings": {}
         }
       },
       "block_order": [
@@ -181,6 +185,7 @@
         "auto_materials_care_1",
         "accordion_xTzVna",
         "accordion_3wmzgQ",
+        "tog_guide_test1",
         "material_usp_g7Lfaj"
       ],
       "settings": {
