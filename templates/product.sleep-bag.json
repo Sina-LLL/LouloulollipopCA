@@ -79,15 +79,6 @@
           "type": "auto_usp_grid",
           "settings": {}
         },
-        "complementary_d3EJbm": {
-          "type": "complementary",
-          "disabled": true,
-          "settings": {
-            "heading": "Pairs Perfectly With",
-            "enable_carousel": true,
-            "max_products": 10
-          }
-        },
         "pr_mentions_qbKGbp": {
           "type": "pr-mentions",
           "settings": {}
@@ -157,11 +148,6 @@
             "open": false,
             "show_in_quickbuy": false
           }
-        },
-        "material_usp_g7Lfaj": {
-          "type": "material-usp",
-          "disabled": true,
-          "settings": {}
         }
       },
       "block_order": [
@@ -173,15 +159,13 @@
         "feature_rating_HL8RN4",
         "buy-buttons",
         "auto_usp_grid_1",
-        "complementary_d3EJbm",
         "pr_mentions_qbKGbp",
         "description",
         "accordion_yktgxC",
         "accordion_KqCkWX",
         "auto_materials_care_1",
         "accordion_xTzVna",
-        "accordion_3wmzgQ",
-        "material_usp_g7Lfaj"
+        "accordion_3wmzgQ"
       ],
       "settings": {
         "show_breadcrumbs": true,

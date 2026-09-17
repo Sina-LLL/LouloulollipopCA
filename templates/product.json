@@ -50,21 +50,6 @@
             "size_chart_page": "{{ product.metafields.custom.size_chart.value }}"
           }
         },
-        "feature_rating_HL8RN4": {
-          "type": "feature-rating",
-          "disabled": true,
-          "settings": {
-            "heading": "Fit",
-            "segments": 5,
-            "active_segment": "4",
-            "fill_segments": true,
-            "show_labels": true,
-            "label_left": "Small",
-            "label_middle": "True to size",
-            "label_right": "Large",
-            "show_in_quickbuy": false
-          }
-        },
         "buy-buttons": {
           "type": "buy-buttons",
           "settings": {
@@ -78,15 +63,6 @@
         "auto_usp_grid_1": {
           "type": "auto_usp_grid",
           "settings": {}
-        },
-        "complementary_d3EJbm": {
-          "type": "complementary",
-          "disabled": true,
-          "settings": {
-            "heading": "Pairs Perfectly With",
-            "enable_carousel": true,
-            "max_products": 10
-          }
         },
         "pr_mentions_qbKGbp": {
           "type": "pr-mentions",
@@ -158,10 +134,15 @@
             "show_in_quickbuy": false
           }
         },
-        "material_usp_g7Lfaj": {
-          "type": "material-usp",
-          "disabled": true,
-          "settings": {}
+        "tog_guide_ptDmni": {
+          "type": "tog_guide",
+          "settings": {
+            "heading": "Recommended Room Temperature",
+            "cool_label": "Cool",
+            "warm_label": "Warm",
+            "info_link": "",
+            "link_label": "Choosing the right TOG"
+          }
         }
       },
       "block_order": [
@@ -170,10 +151,8 @@
         "text_Ey4aL9",
         "price",
         "variant-picker",
-        "feature_rating_HL8RN4",
         "buy-buttons",
         "auto_usp_grid_1",
-        "complementary_d3EJbm",
         "pr_mentions_qbKGbp",
         "description",
         "accordion_yktgxC",
@@ -181,7 +160,7 @@
         "auto_materials_care_1",
         "accordion_xTzVna",
         "accordion_3wmzgQ",
-        "material_usp_g7Lfaj"
+        "tog_guide_ptDmni"
       ],
       "settings": {
         "show_breadcrumbs": true,
