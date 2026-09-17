@@ -1,0 +1,467 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "custom-main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "judge_me_reviews_preview_badge_DVkDne": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "text_Ey4aL9": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.custom.product_template.value.hook.value }}",
+            "icon": "",
+            "icon_size": "small",
+            "enable_box": false,
+            "box_color": "#e0f4d5",
+            "show_in_quickbuy": false
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_tax_and_shipping": false,
+            "enable_product_reviews_by_price": false
+          }
+        },
+        "variant-picker": {
+          "type": "variant-picker",
+          "settings": {
+            "show_single": false,
+            "selector_style": "listed",
+            "dynamic_availability": "show",
+            "enable_size_chart": true,
+            "size_chart_label": "Size Guide",
+            "size_chart_variant": "Size",
+            "size_chart_page": "{{ product.metafields.custom.size_chart.value }}"
+          }
+        },
+        "feature_rating_HL8RN4": {
+          "type": "feature-rating",
+          "disabled": true,
+          "settings": {
+            "heading": "Fit",
+            "segments": 5,
+            "active_segment": "4",
+            "fill_segments": true,
+            "show_labels": true,
+            "label_left": "Small",
+            "label_middle": "True to size",
+            "label_right": "Large",
+            "show_in_quickbuy": false
+          }
+        },
+        "buy-buttons": {
+          "type": "buy-buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "enable_payment_button": false,
+            "show_backorder_text": false,
+            "show_pickup_availability": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "auto_usp_grid_1": {
+          "type": "auto_usp_grid",
+          "settings": {}
+        },
+        "complementary_d3EJbm": {
+          "type": "complementary",
+          "disabled": true,
+          "settings": {
+            "heading": "Pairs Perfectly With",
+            "enable_carousel": true,
+            "max_products": 10
+          }
+        },
+        "pr_mentions_qbKGbp": {
+          "type": "pr-mentions",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "show_in_tab": true,
+            "open_tab": false,
+            "icon": "",
+            "show_in_quickbuy": false
+          }
+        },
+        "accordion_yktgxC": {
+          "type": "accordion",
+          "settings": {
+            "title": "Why We Love It",
+            "icon": "",
+            "content": "{{ product.metafields.custom.product_template.value.why_we_love_it | metafield_tag }}",
+            "page": "",
+            "custom_liquid": "",
+            "open": false,
+            "show_in_quickbuy": false
+          }
+        },
+        "accordion_KqCkWX": {
+          "type": "accordion",
+          "settings": {
+            "title": "The Details",
+            "icon": "",
+            "content": "{{ product.metafields.custom.product_template.value.the_details | metafield_tag }}",
+            "page": "",
+            "custom_liquid": "",
+            "open": false,
+            "show_in_quickbuy": false
+          }
+        },
+        "auto_materials_care_1": {
+          "type": "auto_materials_care",
+          "settings": {
+            "title": "Materials & Care",
+            "open": false,
+            "show_in_quickbuy": false
+          }
+        },
+        "accordion_xTzVna": {
+          "type": "accordion",
+          "settings": {
+            "title": "{{ product.metafields.custom.design.value.name.value }}",
+            "icon": "",
+            "content": "<p>{{ product.metafields.custom.design.value.design_description | metafield_tag }}</p>",
+            "image": "{{ product.metafields.custom.design.value.colour_pattern.value.image.value }}",
+            "page": "",
+            "custom_liquid": "",
+            "open": false,
+            "show_in_quickbuy": false
+          }
+        },
+        "accordion_3wmzgQ": {
+          "type": "accordion",
+          "settings": {
+            "title": "Shipping & Returns",
+            "icon": "",
+            "content": "<p>We ship every order from right here in Canada. <strong>Orders over $100 CAD ship free within Canada</strong>; smaller orders are a flat $12 (BC) or $15 (rest of Canada), with most arriving in <strong>5–10 business days</strong>. We also ship internationally with tracking included — duties and taxes are calculated at checkout and are the recipient's responsibility.</p><p>Change your mind? Regular-priced items can be <strong>returned within 30 days of purchase</strong>, as long as they're unworn, unwashed, and unused with original tags and packaging intact. Sale and marked-down items are final sale.<br/></p>",
+            "page": "",
+            "custom_liquid": "",
+            "open": false,
+            "show_in_quickbuy": false
+          }
+        },
+        "material_usp_g7Lfaj": {
+          "type": "material-usp",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "judge_me_reviews_preview_badge_DVkDne",
+        "text_Ey4aL9",
+        "price",
+        "variant-picker",
+        "feature_rating_HL8RN4",
+        "buy-buttons",
+        "auto_usp_grid_1",
+        "complementary_d3EJbm",
+        "pr_mentions_qbKGbp",
+        "description",
+        "accordion_yktgxC",
+        "accordion_KqCkWX",
+        "auto_materials_care_1",
+        "accordion_xTzVna",
+        "accordion_3wmzgQ",
+        "material_usp_g7Lfaj"
+      ],
+      "settings": {
+        "show_breadcrumbs": true,
+        "select_first_variant": true,
+        "show_location_underneath": false,
+        "inventory_transfers_enable": true,
+        "enable_sticky_columns": true,
+        "enable_sticky_atc": true,
+        "sticky_atc_position": "center",
+        "sticky_atc_mobile": true,
+        "sticky_atc_behavior": "add_to_cart",
+        "sticky_atc_button_style": "primary",
+        "gallery_size": "medium",
+        "gallery_layout": "collage-1",
+        "enable_zoom": true,
+        "show_alt_text": false,
+        "alt_text_icon": "",
+        "enable_video_autoplay": true,
+        "enable_video_looping": true,
+        "enable_media_grouping": false,
+        "media_grouping_option": "Color,Colour,Couleur,Farbe"
+      }
+    },
+    "logo_list_rDpCbA": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_rtiPnA": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Certified_B_Corporation_B_Corp_Logo_2022_Black_RGB_svg.webp",
+            "image_width": 80,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_HiJFNy": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Benefits-of-Partnering-with-a-WBENC-Certified-Women-Business-Enterprise-Public-Relations-and-Marketing-Agency-feature.webp",
+            "image_width": 120,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_Yz9iRC": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/OEKO_TEX.png",
+            "image_width": 80,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_CHqmkb": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/30Day_Return_56dd8d70-3237-4ca1-91b8-395f7e213e96.png",
+            "image_width": 90,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_p8qri8": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Free_ShippingCA.png",
+            "image_width": 90,
+            "link": "",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_rtiPnA",
+        "logo_HiJFNy",
+        "logo_Yz9iRC",
+        "logo_CHqmkb",
+        "logo_p8qri8"
+      ],
+      "custom_css": [
+        "#section-id-template--18966821830759__logo_list_rDpCbA {padding: 2px 0;}",
+        "#section-id-template--18966821830759__logo_list_rDpCbA .logo-list {margin-bottom: 0;}"
+      ],
+      "name": "Logo list",
+      "settings": {
+        "title": "",
+        "enable_carousel": false,
+        "carousel_speed": 30,
+        "image_opacity": 100,
+        "color_scheme": "2"
+      }
+    },
+    "custom_product_features_g6K7P8": {
+      "type": "custom-product-features",
+      "blocks": {
+        "feature_74ANHV": {
+          "type": "feature",
+          "repeater": "{{ product.metafields.custom.material_new.value.material_features.value }}",
+          "settings": {
+            "image": "{{ block.repeater.image.value }}",
+            "title": "{{ block.repeater.title.value }}",
+            "description": "<p>{{ block.repeater.description | metafield_tag }}</p>"
+          }
+        }
+      },
+      "block_order": [
+        "feature_74ANHV"
+      ],
+      "settings": {
+        "section_heading": "Made from the Good Stuff"
+      }
+    },
+    "image_with_text_6gBpYa": {
+      "type": "custom-product-safety",
+      "blocks": {
+        "icon_row_item_gM63wK": {
+          "type": "icon_row_item",
+          "settings": {
+            "icon": "shopify://shop_images/ICON-SM-7.svg",
+            "label": "BPA Free"
+          }
+        },
+        "icon_row_item_cGQeMm": {
+          "type": "icon_row_item",
+          "settings": {
+            "icon": "shopify://shop_images/ICON-SM-16.svg",
+            "label": "Phthalate Free"
+          }
+        },
+        "icon_row_item_YRL7qC": {
+          "type": "icon_row_item",
+          "settings": {
+            "icon": "shopify://shop_images/ICON-SM-8.svg",
+            "label": "OEKO TEX Certified"
+          }
+        },
+        "icon_row_item_gVjjYU": {
+          "type": "icon_row_item",
+          "settings": {
+            "icon": "shopify://shop_images/ICON-SM-2.svg",
+            "label": "Hypo-allergenic"
+          }
+        },
+        "button_9NMXaK": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read the safety report",
+            "button_link": "shopify://pages/safety",
+            "button_style": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "icon_row_item_gM63wK",
+        "icon_row_item_cGQeMm",
+        "icon_row_item_YRL7qC",
+        "icon_row_item_gVjjYU",
+        "button_9NMXaK"
+      ],
+      "name": "Custom Safety Info",
+      "settings": {
+        "heading": "Our Safety Standards",
+        "image_width": 700,
+        "image_position": "right",
+        "text_alignment": "left",
+        "color_scheme": "2"
+      }
+    },
+    "custom_product_list_by_print_Nbxwnx": {
+      "type": "custom-product-list-by-print",
+      "disabled": true,
+      "custom_css": [
+        ".collection-slider-row {padding-bottom: 0;}"
+      ],
+      "name": "Custom Product List by Print",
+      "settings": {
+        "title": "Get the set",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 4,
+        "color_scheme": "1",
+        "full_width": true
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "title": "You may also like",
+        "show_vendor": false,
+        "grid": 4
+      }
+    },
+    "mux_video_embed_xaVxRV": {
+      "type": "mux-video-embed",
+      "name": "Mux Video",
+      "settings": {}
+    },
+    "1775971838981c2d24": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_bbfCAU": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": true,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_bbfCAU"
+      ],
+      "settings": {
+        "full_width": false,
+        "show_space": true
+      }
+    },
+    "collapsible_tabs_T6tNKd": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "question_9Y8Dkm": {
+          "type": "question",
+          "repeater": "{{ product.metafields.custom.product_template.value.faqs.value }}",
+          "settings": {
+            "title": "{{ block.repeater.question.value }}",
+            "answer": "{{ block.repeater.answers | metafield_tag }}"
+          }
+        }
+      },
+      "block_order": [
+        "question_9Y8Dkm"
+      ],
+      "name": "Collapsible tabs",
+      "settings": {
+        "title": "FAQs"
+      }
+    },
+    "rich_text_yfiWim": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_8UqiRg": {
+          "type": "heading",
+          "settings": {
+            "title": "Designed in Canada",
+            "use_h1": false
+          }
+        },
+        "text_x4Pzg4": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Loulou Lollipop launched in Vancouver in 2014 with one swaddle and one teether.</p>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_8UqiRg",
+        "text_x4Pzg4"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "height": "medium",
+        "text_alignment": "center",
+        "full_width": false,
+        "color_scheme": "default"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "logo_list_rDpCbA",
+    "custom_product_features_g6K7P8",
+    "image_with_text_6gBpYa",
+    "custom_product_list_by_print_Nbxwnx",
+    "related-products",
+    "mux_video_embed_xaVxRV",
+    "1775971838981c2d24",
+    "collapsible_tabs_T6tNKd",
+    "rich_text_yfiWim"
+  ]
+}
