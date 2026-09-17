@@ -138,7 +138,7 @@
           "settings": {
             "title": "{{ product.metafields.custom.design.value.name.value }}",
             "icon": "",
-            "content": "<p>{{ product.metafields.custom.design.value.design_description | metafield_tag }}</p>",
+            "content": "{{ product.metafields.custom.design.value.design_description | metafield_tag }}",
             "image": "{{ product.metafields.custom.design.value.colour_pattern.value.image.value }}",
             "page": "",
             "custom_liquid": "",
@@ -353,7 +353,6 @@
     },
     "custom_product_list_by_print_Nbxwnx": {
       "type": "custom-product-list-by-print",
-      "disabled": true,
       "custom_css": [
         ".collection-slider-row {padding-bottom: 0;}"
       ],
