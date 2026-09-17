@@ -16,13 +16,8 @@
 {%- endcomment -%}
 
 {%- liquid
-  if product.metafields.custom.material != blank
-    assign material_raw = product.metafields.custom.material.value
-    if material_raw.first != blank
-      assign material_value = material_raw | join: ', '
-    else
-      assign material_value = material_raw | remove: '["' | remove: '"]' | remove: '[' | remove: ']'
-    endif
+  if product.metafields.custom.material_new.value.material_name.value != blank
+    assign material_value = product.metafields.custom.material_new.value.material_name.value
   elsif product.tags contains 'TENCEL'
     assign material_value = 'TENCEL Lyocell'
   elsif product.tags contains 'muslin'
