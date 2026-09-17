@@ -50,6 +50,21 @@
             "size_chart_page": "{{ product.metafields.custom.size_chart.value }}"
           }
         },
+        "feature_rating_HL8RN4": {
+          "type": "feature-rating",
+          "disabled": true,
+          "settings": {
+            "heading": "Fit",
+            "segments": 5,
+            "active_segment": "4",
+            "fill_segments": true,
+            "show_labels": true,
+            "label_left": "Small",
+            "label_middle": "True to size",
+            "label_right": "Large",
+            "show_in_quickbuy": false
+          }
+        },
         "buy-buttons": {
           "type": "buy-buttons",
           "settings": {
@@ -133,16 +148,6 @@
             "open": false,
             "show_in_quickbuy": false
           }
-        },
-        "tog_guide_ptDmni": {
-          "type": "tog_guide",
-          "settings": {
-            "heading": "Recommended Room Temperature",
-            "cool_label": "Cool",
-            "warm_label": "Warm",
-            "info_link": "",
-            "link_label": "Choosing the right TOG"
-          }
         }
       },
       "block_order": [
@@ -151,6 +156,7 @@
         "text_Ey4aL9",
         "price",
         "variant-picker",
+        "feature_rating_HL8RN4",
         "buy-buttons",
         "auto_usp_grid_1",
         "pr_mentions_qbKGbp",
@@ -159,8 +165,7 @@
         "accordion_KqCkWX",
         "auto_materials_care_1",
         "accordion_xTzVna",
-        "accordion_3wmzgQ",
-        "tog_guide_ptDmni"
+        "accordion_3wmzgQ"
       ],
       "settings": {
         "show_breadcrumbs": true,

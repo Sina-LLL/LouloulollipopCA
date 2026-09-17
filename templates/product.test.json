@@ -50,6 +50,21 @@
             "size_chart_page": "{{ product.metafields.custom.size_chart.value }}"
           }
         },
+        "feature_rating_HL8RN4": {
+          "type": "feature-rating",
+          "disabled": true,
+          "settings": {
+            "heading": "Fit",
+            "segments": 5,
+            "active_segment": "4",
+            "fill_segments": true,
+            "show_labels": true,
+            "label_left": "Small",
+            "label_middle": "True to size",
+            "label_right": "Large",
+            "show_in_quickbuy": false
+          }
+        },
         "buy-buttons": {
           "type": "buy-buttons",
           "settings": {
@@ -63,6 +78,15 @@
         "auto_usp_grid_1": {
           "type": "auto_usp_grid",
           "settings": {}
+        },
+        "complementary_d3EJbm": {
+          "type": "complementary",
+          "disabled": true,
+          "settings": {
+            "heading": "Pairs Perfectly With",
+            "enable_carousel": true,
+            "max_products": 10
+          }
         },
         "pr_mentions_qbKGbp": {
           "type": "pr-mentions",
@@ -114,7 +138,7 @@
           "settings": {
             "title": "{{ product.metafields.custom.design.value.name.value }}",
             "icon": "",
-            "content": "{{ product.metafields.custom.design.value.design_description | metafield_tag }}",
+            "content": "<p>{{ product.metafields.custom.design.value.design_description | metafield_tag }}</p>",
             "image": "{{ product.metafields.custom.design.value.colour_pattern.value.image.value }}",
             "page": "",
             "custom_liquid": "",
@@ -134,15 +158,10 @@
             "show_in_quickbuy": false
           }
         },
-        "tog_guide_ptDmni": {
-          "type": "tog_guide",
-          "settings": {
-            "heading": "Recommended Room Temperature",
-            "cool_label": "Cool",
-            "warm_label": "Warm",
-            "info_link": "",
-            "link_label": "Choosing the right TOG"
-          }
+        "material_usp_g7Lfaj": {
+          "type": "material-usp",
+          "disabled": true,
+          "settings": {}
         }
       },
       "block_order": [
@@ -151,8 +170,10 @@
         "text_Ey4aL9",
         "price",
         "variant-picker",
+        "feature_rating_HL8RN4",
         "buy-buttons",
         "auto_usp_grid_1",
+        "complementary_d3EJbm",
         "pr_mentions_qbKGbp",
         "description",
         "accordion_yktgxC",
@@ -160,7 +181,7 @@
         "auto_materials_care_1",
         "accordion_xTzVna",
         "accordion_3wmzgQ",
-        "tog_guide_ptDmni"
+        "material_usp_g7Lfaj"
       ],
       "settings": {
         "show_breadcrumbs": true,
@@ -182,6 +203,24 @@
         "enable_video_looping": true,
         "enable_media_grouping": false,
         "media_grouping_option": "Color,Colour,Couleur,Farbe"
+      }
+    },
+    "178967850034ab394e": {
+      "type": "apps",
+      "blocks": {
+        "novel_shoppable_video_novel_product_Nj8X7V": {
+          "type": "shopify://apps/novel-shoppable-video/blocks/novel-product/67e3531b-60c1-40d3-83d1-8f5aba7081ef",
+          "settings": {
+            "journeyid": "6aac5103d1ae6900024603b5"
+          }
+        }
+      },
+      "block_order": [
+        "novel_shoppable_video_novel_product_Nj8X7V"
+      ],
+      "settings": {
+        "full_width": false,
+        "show_space": true
       }
     },
     "logo_list_rDpCbA": {
@@ -332,6 +371,7 @@
     },
     "custom_product_list_by_print_Nbxwnx": {
       "type": "custom-product-list-by-print",
+      "disabled": true,
       "custom_css": [
         ".collection-slider-row {padding-bottom: 0;}"
       ],
@@ -432,6 +472,7 @@
   },
   "order": [
     "main",
+    "178967850034ab394e",
     "logo_list_rDpCbA",
     "custom_product_features_g6K7P8",
     "image_with_text_6gBpYa",
