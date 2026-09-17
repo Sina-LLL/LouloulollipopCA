@@ -184,6 +184,24 @@
         "media_grouping_option": "Color,Colour,Couleur,Farbe"
       }
     },
+    "1789685674a69af1df": {
+      "type": "apps",
+      "blocks": {
+        "novel_shoppable_video_novel_product_j4GrrX": {
+          "type": "shopify://apps/novel-shoppable-video/blocks/novel-product/67e3531b-60c1-40d3-83d1-8f5aba7081ef",
+          "settings": {
+            "journeyid": "{{ product.metafields.custom.product_template.value.ugc_videos_code.value }}"
+          }
+        }
+      },
+      "block_order": [
+        "novel_shoppable_video_novel_product_j4GrrX"
+      ],
+      "settings": {
+        "full_width": false,
+        "show_space": true
+      }
+    },
     "logo_list_rDpCbA": {
       "type": "logo-list",
       "blocks": {
@@ -432,6 +450,7 @@
   },
   "order": [
     "main",
+    "1789685674a69af1df",
     "logo_list_rDpCbA",
     "custom_product_features_g6K7P8",
     "image_with_text_6gBpYa",
