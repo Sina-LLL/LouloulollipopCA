@@ -55,7 +55,7 @@
         "title": "You May Also Like",
         "text_alignment": "start",
         "enable_carousel": true,
-        "grid": 5,
+        "grid": 4,
         "color_scheme": "default",
         "full_width": true,
         "coll_grid_image_shape": "portrait-45",
