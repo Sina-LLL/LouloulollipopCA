@@ -118,10 +118,15 @@
         "button_style": "primary",
         "color_scheme": "default"
       }
+    },
+    "related_collections_auto": {
+      "type": "related-collections-carousel",
+      "settings": {}
     }
   },
   "order": [
     "main",
+    "related_collections_auto",
     "custom_collection_content_F7d8FN",
     "collapsible_tabs_xCNcnJ",
     "multi_column_nq8tP6"
