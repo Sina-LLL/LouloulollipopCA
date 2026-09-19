@@ -502,6 +502,12 @@ button#annbar-localization-country-button{
   font-weight: 600;
 
 }
+.price.price--on-sale{
+  margin-top:8px;
+}
+.product-block__title{
+  line-height:1.25rem;
+}
 .sold-out-line {
     height: 84.85px;
     position: absolute;
