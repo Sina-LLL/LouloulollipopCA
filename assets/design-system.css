@@ -2649,3 +2649,10 @@ h1.product-title{
   font-size: 10px;
   line-height: 1.3;
 }
+
+/* USP icon list (logo-list): force 3-up/2-up on mobile for 5-icon rows instead of the default 2-up/2-up/1-up */
+@media (max-width: 767.98px) {
+  .logo-list--count-5 .logo-list__logo {
+    flex: 0 0 calc(33.3% - 40px);
+  }
+}
