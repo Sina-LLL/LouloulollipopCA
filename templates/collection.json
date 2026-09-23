@@ -137,6 +137,10 @@
         "button_style": "primary",
         "color_scheme": "default"
       }
+    },
+    "related_collections_auto": {
+      "type": "related-collections-carousel",
+      "settings": {}
     }
   },
   "order": [
