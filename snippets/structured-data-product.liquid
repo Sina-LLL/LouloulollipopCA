@@ -30,6 +30,16 @@
     assign material_value = product.type
   endif
 
+  assign schema_category = product.type
+  if product.category != blank
+    assign schema_category = product.category.ancestors | map: 'name' | reverse | join: ' > '
+    if schema_category != blank
+      assign schema_category = schema_category | append: ' > ' | append: product.category.name
+    else
+      assign schema_category = product.category.name
+    endif
+  endif
+
   assign jm_rating_obj = product.metafields.reviews.rating.value
   assign jm_review_count = product.metafields.reviews.rating_count | plus: 0
   assign show_rating = false
@@ -60,7 +70,7 @@
   },
   "material": {{ material_value | json }}
   {%- if product.collections.first -%},
-  "category": {{ product.collections.first.title | json }}
+  "category": {{ schema_category | json }}
   {%- endif -%},
   "offers": {
     "@type": "AggregateOffer",
