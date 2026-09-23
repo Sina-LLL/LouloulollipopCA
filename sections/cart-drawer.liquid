@@ -38,7 +38,7 @@
                 name="attributes[loyalty_join_intent]"
                 value="true"
                 tabindex="0"
-                aria-label="Join rewards program and earn points for this order"
+                aria-label="{{ 'loulou.rewards_aria' | t | escape }}"
                 aria-describedby="loyalty_copy"
                 ${this.joinIntent ? 'checked' : ''}>
               <div class="loyalty-content">
@@ -814,8 +814,8 @@
     
     <loyalty-join
       data-cart-total="{{ cart.total_price | divided_by: 100.0 }}"
-      data-copy-member="{{ "You'll earn [AMOUNT] points for this order by being a Club Loulou member!" | escape }}"
-      data-copy-non-member="{{ "Earn [AMOUNT] points for this order by joining Club Loulou!" | escape }}"
+      data-copy-member="{{ 'loulou.points_member' | t | escape }}"
+      data-copy-non-member="{{ 'loulou.points_non_member' | t | escape }}"
       data-marketplace-api="{% if request.host contains 'myshopify.com' or request.host contains 'localhost' %}https://marketplaceapi.heyethos.dev{% else %}https://marketplaceapi.heyethos.com{% endif %}"
       data-store-info='{"domain":{{ shop.domain | json }},"permanent_domain":{{ shop.permanent_domain | json }},"name":{{ shop.name | json }}}'
       {% if customer %}data-customer='{"id":{{ customer.id | json }},"email":{{ customer.email | json }}}'{% endif %}
@@ -833,11 +833,11 @@
           <div class="cart-note block">
             <label>
               <input type="checkbox" id="GiftCheckbox" {% if cart.attributes.is_gift == 'true' %}checked{% endif %} />
-              Is this a gift?
+              {{ 'loulou.gift_question' | t }}
             </label>
           </div>
           <div class="cart-gift-message lightly-spaced-row cart-note block" id="GiftMessageWrapper" style="display: {% if cart.attributes.is_gift == 'true' %}block{% else %}none{% endif %};">
-            <textarea id="GiftMessage" placeholder="Add a gift message...">{{ cart.attributes.GiftMessage }}</textarea>
+            <textarea id="GiftMessage" placeholder="{{ 'loulou.gift_placeholder' | t | escape }}">{{ cart.attributes.GiftMessage }}</textarea>
           </div>
               {% comment %} <toggle-target id="CartDrawerNoteToggle" role="button" tabindex="0" class="toggle-target-toggler--is-hidden link underline" data-toggle-target=".cart-drawer__note">{{ 'cart.note.label' | t }}</toggle-target>
               <div class="cart-drawer__note toggle-target toggle-target--hidden">
