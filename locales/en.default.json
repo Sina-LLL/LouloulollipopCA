@@ -521,6 +521,15 @@
     "shipping_link": "Shipping",
     "shipping_tooltip_html": "All CA orders over $100 ship for free!<br>$12 standard shipping in BC, $15 rest of Canada for orders under $100. If you need expedited shipping, the shipping fee will be calculated at checkout.",
     "add_to_babylist": "Add to Babylist",
-    "related_collections_title": "You May Also Like"
+    "related_collections_title": "You May Also Like",
+    "rewards_aria": "Join rewards program and earn points for this order",
+    "points_member": "You'll earn [AMOUNT] points for this order by being a Club Loulou member!",
+    "points_non_member": "Earn [AMOUNT] points for this order by joining Club Loulou!",
+    "gift_question": "Is this a gift?",
+    "gift_placeholder": "Add a gift message...",
+    "gift_message_label": "Gift Message",
+    "donation_note": "For every order you place, we will donate one serving of Niuriss baby formula to Mamas for Mamas.",
+    "points_non_member_long": "Instantly earn [AMOUNT] points on this order when you join Club Loulou Rewards (free to join, comes with awesome perks)",
+    "as_featured_in": "As Featured In"
   }
 }
