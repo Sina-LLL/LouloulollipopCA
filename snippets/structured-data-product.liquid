@@ -96,15 +96,11 @@
       {%- endfor -%}
     ]
   }
-  {%- if show_rating -%},
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": {{ jm_rating_obj.rating | json }},
-    "reviewCount": {{ jm_review_count | json }},
-    "bestRating": {{ jm_rating_obj.scale_max | default: 5 | json }},
-    "worstRating": {{ jm_rating_obj.scale_min | default: 1 | json }}
-  }
-  {%- endif -%}
+  {%- comment -%}
+    aggregateRating intentionally omitted: the Judge.me app embed outputs its own
+    Product JSON-LD (same #product @id) with aggregateRating + reviews. Emitting it
+    here too triggers GSC "Review has multiple aggregate ratings".
+  {%- endcomment -%}
   {%- if product.metafields.reviews.recent_json != blank -%},
   "review": {{ product.metafields.reviews.recent_json }}
   {%- endif -%}
