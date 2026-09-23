@@ -533,16 +533,16 @@
                         <div class="product-free-shipping__messages">
                           {% render 'icon-shipping' %}
                           <p>
-                            Free Shipping for orders over $100+
-                            <a href="{{ shop.shipping_policy.url }}"class="shipping-info-trigger">Shipping</a>
+                            {{ 'loulou.free_shipping_line' | t }}
+                            <a href="{{ shop.shipping_policy.url }}"class="shipping-info-trigger">{{ 'loulou.shipping_link' | t }}</a>
                           </p>
                           <div class="shipping-info-tooltip">
-                            All CA orders over $100 ship for free!<br>$12 standard shipping in BC, $15 rest of Canada for orders under $100. If you need expedited shipping, the shipping fee will be calculated at checkout.
+                            {{ 'loulou.shipping_tooltip_html' | t }}
                           </div>
                         </div>
                         <div class="wishlist--container">
                           {% render 'icon-babylist' %}
-                          <a class="babylist-btn" href="#" onclick="if (window.bl) { bl.addToRegistry({ images: '{{- product.featured_image.src | img_url: "800x" -}}', price: '{{ product.price | money_without_currency }}', title: '{{ product.title }}', url: '{{ shop.url }}{{ product.url }}' }); } return false;">Add to Babylist</a>
+                          <a class="babylist-btn" href="#" onclick="if (window.bl) { bl.addToRegistry({ images: '{{- product.featured_image.src | img_url: "800x" -}}', price: '{{ product.price | money_without_currency }}', title: '{{ product.title }}', url: '{{ shop.url }}{{ product.url }}' }); } return false;">{{ 'loulou.add_to_babylist' | t }}</a>
                         </div>
                       </div>
                     </div>

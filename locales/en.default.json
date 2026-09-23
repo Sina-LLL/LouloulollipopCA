@@ -515,5 +515,12 @@
     "product_waffle_sleeper_sea_glass": "Waffle Sleeper - Sea Glass",
     "product_sleeper_mermaids": "Sleeper - Mermaids",
     "product_gift_card": "Gift Card"
+  },
+  "loulou": {
+    "free_shipping_line": "Free Shipping for orders over $100+",
+    "shipping_link": "Shipping",
+    "shipping_tooltip_html": "All CA orders over $100 ship for free!<br>$12 standard shipping in BC, $15 rest of Canada for orders under $100. If you need expedited shipping, the shipping fee will be calculated at checkout.",
+    "add_to_babylist": "Add to Babylist",
+    "related_collections_title": "You May Also Like"
   }
 }

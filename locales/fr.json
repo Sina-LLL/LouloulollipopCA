@@ -515,5 +515,12 @@
     "product_waffle_sleeper_sea_glass": "Pyjama à motif gaufré - Verre de mer",
     "product_sleeper_mermaids": "Pyjama - Sirènes",
     "product_gift_card": "Carte-cadeau"
+  },
+  "loulou": {
+    "free_shipping_line": "Livraison gratuite pour les commandes de 100 $ et plus",
+    "shipping_link": "Livraison",
+    "shipping_tooltip_html": "Livraison gratuite pour toutes les commandes de 100 $ et plus au Canada!<br>Pour les commandes de moins de 100 $, la livraison standard coûte 12 $ en C.-B. et 15 $ ailleurs au Canada. Si vous avez besoin d'une livraison accélérée, les frais seront calculés au moment du paiement.",
+    "add_to_babylist": "Ajouter à Babylist",
+    "related_collections_title": "Vous aimerez aussi"
   }
 }
