@@ -443,6 +443,12 @@ button.btn.btn--large.no-stock {
     object-fit: cover;
     max-height: 100%;
   }
+  .slider__item:has(.product-media--video) {
+    align-self: flex-start;
+  }
+  .product-media.product-media--video.product-media--frame {
+    padding-bottom: 133.333% !important;
+  }
   carousel-slider {
     max-height: 500px;
     overflow: hidden;
@@ -489,9 +495,19 @@ button#annbar-localization-country-button{
 .price.price--on-sale.price--sold-out .price__default{
   display:flex;
 }
+.price__default{
+  line-height:0;
+}
 .price-label--sold-out{
   font-weight: 600;
 
+}
+
+.product-block__title{
+  line-height:1.25rem;
+}
+.price.price--on-sale .price__current{
+    margin-top:8px;
 }
 .sold-out-line {
     height: 84.85px;
@@ -794,7 +810,7 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
   background: var(--lll-slate);
 }
 .custom-product-features__wrapper {
-  background: var(--lll-white);
+  /* background: var(--lll-white); */
   padding-top: 28px;
   padding-bottom: 28px;
 }
@@ -837,7 +853,7 @@ carousel-slider.mobile-only.custom-features-carousel{
 .custom-product-features__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 16px;
+  gap: 32px;
   justify-items: stretch;
   opacity: 0;
   max-height: 0;
@@ -944,13 +960,16 @@ carousel-slider.mobile-only.custom-features-carousel{
     font-size: 1.5rem;
   }
   .product-media.product-media--image .img-ar.img-ar--contain{
-    --aspect-ratio: 0.66666666 !important;
+    --aspect-ratio: 0.75 !important;
   }
   .product-media.product-media--image .img-ar--contain img{
     object-fit:cover;
   }
+  .product-media.product-media--video.product-media--frame{
+    padding-bottom: 133.333% !important;
+  }
   .custom-product-features__wrapper {
-    padding: 28px 40px;
+    /* padding: 28px 40px; */
     margin: 20px 20px;
 
   }
@@ -1164,13 +1183,21 @@ cart-form .page-header:not(.page-header--with-background){
   top: 40px;
   margin-bottom: 0;
 }
+.custom-product-highlight__media  .text-overlay__inner{
+  padding:20px;
+}
 @media (max-width: 768px){
   .custom-product-highlight__container .button-row--primary{
     display: flex;
     justify-content: center;
   }
+  .custom-product-highlight__media  .text-overlay__inner{
+    padding:20px;
+  }
 }
-
+.section-image-with-text .flexible-layout .column{
+  margin-bottom: 0;
+}
 /* Carousel edits */
 .slider--no-max{
   padding-left: var(--container-pad-x);
@@ -1711,5 +1738,921 @@ h4, .h4 {
   /* the slide-scoped instance is only needed for the mobile carousel */
   .product-award-badges--slide {
     display: none;
+  }
+}
+
+/* ============================================================
+   FABRIC COMPARISON CHART (lp-comparison-tabs.liquid) — homepage
+   "Better Fabrics, By Design" section.
+   Matches sections/lp-comparison.liquid (the sibling "vs" chart used
+   on lp-sleep-bags and other landing pages) class-for-class, extended
+   with a tab switch for two tables and a third competitor column.
+   Uses that component's own border/tint system (#6A8B95 / #D1E3E6 /
+   #BAD5D9, 6px radius) rather than the --lll-* tokens above — this
+   component predates the token system and lp-sleep-bags is the
+   explicit design reference, not design-system.css itself.
+   ============================================================ */
+.lp-fabric {
+  background: var(--fab-bg, #FAF9F6);
+  padding: var(--fab-padding-top, 72px) 0 var(--fab-padding-bottom, 72px);
+}
+
+.lp-fabric__container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.lp-fabric__head {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 48px;
+}
+
+.lp-fabric__head p {
+  font-size: 1.1rem;
+  margin-top: 12px;
+}
+
+.lp-fabric__switch {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.lp-fabric__radio {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Base look comes from the real .btn / .btn--secondary classes applied
+   in the markup (radius, padding, font, hover, focus — all real).
+   This only adds layout (flex/gap) and the active-state override,
+   using the real --lll-* tokens the button system itself resolves to
+   (--lll-slate-action for primary bg/border, --lll-cream for its text). */
+.lp-fabric__switch-label {
+  cursor: pointer;
+  padding: 14px 24px;
+  text-align: center;
+  user-select: none;
+}
+
+#lp-fabric-tab1:checked ~ .lp-fabric__switch label[for="lp-fabric-tab1"],
+#lp-fabric-tab2:checked ~ .lp-fabric__switch label[for="lp-fabric-tab2"] {
+  background-color: var(--lll-slate-action);
+  border-color: var(--lll-slate-action);
+  color: var(--lll-cream);
+}
+
+#lp-fabric-tab1:focus-visible ~ .lp-fabric__switch label[for="lp-fabric-tab1"],
+#lp-fabric-tab2:focus-visible ~ .lp-fabric__switch label[for="lp-fabric-tab2"] {
+  outline: 2px solid var(--lll-slate-action);
+  outline-offset: 2px;
+}
+
+.lp-fabric__panel {
+  display: none;
+}
+
+#lp-fabric-tab1:checked ~ .lp-fabric__panel[data-panel="1"],
+#lp-fabric-tab2:checked ~ .lp-fabric__panel[data-panel="2"] {
+  display: block;
+}
+
+.lp-fabric__wrap {
+  margin: 0 auto;
+}
+
+.lp-fabric__scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.lp-fabric__table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid #6A8B95;
+  border-radius: 6px;
+  overflow: hidden;
+  font-size: 0.95rem;
+}
+
+.lp-fabric__table thead {
+  background: #D1E3E6;
+  font-family: var(--heading-font-family);
+}
+
+.lp-fabric__table th,
+.lp-fabric__table td {
+  padding: 15px 20px;
+  text-align: left;
+  border-bottom: 1px solid #6A8B95;
+}
+
+.lp-fabric__table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.lp-fabric__feature {
+  font-weight: 600;
+}
+
+.lp-fabric__col-ours {
+  background: #BAD5D9;
+  font-weight: 600;
+}
+
+.lp-fabric__bottom-line {
+  margin-top: 28px;
+  padding: 18px 22px;
+  background: #D1E3E6;
+  border-left: 4px solid #6A8B95;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.lp-fabric__cta {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.lp-fabric__accordion-row.disclosure {
+  margin-bottom: 0;
+  border-top: none;
+  border-bottom: 1px solid var(--lll-slate-border, #D9E1E4);
+}
+
+.lp-fabric__accordion-row.disclosure:first-child {
+  border-top: 1px solid var(--lll-slate-border, #D9E1E4);
+}
+
+.lp-fabric__accordion-row .disclosure__title {
+  padding: 18px 0;
+  font-family: var(--lll-font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.lp-fabric__accordion-row .disclosure__content {
+  padding: 0 0 22px;
+  color: inherit;
+}
+
+.lp-fabric__accordion-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 0;
+}
+
+.lp-fabric__accordion-item + .lp-fabric__accordion-item {
+  border-top: 1px solid var(--lll-slate-border, #D9E1E4);
+}
+
+.lp-fabric__accordion-item--ours {
+  background: #BAD5D9;
+  border-radius: var(--lll-radius-sm, 4px);
+  padding: 12px 14px;
+  margin: 4px 0;
+}
+
+.lp-fabric__accordion-item--ours + .lp-fabric__accordion-item {
+  border-top: none;
+}
+
+.lp-fabric__accordion-label {
+  color: #6A8B95;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.lp-fabric__accordion-item--ours .lp-fabric__accordion-label {
+  color: #3E5960;
+  font-weight: 600;
+}
+
+.lp-fabric__accordion-value {
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.lp-fabric__accordion-item--ours .lp-fabric__accordion-value {
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .lp-fabric {
+    padding: calc(var(--fab-padding-top, 72px) * 0.67) 0 calc(var(--fab-padding-bottom, 72px) * 0.67);
+  }
+  .lp-fabric__table th,
+  .lp-fabric__table td {
+    padding: 10px 12px;
+    font-size: 0.82rem;
+  }
+  .lp-fabric__switch-label {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lp-fabric__switch-label {
+    transition: none;
+  }
+}
+
+/* ============================================================
+   PRODUCT HIGHLIGHT (custom-product-highlight.liquid) — homepage
+   "Swaddling Made Simple" / "Gift-able Bundles" sections. Image with
+   text overlaid on it (title/subtitle/Shop Now button, bottom-left)
+   beside a product grid (2 or 3 columns depending on count), a
+   swipeable single row on mobile.
+   Reuses real components rather than inventing new ones: the
+   text-over-image markup/classes come from image-with-text-overlay.liquid
+   (.image-overlay / .height--adapt / .text-overlay), the product row
+   comes from featured-collection.liquid's real carousel
+   (.product-grid--carousel / .slider__grid / carousel-slider). This
+   only adds the two-column layout, the image radius, and the desktop
+   override that turns the carousel into a static grid.
+   ============================================================ */
+.custom-product-highlight__layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gutter, 24px);
+}
+
+@media (min-width: 900px) {
+  .custom-product-highlight__layout {
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1fr);
+    align-items: start;
+  }
+  .custom-product-highlight__layout--reverse {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
+  }
+  .custom-product-highlight__layout--reverse .custom-product-highlight__media {
+    order: 2;
+  }
+}
+
+.custom-product-highlight__media {
+  position: relative;
+  border-radius: var(--lll-radius-lg, 12px);
+  overflow: hidden;
+}
+
+/* The overlay title inherits font-family/weight from the site's h2 rule
+   automatically (it's still an <h2>) — this only reins in the size, since
+   the bare .h1 class here inherited the full hero-banner scale. */
+.custom-product-highlight__overlay-title {
+  font-size: var(--lll-text-h3, 1.75rem);
+}
+
+.custom-product-highlight__products {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.custom-product-highlight__products carousel-slider {
+  min-width: 0;
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  .custom-product-highlight__products .product-grid--carousel {
+    display: grid;
+    grid-template-columns: repeat(var(--product-highlight-cols, 3), 1fr);
+    grid-auto-flow: row;
+    gap: var(--gutter, 24px);
+    overflow: visible;
+    width: 100%;
+  }
+  .custom-product-highlight__products .slider__item {
+    flex: none;
+    width: auto;
+  }
+}
+
+/* ==========================================================================
+   Collection content blocks
+   Paste this whole block at the end of design-system.css.
+   Pairs with sections/collection-content.liquid.
+   Uses existing --lll-* tokens only; adds no new ones.
+   ========================================================================== */
+
+.cc-sections {
+  --cc-measure: var(--reading-container-width, 720px);
+  --cc-wide: 60rem;
+}
+
+/* --- section shell + banding ---------------------------------------------- */
+
+.cc {
+  padding-block: var(--cc-pt, 48px) var(--cc-pb, 48px);
+}
+.cc[id] {
+  scroll-margin-top: 96px;
+}
+
+.cc--band-cream { background: var(--lll-cream); }
+.cc--band-white { background: var(--lll-white); }
+.cc--band-blush { background: var(--lll-blush); }
+
+/* --- headings -------------------------------------------------------------- */
+
+.cc__h2 {
+  margin: 0 0 var(--lll-space-4);
+  color: var(--lll-ink);
+  font-family: var(--lll-font-display);
+  font-weight: var(--lll-weight-heading);
+  font-size: var(--lll-text-h2);
+  line-height: var(--lll-leading-heading);
+  text-wrap: balance;
+}
+
+/* --- body copy (rich text, all layouts) ------------------------------------ */
+
+.cc__body {
+  color: var(--lll-ink);
+  font-family: var(--lll-font-body);
+  line-height: var(--lll-leading-body);
+}
+/* metafield_tag wraps rich text in its own div — collapse it out of the box
+   tree so every ".cc__body > *" rule below still reaches the real
+   paragraphs/lists instead of this one wrapper. */
+.cc__body > .metafield-rich_text_field {
+  display: contents;
+}
+.cc__body > * { margin: 0; }
+.cc__body > * + * { margin-top: var(--lll-space-4); }
+
+.cc__body a {
+  color: var(--lll-slate-deep);
+  text-underline-offset: 0.18em;
+}
+.cc__body a:hover { color: var(--lll-ink); }
+
+.cc__body h3 {
+  margin-top: var(--lll-space-6);
+  font-family: var(--lll-font-display);
+  font-weight: var(--lll-weight-subhead);
+  font-size: var(--lll-text-h4);
+  line-height: var(--lll-leading-snug);
+}
+
+.cc__body ul,
+.cc__body ol {
+  padding-left: var(--lll-space-5);
+}
+.cc__body li + li { margin-top: var(--lll-space-2); }
+
+/* --- layout: prose --------------------------------------------------------- */
+
+.cc--prose .cc__h2,
+.cc--prose .cc__body {
+  max-width: var(--cc-measure);
+}
+
+/* --- layout: prose_split --------------------------------------------------- */
+
+.cc--prose_split .cc__h2 { max-width: var(--cc-measure); }
+
+@media (min-width: 769px) {
+  .cc--prose_split .cc__body {
+    /* max-width: var(--cc-wide); */
+    columns: 2;
+    column-gap: var(--lll-space-12);
+  }
+  .cc--prose_split .cc__body > * { break-inside: avoid; }
+}
+
+/* --- layout: definition_list ----------------------------------------------- */
+/* The UL in the rich text becomes a row of cards. Bold the term at the start
+   of each list item and it renders as the card's large label.               */
+
+.cc--definition_list .cc__h2,
+.cc--definition_list .cc__body > p {
+  max-width: var(--cc-measure);
+}
+
+.cc--definition_list .cc__body ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--lll-space-4);
+  margin-top: var(--lll-space-6);
+  /* .rte ul sets margin-inline-start: 2em — reset it so the row lines up
+     with the heading above, not indented 32px from it. */
+  margin-inline-start: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cc--definition_list .cc__body ul li {
+  margin: 0;
+  padding: var(--lll-space-6) var(--lll-space-5);
+  background: var(--lll-white);
+  border: 1px solid var(--lll-slate-border);
+  border-radius: var(--lll-radius-lg);
+  /* list-style-type is inherited from the ul's "none" above, but the theme's
+     .rte ul li sets it directly on this element, and a direct declaration
+     always wins over an inherited one — so it has to be reset here too. */
+  list-style: none;
+}
+.cc--band-white.cc--definition_list .cc__body ul li { background: var(--lll-cream); }
+
+.cc--definition_list .cc__body ul li > strong:first-child,
+.cc--definition_list .cc__body ul li > b:first-child {
+  display: block;
+  margin-bottom: var(--lll-space-3);
+  color: var(--lll-ink);
+  font-family: var(--lll-font-display);
+  font-weight: var(--lll-weight-heading);
+  font-size: var(--lll-text-h4);
+  line-height: 1;
+}
+
+/* --- layout: numbered_list -------------------------------------------------- */
+
+.cc--numbered_list .cc__h2,
+.cc--numbered_list .cc__body > p {
+  max-width: var(--cc-measure);
+}
+
+.cc--numbered_list .cc__body ol {
+  counter-reset: cc-step;
+  max-width: var(--cc-wide);
+  margin-top: var(--lll-space-6);
+  margin-inline-start: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--lll-slate-border);
+}
+
+.cc--numbered_list .cc__body ol li {
+  counter-increment: cc-step;
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: var(--lll-space-5);
+  margin: 0;
+  padding-block: var(--lll-space-5);
+  border-bottom: 1px solid var(--lll-slate-border);
+  /* same inherited-vs-direct fight as definition_list — .rte ol li sets its
+     own decimal marker directly on the element, overriding the ol's "none". */
+  list-style: none;
+}
+
+.cc--numbered_list .cc__body ol li::before {
+  content: counter(cc-step, decimal-leading-zero);
+  padding-top: 0.2em;
+  color: var(--lll-slate-deep);
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- layout: two_up --------------------------------------------------------- */
+
+.cc--two_up .cc__h2,
+.cc--two_up .cc__body > p {
+  max-width: var(--cc-measure);
+}
+
+.cc--two_up .cc__body ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--lll-space-4);
+  margin-top: var(--lll-space-6);
+  margin-inline-start: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cc--two_up .cc__body ul li {
+  margin: 0;
+  padding: var(--lll-space-6);
+  background: var(--lll-white);
+  border: 1px solid var(--lll-slate-border);
+  border-radius: var(--lll-radius-lg);
+  list-style: none;
+}
+.cc--band-white.cc--two_up .cc__body ul li { background: var(--lll-cream); }
+
+/* --- layouts: media_split + emphasis_band ----------------------------------- */
+
+.cc--media_split .cc__inner,
+.cc--emphasis_band.cc--has-media .cc__inner {
+  display: grid;
+  gap: var(--lll-space-12);
+  align-items: center;
+}
+
+.cc--emphasis_band .cc__col { max-width: var(--cc-measure); }
+
+.cc__img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--lll-radius-lg);
+}
+
+@media (min-width: 769px) {
+  .cc--media_split .cc__inner { grid-template-columns: 1fr 1fr; }
+  .cc--emphasis_band.cc--has-media .cc__inner { grid-template-columns: 1.15fr 0.85fr; }
+  .cc--media_split.cc--flip .cc__media { order: 2; }
+}
+
+/* --- jump links -------------------------------------------------------------- */
+
+.cc-toc {
+  background: var(--lll-cream);
+  padding-block: var(--lll-space-6);
+}
+.cc-toc__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--lll-space-2);
+}
+.cc-toc__link {
+  padding: 0.5rem 0.8125rem;
+  color: var(--lll-slate-deep);
+  background: var(--lll-white);
+  border: 1px solid var(--lll-slate-border);
+  border-radius: var(--lll-radius-pill);
+  font-size: 0.8125rem;
+  line-height: 1.3;
+  text-decoration: none;
+  transition: border-color var(--lll-duration-fast), color var(--lll-duration-fast);
+}
+.cc-toc__link:hover {
+  color: var(--lll-ink);
+  border-color: var(--lll-slate);
+}
+
+.cc-toc__link:focus-visible,
+.cc__body a:focus-visible {
+  outline: 2px solid var(--lll-slate-deep);
+  outline-offset: 2px;
+}
+
+/* --- small screens ------------------------------------------------------------ */
+
+@media (max-width: 768px) {
+  .cc {
+    padding-block: calc(var(--cc-pt, 48px) * 0.75) calc(var(--cc-pb, 48px) * 0.75);
+  }
+  .cc--numbered_list .cc__body ol li {
+    grid-template-columns: 2.25rem 1fr;
+    gap: var(--lll-space-4);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cc-toc__link { transition: none; }
+}
+
+
+/* PDP Update */
+.product-info-block{
+  font-size: 14px;
+  margin-bottom: 12px;
+
+}
+.product-form .lightly-spaced-row{
+  margin-bottom: 4px;
+  margin-top: 4px;
+
+}
+.price-descriptors{
+  display:none;
+}
+.MoreToLove{
+color: var(--lll-cream);
+text-align: center;
+font-family: "Avenir Next";
+font-size: 0.75rem;
+font-style: normal;
+font-weight: 600;
+line-height: 0.73344rem; /* 97.792% */
+letter-spacing: 0.00375rem;
+text-transform: uppercase;
+background-color: var(--lll-sale);
+border-radius: 0.25rem;
+padding: 4px 8px;
+}
+.disclosure{
+      border-top: 0.5px solid rgb(var(--body-text-color) );
+    border-bottom: 0.5px solid rgb(var(--body-text-color) );
+}
+.disclosure__title-text {
+  margin: 0;
+  font: inherit;
+}
+
+/* TOG Temperature Guide (interactive) — sections/custom-main-product.liquid, block type "tog_guide" */
+.tog-guide {
+  background: var(--lll-cream);
+  border-radius: var(--lll-radius-lg);
+}
+
+.tog-guide__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--lll-space-3);
+  margin-bottom: var(--lll-space-6);
+}
+.tog-guide__label {
+  margin: 0;
+  font-family: var(--lll-font-body);
+  font-weight: var(--lll-weight-subhead);
+  font-size: 1rem;
+  line-height: 1.4;
+  letter-spacing: normal;
+  text-transform: none;
+  color: var(--lll-ink);
+}
+.tog-guide__range {
+  margin: 0;
+  font-family: var(--lll-font-display);
+  font-weight: var(--lll-weight-heading);
+  font-size: 1.375rem;
+  color: var(--lll-ink);
+  white-space: nowrap;
+  transition: opacity var(--lll-duration-fast) ease;
+}
+
+.tog-guide__endpoints {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--lll-space-2);
+}
+.tog-guide__endpoint-label {
+  font-size: 0.6875rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--lll-text-muted);
+}
+
+.tog-guide__track {
+  position: relative;
+  height: 6px;
+  border-radius: var(--lll-radius-pill);
+  background: linear-gradient(90deg, var(--lll-slate) 0%, var(--lll-blush) 50%, var(--lll-new) 100%);
+  margin-bottom: var(--lll-space-3);
+  cursor: pointer;
+  touch-action: none;
+}
+.tog-guide__track:focus-visible {
+  outline: 2px solid var(--lll-slate-deep);
+  outline-offset: 4px;
+  border-radius: var(--lll-radius-pill);
+}
+.tog-guide__endpoint-dot {
+  position: absolute;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: var(--lll-radius-full);
+  background: var(--lll-white);
+  box-shadow: 0 0 0 1px rgba(29, 29, 29, 0.12);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.tog-guide__endpoint-dot--start { left: 0; }
+.tog-guide__endpoint-dot--end { left: 100%; }
+.tog-guide__thumb {
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  border-radius: var(--lll-radius-full);
+  background: var(--lll-white);
+  border: 1px solid var(--lll-slate-border);
+  box-shadow: 0 2px 6px rgba(29, 29, 29, 0.2);
+  transform: translate(-50%, -50%);
+  transition: left var(--lll-duration-fast) ease;
+  cursor: grab;
+}
+.tog-guide__thumb:active {
+  cursor: grabbing;
+  box-shadow: 0 2px 10px rgba(29, 29, 29, 0.3);
+}
+
+.tog-guide__scale {
+  display: flex;
+  justify-content: space-between;
+}
+.tog-guide__tog {
+  appearance: none;
+  background: none;
+  border: none;
+  padding: var(--lll-space-1) var(--lll-space-1);
+  margin: calc(var(--lll-space-1) * -1);
+  font-family: inherit;
+  font-size: 0.75rem;
+  color: var(--lll-text-muted);
+  cursor: pointer;
+  transition: color var(--lll-duration-fast) ease;
+}
+.tog-guide__tog:hover {
+  color: var(--lll-slate-deep);
+}
+.tog-guide__tog:focus-visible {
+  outline: 2px solid var(--lll-slate-deep);
+  outline-offset: 2px;
+  border-radius: var(--lll-radius-sm);
+}
+.tog-guide__tog.is-active {
+  font-weight: var(--lll-weight-heading);
+  color: var(--lll-ink);
+}
+
+.tog-guide__footer {
+  text-align: center;
+  margin-top: var(--lll-space-5);
+  padding-top: var(--lll-space-4);
+  border-top: 1px solid var(--lll-slate-border);
+}
+.tog-guide__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--lll-space-2);
+  font-size: 0.8125rem;
+  color: var(--lll-slate-deep);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  transition: color var(--lll-duration-fast) ease;
+}
+.tog-guide__link:hover {
+  color: var(--lll-ink);
+}
+.tog-guide__info-icon {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+}
+
+.disclosure__content.rte.cf{
+  color: var(--lll-ink)
+}
+h1.product-title{
+  margin-bottom: 8px;
+}
+/* Product USPs (auto) block — sections/custom-main-product.liquid, block type "auto_usp_grid" */
+.product-usp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 24px;
+  row-gap: 32px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.product-usp-grid__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+.product-usp-grid__item--centered {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+.product-usp-grid__icon {
+  width: 64px;
+  height: 64px;
+}
+.product-usp-grid__icon-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.product-usp-grid__label {
+  margin: 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.product-info-accordion__image {
+  margin-bottom: 16px;
+}
+.product-info-accordion__image img {
+  display: block;
+}
+.product-info-accordion__shop-link {
+  display: inline-block;
+  margin-top: var(--lll-space-4);
+  font-size: 0.875rem;
+  font-weight: var(--lll-weight-subhead);
+  color: var(--lll-slate-deep);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+.product-info-accordion__shop-link:hover {
+  color: var(--lll-ink);
+}
+
+.product-care-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 16px;
+  row-gap: 20px;
+  margin-top: 16px;
+}
+.product-care-grid__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+.product-care-grid__icon {
+  width: 40px;
+  height: 40px;
+}
+.product-care-grid__icon-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.product-care-grid__label {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+/* Image with text: move image below content on mobile (section setting "mobile_image_below") */
+@media (max-width: 767.98px) {
+  .column--order-push-mobile {
+    order: 1;
+  }
+  /* Full-bleed the pushed image: break out of .container padding to the viewport edges
+     and drop its own bottom margin so it touches the bottom of the section. */
+  .flexible-layout .column.column--order-push-mobile {
+    width: 100vw !important;
+    max-width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    margin-bottom: 0;
+  }
+  .column--order-push-mobile .image-overlap {
+    max-width: 100vw !important;
+    margin: 0;
+  }
+  /* Section wrapper uses padding (not margin) for spacing when a color scheme is set;
+     drop its bottom padding so the full-bleed image touches the section's bottom edge. */
+  .iwt-row--mobile-image-bleed {
+    padding-bottom: 0;
+  }
+}
+
+/* Image with text: "Icon row item" blocks */
+.iwt-icon-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  column-gap: 32px;
+  row-gap: 24px;
+}
+.iwt-icon-row__item {
+  display: flex;
+  flex: 1 1 0;
+  min-width: 50px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+.iwt-icon-row__icon {
+  width: 56px;
+  height: 56px;
+}
+.iwt-icon-row__icon-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.iwt-icon-row__label {
+  margin: 0;
+  font-size: 10px;
+  line-height: 1.3;
+}
+
+/* USP icon list (logo-list): force 3-up/2-up on mobile for 5-icon rows instead of the default 2-up/2-up/1-up */
+@media (max-width: 767.98px) {
+  .logo-list--count-5 .logo-list__logo {
+    flex: 0 0 calc(33.3% - 40px);
   }
 }

@@ -386,3 +386,49 @@
 }
 </script>
 {%- endif -%}
+
+
+{%- comment -%}
+  ================= 4. PAGE =================
+  Pages had no branch here at all, so /pages/sleep-bags emitted zero
+  JSON-LD -- verified on the live page, 0 ld+json scripts.
+
+  Deliberately NO BreadcrumbList here. snippets/breadcrumbs.liquid already
+  emits one for 'page' and is rendered by sections/main-page.liquid; a
+  custom landing template that wants it simply includes a main-page
+  section (which also gives the shopper a visible breadcrumb, so the
+  markup describes something actually on the page). Duplicating it here
+  would mean suppressing it there, and that is a much larger change to a
+  snippet every template depends on.
+
+  Organization is included so informational pages carry brand identity as
+  a real entity rather than relying on a cross-page @id reference, which
+  Google does not resolve between documents. The WebPage node's
+  "breadcrumb" key points at the @id breadcrumbs.liquid emits when it is
+  present, and is simply unresolved when it isn't -- harmless either way.
+
+  Deliberately no ItemList: this snippet renders from the header and has
+  no way to know which products a given page template puts on the page.
+  Emitting a guessed list risks describing products that aren't there.
+{%- endcomment -%}
+{%- if request.page_type == 'page' and page -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {%- render 'structured-data-organization', logo: logo -%},
+    {
+      "@type": "WebPage",
+      "@id": "{{ shop.url }}{{ page.url }}#webpage",
+      "url": "{{ shop.url }}{{ page.url }}",
+      "name": {{ page.title | json }},
+      "description": {{ page.metafields.global.description_tag | default: page.content | strip_html | strip_newlines | truncate: 300 | json }},
+      "isPartOf": { "@id": "{{ shop.url }}#website" },
+      "about": { "@id": "{{ shop.url }}#organization" },
+      "publisher": { "@id": "{{ shop.url }}#organization" },
+      "inLanguage": "{{ request.locale.iso_code | default: 'en' }}"
+    }
+  ]
+}
+</script>
+{%- endif -%}

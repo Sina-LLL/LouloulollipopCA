@@ -59,6 +59,7 @@
       "type": "main-page",
       "disabled": true,
       "settings": {
+        "show_breadcrumbs": true,
         "show_page_title": true,
         "full_width": false
       }

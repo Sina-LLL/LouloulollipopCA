@@ -25,7 +25,7 @@
           "settings": {
             "collection": "swaddle-wrap",
             "image": "shopify://shop_images/Baby_Sleep_Sack_Swaddle_Wrap_Zipper_Detail_-_Magical_Dragons.jpg",
-            "label": ""
+            "label": "Swaddle Wraps"
           }
         },
         "collection_m8xPFH": {
@@ -40,21 +40,21 @@
           "type": "collection",
           "settings": {
             "collection": "sleepers",
-            "label": ""
+            "label": "Sleepers"
           }
         },
         "collection_bgepzf": {
           "type": "collection",
           "settings": {
             "collection": "long-sleeve-bibs",
-            "label": ""
+            "label": "Long Sleeve Bibs"
           }
         },
         "collection_DRa4yR": {
           "type": "collection",
           "settings": {
             "collection": "silicone-bibs",
-            "label": ""
+            "label": "Silicone Bibs"
           }
         },
         "collection_nT7naG": {
@@ -62,7 +62,7 @@
           "settings": {
             "collection": "pacifier-clips",
             "image": "shopify://shop_images/SILCPOCWHT_Pacifier_Clip_-_OneC_-_White_51WEB.jpg",
-            "label": ""
+            "label": "pacifier Clips"
           }
         },
         "collection_7DfJXw": {
@@ -70,7 +70,7 @@
           "settings": {
             "collection": "swaddles",
             "image": "shopify://shop_images/SWBMB_Muslin_Swaddle_Bumble_Bees_53.jpg",
-            "label": ""
+            "label": "Swaddles"
           }
         },
         "collection_WGD3FG": {
@@ -108,6 +108,52 @@
         "image_8myg9K": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/Sushi_-_home.png",
+            "mobile_image": "shopify://shop_images/Mobile-sushi.png",
+            "slide_link": "",
+            "subheading": "",
+            "title": "Now serving more Sushi",
+            "heading_max_width": 15,
+            "title_size": 48,
+            "title_size_mobile": 32,
+            "use_h1": true,
+            "text": "<p>Your fave print just got <strong>NEW additions.</strong></p>",
+            "enlarge_text": false,
+            "button_label_1": "Shop Sushi",
+            "button_url_1": "shopify://collections/sushi",
+            "button_tag_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_tag_2": "",
+            "text_alignment": "bottom left"
+          }
+        },
+        "image_9tiyYq": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Hero_585d6c11-35fe-46b6-99e1-7f5756b1a44c.png",
+            "mobile_image": "shopify://shop_images/LoulouJune2026Edits-04901.jpg",
+            "slide_link": "",
+            "subheading": "",
+            "title": "Adventure starts here.",
+            "heading_max_width": 15,
+            "title_size": 48,
+            "title_size_mobile": 32,
+            "use_h1": true,
+            "text": "<p><strong>Meet our newest print: Llama Adventures.</strong></p>",
+            "enlarge_text": false,
+            "button_label_1": "Shop Llama Adventures",
+            "button_url_1": "shopify://collections/llama-adventures",
+            "button_tag_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_tag_2": "",
+            "text_alignment": "bottom left"
+          }
+        },
+        "image_zzn6hP": {
+          "type": "image",
+          "settings": {
             "image": "shopify://shop_images/Hero.png",
             "mobile_image": "shopify://shop_images/Baby_Sleep_Sack_Swaddle_Wrap_Zipper_-_Safari_Jungle.jpg",
             "slide_link": "",
@@ -130,6 +176,7 @@
         },
         "image_cPi9W3": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/SWSGB_Muslin_Swaddle_-_Stargazing_Bear_51.jpg",
             "mobile_image": "shopify://shop_images/SWSGB_Muslin_Swaddle_-_Stargazing_Bear_51.jpg",
@@ -154,8 +201,11 @@
       },
       "block_order": [
         "image_8myg9K",
+        "image_9tiyYq",
+        "image_zzn6hP",
         "image_cPi9W3"
       ],
+      "disabled": true,
       "name": "Hero Carousel – Rounded",
       "settings": {
         "padding_top": 8,
@@ -172,51 +222,80 @@
     },
     "custom_hero_banner_i8RgHw": {
       "type": "custom-hero-banner",
-      "disabled": true,
       "name": "Custom hero banner",
       "settings": {
-        "image": "shopify://shop_images/EOSS_-_Hero_0a08942f-f217-4038-921e-75adcd4d719f.png",
-        "mobile_image": "shopify://shop_images/EOSS_-_Mobile_Hero_1.gif",
-        "link": "shopify://collections/end-of-season-sale",
+        "image": "shopify://shop_images/Crib_Sheet_-_Hero.png",
+        "mobile_image": "shopify://shop_images/Crib_Sheet_-_Hero-1.png",
+        "link": "shopify://collections/crib-sheets",
         "full_width": true,
         "max_width": 0,
-        "heading": "End of Season Sale - Shop Now",
+        "heading": "Gets Softer With Every Wash - Tanboocel Crib Sheets",
         "use_h1": true
       }
     },
-    "custom_product_highlight_rrgUK8": {
-      "type": "custom-product-highlight",
-      "name": "Highlighted Collection",
+    "logo_list_ywatnw": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_FxPmVy": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/ICON-Canada.svg",
+            "image_width": 80,
+            "link": "",
+            "title": "Shipped from Canada"
+          }
+        },
+        "logo_tawCLk": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Certified_B_Corporation_B_Corp_Logo_2022_Black_RGB_svg.webp",
+            "image_width": 80,
+            "link": "https://www.bcorporation.net/en-us/",
+            "title": "Certified B Corp"
+          }
+        },
+        "logo_D6VaH9": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Benefits-of-Partnering-with-a-WBENC-Certified-Women-Business-Enterprise-Public-Relations-and-Marketing-Agency-feature.webp",
+            "image_width": 130,
+            "link": "https://buywomenowned.com/",
+            "title": "Women-Owned"
+          }
+        },
+        "logo_Yg37w8": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/OEKO_TEX.png",
+            "image_width": 80,
+            "link": "https://www.oeko-tex.com/en/",
+            "title": "Safety Certified"
+          }
+        },
+        "logo_cNXMbY": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Free_ShippingCA.png",
+            "image_width": 80,
+            "link": "",
+            "title": "Free Shipping over $100"
+          }
+        }
+      },
+      "block_order": [
+        "logo_FxPmVy",
+        "logo_tawCLk",
+        "logo_D6VaH9",
+        "logo_Yg37w8",
+        "logo_cNXMbY"
+      ],
+      "name": "USP List",
       "settings": {
-        "title": "Swaddling Made Simple",
-        "text": "<ul><li>Quiet Secure Closures</li><li>Two-Way Zipper</li><li>Grows With Baby</li><li>Premium comfort</li></ul>",
-        "image": "shopify://shop_images/Swaddle_Wrap_zoomed_out_1.gif",
-        "order": true,
-        "product_list": [
-          "swaddle-wrap-1-0-tog-safari-jungle",
-          "swaddle-wrap-1-0-tog-magical-dragons"
-        ],
-        "button_label": "Shop Swaddle Wraps",
-        "link": "shopify://collections/swaddle-wrap",
-        "button_style": "primary",
+        "title": "",
+        "enable_carousel": false,
+        "carousel_speed": 30,
+        "image_opacity": 100,
         "color_scheme": "default"
-      }
-    },
-    "featured_collection_dfUJQq": {
-      "type": "featured-collection",
-      "name": "Best Sellers Carousel",
-      "settings": {
-        "title": "End of Season Sale!",
-        "text": "",
-        "collection": "end-of-season-sale",
-        "show_vendor": false,
-        "enable_carousel": true,
-        "grid": 4,
-        "rows": 1,
-        "color_scheme": "default",
-        "show_view_all": true,
-        "full_width": false,
-        "text_alignment": "start"
       }
     },
     "collection_list_aakDiY": {
@@ -248,7 +327,7 @@
             "collection": "sleepers",
             "tag": "",
             "image": "shopify://shop_images/BA1002U.SAF.4_1.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
+            "subheading": "Sleepers",
             "button_label": ""
           }
         },
@@ -268,7 +347,7 @@
             "collection": "swaddles",
             "tag": "",
             "image": "shopify://shop_images/SWUNB_1.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
+            "subheading": "Swaddles",
             "button_label": ""
           }
         },
@@ -328,7 +407,7 @@
             "collection": "crib-sheets",
             "tag": "",
             "image": "shopify://shop_images/CRIBFBK_01.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
+            "subheading": "Crib Sheets",
             "button_label": ""
           }
         },
@@ -338,7 +417,7 @@
             "collection": "pajamas",
             "tag": "",
             "image": "shopify://shop_images/KA1006U.ENG_01.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
+            "subheading": "Pajamas",
             "button_label": ""
           }
         },
@@ -398,6 +477,128 @@
         "coll_thumb_text_align_x": "center",
         "coll_thumb_text_align_y": "center",
         "coll_button_style": "primary"
+      }
+    },
+    "featured_collection_RGPeGr": {
+      "type": "featured-collection",
+      "name": "Best Sellers Carousel",
+      "settings": {
+        "title": "Best-Selling Favorites",
+        "heading_size": "h4",
+        "text": "",
+        "collection": "best-sellers",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 5,
+        "rows": 1,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": true,
+        "text_alignment": "start"
+      }
+    },
+    "rich_text_materialsIntro": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_materialsIntro": {
+          "type": "heading",
+          "settings": {
+            "title": "Made from the Good Stuff",
+            "use_h1": false
+          }
+        },
+        "text_materialsIntro": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A decade of choosing better materials — TENCEL™, Tanboocel®, and food-grade silicone — so you don't have to second-guess what's touching your baby's skin.</p>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_materialsIntro",
+        "text_materialsIntro"
+      ],
+      "name": "Materials Intro",
+      "settings": {
+        "height": "small",
+        "text_alignment": "center",
+        "full_width": false,
+        "color_scheme": "default"
+      }
+    },
+    "multi_column_materialsUSP": {
+      "type": "multi-column",
+      "blocks": {
+        "text_block_tencel": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": true,
+            "image": "shopify://shop_images/tencel-certification-862.png",
+            "title": "TENCEL™ Lyocell",
+            "text": "<p>Naturally temperature-regulating and buttery-soft — the fabric in our sleepers, pajamas, and swaddle wraps.</p>",
+            "button_label": "Shop TENCEL™",
+            "link": "shopify://collections/sleepers"
+          }
+        },
+        "text_block_tanboocel": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": true,
+            "image": "shopify://shop_images/ICON-bamboo.svg",
+            "title": "Tanboocel® Viscose from Bamboo",
+            "text": "<p>Naturally breathable and hypoallergenic — the fabric in our muslin swaddles, quilts, and crib sheets.</p>",
+            "button_label": "Shop Tanboocel®",
+            "link": "shopify://collections/swaddles"
+          }
+        },
+        "text_block_silicone": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": true,
+            "image": "shopify://shop_images/Food_Grade_Silicone.svg",
+            "title": "LFGB Food-Grade Silicone",
+            "text": "<p>Safe enough to chew, tough enough for daily mealtime chaos.</p>",
+            "button_label": "Shop Feeding",
+            "link": "shopify://collections/eat"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_tencel",
+        "text_block_tanboocel",
+        "text_block_silicone"
+      ],
+      "custom_css": [
+        ".img-ar--cover img {object-fit: fill;}",
+        ".strongly-spaced-row,.fully-spaced-row--medium {margin-top: 40px;}"
+      ],
+      "name": "Our Materials",
+      "settings": {
+        "title": "",
+        "media_aspect_ratio": "s",
+        "media_width": 210,
+        "text_alignment": "center",
+        "button_style": "link",
+        "color_scheme": "default"
+      }
+    },
+    "featured_collection_dfUJQq": {
+      "type": "featured-collection",
+      "name": "Swaddle Wrap",
+      "settings": {
+        "title": "Swaddling Made Simple",
+        "heading_size": "h4",
+        "text": "",
+        "collection": "swaddle-wrap",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 3,
+        "rows": 1,
+        "color_scheme": "2",
+        "show_view_all": true,
+        "full_width": true,
+        "text_alignment": "start"
       }
     },
     "logo_list_kYmwNX": {
@@ -467,25 +668,218 @@
         "color_scheme": "default"
       }
     },
-    "featured_collection_RGPeGr": {
-      "type": "featured-collection",
-      "name": "Best Sellers Carousel",
+    "lp_comparison_tabs_fabrics": {
+      "type": "lp-comparison-tabs",
+      "blocks": {
+        "row_t_source": {
+          "type": "row",
+          "settings": {
+            "tab": "tab1",
+            "feature": "Fibre Source",
+            "our_value": "Sustainably harvested eucalyptus wood, from FSC Certified forests",
+            "other_value_1": "Bamboo plant, but heavily chemically processed",
+            "other_value_2": "Petroleum-based synthetic fiber"
+          }
+        },
+        "row_t_made": {
+          "type": "row",
+          "settings": {
+            "tab": "tab1",
+            "feature": "How It's Made",
+            "our_value": "Closed-loop process — reuses 99.8% of water & solvents",
+            "other_value_1": "Chemically intensive process, with potential environmental impact",
+            "other_value_2": "Made from fossil fuels; non-renewable source"
+          }
+        },
+        "row_t_breathability": {
+          "type": "row",
+          "disabled": true,
+          "settings": {
+            "tab": "tab1",
+            "feature": "Breathability",
+            "our_value": "Excellent — regulates temperature well",
+            "other_value_1": "Good, but not as consistent as TENCEL™",
+            "other_value_2": "Poor — traps heat and moisture against skin"
+          }
+        },
+        "row_t_wicking": {
+          "type": "row",
+          "settings": {
+            "tab": "tab1",
+            "feature": "Moisture-Wicking",
+            "our_value": "Keeps baby dry and comfy thanks to high moisture-wicking properties",
+            "other_value_1": "Moderate — can retain moisture under layers",
+            "other_value_2": "Doesn't wick moisture; can feel damp against skin"
+          }
+        },
+        "row_t_softness": {
+          "type": "row",
+          "disabled": true,
+          "settings": {
+            "tab": "tab1",
+            "feature": "Softness",
+            "our_value": "Silky soft, even after multiple washes",
+            "other_value_1": "Very soft initially, but may pill or lose softness over time",
+            "other_value_2": "Can feel synthetic; prone to static and pilling"
+          }
+        },
+        "row_t_durability": {
+          "type": "row",
+          "settings": {
+            "tab": "tab1",
+            "feature": "Durability",
+            "our_value": "Strong and durable, holds shape after washing",
+            "other_value_1": "Less durable, prone to stretching and pilling",
+            "other_value_2": "Durable, but doesn't soften over time and can trap odor"
+          }
+        },
+        "row_t_hypoallergenic": {
+          "type": "row",
+          "settings": {
+            "tab": "tab1",
+            "feature": "Hypoallergenic",
+            "our_value": "Naturally hypoallergenic, dermatologist recommended",
+            "other_value_1": "Generally gentle, but chemical processing may leave residue",
+            "other_value_2": "Can trigger irritation in sensitive or eczema-prone skin"
+          }
+        },
+        "row_t_cert": {
+          "type": "row",
+          "settings": {
+            "tab": "tab1",
+            "feature": "Certifications",
+            "our_value": "Certified by OEKO-TEX®, tested free from 1,000+ harmful substances",
+            "other_value_1": "Not all bamboo viscose is certified; depends on manufacturer",
+            "other_value_2": "Rarely certified for chemical safety"
+          }
+        },
+        "row_b_source": {
+          "type": "row",
+          "settings": {
+            "tab": "tab2",
+            "feature": "Fibre Source",
+            "our_value": "Bamboo pulp, sourced and processed specifically for Tanboocel® fabric",
+            "other_value_1": "Bamboo plant, but heavily chemically processed",
+            "other_value_2": "Petroleum-based synthetic fiber"
+          }
+        },
+        "row_b_made": {
+          "type": "row",
+          "settings": {
+            "tab": "tab2",
+            "feature": "How It's Made",
+            "our_value": "OEKO-TEX® Standard 100 certified — independently tested for harmful substances",
+            "other_value_1": "Chemically intensive process, with potential environmental impact",
+            "other_value_2": "Made from fossil fuels; non-renewable source"
+          }
+        },
+        "row_b_breathability": {
+          "type": "row",
+          "disabled": true,
+          "settings": {
+            "tab": "tab2",
+            "feature": "Breathability",
+            "our_value": "Naturally moisture-wicking and temperature-regulating",
+            "other_value_1": "Good, but not as consistent as Tanboocel®",
+            "other_value_2": "Poor — traps heat and moisture against skin"
+          }
+        },
+        "row_b_wicking": {
+          "type": "row",
+          "settings": {
+            "tab": "tab2",
+            "feature": "Moisture-Wicking",
+            "our_value": "Keeps baby dry and comfy thanks to high moisture-wicking properties",
+            "other_value_1": "Moderate — can retain moisture under layers",
+            "other_value_2": "Doesn't wick moisture; can feel damp against skin"
+          }
+        },
+        "row_b_softness": {
+          "type": "row",
+          "disabled": true,
+          "settings": {
+            "tab": "tab2",
+            "feature": "Softness",
+            "our_value": "Silky soft, consistent quality every wash",
+            "other_value_1": "Very soft initially, but may pill or lose softness over time",
+            "other_value_2": "Can feel synthetic; prone to static and pilling"
+          }
+        },
+        "row_b_durability": {
+          "type": "row",
+          "settings": {
+            "tab": "tab2",
+            "feature": "Durability",
+            "our_value": "Strong and durable, holds shape after washing",
+            "other_value_1": "Less durable, prone to stretching and pilling",
+            "other_value_2": "Durable, but doesn't soften over time and can trap odor"
+          }
+        },
+        "row_b_hypoallergenic": {
+          "type": "row",
+          "settings": {
+            "tab": "tab2",
+            "feature": "Hypoallergenic",
+            "our_value": "Naturally hypoallergenic and gentle on sensitive skin",
+            "other_value_1": "Generally gentle, but chemical processing may leave residue",
+            "other_value_2": "Can trigger irritation in sensitive or eczema-prone skin"
+          }
+        },
+        "row_b_cert": {
+          "type": "row",
+          "settings": {
+            "tab": "tab2",
+            "feature": "Certifications",
+            "our_value": "Certified by OEKO-TEX®, tested free from 1,000+ harmful substances",
+            "other_value_1": "Not all bamboo viscose is certified; depends on manufacturer",
+            "other_value_2": "Rarely certified for chemical safety"
+          }
+        }
+      },
+      "block_order": [
+        "row_t_source",
+        "row_t_made",
+        "row_t_breathability",
+        "row_t_wicking",
+        "row_t_softness",
+        "row_t_durability",
+        "row_t_hypoallergenic",
+        "row_t_cert",
+        "row_b_source",
+        "row_b_made",
+        "row_b_breathability",
+        "row_b_wicking",
+        "row_b_softness",
+        "row_b_durability",
+        "row_b_hypoallergenic",
+        "row_b_cert"
+      ],
+      "name": "Fabric Comparison Tabs",
       "settings": {
-        "title": "Best-Selling Favorites",
-        "text": "",
-        "collection": "best-sellers",
-        "show_vendor": false,
-        "enable_carousel": false,
-        "grid": 4,
-        "rows": 1,
-        "color_scheme": "default",
-        "show_view_all": true,
-        "full_width": false,
-        "text_alignment": "start"
+        "bg_color": "rgba(0,0,0,0)",
+        "title": "Better Fabrics, By Design",
+        "intro": "",
+        "tab1_label": "TENCEL™ Lyocell",
+        "tab1_col_ours": "TENCEL™ Lyocell",
+        "tab1_col_other_1": "Conventional Bamboo Viscose/Rayon",
+        "tab1_col_other_2": "Polyester",
+        "bottom_line_1": "Bottom line: TENCEL™ is the fabric behind our sleepers, pajamas, sleep bags, and swaddle wraps — soft enough for the most sensitive skin.",
+        "cta_label_1": "Shop TENCEL™",
+        "cta_link_1": "shopify://collections/made-with-tencel-fibres",
+        "tab2_label": "Tanboocel®",
+        "tab2_col_ours": "Tanboocel®",
+        "tab2_col_other_1": "Conventional Bamboo Viscose/Rayon",
+        "tab2_col_other_2": "Polyester",
+        "bottom_line_2": "Bottom line: Tanboocel® is the fabric behind our muslin swaddles, quilts, and crib sheets — breathable enough for every season.",
+        "cta_label_2": "Shop Tanboocel®",
+        "cta_link_2": "shopify://collections/made-with-tanboocel",
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "custom_product_highlight_KJfQCU": {
       "type": "custom-product-highlight",
+      "disabled": true,
       "name": "Highlighted Collection",
       "settings": {
         "title": "Gift-able Bundles",
@@ -496,8 +890,11 @@
           "newborn-sleep-starter-bundle-safari-jungle",
           "wild-teether-bundle-llama-bunny",
           "baby-learning-feeding-bundle-bailey-bunny",
-          "baby-sleep-system-bundle-magical-dragons"
+          "baby-sleep-system-bundle-magical-dragons",
+          "spill-proof-bundle-ditsy-floral",
+          "ocean-wonder-collection-seashell"
         ],
+        "products_per_row": "auto",
         "button_label": "Shop Bundles",
         "link": "shopify://collections/bundles-and-sets",
         "button_style": "primary",
@@ -614,6 +1011,46 @@
         "coll_button_style": "primary"
       }
     },
+    "image_with_text_foundersHome": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_foundersHome": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Family First"
+          }
+        },
+        "heading_foundersHome": {
+          "type": "heading",
+          "settings": {
+            "title": "A Note From Our Founders",
+            "use_h1": false
+          }
+        },
+        "text_foundersHome": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Loulou Lollipop started in 2015 with twin sisters Eleanor and Angel, two teether designs, and a mission to make safer, softer essentials for the babies they loved most.</p><p>As twins ourselves, family is our reason for everything we do — and we hope what you find here helps you make many more sweet memories.</p><p><a href=\"/pages/about-us\">Read Our Story →</a></p>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "subheading_foundersHome",
+        "heading_foundersHome",
+        "text_foundersHome"
+      ],
+      "name": "Founders Spotlight",
+      "settings": {
+        "image": "shopify://shop_images/about_portrait.png",
+        "image_width": 700,
+        "image_link": "",
+        "image_position": "right",
+        "mobile_image_below": false,
+        "text_alignment": "left",
+        "color_scheme": "default"
+      }
+    },
     "collection_list_VHgK7g": {
       "type": "collection-list",
       "blocks": {
@@ -683,71 +1120,6 @@
         "coll_thumb_text_align_x": "center",
         "coll_thumb_text_align_y": "center",
         "coll_button_style": "primary"
-      }
-    },
-    "logo_list_ywatnw": {
-      "type": "logo-list",
-      "blocks": {
-        "logo_FxPmVy": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/ICON-SM-6.svg",
-            "image_width": 80,
-            "link": "",
-            "title": "Safe for Babies"
-          }
-        },
-        "logo_tawCLk": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Certified_B_Corporation_B_Corp_Logo_2022_Black_RGB_svg.webp",
-            "image_width": 80,
-            "link": "https://www.bcorporation.net/en-us/",
-            "title": "Certified B Corp"
-          }
-        },
-        "logo_D6VaH9": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Benefits-of-Partnering-with-a-WBENC-Certified-Women-Business-Enterprise-Public-Relations-and-Marketing-Agency-feature.webp",
-            "image_width": 130,
-            "link": "https://buywomenowned.com/",
-            "title": "Women-Owned"
-          }
-        },
-        "logo_Yg37w8": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/OEKO_TEX.png",
-            "image_width": 80,
-            "link": "https://www.oeko-tex.com/en/",
-            "title": "Safety Certified"
-          }
-        },
-        "logo_cNXMbY": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/ICON-SM-16.svg",
-            "image_width": 80,
-            "link": "",
-            "title": "Phthalate Free"
-          }
-        }
-      },
-      "block_order": [
-        "logo_FxPmVy",
-        "logo_tawCLk",
-        "logo_D6VaH9",
-        "logo_Yg37w8",
-        "logo_cNXMbY"
-      ],
-      "name": "USP List",
-      "settings": {
-        "title": "Our Commitments",
-        "enable_carousel": false,
-        "carousel_speed": 30,
-        "image_opacity": 100,
-        "color_scheme": "default"
       }
     },
     "collection_list_FxKgEx": {
@@ -851,6 +1223,7 @@
         "text_block_EgmCLD",
         "text_block_tFgzTX"
       ],
+      "disabled": true,
       "custom_css": [
         ".img-ar--cover img {object-fit: fill;}"
       ],
@@ -955,7 +1328,7 @@
             "review_length": "large",
             "text_size": "medium",
             "image_ratio": "1.33",
-            "reviews_shown": 4,
+            "reviews_shown": 5,
             "show_reviewer_name": true,
             "show_product_name": true,
             "hide_arrows_mobile": true,
@@ -1149,6 +1522,7 @@
       "name": "Bundles Carousel",
       "settings": {
         "title": "Gift-able Bundles",
+        "heading_size": "h4",
         "text": "<p>Perfectly paired bundles for easy gifting</p>",
         "collection": "bundles-and-sets",
         "show_vendor": false,
@@ -1174,6 +1548,7 @@
           "snack-plate-sarah-shark",
           "snack-plate-olly-octopus"
         ],
+        "products_per_row": "auto",
         "button_label": "Shop Snack Plates",
         "link": "shopify://collections/snack-plate",
         "button_style": "primary",
@@ -1185,15 +1560,18 @@
     "mobile_collection_carousel_nzW98H",
     "hero_carousel_rounded_q34LBJ",
     "custom_hero_banner_i8RgHw",
-    "custom_product_highlight_rrgUK8",
-    "featured_collection_dfUJQq",
+    "logo_list_ywatnw",
     "collection_list_aakDiY",
-    "logo_list_kYmwNX",
     "featured_collection_RGPeGr",
+    "rich_text_materialsIntro",
+    "multi_column_materialsUSP",
+    "featured_collection_dfUJQq",
+    "logo_list_kYmwNX",
+    "lp_comparison_tabs_fabrics",
     "custom_product_highlight_KJfQCU",
     "collection_list_zhMrUA",
+    "image_with_text_foundersHome",
     "collection_list_VHgK7g",
-    "logo_list_ywatnw",
     "collection_list_FxKgEx",
     "multi_column_KCzHEY",
     "testimonials_QcyQ3m",

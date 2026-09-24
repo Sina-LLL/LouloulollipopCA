@@ -30,7 +30,7 @@
         "subheading_4hbbxP": {
           "type": "subheading",
           "settings": {
-            "subheading": "The LouLou Lollipop journey"
+            "subheading": "The Loulou Lollipop journey"
           }
         },
         "heading_Aqrawh": {
@@ -79,6 +79,7 @@
         "image_width": 360,
         "image_link": "",
         "image_position": "left",
+        "mobile_image_below": false,
         "text_alignment": "left",
         "color_scheme": "default"
       }
@@ -111,6 +112,7 @@
         "image_width": 700,
         "image_link": "",
         "image_position": "right",
+        "mobile_image_below": false,
         "text_alignment": "left",
         "color_scheme": "default"
       }
@@ -173,6 +175,8 @@
       ],
       "settings": {
         "title": "Featured in",
+        "enable_carousel": false,
+        "carousel_speed": 30,
         "image_opacity": 100,
         "color_scheme": "2"
       }
@@ -292,7 +296,7 @@
             "bg_color": "#faf9f6",
             "bg_gradient": "",
             "text_color": "#1d1d1d",
-            "heading": "Today: Global LouLou Love",
+            "heading": "Today: Global Loulou Love",
             "text": "<p>Loulou Lollipop is now available in 37 countries worldwide, and in over 1,100 boutiques in the United States and Canada. Where will you find us next?</p>",
             "show_segments": false,
             "segments": 5,
@@ -357,6 +361,7 @@
         "image_width": 700,
         "image_link": "",
         "image_position": "right",
+        "mobile_image_below": false,
         "text_alignment": "left",
         "color_scheme": "default"
       }
@@ -441,6 +446,9 @@
         "media_RKmLw7"
       ],
       "settings": {
+        "title": "",
+        "text": "",
+        "text_alignment": "start",
         "grid_desktop": 2,
         "grid_mobile": "2",
         "height": "fixed",
@@ -461,6 +469,7 @@
       "type": "main-page",
       "disabled": true,
       "settings": {
+        "show_breadcrumbs": true,
         "show_page_title": true,
         "full_width": false
       }

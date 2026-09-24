@@ -298,11 +298,10 @@
             {% endif %} {% endcomment %}
             <div class="price-container" {{ block.shopify_attributes }}>
               <div class="product-info__price product-price product-price--large">
-                {% render 'price', product: product, show_currency_code: settings.product_currency_code_enabled, for_variant_picker: true, current_variant: current_variant %}
                 {% if product.tags contains "MoreToLoveDiscount" %}
                   <p class="MoreToLove">Buy Any 3 & Save 10%</p>
                 {% endif %} 
-
+                {% render 'price', product: product, show_currency_code: settings.product_currency_code_enabled, for_variant_picker: true, current_variant: current_variant %}
               </div>
 
               <div class="price-descriptors">
@@ -375,11 +374,11 @@
                     <details class="disclosure"{% if block.settings.open_tab %} open{% endif %}>
                       <summary class="disclosure__title">
                         {%- if block.settings.icon == blank -%}
-                          {{- 'products.product.description' | t -}}
+                          <h3 class="disclosure__title-text">{{ 'products.product.description' | t }}</h3>
                         {%- else -%}
                           <div class="with-icon">
                             {% render 'icon', icon: block.settings.icon, size: 'small' %}
-                            <span class="with-icon__beside">{{ 'products.product.description' | t }}</span>
+                            <h3 class="with-icon__beside disclosure__title-text">{{ 'products.product.description' | t }}</h3>
                           </div>
                         {%- endif -%}
                       </summary>
@@ -534,16 +533,16 @@
                         <div class="product-free-shipping__messages">
                           {% render 'icon-shipping' %}
                           <p>
-                            Free Shipping for orders over $100+
-                            <a href="{{ shop.shipping_policy.url }}"class="shipping-info-trigger">Shipping</a>
+                            {{ 'loulou.free_shipping_line' | t }}
+                            <a href="{{ shop.shipping_policy.url }}"class="shipping-info-trigger">{{ 'loulou.shipping_link' | t }}</a>
                           </p>
                           <div class="shipping-info-tooltip">
-                            All CA orders over $100 ship for free!<br>$12 standard shipping in BC, $15 rest of Canada for orders under $100. If you need expedited shipping, the shipping fee will be calculated at checkout.
+                            {{ 'loulou.shipping_tooltip_html' | t }}
                           </div>
                         </div>
                         <div class="wishlist--container">
                           {% render 'icon-babylist' %}
-                          <a class="babylist-btn" href="#" onclick="if (window.bl) { bl.addToRegistry({ images: '{{- product.featured_image.src | img_url: "800x" -}}', price: '{{ product.price | money_without_currency }}', title: '{{ product.title }}', url: '{{ shop.url }}{{ product.url }}' }); } return false;">Add to Babylist</a>
+                          <a class="babylist-btn" href="#" onclick="if (window.bl) { bl.addToRegistry({ images: '{{- product.featured_image.src | img_url: "800x" -}}', price: '{{ product.price | money_without_currency }}', title: '{{ product.title }}', url: '{{ shop.url }}{{ product.url }}' }); } return false;">{{ 'loulou.add_to_babylist' | t }}</a>
                         </div>
                       </div>
                     </div>
@@ -588,24 +587,43 @@
                 assign content = pages[block.settings.page].content
               endif
               assign content = content | append: block.settings.custom_liquid
+
+              assign accordion_image = block.settings.image
+              if block.id == 'accordion_xTzVna' and product.metafields.custom.product_template.value.hide_swatch_image.value
+                assign accordion_image = blank
+              endif
+
+              assign design_obj = product.metafields.custom.design.value
+              assign shop_collection = blank
+              if design_obj and block.settings.title == design_obj.name.value and design_obj.design_collection.value
+                assign shop_collection = design_obj.design_collection.value
+              endif
             -%}
-            {%- if content != blank -%}
+            {%- if content != blank or accordion_image != blank -%}
               <div class="product-info-accordion{% unless block.settings.show_in_quickbuy %} not-in-quickbuy{% endunless %}" {{ block.shopify_attributes }}>
                 <details-disclosure>
                   <details class="disclosure"{% if block.settings.open %} open{% endif %}>
                     <summary class="disclosure__title">
                       {%- if block.settings.icon == blank -%}
-                        {{- block.settings.title | escape -}}
+                        <h3 class="disclosure__title-text">{{ block.settings.title | escape }}</h3>
                       {%- else -%}
                         <div class="with-icon">
                           {% render 'icon', icon: block.settings.icon, size: 'small' %}
-                          <span class="with-icon__beside">{{ block.settings.title | escape }}</span>
+                          <h3 class="with-icon__beside disclosure__title-text">{{ block.settings.title | escape }}</h3>
                         </div>
                       {%- endif -%}
                     </summary>
                     <div class="disclosure__panel has-motion">
                       <div class="disclosure__content rte cf">
+                        {%- if accordion_image != blank -%}
+                          <div class="product-info-accordion__image">
+                            {{- accordion_image | image_url: width: 600 | image_tag: loading: 'lazy', widths: '300, 600', sizes: '(min-width: 769px) 300px, 90vw', alt: accordion_image.alt | default: block.settings.title | escape -}}
+                          </div>
+                        {%- endif -%}
                         {{- content -}}
+                        {%- if shop_collection != blank -%}
+                          <a href="{{ shop_collection.url }}" class="product-info-accordion__shop-link">Shop All {{ shop_collection.title }}</a>
+                        {%- endif -%}
                       </div>
                     </div>
                   </details>
@@ -641,7 +659,218 @@
                 </div>
               </div>
             {% endif %}
-          
+
+          {% when 'tog_guide' %}
+            {%- liquid
+              assign title_l = product.title | downcase
+              assign tog_value = blank
+
+              if title_l contains '0.5 tog'
+                assign tog_value = '0.5'
+              elsif title_l contains '1.0 tog'
+                assign tog_value = '1.0'
+              elsif title_l contains '2.5 tog'
+                assign tog_value = '2.5'
+              endif
+            -%}
+            {%- if tog_value != blank -%}
+              {%- assign guide_uid = section.id | append: '-' | append: block.id -%}
+              <div class="tog-guide" data-tog-guide id="tog-guide-{{ guide_uid }}" {{ block.shopify_attributes }}>
+                <div class="tog-guide__header">
+                  <h3 class="tog-guide__label">{{ block.settings.heading | default: 'Recommended Room Temperature' }}</h3>
+                  <p class="tog-guide__range" data-tog-guide-range>21–24°C</p>
+                </div>
+
+                <div class="tog-guide__slider">
+                  <div class="tog-guide__endpoints">
+                    <span class="tog-guide__endpoint-label">{{ block.settings.cool_label | default: 'Cool' }}</span>
+                    <span class="tog-guide__endpoint-label">{{ block.settings.warm_label | default: 'Warm' }}</span>
+                  </div>
+
+                  <div class="tog-guide__track" data-tog-guide-track tabindex="0" role="slider" aria-label="TOG selector" aria-valuemin="0.5" aria-valuemax="2.5" aria-valuenow="{{ tog_value }}">
+                    <span class="tog-guide__endpoint-dot tog-guide__endpoint-dot--start"></span>
+                    <span class="tog-guide__endpoint-dot tog-guide__endpoint-dot--end"></span>
+                    <span class="tog-guide__thumb" data-tog-guide-thumb></span>
+                  </div>
+
+                  <div class="tog-guide__scale">
+                    <button type="button" class="tog-guide__tog" data-tog-guide-option data-tog="2.5" data-temp="16–20°C" data-position="0">2.5 TOG</button>
+                    <button type="button" class="tog-guide__tog" data-tog-guide-option data-tog="1.0" data-temp="21–24°C" data-position="50">1.0 TOG</button>
+                    <button type="button" class="tog-guide__tog" data-tog-guide-option data-tog="0.5" data-temp="24–27°C" data-position="100">0.5 TOG</button>
+                  </div>
+                </div>
+
+                {%- if block.settings.info_link != blank -%}
+                  <div class="tog-guide__footer">
+                    <a href="{{ block.settings.info_link }}" class="tog-guide__link">
+                      {{ block.settings.link_label | default: 'Choosing the right TOG' }}
+                      <svg class="tog-guide__info-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.1"/>
+                        <path d="M8 7.25V11.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+                        <circle cx="8" cy="4.85" r="0.85" fill="currentColor"/>
+                      </svg>
+                    </a>
+                  </div>
+                {%- endif -%}
+              </div>
+
+              <script>
+                (function () {
+                  var root = document.getElementById('tog-guide-{{ guide_uid }}');
+                  if (!root || root.dataset.togGuideInit) return;
+                  root.dataset.togGuideInit = 'true';
+
+                  var track = root.querySelector('[data-tog-guide-track]');
+                  var thumb = root.querySelector('[data-tog-guide-thumb]');
+                  var range = root.querySelector('[data-tog-guide-range]');
+                  var options = Array.prototype.slice.call(root.querySelectorAll('[data-tog-guide-option]'));
+
+                  function setActive(option) {
+                    options.forEach(function (opt) {
+                      opt.classList.toggle('is-active', opt === option);
+                    });
+                    thumb.style.left = option.dataset.position + '%';
+                    range.textContent = option.dataset.temp;
+                    track.setAttribute('aria-valuenow', option.dataset.tog);
+                  }
+
+                  var initial = options.filter(function (o) { return o.dataset.tog === '{{ tog_value }}'; })[0] || options[1];
+                  setActive(initial);
+
+                  options.forEach(function (opt) {
+                    opt.addEventListener('click', function () { setActive(opt); });
+                  });
+
+                  function nearestOption(clientX) {
+                    var rect = track.getBoundingClientRect();
+                    var pct = ((clientX - rect.left) / rect.width) * 100;
+                    var closest = options[0];
+                    var closestDist = Infinity;
+                    options.forEach(function (opt) {
+                      var dist = Math.abs(parseFloat(opt.dataset.position) - pct);
+                      if (dist < closestDist) {
+                        closestDist = dist;
+                        closest = opt;
+                      }
+                    });
+                    return closest;
+                  }
+
+                  var dragging = false;
+                  function onPointerMove(e) {
+                    if (!dragging) return;
+                    var clientX = e.touches ? e.touches[0].clientX : e.clientX;
+                    setActive(nearestOption(clientX));
+                  }
+                  function onPointerUp() {
+                    dragging = false;
+                    document.removeEventListener('mousemove', onPointerMove);
+                    document.removeEventListener('mouseup', onPointerUp);
+                    document.removeEventListener('touchmove', onPointerMove);
+                    document.removeEventListener('touchend', onPointerUp);
+                  }
+                  function onPointerDown(e) {
+                    dragging = true;
+                    var clientX = e.touches ? e.touches[0].clientX : e.clientX;
+                    setActive(nearestOption(clientX));
+                    document.addEventListener('mousemove', onPointerMove);
+                    document.addEventListener('mouseup', onPointerUp);
+                    document.addEventListener('touchmove', onPointerMove, { passive: true });
+                    document.addEventListener('touchend', onPointerUp);
+                  }
+                  thumb.addEventListener('mousedown', onPointerDown);
+                  thumb.addEventListener('touchstart', onPointerDown, { passive: true });
+                  track.addEventListener('mousedown', onPointerDown);
+                  track.addEventListener('touchstart', onPointerDown, { passive: true });
+
+                  track.addEventListener('keydown', function (e) {
+                    var idx = options.indexOf(options.filter(function (o) { return o.classList.contains('is-active'); })[0]);
+                    if (e.key === 'ArrowRight' && idx < options.length - 1) { setActive(options[idx + 1]); e.preventDefault(); }
+                    if (e.key === 'ArrowLeft' && idx > 0) { setActive(options[idx - 1]); e.preventDefault(); }
+                  });
+                })();
+              </script>
+            {%- endif -%}
+
+          {% when 'auto_usp_grid' %}
+            {%- liquid
+              assign product_template = product.metafields.custom.product_template.value
+              assign usp_icons = blank
+              if product_template
+                assign usp_icons = product_template.usp_icons.value
+              endif
+            -%}
+            {%- if usp_icons != blank -%}
+              {%- assign usp_is_odd = false -%}
+              {%- assign usp_odd_check = usp_icons.size | modulo: 2 -%}
+              {%- if usp_odd_check == 1 -%}
+                {%- assign usp_is_odd = true -%}
+              {%- endif -%}
+              <div class="product-usp-grid not-in-quickbuy" {{ block.shopify_attributes }}>
+                {%- for usp in usp_icons -%}
+                  {%- assign usp_title = usp.title.value -%}
+                  {%- assign usp_icon = usp.icon.value -%}
+                  <div class="product-usp-grid__item{% if usp_is_odd and forloop.last %} product-usp-grid__item--centered{% endif %}">
+                    {%- if usp_icon != blank -%}
+                      <div class="product-usp-grid__icon">
+                        {{- usp_icon | image_url: width: 128 | image_tag: loading: 'lazy', widths: '64, 128', sizes: '64px', class: 'product-usp-grid__icon-img', alt: usp_title | escape -}}
+                      </div>
+                    {%- endif -%}
+                    {%- if usp_title != blank -%}
+                      <p class="product-usp-grid__label">{{ usp_title | escape }}</p>
+                    {%- endif -%}
+                  </div>
+                {%- endfor -%}
+              </div>
+            {%- endif -%}
+
+          {% when 'auto_materials_care' %}
+            {%- liquid
+              assign material = product.metafields.custom.material_new.value
+              assign care_text = blank
+              assign care_icons = blank
+              if material
+                assign care_text = material.materials_care_instructions
+                assign care_icons = material.care_icons.value
+              endif
+            -%}
+            {%- if care_text != blank or care_icons != blank -%}
+              <div class="product-info-accordion{% unless block.settings.show_in_quickbuy %} not-in-quickbuy{% endunless %}" {{ block.shopify_attributes }}>
+                <details-disclosure>
+                  <details class="disclosure"{% if block.settings.open %} open{% endif %}>
+                    <summary class="disclosure__title">
+                      <h3 class="disclosure__title-text">{{ block.settings.title | escape }}</h3>
+                    </summary>
+                    <div class="disclosure__panel has-motion">
+                      <div class="disclosure__content rte cf">
+                        {%- if care_text != blank -%}
+                          {{- care_text | metafield_tag -}}
+                        {%- endif -%}
+                        {%- if care_icons != blank -%}
+                          <div class="product-care-grid">
+                            {%- for ci in care_icons -%}
+                              {%- assign ci_title = ci.title.value -%}
+                              {%- assign ci_icon = ci.icon.value -%}
+                              <div class="product-care-grid__item">
+                                {%- if ci_icon != blank -%}
+                                  <div class="product-care-grid__icon">
+                                    {{- ci_icon | image_url: width: 96 | image_tag: loading: 'lazy', widths: '48, 96', sizes: '48px', class: 'product-care-grid__icon-img', alt: ci_title | escape -}}
+                                  </div>
+                                {%- endif -%}
+                                {%- if ci_title != blank -%}
+                                  <p class="product-care-grid__label">{{ ci_title | escape }}</p>
+                                {%- endif -%}
+                              </div>
+                            {%- endfor -%}
+                          </div>
+                        {%- endif -%}
+                      </div>
+                    </div>
+                  </details>
+                </details-disclosure>
+              </div>
+            {%- endif -%}
+
           {% when 'text' %}
             {% if block.settings.text != blank %}
               <div class="lightly-spaced-row{% unless block.settings.show_in_quickbuy %} not-in-quickbuy{% endunless %}" {{ block.shopify_attributes }}>
@@ -787,13 +1016,19 @@
             <hr {% unless block.settings.show_in_quickbuy %}class="not-in-quickbuy"{% endunless %} {{ block.shopify_attributes }}>
           
           {% when 'swatch_highlight' %}
-            {% assign swatch_name = product.metafields.theme.cutline %}
-            {% assign swatch_handle = swatch_name | handleize %}
-            {% assign swatch_collection = collections[swatch_handle] %}
+            {% liquid
+              assign swatch_design = product.metafields.custom.design.value
+              assign swatch_name = swatch_design.name.value
+              assign swatch_collection = swatch_design.design_collection.value
+              assign swatch_highlight_image = swatch_design.colour_pattern.value.image.value
+              if swatch_highlight_image == blank
+                assign swatch_highlight_image = product.featured_image
+              endif
+            %}
 
             <div class="swatch-highlight-container lightly-spaced-row inline-width-container{% unless block.settings.show_in_quickbuy %} not-in-quickbuy{% endunless %}" {{ block.shopify_attributes }}>
               {%- render 'image',
-                image: product.metafields.custom.swatch.value.image.value,
+                image: swatch_highlight_image,
                 sizes: img_sizes,
                 widths: img_widths,
                 custom_aspect_ratio: img_aspect_ratio,
@@ -1103,12 +1338,12 @@
 {% endcomment %}
 
 {% comment %}
-  Section: Related Products by Cutline Metafield using product_recommendations
-  Filters recommendations to match a tag = product.metafields.theme.cutline
+  Section: Related Products by Design Metafield using product_recommendations
+  Filters recommendations to match a tag = product.metafields.custom.design.value.name
 {% endcomment %}
 
-{% if product.metafields.theme.cutline.value %}
-  {% assign cutline_tag = product.metafields.theme.cutline.value | downcase %}
+{% if product.metafields.custom.design.value.name.value %}
+  {% assign cutline_tag = product.metafields.custom.design.value.name.value | downcase %}
 
   {% if product_recommendations.products.size > 0 %}
     <div class="related-products">
@@ -2138,6 +2373,12 @@
           "default": "<p>Collapsible tab content</p>"
         },
         {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Tab image",
+          "info": "Optional. Use \"Connect dynamic source\" to bind this to a metaobject's image field (e.g. a design/swatch metaobject)."
+        },
+        {
           "type": "page",
           "id": "page",
           "label": "Tab content from page"
@@ -2733,6 +2974,83 @@
           "label": "Box color",
           "info": "Suggestions: Blue #e5f3ff, Teal #e0f5f5, Green #e0f4d5, Yellow #fcf1cd, Red #fbeae5",
           "default": "#e0f4d5"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_in_quickbuy",
+          "label": "Show in quick buy",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "tog_guide",
+      "name": "TOG Temperature Guide",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Auto-detects 0.5 / 1.0 / 2.5 TOG from the product title and shows the matching recommended room temperature. Interactive — shoppers can click a TOG or drag the slider to compare. Renders nothing on products without a TOG rating in the title."
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Recommended Room Temperature"
+        },
+        {
+          "type": "text",
+          "id": "cool_label",
+          "label": "Cool-end label",
+          "default": "Cool"
+        },
+        {
+          "type": "text",
+          "id": "warm_label",
+          "label": "Warm-end label",
+          "default": "Warm"
+        },
+        {
+          "type": "url",
+          "id": "info_link",
+          "label": "\"Choosing the right TOG\" link"
+        },
+        {
+          "type": "text",
+          "id": "link_label",
+          "label": "Link label",
+          "default": "Choosing the right TOG"
+        }
+      ]
+    },
+    {
+      "type": "auto_usp_grid",
+      "name": "Product USPs (auto)",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Automatically pulls icons and titles from this product's Product Template metaobject (custom.product_template → USP Icons). Nothing to configure here — to change which icons show, edit the usp_icons list on the product's Product Template entry in Content → Metaobjects, or add/edit entries under Product Feature Icons."
+        }
+      ]
+    },
+    {
+      "type": "auto_materials_care",
+      "name": "Materials & Care (auto)",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Automatically pulls the materials & care text and a 3-column care icon grid from this product's Material metaobject (custom.material_new). To change what shows, edit the product's Material entry in Content → Metaobjects, or merge it with a different one."
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Materials & Care"
+        },
+        {
+          "type": "checkbox",
+          "id": "open",
+          "label": "Open by default",
+          "default": false
         },
         {
           "type": "checkbox",

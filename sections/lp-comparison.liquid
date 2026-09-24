@@ -42,7 +42,7 @@
 
 <style>
   #section-id-{{ section.id }} {
-    padding: 72px 0;
+    padding: {{ section.settings.padding_top | default: 72 }}px 0 {{ section.settings.padding_bottom | default: 72 }}px;
     background: {{ section.settings.bg_color }};
   }
   #section-id-{{ section.id }} .lp-comparison__head {
@@ -99,7 +99,9 @@
     font-size: 0.95rem;
   }
   @media (max-width: 640px) {
-    #section-id-{{ section.id }} { padding: 48px 0; }
+    #section-id-{{ section.id }} {
+      padding: {{ section.settings.padding_top | default: 72 | times: 0.67 | round }}px 0 {{ section.settings.padding_bottom | default: 72 | times: 0.67 | round }}px;
+    }
     #section-id-{{ section.id }} .lp-comparison__table th,
     #section-id-{{ section.id }} .lp-comparison__table td { padding: 10px 12px; font-size: 0.82rem; }
   }
@@ -114,7 +116,10 @@
     { "type": "textarea", "id": "intro",        "label": "Intro text"         },
     { "type": "text",     "id": "col_ours",     "label": "Our column header", "default": "Loulou Lollipop Sleep Bag" },
     { "type": "text",     "id": "col_other",    "label": "Other column header","default": "Loose Blanket"            },
-    { "type": "textarea", "id": "bottom_line",  "label": "Bottom-line callout"}
+    { "type": "textarea", "id": "bottom_line",  "label": "Bottom-line callout"},
+    { "type": "header",   "content": "Spacing" },
+    { "type": "range", "id": "padding_top",    "label": "Padding top",    "min": 0, "max": 120, "step": 4, "default": 72, "unit": "px" },
+    { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 0, "max": 120, "step": 4, "default": 72, "unit": "px" }
   ],
   "blocks": [
     {

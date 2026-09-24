@@ -515,5 +515,21 @@
     "product_waffle_sleeper_sea_glass": "Pyjama à motif gaufré - Verre de mer",
     "product_sleeper_mermaids": "Pyjama - Sirènes",
     "product_gift_card": "Carte-cadeau"
+  },
+  "loulou": {
+    "free_shipping_line": "Livraison gratuite pour les commandes de 100 $ et plus",
+    "shipping_link": "Livraison",
+    "shipping_tooltip_html": "Livraison gratuite pour toutes les commandes de 100 $ et plus au Canada!<br>Pour les commandes de moins de 100 $, la livraison standard coûte 12 $ en C.-B. et 15 $ ailleurs au Canada. Si vous avez besoin d'une livraison accélérée, les frais seront calculés au moment du paiement.",
+    "add_to_babylist": "Ajouter à Babylist",
+    "related_collections_title": "Vous aimerez aussi",
+    "rewards_aria": "Rejoignez le programme de récompenses et accumulez des points pour cette commande",
+    "points_member": "Vous accumulerez [AMOUNT] points pour cette commande en tant que membre du Club Loulou!",
+    "points_non_member": "Accumulez [AMOUNT] points pour cette commande en vous joignant au Club Loulou!",
+    "gift_question": "Est-ce un cadeau?",
+    "gift_placeholder": "Ajoutez un message-cadeau...",
+    "gift_message_label": "Message-cadeau",
+    "donation_note": "Pour chaque commande passée, nous donnons une portion de préparation pour nourrissons Niuriss à Mamas for Mamas.",
+    "points_non_member_long": "Accumulez instantanément [AMOUNT] points sur cette commande en vous joignant aux Récompenses Club Loulou (adhésion gratuite et avantages géniaux)",
+    "as_featured_in": "Vu dans"
   }
 }

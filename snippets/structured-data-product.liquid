@@ -16,13 +16,8 @@
 {%- endcomment -%}
 
 {%- liquid
-  if product.metafields.custom.material != blank
-    assign material_raw = product.metafields.custom.material.value
-    if material_raw.first != blank
-      assign material_value = material_raw | join: ', '
-    else
-      assign material_value = material_raw | remove: '["' | remove: '"]' | remove: '[' | remove: ']'
-    endif
+  if product.metafields.custom.material_new.value.material_name.value != blank
+    assign material_value = product.metafields.custom.material_new.value.material_name.value
   elsif product.tags contains 'TENCEL'
     assign material_value = 'TENCEL Lyocell'
   elsif product.tags contains 'muslin'
@@ -33,6 +28,16 @@
     assign material_value = 'TENCEL Lyocell Waffle Knit'
   else
     assign material_value = product.type
+  endif
+
+  assign schema_category = product.type
+  if product.category != blank
+    assign schema_category = product.category.ancestors | map: 'name' | reverse | join: ' > '
+    if schema_category != blank
+      assign schema_category = schema_category | append: ' > ' | append: product.category.name
+    else
+      assign schema_category = product.category.name
+    endif
   endif
 
   assign jm_rating_obj = product.metafields.reviews.rating.value
@@ -65,7 +70,7 @@
   },
   "material": {{ material_value | json }}
   {%- if product.collections.first -%},
-  "category": {{ product.collections.first.title | json }}
+  "category": {{ schema_category | json }}
   {%- endif -%},
   "offers": {
     "@type": "AggregateOffer",
@@ -101,15 +106,11 @@
       {%- endfor -%}
     ]
   }
-  {%- if show_rating -%},
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": {{ jm_rating_obj.rating | json }},
-    "reviewCount": {{ jm_review_count | json }},
-    "bestRating": {{ jm_rating_obj.scale_max | default: 5 | json }},
-    "worstRating": {{ jm_rating_obj.scale_min | default: 1 | json }}
-  }
-  {%- endif -%}
+  {%- comment -%}
+    aggregateRating intentionally omitted: the Judge.me app embed outputs its own
+    Product JSON-LD (same #product @id) with aggregateRating + reviews. Emitting it
+    here too triggers GSC "Review has multiple aggregate ratings".
+  {%- endcomment -%}
   {%- if product.metafields.reviews.recent_json != blank -%},
   "review": {{ product.metafields.reviews.recent_json }}
   {%- endif -%}

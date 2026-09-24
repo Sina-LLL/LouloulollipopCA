@@ -36,7 +36,7 @@
                 name="attributes[loyalty_join_intent]"
                 value="true"
                 tabindex="0"
-                aria-label="Join rewards program and earn points for this order"
+                aria-label="{{ 'loulou.rewards_aria' | t | escape }}"
                 aria-describedby="loyalty_copy"
                 ${this.joinIntent ? 'checked' : ''}>
               <div class="loyalty-content">
@@ -447,11 +447,11 @@
                 <div class="cart-note block lightly-spaced-row">  
                   <label>
                     <input type="checkbox" id="GiftCheckbox" />
-                      Is this a gift?
+                      {{ 'loulou.gift_question' | t }}
                   </label>
                 </div>
                <div class="cart-gift-message lightly-spaced-row cart-note block" id="GiftMessageWrapper" style="display: none;">
-                  <label class="block" for="GiftMessage">Gift Message</label>
+                  <label class="block" for="GiftMessage">{{ 'loulou.gift_message_label' | t }}</label>
                   <textarea id="GiftMessage" name="attributes[GiftMessage]"></textarea>
                 </div>  
 
@@ -777,8 +777,8 @@
               
               <loyalty-join
                 data-cart-total="{{ cart.total_price | divided_by: 100.0 }}"
-                data-copy-member="{{ "You'll earn [AMOUNT] points for this order by being a Club Loulou member!" | escape }}"
-                data-copy-non-member="{{ "Instantly earn [AMOUNT] points on this order when you join Club Loulou Rewards (free to join, comes with awesome perks)" | escape }}"
+                data-copy-member="{{ 'loulou.points_member' | t | escape }}"
+                data-copy-non-member="{{ 'loulou.points_non_member_long' | t | escape }}"
                 data-marketplace-api="{% if request.host contains 'myshopify.com' or request.host contains 'localhost' %}https://marketplaceapi.heyethos.dev{% else %}https://marketplaceapi.heyethos.com{% endif %}"
                 data-store-info='{"domain":{{ shop.domain | json }},"permanent_domain":{{ shop.permanent_domain | json }},"name":{{ shop.name | json }}}'
                 {% if customer %}data-customer='{"id":{{ customer.id | json }},"email":{{ customer.email | json }}}'{% endif %}
@@ -802,7 +802,7 @@
                   {% endif %}
                 </div>
                 <div class="cart-donation">  
-                  <p>For every order you place, we will donate one serving of Niuriss baby formula to Mamas for Mamas.</p>
+                  <p>{{ 'loulou.donation_note' | t }}</p>
                 </div>
                 {%- if section.settings.show_continue_shopping -%}
                   <a class="continue-shopping underline block lightly-spaced-row-above" href="{{ continue_shopping_url }}">{{ 'cart.summary.continue_shopping' | t }}</a>
