@@ -226,19 +226,21 @@
 {%- endif -%}
 
 
-{%- comment -%} ================= 2b. PDP FAQ (custom.product_faqs metafield) ================= {%- endcomment -%}
+{%- comment -%} ================= 2b. PDP FAQ (custom.faq, fallback custom.product_faqs) ================= {%- endcomment -%}
 {%- comment -%}
   Metafield: product.metafields.custom.product_faqs (JSON: {"faqs": [{"question": "...", "answer": "..."}]})
 {%- endcomment -%}
-{%- assign faq_data = product.metafields.custom.product_faqs.value -%}
-{%- if request.page_type == 'product' and faq_data.faqs != blank -%}
+{%- assign faq_items = product.metafields.custom.faq.value -%}
+{%- if faq_items.faqs != blank -%}{%- assign faq_items = faq_items.faqs -%}{%- endif -%}
+{%- if faq_items == blank -%}{%- assign faq_items = product.metafields.custom.product_faqs.value.faqs -%}{%- endif -%}
+{%- if request.page_type == 'product' and faq_items != blank -%}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "@id": "{{ shop.url }}{{ product.url }}#faq",
   "mainEntity": [
-    {%- for faq in faq_data.faqs -%}
+    {%- for faq in faq_items -%}
     {
       "@type": "Question",
       "name": {{ faq.question | strip_html | strip_newlines | json }},
@@ -340,14 +342,17 @@
   Metafield: collection.metafields.custom.collection_faqs
   Type: JSON list of objects, each shaped like {"question": "...", "answer": "..."}
 {%- endcomment -%}
-{%- if request.page_type == 'collection' and collection.metafields.custom.collection_faqs.value != blank -%}
+{%- assign col_faq_items = collection.metafields.custom.faq.value -%}
+{%- if col_faq_items.faqs != blank -%}{%- assign col_faq_items = col_faq_items.faqs -%}{%- endif -%}
+{%- if col_faq_items == blank -%}{%- assign col_faq_items = collection.metafields.custom.collection_faqs.value -%}{%- endif -%}
+{%- if request.page_type == 'collection' and col_faq_items != blank -%}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "@id": "{{ shop.url }}{{ collection.url }}#faq",
   "mainEntity": [
-    {%- for faq in collection.metafields.custom.collection_faqs.value -%}
+    {%- for faq in col_faq_items -%}
     {
       "@type": "Question",
       "name": {{ faq.question | strip_html | strip_newlines | json }},
