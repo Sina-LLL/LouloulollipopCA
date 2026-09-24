@@ -89,13 +89,13 @@
       ],
       "settings": {
         "message_font_size": 16,
-        "announcement_bar_col": "#59757D",
+        "announcement_bar_col": "#59757d",
         "announcement_bar_gradient": "",
         "announcement_text_col": "#faf9f6",
         "show_social_icons": true,
         "menu": "",
         "enable_country_selector": true,
-        "enable_language_selector": false
+        "enable_language_selector": true
       }
     },
     "header": {
