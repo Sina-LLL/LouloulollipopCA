@@ -244,7 +244,7 @@
     {%- for faq in faq_items -%}
     {%- liquid
       assign faq_q = faq.question.value | default: faq.question
-      assign faq_a_field = faq.answer
+      assign faq_a_field = faq.answer | default: faq.answers | default: faq.answer_text | default: faq.response | default: faq.content | default: faq.description | default: faq.text | default: faq.body | default: faq.reply
       if faq_a_field.type == 'rich_text_field'
         assign faq_a = faq_a_field | metafield_text
       else
@@ -366,7 +366,7 @@
     {%- for faq in col_faq_items -%}
     {%- liquid
       assign faq_q = faq.question.value | default: faq.question
-      assign faq_a_field = faq.answer
+      assign faq_a_field = faq.answer | default: faq.answers | default: faq.answer_text | default: faq.response | default: faq.content | default: faq.description | default: faq.text | default: faq.body | default: faq.reply
       if faq_a_field.type == 'rich_text_field'
         assign faq_a = faq_a_field | metafield_text
       else
