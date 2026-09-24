@@ -230,7 +230,8 @@
 {%- comment -%}
   Metafield: product.metafields.custom.product_faqs (JSON: {"faqs": [{"question": "...", "answer": "..."}]})
 {%- endcomment -%}
-{%- assign faq_items = product.metafields.custom.faq.value -%}
+{%- assign faq_items = product.metafields.custom.faqs.value -%}
+{%- if faq_items == blank -%}{%- assign faq_items = product.metafields.custom.faq.value -%}{%- endif -%}
 {%- if faq_items.faqs != blank -%}{%- assign faq_items = faq_items.faqs -%}{%- endif -%}
 {%- if faq_items == blank -%}{%- assign faq_items = product.metafields.custom.product_faqs.value.faqs -%}{%- endif -%}
 {%- if request.page_type == 'product' and faq_items != blank -%}
@@ -241,12 +242,21 @@
   "@id": "{{ shop.url }}{{ product.url }}#faq",
   "mainEntity": [
     {%- for faq in faq_items -%}
+    {%- liquid
+      assign faq_q = faq.question.value | default: faq.question
+      assign faq_a_field = faq.answer
+      if faq_a_field.type == 'rich_text_field'
+        assign faq_a = faq_a_field | metafield_text
+      else
+        assign faq_a = faq_a_field.value | default: faq_a_field
+      endif
+    -%}
     {
       "@type": "Question",
-      "name": {{ faq.question | strip_html | strip_newlines | json }},
+      "name": {{ faq_q | strip_html | strip_newlines | json }},
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": {{ faq.answer | strip_html | strip_newlines | json }}
+        "text": {{ faq_a | strip_html | strip_newlines | json }}
       }
     }{% unless forloop.last %},{% endunless %}
     {%- endfor -%}
@@ -342,7 +352,8 @@
   Metafield: collection.metafields.custom.collection_faqs
   Type: JSON list of objects, each shaped like {"question": "...", "answer": "..."}
 {%- endcomment -%}
-{%- assign col_faq_items = collection.metafields.custom.faq.value -%}
+{%- assign col_faq_items = collection.metafields.custom.faqs.value -%}
+{%- if col_faq_items == blank -%}{%- assign col_faq_items = collection.metafields.custom.faq.value -%}{%- endif -%}
 {%- if col_faq_items.faqs != blank -%}{%- assign col_faq_items = col_faq_items.faqs -%}{%- endif -%}
 {%- if col_faq_items == blank -%}{%- assign col_faq_items = collection.metafields.custom.collection_faqs.value -%}{%- endif -%}
 {%- if request.page_type == 'collection' and col_faq_items != blank -%}
@@ -353,12 +364,21 @@
   "@id": "{{ shop.url }}{{ collection.url }}#faq",
   "mainEntity": [
     {%- for faq in col_faq_items -%}
+    {%- liquid
+      assign faq_q = faq.question.value | default: faq.question
+      assign faq_a_field = faq.answer
+      if faq_a_field.type == 'rich_text_field'
+        assign faq_a = faq_a_field | metafield_text
+      else
+        assign faq_a = faq_a_field.value | default: faq_a_field
+      endif
+    -%}
     {
       "@type": "Question",
-      "name": {{ faq.question | strip_html | strip_newlines | json }},
+      "name": {{ faq_q | strip_html | strip_newlines | json }},
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": {{ faq.answer | strip_html | strip_newlines | json }}
+        "text": {{ faq_a | strip_html | strip_newlines | json }}
       }
     }{% unless forloop.last %},{% endunless %}
     {%- endfor -%}
