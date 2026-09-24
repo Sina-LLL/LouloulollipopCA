@@ -5,17 +5,14 @@
   Renders the correct schema graph based on request.page_type.
   Call once from layout/theme.liquid, right before </head>:
 
-    {%- render 'structured-data' -%}
+    {%- render 'structured-data', logo: section.settings.logo -%}
 
   Sections included:
     1. Homepage   -> Organization, WebSite, SearchAction, WebPage
-    2. PDP         -> BreadcrumbList, WebPage/ItemPage
-                      (NOT Product/Offer -- Horizon's sections/product-information.liquid
-                      already renders {{ closest.product | structured_data }} for that.
-                      A second hand-built Product node here duplicated it; removed.)
-    2b. PDP FAQ    -> FAQPage, built from product.metafields.custom.faq (JSON list)
+    2. PDP         -> BreadcrumbList, WebPage/ItemPage, Product (via snippets/structured-data-product.liquid)
+    2b. PDP FAQ    -> FAQPage, built from product.metafields.custom.product_faqs (JSON, .faqs list)
     3. PLP         -> BreadcrumbList, WebPage/CollectionPage, ItemList
-    3b. PLP FAQ    -> FAQPage, from collection.metafields.custom.faq (JSON list)
+    3b. PLP FAQ    -> FAQPage, from collection.metafields.custom.collection_faqs (JSON list)
 
   Notes:
   - Uses the Liquid `json` filter for all free-text fields (handles quotes/
@@ -70,22 +67,21 @@
       "@id": "{{ shop.url }}#organization",
       "name": {{ shop.name | json }},
       "url": "{{ shop.url }}",
+      {%- if logo -%},
       "logo": {
         "@type": "ImageObject",
-        {%- if shop.brand and shop.brand.logo -%}
-        "url": "{{ shop.brand.logo | image_url: width: 300 | prepend: 'https:' }}",
+        "url": "{{ logo | image_url: width: logo.width | prepend: 'https:' }}",
+        "width": {{ logo.width }},
+        "height": {{ logo.height }}
+      }
+      {%- elsif shop.brand and shop.brand.logo -%},
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ shop.brand.logo | image_url: width: shop.brand.logo.width | prepend: 'https:' }}",
         "width": {{ shop.brand.logo.width }},
         "height": {{ shop.brand.logo.height }}
-        {%- elsif settings.logo -%}
-        "url": "{{ settings.logo | image_url: width: 300 | prepend: 'https:' }}",
-        "width": 300,
-        "height": 300
-        {%- else -%}
-        "url": "{{ 'logo.png' | asset_url | prepend: 'https:' }}",
-        "width": 300,
-        "height": 300
-        {%- endif -%}
       }
+      {%- endif -%}
       {%- comment -%}
         sameAs: add real brand social profile URLs, e.g.
         , "sameAs": ["https://www.instagram.com/yourbrand", "https://www.facebook.com/yourbrand"]
@@ -102,7 +98,7 @@
           {%- if shop.email != blank -%},
           "email": {{ shop.email | json }}
           {%- endif -%},
-          "areaServed": "US",
+          "areaServed": "CA",
           "availableLanguage": ["en"]
         }
       ]
@@ -137,18 +133,6 @@
       "@id": "{{ shop.url }}#localbusiness",
       "name": {{ shop.name | json }},
       "url": "{{ shop.url }}",
-      "image": {
-        {%- if shop.brand and shop.brand.logo -%}
-        "@type": "ImageObject",
-        "url": "{{ shop.brand.logo | image_url: width: 300 | prepend: 'https:' }}"
-        {%- elsif settings.logo -%}
-        "@type": "ImageObject",
-        "url": "{{ settings.logo | image_url: width: 300 | prepend: 'https:' }}"
-        {%- else -%}
-        "@type": "ImageObject",
-        "url": "{{ 'logo.png' | asset_url | prepend: 'https:' }}"
-        {%- endif -%}
-      },
       "parentOrganization": { "@id": "{{ shop.url }}#organization" }
       {%- if shop.phone != blank -%},
       "telephone": {{ shop.phone | json }}
@@ -232,37 +216,29 @@
         "name": {{ shop.name | json }},
         "url": "{{ shop.url }}"
       },
-      "breadcrumb": { "@id": "{{ shop.url }}{{ product.url }}#breadcrumbs" }
+      "breadcrumb": { "@id": "{{ shop.url }}{{ product.url }}#breadcrumbs" },
+      "mainEntity": { "@id": "{{ shop.url }}{{ product.url }}#product" }
     }
   ]
 }
 </script>
+  {%- render 'structured-data-product', product: product, current_variant: product.selected_or_first_available_variant -%}
 {%- endif -%}
-{%- comment -%}
-  NOTE: no "Product" node here on purpose. Horizon's own
-  sections/product-information.liquid already renders
-  {{ closest.product | structured_data }} on every product page (Shopify's built-in
-  Product/Offer JSON-LD). A second hand-built "Product" node here duplicated that entity —
-  that's the "product coming 2 times in schema" issue. Since product-information.liquid is
-  a Horizon default and stays untouched, this file only adds what Horizon doesn't already
-  provide (BreadcrumbList, WebPage/ItemPage, FAQPage) instead of re-declaring Product.
-{%- endcomment -%}
 
 
-{%- comment -%} ================= 2b. PDP FAQ (custom.faq metafield) ================= {%- endcomment -%}
+{%- comment -%} ================= 2b. PDP FAQ (custom.product_faqs metafield) ================= {%- endcomment -%}
 {%- comment -%}
-  Metafield: product.metafields.custom.faq (namespace: custom, key: faq)
-  Type: JSON list of objects, each shaped like {"question": "...", "answer": "..."}
-  Same shape/key as the collection FAQ metafield (section 3b).
+  Metafield: product.metafields.custom.product_faqs (JSON: {"faqs": [{"question": "...", "answer": "..."}]})
 {%- endcomment -%}
-{%- if request.page_type == 'product' and product.metafields.custom.faq.value != blank -%}
+{%- assign faq_data = product.metafields.custom.product_faqs.value -%}
+{%- if request.page_type == 'product' and faq_data.faqs != blank -%}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "@id": "{{ shop.url }}{{ product.url }}#faq",
   "mainEntity": [
-    {%- for faq in product.metafields.custom.faq.value -%}
+    {%- for faq in faq_data.faqs -%}
     {
       "@type": "Question",
       "name": {{ faq.question | strip_html | strip_newlines | json }},
@@ -338,7 +314,7 @@
       "@type": "ItemList",
       "@id": "{{ shop.url }}{{ collection.url }}#itemlist",
       "url": "{{ shop.url }}{{ collection.url }}",
-      "numberOfItems": {{ collection.products_count }},
+      "numberOfItems": {{ collection.products.size }},
       "itemListElement": [
         {%- for product in collection.products -%}
         {
@@ -361,17 +337,17 @@
 
 {%- comment -%} ================= 3b. PLP FAQ (separate script, optional) ================= {%- endcomment -%}
 {%- comment -%}
-  Metafield: collection.metafields.custom.faq (namespace: custom, key: faq)
+  Metafield: collection.metafields.custom.collection_faqs
   Type: JSON list of objects, each shaped like {"question": "...", "answer": "..."}
 {%- endcomment -%}
-{%- if request.page_type == 'collection' and collection.metafields.custom.faq.value != blank -%}
+{%- if request.page_type == 'collection' and collection.metafields.custom.collection_faqs.value != blank -%}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "@id": "{{ shop.url }}{{ collection.url }}#faq",
   "mainEntity": [
-    {%- for faq in collection.metafields.custom.faq.value -%}
+    {%- for faq in collection.metafields.custom.collection_faqs.value -%}
     {
       "@type": "Question",
       "name": {{ faq.question | strip_html | strip_newlines | json }},
