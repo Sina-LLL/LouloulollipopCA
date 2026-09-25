@@ -530,6 +530,8 @@
     "gift_message_label": "Gift Message",
     "donation_note": "For every order you place, we will donate one serving of Niuriss baby formula to Mamas for Mamas.",
     "points_non_member_long": "Instantly earn [AMOUNT] points on this order when you join Club Loulou Rewards (free to join, comes with awesome perks)",
-    "as_featured_in": "As Featured In"
+    "as_featured_in": "As Featured In",
+    "shop_all": "Shop All {{ title }}",
+    "for_ages": "For Ages:"
   }
 }

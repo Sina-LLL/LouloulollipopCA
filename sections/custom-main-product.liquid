@@ -400,7 +400,7 @@
                       </div>
                     {%- endif -%}
                     {% if product.metafields.product.age_group != blank %}
-                      <p><strong>For Ages:</strong> {{ product.metafields.product.age_group.value }}</p>
+                      <p><strong>{{ 'loulou.for_ages' | t }}</strong> {{ product.metafields.product.age_group.value }}</p>
                     {% endif %}
                   </div>
                 {% endif %}                
@@ -622,7 +622,7 @@
                         {%- endif -%}
                         {{- content -}}
                         {%- if shop_collection != blank -%}
-                          <a href="{{ shop_collection.url }}" class="product-info-accordion__shop-link">Shop All {{ shop_collection.title }}</a>
+                          <a href="{{ shop_collection.url }}" class="product-info-accordion__shop-link">{{ 'loulou.shop_all' | t: title: shop_collection.title }}</a>
                         {%- endif -%}
                       </div>
                     </div>
@@ -662,7 +662,8 @@
 
           {% when 'tog_guide' %}
             {%- liquid
-              assign title_l = product.title | downcase
+              # Normalise decimal commas so translated titles (fr: "1,0 TOG") still match
+              assign title_l = product.title | downcase | replace: ',', '.'
               assign tog_value = blank
 
               if title_l contains '0.5 tog'
@@ -1038,7 +1039,7 @@
               {% if swatch_collection and swatch_collection.products.size > 0 %}
                 <div class="swatch-highlight-btn">
                   <a class="btn btn--secondary" href="{{ swatch_collection.url }}">
-                    Shop All {{ swatch_name }}
+                    {{ 'loulou.shop_all' | t: title: swatch_name }}
                   </a>
                 </div>
               {% endif %}

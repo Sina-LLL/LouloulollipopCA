@@ -530,6 +530,8 @@
     "gift_message_label": "Message-cadeau",
     "donation_note": "Pour chaque commande passée, nous donnons une portion de préparation pour nourrissons Niuriss à Mamas for Mamas.",
     "points_non_member_long": "Accumulez instantanément [AMOUNT] points sur cette commande en vous joignant aux Récompenses Club Loulou (adhésion gratuite et avantages géniaux)",
-    "as_featured_in": "Vu dans"
+    "as_featured_in": "Vu dans",
+    "shop_all": "Magasiner la collection {{ title }}",
+    "for_ages": "Âge recommandé :"
   }
 }
