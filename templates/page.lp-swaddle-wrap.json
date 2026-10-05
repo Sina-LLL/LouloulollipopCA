@@ -442,7 +442,7 @@
         "body": {
           "type": "text",
           "settings": {
-            "text": "<ul><li><strong>1.0 TOG:</strong> year-round comfort in nurseries between 21–24°C (69–75°F)</li><li><strong>Two-way zipper</strong> for easier night changes</li><li><strong>Whisper-quiet closures</strong> that won't startle a sleeping baby</li><li><strong>94% TENCEL™ Lyocell, 6% spandex</strong> for a soft, snug stretch</li><li><strong>Machine washable</strong> and dryer safe on low</li></ul><p><strong>Safety and certification:</strong> tested to Health Canada's Textile Flammability Regulations, and to CPSIA and ASTM standards. The material is certified to OEKO-TEX Standard 100, and Loulou Lollipop is a Certified B Corporation.</p>",
+            "text": "<ul><li><strong>1.0 TOG:</strong> year-round comfort in nurseries between 21–24°C</li><li><strong>Two-way zipper</strong> for easier night changes</li><li><strong>Whisper-quiet closures</strong> that won't startle a sleeping baby</li><li><strong>94% TENCEL™ Lyocell, 6% spandex</strong> for a soft, snug stretch</li><li><strong>Machine washable</strong> and dryer safe on low</li></ul><p><strong>Safety and certification:</strong> tested to Health Canada's Textile Flammability Regulations, and to CPSIA and ASTM standards. The material is certified to OEKO-TEX Standard 100, and Loulou Lollipop is a Certified B Corporation.</p>",
             "enlarge_text": false
           }
         },
@@ -541,7 +541,7 @@
           "type": "question",
           "settings": {
             "title": "What should my baby wear underneath?",
-            "answer": "<p>At 1.0 TOG in a 21–24°C (69–75°F) room, a long-sleeve bodysuit or fitted sleeper is usually right. Check the back of baby's neck or chest: it should feel warm and dry, not hot or sweaty.</p>"
+            "answer": "<p>At 1.0 TOG in a 21–24°C room, a long-sleeve bodysuit or fitted sleeper is usually right. Check the back of baby's neck or chest: it should feel warm and dry, not hot or sweaty.</p>"
           }
         }
       },
