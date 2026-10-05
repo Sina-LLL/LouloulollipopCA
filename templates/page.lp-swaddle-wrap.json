@@ -23,7 +23,7 @@
         "eyebrow": {
           "type": "subheading",
           "settings": {
-            "subheading": "Canadian Designed · Award-Winning · Since 2015"
+            "subheading": "Canadian Designed · Since 2015"
           }
         },
         "heading": {
@@ -69,6 +69,7 @@
         "image_width": 700,
         "image_link": "",
         "image_position": "below",
+        "mobile_image_below": false,
         "text_alignment": "left",
         "color_scheme": "default"
       }
@@ -111,6 +112,7 @@
         "p3",
         "p4"
       ],
+      "disabled": true,
       "settings": {
         "bg_color": "#6a8b95",
         "text_color": "#ffffff",
@@ -121,6 +123,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "Shop swaddle wraps",
+        "heading_size": "h2",
         "text": "<p>Every print in buttery-soft TENCEL™ Lyocell, sized for 0–4 months.</p>",
         "collection": "swaddle-wrap",
         "show_vendor": false,
@@ -130,8 +133,7 @@
         "color_scheme": "default",
         "show_view_all": true,
         "full_width": false,
-        "text_alignment": "center",
-        "heading_size": "h2"
+        "text_alignment": "center"
       }
     },
     "how_it_works": {
@@ -221,6 +223,7 @@
         "image_width": 700,
         "image_link": "",
         "image_position": "below",
+        "mobile_image_below": false,
         "text_alignment": "left",
         "color_scheme": "default"
       }
@@ -270,6 +273,7 @@
         "image_width": 700,
         "image_link": "",
         "image_position": "right",
+        "mobile_image_below": false,
         "text_alignment": "left",
         "color_scheme": "default"
       }
@@ -425,6 +429,7 @@
         "image_width": 700,
         "image_link": "",
         "image_position": "left",
+        "mobile_image_below": false,
         "text_alignment": "left",
         "color_scheme": "default"
       }
@@ -465,6 +470,7 @@
         "image_width": 700,
         "image_link": "",
         "image_position": "left",
+        "mobile_image_below": false,
         "text_alignment": "left",
         "color_scheme": "default"
       }
