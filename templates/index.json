@@ -224,12 +224,12 @@
       "type": "custom-hero-banner",
       "name": "Custom hero banner",
       "settings": {
-        "image": "shopify://shop_images/Crib_Sheet_-_Hero.png",
-        "mobile_image": "shopify://shop_images/Crib_Sheet_-_Hero-1.png",
-        "link": "shopify://collections/crib-sheets",
+        "image": "shopify://shop_images/Swaddle_Wrap_Hero.png",
+        "mobile_image": "shopify://shop_images/Swaddle_Wrap_Hero-1.png",
+        "link": "shopify://collections/swaddle-wrap",
         "full_width": true,
         "max_width": 0,
-        "heading": "Gets Softer With Every Wash - Tanboocel Crib Sheets",
+        "heading": "The easiest way to swaddle - Shop swaddle wraps",
         "use_h1": true
       }
     },
@@ -296,6 +296,24 @@
         "carousel_speed": 30,
         "image_opacity": 100,
         "color_scheme": "default"
+      }
+    },
+    "1791325908535195d3": {
+      "type": "apps",
+      "blocks": {
+        "novel_shoppable_video_novel_product_AaCnRn": {
+          "type": "shopify://apps/novel-shoppable-video/blocks/novel-product/67e3531b-60c1-40d3-83d1-8f5aba7081ef",
+          "settings": {
+            "journeyid": "6ac5676bb72e9e000269bad4"
+          }
+        }
+      },
+      "block_order": [
+        "novel_shoppable_video_novel_product_AaCnRn"
+      ],
+      "settings": {
+        "full_width": false,
+        "show_space": true
       }
     },
     "collection_list_aakDiY": {
@@ -1561,6 +1579,7 @@
     "hero_carousel_rounded_q34LBJ",
     "custom_hero_banner_i8RgHw",
     "logo_list_ywatnw",
+    "1791325908535195d3",
     "collection_list_aakDiY",
     "featured_collection_RGPeGr",
     "rich_text_materialsIntro",
