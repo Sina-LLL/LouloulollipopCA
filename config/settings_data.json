@@ -650,7 +650,7 @@
         "disabled": false,
         "settings": {
           "auto_remove_gift": true,
-          "auto_refresh": true,
+          "auto_refresh": false,
           "debug": false
         }
       }
