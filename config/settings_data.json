@@ -651,7 +651,7 @@
         "settings": {
           "auto_remove_gift": true,
           "auto_refresh": false,
-          "debug": false
+          "debug": true
         }
       }
     }
