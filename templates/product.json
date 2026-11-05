@@ -446,10 +446,20 @@
         "full_width": false,
         "color_scheme": "default"
       }
+    },
+    "custom_product_video": {
+      "type": "custom-product-video",
+      "settings": {
+        "heading": "See why it's better",
+        "video_position": "left",
+        "text_alignment": "left",
+        "color_scheme": "default"
+      }
     }
   },
   "order": [
     "main",
+    "custom_product_video",
     "1789685674a69af1df",
     "logo_list_rDpCbA",
     "custom_product_features_g6K7P8",
