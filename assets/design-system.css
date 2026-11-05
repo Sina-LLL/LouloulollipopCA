@@ -2655,9 +2655,15 @@ h1.product-title{
   font-size: 10px;
   line-height: 1.3;
 }
-/* Safety section: pack icons to the left instead of stretching each one to an equal share of the row */
+/* Safety section: pack icons to the left on one row; long labels wrap instead of pushing icons to a second row */
+.iwt-icon-row--start {
+  flex-wrap: nowrap;
+  column-gap: 20px;
+}
 .iwt-icon-row--start .iwt-icon-row__item {
-  flex: 0 0 auto;
+  flex: 0 1 auto;
+  min-width: 0;
+  max-width: 120px;
 }
 
 /* USP icon list (logo-list): force 3-up/2-up on mobile for 5-icon rows instead of the default 2-up/2-up/1-up */
