@@ -23,7 +23,7 @@
         "eyebrow": "Holiday Gift Guide",
         "heading": "Gifts for the littlest people on your list",
         "text": "<p>Soft, safe and made to be used every day. Easy to love for parents, easy to get right for you.</p>",
-        "deadline_text": "Order by <strong>December 10</strong> for rural areas or <strong>December 16</strong> for major cities for delivery before Christmas.",
+        "deadline_text": "Order by <strong>December 10</strong> for rural areas or <strong>December 15</strong> for major cities for delivery before Christmas.",
         "image": "shopify://shop_images/MuslinSwaddle-Quilt-BumbleBees.jpg",
         "button_label": "Shop top gifts",
         "button_link": "shopify://collections/top-gifts",
@@ -264,7 +264,7 @@
           "type": "deadline",
           "settings": {
             "carrier": "Major cities",
-            "date": "December 16",
+            "date": "December 15",
             "note": ""
           }
         },
@@ -304,7 +304,7 @@
           "type": "question",
           "settings": {
             "title": "When do I need to order for Christmas delivery?",
-            "answer": "<p>Rural areas: order by <strong>December 10</strong>.<br>Major cities: order by <strong>December 16</strong>.</p><p>Orders placed after these dates may not arrive before Christmas.</p>"
+            "answer": "<p>Rural areas: order by <strong>December 10</strong>.<br>Major cities: order by <strong>December 15</strong>.</p><p>Orders placed after these dates may not arrive before Christmas.</p>"
           }
         },
         "q2": {
