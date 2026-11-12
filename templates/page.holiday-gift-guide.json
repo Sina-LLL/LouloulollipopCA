@@ -23,7 +23,7 @@
         "eyebrow": "Holiday Gift Guide",
         "heading": "Gifts for the littlest people on your list",
         "text": "<p>Soft, safe and made to be used every day. Easy to love for parents, easy to get right for you.</p>",
-        "deadline_text": "Order by <strong>December 10</strong> with Canada Post or <strong>December 15</strong> with GoBolt for delivery before Christmas.",
+        "deadline_text": "Order by <strong>December 10</strong> for rural areas or <strong>December 16</strong> for major cities for delivery before Christmas.",
         "image": "shopify://shop_images/MuslinSwaddle-Quilt-BumbleBees.jpg",
         "button_label": "Shop top gifts",
         "button_link": "shopify://collections/top-gifts",
@@ -74,31 +74,31 @@
         "c1": {
           "type": "collection",
           "settings": {
-            "collection": "top-newborn-gifts",
+            "collection": "gifts-under-20",
             "tag": "",
-            "image": "shopify://shop_images/SWUNB_1.jpg",
+            "image": "shopify://shop_images/WTR-009-BFG-01.jpg",
             "subheading": "",
-            "button_label": "Shop newborn"
+            "button_label": "Under $20"
           }
         },
         "c2": {
           "type": "collection",
           "settings": {
-            "collection": "top-baby-gifts",
+            "collection": "gifts-under-30",
             "tag": "",
-            "image": "shopify://shop_images/Header_Image_-_SILBIB.png",
+            "image": "shopify://shop_images/SILBIBPLANET_1.jpg",
             "subheading": "",
-            "button_label": "Shop baby"
+            "button_label": "Under $30"
           }
         },
         "c3": {
           "type": "collection",
           "settings": {
-            "collection": "top-toddler-gifts",
+            "collection": "gifts-under-50",
             "tag": "",
-            "image": "shopify://shop_images/KA1004U.ENG.11_61.jpg",
+            "image": "shopify://shop_images/LSET-010-MNT_Learning_Utensils_Set_Octopus_51_4_f3df1f41-8aee-48fc-8487-62bccfe398bb.jpg",
             "subheading": "",
-            "button_label": "Shop toddler"
+            "button_label": "Under $50"
           }
         }
       },
@@ -111,7 +111,7 @@
         "text": "",
         "text_alignment": "start",
         "color_scheme": "default",
-        "full_width": true,
+        "full_width": false,
         "coll_grid_image_shape": "square",
         "coll_grid_image_position": "top center",
         "coll_thumb_mob_per_row": "2",
@@ -122,7 +122,7 @@
         "coll_thumb_text_align_x": "center",
         "coll_thumb_text_align_y": "center",
         "coll_button_style": "primary",
-        "title": "Shop gifts by age",
+        "title": "Shop gifts by price",
         "grid": 3,
         "enable_carousel": false
       }
@@ -247,7 +247,7 @@
       "settings": {
         "heading": "Holiday shipping deadlines",
         "intro": "<p>Order by these dates for delivery before Christmas.</p>",
-        "col_carrier": "Shipping method",
+        "col_carrier": "Shipping to",
         "col_date": "Order by",
         "small_print": "<p>Free standard shipping on orders $100+.</p>"
       },
@@ -255,7 +255,7 @@
         "d1": {
           "type": "deadline",
           "settings": {
-            "carrier": "Canada Post",
+            "carrier": "Rural areas",
             "date": "December 10",
             "note": ""
           }
@@ -263,8 +263,8 @@
         "d2": {
           "type": "deadline",
           "settings": {
-            "carrier": "GoBolt",
-            "date": "December 15",
+            "carrier": "Major cities",
+            "date": "December 16",
             "note": ""
           }
         },
@@ -304,7 +304,7 @@
           "type": "question",
           "settings": {
             "title": "When do I need to order for Christmas delivery?",
-            "answer": "<p>Canada Post: order by <strong>December 10</strong>.<br>GoBolt: order by <strong>December 15</strong>.</p><p>Orders placed after these dates may not arrive before Christmas.</p>"
+            "answer": "<p>Rural areas: order by <strong>December 10</strong>.<br>Major cities: order by <strong>December 16</strong>.</p><p>Orders placed after these dates may not arrive before Christmas.</p>"
           }
         },
         "q2": {
