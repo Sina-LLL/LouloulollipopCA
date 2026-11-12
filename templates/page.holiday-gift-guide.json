@@ -78,7 +78,7 @@
             "tag": "",
             "image": "shopify://shop_images/SWUNB_1.jpg",
             "subheading": "",
-            "button_label": "Shop now"
+            "button_label": "Shop newborn"
           }
         },
         "c2": {
@@ -88,7 +88,7 @@
             "tag": "",
             "image": "shopify://shop_images/Header_Image_-_SILBIB.png",
             "subheading": "",
-            "button_label": "Shop now"
+            "button_label": "Shop baby"
           }
         },
         "c3": {
@@ -98,7 +98,7 @@
             "tag": "",
             "image": "shopify://shop_images/KA1004U.ENG.11_61.jpg",
             "subheading": "",
-            "button_label": "Shop now"
+            "button_label": "Shop toddler"
           }
         }
       },
@@ -112,7 +112,7 @@
         "text_alignment": "start",
         "color_scheme": "default",
         "full_width": true,
-        "coll_grid_image_shape": "portrait-45",
+        "coll_grid_image_shape": "square",
         "coll_grid_image_position": "top center",
         "coll_thumb_mob_per_row": "2",
         "coll_thumb_per_column": "1",
@@ -154,7 +154,7 @@
             "tag": "",
             "image": "shopify://shop_images/BA9004U.BOB.18_136.jpg",
             "subheading": "",
-            "button_label": "Shop now"
+            "button_label": "Shop sleep"
           }
         },
         "c2": {
@@ -164,7 +164,7 @@
             "tag": "",
             "image": "shopify://shop_images/DSC07646_08d980bb-6cc6-435e-9339-f4c9ab52c1a1.jpg",
             "subheading": "",
-            "button_label": "Shop now"
+            "button_label": "Shop clothing"
           }
         },
         "c3": {
@@ -174,7 +174,7 @@
             "tag": "",
             "image": "shopify://shop_images/Tableware-white-23.jpg",
             "subheading": "",
-            "button_label": "Shop now"
+            "button_label": "Shop feeding"
           }
         },
         "c4": {
@@ -184,7 +184,7 @@
             "tag": "",
             "image": "shopify://shop_images/TWBMB_1.jpg",
             "subheading": "",
-            "button_label": "Shop now"
+            "button_label": "Shop bath"
           }
         },
         "c5": {
@@ -194,7 +194,7 @@
             "tag": "",
             "image": "shopify://shop_images/Group_3.jpg",
             "subheading": "",
-            "button_label": "Shop now"
+            "button_label": "Shop play"
           }
         }
       },
