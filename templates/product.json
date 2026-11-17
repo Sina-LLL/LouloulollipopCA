@@ -66,13 +66,14 @@
         },
         "pr_mentions_qbKGbp": {
           "type": "pr-mentions",
+          "disabled": true,
           "settings": {}
         },
         "description": {
           "type": "description",
           "settings": {
             "show_in_tab": true,
-            "open_tab": false,
+            "open_tab": true,
             "icon": "",
             "show_in_quickbuy": false
           }
@@ -184,11 +185,20 @@
         "media_grouping_option": "Color,Colour,Couleur,Farbe"
       }
     },
+    "custom_product_video": {
+      "type": "custom-product-video",
+      "settings": {
+        "heading": "See why Loulou Lollipop is better",
+        "video_position": "left",
+        "text_alignment": "left",
+        "color_scheme": "default"
+      }
+    },
     "1789685674a69af1df": {
       "type": "apps",
       "blocks": {
         "novel_shoppable_video_novel_product_j4GrrX": {
-          "type": "shopify://apps/novel-shoppable-video/blocks/novel-product/67e3531b-60c1-40d3-83d1-8f5aba7081ef",
+          "type": "shopify://apps/partnrup-shoppable-video-ugc/blocks/novel-product/67e3531b-60c1-40d3-83d1-8f5aba7081ef",
           "settings": {
             "journeyid": "{{ product.metafields.custom.product_template.value.ugc_videos_code.value }}"
           }
@@ -205,7 +215,35 @@
     "logo_list_rDpCbA": {
       "type": "logo-list",
       "blocks": {
-        "logo_rtiPnA": {
+        "logo_p8qri8": {
+          "type": "logo",
+          "repeater": "{{ product.metafields.custom.product_template.value.pr_mentions.value }}",
+          "settings": {
+            "image": "{{ block.repeater.logo_image.value }}",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_p8qri8"
+      ],
+      "custom_css": [
+        "#section-id-template--18966821830759__logo_list_rDpCbA {padding: 2px 0;}",
+        "#section-id-template--18966821830759__logo_list_rDpCbA .logo-list {margin-bottom: 0;}"
+      ],
+      "name": "Logo list",
+      "settings": {
+        "title": "As Featured In",
+        "enable_carousel": false,
+        "carousel_speed": 30,
+        "image_opacity": 100,
+        "color_scheme": "default"
+      }
+    },
+    "logo_list_7zEdDJ": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_rrm8Gr": {
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/Certified_B_Corporation_B_Corp_Logo_2022_Black_RGB_svg.webp",
@@ -214,7 +252,7 @@
             "title": ""
           }
         },
-        "logo_HiJFNy": {
+        "logo_dNKP6m": {
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/Benefits-of-Partnering-with-a-WBENC-Certified-Women-Business-Enterprise-Public-Relations-and-Marketing-Agency-feature.webp",
@@ -223,7 +261,7 @@
             "title": ""
           }
         },
-        "logo_Yz9iRC": {
+        "logo_Jtphcf": {
           "type": "logo",
           "disabled": true,
           "settings": {
@@ -233,7 +271,7 @@
             "title": ""
           }
         },
-        "logo_CHqmkb": {
+        "logo_gdneVN": {
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/30Day_Return_56dd8d70-3237-4ca1-91b8-395f7e213e96.png",
@@ -242,7 +280,7 @@
             "title": ""
           }
         },
-        "logo_p8qri8": {
+        "logo_LxTLW3": {
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/Free_ShippingCA.png",
@@ -253,11 +291,11 @@
         }
       },
       "block_order": [
-        "logo_rtiPnA",
-        "logo_HiJFNy",
-        "logo_Yz9iRC",
-        "logo_CHqmkb",
-        "logo_p8qri8"
+        "logo_rrm8Gr",
+        "logo_dNKP6m",
+        "logo_Jtphcf",
+        "logo_gdneVN",
+        "logo_LxTLW3"
       ],
       "custom_css": [
         "#section-id-template--18966821830759__logo_list_rDpCbA {padding: 2px 0;}",
@@ -446,15 +484,6 @@
         "full_width": false,
         "color_scheme": "default"
       }
-    },
-    "custom_product_video": {
-      "type": "custom-product-video",
-      "settings": {
-        "heading": "See why Loulou Lollipop is better",
-        "video_position": "left",
-        "text_alignment": "left",
-        "color_scheme": "default"
-      }
     }
   },
   "order": [
@@ -462,6 +491,7 @@
     "custom_product_video",
     "1789685674a69af1df",
     "logo_list_rDpCbA",
+    "logo_list_7zEdDJ",
     "custom_product_features_g6K7P8",
     "image_with_text_6gBpYa",
     "custom_product_list_by_print_Nbxwnx",
