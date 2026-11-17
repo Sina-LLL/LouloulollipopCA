@@ -12,12 +12,12 @@
     "main": {
       "type": "main-collection",
       "settings": {
-        "show_breadcrumbs": false,
+        "show_breadcrumbs": true,
         "show_title": false,
         "show_image_behind_heading": false,
         "heading_image_height": "large",
         "overlay_style": "full image-overlay--bg-shadow",
-        "coll_desc_pos": "above",
+        "coll_desc_pos": "below",
         "coll_desc_layout": "sidebyside",
         "coll_num_per_page_int": 50,
         "grid": 4,
@@ -51,7 +51,19 @@
     },
     "related_collections_auto": {
       "type": "related-collections-carousel",
-      "settings": {}
+      "settings": {
+        "title": "You May Also Like",
+        "text_alignment": "start",
+        "enable_carousel": true,
+        "grid": 5,
+        "color_scheme": "default",
+        "full_width": true,
+        "coll_grid_image_shape": "square",
+        "coll_grid_image_position": "center center",
+        "coll_thumb_mob_per_row": "2",
+        "coll_grid_show_count": true,
+        "coll_thumb_text_align_x": "center"
+      }
     },
     "custom_collection_content_F7d8FN": {
       "type": "custom-collection-content",
@@ -122,57 +134,9 @@
         "button_style": "primary",
         "color_scheme": "default"
       }
-    },
-    "sleepbag_breadcrumbs": {
-      "type": "custom-liquid",
-      "settings": {
-        "full_width": false,
-        "show_space": false,
-        "code": "{% render 'breadcrumbs' %}"
-      }
-    },
-    "video_with_text_4Dqdyi": {
-      "type": "video-with-text",
-      "blocks": {
-        "heading_3pKXVQ": {
-          "type": "heading",
-          "settings": {
-            "title": "{{ collection.title }}",
-            "use_h1": true
-          }
-        },
-        "text_KJjUtn": {
-          "type": "text",
-          "settings": {
-            "text": "{{ collection.description }}",
-            "enlarge_text": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_3pKXVQ",
-        "text_KJjUtn"
-      ],
-      "name": "Video with text",
-      "settings": {
-        "video_shopify": "shopify://files/videos/tencel-sleep-bag-better.mp4",
-        "video_external": "",
-        "video_description": "",
-        "autoplay": true,
-        "video_position": "right",
-        "text_alignment": "left",
-        "color_scheme": "default"
-      },
-      "custom_css": [
-        ".flexible-layout{justify-content:center}",
-        "@media(min-width:768px){.feature-text-paired{margin-left:0}.column--order-push-desktop{max-width:30%}}",
-        "@media(max-width:767px){.column:not(.column--order-push-desktop),.feature-text-paired{display:contents}.majortitle{order:1;width:100%}.column--order-push-desktop{order:2;width:100%}.column--order-push-desktop video{width:100%;height:auto}.feature-text-paired .rte{order:3;width:100%;margin-bottom:30px}}"
-      ]
     }
   },
   "order": [
-    "sleepbag_breadcrumbs",
-    "video_with_text_4Dqdyi",
     "main",
     "related_collections_auto",
     "custom_collection_content_F7d8FN",
