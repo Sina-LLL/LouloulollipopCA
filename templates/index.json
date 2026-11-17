@@ -279,6 +279,24 @@
         "accessibility_info": ""
       }
     },
+    "featured_collection_nThGTt": {
+      "type": "featured-collection",
+      "name": "Best Sellers Carousel",
+      "settings": {
+        "title": "Comfy TENCEL™ Pajamas",
+        "heading_size": "h4",
+        "text": "",
+        "collection": "pajamas",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 5,
+        "rows": 1,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": true,
+        "text_alignment": "start"
+      }
+    },
     "logo_list_ywatnw": {
       "type": "logo-list",
       "blocks": {
@@ -1608,6 +1626,7 @@
     "hero_carousel_rounded_q34LBJ",
     "custom_hero_banner_i8RgHw",
     "slideshow_UwLLKn",
+    "featured_collection_nThGTt",
     "logo_list_ywatnw",
     "collection_list_aakDiY",
     "featured_collection_RGPeGr",
