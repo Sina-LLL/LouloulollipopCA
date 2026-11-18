@@ -165,7 +165,7 @@
       ],
       "settings": {
         "show_breadcrumbs": true,
-        "select_first_variant": true,
+        "select_first_variant": false,
         "show_location_underneath": false,
         "inventory_transfers_enable": true,
         "enable_sticky_columns": true,
@@ -220,6 +220,8 @@
           "repeater": "{{ product.metafields.custom.product_template.value.pr_mentions.value }}",
           "settings": {
             "image": "{{ block.repeater.logo_image.value }}",
+            "image_width": 160,
+            "link": "",
             "title": ""
           }
         }
