@@ -185,7 +185,7 @@
       ],
       "settings": {
         "show_breadcrumbs": true,
-        "select_first_variant": true,
+        "select_first_variant": false,
         "show_location_underneath": false,
         "inventory_transfers_enable": true,
         "enable_sticky_columns": true,
@@ -209,7 +209,7 @@
       "type": "apps",
       "blocks": {
         "novel_shoppable_video_novel_product_Nj8X7V": {
-          "type": "shopify://apps/novel-shoppable-video/blocks/novel-product/67e3531b-60c1-40d3-83d1-8f5aba7081ef",
+          "type": "shopify://apps/partnrup-shoppable-video-ugc/blocks/novel-product/67e3531b-60c1-40d3-83d1-8f5aba7081ef",
           "settings": {
             "journeyid": "6aac5103d1ae6900024603b5"
           }
